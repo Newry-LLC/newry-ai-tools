@@ -11,8 +11,9 @@ Lets Claude answer natural language questions against any Newry SharePoint conte
 
 ## How to update a skill (for maintainers)
 
-1. Edit the `.skill` file locally
-2. Commit and push to this repo — Cowork picks up changes automatically if the org plugin is connected to this repo
+1. Edit the .skill or .plugin file locally
+2. Commit and push to this repo
+3. Re-upload the updated file via Cowork → Organization Settings → Plugins
 
 ## Ownership
 
