@@ -1,0 +1,10 @@
+{
+     "name": "newry-ai-tools",
+     "displayName": "Newry AI Tools",
+     "description": "Newry internal AI tools and skills",
+     "plugins": [
+       {
+         "source": "./plugins/your-plugin-name"
+       }
+     ]
+   }
