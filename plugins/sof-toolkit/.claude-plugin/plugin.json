@@ -1,0 +1,8 @@
+{
+  "name": "sof-toolkit",
+  "version": "1.0.6",
+  "description": "Evaluate, align, and draft Summary of Findings slides using the Pyramid Principle.",
+  "author": {
+    "name": "Newry Corp"
+  }
+}

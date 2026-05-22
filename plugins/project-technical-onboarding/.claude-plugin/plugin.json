@@ -1,0 +1,8 @@
+{
+  "name": "project-technical-onboarding",
+  "version": "0.1.6",
+  "description": "Guides consultants through building a Technical Orientation document at the start of a new engagement.",
+  "author": {
+    "name": "Newry Corp"
+  }
+}

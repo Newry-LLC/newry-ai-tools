@@ -1,0 +1,8 @@
+{
+  "name": "newry-knowledge",
+  "version": "1.1.30",
+  "description": "Firm-wide knowledge search — SharePoint, Airtable, and consultant tool directory. Requires M365 and Airtable connectors.",
+  "author": {
+    "name": "Newry Corp"
+  }
+}

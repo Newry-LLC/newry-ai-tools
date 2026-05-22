@@ -1,0 +1,8 @@
+{
+  "name": "newry-operator",
+  "version": "1.0.4",
+  "description": "Design advisor, decision logger, build prioritization, quality review, and operator dashboard for Newry AI program stewards.",
+  "author": {
+    "name": "Newry Corp"
+  }
+}
