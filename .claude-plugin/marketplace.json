@@ -1,10 +1,24 @@
 {
-     "name": "newry-ai-tools",
-     "displayName": "Newry AI Tools",
-     "description": "Newry internal AI tools and skills",
-     "plugins": [
-       {
-         "source": "./plugins/your-plugin-name"
-       }
-     ]
-   }
+  "name": "newry-ai-tools",
+  "displayName": "Newry AI Tools",
+  "description": "Newry internal AI tools and skills",
+  "owner": "Newry-LLC",
+  "plugins": [
+    {
+      "name": "newry-knowledge",
+      "source": "./newry-knowledge.plugin"
+    },
+    {
+      "name": "newry-operator",
+      "source": "./newry-operator.plugin"
+    },
+    {
+      "name": "primary-research-toolkit",
+      "source": "./primary-research-toolkit.plugin"
+    },
+    {
+      "name": "sof-toolkit",
+      "source": "./sof-toolkit.plugin"
+    }
+  ]
+}
