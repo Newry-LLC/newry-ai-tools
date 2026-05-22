@@ -2,7 +2,9 @@
   "name": "newry-ai-tools",
   "displayName": "Newry AI Tools",
   "description": "Newry internal AI tools and skills",
-  "owner": "Newry-LLC",
+  "owner": {
+    "name": "Newry-LLC"
+  },
   "plugins": [
     {
       "name": "newry-knowledge",
