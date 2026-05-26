@@ -1,6 +1,6 @@
 # Newry AI Plugin Index
 
-**Last updated:** 2026-05-18
+**Last updated:** 2026-05-26
 **Purpose:** Reference for program maintainers and successors. Covers all active plugins and standalone skills — what they do, what they log, what training materials exist, and distribution status.
 
 ---
@@ -9,10 +9,11 @@
 
 | Plugin | Version | Type | Status | Audience |
 |--------|---------|------|--------|----------|
-| Primary Research Toolkit | 1.3.8 | Packaged plugin | Active | Consultants |
-| SoF Toolkit | 1.0.3 | Packaged plugin | Active | Consultants |
-| newry-knowledge | 1.1.14 | Packaged plugin | Active | Consultants |
-| Project Technical Onboarding | 0.1.6 | Packaged plugin | In progress | Consultants |
+| Primary Research Toolkit | 1.3.10 | Packaged plugin | Active | Consultants |
+| SoF Toolkit | 1.0.7 | Packaged plugin | Active | Consultants |
+| newry-knowledge | 1.1.31 | Packaged plugin | Active | Consultants |
+| newry-operator | 1.0.5 | Packaged plugin | Active | Program builders |
+| Project Technical Onboarding | 0.1.7 | Packaged plugin | In progress | Consultants |
 | Project Launch Toolkit | — | Packaged plugin | In progress | Consultants |
 | RMA-OA Builder | — | Packaged plugin | In progress | Consultants |
 | Plugin Auditor | — | Standalone skill | Active | Maintainers |
@@ -41,11 +42,11 @@ Plugins are distributed via Cowork Org Settings → Plugins. Matt (org owner) in
 
 ## Central logs
 
-**Usage logging — all plugins:** `~\Newry Corp\Clients - Claude Master Working Folder\logs\usage-log-<user_id>.jsonl`
-One file per consultant (keyed by anonymous UUID from `~/.user_id`). Schema: `{"ts", "plugin", "sub_skill", "user_id", "project"}`. Written at the start of every run. Log-reader aggregates across all `usage-log-*.jsonl` files.
+**Usage logging — all plugins:** Airtable — Base `appRawPuacfAvVH2Z`, Table `tblmACtwIClniGn5n` (Plugin Usage Log)
+Schema: `{ts, plugin, sub_skill, user_id, project}`. Written via `create_records_for_table` at the start of every run. `user_id` read from `~/.user_id` if present; otherwise `"unknown"`. Readable by log-reader skill and operator dashboard via `list_records_for_table`.
 
-**Feedback logging — all plugins:** `~\Newry Corp\Clients - Claude Master Working Folder\logs\feedback-log-<user_id>.md`
-One file per consultant (same UUID). Captured via shared feedback-capture sub-skill on positive/negative signals. Log-reader aggregates across all `feedback-log-*.md` files.
+**Feedback logging — all plugins:** `~\Newry Corp\Clients - Claude Master Working Folder\logs\feedback-log.md`
+Captured via shared feedback-capture sub-skill on positive/negative signals.
 
 **Per-project local logs (PRT only):**
 - `logs/synthesis-log.md` — run details per ICS synthesis (project-scoped)
@@ -56,7 +57,7 @@ One file per consultant (same UUID). Captured via shared feedback-capture sub-sk
 ## Plugin detail
 
 ### Primary Research Toolkit (PRT)
-**Version:** 1.3.8
+**Version:** 1.3.10
 **File:** `outputs/primary-research-toolkit.plugin`
 **GitHub:** `Newry-LLC/newry-ai-tools`
 
@@ -73,8 +74,8 @@ One file per consultant (same UUID). Captured via shared feedback-capture sub-sk
 *Note: A `coverage-gap-analysis` sub-skill exists in the source folder but is deprecated — absorbed into ICS Mode 2 (2026-05-04). Not active.*
 
 **Logs kept:**
-- Central (usage): `logs/usage-log-<user_id>.jsonl` (per-consultant)
-- Central (feedback): `logs/feedback-log-<user_id>.md` (per-consultant)
+- Central (usage): `logs/usage-log.jsonl`
+- Central (feedback): `logs/feedback-log.md`
 - Local per-project: `logs/synthesis-log.md` (ICS run details), `logs/feedback-log.md` (project-scoped feedback)
 
 **Bundled reference files:**
@@ -100,7 +101,7 @@ One file per consultant (same UUID). Captured via shared feedback-capture sub-sk
 ---
 
 ### SoF Toolkit
-**Version:** 1.0.3
+**Version:** 1.0.7
 **File:** `outputs/sof-toolkit.plugin`
 **GitHub:** `Newry-LLC/newry-ai-tools`
 
@@ -112,8 +113,8 @@ One file per consultant (same UUID). Captured via shared feedback-capture sub-sk
 - Draft — produce a SoF from source findings or a deck
 
 **Logs kept:**
-- Central (usage): `logs/usage-log-<user_id>.jsonl` (per-consultant)
-- Central (feedback): `logs/feedback-log-<user_id>.md` (per-consultant)
+- Central (usage): `logs/usage-log.jsonl`
+- Central (feedback): `logs/feedback-log.md`
 
 **Training materials (SharePoint — for user access; not bundled):**
 - Pyramid Principle 2026 deck: [Pyramid Principle 2026.pptx](https://newrycorp.sharepoint.com/clients/Shared%20Documents/Consulting%20Resources/TOOLS-TRAINING/Pyramid%20Principle/Pyramid%20Principle%202026.pptx) — SharePoint > Consulting Resources > TOOLS-TRAINING > Pyramid Principle
@@ -125,7 +126,7 @@ One file per consultant (same UUID). Captured via shared feedback-capture sub-sk
 ---
 
 ### newry-knowledge
-**Version:** 1.1.14
+**Version:** 1.1.31
 **File:** `outputs/newry-knowledge.plugin`
 **GitHub:** `Newry-LLC/newry-ai-tools`
 
@@ -137,8 +138,8 @@ One file per consultant (same UUID). Captured via shared feedback-capture sub-sk
 - airtable-search — search Airtable for project metadata, AER learnings, client contacts, and staff expertise
 
 **Logs kept:**
-- Central (usage): `logs/usage-log-<user_id>.jsonl` (per-consultant)
-- Central (feedback): `logs/feedback-log-<user_id>.md` (per-consultant)
+- Central (usage): `logs/usage-log.jsonl`
+- Central (feedback): `logs/feedback-log.md`
 - Local (eval only): `plugins/newry-knowledge/evals/skill-log.jsonl` — maintainer eval runs; not production logging
 
 **Training materials (SharePoint — for user access; not bundled):**
@@ -151,7 +152,7 @@ One file per consultant (same UUID). Captured via shared feedback-capture sub-sk
 ---
 
 ### Project Technical Onboarding
-**Version:** 0.1.6 | **File:** `outputs/project-technical-onboarding.plugin` | **GitHub:** `Newry-LLC/newry-ai-tools` (pending push)
+**Version:** 0.1.7 | **File:** `outputs/project-technical-onboarding.plugin` | **GitHub:** `Newry-LLC/newry-ai-tools` (pending push)
 
 **What it does:** Guides a consultant through building a Technical Orientation document in week 1 of any engagement. Structured interview + docx artifact output. Calibrates Claude to the client's technology, value creation logic, and competitive position before strategic analysis begins.
 
@@ -159,8 +160,8 @@ One file per consultant (same UUID). Captured via shared feedback-capture sub-sk
 - technical-orientation — structured intake interview → 4-section Technical Orientation doc (Product & Technology / Value Creation / Value Capture / Key Engagement Questions)
 
 **Logs kept:**
-- Central (usage): `~\Newry Corp\Clients - Claude Master Working Folder\logs\usage-log-<user_id>.jsonl`
-- Central (feedback): `~\Newry Corp\Clients - Claude Master Working Folder\logs\feedback-log-<user_id>.md`
+- Central (usage): `~\Newry Corp\Clients - Claude Master Working Folder\logs\usage-log.jsonl`
+- Central (feedback): `~\Newry Corp\Clients - Claude Master Working Folder\logs\feedback-log.md`
 
 **Training materials:** None yet.
 
@@ -209,12 +210,47 @@ One file per consultant (same UUID). Captured via shared feedback-capture sub-sk
 **Tiers:** Scoping / Standard / Full (recommended based on intake)
 
 **Logs kept:**
-- Central (usage): `~\Newry Corp\Clients - Claude Master Working Folder\logs\usage-log-<user_id>.jsonl`
-- Central (feedback): `~\Newry Corp\Clients - Claude Master Working Folder\logs\feedback-log-<user_id>.md`
+- Central (usage): `~\Newry Corp\Clients - Claude Master Working Folder\logs\usage-log.jsonl`
+- Central (feedback): `~\Newry Corp\Clients - Claude Master Working Folder\logs\feedback-log.md`
 
 **Training materials:** None yet.
 
 **Status / pending:** SKILL.md written (both phases). Pending: Plugin Auditor pass → vetting → packaging → GitHub push.
+
+---
+
+---
+
+### newry-operator
+**Version:** 1.0.5
+**File:** `outputs/newry-operator.plugin`
+**GitHub:** `Newry-LLC/newry-ai-tools` (manual install — not on auto-sync)
+
+**What it does:** Operator plugin for anyone building or stewarding the Newry AI program. Design advisor, decision logger, build prioritization, quality review, and program dashboard — in one plugin.
+
+**Sub-skills (6):**
+- newry-operator (coordinator) — gate + routing
+- program-advisor — applies principles + decision history to advise on architecture/design
+- decision-capture — structured intake → appends to decision-log.md → repackages → git push
+- build-prioritization — scored recommendation on what to build next (reads program-status.md live)
+- plugin-reviewer — Plugin Auditor three-pass quality review before shipping
+- operator-dashboard — creates/refreshes the `newry-operator-dashboard` Cowork artifact
+
+**Bundled reference files:**
+- `references/principles.md` — 15 design principles
+- `references/north-star.md` — north star statement + milestones
+- `references/vision.md` — May 2027 end state
+- `references/plugin-index.md` — plugin registry (bundled at packaging time; portable cross-machine)
+- `references/decision-log.md` — program decisions (bundled; updated via decision-capture skill)
+
+**Live files (read at runtime):**
+- `strategy/decision-log.md` — preferred over bundled copy when accessible
+- `strategy/program-status.md` — read by build-prioritization
+
+**Artifact:** `newry-operator-dashboard` — persistent Cowork sidebar showing plugins (expandable), milestones, recent decisions. Refresh by saying "show the dashboard."
+
+**Status / pending:**
+- Reinstall locally (uninstall v1.0.0 → install v1.0.1) + push to GitHub
 
 ---
 
@@ -297,6 +333,7 @@ Shared Step 0 block for all file-writing Newry skills. Verifies the correct proj
 - **PRT eval runner** — unbuilt commitment
 
 ### Maintenance / process
+- **Reinstall + GitHub push** — newry-knowledge v1.1.25 packaged 2026-05-21 (tool-directory v1.1: copy-link buttons on training decks, specific deck names, second PRT deck added); pending uninstall current version → reinstall → GitHub push
 - **Reinstall + GitHub push** — PRT v1.3.8, SoF v1.0.3, newry-knowledge v1.1.10 repackaged and reinstalled 2026-05-16; pushed to GitHub
 - **Auto-update** — enable "Sync automatically" on GitHub plugin source in Cowork Org Settings. Blocked on Matt joining Newry-LLC GitHub org.
 - **newry-knowledge trigger tests** — 20 cases in `evals/trigger-tests.json`; not yet run
