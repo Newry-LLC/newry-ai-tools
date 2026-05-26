@@ -25,6 +25,14 @@
     {
       "name": "newry-operator",
       "source": "./plugins/newry-operator"
+    },
+    {
+      "name": "plugin-auditor",
+      "source": "./plugins/plugin-auditor"
+    },
+    {
+      "name": "plugin-builder",
+      "source": "./plugins/plugin-builder"
     }
   ]
 }
