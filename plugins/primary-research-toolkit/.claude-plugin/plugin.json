@@ -1,8 +1,9 @@
 {
   "name": "primary-research-toolkit",
-  "version": "1.3.9",
-  "description": "End-to-end primary research workflow: plan, guide, acquisition, prep, synthesis, and corpus query. Requires M365 connector.",
+  "version": "1.3.10",
+  "description": "---",
   "author": {
-    "name": "Newry Corp"
-  }
+    "name": "Sylvan Shank"
+  },
+  "repository": "https://github.com/Newry-LLC/newry-ai-tools"
 }
