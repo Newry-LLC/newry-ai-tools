@@ -1,0 +1,546 @@
+{
+  "version": "1.0",
+  "notes": "Requires JSON5 parser (comments not valid JSON). All cases are regression_suite: true — inline content, no live data dependency. Input content drawn from real Newry eval runs (SoF Skill Test Cases.md + SoF Skill Eval Run 1.md). llm_judge_prompt fields enable LLM-as-judge scoring. Run output schema: {ts, plugin_version, eval_id, pass, judge_verdict, notes}.",
+
+  "evals": [
+
+    // ─────────────────────────────────────────
+    // EVALUATE MODE
+    // ─────────────────────────────────────────
+
+    {
+      "id": "E1",
+      "mode": "evaluate",
+      "regression_suite": true,
+      "label": "Glass Core — strong SoF, should affirm with narrow catches",
+      "notes": "Reference 'strong SoF' example per Sylvan. Headline is quantified, complete, captures key tension. Known narrow weaknesses: Bullets 1-3 lead with context not claim; Objective 1 (performance threshold) not answered; 80% premium in Bullet 5 has no reference base. Skill should NOT flag this as weak.",
+      "input": {
+        "sof_slide": {
+          "headline": "Glass cores could save $410–580 per unit from interposer elimination or $100+ per unit from yield gains; initial CapEx and mfrg. ramps will delay benefit",
+          "bullets": [
+            "Glass is required for advanced performance: Organic cores are nearing physical and thermal limits (>800W, >3GHz, >80–100mm/side packages); glass enables finer line/space and has lower warpage and higher planarity, which are key to sustaining yield",
+            "The broad ecosystem is moving toward glass but not yet fully aligned: Substrate makers are investing in glass core R&D; OSATs are exploring advanced handling and automation; adoption pacing hinges on ecosystem readiness and availability of data proving glass's economic value",
+            "Organic build-up substrates are technically complex but a small share of cost: Hopper's organic build-up substrates are ~$165–220 (on average, 4% of total device cost); substrate cost is driven by copper metallization and high-density ABF build-up layers, and the organic core laminate is ~$16–33",
+            "Yield and interposer simplification are driving most of glass's value: From modeling Hopper base case, eliminating the silicon interposer could save a total of $410–580 per unit for the OSAT; an alternate, but less likely, scenario keeps the interposer but offers warpage-related yield gains that could translate to >$100 per unit",
+            "Further work is needed to quantify switching costs: Substrate manufacturers will spend more on glass core fabs (even up to a quarter to a third more CapEx), and yield reductions in early manufacturing are anticipated; impact of other process changes is not yet quantified; a preliminary estimate suggests glass core substrate may be able to justify premiums of ~80% or more"
+          ]
+        }
+      },
+      "expected_behavior": {
+        "should": [
+          "Affirm the headline as strong — quantified, dual-scenario, honest hedging",
+          "Recognize Bullet 4 as the best-structured bullet (bolded claim leads, both scenarios quantified, likelihood distinguished)",
+          "Flag Bullets 1–3 as leading with context rather than claims — setup does real work but claim should lead",
+          "Flag the 80% premium in Bullet 5 as missing a reference base (80% of what? core laminate ~$16–33 or full substrate ~$165–220 is an order of magnitude difference)",
+          "If objectives slide were provided, would flag Objective 1 (performance threshold) as unanswered — if no objectives given, may or may not catch this"
+        ],
+        "should_not": [
+          "Recommend major restructuring",
+          "Call this a weak SoF",
+          "Generate false positives by inventing problems with the headline"
+        ]
+      },
+      "expected_output": "Positive evaluation affirming headline strength; top improvements are Bullets 1-3 context-before-claim pattern and 80% premium reference base ambiguity",
+      "llm_judge_prompt": "This SoF has a quantified dual-scenario headline and is overall strong. Did the skill (a) affirm the headline rather than calling it weak, and (b) identify at least one of: bullets leading with context rather than claims, OR the 80% premium having no reference base? Answer yes to both, yes to one, or no to both."
+    },
+
+    {
+      "id": "E2",
+      "mode": "evaluate",
+      "regression_suite": true,
+      "label": "Data Center Cooling — mixed: strong headline, weak bullets",
+      "notes": "Headline is strong. Bullet 2 is a methodology sentence (describes what Newry did, not what was found). Bullet 1 is market context posing as a finding. Two bullets is structurally thin for a final readout with six technologies evaluated in the body.",
+      "input": {
+        "sof_slide": {
+          "headline": "Liquid cooling for data centers is rapidly growing, but Corning's capabilities do not fit near-term opportunities; capability development is required to participate",
+          "bullets": [
+            "The heat loads generated by the adoption of new computer chip designs, largely driven by the need to support growing AI workloads, is quickly exceeding the limits of incumbent air-cooling technologies to manage; liquid-cooling technologies are being rapidly adopted to meet this need and will represent a multi-billion-dollar opportunity by 2030",
+            "After brainstorming potential opportunities and narrowing down based on industry SME and Corning feedback, Newry grouped them into three categories based on recommended next steps: Draft and Test Solution Concepts (Cold Plates, Microfluidics, 3D Chip Cooling); Assess Ceramics Portfolio Fit (Heat Spreaders, TIMs); No Further Work Needed (Immersion)"
+          ]
+        }
+      },
+      "expected_behavior": {
+        "should": [
+          "Affirm the headline — specific, captures core tension (growing market, Corning gap), lands a clear conclusion",
+          "Flag Bullet 2 as a methodology sentence: describes what Newry did (grouped into categories), not what Newry found",
+          "Flag Bullet 1 as market context rather than a Corning-specific finding",
+          "Flag structural thinness: two bullets for a final readout where six technologies were evaluated"
+        ],
+        "should_not": [
+          "Approve Bullet 2 as a valid finding",
+          "Fail to distinguish a methodology sentence from a finding",
+          "Call the headline weak"
+        ]
+      },
+      "expected_output": "Calibrated eval: headline affirmed; Bullet 2 correctly identified as methodology not finding; Bullet 1 identified as context not conclusion; structural thinness flagged",
+      "llm_judge_prompt": "Bullet 2 says 'Newry grouped them into three categories based on recommended next steps' — a description of methodology, not a finding. Did the skill correctly identify this bullet as a methodology sentence rather than a finding? Answer yes or no."
+    },
+
+    {
+      "id": "E3",
+      "mode": "evaluate",
+      "regression_suite": true,
+      "label": "Crest Module 2 — non-standard format (module overview), should handle without forcing wrong mold",
+      "notes": "Module overview format with three labeled categories. Headline is strong and quantified. Key issues: category structure buries the most important finding (segment prioritization); Recommendations bullet too thin; some bullets describe activity not findings. Skill should acknowledge the format and evaluate what's there — not penalize for not being a traditional SoF.",
+      "input": {
+        "sof_slide": {
+          "headline": "Over ~14 weeks, Newry generated $4.9M in potential revenue for Crest, uncovered market insights, and delivered an action plan for additional growth",
+          "bullets": [
+            "[Impact & ROI] Generated 70 leads, resulting in $4.9M in potential revenue across business units",
+            "[Impact & ROI] Created ~$8M of incremental enterprise value at an 8x multiple",
+            "[Impact & ROI] Increased website traffic by 290% on average; peaking at 685% in November",
+            "[Impact & ROI] Reached >12k unique contacts >30k times, increasing mindshare",
+            "[Impact & ROI] Built foundational marketing and sales assets (one-pager, sales decision trees)",
+            "[Insights] Crest has a mindshare gap (90% of leads never heard of the brand); interest emerges with education, but it is difficult to reach the key decision maker",
+            "[Insights] Focus on industrial, aerospace & defense, and packaging where lead conversion per company contacted is highest (>8%); medical and consumer had low yields (<2%) despite high outreach",
+            "[Insights] Despite long sales cycles, ~30% of leads plan to buy within 12 months; near-term revenue entry points from recurring consumables demand exists",
+            "[Recommendations & Next Steps] Newry identified actionable levers to increase brand awareness and drive adoption and reviewed them with the sales team",
+            "[Recommendations & Next Steps] There are >8k untapped contacts for Newry to engage with, utilizing a trained 3rd-party calling house"
+          ]
+        }
+      },
+      "expected_behavior": {
+        "should": [
+          "Acknowledge the module overview format without penalizing it — appropriate for a Growth Engine engagement",
+          "Affirm the headline as strong: specific, quantified, right for execution engagement",
+          "Affirm that the segmentation insight (industrial/A&D/packaging vs. medical/consumer) is the most important finding with specific conversion rates",
+          "Flag that the three-category structure buries the segmentation finding (the most important insight) behind campaign statistics",
+          "Flag the Recommendations bullet as too thin — 'actionable levers identified' without naming the most important one",
+          "Flag some Impact bullets as activity descriptions rather than findings"
+        ],
+        "should_not": [
+          "Force the module overview into a traditional SoF mold and penalize accordingly",
+          "Fail to recognize the segmentation finding as the most important insight",
+          "Miss the activity-vs-finding distinction in the Impact bullets"
+        ]
+      },
+      "expected_output": "Format-aware evaluation: headline affirmed; segmentation finding called out as most important; category structure flagged for burying it; Recommendations thinness flagged; format accepted as appropriate for engagement type",
+      "llm_judge_prompt": "This SoF uses a three-category module overview format. Did the skill (a) accept the format as appropriate for this engagement type rather than penalizing it, AND (b) identify that the segmentation finding (industrial/A&D/packaging vs. medical/consumer) is the most important insight and is buried by the category structure? Answer yes to both, yes to one, or no to both."
+    },
+
+    // ─────────────────────────────────────────
+    // DRAFT MODE
+    // ─────────────────────────────────────────
+
+    {
+      "id": "D1",
+      "mode": "draft",
+      "regression_suite": true,
+      "label": "Lucas Oil Phase 2 — draft full SoF from body slides (distributor strategy, thickener market)",
+      "notes": "Input is body slides 6–15 from Lucas Oil Phase 2 Interim Update DRAFT. No SoF provided — skill must produce a complete SoF from scratch. Key synthesis challenge: Li dominance vs. CaS share gain tells a more nuanced thickener story than 'Li-dominated market'; Factory Fill status is actually limited (HE deprioritized, Auto still exploring); 'broad inventory' needs to be grounded in specific portfolio breadth requirements from Slide 14.",
+      "input": {
+        "context": "Phase 2 interim update. Audience: Lucas Oil client team. Project objective: identify how Lucas Oil should enter the industrial lubricants/grease market.",
+        "body_slides": [
+          {
+            "slide": 6,
+            "label": "Market segmentation — segment prioritization",
+            "content": "Four segments assessed: Heavy Equipment MRO (primary focus), Automotive MRO (still exploring), Heavy Equipment Factory Fill (recommend deprioritize — small volume), Automotive Factory Fill (still exploring). MRO for automotive and heavy equipment shares the same technical requirements, selection criteria, and distributor networks — could be pursued together. Factory Fill is not a strategic priority at this stage."
+          },
+          {
+            "slide": 7,
+            "label": "Thickener market dynamics — CaS gaining share",
+            "content": "Lithium (Li) complex greases dominate MRO market at 60–70% of volume. Calcium Sulfonate (CaS) is at 25% and gaining share. Quote from Field Sales Specialist, PetroChoice: 'Industrial plants are old school, but are realizing that CaS is a better deal, and it performs better. Li pricing is driving a switch to CaS.' Plants typically commit to either Li complex or CaS for 80–90% of grease needs. Polyurea is common for electric motors (~10%)."
+          },
+          {
+            "slide": 8,
+            "label": "Market structure — distribution dominance",
+            "content": "Industrial grease market is highly fragmented: major oil companies (e.g., Shell, ExxonMobil) and specialized regional manufacturers (e.g., Lubrication Engineers, Schaeffer). Sales predominantly through distributor networks (Motion Industries, Grainger, Kaman, regional independents). Distributors provide local presence, technical support, and inventory buffer — direct sales to end users are rare in MRO."
+          },
+          {
+            "slide": 9,
+            "label": "Buying decision criteria — performance first",
+            "content": "Product performance is the #1 selection criterion for industrial grease buyers. Secondary criteria: availability/lead time, technical support, cost. End users rarely switch once a product is approved — switching requires internal validation and testing cycles. Distributor technical support staff carry significant influence over product recommendations."
+          },
+          {
+            "slide": 10,
+            "label": "Distributor economics — rebates vs. discounts",
+            "content": "Distributors strongly prefer corporate rebates over upfront discounts. Motion Industries has received rebates ranging from 5–35% depending on supplier. Rebates allow distributors to show list price to customers while capturing backend economics. Suppliers who offer discounts instead of rebates are at a structural disadvantage in getting distributors to actively push their products."
+          },
+          {
+            "slide": 14,
+            "label": "Distributor portfolio requirements — what 'broad' means",
+            "content": "Distributors require suppliers to offer: mineral oil and synthetic base oils; multiple thickeners (Li complex, CaS, polyurea at minimum); multiple viscosities and NLGI grades; several packaging types (cartridges, pails, drums at minimum); specialty greases (water-resistant, high-temperature, food-grade). Quote: 'It's entirely possible that manufacturing plants could be buying 6–10 individual brands of grease.' — Director, Industrial Product Management, Fuchs Lubricants Co. (fmr.). A supplier without breadth will not get shelf space."
+          },
+          {
+            "slide": 15,
+            "label": "Supplier selection criteria used by distributors",
+            "content": "Six criteria distributors use to decide which suppliers to promote: (1) Corporate rebate structure; (2) Warranty; (3) On-time delivery rate; (4) Level of technical and customer support (documentation, comparisons, marketing materials); (5) Pricing relative to industry benchmarks; (6) Product offering breadth and packaging options. Inventory management evidence (ability to meet demand) is table stakes for initial qualification."
+          }
+        ]
+      },
+      "expected_behavior": {
+        "should": [
+          "Produce a complete SoF: one headline and 3–5 supporting bullets",
+          "Headline must land a strategic conclusion — not just 'Lucas should enter via distributors' but WHY (e.g., distributors control access; performance + breadth are the entry requirements)",
+          "Headline or bullets must include at least one specific figure (60–70% Li, 25% CaS, 5–35% rebate range)",
+          "CaS gaining share at 25% must appear — it is strategically relevant to portfolio requirements",
+          "Factory Fill must not be elevated as an active strategy — HE was deprioritized, Auto is still exploring",
+          "Portfolio breadth requirement (multiple thickeners, bases, viscosities, packaging) must be named — not just 'broad inventory'",
+          "Rebate structure preference (over discounts) must surface",
+          "All figures cited must be traceable to the body slides — no invented numbers"
+        ],
+        "should_not": [
+          "Produce a headline that is observation-level ('Lucas should work with distributors')",
+          "Omit CaS or treat the thickener market as uniformly Li-dominated",
+          "Present Factory Fill as an active or equivalent sub-segment to MRO",
+          "Use 'broad inventory' without specifying what breadth requires",
+          "Introduce figures not present in the source slides"
+        ]
+      },
+      "expected_output": "Headline names distributor access as the critical constraint and performance+breadth as the requirements; bullets cover: thickener dynamics (Li + CaS), portfolio breadth specifics, rebate structure, distributor selection criteria; Factory Fill correctly scoped as limited/deprioritized",
+      "llm_judge_prompt": "Given the body slides provided (no SoF), did the skill produce: (a) a headline with a strategic conclusion including at least one specific figure, AND (b) correct handling of Factory Fill — not elevated as an active sub-segment, AND (c) CaS share gain present somewhere in the output, AND (d) portfolio breadth requirements more specific than 'broad inventory'? Answer yes to all four, yes to some (specify which), or no."
+    },
+
+    {
+      "id": "D2",
+      "mode": "draft",
+      "regression_suite": true,
+      "label": "Data Center Cooling — draft full SoF from verbatim body slides (market, technology landscape, Corning fit)",
+      "notes": "Input is verbatim text extracted from the actual Data Center Cooling deck (no SoF slide). Key synthesis challenge: headline must capture both market opportunity AND Corning fit gap. Near-term (cold plates, currently used) vs. long-term (microfluidics, glass, 10+ years) distinction is critical. Corning opportunities must be named specifically. NVIDIA in-housing cooling design is a material risk. Slide content is verbatim from markitdown extraction.",
+      "input": {
+        "context": "Final readout deck for Corning ATG. Project objective: assess liquid cooling opportunities in data centers for Corning.",
+        "body_slides": [
+          {
+            "slide": 8,
+            "label": "Chip TDP and power density trends",
+            "content": "As chips become more powerful, they generate more heat; GPUs and other AI chips generate more than 2X as much heat as chips from 5 years ago.\n\nCOMPUTING CHIP TDP\nCPUs now exceed 100 – 500W\nGPUs are significantly hotter with expected releases at 500 – 1000W or more\nHigh-performance computing (HPC) requires accelerator chips (i.e., GPUs, TPUs) on top of high-powered CPUs, which increases server density rapidly; HPC servers also need to be close to one another to improve latency of distributed workloads, creating hot spots within the DC\nThis drives significant increases in the rack-level energy density; traditional racks had a power density of 5 – 10kW per rack, but new AI systems can have densities exceeding 100kW per rack\nSilicon max temps are also decreasing – making heat extraction even more critical for performance"
+          },
+          {
+            "slide": 10,
+            "label": "Liquid cooling market size projections",
+            "content": "While estimates vary widely, there appears to be consensus that the market for data center liquid cooling will rapidly grow and exceed $5B by 2030.\n\nANNUAL DEMAND FOR DATA CENTER LIQUID COOLING\nMillions of USD\n\nPROJECTED LIQUID COOLING MARKET SHARE (2028)\nUpper Bound / Lower Bound\n10% | 18% | 54% | 18%\n\nSources: Newry Analysis, Omdia, Dell Oro Group, IDTechEx, Frost and Sullivan"
+          },
+          {
+            "slide": 15,
+            "label": "NVIDIA vs Dell cooling strategy differences",
+            "content": "Vertically integrated companies (e.g., NVIDIA) may have a different approach to developing and commercializing cooling technologies.\n\nNVIDIA is bringing cooling design in-house, eliminating the need for third-party cooling manufacturers. Working with NVIDIA would require direct partnership, joint ventures, or selling IP to the company.\n\nDell relies heavily on third-party cooling manufacturers to create cooling solutions compatible with their servers. Working with Dell would require a good product and a working relationship for referrals.\n\n\"We remain company-agnostic – we might help a customer [data center operator] set up meetings with a few cooling companies, but we can incorporate any of their tech into our server designs.\"\n– Senior Systems Engineer, Dell Technologies Inc.\n\n\"NVIDIA has always sold GPUs to Dell and Foxconn, but they are now building their own cold plates. They will be attached in the manufacturing and integration process, so you can buy an entire rack set up with all the cooling pre-installed.\"\n– Former Senior Lead, Data Center Planning, Procurement, and Construction, NVIDIA"
+          },
+          {
+            "slide": 17,
+            "label": "VC/PE investment in cooling startups",
+            "content": "Cumulative all-time investment in cooling startups is <$1B and is largely driven by PE / VC firms, not data center industry players.\n\nMajor data center players, including incumbent cooling providers like Vertiv, chip makers like NVIDIA and AMD, server OEMs like HP, Dell, and Lenovo, and data center operators are conspicuously missing. This may suggest that they are developing their own solutions internally.\n\nSource: CapIQ"
+          },
+          {
+            "slide": 18,
+            "label": "Government investment — COOLERCHIPS",
+            "content": "COOLERCHIPS AWARDS TO PRIVATE COMPANIES (2023)\nProgram funded $40M by Department of Energy (DOE), to reduce the energy needed to cool data centers — targeting reduction of cooling energy consumption from 30 – 40% of total data center energy to 5%.\n\nNotable companies receiving funding include Flexnode, HP, Intel, JETCOOL Technologies, Nvidia, and Raytheon.\n\nSource: Coolerchips Program"
+          },
+          {
+            "slide": 22,
+            "label": "Cold plate adoption — current dominant solution",
+            "content": "Cold plate cooling has been widely used in HPC for years and is currently the liquid cooling solution of choice for most data center players.\n\n\"Liquid cooling may seem like a new idea but HPE, Cray, and a lot of our partners have been doing this for a long time… Everything that we do in HPC, we are trickling that technology down to all our enterprise applications. Same cold plate design, the same kind of CDUs, the same kind of manifolds, but we test it and prove it in HPC, and then we roll it out to the broader market.\"\n– Jason Zeiler, Sr. Product Manager, Liquid Cooling, HPE\n\n\"Over the previous six months, we sold a lot of air-cooled systems, but now all the demand is for liquid cooling… at one point we had a 9-month backlog on cold plates.\"\n– Senior Manager, GPU, Deep Learning, and AI Infrastructure, SuperMicro\n\n\"For companies like Meta, we are in such a rush to commission our data centers that what we tend to really focus on what is available now and at scale. From that perspective, cold plate cooling is number one.\"\n– Technical Leader, Supply Chain, Meta"
+          },
+          {
+            "slide": 25,
+            "label": "Microfluidics overview — nascent technology",
+            "content": "Microfluidic cooling brings the liquid into direct contact with the silicon chip, achieving better cooling than cold plates as well as lower coolant flow.\n\nOverview:\nMicrofluidics brings liquid cooling into extremely close contact with the silicon die (much closer than a cold plate); high aspect ratio microfluidic channels significantly increase fluid mixing and heat transfer\nEnables lower overall heat transfer resistance, so higher power can be dissipated at lower silicon temperatures\nAlso, considerably lower coolant flow has been shown relative to traditional cold plates, and efficient cooling has been achieved even at elevated coolant inlet temperatures\nThe two primary embodiments: bringing a microfluidic device into contact with the back side of the silicon, or etching channels directly into the silicon itself and attaching a fluidic manifold\nStill a very nascent technology – there are lots of optimization opportunities available (e.g., channel design, fluidic manifold improvements) to improve cooling\nOne challenge: in the context of directly etched silicon, the need to have a chip maker (e.g., TSMC) etch the silicon so it is 'cooling ready,' rather than the CPU / GPU makers needing to etch each individual chip themselves\n\nCompanies of Interest: Microsoft, Emcool, Corintis"
+          },
+          {
+            "slide": 28,
+            "label": "AFR cold plate — Corning opportunity",
+            "content": "AFR COLD PLATES\n\nDescription: Create glass or ceramic cold plates for servers leveraging the heat exchanger properties inherent to AFR's design\n\nProblem Hypothesis: Existing cold plate designs that leverage copper are insufficient for future heat flux levels\n\nCritical Assumptions: AFR's mixing-oriented design will result in better heat transfer; The AFR design can be made in materials with sufficient thermal conductivity to compete with copper\n\nPotential Next Steps: Identify the heat dispersion limits of current copper-based designs; Quantify future chip heat flux levels and determine whether better solutions are required"
+          },
+          {
+            "slide": 29,
+            "label": "Ribbon ceramics cold plate — Corning opportunity",
+            "content": "RIBBON CERAMICS COLD PLATES\n\nDescription: Create thin ceramic cold plates via ribbon ceramics (RC) by stacking multiple RC layers to minimize distance between the coolant layer and the chip surface\n\nProblem Hypothesis: Existing copper-based cold plates are insufficient for future heat flux levels; Thinner cold plate designs that minimize distance between coolant and chip will be needed for future heat loads\n\nCritical Assumptions: Reducing the thickness of the cold plate meaningfully improves performance; Cold plates cannot be made at desired thicknesses using copper or other high conductivity materials\n\nPotential Next Steps: Understand the relationship between layer thickness and heat dispersion and determine if copper or other metals can reach desired thicknesses; Assess feasibility of using RC and model performance"
+          },
+          {
+            "slide": 31,
+            "label": "Glass microfluidics — Corning opportunity",
+            "content": "MICROFLUIDIC COOLING\n\nDescription: Use glass-etching techniques to create microchannels on the surface of a piece of glass, then attach it directly to the back-side of a chip, bringing cooling fluid in direct contact with the heat sources\n\nProblem Hypothesis: Ultra-high heat chips may require greater fluid flow rates than what can be achieved by immersion techniques, opening an opportunity for microfluidic cooling\n\nCritical Assumptions: Corning's etching and bonding capabilities enable the creation of microchannels and sufficiently address the risk of leakage\n\nPotential Next Steps: Understand value chain dynamics to determine who Corning would need to work with; Determine the advantages and challenges of microfluidics implementations, including etching channels into the silicon vs into the glass"
+          },
+          {
+            "slide": 32,
+            "label": "Glass core substrate cooling — Corning opportunity",
+            "content": "GLASS CORE SUBSTRATE COOLING\n\nDescription: In addition to the interconnect advantages enabled by glass core substrates, Corning could develop in-substrate microfluidic cooling to meet future cooling needs for 3D chips\n\nProblem Hypothesis: Future 3D-integrated circuits will face the same heat problems as current generations and will require a technique to remove heat from between layers\n\nCritical Assumptions: Future adoption of 3D heterogeneous integrated packaging will require cooling solutions between layers of IC chips\n\nPotential Next Steps: Explore viability and determine what technology / capability gaps need to be filled"
+          },
+          {
+            "slide": 33,
+            "label": "Opportunities summary — timing by technology",
+            "content": "OPPORTUNITIES UNDER INVESTIGATION\n\nCold Plates | Currently Used | Utilizing ribbon ceramics / AFR to create a cold plate form factor\nMicrofluidics | 10+ years | Leveraging expertise in glass etching and past exploration of microfluidics to create microchannels on the back of chips\n3D Chip Cooling | 10+ years | Incorporate fluidic channels into existing glass core substrate designs to bring cooling fluid into difficult to cool areas of the chip\nHeat Spreaders | Currently Used | Creation of thin ceramic / ribbon ceramic heat spreaders or heat sinks for various components in a server\nTIMs | Currently Used | Utilize ceramic materials as fillers / additives for thermal interface materials\nImmersion | 3-5 years? | Need for material compatibility for all data center rack components (including fiber)\n\nCONSIDERED BUT DEPRIORITIZED\nHermetic encapsulation of servers to enable precision immersion cooling\nCombination optical fiber / cooling hose management solutions\nCold plate fluid purification / fouling solutions\nCooling fluid treatment and filtration components"
+          }
+        ]
+      },
+      "expected_behavior": {
+        "should": [
+          "Produce a complete SoF: one headline and 3–5 supporting bullets",
+          "Headline must state both the market opportunity AND Corning's current fit gap — not one without the other",
+          "Headline must include at least one specific figure ($5B, 100kW+, or 2030)",
+          "Near-term vs. long-term technology distinction must be present: cold plates/TIMs/heat spreaders currently used; microfluidics and 3D chip cooling 10+ years out",
+          "Corning opportunity areas must be named specifically (AFR cold plates, ribbon ceramics, glass microfluidics, glass core substrate) — not generic 'Corning has potential'",
+          "NVIDIA in-housing cooling design should surface as a market access risk",
+          "Capability development requirement must surface as a condition",
+          "All figures cited must be traceable to the body slides — no invented numbers",
+          "Immersion should not be recommended (body explicitly deprioritized it)"
+        ],
+        "should_not": [
+          "Produce a purely optimistic headline (market opportunity without naming Corning's fit gap)",
+          "Omit the near-term vs. long-term distinction",
+          "Use generic Corning opportunity language without naming specific technologies",
+          "Introduce figures not traceable to source slides",
+          "Include immersion as a Corning opportunity"
+        ]
+      },
+      "expected_output": "Headline captures both market size ($5B+/2030) and Corning's fit gap; bullets cover: heat load drivers (AI rack density 100kW+), cold plates as current dominant solution, Corning-specific near/long-term opportunities named, NVIDIA in-housing as risk, capability development required",
+      "llm_judge_prompt": "Given the body slides provided (no SoF), did the skill produce: (a) a headline that names both the market opportunity AND Corning's current fit gap (not just opportunity), AND (b) a near-term vs. long-term technology distinction with cold plates now and microfluidics/glass 10+ years out, AND (c) specific Corning opportunity areas named (AFR, ribbon ceramics, glass microfluidics, or glass core — not just generic), AND (d) no figures introduced that are not traceable to the source slides? Answer yes to all four, yes to some (specify which), or no."
+    },
+
+    {
+      "id": "D3",
+      "mode": "draft",
+      "regression_suite": true,
+      "label": "Glass Core — draft full SoF from verbatim body slides (semiconductor packaging economics, ecosystem readiness)",
+      "notes": "Input is verbatim text extracted from the actual Glass Core Cost Analysis deck (no SoF slide). No SoF provided — skill must produce one. Key synthesis challenge: Scenario 1 ($410–580 OSAT W2P) is the primary value story and more likely; Scenario 2 gross yield benefit is ~$90–130 and net WTP after switching costs ranges from -$25 to +$125. Reporting the gross figure for Scenario 2 is defensible if the consultant judges the pessimistic tail unlikely — the eval does not require the skill to flag it as an error. CapEx premium (1.25–1.33x) and early-stage incremental cost ($5,810–5,970/device) are material constraints. Ecosystem readiness is a real gating factor. Slide content is verbatim from markitdown extraction.",
+      "input": {
+        "context": "Final readout for Corning ATG. Project objective: assess the economic case for glass core substrates in advanced semiconductor packaging (Hopper GPU as base case).",
+        "body_slides": [
+          {
+            "slide": 4,
+            "label": "Glass adoption tipping point metrics",
+            "content": "TIPPING POINT ANALYSIS: METRICS TO MONITOR TO ANTICIPATE GLASS CORE ADOPTION\n\nMetric | Threshold | Drivers / Why it Matters\nSilicon interposer size | >3.3x reticle | Reticle stitching and yield loss on large interposers exceed current cost model\nWiring pitch (interconnect density) | Commercial adoption of <2 um L/S | AI / GPU packaging density and HBM scaling exceeds interposer + organic economics\nPower density | 700 – 800W | Organic substrates show warpage and thermal degradation at >800 W\nSignal frequency | ~32 GHz (with careful design) | Organics struggle with dielectric loss and crosstalk\nPackage size | ~100 – 120mm per side | Current advanced packages are approaching this limit; next-gen Rubin & Feynman platforms expected to exceed 100mm per side\nGlass panel yield | >90 – 95% in production | Critical to overcome fragility & breakage issues\nLeading fab / OSAT commitment | 1 major player announces glass panel fab investment | Ecosystem anchor; validates commercial viability and forces other suppliers to align\nOrganic equipment depreciation | Major organic fabs fully depreciate (~80 – 100% or ~7 – 10 years) | Build decisions are driven by time & asset age; nearing EOL forces decision on new capacity"
+          },
+          {
+            "slide": 5,
+            "label": "Substrate manufacturer glass core readiness",
+            "content": "Full industry alignment is still not achieved, but Ibiden, Unimicron, and Absolics appear closest to meaningful manufacturing capacity of glass core substrates.\n\nSUBSTRATE MANUFACTURER GLASS CORE READINESS\nIbiden | $1.28B FY2024 CapEx | Announced glass core as a development focus in 2023; dominant supplier to NVIDIA for organic core\nUnimicron | $862M FY2024 CapEx | Presented findings on glass core assemblies at several recent conferences; may be targeting mass production by 2027 – 2028; key supplier to NVIDIA for organic core and expanding capacity\nAbsolics | Up to $600M (planned) | Currently prototyping and targeting high-volume production by 2026; reportedly in discussions with AMD and Amazon\nSEMCO | $477M | Targeting mass production at Sejong site by 2027 but may have production & quality issues\nShinko | $301M | Noted they are currently building glass core capacity and sampling with Corning and AGC\n\nKey Hurdles:\nLack of ecosystem alignment: No common design rules, panel formats, reliability standards; limited industry-wide process models and tool specifications\nInsufficient reliability & economic data: Little long-term reliability results; incomplete cost-performance benchmarks\nSubstrate manufacturer learning curve: Tooling immaturity; yield stabilization challenges; process operating conditions not yet set\nOSAT learning curve: Handling & automation not optimized; new tooling required; uncertain yields"
+          },
+          {
+            "slide": 6,
+            "label": "Organic substrate cost structure — incumbent baseline",
+            "content": "Substrates are sold to OSATs for $165 – 220 per device today; costs are driven by complex material and design tradeoffs.\n\nSubstrate Cost Breakdown (Organic / ABF, H100-Class Device)\nTotal: $165 – 220\nMargin: 15 – 20%\nCore Laminate: 10 – 20%\nABF: 40 – 45%\nCopper Metallization: 20 – 25%\nVias: 5 – 10%\nElectrical Testing & Inspection: 10 – 15%\nProfit per unit: ~$16 – 33\n\n\"The substrate is treated as a component – once the spec is defined, anyone can meet it. Ibiden, Shinko, and Unimicron are all qualified for Hopper, and the cost has been reducing because there are multiple vendors.\"\n– Director Design Enablement & Design Rules, Micron Technology"
+          },
+          {
+            "slide": 9,
+            "label": "Value-creation scenarios — framework",
+            "content": "VALUE-CREATION SCENARIOS (Not exhaustive; most likely scenarios based on Newry research)\n\nScenario 1: Eliminate silicon interposer | None (interposer) | Glass core | High-density routing is done through the glass core substrate; eliminates interposer-to-substrate attach process step | ~$330 – 430 interposer component cost; ~$80 – 150 process cost; Impact on other process steps is TBD\n\nScenario 2: Improve yield of interposer-to-substrate attach and other process steps | Silicon | Organic | Current package architecture, but with better yield; high-density routing is done through the interposer | Warpage reduction could improve yield of interposer-to-substrate attach; experts estimated cost savings of $100+; Additional yield gains in substrate-to-PCB or other steps are TBD\n\nScenario 3: Simplify silicon interposer | Silicon | Organic | Glass core offsets some routing from smaller, simpler, less-dense silicon interposer | <$400 interposer component cost; TBD effect on process cost\n\nScenario 4: Use glass interposer | Glass | Organic / Glass | Glass replaces silicon interposer for dense routing | TBD\n\nSource: Newry interviews"
+          },
+          {
+            "slide": 10,
+            "label": "H100 device cost structure — OSAT per unit",
+            "content": "H100 DEVICE COST STRUCTURE (USD per unit for OSAT to manufacture)\n\nGPU Die | $1,400 – 2,000\nHBM Stacks | $900 – 1,400\nSilicon Interposer + 4 RDL | $330 – 430 | ~8 – 9% total cost; ~25% of interposer cost is TSV formation; additional RDLs are $50 – 100/each\nCoWoS-S Process | $400 – 750 | Includes die attach, underfill & cure, interposer-to-substrate attach, molding & thermal interface attach, inspection & test, and overhead & depreciation\nOrganic Build-Up Substrate | $165 – 220 | ~4% total cost\nPCB & Attach | $200 – 400\nFinal Test, Shipping, Margin, Yield | $500 – 2,000 | Highly variable\nTotal | $3,300 – 5,400\n\nNote: cost savings with glass core Scenario 1 eliminates the Silicon Interposer + 4 RDL line item ($330 – 430) and the interposer-to-substrate attach process step ($80 – 150 from CoWoS-S)"
+          },
+          {
+            "slide": 13,
+            "label": "Glass core cost impact methodology — CapEx and inspection",
+            "content": "GLASS CORE COST IMPACT METHODOLOGY (1 OF 2)\n-- Estimate --\n\nCapEx multiplier for glass: 1.25 – 1.33 (estimate from Newry interview, based on substrate mfrg. facility)\nGlass CapEx Depreciation (incremental over organic base case): $10.60 – 27.20 per unit\n\nInspection & Test incremental cost adder:\nEarly-stage (50% units tested): $220 – 360\nMid-stage (30% units tested): $110 – 180\nLate-stage (20% units tested): $55 – 90\n(Base case assumes 10% of units tested at $55 – 90 total)\n\nNote: glass will incur more frequent testing in part due to higher-density layouts\n\nSource: Newry interviews"
+          },
+          {
+            "slide": 14,
+            "label": "Glass core cost impact methodology — yield loss at ramp",
+            "content": "GLASS CORE COST IMPACT METHODOLOGY (2 OF 2)\n-- Estimate --\nCalculations assume: Cost of committed die = $2,800; Process Cost = $1,100\n\nYield Description | Yield % | Device Cost | Incremental Cost Adder\nMature yield (Hopper base case) | 92 – 95% (using 93.5%) | $4,170 | $0\nEarly-stage yield (0 – 6 months) | 40% | $9,750 | $5,580\nMid-stage yield (6 – 9 months) | 75% | $5,200 | $1,030\nLate-stage yield (9 – 12 months) | 90% | $4,333 | $160\n\nSource: Newry interviews"
+          },
+          {
+            "slide": 15,
+            "label": "Preliminary total incremental costs of glass core by maturity",
+            "content": "PRELIMINARY SWAG ESTIMATES OF COSTS OF GLASS CORE\n-- Estimate --\nUSD per device; modeled off Hopper base case\nIncremental costs incurred by adopting glass core, by maturity\n\nEarly-Stage Manufacturing: ~$5,810 – 5,970\n  Yield Loss: ~$5,580\n  Inspection & Test: ~$220 – 360\n  Depreciation: ~$10 – 30\n\nMid-Stage Manufacturing: ~$1,150 – 1,240\n  Yield Loss: ~$1,030\n  Inspection & Test: ~$110 – 180\n  Depreciation: ~$10 – 30\n\nLate-Stage Manufacturing: ~$225 – 280\n  Yield Loss: ~$160\n  Inspection & Test: ~$55 – 90\n  Depreciation: ~$10 – 30\n\nAssumptions: 0–6 months overall yield 40%; 6–9 months 75%; 9–12 months 90%\n\nNotes: model is heavily based on the H100 – sensitivities are critical (but unknown) inputs for accurate modeling\nKey sensitivities: yield ramp and timing of mature production plateau (most critical); yield loss cost for future devices vs. Hopper; CapEx multiplier; annual production rates\n\nSource: Newry interviews and analysis"
+          },
+          {
+            "slide": 16,
+            "label": "Willingness to pay — Scenario 1 (interposer elimination)",
+            "content": "PRELIMINARY ESTIMATE OF WILLINGNESS TO PAY FOR GLASS CORE\nScenario 1: Eliminate silicon interposer\n-- Estimate --\nUSD per device; modeled off Hopper base case; for late-stage manufacturing\n\nPrice Paid for Incumbent Organic Core Substrate: $165 – 220\n\nBenefits of Glass Core:\n  Interposer Elimination: $330 – 430\n  Interposer-to-Substrate Elimination: $80 – 150\n  Other: TBD\n\nCosts of Glass Core (late-stage):\n  Yield Loss: ~$160\n  Inspection & Test: ~$55 – 90\n  New CapEx: ~$10 – 30\n  Other: TBD\n\nHypothesized OSAT W2P for Glass Core Substrate:\n  High: $575 (161% premium over current organic substrate price)\n  Low: $295 (79% premium)\n  Total incremental benefit: ~$410 – 580\n  Total incremental cost: ~$225 – 280\n\nNotes: value of glass core will not be realized immediately in early-stage manufacturing; yield improvement will likely be worth more in future device generations\nSource: Newry interviews and analysis"
+          },
+          {
+            "slide": 17,
+            "label": "Willingness to pay — Scenario 2 (yield improvement only)",
+            "content": "PRELIMINARY ESTIMATE OF WILLINGNESS TO PAY FOR GLASS CORE\nScenario 2: Improve yield of interposer-to-substrate attach\n-- Estimate --\nUSD per device; modeled off Hopper base case; for late-stage manufacturing\n\nPrice Paid for Incumbent Organic Core Substrate: $165 – 220\n\nBenefits of Glass Core:\n  Warpage → Yield improvement: ~$90 – 130\n  Other: TBD\n\nCosts of Glass Core (late-stage):\n  Yield Loss: ~$160\n  Inspection & Test: ~$55 – 90\n  New CapEx: ~$10 – 30\n  Other: TBD\n\nHypothesized OSAT W2P for Glass Core Substrate:\n  High: $125 (-43% premium — i.e., WTP is LOWER than current organic substrate price of $165–220)\n  Low: -$25 (-115% premium — net benefit is NEGATIVE)\n  Total incremental benefit: ~$90 – 130\n  Total incremental cost: ~$225 – 280\n\nNotes: value of glass core will not be realized immediately in early-stage manufacturing; under pessimistic assumptions, net benefit is negative\nSource: Newry interviews and analysis"
+          },
+          {
+            "slide": 18,
+            "label": "Industry commentary on glass core premium",
+            "content": "INDUSTRY COMMENTARY ON WILLINGNESS-TO-PAY\nWhen asked about expectations for glass core substrates:\n\n\"Early estimates suggested that glass substrates could cost roughly 2.5 – 3x more than organic alternatives.\"\n– Senior Director [JCET]\n\n\"Initially, the glass core substrate will probably be ~25 – 30% more expensive compared to organic substrates.\"\n– Director [unnamed org]\n\n\"Right now, glass substrates are coming in at roughly 2x the cost of ABF.\"\n– Senior Director [unnamed org]\n\nWhen asked about the price premium their organization would be willing to pay over advanced organic substrates:\n\"[We would pay] a premium of at least 3 – 5x for glass core substrates, compared to organic. It would be a very high number.\"\n– Vice President Packaging Engineering [Amkor Technology]\n\nNote: range of stated premiums is 25 – 200%+; reflects early-stage market and absence of commercial benchmarks\n\nSource: Newry interviews"
+          }
+        ]
+      },
+      "expected_behavior": {
+        "should": [
+          "Produce a complete SoF: one headline and 3–5 supporting bullets",
+          "Headline must be anchored in Scenario 1 ($410–580 OSAT W2P) as the primary value story — Scenario 1 is explicitly labeled 'most likely'; Scenario 2 is 'alternate, less likely'",
+          "Headline must include at least one specific figure ($410–580, $295–575 W2P, or interposer elimination framing)",
+          "Scenario 2 should be characterized as less likely and with more limited / uncertain benefit than Scenario 1 — whether to report gross ('>$100') or net (-$25 to +$125) is a judgment call; either is acceptable if Scenario 2 is clearly subordinated to Scenario 1",
+          "Early-stage manufacturing cost (~$5,810–5,970 incremental/device) or CapEx multiplier (1.25–1.33x) must surface as a constraint",
+          "Ecosystem readiness (not yet aligned; Ibiden/Unimicron/Absolics closest; no major OSAT committed) should appear as a gating condition",
+          "All figures cited must be traceable to the body slides — no invented numbers"
+        ],
+        "should_not": [
+          "Lead with Scenario 2 or treat it as equivalent in likelihood to Scenario 1",
+          "Treat Scenario 2 as equivalent in value to Scenario 1 — Scenario 2 has weaker and more uncertain economics regardless of how the benefit is framed",
+          "Omit CapEx or early-stage cost as a material constraint",
+          "Claim ecosystem is ready or that commercial deployment is imminent",
+          "Introduce figures not present in the source slides (e.g., specific cost savings figures that do not appear in the slides)"
+        ]
+      },
+      "expected_output": "Headline anchors on Scenario 1 ($410–580 / interposer elimination, most likely); Scenario 2 present but clearly subordinated; early-stage incremental cost + CapEx as constraints; ecosystem readiness as gating factor",
+      "llm_judge_prompt": "Given the body slides provided (no SoF), did the skill produce: (a) a headline anchored in Scenario 1 ($410–580 savings / interposer elimination) rather than Scenario 2, AND (b) Scenario 2 clearly subordinated to Scenario 1 in likelihood and benefit (whether framed as gross '>$100' or net '-$25 to +$125' is acceptable as long as Scenario 2 is not presented as equivalent to Scenario 1), AND (c) CapEx or early-stage manufacturing cost present as a constraint, AND (d) no figures introduced that are not traceable to the source slides? Answer yes to all four, yes to some (specify which), or no."
+    },
+
+    // ─────────────────────────────────────────
+    // ALIGN MODE
+    // ─────────────────────────────────────────
+
+    {
+      "id": "A1",
+      "mode": "align",
+      "regression_suite": true,
+      "label": "Glass Core — critical Scenario 2 accuracy issue (SoF overstates net benefit)",
+      "notes": "SoF Bullet 4 says Scenario 2 'could translate to >$100 per unit.' Body Slide 17 shows Scenario 2 WTP after switching costs ranges from -$25 to +$125 — the SoF reports the gross yield benefit, the body shows net can be negative. However, the consultant may be exercising reasonable judgment about the central estimate (pessimistic tail is a model edge case). Skill should surface the tension, not definitively call it an error. Other clearer issues: 80% premium in Bullet 5 lacks reference base; Scenario 1 ($410–580) confirmed accurate.",
+      "input": {
+        "sof_slide": {
+          "headline": "Glass cores could save $410–580 per unit from interposer elimination or $100+ per unit from yield gains; initial CapEx and mfrg. ramps will delay benefit",
+          "bullets": [
+            "Glass is required for advanced performance: Organic cores are nearing physical and thermal limits (>800W, >3GHz, >80–100mm/side packages); glass enables finer line/space and has lower warpage and higher planarity, which are key to sustaining yield",
+            "The broad ecosystem is moving toward glass but not yet fully aligned: Substrate makers are investing in glass core R&D; OSATs are exploring advanced handling and automation; adoption pacing hinges on ecosystem readiness and availability of data proving glass's economic value",
+            "Organic build-up substrates are technically complex but a small share of cost: Hopper's organic build-up substrates are ~$165–220 (on average, 4% of total device cost); substrate cost is driven by copper metallization and high-density ABF build-up layers, and the organic core laminate is ~$16–33",
+            "Yield and interposer simplification are driving most of glass's value: From modeling Hopper base case, eliminating the silicon interposer could save a total of $410–580 per unit for the OSAT; an alternate, but less likely, scenario keeps the interposer but offers warpage-related yield gains that could translate to >$100 per unit",
+            "Further work is needed to quantify switching costs: Substrate manufacturers will spend more on glass core fabs (even up to a quarter to a third more CapEx), and yield reductions in early manufacturing are anticipated; impact of other process changes is not yet quantified; a preliminary estimate suggests glass core substrate may be able to justify premiums of ~80% or more"
+          ]
+        },
+        "body_slides": [
+          {
+            "slide": 9,
+            "label": "Scenario overview",
+            "content": "Two scenarios modeled. Scenario 1 (most likely): eliminate silicon interposer → $410–580 per unit savings for OSAT. Scenario 2 (alternate, less likely): keep interposer, achieve warpage-related yield gains."
+          },
+          {
+            "slide": 13,
+            "label": "CapEx and early yield costs",
+            "content": "Glass core fabs require 25–33% more CapEx than organic. Early-stage manufacturing yield losses modeled at 40% — at this yield level, device cost rises to ~$9,750, a $5,580 incremental cost penalty per unit versus mature organic manufacturing."
+          },
+          {
+            "slide": 17,
+            "label": "Scenario 2 WTP analysis",
+            "content": "Scenario 2 willingness-to-pay after accounting for switching costs ranges from -$25 to +$125 per unit depending on assumptions. At pessimistic switching cost assumptions, net benefit is negative. SoF reports gross yield benefit (>$100); this slide shows net benefit can be negative."
+          },
+          {
+            "slide": 18,
+            "label": "Industry WTP range",
+            "content": "Expert estimates for glass core premium over organic substrate: range of 25–200%. Multiple data points: some experts say 2.5–3x; one says 25–30% more. SoF says '~80% or more' — sits in the middle without acknowledging the spread or source variance."
+          }
+        ]
+      },
+      "expected_behavior": {
+        "should": [
+          "Note that Bullet 4 reports the gross yield benefit for Scenario 2 ('>$100 per unit'); body Slide 17 shows net WTP after switching costs ranges from -$25 to +$125 — skill should surface this tension and let the team judge whether the pessimistic tail warrants disclosure, without calling it definitively wrong",
+          "Flag that the 80% premium in Bullet 5 sits at the low end of a 25–200% range without acknowledging the spread",
+          "Flag the scale of early-stage cost penalty as understated: headline says 'will delay benefit' but Slide 13 shows $5,580/device incremental cost at 40% yield",
+          "Confirm that Scenario 1 figures ($410–580) match the body correctly"
+        ],
+        "should_not": [
+          "Flag the Scenario 2 '>$100' figure as definitively wrong — this is a judgment call the consultant may be making reasonably",
+          "Miss the tension entirely (body Slide 17 should be referenced even if it's framed as a discussion point, not an error)",
+          "Fail to flag the 80% premium reference base ambiguity in Bullet 5"
+        ]
+      },
+      "expected_output": "Scenario 1 figures confirmed accurate. Bullet 4 Scenario 2 tension surfaced (gross '>$100' vs. body Slide 17 net range of -$25 to +$125) — framed as a discussion point or disclosure question, not a definitive error. 80% premium reference base ambiguity flagged.",
+      "llm_judge_prompt": "SoF Bullet 4 says Scenario 2 yield gains 'could translate to >$100 per unit.' Slide 17 shows net WTP after switching costs ranges from -$25 to +$125. Did the skill (a) surface the tension between the gross figure in the SoF and the net range in Slide 17 — even if framed as a question rather than an error, AND (b) confirm Scenario 1 ($410–580) is accurate, AND (c) flag the 80% premium in Bullet 5 as lacking a reference base? Answer yes to all three, yes to some (specify which), or no."
+    },
+
+    {
+      "id": "A2",
+      "mode": "align",
+      "regression_suite": true,
+      "label": "IVON — SoF uses weaker WTP framing; body has stronger TCO argument and copper context not in SoF",
+      "notes": "All quantified figures in the SoF check out. Issues are omissions: (1) SoF uses 15-30% upfront premium; body Slide 13 has stronger TCO framing (modular 30-50% more expensive overall); (2) Body has full copper pricing slide; SoF frames entirely as integrated vs. modular GOF without establishing the copper baseline; (3) Competitive landscape (Corning seen as 'best but costly') absent from SoF.",
+      "input": {
+        "sof_slide": {
+          "headline": "Corning's integrated GOF solution aligns with Tier 1 selection priorities and could enable preferred-supplier positioning, given successful completion of automotive pre-qualification testing",
+          "bullets": [
+            "Cable performance is table stakes for Tier 1 automotive manufacturers; connector robustness, validation efficiency, engineering support, and geographic manufacturing footprint increasingly drive supplier selection: (a) Corning's pre-terminated connectors reduce rework from ~$12/link to near zero; (b) Integrated solutions reduce qualification costs by $1,000s–$10,000s and cut validation cycles by 1–2; (c) Assembly time reductions of ~50% for validation and ~30% for system integration; (d) Single-supplier manufacturing reduces logistics risk",
+            "OEMs will pay a 15–30% premium for an integrated GOF solution over modular alternatives",
+            "Corning aligns with Tier 1 selection priorities and could enable preferred-supplier positioning, if paired with successful completion of automotive pre-qualification testing"
+          ]
+        },
+        "body_slides": [
+          {
+            "slide": 13,
+            "label": "Total cost of ownership — modular vs. integrated",
+            "content": "Modular solutions often end up 30–50% more expensive at the link level when accounting for rework costs, warranty claims, and schedule delays. The 15–30% upfront price premium for integrated understates the full cost advantage — the TCO argument is stronger than the unit price comparison."
+          },
+          {
+            "slide": 18,
+            "label": "Copper pricing baseline",
+            "content": "Current Tier 1 cost for copper cable: $18–31 per 6.5m 10 Gbps link at Tier 1 cost; $20–30 per link at OEM pricing. Costs rise non-linearly with bandwidth demands. SoF frames the value proposition entirely as integrated vs. modular GOF without establishing what Tier 1s are actually paying today (copper) or why they would switch from it."
+          },
+          {
+            "slide": 16,
+            "label": "Competitive landscape",
+            "content": "Corning described by Tier 1 contacts as 'best in glass fiber but costly.' Multiple competitors actively courted: Furukawa, ACOME, Prysmian, Rosenberger. Tier 1s are not committed to Corning — cost-competitive alternatives are being evaluated."
+          }
+        ]
+      },
+      "expected_behavior": {
+        "should": [
+          "Confirm all quantified figures are accurate (no numerical contradictions)",
+          "Flag that the WTP bullet uses the weaker framing: 15–30% upfront premium, when Slide 13 shows the TCO argument is stronger (modular 30–50% more expensive overall)",
+          "Flag that the SoF is framed entirely as integrated vs. modular GOF with no copper baseline — Slide 18 shows copper is what Tier 1s currently buy",
+          "Flag that the competitive landscape (Corning seen as 'best but costly'; multiple alternatives being evaluated) is entirely absent from the SoF"
+        ],
+        "should_not": [
+          "Flag numerical inaccuracies that don't exist",
+          "Approve the SoF as fully aligned given the three meaningful omissions",
+          "Miss the TCO vs. upfront premium distinction"
+        ]
+      },
+      "expected_output": "Figures confirmed accurate. Three omissions flagged: (1) weaker WTP framing vs. stronger TCO argument in Slide 13; (2) copper baseline absent; (3) competitive landscape absent.",
+      "llm_judge_prompt": "The SoF says OEMs pay a '15–30% upfront premium' for integrated vs. modular GOF. Slide 13 shows modular solutions end up 30–50% more expensive overall when accounting for rework and warranty. Did the skill flag that the SoF uses the weaker upfront-premium framing when the body supports the stronger TCO argument? Answer yes or no."
+    },
+
+    {
+      "id": "A3",
+      "mode": "align",
+      "regression_suite": true,
+      "label": "Lucas Oil — Factory Fill framing inconsistency; CaS and portfolio breadth gaps",
+      "notes": "SoF Bullet 1 introduces Factory Fill as an active sub-segment alongside MRO. Body Slide 6 shows HE Factory Fill was deprioritized during scoping and Auto Factory Fill is still exploring — not an active strategic option. CaS gaining share at 25% (Slide 7) not in SoF. Specific distributor portfolio breadth requirements (Slide 14) not defined in SoF despite 'broad inventory' claim in Bullet 4. Supplier ratings beyond rebates (Slide 15) partially missing.",
+      "input": {
+        "sof_slide": {
+          "headline": "Lucas Oil should forge strong distributor partnerships to enter the ind. market",
+          "bullets": [
+            "The automotive and heavy equipment sectors contain two common sub-segments – Maintenance, Repair, and Operations (MRO), and Factory Fill; Lucas Oil could adopt a unified strategy for MRO",
+            "Lithium greases dominate the MRO market, accounting for 60–70% of volume, which is predominantly sold in drums; sales are largely through distributor networks due to their technical support and local presence",
+            "The industrial grease market is highly fragmented, featuring both major oil companies and specialized regional manufacturers who operate through extensive distributor networks; buying decisions are primarily driven by product performance, with secondary considerations given to availability and cost",
+            "Our initial assessment is that Lucas Oil should focus on selling to distributors and providing a broad inventory, short lead times, and robust technical support, while emphasizing rebates over discounts when pricing"
+          ]
+        },
+        "body_slides": [
+          {
+            "slide": 6,
+            "label": "Market segmentation — Factory Fill status",
+            "content": "Automotive MRO: Still exploring. Automotive Factory Fill: Still exploring. Heavy Equipment MRO: Primary focus. Heavy Equipment Factory Fill: Recommend deprioritize — small. 'Deprioritized during scoping.' MRO for automotive and heavy equipment shares the same technical requirements, selection criteria, and distributors, and could be pursued together."
+          },
+          {
+            "slide": 7,
+            "label": "Thickener mix — CaS gaining share",
+            "content": "CaS-thickened grease is at 25% of total MRO market and gaining share. Quote from Field Sales Specialist, PetroChoice: 'Industrial plants are old school, but are realizing that CaS is a better deal, and it performs better. Li pricing is driving a switch to CaS.' Plants usually commit to either Li complex or CaS for 80–90% of grease. Polyurea is common for electric motors (~10%)."
+          },
+          {
+            "slide": 14,
+            "label": "Distributor portfolio requirements",
+            "content": "Distributors define grease offering in terms of: mineral oil and synthetic bases; multiple thickeners (e.g., Lithium, CaS, polyurea); multiple viscosities and NLGI grades; several packaging types (cartridges, pails, and drums at minimum); water-resistant, high-temperature, and food-grade greases round out a full product portfolio. Quote: 'It's entirely possible that manufacturing plants could be buying 6–10 individual brands of grease.' — Director, Industrial Product Management, Fuchs Lubricants Co. (fmr.)"
+          },
+          {
+            "slide": 15,
+            "label": "Distributor requirements and supplier ratings",
+            "content": "Distributor requirements: inventory (evidence of meeting demand); technical support and customer service (documentation, comparisons, marketing materials); corporate rebates (nearly universal, strongly preferred over discounts; Motion Industries has received rebates of 5–35%). Supplier ratings criteria distributors use to decide which products to promote: corporate rebate; warranty; on-time delivery rate; level of technical and customer support; pricing relative to industry benchmarks; product offering and packaging."
+          }
+        ]
+      },
+      "expected_behavior": {
+        "should": [
+          "Flag that Bullet 1 presents Factory Fill as an active sub-segment alongside MRO; Slide 6 shows HE Factory Fill was deprioritized during scoping and Auto Factory Fill is still exploring — the SoF overstates Factory Fill's strategic status",
+          "Flag that CaS gaining share at 25% (Slide 7) is absent from the SoF — relevant to the 'broad inventory' claim in Bullet 4 since portfolio must include CaS",
+          "Flag that 'broad inventory' in Bullet 4 is underspecified: Slide 14 defines what breadth means (multiple thickeners, bases, viscosities, NLGI grades, packaging types) — Lucas must meet these requirements to be carried at all",
+          "Flag that supplier ratings criteria beyond rebates (warranty, on-time delivery, pricing vs. benchmarks) in Slide 15 are not captured in Bullet 4",
+          "Confirm that the core distributor strategy direction (Bullet 4) is supported by the body"
+        ],
+        "should_not": [
+          "Approve the Factory Fill framing as consistent with the body",
+          "Miss the gap between 'broad inventory' and the specific portfolio requirements Slide 14 defines",
+          "Flag the headline or overall strategic direction as incorrect"
+        ]
+      },
+      "expected_output": "Core direction confirmed. Three gaps flagged: (1) Factory Fill framing inconsistency — body has deprioritized it, SoF treats it as active; (2) CaS share gain absent; (3) 'broad inventory' underspecified vs. Slide 14 portfolio breadth requirements.",
+      "llm_judge_prompt": "SoF Bullet 1 introduces Factory Fill as a named active sub-segment alongside MRO. Slide 6 shows Heavy Equipment Factory Fill was deprioritized during scoping and Automotive Factory Fill is still exploring. Did the skill flag that the SoF's Factory Fill framing is inconsistent with the body's deprioritization? Answer yes or no."
+    }
+
+  ]
+}
