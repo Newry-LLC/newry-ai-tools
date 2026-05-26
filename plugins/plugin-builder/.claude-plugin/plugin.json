@@ -1,0 +1,7 @@
+{
+  "name": "plugin-builder",
+  "version": "1.0.0",
+  "description": "Packages a Newry plugin folder into a correctly structured .plugin file for Cowork installation. Maintainer-facing.",
+  "author": "Newry Corp",
+  "repository": "https://github.com/Newry-LLC/newry-ai-tools"
+}
