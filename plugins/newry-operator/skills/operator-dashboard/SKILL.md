@@ -82,33 +82,21 @@ A single collapsible block labelled **"Program Direction ▸"** containing three
 
 ### 3. Plugin registry
 
-**Before building this section**, compute usage metrics from the log files:
+**Before building this section**, query usage metrics from Airtable:
 
-```python
-import os, glob, json
-from datetime import datetime, timezone, timedelta
+- **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
+- **Tool:** `list_records_for_table`
+- **Fields to retrieve:** `fldRrr3BkrJW8rE3L` (ts), `fldNHK285dPCOdNhB` (plugin), `fldmTXyfFZRpbZEvQ` (user_id)
+- **Page size:** 8000 (fetch all; paginate if needed)
 
-logs_dir = os.path.expanduser(r"~\Newry Corp\Clients - Claude Master Working Folder\logs")
-cutoff = datetime.now(timezone.utc) - timedelta(days=30)
-usage = {}  # plugin → {users: set, runs: int, last_run: str|None}
+From the returned records, compute for the trailing 30 days (records where `ts` ≥ today minus 30 days):
+- **Active users** — count of distinct `user_id` values per plugin
+- **Runs** — count of records per plugin
+- **Last run** — most recent `ts` per plugin, formatted `YYYY-MM-DD`
 
-for f in glob.glob(os.path.join(logs_dir, "usage-log-*.jsonl")):
-    with open(f) as fh:
-        for line in fh:
-            try:
-                e = json.loads(line)
-                ts = datetime.fromisoformat(e["ts"].replace("Z", "+00:00"))
-                if ts < cutoff: continue
-                p = e.get("plugin", "unknown")
-                if p not in usage: usage[p] = {"users": set(), "runs": 0, "last_run": None}
-                usage[p]["users"].add(e.get("user_id", ""))
-                usage[p]["runs"] += 1
-                if not usage[p]["last_run"] or e["ts"] > usage[p]["last_run"]:
-                    usage[p]["last_run"] = e["ts"]
-            except: pass
-```
+Store as `usage[plugin_name] = {users, runs, last_run}`.
 
-If the logs folder doesn't exist or no files are found, set `usage = {}` and show "No data yet" for all plugins. Do not surface an error.
+If the query returns no records or fails, set `usage = {}` and show `—` for all plugins. Do not surface an error.
 
 Render the plugin summary with expandable cards and status badges:
 - **Active** → green badge
