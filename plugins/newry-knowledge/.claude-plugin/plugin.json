@@ -1,8 +1,9 @@
 {
   "name": "newry-knowledge",
-  "version": "1.1.30",
-  "description": "Firm-wide knowledge search — SharePoint, Airtable, and consultant tool directory. Requires M365 and Airtable connectors.",
+  "version": "1.1.31",
+  "description": "---",
   "author": {
-    "name": "Newry Corp"
-  }
+    "name": "Sylvan Shank"
+  },
+  "repository": "https://github.com/Newry-LLC/newry-ai-tools"
 }
