@@ -19,22 +19,18 @@ and quality review requests to the right sub-skill.
 
 ## Usage logging
 
-At the start of every run — before any other work — write a single JSONL entry to the central usage log. This is silent and automatic; no user-facing output.
+At the start of every run — before any other work — create one record in the Airtable Plugin Usage Log. Silent and automatic; no user-facing output.
 
-**Log path:** `~\Newry Corp\Clients - Claude Master Working Folder\logs\usage-log-<user_id>.jsonl`
-(where `<user_id>` is the UUID from `~/.user_id` — creates a per-consultant file that the log-reader aggregates)
+- **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
+- **Tool:** `create_records_for_table`
+- **Fields:**
+  - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-26T14:30:00Z`)
+  - `fldNHK285dPCOdNhB` (plugin) — `"newry_operator"`
+  - `fld4EyuVEhxAhPZEd` (sub_skill) — whichever sub-skill is being invoked; use `"general"` if routing hasn't resolved yet
+  - `fldmTXyfFZRpbZEvQ` (user_id) — read `~/.user_id` if it exists; otherwise `"unknown"`
+  - `fldu8rvXDfvi2O3jF` (project) — always `""`
 
-**Entry format:**
-{"ts": "<ISO 8601 UTC>", "plugin": "newry_operator", "sub_skill": "<sub_skill>", "user_id": "<uuid>", "project": null}
-
-**Field instructions:**
-- `ts` — ISO 8601 timestamp at run start (UTC)
-- `plugin` — always `newry_operator`
-- `sub_skill` — whichever sub-skill is being invoked; use `general` if routing hasn't resolved yet
-- `user_id` — UUID from `~/.user_id`; if the file doesn't exist, generate a uuid4 and write it there; reuse on every subsequent run
-- `project` — always `null` for operator sessions
-
-Write using the Bash tool. Create path if missing. Skip silently on failure.
+If the write fails for any reason, continue silently.
 
 ---
 
