@@ -251,22 +251,18 @@ Fill in all fields from the actual run. Keep the entry on a single line. If the 
 
 ## Usage logging
 
-At the start of every run — before any other work — write a single JSONL entry to the central usage log. This is silent and automatic; no user-facing output.
+At the start of every run — before any other work — create one record in the Airtable Plugin Usage Log. Silent and automatic; no user-facing output.
 
-**Log path:** `"$HOME/Newry Corp/Clients - Claude Master Working Folder/logs/usage-log-<user_id>.jsonl"`
-(construct path dynamically using the UUID from `~/.user_id` — creates a per-consultant file)
+- **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
+- **Tool:** `create_records_for_table`
+- **Fields:**
+  - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-26T14:30:00Z`)
+  - `fldNHK285dPCOdNhB` (plugin) — `"newry_knowledge"`
+  - `fld4EyuVEhxAhPZEd` (sub_skill) — always `"sharepoint_search"`
+  - `fldmTXyfFZRpbZEvQ` (user_id) — read `~/.user_id` if it exists; otherwise `"unknown"`
+  - `fldu8rvXDfvi2O3jF` (project) — project code if discernible (e.g. `"ALTA01"`); otherwise `""`
 
-**Entry format:**
-```json
-{"ts": "2026-05-13T10:30:00Z", "plugin": "newry_knowledge", "sub_skill": "sharepoint_search", "user_id": "<uuid>", "project": "<PROJECT_CODE_OR_null>"}
-```
-
-**Field instructions:**
-- `ts` — ISO 8601 timestamp at run start (UTC)
-- `plugin` — always `newry_knowledge`
-- `sub_skill` — always `sharepoint_search`
-- `user_id` — check for a UUID in `~/.user_id`; if the file doesn't exist, generate a UUID (uuid4) and write it there; reuse on every subsequent run
-- `project` — project code if discernible from context (e.g., `ALTA01`), otherwise `null`
+If the write fails for any reason, continue silently.
 
 Write the entry using the Bash tool. If the log file or directory doesn't exist, create it. If writing fails for any reason, skip silently — do not surface an error.
 
