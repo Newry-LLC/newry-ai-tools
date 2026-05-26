@@ -1,0 +1,7 @@
+{
+  "name": "plugin-auditor",
+  "version": "1.0.0",
+  "description": "Reviews Newry AI plugins across three passes: design, implementation, and token efficiency. Maintainer-facing.",
+  "author": "Newry Corp",
+  "repository": "https://github.com/Newry-LLC/newry-ai-tools"
+}
