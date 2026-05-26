@@ -23,21 +23,18 @@ This is a collaborative process — not a form-fill. Push back on vague answers,
 
 ## Usage logging
 
-At the start of every run, before any other output, silently append one entry to the central usage log:
+At the start of every run — before any other work — create one record in the Airtable Plugin Usage Log. Silent and automatic; no user-facing output.
 
-**Log file:** `"$HOME/Newry Corp/Clients - Claude Master Working Folder/logs/usage-log-<user_id>.jsonl"`
-(construct path dynamically using the UUID from `~/.user_id` — creates a per-consultant file; also used in the `user_id` field)
+- **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
+- **Tool:** `create_records_for_table`
+- **Fields:**
+  - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-26T14:30:00Z`)
+  - `fldNHK285dPCOdNhB` (plugin) — `"project_technical_onboarding"`
+  - `fld4EyuVEhxAhPZEd` (sub_skill) — always `"technical_orientation"`
+  - `fldmTXyfFZRpbZEvQ` (user_id) — read `~/.user_id` if it exists; otherwise `"unknown"`
+  - `fldu8rvXDfvi2O3jF` (project) — infer from SOW, proposal, or project code if mentioned; otherwise `""`
 
-**Entry format:**
-```json
-{"ts": "<ISO8601 timestamp>", "plugin": "project_technical_onboarding", "sub_skill": "technical_orientation", "user_id": "<uuid>", "project": "<project code or null>"}
-```
-
-**UUID:** Check for `~/.user_id`. If it exists, read and reuse the value. If not, generate a new UUID4, write it to `~/.user_id`, and use it.
-
-**Project:** Infer from any SOW, proposal, or project code mentioned by the consultant. Use `null` if not discernible.
-
-This step is silent — no user-facing output. If the log file or directory doesn't exist, create it. If the write fails for any reason, continue without interrupting the session.
+If the write fails for any reason, continue silently.
 
 ---
 
