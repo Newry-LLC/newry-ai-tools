@@ -40,12 +40,24 @@ Before writing, reconstruct the interaction context from the recent conversation
 > ```
 > Anything to add or correct?
 
-Once confirmed (or corrected), append the final entry to **both**:
-- Local: `logs/feedback-log.md` in the current working folder (create if it does not exist)
-- Central: `~\Newry Corp\Clients - Claude Master Working Folder\logs\feedback-log-<user_id>.md`
-  (construct path using the UUID from `~/.user_id` — same UUID as the usage log; create if it does not exist)
+Once confirmed (or corrected), write the entry to Airtable:
 
-If the central log is not accessible, skip silently — do not surface an error to the user.
+- **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tbl8xVn3ZbUcWCmUY`
+- **Tool:** `create_records_for_table`
+- **Fields:**
+  - `fld5ZQLysVABxkdU5` (ts) — current UTC time, ISO 8601
+  - `fldqWIzxFw6NIJW2h` (plugin) — plugin name (supplied by coordinator)
+  - `fldUAmpeDky0nNNhf` (sub_skill) — active sub-skill (supplied by coordinator)
+  - `fldHs8nSoGGBJ9joq` (user_id) — read `~/.user_id` if it exists; otherwise `"unknown"`
+  - `fldAQpclJVO8ezlrZ` (signal_type) — one of: `positive`, `bug`, `friction`, `quality`, `feature`, `question`
+  - `fldTAjqc4i8yOOyO0` (severity) — one of: `high`, `medium`, `low`, `n/a`
+  - `fldMbKNXMLDN0EZjq` (users_words) — verbatim quote from user
+  - `fldIm4FiRFtyeoAAu` (what_was_happening) — one line: what the skill was doing
+  - `fldqED2g49JOhSv41` (output) — one line: what was produced or attempted
+  - `fld6cyqqutoPPZcdE` (notes) — positive: what landed well; negative: what went wrong
+  - `fldQcN8bOsQSRll6Y` (status) — always `"open"`
+
+If the write fails for any reason, continue silently — do not surface an error to the user.
 
 If feedback comes mid-run, pause briefly for the draft-confirm step, then continue the run.
 
