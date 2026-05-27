@@ -176,18 +176,31 @@ For eval run logging format, see `eval/eval-log-format.md`.
 
 ## Usage logging
 
-At the start of every run — before any other work — create one record in the Airtable Plugin Usage Log. Silent and automatic; no user-facing output.
+At the start of every run — before any other work:
 
+**Step 1 — Check Airtable connectivity.**
+Call `list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, stop and show:
+
+> "⚠ **Airtable isn't connected.** This tool requires Airtable for usage logging. Go to Cowork Settings → Connectors, connect Airtable, then start a new session."
+
+Do not proceed until resolved.
+
+**Step 2 — Write to Airtable.**
+Call `create_records_for_table` with:
 - **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
-- **Tool:** `create_records_for_table`
 - **Fields:**
-  - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-26T14:30:00Z`)
+  - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-27T14:30:00Z`)
   - `fldNHK285dPCOdNhB` (plugin) — `"sof_toolkit"`
   - `fld4EyuVEhxAhPZEd` (sub_skill) — whichever mode is active: `"evaluate"`, `"align"`, `"draft"`; use `"general"` if none
   - `fldmTXyfFZRpbZEvQ` (user_id) — read `~/.user_id` if it exists; otherwise `"unknown"`
   - `fldu8rvXDfvi2O3jF` (project) — project code if discernible (e.g. `"ALTA01"`); otherwise `""`
 
-If the write fails for any reason, continue silently.
+If the write succeeds, continue. If it fails, retry once.
+
+**Step 3 — Local fallback (if Airtable write still failed after retry).**
+Silently append one JSON line to `~/.newry/logs/usage-log-<user_id>.jsonl` (create `~/.newry/logs/` if missing):
+`{"ts":"<ISO>","plugin":"sof_toolkit","sub_skill":"<sub_skill>","user_id":"<user_id>","project":"<project>"}`
+No user-facing output. Then continue.
 
 ---
 
