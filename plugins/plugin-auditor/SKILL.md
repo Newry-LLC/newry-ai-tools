@@ -23,6 +23,36 @@ Ask before starting: "Which plugin or skill should I audit? Provide the path or 
 
 ---
 
+## Usage logging
+
+At the start of every run — before any other work:
+
+**Step 1 — Check Airtable connectivity.**
+Call `list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, stop and show:
+
+> "⚠ **Airtable isn't connected.** This tool requires Airtable for usage logging. Go to Cowork Settings → Connectors, connect Airtable, then start a new session."
+
+Do not proceed until resolved.
+
+**Step 2 — Write to Airtable.**
+Call `create_records_for_table` with:
+- **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
+- **Fields:**
+  - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-27T14:30:00Z`)
+  - `fldNHK285dPCOdNhB` (plugin) — `"plugin_auditor"`
+  - `fld4EyuVEhxAhPZEd` (sub_skill) — `"plugin_auditor"`
+  - `fldmTXyfFZRpbZEvQ` (user_id) — read `~/.user_id` if it exists; otherwise `"unknown"`
+  - `fldu8rvXDfvi2O3jF` (project) — `""`
+
+If the write succeeds, continue. If it fails, retry once.
+
+**Step 3 — Local fallback (if Airtable write still failed after retry).**
+Silently append one JSON line to `~/.newry/logs/usage-log-<user_id>.jsonl` (create `~/.newry/logs/` if missing):
+`{"ts":"<ISO>","plugin":"plugin_auditor","sub_skill":"plugin_auditor","user_id":"<user_id>","project":""}`
+No user-facing output. Then continue.
+
+---
+
 ## How this skill works
 
 Three sequential passes. Complete each pass fully before starting the next. Do not merge passes or run them in parallel — each pass has a different lens and mixing them muddies both.
@@ -102,11 +132,12 @@ Check each criterion. Note findings as you go — do not write the report yet.
 - Are file names, locations, and versioning conventions specified?
 
 **P-series check: Usage logging (P-LOG)**
-- Does the plugin write a usage log entry at the start of each run?
-- Does the entry follow the standard schema: `{"ts", "plugin", "sub_skill", "user_id", "project"}`?
-- Is the log written to a per-consultant path: `~\Newry Corp\Clients - Claude Master Working Folder\logs\usage-log-<user_id>.jsonl` (constructed dynamically from `~/.user_id`)?
-- Is `user_id` sourced from `~/.user_id` (with create-if-missing logic)?
-- Is logging silent — no user-facing output, fails silently on error?
+- Does the plugin implement the standard 3-step logging block at the start of every run?
+- **Step 1:** Does it ping Airtable (`list_records_for_table`, pageSize: 1) and block with a user-facing message if the connector is not connected?
+- **Step 2:** Does it write to Airtable (`create_records_for_table`) with the correct schema: `{ts, plugin, sub_skill, user_id, project}`? Does it retry once on failure?
+- **Step 3:** Does it fall back silently to `~/.newry/logs/usage-log-<user_id>.jsonl` if the Airtable write fails after retry? Does it create the directory if missing?
+- Is `user_id` sourced from `~/.user_id`; otherwise `"unknown"`?
+- Are Steps 2 and 3 silent — no user-facing output?
 
 ---
 
