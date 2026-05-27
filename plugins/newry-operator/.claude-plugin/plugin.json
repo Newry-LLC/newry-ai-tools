@@ -1,9 +1,8 @@
 {
   "name": "newry-operator",
-  "version": "1.0.6",
-  "description": "Operator tools for Newry AI program builders",
+  "version": "1.0.8",
+  "description": "Design advisor, decision logger, build prioritization, quality review, and operator dashboard for Newry AI program stewards.",
   "author": {
-    "name": "Sylvan Shank"
-  },
-  "repository": "https://github.com/Newry-LLC/newry-ai-tools"
+    "name": "Newry Corp"
+  }
 }
