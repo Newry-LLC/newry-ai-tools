@@ -1,0 +1,13 @@
+Yes — Alta has secondary research that covers styrene, though not a dedicated styrene regulation document. The coverage appears in the initial secondary research deck under two topics:
+
+1. Styrene as a cost driver for UPRs
+The deck notes that "styrene cost pass-through limits pricing power" for unsaturated polyester resins (UPRs), which are Alta's largest revenue segment (60.4% of revenue). This is framed as a structural headwind that "caps margin upside" in the UPR segment and contributes to the historically negative CAGR of (2)–(3)% from 2018–2024.
+
+2. Styrene-free regulation as a tailwind for gelcoats
+Under the Gelcoat CAGR section, the deck identifies "low-VOC / styrene-free regulatory tailwind" as a key growth driver, specifically calling out the EU Green Deal as pushing "formulation shift industry-wide." This is listed alongside marine recoat cycles and wind blade gelcoat specs as a forward demand driver for the gelcoat segment (3–5% forward CAGR).
+
+There is no standalone secondary research document focused specifically on styrene regulation — no dedicated regulatory analysis covering OSHA PELs, EPA NESHAP rules, REACH/SVHC status, or EU occupational exposure limits. The existing coverage is market-context only (cost pressure on UPRs, formulation-shift tailwind for gelcoats).
+
+If a deeper regulatory analysis is needed, that would be a gap in the current secondary research corpus.
+
+**Source:** [2026.04.28 Alta - Inital Secondary Research.pptx](https://newrycorp.sharepoint.com/clients/Shared%20Documents/Clients/ALTA%20Performance%20Materials/ALTA01-Growth%20Strategy/Secondary%20Research/2026.04.28%20Alta%20-%20Inital%20Secondary%20Research.pptx)
