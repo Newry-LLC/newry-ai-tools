@@ -1,7 +1,9 @@
 {
   "name": "plugin-builder",
   "version": "1.0.0",
-  "description": "Packages a Newry plugin folder into a correctly structured .plugin file for Cowork installation. Maintainer-facing.",
-  "author": "Newry Corp",
+  "description": "Use this skill whenever a Newry plugin needs to be packaged into a .plugin file for Cowork installation. Triggers on \"package this plugin,\" \"build the plugin file,\" \"repackage,\" \"create the .plugin,\" or any request to turn a plugin folder into an installable file. Maintainer-facing \u2014 not consultant-facing.",
+  "author": {
+    "name": "Sylvan Shank"
+  },
   "repository": "https://github.com/Newry-LLC/newry-ai-tools"
 }
