@@ -1,9 +1,8 @@
 {
   "name": "sof-toolkit",
-  "version": "1.0.7",
-  "description": "---",
+  "version": "1.0.9",
+  "description": "Evaluate, align, and draft Summary of Findings slides using the Pyramid Principle.",
   "author": {
-    "name": "Sylvan Shank"
-  },
-  "repository": "https://github.com/Newry-LLC/newry-ai-tools"
+    "name": "Newry Corp"
+  }
 }
