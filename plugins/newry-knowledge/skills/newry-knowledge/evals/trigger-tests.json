@@ -1,0 +1,184 @@
+{
+  "version": "1.1",
+  "purpose": "Test whether skill trigger descriptions fire correctly. Run each prompt and observe which skill activates. Pass = skill fires as expected. Fail = wrong skill fires, both fire when only one should, or neither fires when one should.",
+  "notes": "Run in a clean Cowork session with both skills installed. Observe trigger before skill executes — goal is testing coordinator routing, not skill output quality. For stability testing, re-run borderline cases (marked watch_for) at least 3 times — a case that passes once but fails intermittently is a real issue.",
+
+  "tests": [
+
+    // ─────────────────────────────────────────
+    // SHOULD trigger sharepoint-search only
+    // ─────────────────────────────────────────
+
+    {
+      "id": "T01",
+      "prompt": "What does the Newry Ladder say about Senior Associate responsibilities?",
+      "expected_trigger": "sharepoint-search",
+      "rationale": "Classic point lookup against an internal HR document"
+    },
+    {
+      "id": "T02",
+      "prompt": "Do we have a PPTX template for a market sizing model?",
+      "expected_trigger": "sharepoint-search",
+      "rationale": "Template lookup — lives in SharePoint Consulting Resources"
+    },
+    {
+      "id": "T03",
+      "prompt": "What secondary research does the Alta project have on drone applications?",
+      "expected_trigger": "sharepoint-search",
+      "rationale": "Project-specific document content question"
+    },
+    {
+      "id": "T04",
+      "prompt": "Which Alta interviewees mentioned AOC as a competitor?",
+      "expected_trigger": "sharepoint-search",
+      "rationale": "Interview content question — documents in SharePoint"
+    },
+    {
+      "id": "T05",
+      "prompt": "Has Newry presented the styrene findings to the Alta client?",
+      "expected_trigger": "sharepoint-search",
+      "rationale": "Existence check against SharePoint Newry Presentation folder"
+    },
+    {
+      "id": "T06",
+      "prompt": "What does the Newry employee handbook say about vacation policy?",
+      "expected_trigger": "sharepoint-search",
+      "rationale": "HR policy document lookup"
+    },
+    {
+      "id": "T07",
+      "prompt": "Find me an example of a SONAR deep dive deliverable",
+      "expected_trigger": "sharepoint-search",
+      "rationale": "Example document lookup — lives in TOOLS-TRAINING Hero Slides"
+    },
+    {
+      "id": "T08",
+      "prompt": "Has Newry worked in composites or specialty laminates?",
+      "expected_trigger": "sharepoint-search",
+      "rationale": "Domain/industry prior-work question — SP-primary via prior-work sweep. Airtable metadata is too spotty for reliable coverage across older projects; SP indexes actual document content regardless of tagging quality."
+    },
+    {
+      "id": "T18",
+      "prompt": "What does Newry's training say about structuring a problem statement?",
+      "expected_trigger": "sharepoint-search",
+      "rationale": "Explicitly asks about Newry's training materials — passes the Newry-specific gate and routes to SP"
+    },
+    {
+      "id": "T20",
+      "prompt": "How many days of vacation do I get?",
+      "expected_trigger": "sharepoint-search",
+      "rationale": "Conversational phrasing but answerable from the Newry employee handbook — valid SP lookup",
+      "what_to_look_for": "Watch for this routing to 'neither' — the conversational phrasing could fool the gate into treating it as general knowledge. That would be a false negative."
+    },
+
+    // ─────────────────────────────────────────
+    // SHOULD trigger airtable-search only
+    // ─────────────────────────────────────────
+
+    {
+      "id": "T09",
+      "prompt": "Who are our contacts at W.L. Gore?",
+      "expected_trigger": "airtable-search",
+      "rationale": "Client contact lookup — lives in Airtable Clients table"
+    },
+    {
+      "id": "T10",
+      "prompt": "What have we learned from projects where the client was hard to manage?",
+      "expected_trigger": "airtable-search",
+      "rationale": "AER mining — institutional learnings live in Airtable AER fields"
+    },
+    {
+      "id": "T11",
+      "prompt": "Who at Newry has worked on automotive projects?",
+      "expected_trigger": "airtable-search",
+      "rationale": "Staff expertise lookup — Project Roles in Airtable"
+    },
+    {
+      "id": "T12",
+      "prompt": "What was the scope and budget of COR741?",
+      "expected_trigger": "airtable-search",
+      "rationale": "Specific project metadata — code, budget, dates in Airtable Projects. SP fallback if AT result is thin.",
+      "notes": "Adaptive routing: AT-primary, SP secondary if needed"
+    },
+    {
+      "id": "T13",
+      "prompt": "What do we typically do well on growth strategy projects?",
+      "expected_trigger": "airtable-search",
+      "rationale": "AER mining across project type — Airtable AER fields"
+    },
+    {
+      "id": "T14",
+      "prompt": "What industry has Newry worked in the most?",
+      "expected_trigger": "airtable-search",
+      "expected_result": "known_limitation",
+      "rationale": "Aggregate project metadata question — correctly routes to airtable-search, but AT cannot aggregate across records. Skill will return partial or gracefully-degraded output.",
+      "what_to_look_for": "The routing itself should pass. Failure mode is the output, not the trigger — skill should acknowledge it can't aggregate and offer a workaround (e.g. browsing project list). A clean 'I can't do that' is a pass; a hallucinated count is a fail."
+    },
+
+    // ─────────────────────────────────────────
+    // SHOULD trigger BOTH
+    // ─────────────────────────────────────────
+
+    {
+      "id": "T15",
+      "prompt": "Has Newry done prior work in specialty coatings — what projects were done and what did the deliverables look like?",
+      "expected_trigger": "both",
+      "rationale": "Both-simultaneous: prior project lookup (SP prior-work sweep for domain coverage) plus deliverable document content (SP document read). AT doesn't add much here — SP is handling both.",
+      "what_to_look_for": "Search term specificity matters. Broad 'specialty coatings' returns noise (BCC reports, unrelated research). Skill should anchor to material/application terms: 'protective coatings adhesion film substrate polymer'. Watch for whether SP search terms are specific or generic."
+    },
+    {
+      "id": "T16",
+      "prompt": "What do we know about our Gore engagement — both the project scope and any documents?",
+      "expected_trigger": "both",
+      "rationale": "Explicitly requests both structured metadata (Airtable: scope, budget, dates) and document content (SharePoint: deliverables)"
+    },
+    {
+      "id": "T21",
+      "prompt": "Tell me about our Corning EIG work — what were the projects and what did those deliverables look like?",
+      "expected_trigger": "both",
+      "rationale": "Project list and metadata = Airtable; actual deliverable documents = SharePoint. Both needed for a complete answer.",
+      "what_to_look_for": "Watch for the skill pulling only from Airtable (project list) and skipping the SP deliverable search, or vice versa. Both tools should fire."
+    },
+    {
+      "id": "T22",
+      "prompt": "Who are our contacts at Halocarbon and what work have we done with them — including any deliverables we produced?",
+      "expected_trigger": "both",
+      "rationale": "Contact details = Airtable Clients; deliverables = SharePoint. Explicit request for both.",
+      "what_to_look_for": "High risk of AT-only response (contacts found, SP search skipped). Both skills must fire."
+    },
+    {
+      "id": "T23",
+      "prompt": "What have we learned from our specialty glass projects and what does the secondary research on that topic look like?",
+      "expected_trigger": "both",
+      "rationale": "AER learnings = Airtable; secondary research documents = SharePoint.",
+      "what_to_look_for": "Watch for SP search being skipped because AT gave a complete-seeming AER answer. Both tools must fire."
+    },
+
+    // ─────────────────────────────────────────
+    // SHOULD trigger NEITHER
+    // ─────────────────────────────────────────
+
+    {
+      "id": "T17",
+      "prompt": "What is a market sizing model and how do you build one?",
+      "expected_trigger": "neither",
+      "rationale": "General consulting methodology — not a Newry document or data question",
+      "what_to_look_for": "High false-positive risk: 'market sizing' appears in Newry training materials. Watch for sharepoint-search incorrectly firing on this."
+    },
+    {
+      "id": "T19",
+      "prompt": "What is Corning's business strategy?",
+      "expected_trigger": "neither",
+      "rationale": "Public company strategy question — general knowledge, not a Newry document lookup",
+      "what_to_look_for": "High false-positive risk: Corning is Newry's largest client. Watch for sharepoint-search firing incorrectly. Re-run this case 3x to check for intermittent false positives."
+    },
+    {
+      "id": "T24",
+      "prompt": "What's the best way to structure a primary research plan for a B2B market?",
+      "expected_trigger": "neither",
+      "rationale": "Sounds Newry-specific but is general methodology — should answer from Claude's knowledge, not SP. The PRT skill may fire separately, but newry-knowledge coordinator should route to neither.",
+      "what_to_look_for": "Watch for sharepoint-search firing because 'primary research plan' appears in PRT training materials on SharePoint. That would be a false positive — the question is about methodology, not Newry's specific documents."
+    }
+
+  ]
+}
