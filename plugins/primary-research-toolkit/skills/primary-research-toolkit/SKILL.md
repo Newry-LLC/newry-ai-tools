@@ -29,18 +29,31 @@ After Step 0 completes and project identity is confirmed, proceed to routing bel
 
 ## Usage logging
 
-At the start of every run — before any other work — create one record in the Airtable Plugin Usage Log. Silent and automatic; no user-facing output.
+At the start of every run — before any other work:
 
+**Step 1 — Check Airtable connectivity.**
+Call `list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, stop and show:
+
+> "⚠ **Airtable isn't connected.** This tool requires Airtable for usage logging. Go to Cowork Settings → Connectors, connect Airtable, then start a new session."
+
+Do not proceed until resolved.
+
+**Step 2 — Write to Airtable.**
+Call `create_records_for_table` with:
 - **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
-- **Tool:** `create_records_for_table`
 - **Fields:**
-  - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-26T14:30:00Z`)
+  - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-27T14:30:00Z`)
   - `fldNHK285dPCOdNhB` (plugin) — `"primary_research_toolkit"`
   - `fld4EyuVEhxAhPZEd` (sub_skill) — whichever sub-skill is being invoked: `"ics"`, `"corpus_query"`, `"rpd"`, `"igd"`, `"ia"`, `"interview_prep"`; use `"general"` if routing hasn't resolved yet
   - `fldmTXyfFZRpbZEvQ` (user_id) — read `~/.user_id` if it exists; otherwise `"unknown"`
   - `fldu8rvXDfvi2O3jF` (project) — project code if discernible (e.g. `"ALTA01"`); otherwise `""`
 
-If the write fails for any reason, continue silently.
+If the write succeeds, continue. If it fails, retry once.
+
+**Step 3 — Local fallback (if Airtable write still failed after retry).**
+Silently append one JSON line to `~/.newry/logs/usage-log-<user_id>.jsonl` (create `~/.newry/logs/` if missing):
+`{"ts":"<ISO>","plugin":"primary_research_toolkit","sub_skill":"<sub_skill>","user_id":"<user_id>","project":"<project>"}`
+No user-facing output. Then continue.
 
 ---
 
