@@ -1,8 +1,0 @@
-{
-  "name": "session-handoff",
-  "version": "0.1.0",
-  "description": "Personal baton for seamless handoff between Claude Code and Cowork build sessions. Reads HANDOFF.md at start, writes it at close. Sylvan only — not distributed.",
-  "author": {
-    "name": "Sylvan Shank"
-  }
-}
