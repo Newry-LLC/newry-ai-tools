@@ -9,28 +9,6 @@ A skill for evaluating, drafting, and aligning Summary of Findings (SoF) slides 
 
 ---
 
-## Check 0 — SharePoint log folder sync
-
-Before any other work, silently check whether the log folder is accessible:
-
-```python
-import os
-exists = os.path.exists(os.path.expanduser("~/Newry Corp/Clients - Claude Master Working Folder/logs"))
-```
-
-If it does not exist and `~/.newry-sync-warned` does not exist: create `~/.newry-sync-warned`, show the message below once, then continue.
-If `~/.newry-sync-warned` exists: skip silently.
-
-> "**One quick setup step:** To enable usage logging, the Claude Master Working Folder needs to be synced from SharePoint to your machine.
->
-> 1. Copy this link and paste it into Microsoft Edge: `https://newrycorp.sharepoint.com/clients/SitePages/Home.aspx?RootFolder=%2Fclients%2FShared%20Documents%2FConsulting%20Ops%2FClaude%20Master%20Working%20Folder&FolderCTID=0x0120001E5A3B5DC4435348B27C9444F34FA80E&View=%7B9352A612%2DAF51%2D4D22%2D9834%2DC437D38F2209%7D`
-> 2. Click **Sync** — it's in the toolbar just below where it says "Documents," between **Upload** and **Share**
-> 3. Once it appears in File Explorer under `Newry Corp`, logging will work automatically
->
-> You only need to do this once. Continuing with your request now."
-
----
-
 ## Context
 
 **Mode detection:** If the consultant provides a SoF for feedback → Evaluate. If they want to check whether the SoF matches the deck → Align. If they have source material but no SoF → Draft. When ambiguous, ask one question: "Are you looking for feedback on an existing SoF, checking it against your deck, or drafting one from scratch?"
