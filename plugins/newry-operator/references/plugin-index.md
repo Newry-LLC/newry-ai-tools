@@ -1,6 +1,6 @@
 # Newry AI Plugin Index
 
-**Last updated:** 2026-05-26
+**Last updated:** 2026-05-27
 **Purpose:** Reference for program maintainers and successors. Covers all active plugins and standalone skills — what they do, what they log, what training materials exist, and distribution status.
 
 ---
@@ -9,15 +9,15 @@
 
 | Plugin | Version | Type | Status | Audience |
 |--------|---------|------|--------|----------|
-| Primary Research Toolkit | 1.3.10 | Packaged plugin | Active | Consultants |
-| SoF Toolkit | 1.0.7 | Packaged plugin | Active | Consultants |
-| newry-knowledge | 1.1.31 | Packaged plugin | Active | Consultants |
-| newry-operator | 1.0.5 | Packaged plugin | Active | Program builders |
-| Project Technical Onboarding | 0.1.7 | Packaged plugin | In progress | Consultants |
+| Primary Research Toolkit | 1.3.12 | Packaged plugin | Active | Consultants |
+| SoF Toolkit | 1.0.9 | Packaged plugin | Active | Consultants |
+| newry-knowledge | 1.1.33 | Packaged plugin | Active | Consultants |
+| newry-operator | 1.0.8 | Packaged plugin | Active | Program builders |
+| Project Technical Onboarding | 0.1.8 | Packaged plugin | In progress | Consultants |
 | Project Launch Toolkit | — | Packaged plugin | In progress | Consultants |
-| RMA-OA Builder | — | Packaged plugin | In progress | Consultants |
-| Plugin Auditor | — | Standalone skill | Active | Maintainers |
-| Plugin Builder | — | Standalone skill | Active | Maintainers |
+| RMA-OA Builder | 1.0.1 | Packaged plugin | In progress | Consultants |
+| Plugin Auditor | 1.0.0 | Packaged plugin | Active | Maintainers |
+| Plugin Builder | 1.0.0 | Packaged plugin | Active | Maintainers |
 | Synthesis QA | — | Standalone skill | Active | Maintainers |
 | log-reader | — | Standalone skill | Active | Maintainers |
 | feedback-capture | — | Shared sub-skill | Active | Internal (called by coordinators) |
@@ -29,14 +29,19 @@
 
 Plugins are distributed via Cowork Org Settings → Plugins. Matt (org owner) installs from `.plugin` files stored in `outputs/` and on GitHub (`Newry-LLC/newry-ai-tools`).
 
-**Auto-update:** If the GitHub repo is connected as a plugin source and "Sync automatically" is enabled in Org Settings, updates auto-propagate to all users on their next session after a merged PR. If "Sync automatically" is off, Matt must manually trigger a sync. Manual file uploads have no auto-update path — re-upload required.
+**Auto-update:** GitHub repo (`Newry-LLC/newry-ai-tools`) is connected as the plugin source with "Sync automatically" enabled. Updates auto-propagate to all users on their next session after a push to GitHub. All plugins are on auto-sync.
 
-**Recommendation:** Connect `Newry-LLC/newry-ai-tools` as the plugin source and enable "Sync automatically" so version updates reach all users without admin action.
+**To push updates:** Switch to Claude Code and run from the `Building Tools for Newry` folder:
+- **Windows:** `PYTHONIOENCODING=utf-8 "C:/Users/sshank/AppData/Local/Programs/Python/Python314/python.exe" "strategy/push-plugins.py"`
+- **Mac/Linux:** `python3 "strategy/push-plugins.py"`
+
+The script pushes all `.plugin` files in `outputs/` automatically — no changes needed as new plugins are added. PAT stored at `strategy/.github-token`.
 
 **Installation preferences per plugin:**
 - `newry-knowledge` — default install (all users get it automatically)
 - `primary-research-toolkit` — available (self-service; not everyone does primary research)
 - `sof-toolkit` — available (relevant to consultants working on SoF slides)
+- `plugin-auditor`, `plugin-builder`, `newry-operator` — maintainers only
 
 ---
 
@@ -45,19 +50,18 @@ Plugins are distributed via Cowork Org Settings → Plugins. Matt (org owner) in
 **Usage logging — all plugins:** Airtable — Base `appRawPuacfAvVH2Z`, Table `tblmACtwIClniGn5n` (Plugin Usage Log)
 Schema: `{ts, plugin, sub_skill, user_id, project}`. Written via `create_records_for_table` at the start of every run. `user_id` read from `~/.user_id` if present; otherwise `"unknown"`. Readable by log-reader skill and operator dashboard via `list_records_for_table`.
 
-**Feedback logging — all plugins:** `~\Newry Corp\Clients - Claude Master Working Folder\logs\feedback-log.md`
-Captured via shared feedback-capture sub-skill on positive/negative signals.
+**Feedback logging — all plugins:** Airtable — Base `appRawPuacfAvVH2Z`, Table `tbl8xVn3ZbUcWCmUY` (Plugin Feedback Log)
+Schema: `{ts, plugin, sub_skill, user_id, signal_type, severity, users_words, what_was_happening, output, notes, status}`. Written via shared feedback-capture sub-skill on positive/negative signals. Draft-confirm pattern before writing.
 
 **Per-project local logs (PRT only):**
 - `logs/synthesis-log.md` — run details per ICS synthesis (project-scoped)
-- `logs/feedback-log.md` — feedback captured during the project (project-scoped)
 
 ---
 
 ## Plugin detail
 
 ### Primary Research Toolkit (PRT)
-**Version:** 1.3.10
+**Version:** 1.3.12
 **File:** `outputs/primary-research-toolkit.plugin`
 **GitHub:** `Newry-LLC/newry-ai-tools`
 
@@ -72,11 +76,6 @@ Captured via shared feedback-capture sub-skill on positive/negative signals.
 - Corpus Query — query the coded corpus by topic, person, segment, or branch
 
 *Note: A `coverage-gap-analysis` sub-skill exists in the source folder but is deprecated — absorbed into ICS Mode 2 (2026-05-04). Not active.*
-
-**Logs kept:**
-- Central (usage): `logs/usage-log.jsonl`
-- Central (feedback): `logs/feedback-log.md`
-- Local per-project: `logs/synthesis-log.md` (ICS run details), `logs/feedback-log.md` (project-scoped feedback)
 
 **Bundled reference files:**
 - `references/primary-research-onboarding.md` — verbatim extraction of `202504 Primary Research Onboarding.pptx`; covers full interview workflow from sourcing through synthesis/coding
@@ -101,7 +100,7 @@ Captured via shared feedback-capture sub-skill on positive/negative signals.
 ---
 
 ### SoF Toolkit
-**Version:** 1.0.7
+**Version:** 1.0.9
 **File:** `outputs/sof-toolkit.plugin`
 **GitHub:** `Newry-LLC/newry-ai-tools`
 
@@ -112,21 +111,17 @@ Captured via shared feedback-capture sub-skill on positive/negative signals.
 - Align — check whether a SoF matches the supporting deck content
 - Draft — produce a SoF from source findings or a deck
 
-**Logs kept:**
-- Central (usage): `logs/usage-log.jsonl`
-- Central (feedback): `logs/feedback-log.md`
+**References bundled:** `references/universal-standards.md` — Newry quality standards applied across all modes.
 
 **Training materials (SharePoint — for user access; not bundled):**
 - Pyramid Principle 2026 deck: [Pyramid Principle 2026.pptx](https://newrycorp.sharepoint.com/clients/Shared%20Documents/Consulting%20Resources/TOOLS-TRAINING/Pyramid%20Principle/Pyramid%20Principle%202026.pptx) — SharePoint > Consulting Resources > TOOLS-TRAINING > Pyramid Principle
-
-**References bundled:** `references/universal-standards.md` — Newry quality standards applied across all modes.
 
 **Notes:** Tested on Glass Core (multiple runs) and Alta (1 Draft run, 2026-04-30). PPTX annotation feature designed but not built (V1 backlog).
 
 ---
 
 ### newry-knowledge
-**Version:** 1.1.31
+**Version:** 1.1.33
 **File:** `outputs/newry-knowledge.plugin`
 **GitHub:** `Newry-LLC/newry-ai-tools`
 
@@ -137,68 +132,38 @@ Captured via shared feedback-capture sub-skill on positive/negative signals.
 - sharepoint-search — search SharePoint for project materials, internal resources, templates, research, and any firm content
 - airtable-search — search Airtable for project metadata, AER learnings, client contacts, and staff expertise
 
-**Logs kept:**
-- Central (usage): `logs/usage-log.jsonl`
-- Central (feedback): `logs/feedback-log.md`
-- Local (eval only): `plugins/newry-knowledge/evals/skill-log.jsonl` — maintainer eval runs; not production logging
-
 **Training materials (SharePoint — for user access; not bundled):**
 - Onboarding deck (covers both PRT and newry-knowledge, slides 5–6): [PRT and Newry Knowledge Claude Tools 5.12.26.pptx](https://newrycorp.sharepoint.com/clients/Shared%20Documents/Consulting%20Resources/Knowledge%20Nuggets/Nuggets/AI%20and%20LLMs%202026/PRT%20and%20Newry%20Knowledge%20Claude%20Tools%205.12.26.pptx) — SharePoint > Consulting Resources > Knowledge Nuggets > AI and LLMs 2026
 
-**Key dependencies:** M365 connector (for SharePoint) and Airtable connector must be connected in Cowork settings. Not bundled — users connect individually. Matt installs plugin firm-wide; users configure connectors.
+**Key dependencies:** M365 connector (for SharePoint) and Airtable connector must be connected in Cowork settings. Not bundled — users connect individually.
 
 **Notes:** Demo questions confirmed: Q1 (Newry Ladder PM expectations), Q3 (Alta competitors AOC/Reichhold). Trigger tests (20 cases) in `evals/trigger-tests.json` — not yet run.
 
 ---
 
 ### Project Technical Onboarding
-**Version:** 0.1.7 | **File:** `outputs/project-technical-onboarding.plugin` | **GitHub:** `Newry-LLC/newry-ai-tools` (pending push)
+**Version:** 0.1.8
+**File:** `outputs/project-technical-onboarding.plugin`
+**GitHub:** `Newry-LLC/newry-ai-tools`
 
 **What it does:** Guides a consultant through building a Technical Orientation document in week 1 of any engagement. Structured interview + docx artifact output. Calibrates Claude to the client's technology, value creation logic, and competitive position before strategic analysis begins.
 
 **Sub-skills:**
 - technical-orientation — structured intake interview → 4-section Technical Orientation doc (Product & Technology / Value Creation / Value Capture / Key Engagement Questions)
 
-**Logs kept:**
-- Central (usage): `~\Newry Corp\Clients - Claude Master Working Folder\logs\usage-log.jsonl`
-- Central (feedback): `~\Newry Corp\Clients - Claude Master Working Folder\logs\feedback-log.md`
-
-**Training materials:** None yet.
-
 **Key dependencies:** SharePoint working folder required. M365 connector required. Minimum inputs: SOW/proposal + client website.
 
 **Status / pending:**
-- Version note: `plugin.json` says 0.1.6; skill internal metadata says 0.1.4 — reconcile on next repackage
-- Evals run on v0.1.5 (3 scenarios, 100% pass with skill / 50% without) — new 4-section structure not yet evaluated
-- Eval viewer (`eval-review-technical-orientation.html`) needs human review before finalizing
-- Plugin 2 (training module — meta-skill for learning any B2B technical context) not yet built
-
----
-
-### Project Launch Toolkit (PLT)
-**Version:** — (not yet packaged) | **Source:** `plugins/project-launch-toolkit/`
-
-**What it does:** Guides a consultant through the project launch phase — from problem statement and issue tree through value creation hypothesis, workplan, and client account management setup.
-
-**Sub-skills (7 built, no coordinator yet):**
-- problem-statement — draft problem statement from SoW/proposal in Newry's standard template
-- issue-tree — generate MECE issue tree with hypotheses and prioritization recommendation; maps project types to default frameworks
-- value-creation — draft value creation hypothesis and Newry fair share calculation; 4 quantification categories
-- individual-value-creation-goals — decompose project-level value creation hypothesis into per-team-member goals tied to Newry's 5 KPI categories
-- workplan — convert issue tree into responsibility-assigned workplan table with milestone schedule and budget sanity check
-- fact-finding — generate pre-populated fact-finding worksheet; searches SharePoint, Airtable, Pipedrive
-- account-management — build/update per-stakeholder client account management profile with trust equation assessments and CRM goals
-
-**Logs kept:** TBD (not yet wired up).
-
-**Training materials:** None yet.
-
-**Status / pending:** All 7 sub-skills built. Missing: coordinator SKILL.md (router + shared context). Scored highest in skills prioritization matrix. Pending: coordinator build → Plugin Auditor pass → packaging → GitHub push.
+- Evals run on v0.1.5 (3 scenarios, 100% pass with skill / 50% without) — 4-section structure not yet evaluated
+- Eval viewer (`eval-review-technical-orientation.html`) needs human review
+- Plugin 2 (training module) not yet built
 
 ---
 
 ### RMA-OA Builder
-**Version:** — (not yet packaged) | **Source:** `plugins/rma-oa-builder/`
+**Version:** 1.0.1
+**File:** `outputs/rma-oa-builder.plugin`
+**GitHub:** `Newry-LLC/newry-ai-tools`
 
 **What it does:** Guides a consultant through designing and building a Rapid Market Assessment (RMA) or Opportunity Assessment — from intake and scoping through secondary research and section drafting, with a defined handoff to PRT when primary research is needed.
 
@@ -209,22 +174,14 @@ Captured via shared feedback-capture sub-skill on positive/negative signals.
 
 **Tiers:** Scoping / Standard / Full (recommended based on intake)
 
-**Logs kept:**
-- Central (usage): `~\Newry Corp\Clients - Claude Master Working Folder\logs\usage-log.jsonl`
-- Central (feedback): `~\Newry Corp\Clients - Claude Master Working Folder\logs\feedback-log.md`
-
-**Training materials:** None yet.
-
-**Status / pending:** SKILL.md written (both phases). Pending: Plugin Auditor pass → vetting → packaging → GitHub push.
-
----
+**Status / pending:** SKILL.md written (both phases). Pending: Plugin Auditor pass → vetting.
 
 ---
 
 ### newry-operator
-**Version:** 1.0.5
+**Version:** 1.0.8
 **File:** `outputs/newry-operator.plugin`
-**GitHub:** `Newry-LLC/newry-ai-tools` (manual install — not on auto-sync)
+**GitHub:** `Newry-LLC/newry-ai-tools`
 
 **What it does:** Operator plugin for anyone building or stewarding the Newry AI program. Design advisor, decision logger, build prioritization, quality review, and program dashboard — in one plugin.
 
@@ -249,52 +206,55 @@ Captured via shared feedback-capture sub-skill on positive/negative signals.
 
 **Artifact:** `newry-operator-dashboard` — persistent Cowork sidebar showing plugins (expandable), milestones, recent decisions. Refresh by saying "show the dashboard."
 
-**Status / pending:**
-- Reinstall locally (uninstall v1.0.0 → install v1.0.1) + push to GitHub
-
 ---
 
-## Standalone skills (maintainer-facing)
-
 ### Plugin Auditor
-**Location:** `plugins/plugin-auditor/SKILL.md`
-**Not packaged** — used directly by program maintainer in Cowork.
+**Version:** 1.0.0
+**File:** `outputs/plugin-auditor.plugin`
+**GitHub:** `Newry-LLC/newry-ai-tools`
 
 **What it does:** Reviews any Newry plugin for quality across three passes: design (P2/P4/P5/P8/P12 principles), implementation (completeness/consistency/executability/edge cases/calibration/output spec), and token efficiency. Produces a report and walks through changes one by one.
 
-**Logs kept:** None currently.
 **When to use:** Before shipping any new plugin or after a major change.
 
 ---
 
 ### Plugin Builder
-**Location:** `plugins/plugin-builder/SKILL.md`
-**Not packaged** — used directly by program maintainer in Cowork.
+**Version:** 1.0.0
+**File:** `outputs/plugin-builder.plugin`
+**GitHub:** `Newry-LLC/newry-ai-tools`
 
 **What it does:** Packages a plugin folder into a correctly structured `.plugin` file for Cowork installation. Handles versioning, directory entries, plugin.json, and file selection.
 
-**Logs kept:** `logs/plugin-builder/feedback-log.md` (central, feedback only).
 **When to use:** Any time a plugin is ready for repackaging after changes.
 
 ---
 
+### Project Launch Toolkit (PLT)
+**Version:** — (not yet packaged) | **Source:** `plugins/project-launch-toolkit/`
+
+**What it does:** Guides a consultant through the project launch phase — from problem statement and issue tree through value creation hypothesis, workplan, and client account management setup.
+
+**Sub-skills (7 built, no coordinator yet):**
+- problem-statement, issue-tree, value-creation, individual-value-creation-goals, workplan, fact-finding, account-management
+
+**Status / pending:** All 7 sub-skills built. Missing: coordinator SKILL.md. Scored highest in skills prioritization matrix.
+
+---
+
+## Standalone skills (maintainer-facing, not yet packaged)
+
 ### Synthesis QA
 **Location:** `plugins/synthesis-qa/SKILL.md`
-**Not packaged** — used directly by program maintainer in Cowork.
 
-**What it does:** Quality review of synthesis outputs (roll-ups, summary cards, analytical documents) across four checks: pyramid test, quantitative precision, plain language, headline/evidence consistency.
-
-**Logs kept:** None currently.
-**When to use:** Before any synthesis output goes to the team or client.
+Quality review of synthesis outputs (roll-ups, summary cards, analytical documents) across four checks: pyramid test, quantitative precision, plain language, headline/evidence consistency.
 
 ---
 
 ### Log Reader
-**Location:** `plugins/log-reader/SKILL.md` | **Not packaged**
+**Location:** `plugins/log-reader/SKILL.md`
 
-Reads and summarizes the central usage log (`usage-log.jsonl`) and feedback log for the Newry AI program. Computes active users (30d) and run counts (30d) per plugin. Use when a program maintainer wants plugin usage metrics or a feedback summary.
-
-**Logs kept:** None.
+Reads and summarizes the central usage and feedback logs from Airtable. Computes active users (30d) and run counts (30d) per plugin.
 
 ---
 
@@ -302,43 +262,25 @@ Reads and summarizes the central usage log (`usage-log.jsonl`) and feedback log 
 
 ### feedback-capture
 **Location:** `plugins/feedback-capture/SKILL.md`
-**Bundled into:** PRT, SoF Toolkit, newry-knowledge packages.
+**Bundled into:** all packaged plugins
 
-**What it does:** Canonical feedback capture behavior. Each plugin coordinator references this file. Captures positive signals ("wow," "nailed it," "show this to the team") and negative signals (bugs, friction, quality issues, feature requests). Draft-confirm-log pattern. All entries write to the cross-plugin central log.
-
-**Log format fields:** Plugin, Sub-skill, Signal type, Severity, User's words (verbatim), What was happening, Output, Notes.
+Canonical feedback capture behavior. Each plugin coordinator references this file. Captures positive and negative signals via draft-confirm-log pattern. Writes to Airtable Plugin Feedback Log (Base `appRawPuacfAvVH2Z`, Table `tbl8xVn3ZbUcWCmUY`).
 
 ---
 
 ### project-setup
-**Location:** `plugins/project-setup/SKILL.md` | **Bundled into:** PRT, Project Technical Onboarding, RMA-OA Builder
+**Location:** `plugins/project-setup/SKILL.md`
+**Bundled into:** PRT, Project Technical Onboarding, RMA-OA Builder
 
-Shared Step 0 block for all file-writing Newry skills. Verifies the correct project folder is mounted, establishes project identity (project code, client, working directory), creates skill-specific subfolders, and generates `project.md` from context files. Supports full mode (SharePoint-connected) and informal mode (local only). Includes graceful degradation when SharePoint is not accessible.
+Shared Step 0 block for all file-writing skills. Verifies project folder, establishes project identity, creates subfolders, generates `project.md`. Supports full mode (SharePoint-connected) and informal mode (local only).
 
 ---
 
 ## Open items / backlog
 
-### Tools in progress needing manual review
-- **Index sync skill** — SKILL.md drafted (`plugins/index-sync/SKILL.md`); needs Plugin Auditor pass before use
-- **PLT coordinator** — 7 sub-skills built; missing coordinator SKILL.md to route and share context. Next build priority.
-- **RMA-OA Builder** — SKILL.md written; pending Plugin Auditor pass → packaging → GitHub push
-- **Project Technical Onboarding** — version mismatch (plugin.json 0.1.6 vs. skill metadata 0.1.4); 4-section structure not yet evaluated; Plugin 2 not yet built
-- **Plugin Auditor + Synthesis QA + Plugin Builder** — ~~update feedback sections to use shared feedback-capture sub-skill~~ done 2026-05-16
-
-### Skills to be drafted
-- **Onboarding skill** — new consultant onboarding experience; surfaces what tools exist, where to start, links to training. Design pending.
-- **Program Concierge** — reads this index + program foundations for Matt/successors. Planned, not built.
-- **newry-knowledge coordinator** — drafted 2026-05-16 (`skills/newry-knowledge/SKILL.md`); pending Plugin Auditor pass → repackage → reinstall → GitHub push
-- **PRT eval runner** — unbuilt commitment
-
-### Maintenance / process
-- **Reinstall + GitHub push** — newry-knowledge v1.1.25 packaged 2026-05-21 (tool-directory v1.1: copy-link buttons on training decks, specific deck names, second PRT deck added); pending uninstall current version → reinstall → GitHub push
-- **Reinstall + GitHub push** — PRT v1.3.8, SoF v1.0.3, newry-knowledge v1.1.10 repackaged and reinstalled 2026-05-16; pushed to GitHub
-- **Auto-update** — enable "Sync automatically" on GitHub plugin source in Cowork Org Settings. Blocked on Matt joining Newry-LLC GitHub org.
+- **PLT coordinator** — 7 sub-skills built; missing coordinator SKILL.md. Next build priority.
+- **RMA-OA Builder** — pending Plugin Auditor pass → vetting
+- **Project Technical Onboarding** — 4-section structure not evaluated; Plugin 2 not built; eval viewer needs review
 - **newry-knowledge trigger tests** — 20 cases in `evals/trigger-tests.json`; not yet run
 - **PRT non-Alta corpus validation** — waiting for suitable in-flight project
-
-### Feature backlog
-
-*No active items.*
+- **user_id provisioning** — all usage/feedback logs show `"unknown"` until `~/.user_id` is provisioned in Cowork onboarding
