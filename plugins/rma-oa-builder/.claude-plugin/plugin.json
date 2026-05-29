@@ -1,9 +1,0 @@
-{
-  "name": "rma-oa-builder",
-  "version": "1.0.1",
-  "description": "Use this skill whenever a consultant is building a Rapid Market Assessment (RMA) or Opportunity Assessment \u2014 scoping it, designing the research approach, doing secondary research, or drafting sections. Triggers on \"I'm starting an RMA,\" \"help me build an opportunity assessment,\" \"scope this RMA,\" \"let's do the market research for this project,\" \"draft the market section,\" or any request to design, research, or produce an RMA or Opportunity Assessment deliverable, even if the user doesn't use those exact terms.",
-  "author": {
-    "name": "Sylvan Shank"
-  },
-  "repository": "https://github.com/Newry-LLC/newry-ai-tools"
-}
