@@ -1,9 +1,0 @@
-{
-  "name": "tam-generator",
-  "version": "1.0.0",
-  "description": "Guided, defensible TAM/SAM/SOM analysis for niche markets. Triangulates market size using top-down, bottom-up, value-theory, and comparable transaction methods to produce board/investor-grade estimates with explicit sources, assumptions, and confidence ratings.",
-  "author": {
-    "name": "Sylvan Shank"
-  },
-  "repository": "https://github.com/Newry-LLC/newry-ai-tools"
-}
