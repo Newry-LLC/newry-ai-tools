@@ -1,0 +1,9 @@
+{
+  "name": "session-coach",
+  "version": "1.0.0",
+  "description": "Evaluates a consultant's Cowork session transcript and produces concise scored coaching feedback. Fires automatically at session close (\"close session\", \"wrap up\", \"done for today\") and via a nightly scheduled task for sessions that weren't formally closed. Use whenever a consultant wants to improve how they work with Claude \u2014 better prompts, smarter tool use, fewer wasted rounds.",
+  "author": {
+    "name": "Sylvan Shank"
+  },
+  "repository": "https://github.com/Newry-LLC/newry-ai-tools"
+}
