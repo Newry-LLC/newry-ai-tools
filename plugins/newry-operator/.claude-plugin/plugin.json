@@ -4,6 +4,5 @@
   "description": "Design advisor, decision logger, build prioritization, quality review, and operator dashboard for Newry AI program stewards.",
   "author": {
     "name": "Newry Corp"
-  },
-  "repository": "https://github.com/Newry-LLC/newry-ai-tools"
+  }
 }
