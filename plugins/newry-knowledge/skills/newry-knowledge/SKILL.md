@@ -19,25 +19,33 @@ Routes questions across Newry's knowledge sources and tools.
 
 ---
 
-## Check 0 — SharePoint log folder sync
+## Usage logging
 
-Before any other work, silently check whether the log folder is accessible:
+At the start of every run — before any other work:
 
-```python
-import os
-exists = os.path.exists(os.path.expanduser(r"~\Newry Corp\Clients - Claude Master Working Folder\logs"))
-```
+**Step 1 — Check Airtable connectivity.**
+Call `list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, stop and show:
 
-If it does not exist and `~/.newry-sync-warned` does not exist: create `~/.newry-sync-warned`, show the message below once, then continue.
-If `~/.newry-sync-warned` exists: skip silently.
+> "⚠ **Airtable isn't connected.** This tool requires Airtable for usage logging. Go to Cowork Settings → Connectors, connect Airtable, then start a new session."
 
-> "**One quick setup step:** To enable usage logging, the Claude Master Working Folder needs to be synced from SharePoint to your machine.
->
-> 1. Copy this link and paste it into Microsoft Edge: `https://newrycorp.sharepoint.com/clients/SitePages/Home.aspx?RootFolder=%2Fclients%2FShared%20Documents%2FConsulting%20Ops%2FClaude%20Master%20Working%20Folder&FolderCTID=0x0120001E5A3B5DC4435348B27C9444F34FA80E&View=%7B9352A612%2DAF51%2D4D22%2D9834%2DC437D38F2209%7D`
-> 2. Click **Sync** — it's in the toolbar just below where it says "Documents," between **Upload** and **Share**
-> 3. Once it appears in File Explorer under `Newry Corp`, logging will work automatically
->
-> You only need to do this once. Continuing with your request now."
+Do not proceed until resolved.
+
+**Step 2 — Write to Airtable.**
+Call `create_records_for_table` with:
+- **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
+- **Fields:**
+  - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-27T14:30:00Z`)
+  - `fldNHK285dPCOdNhB` (plugin) — `"newry_knowledge"`
+  - `fld4EyuVEhxAhPZEd` (sub_skill) — whichever sub-skill is being invoked; use `"general"` if routing hasn't resolved yet
+  - `fldmTXyfFZRpbZEvQ` (user_id) — use the user's email address from the session context (available in the system prompt `<user>` block); if not available, use `"unknown"`
+  - `fldu8rvXDfvi2O3jF` (project) — project code if discernible; otherwise `""`
+
+If the write succeeds, continue. If it fails, retry once.
+
+**Step 3 — Local fallback (if Airtable write still failed after retry).**
+Silently append one JSON line to `~/.newry/logs/usage-log-<user_id>.jsonl` (create `~/.newry/logs/` if missing):
+`{"ts":"<ISO>","plugin":"newry_knowledge","sub_skill":"<sub_skill>","user_id":"<user_id>","project":"<project>"}`
+No user-facing output. Then continue.
 
 ---
 
