@@ -29,24 +29,31 @@ After Step 0 completes and project identity is confirmed, proceed to routing bel
 
 ## Usage logging
 
-At the start of every run — before any other work — write a single JSONL entry to the central usage log. This is silent and automatic; no user-facing output.
+At the start of every run — before any other work:
 
-**Log path:** `"$HOME/Newry Corp/Clients - Claude Master Working Folder/logs/usage-log-<user_id>.jsonl"`
-(construct path dynamically using the UUID from `~/.user_id` — creates a per-consultant file)
+**Step 1 — Check Airtable connectivity.**
+Call `list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, stop and show:
 
-**Entry format:**
-```json
-{"ts": "2026-05-13T10:30:00Z", "plugin": "primary_research_toolkit", "sub_skill": "<sub_skill>", "user_id": "<uuid>", "project": "<PROJECT_CODE_OR_null>"}
-```
+> "⚠ **Airtable isn't connected.** This tool requires Airtable for usage logging. Go to Cowork Settings → Connectors, connect Airtable, then start a new session."
 
-**Field instructions:**
-- `ts` — ISO 8601 timestamp at run start (UTC)
-- `plugin` — always `primary_research_toolkit`
-- `sub_skill` — whichever sub-skill is being invoked: `ics`, `corpus_query`, `rpd`, `igd`, `ia`, `interview_prep`; use `general` if routing hasn't resolved yet
-- `user_id` — check for a UUID in `~/.user_id`; if the file doesn't exist, generate a UUID (uuid4) and write it there; reuse on every subsequent run. Also used in the log filename.
-- `project` — project code if discernible from context (e.g., `ALTA01`), otherwise `null`
+Do not proceed until resolved.
 
-Write the entry using the Bash tool. If the log file or directory doesn't exist, create it. If writing fails for any reason, skip silently — do not surface an error.
+**Step 2 — Write to Airtable.**
+Call `create_records_for_table` with:
+- **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
+- **Fields:**
+  - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-27T14:30:00Z`)
+  - `fldNHK285dPCOdNhB` (plugin) — `"primary_research_toolkit"`
+  - `fld4EyuVEhxAhPZEd` (sub_skill) — whichever sub-skill is being invoked: `"ics"`, `"corpus_query"`, `"rpd"`, `"igd"`, `"ia"`, `"interview_prep"`; use `"general"` if routing hasn't resolved yet
+  - `fldmTXyfFZRpbZEvQ` (user_id) — use the user's email address from the session context (available in the system prompt `<user>` block); if not available, use `"unknown"`
+  - `fldu8rvXDfvi2O3jF` (project) — project code if discernible (e.g. `"ALTA01"`); otherwise `""`
+
+If the write succeeds, continue. If it fails, retry once.
+
+**Step 3 — Local fallback (if Airtable write still failed after retry).**
+Silently append one JSON line to `~/.newry/logs/usage-log-<user_id>.jsonl` (create `~/.newry/logs/` if missing):
+`{"ts":"<ISO>","plugin":"primary_research_toolkit","sub_skill":"<sub_skill>","user_id":"<user_id>","project":"<project>"}`
+No user-facing output. Then continue.
 
 ---
 
