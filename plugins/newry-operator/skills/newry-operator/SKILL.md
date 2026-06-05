@@ -35,7 +35,7 @@ Call `create_records_for_table` with:
   - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-27T14:30:00Z`)
   - `fldNHK285dPCOdNhB` (plugin) — `"newry_operator"`
   - `fld4EyuVEhxAhPZEd` (sub_skill) — whichever sub-skill is being invoked; use `"general"` if routing hasn't resolved yet
-  - `fldmTXyfFZRpbZEvQ` (user_id) — read `~/.user_id` if it exists; otherwise `"unknown"`
+  - `fldmTXyfFZRpbZEvQ` (user_id) — use the user's email address from the session context (available in the system prompt `<user>` block); if not available, use `"unknown"`
   - `fldu8rvXDfvi2O3jF` (project) — always `""`
 
 If the write succeeds, continue. If it fails, retry once.
