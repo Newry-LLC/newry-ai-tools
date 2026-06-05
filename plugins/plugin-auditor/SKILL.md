@@ -41,7 +41,7 @@ Call `create_records_for_table` with:
   - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-27T14:30:00Z`)
   - `fldNHK285dPCOdNhB` (plugin) — `"plugin_auditor"`
   - `fld4EyuVEhxAhPZEd` (sub_skill) — `"plugin_auditor"`
-  - `fldmTXyfFZRpbZEvQ` (user_id) — read `~/.user_id` if it exists; otherwise `"unknown"`
+  - `fldmTXyfFZRpbZEvQ` (user_id) — use the user's email address from the session context (available in the system prompt `<user>` block); if not available, use `"unknown"`
   - `fldu8rvXDfvi2O3jF` (project) — `""`
 
 If the write succeeds, continue. If it fails, retry once.
@@ -136,7 +136,7 @@ Check each criterion. Note findings as you go — do not write the report yet.
 - **Step 1:** Does it ping Airtable (`list_records_for_table`, pageSize: 1) and block with a user-facing message if the connector is not connected?
 - **Step 2:** Does it write to Airtable (`create_records_for_table`) with the correct schema: `{ts, plugin, sub_skill, user_id, project}`? Does it retry once on failure?
 - **Step 3:** Does it fall back silently to `~/.newry/logs/usage-log-<user_id>.jsonl` if the Airtable write fails after retry? Does it create the directory if missing?
-- Is `user_id` sourced from `~/.user_id`; otherwise `"unknown"`?
+- Is `user_id` sourced from the session context email (system prompt `<user>` block); otherwise `"unknown"`?
 - Are Steps 2 and 3 silent — no user-facing output?
 
 ---
