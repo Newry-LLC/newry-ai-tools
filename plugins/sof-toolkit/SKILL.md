@@ -9,28 +9,6 @@ A skill for evaluating, drafting, and aligning Summary of Findings (SoF) slides 
 
 ---
 
-## Check 0 — SharePoint log folder sync
-
-Before any other work, silently check whether the log folder is accessible:
-
-```python
-import os
-exists = os.path.exists(os.path.expanduser("~/Newry Corp/Clients - Claude Master Working Folder/logs"))
-```
-
-If it does not exist and `~/.newry-sync-warned` does not exist: create `~/.newry-sync-warned`, show the message below once, then continue.
-If `~/.newry-sync-warned` exists: skip silently.
-
-> "**One quick setup step:** To enable usage logging, the Claude Master Working Folder needs to be synced from SharePoint to your machine.
->
-> 1. Copy this link and paste it into Microsoft Edge: `https://newrycorp.sharepoint.com/clients/SitePages/Home.aspx?RootFolder=%2Fclients%2FShared%20Documents%2FConsulting%20Ops%2FClaude%20Master%20Working%20Folder&FolderCTID=0x0120001E5A3B5DC4435348B27C9444F34FA80E&View=%7B9352A612%2DAF51%2D4D22%2D9834%2DC437D38F2209%7D`
-> 2. Click **Sync** — it's in the toolbar just below where it says "Documents," between **Upload** and **Share**
-> 3. Once it appears in File Explorer under `Newry Corp`, logging will work automatically
->
-> You only need to do this once. Continuing with your request now."
-
----
-
 ## Context
 
 **Mode detection:** If the consultant provides a SoF for feedback → Evaluate. If they want to check whether the SoF matches the deck → Align. If they have source material but no SoF → Draft. When ambiguous, ask one question: "Are you looking for feedback on an existing SoF, checking it against your deck, or drafting one from scratch?"
@@ -176,24 +154,31 @@ For eval run logging format, see `eval/eval-log-format.md`.
 
 ## Usage logging
 
-At the start of every run — before any other work — write a single JSONL entry to the central usage log. This is silent and automatic; no user-facing output.
+At the start of every run — before any other work:
 
-**Log path:** `"$HOME/Newry Corp/Clients - Claude Master Working Folder/logs/usage-log-<user_id>.jsonl"`
-(construct path dynamically using the UUID from `~/.user_id` — creates a per-consultant file)
+**Step 1 — Check Airtable connectivity.**
+Call `list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, stop and show:
 
-**Entry format:**
-```json
-{"ts": "2026-05-13T10:30:00Z", "plugin": "sof_toolkit", "sub_skill": "<sub_skill>", "user_id": "<uuid>", "project": "<PROJECT_CODE_OR_null>"}
-```
+> "⚠ **Airtable isn't connected.** This tool requires Airtable for usage logging. Go to Cowork Settings → Connectors, connect Airtable, then start a new session."
 
-**Field instructions:**
-- `ts` — ISO 8601 timestamp at run start (UTC)
-- `plugin` — always `sof_toolkit`
-- `sub_skill` — whichever mode is active: `evaluate`, `align`, `draft`; use `general` if none
-- `user_id` — check for a UUID in `~/.user_id`; if the file doesn't exist, generate a UUID (uuid4) and write it there; reuse on every subsequent run. Also used in the log filename.
-- `project` — project code if discernible from context (e.g., `ALTA01`), otherwise `null`
+Do not proceed until resolved.
 
-Write the entry using the Bash tool. If the log file or directory doesn't exist, create it. If writing fails for any reason, skip silently — do not surface an error.
+**Step 2 — Write to Airtable.**
+Call `create_records_for_table` with:
+- **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
+- **Fields:**
+  - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-27T14:30:00Z`)
+  - `fldNHK285dPCOdNhB` (plugin) — `"sof_toolkit"`
+  - `fld4EyuVEhxAhPZEd` (sub_skill) — whichever mode is active: `"evaluate"`, `"align"`, `"draft"`; use `"general"` if none
+  - `fldmTXyfFZRpbZEvQ` (user_id) — use the user's email address from the session context (available in the system prompt `<user>` block); if not available, use `"unknown"`
+  - `fldu8rvXDfvi2O3jF` (project) — project code if discernible (e.g. `"ALTA01"`); otherwise `""`
+
+If the write succeeds, continue. If it fails, retry once.
+
+**Step 3 — Local fallback (if Airtable write still failed after retry).**
+Silently append one JSON line to `~/.newry/logs/usage-log-<user_id>.jsonl` (create `~/.newry/logs/` if missing):
+`{"ts":"<ISO>","plugin":"sof_toolkit","sub_skill":"<sub_skill>","user_id":"<user_id>","project":"<project>"}`
+No user-facing output. Then continue.
 
 ---
 
