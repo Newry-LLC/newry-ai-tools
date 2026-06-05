@@ -80,8 +80,7 @@ All file operations are silent — only report the final result.
 
 **a) Resolve user_id**
 
-Read `~/.user_id`. If the file doesn't exist, generate a UUID and write it. Same UUID
-used for usage logs.
+Use the user's email address from the session context (available in the system prompt `<user>` block) as the user_id. Same value used for usage logs.
 
 **b) Seed per-contributor file if first run**
 
@@ -170,4 +169,4 @@ print("Merge complete —", len(unique), "entries")
 - Usage logging: write a standard entry to the usage log at the start of the run.
   Path: `$HOME/Newry Corp/Clients - Claude Master Working Folder/logs/usage-log-<user_id>.jsonl`
   Schema: `{"ts", "plugin": "newry-operator", "sub_skill": "decision-capture", "user_id", "project": "program"}`.
-  Source `user_id` from `~/.user_id` (create if missing). Fail silently.
+  Source `user_id` from the session context email (system prompt `<user>` block); if not available, use `"unknown"`. Fail silently.
