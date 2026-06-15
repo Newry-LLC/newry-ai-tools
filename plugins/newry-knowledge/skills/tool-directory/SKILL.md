@@ -24,6 +24,28 @@ path: `{base_directory}/directory.html`.
 
 ## Steps
 
+### Step 0 — Respond immediately with a text summary
+
+Before touching any artifact tools, output this table in the chat now so the user has the answer instantly:
+
+---
+
+**3 tools available · 3 more coming soon**
+
+| Tool | What it does | Setup needed? |
+|---|---|---|
+| **newry-knowledge** | Search SharePoint docs + Airtable — project history, contacts, expertise, any Newry document | M365 + Airtable connectors |
+| **Primary Research Toolkit** | Plan, guide, prep, code, and synthesize interview-based primary research end-to-end | M365 + SharePoint working folder |
+| **SoF Toolkit** | Evaluate, align, or draft a Summary of Findings slide against the Pyramid Principle | None — works immediately |
+
+*Coming soon: Project Launch Toolkit · RMA-OA Builder · Project Technical Onboarding*
+
+Full details with example phrases and training links are in the artifact (loading now…).
+
+---
+
+Then proceed to Step 1.
+
 ### Step 1 — Check for existing artifact and version
 
 Call `list_artifacts`. Look for id `newry-tool-directory`.
@@ -47,7 +69,8 @@ Artifact metadata:
 - **description:** "Consultant-facing directory of available Newry AI tools — organized by task type. What to use, when, and exactly what to say."
 - **update_summary** (if updating): "Tool directory refreshed to v1.1."
 
-### Step 3 — Respond briefly
+### Step 3 — Surface the artifact link
 
-- Created or updated: "Here's the [Newry tools directory](artifact://newry-tool-directory). Three tools available now, three more coming soon. You can also access it any time from the Live Artifacts link in the left sidebar."
-- Already current: "Here's the [Newry tools directory](artifact://newry-tool-directory). Three tools available now, three more coming soon. You can also access it any time from the Live Artifacts link in the left sidebar."
+Add a single line after the artifact loads:
+
+"Expanded details in the [Newry tools directory](artifact://newry-tool-directory) — also accessible any time from the Live Artifacts link in the left sidebar."
