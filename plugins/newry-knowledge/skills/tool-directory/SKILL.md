@@ -13,7 +13,7 @@ description: >
 
 Produces a consultant-facing directory of available Newry AI tools as a Cowork artifact.
 
-**SKILL_VERSION: 1.1** — bump this (and the matching `<div id="skill-version">` in
+**SKILL_VERSION: 1.2** — bump this (and the matching `<div id="skill-version">` in
 `directory.html`) when tool content changes. That is the only edit needed for a refresh.
 
 **HTML source:** `directory.html` in this skill's directory (same folder as this SKILL.md).
