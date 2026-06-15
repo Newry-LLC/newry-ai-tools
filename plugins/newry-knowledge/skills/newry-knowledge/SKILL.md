@@ -1,7 +1,7 @@
 ---
 name: newry-knowledge
 description: >
-  Handles two distinct question types at Newry. (1) Knowledge lookup — any question
+  Handles three distinct request types at Newry. (1) Knowledge lookup — any question
   requiring access to Newry-specific internal data: project history, client contacts,
   staff expertise, institutional learnings, documents, policies, templates, or anything
   stored in SharePoint or Airtable. Do not use for general methodology or publicly
@@ -9,8 +9,11 @@ description: >
   Claude capabilities, or plugins exist at Newry, regardless of how it is phrased:
   "what tools do we have", "what can Claude help with here", "what AI features does
   Newry have", "which tool should I use for X", "show me available plugins", "what has
-  the AI program built", "does Newry have a tool for X". Single entry point for both —
-  routes internally to the right sub-skill.
+  the AI program built", "does Newry have a tool for X". (3) Add context — adding
+  relationship intelligence about a person: "add context about [person]", "I just met
+  with / talked to / called [person]", "note that [person] said / prefers / is doing X",
+  "add a relationship note", "log that [person] X", "remember that [contact] X".
+  Single entry point for all three — routes internally to the right sub-skill.
 ---
 
 # Newry Knowledge — Coordinator
@@ -59,6 +62,19 @@ If yes → **invoke the `tool-directory` sub-skill and stop.** Do not search Sha
 The phrasing does not matter. "What claude tools does Newry have?", "what can the AI
 program help me with?", "is there a tool for primary research?" — all route here if the
 underlying question is about what the AI program offers.
+
+---
+
+## Step 0.5 — Pre-gate: add context / relationship note?
+
+Intent check: is the user trying to log context about a person, record an interaction,
+or write a relationship note?
+
+If yes → **invoke the `add-context` sub-skill and stop.** Do not search anything.
+
+Trigger signals: "add context about", "add a relationship note", "I just met with",
+"I just talked to / called / spoke with", "note that [person]", "log that [person]",
+"remember that [contact]", "[person] mentioned / told me / said".
 
 ---
 
