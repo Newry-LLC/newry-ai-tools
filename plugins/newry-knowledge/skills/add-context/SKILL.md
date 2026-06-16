@@ -13,7 +13,7 @@ description: >
 Captures freeform context about a person and writes it to the Relationship Notes table in Airtable. This is the manual write path into the relationship intelligence layer.
 
 **Base ID:** `appRawPuacfAvVH2Z`
-**Relationship Contacts:** `tblomVbLXeELjFIBZ`
+**Contacts:** `tblomVbLXeELjFIBZ`
 **Relationship Notes:** `tbl3JoPYzslECv8h8`
 
 ---
@@ -64,7 +64,7 @@ Default to **Interaction** if the input describes a meeting or contact. Default 
 
 ---
 
-## Step 2 — Find the Relationship Contacts record
+## Step 2 — Find the Contacts record
 
 Search for the person in `tblomVbLXeELjFIBZ`.
 
@@ -74,11 +74,11 @@ Search for the person in `tblomVbLXeELjFIBZ`.
 **Match outcomes:**
 - **One clear match** — confirm inline: "Found: [Name]." Proceed to Step 4.
 - **Multiple matches** — list them briefly (name only) and ask which one. Wait for response, then proceed to Step 4.
-- **No match** — tell the user: "No record found for [name] in Relationship Contacts. I can create a new contact — go ahead?" Wait for confirmation, then proceed to Step 3.
+- **No match** — tell the user: "No record found for [name] in Contacts. I can create a new contact — go ahead?" Wait for confirmation, then proceed to Step 3.
 
 ---
 
-## Step 3 (conditional) — Create new Relationship Contacts record
+## Step 3 (conditional) — Create new Contacts record
 
 Only if Step 2 found no match and the user confirmed creation.
 
@@ -107,7 +107,7 @@ Generate a **Title**: a concise one-line summary of the note content (max 80 cha
 | `fld3hzOyNxzwSKNl6` | Type | Classified type from Step 1 |
 | `fldTnNBhyrO63BZ6r` | Date | Date from Step 1 (YYYY-MM-DD) |
 | `fld4DHuOEIAbqH8ew` | Source | `"Manual entry"` |
-| `fldknMUx9vNoVzFwy` | Person | Relationship Contacts record ID from Step 2 or 3 |
+| `fldknMUx9vNoVzFwy` | Person | Contacts record ID from Step 2 or 3 |
 | `fld5aGSQ131q9zAZn` | Project | Project record ID if resolvable; omit if not |
 
 Omit Company (`fld8Xl9cFYfHeclVd`) and Newry Owner (`fldgTzPOyno1xPAZU`) unless you have a confirmed record ID — never link on an unresolved name.
@@ -121,7 +121,7 @@ Reply briefly:
 > "Added [Type] note for **[Name]**: '[Title]'"
 
 If a new contact was created, add:
-> "Also created a new Relationship Contacts record for [Name]."
+> "Also created a new Contacts record for [Name]."
 
 If the note is **Standing Context**, offer one follow-up:
 > "This sounds like a durable fact about [Name] — want me to also update their Communication Style or Key Watch-outs field on the contact record?"
