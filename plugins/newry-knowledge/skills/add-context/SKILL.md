@@ -2,7 +2,7 @@
 name: add-context
 description: >
   Add relationship intelligence about a person — log an interaction, record a standing
-  fact, note a goal, or capture an outcome. Writes to Relationship Notes in Airtable.
+  fact, note a goal, or capture an outcome. Writes to Context Log in Airtable.
   Triggers on: "add context about [person]", "I just met with / talked to / called [person]",
   "note that [person] said / is doing / prefers X", "add a relationship note", "log that
   [person] X", "remember that [contact] X", "[person] mentioned / told me / said".
@@ -10,11 +10,11 @@ description: >
 
 # Add Context — Relationship Intelligence Entry
 
-Captures freeform context about a person and writes it to the Relationship Notes table in Airtable. This is the manual write path into the relationship intelligence layer.
+Captures freeform context about a person and writes it to the Context Log table in Airtable. This is the manual write path into the relationship intelligence layer.
 
 **Base ID:** `appRawPuacfAvVH2Z`
 **Contacts:** `tblomVbLXeELjFIBZ`
-**Relationship Notes:** `tbl3JoPYzslECv8h8`
+**Context Log:** `tbl3JoPYzslECv8h8`
 
 ---
 
@@ -107,7 +107,7 @@ Generate a **Title**: a concise one-line summary of the note content (max 80 cha
 | `fld3hzOyNxzwSKNl6` | Type | Classified type from Step 1 |
 | `fldTnNBhyrO63BZ6r` | Date | Date from Step 1 (YYYY-MM-DD) |
 | `fld4DHuOEIAbqH8ew` | Source | `"Manual entry"` |
-| `fldknMUx9vNoVzFwy` | Person | Contacts record ID from Step 2 or 3 |
+| `fldknMUx9vNoVzFwy` | Contact | Contacts record ID from Step 2 or 3 |
 | `fld5aGSQ131q9zAZn` | Project | Project record ID if resolvable; omit if not |
 
 Omit Company (`fld8Xl9cFYfHeclVd`) and Newry Owner (`fldgTzPOyno1xPAZU`) unless you have a confirmed record ID — never link on an unresolved name.
