@@ -50,6 +50,7 @@ If the question has multiple distinct parts, list them. Any enumerative part ("w
 **Precision (point lookup / existence):** tighten up front so the right doc lands in the top results.
 - **Quote phrases** for multi-word terms that must stay together: `"CIPP resin"`, `"styrene regulation"`, `"Phase 2 pricing"`. Don't quote broad/common terms.
 - **Use the engagement code** if known (`ALTA01`, `COR771`) — the single most reliable discriminator in a cross-project index. Use it as a search term *and* a `folderName` filter.
+- **`folderName` matches one clean path segment only.** Use a single distinctive word or code (`Recruiting`, `ALTA01`, `Onboarding`) or a plain multi-word name (`Claude Working Folder`). It **silently returns zero** on folder names containing `&` or `and` — `People & Recruiting` and `ACC Templates and Ladder` both fail and look like "nothing exists." If a folder-filtered search comes back empty, drop the filter and retry before concluding anything.
 - **Use `fileType`** only when the user explicitly signals a format — "deck/slides" → `pptx`, "spreadsheet/model" → `xlsx`, "report/memo" → `docx`. Any extension works.
 - **Use date filters** only when the user signals a window — "since March" → `afterDateTime`. Note: "latest"/"current" means the *authoritative* version, NOT merely recently-edited — do not impose a date filter for "latest" (see step 3).
 - **Use `author`** rarely — only when the user asks about a specific person's output.
@@ -69,7 +70,7 @@ If the question has multiple distinct parts, list them. Any enumerative part ("w
 
 Rank the results by snippet relevance, path (right client/engagement?), and `lastModifiedDateTime`. Read only the top 1–3.
 
-**Pick the authoritative version, not just the newest timestamp.** Someone re-saving an old deck gives a stale file a fresh date. Use `lastModifiedDateTime` *plus* filename/version cues. When two plausible versions disagree, say which you picked and why.
+**Pick the authoritative version, not just the newest timestamp.** Someone re-saving an old deck gives a stale file a fresh date. Use `lastModifiedDateTime` *plus* filename/version cues. When two plausible versions disagree, say which you picked and why. **The same document is usually indexed many times** — prefer the canonical `clients/Shared Documents/...` copy over duplicates in personal OneDrive (`-my.sharepoint.com/personal/...`), `archive/`, or a `Claude Working Folder/`.
 
 **Snip-then-stop:** if the snippet already answers a point lookup or existence check, answer from it — don't open the doc. Call `read_resource` only for a full quoted section, an ambiguous snippet, or needed surrounding context. (This does NOT apply to enumerations — there you must page to exhaustion, not stop at the first confirming snippet.)
 
@@ -114,11 +115,11 @@ Give a direct, specific answer — quote or close-paraphrase, don't vaguely summ
 - Known engagement code → search term AND `folderName` filter (most reliable discriminator).
 - AI work products / Cowork outputs → `Claude Working Folder/` within the engagement; filter `folderName: Claude Working Folder`.
 - PPTX/Excel templates → `Newry Templates_Client Facing/`.
-- Newry Ladder, HR, handbook → filter `folderName: People & Recruiting`. Search the Ladder as **"Newry Consulting Ladder"** (not "Newry Ladder"). Do NOT use `folderName: ACC Templates and Ladder` — that filter does not work.
+- Newry Ladder, HR, handbook → filter `folderName: Recruiting` (NOT `People & Recruiting` — the `&` makes it return zero). Search the Ladder as **"Newry Consulting Ladder"** (not "Newry Ladder"). Do NOT use `folderName: ACC Templates and Ladder` either — the "and" breaks it.
 - Example slides, training → `TOOLS-TRAINING/`.
 - SoWs → `Project Management/` within the engagement first; `New Business Development/Proposals and SOWs/` second (Corning almost never has one).
 - Secondary research → within each project folder; no firm-wide library.
-- **Consulting-process training** (problem statements, issue trees, workplanning, EM skills) — broad keyword search fails here; those terms are everywhere. Search directly in `TOOLS-TRAINING/EM Training and Materials/` (EM Skill Building, CLST Series, EM Handbook, Problem Structuring), `TOOLS-TRAINING/Thought Leadership/`, or `On Boarding Materials/`. Use `folderName` filters like `EM Training and Materials`, `CLST Series`, `Thought Leadership`, `Onboarding`.
+- **Consulting-process training** (problem statements, issue trees, workplanning, EM skills) — broad keyword search fails here; those terms are everywhere. Search directly in `TOOLS-TRAINING/EM Training and Materials/` (EM Skill Building, CLST Series, EM Handbook, Problem Structuring), `TOOLS-TRAINING/Thought Leadership/`, or `On Boarding Materials/`. Use single-segment `folderName` filters like `CLST Series`, `Thought Leadership`, or `Onboarding` — avoid `EM Training and Materials` (the "and" breaks the filter; use `EM Training` or `Problem Structuring` instead).
 
 ## Feedback capture
 
