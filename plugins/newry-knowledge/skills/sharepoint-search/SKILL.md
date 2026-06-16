@@ -5,316 +5,121 @@ description: Search Newry's SharePoint and answer questions about any Newry cont
 
 # Newry SharePoint Search
 
-Answer questions by searching Newry's SharePoint and synthesizing content from the relevant documents. The goal is to give the user a direct, cited answer — not to hand them a list of files to go read themselves.
+Answer questions by searching Newry's SharePoint and synthesizing from the relevant documents. The goal is a direct, cited answer — not a list of files for the user to go read.
 
-## Tools you'll use
+## Log usage first
 
-- `sharepoint_search` — finds documents by keyword across SharePoint's full index. Returns document names, URLs, paths, and snippets.
-- `sharepoint_folder_search` — finds folders by name. Use this to enumerate client folders for prior-work sweep questions.
-- `read_resource` — fetches full text content of a document by URI. Use only when snippets are genuinely insufficient to answer the question.
+Before any searching, log this run to Airtable. Do this once, at the start.
 
-## Step-by-step
+1. **Check connectivity.** Call `list_records_for_table` (Base `appRawPuacfAvVH2Z`, Table `tblmACtwIClniGn5n`, pageSize 1). If it fails, stop and tell the user: "⚠ **Airtable isn't connected.** This tool requires Airtable for usage logging. Go to Cowork Settings → Connectors, connect Airtable, then start a new session." Do not proceed.
+2. **Write the record.** Call `create_records_for_table` (Base `appRawPuacfAvVH2Z`, Table `tblmACtwIClniGn5n`) with fields:
+   - `fldRrr3BkrJW8rE3L` (ts) — current UTC, ISO 8601 (e.g. `2026-05-27T14:30:00Z`)
+   - `fldNHK285dPCOdNhB` (plugin) — `"newry_knowledge"`
+   - `fld4EyuVEhxAhPZEd` (sub_skill) — `"sharepoint_search"`
+   - `fldmTXyfFZRpbZEvQ` (user_id) — user's email from session context; else `"unknown"`
+   - `fldu8rvXDfvi2O3jF` (project) — project code if known (e.g. `"ALTA01"`); else `""`
+   - If the write fails, retry once. If it still fails, silently append one JSON line to `~/.newry/logs/usage-log-<user_id>.jsonl` (create the dir if missing): `{"ts":"<ISO>","plugin":"newry_knowledge","sub_skill":"sharepoint_search","user_id":"<user_id>","project":"<project>"}`. No user-facing error.
 
-### 0. Classify the question
+## Tools
 
-Before searching, identify which type of question this is — it determines your search strategy and output format:
+- `sharepoint_search` — keyword search across the full index. Params: `query`, `folderName` (partial match), `fileType` (extension, e.g. `pptx`), `author` (name/email, partial), `afterDateTime`/`beforeDateTime` (ISO 8601, by last-modified), `limit` (default 10, max 50), `offset` (pagination — pass `nextOffset` from the prior response). All filters AND together. Returns name, `webUrl`, snippet with match highlights, `lastModifiedDateTime`, and `uri`.
+- `sharepoint_folder_search` — find folders by name. Use to enumerate client folders for prior-work sweeps.
+- `read_resource` — fetch a document's full text by `uri`. Use only when the snippet genuinely can't answer the question.
 
-- **Point lookup** — "what did X say about Y", "what does the Newry Ladder say about Z", "who is responsible for X in the workplan" → find the specific document and read the relevant section.
-- **Existence check** — "do we have secondary research on X", "have we presented Y to the client" → metadata and snippets are usually sufficient. Do NOT call `read_resource` unless the snippet is genuinely ambiguous.
-- **Synthesis/sweep** — "what's been done on the project", "who mentioned X across all interviews", "summarize project status" → run multiple searches in parallel, synthesize from file names, dates, folder structure, and snippets. Only open a file if you need specific content not surfaced in snippets.
-- **Prior-work sweep** — "has Newry worked in X domain", "what clients have we served in Y industry", "do we have prior experience with Z" → lead with broad keyword searches against the full index (no folder filter). Harvest which client folders appear in results. Domain knowledge is a supplement only — not the primary filter.
+## The loop
 
-### 0.5. Decompose multi-part questions
+### 1. Classify, then interpret
 
-If the question contains multiple distinct components, list them explicitly before searching. Each component is a separate obligation.
+Sort the question into one type — this is the only branch point, and it sets both your search posture and your answer shape:
 
-Example: "Which interviewees mentioned AOC, Reichhold, and Ashland — and what did they say about competitive positioning?" decomposes into:
-- Part 1: which interviewees mentioned AOC? (enumeration)
-- Part 2: which interviewees mentioned Reichhold? (enumeration)
-- Part 3: which interviewees mentioned Ashland as a competitor? (enumeration + judgment — flag that Ashland also appears as company history)
-- Part 4: what did they say about competitive positioning? (synthesis)
+| Type | Looks like | Posture |
+|---|---|---|
+| **Point lookup** | "what did X say about Y", "what does the Ladder say about Z" | **Precision** — find the one right doc |
+| **Existence check** | "do we have research on X", "have we presented Y" | **Precision** — confirm yes/no from metadata + snippet |
+| **Enumeration** | "which/who/how many/list all mentioned X" | **Recall** — fan out, paginate, don't miss any |
+| **Sweep / prior-work** | "what's the project status", "have we worked in domain X" | **Broad** — harvest the spread of files/folders |
 
-**Key rule:** if any component is enumerative ("which," "who," "how many," "list all"), answer it fully from search results before reading any documents. Do not let a well-answered synthesis component silently absorb an unanswered enumeration component. If the enumeration surfaces more than 3–4 files to read for the synthesis component, surface the list and confirm scope with the user before proceeding.
+State the goal in one plain sentence only if the question is broad, multi-part, or ambiguous (e.g. "You're looking for which people raised CIPP resin in interviews"). Skip narration for short, clear questions. Then proceed — don't wait for the user to confirm. **Default to acting on a reasonable read and reporting back; only pause for the user if a part is genuinely unclear or would surface more than 3–4 docs to read.**
 
-**Fire searches in parallel.** For multi-part questions, issue all search calls simultaneously — do not wait for one to return before starting the next.
+If the question has multiple distinct parts, list them. Any enumerative part ("which/who/how many") must be answered fully from search results before you read documents — don't let a synthesis part quietly absorb an unanswered enumeration. Verify every part is addressed before you finalize.
 
-**Completeness check — required.** Before finalizing any answer, verify it against this decomposition. Every part must be explicitly addressed. Name any part you could not fully answer and explain why. This step is not optional.
+### 2. Search by posture
 
-### 0.75. Interpret the query
+**Pull 2–4 distinctive terms** — specific nouns, named entities, proper nouns over generic words.
 
-Before searching, state in one or two plain sentences what the user is looking for and any assumptions you're acting on. Keep it to the goal and the assumption — not the mechanics of how you'll search.
+**Precision (point lookup / existence):** tighten up front so the right doc lands in the top results.
+- **Quote phrases** for multi-word terms that must stay together: `"CIPP resin"`, `"styrene regulation"`, `"Phase 2 pricing"`. Don't quote broad/common terms.
+- **Use the engagement code** if known (`ALTA01`, `COR771`) — the single most reliable discriminator in a cross-project index. Use it as a search term *and* a `folderName` filter.
+- **Use `fileType`** only when the user explicitly signals a format — "deck/slides" → `pptx`, "spreadsheet/model" → `xlsx`, "report/memo" → `docx`. Any extension works.
+- **Use date filters** only when the user signals a window — "since March" → `afterDateTime`. Note: "latest"/"current" means the *authoritative* version, NOT merely recently-edited — do not impose a date filter for "latest" (see step 3).
+- **Use `author`** rarely — only when the user asks about a specific person's output.
+- **Narrate any exclusion.** When you filter by type, date, or author, say so in one line: "Looking only at decks since you said 'presented' — tell me to include memos and other docs too." A silent filter that hides the real answer reads as "doesn't exist." (No need to narrate going broad.)
 
-Examples:
-- "which interviewee mentioned CIPP resin?" → "You're looking for which specific people brought up CIPP resin during interviews."
-- "do we have prior work in specialty coatings?" → "You're looking for any past Newry engagements that touched specialty coatings. Assuming any relevant work counts — primary research, deliverables, or secondary — not just a specific document type."
-- "what does the Newry Ladder say about PMs?" → "You're looking for the current PM expectations and responsibilities from the Newry Ladder."
+**Recall (enumeration):** one tight query will miss people. Fan out instead.
+- Fire **2–4 distinct formulations of the same need** (phrase variant, synonym/variant, code-based, one looser keyword), union the results, dedupe.
+- **Paginate** — if a query fills the window (50) with plausible hits, pull the next page via `nextOffset` before concluding. Never let the true set get truncated at 50.
 
-If the question is unambiguous and short, skip this step — don't narrate the obvious. Use it when the question is broad, multi-part, or could be interpreted more than one way.
+**Broad (sweep / prior-work):** lead with broad keyword searches, no folder filter, `limit: 50`. Harvest which client/project folders appear in result paths — that distribution is the answer, not any single doc. For prior-work: cross-check the harvested folders against the full client list (`sharepoint_folder_search` on `"Clients"`), add domain knowledge for expected-but-missing clients, and flag any you can't classify ("I couldn't confirm whether X, Y are relevant — want me to search them?").
 
-Then proceed immediately to searching — do not wait for the user to confirm the interpretation unless something is genuinely unclear.
+**Narrate as you go:** "Searching Primary Research for styrene regulation..." Users should never wonder if something's happening.
 
-### 1. Extract search terms
+**If the first search comes back empty or useless,** work this sequence before declaring a dead end: relax any type/date/author filter → swap the folder filter (drop it, or move to the parent) → try alternate terms (synonyms, broader/narrower) → use the project code instead of the client name → quote the key phrase → run a broad no-filter search to see which folders the term lives in. After three honest attempts, go to step 4.
 
-Pull 2–4 distinctive search terms from the user's question. Prefer specific nouns, named entities, and proper nouns over generic words.
+### 3. Triage and read
 
-**Phrase search:** SharePoint's M365 search supports quoted phrases — use them for multi-word exact terms that must stay together. This reduces noise significantly on specialist terminology.
-- `"CIPP resin"` (not `CIPP resin`) — prevents hits on "CIPP" and "resin" appearing separately
-- `"styrene regulation"`, `"Phase 2 pricing"`, `"Newry Ladder"` all benefit from quoting
+Rank the results by snippet relevance, path (right client/engagement?), and `lastModifiedDateTime`. Read only the top 1–3.
 
-**Engagement codes as search terms:** If you know the project code (e.g., `ALTA01`, `COR771`, `COR767`), include it in the query — it is the most reliable discriminator in a noisy cross-project result set. Use it both as a search term and as a `folderName` filter (e.g., `folderName: ALTA01`).
+**Pick the authoritative version, not just the newest timestamp.** Someone re-saving an old deck gives a stale file a fresh date. Use `lastModifiedDateTime` *plus* filename/version cues. When two plausible versions disagree, say which you picked and why.
 
-Examples:
-- "which interviewee mentioned the Phase 2 pricing plan?" → `"Phase 2 pricing" ALTA01`
-- "what does the Newry Ladder say about PM responsibilities?" → `"project manager" "Newry Ladder"`
-- "do we have secondary research on styrene regulation?" → `"styrene regulation" ALTA01 secondary`
-- "have we presented CIPP findings to the client?" → `"CIPP" ALTA01 presentation`
+**Snip-then-stop:** if the snippet already answers a point lookup or existence check, answer from it — don't open the doc. Call `read_resource` only for a full quoted section, an ambiguous snippet, or needed surrounding context. (This does NOT apply to enumerations — there you must page to exhaustion, not stop at the first confirming snippet.)
 
-**Filters — pass alongside `query` when the question implies them:**
+**Large files:** if `read_resource` returns truncated (saved to a path, not inline), do NOT retry the same doc. Pivot — for interview questions, search the individual interview-note files in the same folder (e.g. `*Internal (Anna Notes).docx`), which are small and fully readable; otherwise run a tighter keyword search to surface the section via snippets.
 
-- **File type** (`fileType`): when the question signals a format, set this instead of relying on keyword matching.
-  - "presentation", "deck", "slides" → `pptx`
-  - "spreadsheet", "model", "Excel file" → `xlsx`
-  - "report", "Word doc", "memo" → `docx`
-  - "PDF" → `pdf`
-- **Author** (`author`): when the user asks about a specific person's output ("what did X write/build", "X's work on Y"), pass their name or email. Partial name match works.
-- **Date** (`afterDateTime` / `beforeDateTime`, ISO 8601 `YYYY-MM-DD`): when the user signals recency or a time window.
-  - "recent" / "latest" / "current version" → `afterDateTime: [6 months ago]`
-  - "this year" → `afterDateTime: [current year]-01-01`
-  - "from [month/year]" or "since [date]" → set `afterDateTime` to the start of that period
-- **Limit** (`limit`): default is 10. For synthesis/sweep and prior-work questions, use `limit: 50` to cast a wider net per call.
+### 4. Answer and cite
 
-### 2. Search SharePoint
+Give a direct, specific answer — quote or close-paraphrase, don't vaguely summarize. Shape by type:
+- **Point lookup** — quote/paraphrase + one sentence of context.
+- **Existence check** — Yes/No + doc name, date, folder.
+- **Enumeration** — the full list, one line each.
+- **Sweep** — short table (file | date | what it covers) + 2–3 sentence synthesis. Prior-work: client-by-client (client | engagement | relevance), uncertain clients listed separately.
 
-**Narrate as you go.** Before each search call, tell the user what you're doing: "Searching Primary Research for styrene regulation..." Before reading a document: "Found it in ALTA01 — reading now." Users should never be left wondering whether anything is happening.
+**Two honesty rules:**
+- **A top-50 result set does not license a "no" or a confident point answer unless a filter bounded the set.** If you went broad and didn't find the named target, tighten and retry before answering. Absence from the top 50 ≠ absence from SharePoint.
+- **Flag incomplete coverage.** If files were too large to fully read, or you stopped paging, say so: "Found two interviewees who mentioned CIPP, but two files were too large to read in full — there may be more."
 
-**Choose your starting point:**
+**If nothing's found** after reformulation: say which is likeliest — doesn't exist yet, lives under a different name, or predates good indexing — given what you searched. Then give a real next step: the folder to browse, a different angle, or the person at Newry most likely to know. Never leave the user stranded.
 
-- If the routing cheat sheet clearly maps the question to a specific folder (e.g., HR policy → `People & Recruiting`, templates → `Newry Templates_Client Facing`), apply that `folderName` filter on the first call. Don't start broad when you already know where to look.
-- If the question is general or spans multiple areas, start without a folder filter.
-- If results are noisy or off-topic, refine with a `folderName` filter on the next call.
-
-**For synthesis/sweep questions:** Fire 2–3 searches in parallel across different folder types (e.g., `Project Management`, `Primary Research`, `Newry Presentation`) before reading anything. File names, folder structure, and last-modified dates carry most of the signal — use them.
-
-**For prior-work sweep questions:**
-1. Run 2–3 broad keyword searches on the topic in parallel, with no folder filter. Use variant terms (e.g., "composites laminates", "specialty chemicals resins", "thermoset polymer"). These searches hit SharePoint's full index — relevant client folders will appear in the result paths regardless of whether you recognize the client name.
-2. Harvest which client folders appear across results. This is your primary discovery mechanism.
-3. Call `sharepoint_folder_search` with `"Clients"` to get the full client list. Cross-check against what keyword search surfaced.
-4. Apply domain knowledge as a supplement: identify any clients you'd expect to appear based on what you know about their business, but that didn't show up in keyword results (possible cause: different terminology in older docs, or low index coverage). Run targeted searches within those specific folders.
-5. Flag any clients in the full list you couldn't classify either way as **uncertain**. Surface them explicitly: "I wasn't able to confirm whether [X, Y, Z] are relevant to this domain — want me to search their folders?"
-6. Run targeted searches within confirmed relevant client folders to surface specifics.
-
-### 2.5. Reformulation sequence (named step — run before declaring a dead end)
-
-If the first search returns nothing useful, work through this ordered sequence before surfacing a dead end:
-
-1. **Swap the folder filter.** If you used a narrow `folderName` filter (e.g., a subfolder), drop it or move to the parent folder. If you used no filter, try adding the engagement folder as a filter.
-2. **Relax type/author/date filters.** If `fileType`, `author`, or date constraints were set and results are thin, remove them — the content may be in a different format, attributed to a different person, or undated.
-3. **Try alternate terms.** Synonyms, related concepts, broader or narrower terms:
-   - "polyester resin" → "thermoset resin" → "unsaturated polyester"
-   - "AI policy" → "data security" → "tool approval"
-4. **Use project code instead of client name.** E.g., `ALTA01` instead of `Alta`, `COR771` instead of `Corning Critical Materials`.
-5. **Try phrase search.** If you used individual keywords, quote the key multi-word term (e.g., `"CIPP resin"` instead of `CIPP resin`).
-6. **Try the inverse.** Broad keyword search with no folder filter to discover which folders the term appears in — then narrow from there.
-
-After three genuine attempts with no useful result, declare the dead end and go to Step 4.
-
-### 3. Snip-then-stop — then read if needed
-
-**Before calling `read_resource`, ask: does the snippet already answer the question?**
-
-- For **existence checks**: if a snippet confirms the document exists and contains the relevant content, answer from the snippet. Do not read the full document.
-- For **point lookups**: if the snippet contains the specific passage needed, answer from it directly.
-- Only call `read_resource` when the snippet is genuinely insufficient — you need a full quoted section, the snippet is ambiguous, or you need surrounding context to interpret correctly.
-
-**Pick the right version.** Search results include `lastModifiedDateTime`. When multiple results look like versions of the same document, always prefer the most recently modified one. Filename date conventions are a signal, but `lastModifiedDateTime` is the reliable indicator.
-
-Call `read_resource` on the URI of the most relevant, most recent document. Find the specific section or passage that answers the question — you do not need to read every word.
-
-If the first document doesn't contain the answer, try the next best result.
-
-### 3.5. Handle large files (named step — do not skip)
-
-If `read_resource` returns a truncated result (output saved to a file path rather than returned inline):
-
-- **Do NOT retry the same document.**
-- Pivot immediately:
-  - For interview questions: search for individual interview notes files in the same folder (e.g., `*Internal (Anna Notes).docx`). Individual files are small and readable in full.
-  - For other large docs: run a more targeted keyword search to surface the relevant section via snippets, or identify a more focused sub-document within the same folder.
-
-### 4. Answer with attribution
-
-Give a direct answer. Be specific — quote or paraphrase the relevant passage rather than summarizing vaguely. Always cite your source.
-
-**Standard output format by question type:**
-
-- **Point lookup:** Direct quote or close paraphrase + one sentence of context. Source below.
-- **Existence check:** Yes/No + document name, date, and folder. Source below.
-- **Synthesis/sweep:** Short table (file name | date | what it covers) + 2–3 sentence synthesis. Source(s) below.
-- **Prior-work sweep:** Client-by-client summary (client name | engagement(s) found | relevance). Uncertain clients listed separately with offer to search. Source(s) below.
-
-**If nothing found after reformulation:** be direct but warm — this document may not exist yet, may live under a different name, or may predate good SharePoint indexing. Say which of these is most likely given what you searched. Then give a specific next step: the folder to browse manually, a different search angle worth trying, or the person at Newry most likely to know. Never leave the user with nowhere to go.
-
-**Completeness check — required.** Run the check from Step 0.5. Every decomposed part must be explicitly addressed in the answer. If any part is unanswered, name it and explain why.
-
-## Source attribution
-
-End every answer with a Sources section. For each document, include a one-phrase note explaining why this is the right source — what makes it authoritative or current. Keep it to the point.
-
-- A direct link to the document
-- A link to the folder it lives in (derive by stripping the filename from the `webUrl`)
-- A brief note on why this source (e.g., "most recent version, updated Feb 2026", "the active workplan as of last week", "the only Alta deck in the Newry Presentation folder")
-
-Format:
-
-**Sources:**
-- [Document name](document webUrl) — [Open folder](folder URL) — *why this source*
-
-If multiple sources, list each one.
+**Sources** — end every answer with a Sources section:
+- [Document name](document webUrl) — [Open folder](folder URL, derived by stripping the filename from `webUrl`) — *one phrase on why this source (most recent version, the active workplan, etc.)*
 
 ## SharePoint map
 
 **Site root:** `newrycorp.sharepoint.com/clients/Shared Documents/`
 
 **`Clients/`** — all project work
-- One folder per client (e.g. `ALTA Performance Materials/`, `CORNING/`, `Chase Corporation/`)
-- `Newry Internal/` — internal Newry initiatives run like client engagements (same folder structure)
-- Each client → one folder per engagement, named `{CODE}-{Engagement Name}` (e.g. `ALTA01-Growth Strategy`)
-- Standard engagement subfolders (consistent base set; some variation across projects):
-  - `Primary Research/` → `Internal Interviews/`
-  - `Secondary Research/`
-  - `Newry Presentation/`
-  - `Project Management/` ← per-engagement SoWs typically live here
-  - `From Client/`
-  - `Data and Analysis/`
-  - `Drafts/`
-  - `Conferences/`
-  - `Claude Working Folder/` ← AI-assisted work products, Cowork session outputs (newer engagements)
-- **Corning note:** by far the highest volume of projects across all clients. Almost exclusively a retainer client — most Corning projects will not have SoWs or proposals.
+- One folder per client (e.g. `ALTA Performance Materials/`, `CORNING/`). `Newry Internal/` = internal initiatives run like engagements.
+- Each client → one folder per engagement, named `{CODE}-{Engagement Name}` (e.g. `ALTA01-Growth Strategy`).
+- Standard engagement subfolders (some variation): `Primary Research/` → `Internal Interviews/`, `Secondary Research/`, `Newry Presentation/`, `Project Management/` (per-engagement SoWs usually here), `From Client/`, `Data and Analysis/`, `Drafts/`, `Conferences/`, `Claude Working Folder/` (AI-assisted work / Cowork outputs, newer engagements).
+- **Corning:** highest project volume of any client, almost entirely retainer — most Corning projects have NO SoW or proposal. Lead with that rather than searching for one that isn't there.
 
 **`Consulting Resources/`** — internal firm resources
-- `Document Templates/`
-  - `Newry Templates_Client Facing/` — all PPTX and Excel templates, both client-facing and internal (includes quant research models, market sizing templates); folder name is a misnomer — internal templates live here too
-  - `Newry SME Documents/` — SME contracting docs (NDA, independent contractor agreement, W-8 forms)
-- `People & Recruiting/`
-  - `ACC Templates and Ladder/` — Newry Ladder (most recent: `202602 Newry Consulting Ladder and Review Process.pptx`), mentor packages
-  - `On Boarding Materials/` — onboarding resources including The Newry Way
-  - `Newry Employee Handbook - 20250227.docx` — directly in this folder
-- `TOOLS-TRAINING/`
-  - `Growth Strategy/` — Growth Strategy frameworks and tools
-  - `Interviewing Training/`
-  - `Pyramid Principle/`
-  - `Slide and Document Design/` → `Hero Slides and Documents/` — example deliverables by type (Opportunity Assessments, Market Forecasts, SONAR Deep Dives, RMAs, etc.)
+- `Document Templates/Newry Templates_Client Facing/` — all PPTX/Excel templates, client-facing *and* internal (quant models, market-sizing); the name is a misnomer. `Document Templates/Newry SME Documents/` — SME contracting (NDA, contractor agreement, W-8).
+- `People & Recruiting/ACC Templates and Ladder/` — Newry Ladder (most recent: `202602 Newry Consulting Ladder and Review Process.pptx`), mentor packages. `On Boarding Materials/` — onboarding incl. The Newry Way. `Newry Employee Handbook - 20250227.docx` sits directly in `People & Recruiting/`.
+- `TOOLS-TRAINING/` — `Growth Strategy/`, `Interviewing Training/`, `Pyramid Principle/`, `Slide and Document Design/Hero Slides and Documents/` (example deliverables by type: OAs, Market Forecasts, SONAR Deep Dives, RMAs).
 
-**`Marketing and New Business Development/`** — BD and marketing
-- `New Business Development/` → `Proposals and SOWs/` ← SoW examples may also live here
-- `New Business Development/` → `Pitch Materials/` → `One-Pager Case Studies/`
-- `Marketing and PR/` → `Events and Public Presentations/`
-- `Offering Development/`
+**`Marketing and New Business Development/`** — `New Business Development/Proposals and SOWs/` (SoW examples), `.../Pitch Materials/One-Pager Case Studies/`, `Marketing and PR/Events and Public Presentations/`, `Offering Development/`.
 
 **Routing cheat sheet:**
-- Project deliverables, research, workplans → `Clients/{client}/{engagement}/`
-- Known engagement code → use as search term AND as `folderName` filter (e.g., search `COR771 interview notes`, filter `folderName: COR771`); most reliable discriminator when the user mentions a code
-- AI work products / Cowork session outputs → `Claude Working Folder/` within the engagement subfolder; filter `folderName: Claude Working Folder` or include in search terms
-- PPTX or Excel templates → `Consulting Resources/Document Templates/Newry Templates_Client Facing/`
-- Newry Ladder, HR policies, handbook → `Consulting Resources/People & Recruiting/` — use `folderName: People & Recruiting`; search term for the Ladder is "Newry Consulting Ladder" (not "Newry Ladder"); do NOT use `folderName: ACC Templates and Ladder` — that filter does not work
-- Example slides, training materials → `Consulting Resources/TOOLS-TRAINING/`
-- SoWs → check `Project Management/` within the relevant engagement first; `New Business Development/Proposals and SOWs/` as a secondary source (not all engagements have them — Corning almost never does)
-- Secondary research → lives within each project folder, no firm-wide library
-
-**Routing gap — consulting process training:** Questions about problem statements, issue trees, workplanning, project execution, and EM skills are NOT well-served by broad keyword search — those terms appear in many unrelated documents. Instead, search directly within these subfolders:
-- `TOOLS-TRAINING/EM Training and Materials/` — EM Skill Building series, CLST Series (2022–2025), EM Handbook, Problem Structuring subfolder
-- `TOOLS-TRAINING/Thought Leadership/` — Thought Leadership Training series (including 2019 series)
-- `People & Recruiting/On Boarding Materials/` — onboarding decks including the 2025 "Consulting Process and Thought Leadership Onboarding"
-- Use `folderName` filters like `EM Training and Materials`, `CLST Series`, `Thought Leadership`, or `Onboarding` rather than relying on keyword search alone.
-
-## Examples
-
-**"Which interviewee mentioned CIPP resin?"**
-Classify: point lookup.
-Narrate: "Searching Internal Interviews for CIPP resin..."
-Search: `CIPP Alta internal interviews` with `folderName: Internal Interviews` → if consolidated notes doc is truncated, pivot immediately to individual files (Step 3.5) → search `CIPP filled resin` against `*Internal (Anna Notes).docx` files → read each and compile.
-Output: Direct quote from each interviewee mentioning CIPP + source link.
-
-**"What does the Newry Ladder say about Project Manager responsibilities?"**
-Classify: point lookup. Routing cheat sheet → `ACC Templates and Ladder`.
-Narrate: "Searching ACC Templates and Ladder for the Newry Ladder..."
-Search: `Newry Ladder project manager` with `folderName: ACC Templates and Ladder` → read most recent PPTX → pull PM section.
-Output: Direct quote of PM responsibility list + source link.
-
-**"Have we presented our styrene findings to Alta?"**
-Classify: existence check.
-Narrate: "Searching Alta Newry Presentation folder for styrene..."
-Search: `styrene Alta Newry Presentation` with `folderName: Newry Presentation` → if snippet confirms, answer without reading full doc.
-Output: Yes/No + deck name and date + source link.
-
-**"What's the current status of the Alta project?"**
-Classify: synthesis/sweep.
-Narrate: "Running parallel searches across Alta Project Management, Newry Presentation, and Primary Research..."
-Fire in parallel:
-- Search 1: `Alta project management workplan`
-- Search 2: `Alta biweekly update` with `folderName: Newry Presentation`
-- Search 3: `Alta interview tracker` with `folderName: Primary Research`
-Synthesize from file names, dates, and snippets. Open 1–2 files only if specific content isn't inferrable from metadata.
-Output: Table (file | date | what it covers) + 2–3 sentence synthesis.
-
-**"Has Newry done prior work in composites or specialty chemicals?"**
-Classify: prior-work sweep.
-Narrate: "Searching SharePoint index for composites and specialty chemicals..."
-Fire in parallel (no folder filter):
-- Search 1: `composites laminates specialty materials`
-- Search 2: `specialty chemicals resins thermoset`
-- Search 3: `adhesives coatings polymer`
-Harvest client folders from result paths → cross-check full client list via `sharepoint_folder_search` → domain knowledge supplement for any expected-but-missing clients → flag uncertain clients to user.
-Output: Client-by-client summary + uncertain clients listed with offer to search.
-
----
-
-## Logging
-
-After every run, append a single-line JSON entry to the skill log using the Bash tool:
-
-```bash
-echo '{"ts":"<ISO timestamp>","query":"<user question>","type":"<point_lookup|existence_check|synthesis_sweep|prior_work_sweep>","docs_searched":["<name>",...],"docs_read":["<name>",...],"truncated":<true|false>}' >> "$HOME/Newry Corp/Clients - Claude Master Working Folder/logs/newry-knowledge-skill-log.jsonl"
-```
-
-Fill in all fields from the actual run. Keep the entry on a single line. If the log file isn't accessible, skip logging silently — do not surface an error to the user.
-
----
-
-## Usage logging
-
-At the start of every run — before any other work:
-
-**Step 1 — Check Airtable connectivity.**
-Call `list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, stop and show:
-
-> "⚠ **Airtable isn't connected.** This tool requires Airtable for usage logging. Go to Cowork Settings → Connectors, connect Airtable, then start a new session."
-
-Do not proceed until resolved.
-
-**Step 2 — Write to Airtable.**
-Call `create_records_for_table` with:
-- **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
-- **Fields:**
-  - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-27T14:30:00Z`)
-  - `fldNHK285dPCOdNhB` (plugin) — `"newry_knowledge"`
-  - `fld4EyuVEhxAhPZEd` (sub_skill) — always `"sharepoint_search"`
-  - `fldmTXyfFZRpbZEvQ` (user_id) — use the user's email address from the session context (available in the system prompt `<user>` block); if not available, use `"unknown"`
-  - `fldu8rvXDfvi2O3jF` (project) — project code if discernible (e.g. `"ALTA01"`); otherwise `""`
-
-If the write succeeds, continue. If it fails, retry once.
-
-**Step 3 — Local fallback (if Airtable write still failed after retry).**
-Silently append one JSON line to `~/.newry/logs/usage-log-<user_id>.jsonl` (create `~/.newry/logs/` if missing):
-`{"ts":"<ISO>","plugin":"newry_knowledge","sub_skill":"sharepoint_search","user_id":"<user_id>","project":"<project>"}`
-No user-facing output. Then continue.
-
----
+- Project deliverables, research, workplans → `Clients/{client}/{engagement}/`.
+- Known engagement code → search term AND `folderName` filter (most reliable discriminator).
+- AI work products / Cowork outputs → `Claude Working Folder/` within the engagement; filter `folderName: Claude Working Folder`.
+- PPTX/Excel templates → `Newry Templates_Client Facing/`.
+- Newry Ladder, HR, handbook → filter `folderName: People & Recruiting`. Search the Ladder as **"Newry Consulting Ladder"** (not "Newry Ladder"). Do NOT use `folderName: ACC Templates and Ladder` — that filter does not work.
+- Example slides, training → `TOOLS-TRAINING/`.
+- SoWs → `Project Management/` within the engagement first; `New Business Development/Proposals and SOWs/` second (Corning almost never has one).
+- Secondary research → within each project folder; no firm-wide library.
+- **Consulting-process training** (problem statements, issue trees, workplanning, EM skills) — broad keyword search fails here; those terms are everywhere. Search directly in `TOOLS-TRAINING/EM Training and Materials/` (EM Skill Building, CLST Series, EM Handbook, Problem Structuring), `TOOLS-TRAINING/Thought Leadership/`, or `On Boarding Materials/`. Use `folderName` filters like `EM Training and Materials`, `CLST Series`, `Thought Leadership`, `Onboarding`.
 
 ## Feedback capture
 
-Read and follow the shared feedback-capture sub-skill: `../../../feedback-capture/SKILL.md`
-
-When logging:
-- `Plugin:` → `newry-knowledge`
-- `Sub-skill:` → `sharepoint-search`
+Read and follow the shared feedback-capture sub-skill: `../../../feedback-capture/SKILL.md`. When logging: `Plugin:` → `newry-knowledge`, `Sub-skill:` → `sharepoint-search`.
