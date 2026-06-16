@@ -69,6 +69,20 @@ Examples:
 - "do we have secondary research on styrene regulation?" → `"styrene regulation" ALTA01 secondary`
 - "have we presented CIPP findings to the client?" → `"CIPP" ALTA01 presentation`
 
+**Filters — pass alongside `query` when the question implies them:**
+
+- **File type** (`fileType`): when the question signals a format, set this instead of relying on keyword matching.
+  - "presentation", "deck", "slides" → `pptx`
+  - "spreadsheet", "model", "Excel file" → `xlsx`
+  - "report", "Word doc", "memo" → `docx`
+  - "PDF" → `pdf`
+- **Author** (`author`): when the user asks about a specific person's output ("what did X write/build", "X's work on Y"), pass their name or email. Partial name match works.
+- **Date** (`afterDateTime` / `beforeDateTime`, ISO 8601 `YYYY-MM-DD`): when the user signals recency or a time window.
+  - "recent" / "latest" / "current version" → `afterDateTime: [6 months ago]`
+  - "this year" → `afterDateTime: [current year]-01-01`
+  - "from [month/year]" or "since [date]" → set `afterDateTime` to the start of that period
+- **Limit** (`limit`): default is 10. For synthesis/sweep and prior-work questions, use `limit: 50` to cast a wider net per call.
+
 ### 2. Search SharePoint
 
 **Narrate as you go.** Before each search call, tell the user what you're doing: "Searching Primary Research for styrene regulation..." Before reading a document: "Found it in ALTA01 — reading now." Users should never be left wondering whether anything is happening.
@@ -94,12 +108,13 @@ Examples:
 If the first search returns nothing useful, work through this ordered sequence before surfacing a dead end:
 
 1. **Swap the folder filter.** If you used a narrow `folderName` filter (e.g., a subfolder), drop it or move to the parent folder. If you used no filter, try adding the engagement folder as a filter.
-2. **Try alternate terms.** Synonyms, related concepts, broader or narrower terms:
+2. **Relax type/author/date filters.** If `fileType`, `author`, or date constraints were set and results are thin, remove them — the content may be in a different format, attributed to a different person, or undated.
+3. **Try alternate terms.** Synonyms, related concepts, broader or narrower terms:
    - "polyester resin" → "thermoset resin" → "unsaturated polyester"
    - "AI policy" → "data security" → "tool approval"
-3. **Use project code instead of client name.** E.g., `ALTA01` instead of `Alta`, `COR771` instead of `Corning Critical Materials`.
-4. **Try phrase search.** If you used individual keywords, quote the key multi-word term (e.g., `"CIPP resin"` instead of `CIPP resin`).
-5. **Try the inverse.** Broad keyword search with no folder filter to discover which folders the term appears in — then narrow from there.
+4. **Use project code instead of client name.** E.g., `ALTA01` instead of `Alta`, `COR771` instead of `Corning Critical Materials`.
+5. **Try phrase search.** If you used individual keywords, quote the key multi-word term (e.g., `"CIPP resin"` instead of `CIPP resin`).
+6. **Try the inverse.** Broad keyword search with no folder filter to discover which folders the term appears in — then narrow from there.
 
 After three genuine attempts with no useful result, declare the dead end and go to Step 4.
 
