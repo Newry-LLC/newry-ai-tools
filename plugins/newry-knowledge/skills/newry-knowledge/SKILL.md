@@ -78,6 +78,18 @@ Trigger signals: "add context about", "add a relationship note", "I just met wit
 
 ---
 
+## Step 0.6 — Pre-gate: review pending context?
+
+Intent check: is the user asking to review, approve, or clear pending context library facts?
+
+If yes → **invoke the `review-context` sub-skill and stop.**
+
+Trigger signals: "review pending", "what's pending in my library", "pending context",
+"review context facts", "approve pending facts", "clear my review queue",
+"what's in my review queue", "pending review".
+
+---
+
 ## Sources at a glance
 
 | Source | Best for |
