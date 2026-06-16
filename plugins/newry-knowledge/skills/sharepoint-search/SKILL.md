@@ -55,12 +55,19 @@ Then proceed immediately to searching — do not wait for the user to confirm th
 
 ### 1. Extract search terms
 
-Pull 2–4 distinctive search terms from the user's question. Prefer specific nouns, named entities, and proper nouns over generic words. Examples:
+Pull 2–4 distinctive search terms from the user's question. Prefer specific nouns, named entities, and proper nouns over generic words.
 
-- "which interviewee mentioned the Phase 2 pricing plan?" → `Phase 2 pricing Alta`
-- "what does the Newry Ladder say about PM responsibilities?" → `project manager Newry Ladder`
-- "do we have secondary research on styrene regulation?" → `styrene regulation Alta secondary research`
-- "have we presented CIPP findings to the client?" → `CIPP Alta Newry Presentation`
+**Phrase search:** SharePoint's M365 search supports quoted phrases — use them for multi-word exact terms that must stay together. This reduces noise significantly on specialist terminology.
+- `"CIPP resin"` (not `CIPP resin`) — prevents hits on "CIPP" and "resin" appearing separately
+- `"styrene regulation"`, `"Phase 2 pricing"`, `"Newry Ladder"` all benefit from quoting
+
+**Engagement codes as search terms:** If you know the project code (e.g., `ALTA01`, `COR771`, `COR767`), include it in the query — it is the most reliable discriminator in a noisy cross-project result set. Use it both as a search term and as a `folderName` filter (e.g., `folderName: ALTA01`).
+
+Examples:
+- "which interviewee mentioned the Phase 2 pricing plan?" → `"Phase 2 pricing" ALTA01`
+- "what does the Newry Ladder say about PM responsibilities?" → `"project manager" "Newry Ladder"`
+- "do we have secondary research on styrene regulation?" → `"styrene regulation" ALTA01 secondary`
+- "have we presented CIPP findings to the client?" → `"CIPP" ALTA01 presentation`
 
 ### 2. Search SharePoint
 
@@ -82,12 +89,19 @@ Pull 2–4 distinctive search terms from the user's question. Prefer specific no
 5. Flag any clients in the full list you couldn't classify either way as **uncertain**. Surface them explicitly: "I wasn't able to confirm whether [X, Y, Z] are relevant to this domain — want me to search their folders?"
 6. Run targeted searches within confirmed relevant client folders to surface specifics.
 
-**Query reformulation.** If the first search returns nothing useful, automatically try 1–2 reformulations before surfacing a dead end:
-- Synonyms or alternate terms (e.g., "polyester resin" → "thermoset resin" → "unsaturated polyester")
-- Project code instead of client name (e.g., "ALTA01" instead of "Alta")
-- Broader term if the original was very specific
+### 2.5. Reformulation sequence (named step — run before declaring a dead end)
 
-If reformulations also return nothing, name the dead end clearly and offer specific alternatives (see Step 4).
+If the first search returns nothing useful, work through this ordered sequence before surfacing a dead end:
+
+1. **Swap the folder filter.** If you used a narrow `folderName` filter (e.g., a subfolder), drop it or move to the parent folder. If you used no filter, try adding the engagement folder as a filter.
+2. **Try alternate terms.** Synonyms, related concepts, broader or narrower terms:
+   - "polyester resin" → "thermoset resin" → "unsaturated polyester"
+   - "AI policy" → "data security" → "tool approval"
+3. **Use project code instead of client name.** E.g., `ALTA01` instead of `Alta`, `COR771` instead of `Corning Critical Materials`.
+4. **Try phrase search.** If you used individual keywords, quote the key multi-word term (e.g., `"CIPP resin"` instead of `CIPP resin`).
+5. **Try the inverse.** Broad keyword search with no folder filter to discover which folders the term appears in — then narrow from there.
+
+After three genuine attempts with no useful result, declare the dead end and go to Step 4.
 
 ### 3. Snip-then-stop — then read if needed
 
@@ -159,6 +173,7 @@ If multiple sources, list each one.
   - `Data and Analysis/`
   - `Drafts/`
   - `Conferences/`
+  - `Claude Working Folder/` ← AI-assisted work products, Cowork session outputs (newer engagements)
 - **Corning note:** by far the highest volume of projects across all clients. Almost exclusively a retainer client — most Corning projects will not have SoWs or proposals.
 
 **`Consulting Resources/`** — internal firm resources
@@ -183,6 +198,8 @@ If multiple sources, list each one.
 
 **Routing cheat sheet:**
 - Project deliverables, research, workplans → `Clients/{client}/{engagement}/`
+- Known engagement code → use as search term AND as `folderName` filter (e.g., search `COR771 interview notes`, filter `folderName: COR771`); most reliable discriminator when the user mentions a code
+- AI work products / Cowork session outputs → `Claude Working Folder/` within the engagement subfolder; filter `folderName: Claude Working Folder` or include in search terms
 - PPTX or Excel templates → `Consulting Resources/Document Templates/Newry Templates_Client Facing/`
 - Newry Ladder, HR policies, handbook → `Consulting Resources/People & Recruiting/` — use `folderName: People & Recruiting`; search term for the Ladder is "Newry Consulting Ladder" (not "Newry Ladder"); do NOT use `folderName: ACC Templates and Ladder` — that filter does not work
 - Example slides, training materials → `Consulting Resources/TOOLS-TRAINING/`
