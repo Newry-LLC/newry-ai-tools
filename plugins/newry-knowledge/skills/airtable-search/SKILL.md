@@ -30,7 +30,7 @@ Core fields for all queries:
 - `Year` — year of the engagement (singleSelect, filterable — quick alternative to date range when an exact year is known)
 - `Product or Technology` — specific product or technology focus (multilineText, searchable via `search_records`)
 - `End Use System Or Market` — end market or application (multilineText, searchable via `search_records`)
-- `Project Description` — scope and objectives. **Not in the search index** — `search_records` queries against this field return nothing. Use `Project Name`, `Product or Technology`, and `End Use System Or Market` for keyword search instead.
+- `Project Description` — scope and objectives. **Not in the search index** — `search_records` returns nothing for this field. Searchable via `list_records_for_table` with a `contains` filter on field ID `fldhAgARKAFCQ5THV`. **Always run a description search in parallel with `search_records` on project queries** — it catches many matches the indexed fields miss (coverage: ~42% of projects, near-complete 2020+, patchy 2015–2019).
 - `Status` — Completed, In Progress, Lost, etc. (singleSelect, filterable)
 - `Start Date Actual` / `End Date Actual` — engagement dates (date fields, filterable with `>=`, `<=`, `isWithin` operators)
 - `Staff Members` — lookup of staff names from Project Roles (multipleLookupValues, field ID `fldtlTPqWdjQ6ElW1`). **Confirmed searchable via `search_records`.** When looking for projects by staff member, search Projects directly on this field — this avoids the multi-hop Project Roles traversal entirely. Use full name (e.g., `Louis Lazar`). Expect 20–60+ results for active staff; that's correct.
@@ -83,6 +83,7 @@ Identify which type of question this is — it determines your search strategy a
 - **Client contact lookup** — "who are our contacts at Corning?", "do we have a contact at W.L. Gore?", "find Amy Alberg's details" → search Clients or Companies; return contact card
 - **Staff expertise lookup** — "who at Newry has worked on automotive projects?", "who has experience in specialty coatings?" → search Project Roles filtered to relevant projects; surface staff names and their roles
 - **Specific project lookup** — "what was the scope of COR741?", "tell me about the Aurora capstock project" → retrieve the specific project record by code or name
+- **Top clients by volume** — "who are our biggest clients?", "top 10 clients by project count", "who have we done the most work for?", "most active clients over the last 5 years" → query Clients table, count linked projects per person, rank by project count. **Clients = people** (individuals in the Clients table, not companies). Always return people ranked by project count. If the user asks by company instead, clarify and offer both views.
 
 ### 0.5. Interpret the query
 
@@ -98,18 +99,29 @@ Examples:
 **Narrate as you go.** Before each call, briefly say what you're searching: "Searching Projects for specialty coatings engagements..." Users should know something is happening.
 
 **For prior project lookups and AER mining:**
-Use `search_records` on the `Projects` table with relevant keywords. Search across: `Product or Technology`, `End Use System Or Market`, `Project Name`. Do **not** include `Project Description` — it is not in the search index and will return nothing.
+Run **two searches in parallel** (same tool call batch) on every project query:
 
-- Use 2–4 distinctive keywords — specific nouns, product names, domain terms
+1. `search_records` on `Projects` — keyword search across indexed fields: `Product or Technology`, `End Use System Or Market`, `Project Name`. Use 2–4 distinctive keywords.
+2. `list_records_for_table` on `Projects` — filter: `fldhAgARKAFCQ5THV` (Project Description) `contains` [primary keyword]. Use the single most distinctive keyword from the query.
+
+Merge results by record ID — deduplicate, then retrieve full field data for the combined set.
+
+Additional guidance:
 - If first search returns few results, try variant terms (e.g., "surface protection" → "protective film" → "coatings")
 - Filter to `Status = Completed` for AER mining (only completed projects have AER data)
-- For AER mining, run 2–3 searches with different keyword angles to maximize coverage — AER learnings are only as good as the breadth of matching projects
+- For AER mining, run 2–3 searches with different keyword angles to maximize coverage
+
+**Also run SharePoint in parallel.** For any project query, fire a `sharepoint_search` call in the same tool call batch. Do NOT wait for it before presenting Airtable results. After presenting your Airtable answer, add a single line:
+> "SharePoint search also ran and returned [N] results — want me to review those?"
+If N = 0, omit the line.
 
 **For company-based project lookups** (e.g., "all Corning projects", "find projects for W.L. Gore"):
 1. `search_records` on Companies — query: the company name (e.g., `Corning`). Returns record IDs via fuzzy match — **includes false positives** (e.g., searching "Corning" may return Owens Corning, Dow Corning, unrelated companies). After getting IDs, call `list_records_for_table` on Companies filtered to those IDs to retrieve the `Name` field, then **discard any record whose name does not contain the search term as a substring** (case-insensitive). Use only the verified record IDs in step 2.
 2. `list_records_for_table` on Projects — filter `Company` field using `hasAnyOf` with the verified record IDs from step 1. Combine with additional filters in the same call:
    - `Status` filter if only completed/active projects are needed
    - For date scoping, use **both** `Start Date Actual <= [end of range]` AND `End Date Actual >= [start of range]` — this captures any project with overlap in the window, not just projects that started within it. Example for 2022–2024: `Start Date Actual <= 2024-12-31` AND `End Date Actual >= 2022-01-01`.
+
+**Entity consolidation.** When step 1 returns multiple entities under the same parent (e.g., Corning → Corning Incorporated + Corning EIG + Corning CTO), lead your answer with a consolidated total (e.g., "X projects across N Corning entities"), then break out by entity. Do not silently aggregate — name which entities contributed.
 
 **For client contact lookups:**
 - If searching by company: use `search_records` on `Clients` with the company name, or look up the Companies record(s) and pull linked Clients
@@ -129,6 +141,14 @@ Use `search_records` on the `Projects` table with relevant keywords. Search acro
 
 **For specific project lookups:**
 Use `search_records` on `Projects` with the project code or name. Project codes are exact (e.g., `COR741`) — include them verbatim in the query.
+
+**For top clients by volume:**
+1. `list_records_for_table` on `Clients` — retrieve all records (or filter by date if a time window was specified). Fetch fields: `Name` (full name) + the linked Projects field. Use pageSize 8000 to avoid truncation.
+2. Count linked projects per person. Sort descending.
+3. If a time window is specified (e.g., "last 5 years"), cross-reference project IDs against a `list_records_for_table` on `Projects` filtered by `Start Date Actual >= [cutoff]` to get the in-window project ID set, then count only those.
+4. **Exclude internal Newry projects** (see below) from all counts.
+
+**Internal Newry project filter.** When running client-volume queries or any query where external client relationships are the subject, exclude projects where the Company is an internal Newry entity (company name contains "Newry"). These inflate counts and don't represent external client relationships. When you see internal projects in results for other query types, flag them as internal.
 
 **Pagination / result truncation.** `list_records_for_table` has a page size cap (typically 100 records). If a query returns exactly 100 (or another suspiciously round number) and the scope is broad, results are likely truncated. Do not treat a truncated result as complete. Instead: add a tighter filter (narrower date range, Status = Completed, specific company), re-run, and note to the user that you've narrowed the query to stay within result limits.
 
@@ -169,6 +189,9 @@ For each contact:
 
 **Staff expertise lookup:**
 - **[Staff Name]** — [Role/Title] — worked on: [Project Code] ([Company], [Year]), [Project Code] ([Company], [Year])
+
+**Top clients by volume:**
+Ranked table: `#  |  Person  |  Projects [period]`. Include job title and company if available. Note time window at the top (e.g., "2021–present"). Flag if internal Newry projects were excluded from counts.
 
 **Specific project lookup:**
 - **[Project Code] — [Project Name]**
