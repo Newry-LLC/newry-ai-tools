@@ -40,7 +40,7 @@ If the question has multiple distinct parts, list them. Any enumerative part ("w
 - **`folderName` matches one clean path segment only.** Use a single distinctive word or code (`Recruiting`, `ALTA01`, `Onboarding`) or a plain multi-word name (`Claude Working Folder`). It **silently returns zero** on folder names containing `&` or `and` — `People & Recruiting` and `ACC Templates and Ladder` both fail and look like "nothing exists." If a folder-filtered search comes back empty, drop the filter and retry before concluding anything.
 - **Use `fileType`** only when the user explicitly signals a format — "deck/slides" → `pptx`, "spreadsheet/model" → `xlsx`, "report/memo" → `docx`. Any extension works.
 - **Use date filters** proactively when the user gives any timeframe — apply `afterDateTime` immediately, don't wait. Note: "latest"/"current" means the *authoritative* version, NOT merely recently-edited — do not impose a date filter for "latest" (see step 3). For recency-ranked questions ("most recent," "current status"), narrow with `afterDateTime` and sort results by `lastModifiedDateTime`.
-- **Use `author`** rarely — only when the user asks about a specific person's output.
+- **Use `author`** when the user asks about a specific person's output **or says who made the document** — this is the highest-signal discriminator for a described doc and should be applied immediately, not as a last resort.
 - **Internal Newry docs (HR, Ladder, handbook, templates, training):** lead with the quoted document name, not topic terms (e.g. `"Newry Consulting Ladder"` not `consulting career levels`). Add `folderName: Consulting Resources` to eliminate client-folder noise.
 - **Narrate any exclusion.** When you filter by type, date, or author, say so in one line: "Looking only at decks since you said 'presented' — tell me to include memos and other docs too." A silent filter that hides the real answer reads as "doesn't exist." (No need to narrate going broad.)
 
@@ -65,6 +65,8 @@ If the question has multiple distinct parts, list them. Any enumerative part ("w
 
 **If the first search comes back empty or useless,** work this sequence before declaring a dead end: relax any type/date/author filter → swap the folder filter (drop it, or move to the parent) → try alternate terms (synonyms, broader/narrower) → use the project code instead of the client name → quote the key phrase → run a broad no-filter search to see which folders the term lives in. For internal policy/HR questions: multi-term queries require all terms in one document — if `PTO policy` returns zero, retry with just the document name (`"Newry Employee Handbook"`) to match on filename alone, then `read_resource` the file. After three honest attempts, go to step 4.
 
+**Label mismatch rule.** If the user described the document with a label that may not appear in the filename (e.g. "the strategic marketing fact pack", "the onboarding deck", "the pricing tool"), strip that label entirely and re-run with just 1–2 core topic terms + `author` if known. A mismatch between the user's label and the actual filename is the most common reason a clearly-described document doesn't surface — multi-term AND logic excludes it entirely when one term is absent.
+
 ### 3. Triage and read
 
 Rank the results by snippet relevance, path (right client/engagement?), and `lastModifiedDateTime`. Read only the top 1–3.
@@ -85,6 +87,7 @@ Give a direct, specific answer — quote or close-paraphrase, don't vaguely summ
 
 **Two honesty rules:**
 - **A top-50 result set does not license a "no" or a confident point answer unless a filter bounded the set.** If you went broad and didn't find the named target, tighten and retry before answering. Absence from the top 50 ≠ absence from SharePoint.
+- **Near-miss gate.** Before declaring nothing found, you must have run at least one search using only the single most distinctive term from the query — a stripped-down pass to confirm the document isn't indexed under a different name. If that also returns nothing, then "not found" is defensible.
 - **Flag incomplete coverage.** If files were too large to fully read, or you stopped paging, say so: "Found two interviewees who mentioned CIPP, but two files were too large to read in full — there may be more."
 
 **If nothing's found** after reformulation: describe what WAS found and why it doesn't answer the question (near-miss results, wrong client, wrong era, wrong topic) — don't just declare absence. Then say which is likeliest — doesn't exist yet, lives under a different name, or predates good indexing — given what you searched. Give a real next step: the folder to browse, a different angle, or the person at Newry most likely to know. Never leave the user stranded with only "I couldn't find anything."
