@@ -271,7 +271,18 @@ Also check:
 - Every slide title states a finding, not just a topic label. Fix any that don't.
 - Numbers and statistics you generated are flagged explicitly: "I generated this figure — verify before presenting."
 
-### QC Pass 2 — Claims vs. source of fact
+### QC Pass 2 — Writing standards sweep
+
+Check all written content against the Writing Standards section:
+- En dashes used correctly (not hyphens for ranges/attributions; no em dashes)
+- Numbers under 10 written out unless with a unit
+- No final punctuation on bullets
+- Oxford comma present in lists
+- Acronyms spelled out on first use (except FDA, USA, IBM-class common ones)
+- Footnote format is `N – source` not `N. source` or `(N) source`
+- Unit abbreviations are B/M/k not bn/mm/K
+
+### QC Pass 3 — Claims vs. source of fact
 
 A reasoning pass, not mechanical. For each substantive assertion:
 - Is there a traceable source (interview, report, data file) behind it?
@@ -391,6 +402,45 @@ ppt_format_text_range(slide_index, shape, start=20, length=11, bold=false, font_
 
 ## Layout-Specific Notes
 
+### Cover slide (slide 1)
+
+Three editable text shapes in the lower half of the slide:
+- **Title** ("Newry Communications"): left=30.48, top=347.44, width=637.09, height=55.1 — 40pt Aptos, not bold, #000000
+- **Subtitle**: left=30.48, top=415.93, width=637.09, height=44.33 — 24pt Aptos, not bold, #000000
+- **Date**: left=30.48, top=487.7, width=267.02, height=24.23 — 18pt Aptos, not bold, #000000
+
+The navy wave background is part of the slide master — it cannot be added or modified via ppt-mcp.
+
+### TOC slide (slide 2)
+
+- Title is white (#FFFFFF, 28pt Aptos Display) — the dark navy header band comes from the master layout
+- Table starts at left=381.77, top=136.47, width=548.23
+
+### Chapter divider (slide 4)
+
+- Single text shape ("Subtitle 1"): left=30, top=350.77, width=900, height=72.75 — 28pt Aptos, not bold, #000000
+- No slide number on chapter dividers
+- Navy wave background covers the upper ~75% of the slide; lower ~25% is white — both from the master
+
+### Background & Objectives slide (slide 5)
+
+Two-column layout with independent header + body in each column:
+- Left header: left=30.69, top=87.18, width=431.57, height=24.14
+- Left body: left=30.69, top=117.84, width=431.57, height=383.39
+- Right header: left=496.19, top=87.51, width=432, height=23.81
+- Right body: left=496.71, top=117.84, width=431.48, height=383.39
+- Column gap: ~34pt
+- Column headers are H2 style (18–20pt bold ALL-CAPS #1E4C7F); body is 18pt regular #000000
+
+### Body slide layout (slide 7) — exact positions
+
+- Title: left=30, top=6.93, width=898.88, height=66.92
+- Bullet area (Text Placeholder 2): left=29.74, top=98.29, width=518.95, height=235.23
+- Quote box 1 (Rectangle 7): left=556.14, top=98.29, width=372.74, height=136.29
+- Quote box 2 (Rectangle 8): left=556.14, top=251.97, width=372.74, height=136.29
+- Tombstone (Rectangle 9): left=27, top=413.1, width=901.88, height=50.35, fill=#BBD4EF
+- Source/footnote (Text Placeholder 4): left=29.74, top=493.29, width=861.89, height=36.66
+
 ### Team page — updating bios and photos
 
 Only consultant shapes need to change per client. VP shapes stay the same. Inspect first to identify which shapes belong to which person.
@@ -407,6 +457,8 @@ The bio in a proposal is tailored to the client engagement. Pull the Airtable te
 ppt_add_picture_from_url(slide_index, url=<record["fields"]["Image"][0]["thumbnails"]["full"]["url"]>, left=X, top=Y, width=W, height=H)
 ```
 Replace the existing photo shape by deleting it first (`ppt_delete_shape`), then placing the new image at the same position. Inspect the original shape position with `ppt_get_shape_info` before deleting.
+
+**Headshot size**: 72 × 72pt, circular crop. When adding a new photo, use width=72, height=72 and match the left/top of the shape being replaced.
 
 ### Body Slide 1 (slide 7) — bullets + quote
 
@@ -435,6 +487,13 @@ Use `bullet_char=` (not `char=` — that raises a validation error). Apply to ev
 ### Timeline (slide 10)
 
 10 time-point TextBoxes (TextBox 7–16), 3 content Rectangles (Rectangle 27, 28, 30), 3 elbow connectors (do not touch), 10 tick connector lines (do not touch), 1 horizontal timeline line (do not touch). Also has a sub-header TextBox at shape index 6 — must update by index.
+
+Line/tick specs (different from standard dividers):
+- Horizontal axis (Straight Connector 5): #7F7F7F, **1.5pt solid** — do not change
+- Year tick marks (Straight Connector 17–26): #1E4C7F navy, **4.5pt solid** — do not change
+- Content boxes (Rectangle 27, 28, 30): #BBD4EF fill, **#7F7F7F 1pt solid border** — intentional, keep
+- Content box text: 16pt Aptos, regular, #000000, centered
+- YEAR label text: 18pt Aptos, regular, #000000, centered
 
 ### Chart slide (slide 8) — think-cell
 
@@ -555,15 +614,22 @@ When building a slide from scratch — adding new shapes rather than duplicating
 
 | Element | Font | Size | Style | Color |
 |---|---|---|---|---|
-| Slide title | Aptos Display | 28pt | not bold | #000000 |
-| Section sub-header (H2) | Aptos | 16pt | bold, ALL-CAPS | #1E4C7F |
+| Slide title | Aptos Display | 28pt | not bold | #000000 (white on dark backgrounds) |
+| Cover title | Aptos | 40pt | not bold | #000000 |
+| Cover subtitle | Aptos | 24pt | not bold | #000000 |
+| Cover date | Aptos | 18pt | not bold | #000000 |
+| Section sub-header (H2) | Aptos | 20pt | bold, ALL-CAPS | #1E4C7F |
+| Section sub-header (H2) — dense layouts | Aptos | 18pt | bold, ALL-CAPS | #1E4C7F |
 | Column / section header (H3) | Aptos | 16pt | bold, Title Case | #000000 |
 | Body text | Aptos | 18pt | regular | #000000 |
 | Body text range | Aptos | 14–20pt | — | — |
 | Table text | Aptos | 16pt | regular | #000000 |
 | Table minimum | Aptos | 12pt | — | — |
-| Chart units line | Aptos | 14pt | italic | #000000 |
-| Source / citation box | Aptos | 12pt | regular | #7F7F7F |
+| Chart units line | Aptos | 18pt | italic | #000000 |
+| Source / citation box (footer band) | Aptos | 12pt | regular | #FFFFFF (white — sits on dark navy footer) |
+| Source / citation (in content area) | Aptos | 12pt | regular | #7F7F7F |
+| Team page — VP name | Aptos | 16pt | bold | #000000 |
+| Team page — title / email | Aptos | 16pt | regular | #000000 |
 | Line spacing | — | 6–12pt between lines | — | — |
 
 ### Shape fills and borders
@@ -579,16 +645,23 @@ Rules that apply to every shape:
 - **Quote boxes**: #D9D9D9 fill, no border; quote left-aligned; attribution right-aligned italic
 - **Tombstone** (full-width callout bar): #BBD4EF fill, no border, width ≈ 902pt, left = 27–30pt
 
+Exceptions (shapes that legitimately have borders or different fills):
+- **CAGR / annotation ovals** on chart slides: white (#FFFFFF) fill, black border 0.75pt solid, 18pt bold #000000 centered — these are annotation shapes, not content shapes
+- **Timeline content boxes**: #BBD4EF fill, #7F7F7F border 1pt solid — the border is intentional to define the event box
+- **Gradient comparison table legend swatches**: High=#89B4E3, Medium=#BBD4EF, Low=#C6DBF2
+
 ### Divider lines
 - Color: #7F7F7F
 - Weight: 1pt
 - Dash style: long segmented dash (dash_style=7 in ppt-mcp)
+- **Timeline horizontal axis line is different**: #7F7F7F, **1.5pt solid** (dash_style=1)
+- **Timeline tick marks are different**: #1E4C7F navy, **4.5pt solid**
 
 ### Value chain chevrons
 - First shape: `Pentagon` (flat left edge, pointed right); subsequent: `Chevron`
 - Arrow depth adjustment: 0.5
-- Default size: 239pt wide × 66.5pt tall; last shape widens slightly to reach right margin
-- Chevrons overlap by ~21pt to form a connected chain — do not gap them
+- Default size: 239pt wide × 66.5pt tall; last shape widens to 246.46pt to reach right margin
+- Left shift between shapes: 217.84pt → **overlap = ~21.3pt** — do not gap them
 - Default fill: #BBD4EF; active/highlighted phase: #1E4C7F; inactive/greyed: #D9D9D9
 - No border, no shadow
 
@@ -605,13 +678,70 @@ Rules that apply to every shape:
 ### Pre-save checklist for from-scratch slides
 
 Before calling `ppt_save_presentation` on any slide built from scratch:
-1. Every shape: `line: visible=false` (no borders)
+1. Every shape: `line: visible=false` (no borders) — except CAGR ovals and timeline content boxes
 2. Every shape: no shadow set
 3. Fill colors are only from the two approved patterns or the special cases above
 4. Fonts are Aptos Display (title only) or Aptos (everything else) — not Arial, Calibri, or system defaults
 5. Body text is 18pt (not 14pt or 20pt unless dense layout requires it)
 6. Source box present at bottom if any data/claims are on the slide
-7. Run `ppt_get_slide_preview` and visually confirm before reporting done
+7. Source text in footer band = white (#FFFFFF); source text embedded in content area = #7F7F7F
+8. Run `ppt_get_slide_preview` and visually confirm before reporting done
+
+---
+
+## Writing Standards
+
+Apply these rules to all content written to slides. Flag violations found during QC passes.
+
+### Units and numbers
+
+- Abbreviations: **B** = billion, **M** = million, **k** = thousand (e.g., $100B, 200M units, 50k)
+- In chart unit lines: spell out — "Thousands of USD", "Millions of USD" (not $k or $M)
+- Measurements: `45 kg`, `5 ft³`, `27 ft²` — not "cu ft", "sq ft", "sq m"
+- Write out numbers under 10 unless: paired with a unit of measure; a comparable number >10 appears in the same sentence; space is genuinely tight on the slide
+- Use tilde (~) for approximations only when the uncertainty is meaningful — not for precise figures
+
+### Punctuation
+
+- **No final punctuation on bullets** — periods only in quotes and tombstones written as full sentences
+- Periods and commas go **inside** quote marks; all other punctuation goes outside
+- Oxford (serial) comma required: "polymers, fiber, and glass"
+- Put commas before and after *e.g.,* and *i.e.,* — they mean "for example" and "that is"
+- **Dashes**: use hyphens ( - ) only for word splits (long-term); use **en dashes** ( – ) for ranges, parentheticals, and quote attributions; **no em dashes** ( — )
+- Spaces on both sides of en dashes and slashes — except in units (e.g., w/m²)
+
+### Capitalization
+
+- Major words in: axis labels, row/column labels, unit lines, document titles
+- Proper nouns: people, places, organizations
+- Capitalize job titles of specific people ("Senior Manager Irving Scott") but not generic roles ("he's the regional manager")
+- Spell out acronyms on first use — but not common ones (FDA, USA, IBM)
+
+### Footnotes and sources
+
+Footnote format: `N – [source]` — number, space, en dash, space, source text, semicolon before next
+```
+1 – Frost & Sullivan, North American Biofuels Market, 2007; 2 – Based on interview with Josh Butzbaugh, Energy Star
+```
+Order sources top-to-bottom then left-to-right on the page. General page sources go under "Source:" after footnotes.
+
+**Citation formats by source type:**
+
+| Type | Format |
+|---|---|
+| Research report | Issuing Org, *Report Title in Italics*, Date |
+| Periodical article | Author, "Title in Quotes," *Periodical in Italics*, Date |
+| Book | Author, *Title in Italics*, Publisher, Year |
+| Web article | Org or Author, "Title in Quotes," Date, URL |
+| Website (data cited) | Company Name Website (specific data point cited) |
+| Interview | Based on interview with Name and/or Title, Organization |
+
+Use superscript numbers for footnotes. If the slide has many unit superscripts (ft², m²) that conflict, switch to symbols: *, †, ‡, §, ¶, #
+
+### Subscripts / superscripts
+
+- Chemical formulas: O₂, CO₂, H₂O — subscript the numbers, not superscript
+- Exponents in units: ft², m³ — superscript
 
 ---
 
