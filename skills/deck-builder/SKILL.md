@@ -541,6 +541,80 @@ Do not invent content beyond what is in the source slide. If the source is spars
 
 ---
 
+## Shape Defaults (from-scratch builds)
+
+When building a slide from scratch — adding new shapes rather than duplicating template slides — every shape must be checked against these specs before saving. This is the most common source of formatting failures on new slides.
+
+### Canvas
+- Slide: 960 × 540 pt
+- Left/right margin: 30pt from each edge (safe content width ≈ 900pt)
+- Content area top: ~92–98pt (below title)
+- Content area bottom: ~493pt (above source box)
+
+### Typography
+
+| Element | Font | Size | Style | Color |
+|---|---|---|---|---|
+| Slide title | Aptos Display | 28pt | not bold | #000000 |
+| Section sub-header (H2) | Aptos | 16pt | bold, ALL-CAPS | #1E4C7F |
+| Column / section header (H3) | Aptos | 16pt | bold, Title Case | #000000 |
+| Body text | Aptos | 18pt | regular | #000000 |
+| Body text range | Aptos | 14–20pt | — | — |
+| Table text | Aptos | 16pt | regular | #000000 |
+| Table minimum | Aptos | 12pt | — | — |
+| Chart units line | Aptos | 14pt | italic | #000000 |
+| Source / citation box | Aptos | 12pt | regular | #7F7F7F |
+| Line spacing | — | 6–12pt between lines | — | — |
+
+### Shape fills and borders
+
+Two valid fill patterns — use nothing else:
+- **Light**: #BBD4EF fill + #000000 black text (preferred for content boxes, tombstones, chevrons)
+- **Dark**: #1E4C7F fill + #FFFFFF white text (for headers, active phase chevrons)
+
+Rules that apply to every shape:
+- **No borders**: `line: visible=false` — borders are off on all template shapes
+- **No shadows**: explicitly prohibited ("Avoid 3D gradients or drop shadows")
+- **Square corners only**: no rounded rectangles
+- **Quote boxes**: #D9D9D9 fill, no border; quote left-aligned; attribution right-aligned italic
+- **Tombstone** (full-width callout bar): #BBD4EF fill, no border, width ≈ 902pt, left = 27–30pt
+
+### Divider lines
+- Color: #7F7F7F
+- Weight: 1pt
+- Dash style: long segmented dash (dash_style=7 in ppt-mcp)
+
+### Value chain chevrons
+- First shape: `Pentagon` (flat left edge, pointed right); subsequent: `Chevron`
+- Arrow depth adjustment: 0.5
+- Default size: 239pt wide × 66.5pt tall; last shape widens slightly to reach right margin
+- Chevrons overlap by ~21pt to form a connected chain — do not gap them
+- Default fill: #BBD4EF; active/highlighted phase: #1E4C7F; inactive/greyed: #D9D9D9
+- No border, no shadow
+
+### Tables
+
+| Element | Spec |
+|---|---|
+| Font | Aptos, 16pt, #000000 |
+| Header row fill | #D9D9D9 (light grey), bold |
+| Body row fill | #FFFFFF white, not bold |
+| Alignment | Left, top |
+| Borders | No colored borders |
+
+### Pre-save checklist for from-scratch slides
+
+Before calling `ppt_save_presentation` on any slide built from scratch:
+1. Every shape: `line: visible=false` (no borders)
+2. Every shape: no shadow set
+3. Fill colors are only from the two approved patterns or the special cases above
+4. Fonts are Aptos Display (title only) or Aptos (everything else) — not Arial, Calibri, or system defaults
+5. Body text is 18pt (not 14pt or 20pt unless dense layout requires it)
+6. Source box present at bottom if any data/claims are on the slide
+7. Run `ppt_get_slide_preview` and visually confirm before reporting done
+
+---
+
 ## Brand Reference
 
 | Element | Value |
@@ -550,9 +624,12 @@ Do not invent content beyond what is in the source slide. If the source is spars
 | Primary navy (hero / headers) | #1E4C7F |
 | Dark navy (darkest) | #0F263F |
 | Bright blue | #3079CA |
+| Second lightest blue (fills) | #BBD4EF |
 | Red (highlights only) | #920D29 |
 | Gold (highlights only) | #FDBC0D |
+| Grey 2 (quotes, table headers) | #D9D9D9 |
+| Grey 5 (dividers, source text) | #7F7F7F |
 | Body text | #000000 black |
 | Caption / source text | #7F7F7F gray |
 | Section header font size | 16pt bold |
-| Body text font size | 14–18pt normal |
+| Body text font size | 18pt normal (14–20pt range) |
