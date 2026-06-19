@@ -36,7 +36,7 @@ Before touching any artifact tools, output this table in the chat now so the use
 |---|---|---|
 | **newry-knowledge** | Search SharePoint docs + Airtable — project history, contacts, expertise, any Newry document | M365 + Airtable connectors |
 | **Primary Research Toolkit** | Plan, guide, prep, code, and synthesize interview-based primary research end-to-end | M365 + SharePoint working folder |
-| **SoF Toolkit** | Evaluate, align, or draft a Summary of Findings slide against the Pyramid Principle | None — works immediately |
+| **SoF Toolkit** | Evaluate, align, or draft the content for a Summary of Findings slide against the Pyramid Principle | None — works immediately |
 
 *Coming soon: Project Launch Toolkit · RMA-OA Builder · Project Technical Onboarding*
 
