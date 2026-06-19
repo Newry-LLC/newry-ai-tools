@@ -473,6 +473,31 @@
       },
       "expected_output": "Thematic synthesis of learnings specific to multi-company engagements, with project code citations",
       "llm_judge_prompt": "Did every learning in the output cite at least one specific Newry project code as evidence, rather than offering generic advice? Answer yes or no."
+    },
+
+    {
+      "id": 22,
+      "skill": "sharepoint-search",
+      "question_type": "point_lookup",
+      "data_dependency": "SharePoint — Consulting Resources/Document Templates/Newry Templates_Project Initiation/",
+      "notes": "Tests label-mismatch recovery: user describes the doc as 'strategic marketing fact pack' but actual filename is '2024.11 Strategic Marketing Core Analyses _ Project Scoping and Launch Reference Kit.pptx'. Correct behavior requires dropping the label term and using author + core topic. Regression case for 2026-06-19 failure.",
+      "prompt": "Can you find the strategic marketing fact pack on SharePoint? I think Kasey O'Malley made it.",
+      "expected_behavior": {
+        "should": [
+          "Apply author filter (Kasey or komalley) on first or second search attempt — not as a last resort",
+          "Drop 'fact pack' from the query when initial searches fail or on a parallel reformulation",
+          "Search on 'strategic marketing' as the core topic term",
+          "Find '2024.11 Strategic Marketing Core Analyses _ Project Scoping and Launch Reference Kit.pptx'",
+          "Return the SharePoint link to the canonical copy in Document Templates"
+        ],
+        "should_not": [
+          "Persist with 'fact pack' in the query across multiple failed attempts",
+          "Give up or ask the user for more information before trying author + stripped query",
+          "Return only the Newry PowerPoint Template copies that mention 'Strategic Marketing Fact Pack' as a section name"
+        ]
+      },
+      "expected_output": "Link to '2024.11 Strategic Marketing Core Analyses _ Project Scoping and Launch Reference Kit.pptx' in Consulting Resources / Document Templates / Newry Templates_Project Initiation",
+      "llm_judge_prompt": "Did the skill apply an author filter (Kasey, komalley, or O'Malley) at some point in its search, AND drop the phrase 'fact pack' from at least one query attempt? Answer yes or no."
     }
 
   ]
