@@ -1,0 +1,4 @@
+{
+  "name": "Deck Builder",
+  "triggers": ["build slides", "create a deck", "make a slide", "add a slide", "draft slides", "update the deck", "ppt"]
+}
