@@ -78,6 +78,17 @@ def save_claude_md(content):
         f.write(content)
 
 
+def pip_install(package):
+    import subprocess
+    result = subprocess.run([sys.executable, "-m", "pip", "install", package], capture_output=True, text=True)
+    if result.returncode == 0:
+        print(f"{package}: installed OK")
+    else:
+        print(f"{package}: install failed — {result.stderr.strip()}")
+        print(f"Run manually: pip install {package}")
+    return result.returncode == 0
+
+
 def ensure_pywin32():
     """Install pywin32 if not present (required for PowerPoint COM)."""
     try:
@@ -85,17 +96,55 @@ def ensure_pywin32():
         print("pywin32: already installed")
     except ImportError:
         print("pywin32: not found — installing...")
-        import subprocess
-        result = subprocess.run([sys.executable, "-m", "pip", "install", "pywin32"], capture_output=True, text=True)
-        if result.returncode == 0:
-            print("pywin32: installed OK")
-        else:
-            print(f"pywin32: install failed — {result.stderr.strip()}")
-            print("Run manually: pip install pywin32")
+        pip_install("pywin32")
+
+
+def ensure_ppt_mcp():
+    """Install ppt-mcp and wire it into ~/.claude/mcp.json."""
+    import subprocess, shutil
+
+    # Install the package if the exe isn't already there
+    exe = shutil.which("ppt-mcp")
+    if not exe:
+        # Try to find it in the Python Scripts dir even if not on PATH
+        scripts = os.path.join(os.path.dirname(sys.executable), "Scripts", "ppt-mcp.exe")
+        if os.path.isfile(scripts):
+            exe = scripts
+
+    if not exe:
+        print("ppt-mcp: not found — installing...")
+        if not pip_install("ppt-mcp"):
+            return
+        scripts = os.path.join(os.path.dirname(sys.executable), "Scripts", "ppt-mcp.exe")
+        exe = scripts if os.path.isfile(scripts) else "ppt-mcp"
+    else:
+        print("ppt-mcp: already installed")
+
+    # Wire into ~/.claude/mcp.json
+    mcp_json_path = os.path.expanduser(os.path.join("~", ".claude", "mcp.json"))
+    os.makedirs(os.path.dirname(mcp_json_path), exist_ok=True)
+
+    try:
+        with open(mcp_json_path, "r", encoding="utf-8") as f:
+            mcp_config = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        mcp_config = {}
+
+    mcp_config.setdefault("mcpServers", {})
+    exe_forward = exe.replace("\\", "/")
+
+    if "ppt-mcp" in mcp_config["mcpServers"]:
+        print("ppt-mcp: already in mcp.json")
+    else:
+        mcp_config["mcpServers"]["ppt-mcp"] = {"command": exe_forward}
+        with open(mcp_json_path, "w", encoding="utf-8") as f:
+            json.dump(mcp_config, f, indent=2)
+        print(f"ppt-mcp: added to {mcp_json_path}")
 
 
 def main():
     ensure_pywin32()
+    ensure_ppt_mcp()
 
     skills = find_skills()
     if not skills:
