@@ -68,6 +68,8 @@ This does three things automatically:
 
 Read the output. If pywin32 install failed, tell the user and stop — they'll need to resolve it before continuing.
 
+Note: even if the installer says "already up to date — nothing changed," a restart is still required to pick up the updated skill instructions.
+
 ---
 
 ## Step 5 — Verify CLAUDE.md was updated
