@@ -30,23 +30,27 @@ python --version
   ```
   winget install Python.Python.3.13
   ```
-  After it completes, tell the user: "Python installed. Close this terminal window, open a fresh one, navigate back to this session, and say 'set up newry' again to continue." Stop here — the PATH update requires a new terminal.
+  After it completes, run `python --version` again in a new shell to confirm Python is now in PATH. Then continue.
 
 ---
 
-## Step 3 — Check if repo is already cloned
+## Step 3 — Clone or update the repo
 
 Run:
 ```
 dir %USERPROFILE%\.newry\skills
 ```
 
-- If it shows a `deck-builder` folder: already cloned. Skip to Step 4.
+- If it shows a `deck-builder` folder: already cloned. Pull latest:
+  ```
+  git -C %USERPROFILE%\.newry pull
+  ```
 - If the folder doesn't exist: clone it:
   ```
   git clone https://github.com/Newry-LLC/newry-ai-tools %USERPROFILE%\.newry
   ```
-  Confirm the clone succeeded before continuing.
+
+Confirm before continuing.
 
 ---
 
