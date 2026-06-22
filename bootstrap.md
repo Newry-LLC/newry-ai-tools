@@ -61,10 +61,11 @@ Run:
 python %USERPROFILE%\.newry\install.py
 ```
 
-This does three things automatically:
+This does four things automatically:
 1. Installs pywin32 (the PowerPoint COM library) if missing
-2. Wires all skills into `~/.claude/CLAUDE.md` so they load every session
-3. Confirms what was installed
+2. Installs ppt-mcp (the PowerPoint MCP server) if missing and wires it into `~/.claude/mcp.json`
+3. Wires all skills into `~/.claude/CLAUDE.md` so they load every session
+4. Confirms what was installed
 
 Read the output. If pywin32 install failed, tell the user and stop — they'll need to resolve it before continuing.
 
@@ -111,6 +112,7 @@ If the skill doesn't trigger on "ppt" after restart, check:
 |---|---|---|
 | Repo | `%USERPROFILE%\.newry\` | Skill files + future updates |
 | pywin32 | Python packages | PowerPoint COM connection |
+| ppt-mcp | Python packages + `~/.claude/mcp.json` | PowerPoint MCP tools for Claude |
 | CLAUDE.md block | `%USERPROFILE%\.claude\CLAUDE.md` | Loads skills every Code session |
 
 To update skills in the future: `cd %USERPROFILE%\.newry && git pull && python install.py`
