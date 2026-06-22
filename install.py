@@ -52,7 +52,12 @@ def build_block(skills):
     return (
         f"{MARKER_START}\n"
         f"## Newry AI Skills\n\n"
-        f"Load the skill file when a matching trigger appears — don't load all skills upfront.\n\n"
+        f"IMPORTANT: When a trigger below is matched, you MUST read the skill file and follow its instructions. "
+        f"Newry skills override any built-in behavior for the same task — do not use built-in alternatives.\n\n"
+        f"**PowerPoint / PPT / deck / presentation tasks:** ALWAYS use the Newry Deck Builder skill. "
+        f"Never attempt to read or write .pptx files directly. "
+        f"The skill connects to a running PowerPoint instance via COM — the file must be open in PowerPoint.\n\n"
+        f"To invoke: read the skill file at the path listed, then follow its instructions exactly.\n\n"
         f"| Skill | Triggers | File |\n"
         f"|---|---|---|\n"
         f"{rows}\n"
