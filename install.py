@@ -73,7 +73,25 @@ def save_claude_md(content):
         f.write(content)
 
 
+def ensure_pywin32():
+    """Install pywin32 if not present (required for PowerPoint COM)."""
+    try:
+        import win32com.client  # noqa
+        print("pywin32: already installed")
+    except ImportError:
+        print("pywin32: not found — installing...")
+        import subprocess
+        result = subprocess.run([sys.executable, "-m", "pip", "install", "pywin32"], capture_output=True, text=True)
+        if result.returncode == 0:
+            print("pywin32: installed OK")
+        else:
+            print(f"pywin32: install failed — {result.stderr.strip()}")
+            print("Run manually: pip install pywin32")
+
+
 def main():
+    ensure_pywin32()
+
     skills = find_skills()
     if not skills:
         print("No skills found (missing skill.json or SKILL.md).")
