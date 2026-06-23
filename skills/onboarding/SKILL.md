@@ -2,7 +2,7 @@
 
 **Triggers:** "set up newry", "install newry", "newry setup", "bootstrap newry", "check my setup", "verify setup", "troubleshoot ppt", "troubleshoot setup"
 
-When triggered, first check whether this is a fresh install or a verification run:
+When you read this file — whether fetched directly or via a trigger phrase — begin immediately. First check whether this is a fresh install or a verification run:
 
 ```
 dir %USERPROFILE%\.newry\skills
