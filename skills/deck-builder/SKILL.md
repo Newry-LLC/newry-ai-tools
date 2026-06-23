@@ -85,7 +85,12 @@ Use `write_textbox` (Mode B style) instead only when you're deliberately changin
 
 Goal: a strong first draft, fast, from the closest layout we already have.
 
-1. **Pick the nearest layout** from the library table below. State your pick: "I'll use the figure-two-thirds layout — say if you'd rather something else."
+0. **First, which deck family?** There are two distinct layout families and they don't mix. Before picking a layout, settle which one you're in:
+   - **NBD proposal** — a new-business pitch/proposal for a prospective client. Use the **NBD proposal layouts** (the `nbd_*` family). Covers, dividers, growth levers, approach modules, team, back cover are all purpose-built for proposals.
+   - **Project / report deck** — findings, analysis, client deliverables. Use the **project / report layouts** (everything else).
+   - If the request doesn't make it obvious, **ask in one line**: "Is this an NBD proposal or a project/report deck?" The answer picks the family. Don't build a proposal out of project layouts (or vice versa) — that's the most common way these come out wrong.
+
+1. **Pick the nearest layout** from the right family's table below. State your pick: "I'll use the figure-two-thirds layout — say if you'd rather something else."
 2. **Fill it** with a `build` job. Give it the fields the layout lists.
 3. **Preview, then adapt** — resize, add, or remove pieces as the actual content needs. The layouts are starting points; expect to adjust.
 
@@ -114,7 +119,11 @@ Pass a table as rows. Row 1 is usually the header. Cells can be a plain string, 
 
 ## The layout library
 
-19 starting-point layouts. Most come from our blank template; five come from the strategic marketing reference deck. The tool pulls each from the right source file automatically.
+28 starting-point layouts in **two families** — pick from the family you settled on in Mode B step 0. The tool pulls each from the right source file automatically; you never name the source deck.
+
+### Project / report layouts (19)
+
+For findings, analysis, and client deliverables. Source: our blank template + the strategic-marketing reference deck.
 
 | Layout | Use it for |
 |---|---|
@@ -137,6 +146,22 @@ Pass a table as rows. Row 1 is usually the header. Cells can be a plain string, 
 | `full_chart` | Full-width chart, source line at bottom |
 | `full_visual_quote` | Full-page visual (e.g. a map) with a quote bar at the bottom |
 | `back_page` | Closing page: confidentiality + contributors |
+
+### NBD proposal layouts (9)
+
+For new-business proposals/pitches. Source: the NBD proposal template. **Use these — not the project layouts — whenever you're building a proposal.**
+
+| Layout | Use it for |
+|---|---|
+| `nbd_cover` | Proposal cover — value-prop headline + "Proposal for \<Client\>" |
+| `nbd_section_divider` | Proposal section divider (e.g. "Approach", "Our Team") |
+| `nbd_experience_grid` | Prior Newry experience across the client's value chain |
+| `nbd_growth_levers` | Growth-levers table — one row per strategic lever |
+| `nbd_approach_modules` | Two-module approach overview with timeframes |
+| `nbd_module_breakout` | Breakout page for one module of a 2-module approach |
+| `nbd_phase_breakout` | Breakout page for one phase of a 3-phase approach |
+| `nbd_team_six` | Engagement team — 6 people, 2×3 headshot grid |
+| `nbd_back_cover` | Back cover — Newry contacts + confidentiality notice |
 
 ### Adding a new layout
 
