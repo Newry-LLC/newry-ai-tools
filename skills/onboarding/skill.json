@@ -1,0 +1,4 @@
+{
+  "name": "Onboarding",
+  "triggers": ["set up newry", "install newry", "newry setup", "bootstrap newry", "check my setup", "verify setup", "troubleshoot ppt", "troubleshoot setup"]
+}
