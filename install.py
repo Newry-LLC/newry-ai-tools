@@ -113,7 +113,14 @@ def ensure_ppt_mcp():
 
     if not exe:
         print("ppt-mcp: not found — installing...")
-        if not pip_install("ppt-mcp"):
+        import subprocess as _sp
+        _r = _sp.run(
+            [sys.executable, "-m", "pip", "install", "ppt-mcp", "--prefer-binary"],
+            capture_output=True, text=True
+        )
+        if _r.returncode != 0:
+            print(f"ppt-mcp: install failed — {_r.stderr.strip()}")
+            print("Run manually: pip install ppt-mcp --prefer-binary")
             return
         scripts = os.path.join(os.path.dirname(sys.executable), "Scripts", "ppt-mcp.exe")
         exe = scripts if os.path.isfile(scripts) else "ppt-mcp"
