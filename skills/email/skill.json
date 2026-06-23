@@ -1,0 +1,4 @@
+{
+  "name": "Email",
+  "triggers": ["send email", "reply to", "draft email", "send a reply", "email to"]
+}
