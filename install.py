@@ -149,9 +149,57 @@ def ensure_ppt_mcp():
         print(f"ppt-mcp: added to {mcp_json_path}")
 
 
+def ensure_ppt_write_guard_hook():
+    """Install the Deck Builder write-guard as a PreToolUse hook in settings.json.
+
+    Denies the ppt-mcp write tools (which flatten formatting) and reroutes Claude
+    to deck_writer.py. Idempotent — keyed on the matcher, so re-running won't
+    duplicate the entry, and it refreshes the command path if the repo moved.
+    """
+    guard = os.path.join(SKILLS_DIR, "deck-builder", "ppt_write_guard.py")
+    if not os.path.isfile(guard):
+        print("write-guard hook: ppt_write_guard.py not found — skipped")
+        return
+
+    matcher = "mcp__ppt-mcp__(ppt_set_text|ppt_set_placeholder_text|ppt_find_replace_text)"
+    command = '"{}" "{}"'.format(sys.executable.replace("\\", "/"), guard.replace("\\", "/"))
+    entry = {
+        "matcher": matcher,
+        "hooks": [{"type": "command", "command": command}],
+    }
+
+    settings_path = os.path.expanduser(os.path.join("~", ".claude", "settings.json"))
+    os.makedirs(os.path.dirname(settings_path), exist_ok=True)
+    try:
+        with open(settings_path, "r", encoding="utf-8") as f:
+            settings = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        settings = {}
+
+    hooks = settings.setdefault("hooks", {})
+    pre = hooks.setdefault("PreToolUse", [])
+
+    # Find an existing entry with our matcher and refresh it; else append.
+    existing = next((e for e in pre if isinstance(e, dict) and e.get("matcher") == matcher), None)
+    if existing is not None:
+        if existing.get("hooks") == entry["hooks"]:
+            print("write-guard hook: already installed")
+            return
+        existing["hooks"] = entry["hooks"]
+        action = "updated"
+    else:
+        pre.append(entry)
+        action = "added"
+
+    with open(settings_path, "w", encoding="utf-8") as f:
+        json.dump(settings, f, indent=2)
+    print(f"write-guard hook: {action} in {settings_path}")
+
+
 def main():
     ensure_pywin32()
     ensure_ppt_mcp()
+    ensure_ppt_write_guard_hook()
 
     skills = find_skills()
     if not skills:
