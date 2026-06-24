@@ -1304,9 +1304,14 @@
       }
     },
     "nbd_phase_breakout": {
-      "description": "Breakout page for one phase of a 3-phase approach: a 3-stage chevron bar (Phase 1/2/3, active phase highlighted on the source), a body of activities on the left, and a methodology / example-sources box on the right. Fields: title, stage1/stage2/stage3 (the three chevron labels), body (str[] activities), method_box (str[] right-side methodology/sources). To make a different phase active, recolor the chevrons manually.",
+      "description": "Breakout page for one phase of a 3-phase approach: a 3-stage chevron bar (Phase 1/2/3, active phase highlighted), a body of activities on the left, and a methodology / example-sources box on the right. Fields: title, stage1/stage2/stage3 (the three chevron labels), body (str[] activities), method_box (str[] right-side methodology/sources), active_phase (1, 2, or 3 — which chevron to highlight; defaults to 1, the template default).",
       "source_deck": "nbd_library",
       "source_slide": 7,
+      "phase_chevrons": {
+        "shapes": ["S_stage1", "S_stage2", "S_stage3"],
+        "active_fill": "#1E4C7F",
+        "active_text_color": "#FFFFFF"
+      },
       "slots": {
         "title": {
           "shape": "S_title",
