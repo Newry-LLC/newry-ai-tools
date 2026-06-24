@@ -1,6 +1,6 @@
 # Deck Builder Skill
 
-Build and edit Newry PowerPoint slides by calling a small Python tool (`deck_writer.py`) that controls a live PowerPoint window. The tool writes text and tables the *clean* way, so it never destroys the formatting that's already on a slide.
+Build and edit Newry PowerPoint slides by calling a small Python tool (`deck_writer.py`) that controls a live PowerPoint window. It writes text and tables the clean way, without destroying the formatting already on a slide.
 
 ## Triggers
 
@@ -8,7 +8,7 @@ Build and edit Newry PowerPoint slides by calling a small Python tool (`deck_wri
 
 ## The one thing to understand first
 
-A consulting slide is almost never plug-and-play. Most of the time a consultant hands you data and a rough idea and wants a *custom* slide. So this tool is built around two jobs:
+Every slide needs custom work. This tool handles two jobs:
 
 - **Editing a slide that already exists** (any deck, any template, ours or a client's) — change the words, keep the look exactly as it was.
 - **Building a new slide** — start from one of our ready-made layouts, fill it in, and adjust from there.
@@ -18,54 +18,121 @@ The ready-made layouts are **starting points, not finished slides.** Treat them 
 ## Before you touch anything
 
 1. PowerPoint must be open with the target file. The tool drives the open window.
-2. ppt-mcp must be loaded in this session (the `ppt_*` tools). You use those to *look* at slides; you use `deck_writer.py` to *change* them.
+2. ppt-mcp must be loaded in this session (the `ppt_*` tools). **You use those only to *look* at slides; you always use `deck_writer.py` to *change* text and tables — never the `ppt_*` write tools.** (Why: see the rule below.)
 3. Always confirm which presentation you're working on with `ppt_list_presentations`, then `ppt_activate_presentation`.
+
+---
+
+## Newry slide standards
+
+Apply these to every new slide and every edit. Check before finishing any slide.
+
+**Typography**
+- Font: Aptos throughout — never substitute another font
+- Slide title (H1): Aptos Display, 28pt, 1–2 lines max
+- Section subhead (H2): APTOS BOLD, ALL CAPS, Newry Blue (#1E4C7F)
+- Column/box header (H3): Aptos Bold, Capitalize Each Word, Black
+- Body text: 14–20pt; table text: 12pt minimum
+- No final punctuation on bulleted text
+- Line spacing: 6–12pt between lines
+
+**Punctuation**
+- En dashes (–) not em dashes (—) for parentheticals, ranges, and quote attributions
+- Spaces on both sides of en dashes
+- No periods at end of bullet points
+- Oxford comma
+
+**Bullets**
+- Consistent bullet style across all slides in the deck
+- ¼" between bullet/dash character and text
+- No single-item bullets — one point becomes a sentence, not a bullet
+
+**Shapes and layout**
+- Square corners only — no rounded corners
+- No 3D gradients, no drop shadows
+- Chevrons: square edge first, then indented
+- Align all shape edges and text box boundaries to page margins
+
+**Colors**
+- Newry Blue (#1E4C7F): chart/text box titles, shape fill (the primary color)
+- Quotes: always light grey fill (#D9D9D9)
+- Non-quote text blocks: second lightest blue fill
+- Red (#920D29) and yellow (#FDBC0D): sparingly — highlights and stoplight charts only; never general text fill
+
+**Tables**
+- Header row: light grey by default
+- Gradient chart preferred over traditional stoplight (accessibility)
+
+**Sourcing**
+- Every body slide that cites data or research needs a source line: Aptos 12pt, grey, bottom of slide
+- Superscript numbers for footnote citations
+
+**Slide titles — action title standard**
+- Titles state the "so what" as a declarative sentence, not a topic label. Full rule in "Writing consulting-grade slides" below.
+
+---
+
+## Writing consulting-grade slides
+
+Formatting is necessary but not sufficient — a well-formatted slide that says nothing still fails. This is the Pyramid Principle as Newry practices it; apply it while drafting any content.
+
+**One slide, one claim.** Every slide makes a single point, and that point *is* its title; the body exists only to prove it. Two unrelated points = two slides.
+
+**The title is a claim, not a label.** Write it as a complete declarative sentence stating the conclusion — the "so what" — not the topic.
+- Before writing it, ask: *"So what? Who cares? What should the reader conclude?"*
+- It must summarize the slide *and* flow with the slides around it — one rung of the deck's argument, not a standalone.
+- Label → claim: "Market overview" → "The specialty chemicals market is growing 8% annually, driven by automotive demand."
+
+**Every bullet makes a claim too** — a finding, result, or conclusion, not a description of process, how the work was organized, or background. If a bullet describes method or context instead of asserting something, rewrite it or cut it.
+
+**The body proves the title — completely and without overlap:**
+- *Parallel* — same-level points are the same type of idea at the same altitude (don't mix a cause, a number, and a recommendation as peers)
+- *Ordered* — by a logic the reader follows (importance, sequence, structure), not the order you discovered them
+- *MECE* — no two points overlap, and together they're complete enough to prove the claim
+- *Tight* — every line relates to the title; nothing repeats another
+
+**A multi-slide deck is itself a pyramid.** Overall conclusion on top; each section's main message supports it; each slide supports its section. Standard arc: introduction (background & objectives, method) → body (each main message with its supporting slides) → summary of findings with a clear call to action → conclusion / next steps. Sketch the sequence of slide *titles* first, so each is one rung of one argument. (The summary-of-findings page has its own skill — the SOF Toolkit.)
+
+---
 
 ## How to run the tool
 
 The tool takes a "job" — a small JSON file listing what you want done — and runs it.
 
 ```
-PYTHONIOENCODING=utf-8 "C:/Users/sshank/AppData/Local/Programs/Python/Python314/python.exe" \
-  "<workspace>/skills/deck-builder/deck_writer.py" --file job.json
+PYTHONIOENCODING=utf-8 python "<workspace>/skills/deck-builder/deck_writer.py" --file job.json
 ```
 
-Write the job to a temp file (e.g. in `Downloads`) and pass it with `--file`. The tool prints back JSON saying what it did, including any **overflow warnings** and a read-back of what it wrote. Always read that output.
-
-## The loop — do this every time
-
-1. **Look** — `ppt_get_slide_preview` to see the slide; for editing, also **profile** it (below).
-2. **Act** — run a `deck_writer.py` job.
-3. **Check** — re-preview the slide and read the tool's output. The visual preview is the approval step.
-
-If you invented any specific facts (numbers, names, dates), say so plainly after writing: "I generated these numbers — verify before using."
+If `python` isn't on your PATH, use the full path to your Python executable instead. Write the job to a temp file (e.g. in `Downloads`) and pass it with `--file`. The tool prints back JSON with what it did, including any **overflow warnings** and a read-back of what it wrote. Always read that output.
 
 ---
 
 ## Profile: how to understand any slide
 
-Before editing an unfamiliar slide, profile it. This is the move that lets the tool work on *any* deck, not just ours.
+Before editing an unfamiliar slide, profile it.
 
 ```json
 {"presentation": "Glass Core", "ops": [{"op": "profile", "slide": 12}]}
 ```
 
 For every object on the slide it tells you:
-- **What it is** — a best-guess role (title, body, footnote, section tag, table, image, chart, decorative). It's a guess from position and type — sanity-check it against the preview.
+- **What it is** — a best-guess role (title, body, footnote, section tag, table, image, chart, decorative). Sanity-check against the preview.
 - **Where it is** — position and size.
 - **How it's formatted** — font, size, bold/italic, color, alignment, bullets, per paragraph.
 - **How much fits** — a rough character/line budget for the box. Use it to catch overflow *before* you write.
 
-The profile is read-only. Use what it tells you to write edits that match the slide and won't overflow.
+The profile is read-only.
+
+**Re-profile after external edits.** If a consultant edits slides in PowerPoint between your operations, call `ppt_get_slide_info` on the affected slides. If the shape count changed compared to the last profile, re-profile before issuing any edit ops — otherwise your shape indices will be wrong.
 
 ---
 
 ## Mode A — Edit an existing slide
 
-Goal: change the words, keep the formatting.
+Goal: change the words, keep the formatting. For non-Newry / client decks: skip the Newry standards above — profile the deck first to learn its own fonts and colors, then edit in place.
 
-1. **Profile** the slide (and/or `ppt_get_text` on the shape) so you know its structure and how much text fits.
-2. **Write the edit** with `edit_text_preserve`. You pass plain lines of text; the tool keeps each line's existing format (size, bold, color, bullets, indent) by position.
+1. **Profile** the slide (and/or `ppt_get_text` on the shape) to know its structure and how much text fits.
+2. **Write the edit** with `edit_text_preserve`. Pass plain lines of text; the tool keeps each line's existing format (size, bold, color, bullets, indent) by position.
 
 ```json
 {"presentation": "Glass Core", "ops": [
@@ -74,10 +141,12 @@ Goal: change the words, keep the formatting.
 ]}
 ```
 
-- Line 1 keeps line 1's old format, line 2 keeps line 2's, and so on. Add more lines than were there and the extras copy the last line's format.
-- If your new text is longer than the box holds (the profile told you the budget), it will overflow. Fixed font sizes are a Newry brand standard — **don't shrink to fit.** Shorten the text or split the slide.
+- Line 1 keeps line 1's old format, line 2 keeps line 2's, and so on. Extra lines copy the last line's format.
+- If your new text is longer than the box holds (the profile told you the budget), it will overflow. Fixed font sizes are a Newry brand standard — **don't shrink to fit.** Shorten the text or split the slide. The tool measures the actual rendered text height after writing and returns a precise overflow warning — read it.
+- **Underflow matters too.** If your replacement is much *shorter* than what it replaced, the box looks half-empty and unbalanced against the rest of the slide. Aim to roughly match the **length and structure** of the text you're replacing (same number of bullets, similar line count) — don't just drop in one short line where three full ones were.
+- After writing: re-preview the slide and read the tool's output. The visual preview is the approval step.
 
-Use `write_textbox` (Mode B style) instead only when you're deliberately changing the formatting, not just the words.
+Use `write_textbox` (Mode B style) only when you're deliberately changing the formatting, not just the words.
 
 ---
 
@@ -85,14 +154,24 @@ Use `write_textbox` (Mode B style) instead only when you're deliberately changin
 
 Goal: a strong first draft, fast, from the closest layout we already have.
 
-0. **First, which deck family?** There are two distinct layout families and they don't mix. Before picking a layout, settle which one you're in:
-   - **NBD proposal** — a new-business pitch/proposal for a prospective client. Use the **NBD proposal layouts** (the `nbd_*` family). Covers, dividers, growth levers, approach modules, team, back cover are all purpose-built for proposals.
+**One slide at a time by default** — build one, preview it, get a reaction, then move on. If the consultant explicitly wants several built in one go ("build all five," "batch these"), do it: a single job can carry multiple `build` ops, and you still preview each afterward. Don't batch unprompted — a wrong call multiplied across slides is worse than catching it on slide one.
+
+0. **Which deck family?** Settle this before picking a layout — the two families don't mix.
+   - **NBD proposal** — a pitch/proposal for a prospective client. Use the **NBD proposal layouts** (`nbd_*` family). Covers, dividers, growth levers, approach modules, team, and back cover are all purpose-built for proposals.
    - **Project / report deck** — findings, analysis, client deliverables. Use the **project / report layouts** (everything else).
-   - If the request doesn't make it obvious, **ask in one line**: "Is this an NBD proposal or a project/report deck?" The answer picks the family. Don't build a proposal out of project layouts (or vice versa) — that's the most common way these come out wrong.
+   - If the request doesn't make it obvious, ask in one line: "Is this an NBD proposal or a project/report deck?" The answer picks the family. Don't mix them.
 
 1. **Pick the nearest layout** from the right family's table below. State your pick: "I'll use the figure-two-thirds layout — say if you'd rather something else."
 2. **Fill it** with a `build` job. Give it the fields the layout lists.
-3. **Preview, then adapt** — resize, add, or remove pieces as the actual content needs. The layouts are starting points; expect to adjust.
+3. **Preview and approve.** Run `ppt_get_slide_preview` after every build and check:
+   - No text overflow — all text visible, nothing cut off
+   - Font is Aptos (not a substituted font)
+   - H2 subheads are ALL CAPS and Newry Blue
+   - Bullet style matches surrounding slides in the deck
+   - Action title states a clear so-what (not a topic label)
+   - Source line present if any data or citations appear on the slide
+   - No rounded corners or drop shadows on shapes
+4. **Adapt** — resize, add, or remove pieces as the content needs. The layouts are starting points; expect to adjust.
 
 ```json
 {"presentation": "Glass Core", "ops": [
@@ -106,46 +185,50 @@ Goal: a strong first draft, fast, from the closest layout we already have.
 ```
 
 - `position` is `"end"` (append) or a slide number to insert at.
-- Each layout's exact fields are described in `template-specs.json` (the `description` on each layout). Read it when filling a layout you haven't used.
+- Each layout's exact fields are in `template-specs.json` (the `description` on each layout). Read it when filling a layout you haven't used.
 - Charts and figures stay **manual / think-cell** — the build fills only the text around them.
 
 ### Tables (used by several layouts)
 
 Pass a table as rows. Row 1 is usually the header. Cells can be a plain string, or `{text, fill, color, bold, size, align, swatch}` for a colored/styled cell, or `{paragraphs: [...]}` for a cell with multiple formatted lines. `swatch` maps a name to a color set on the layout (e.g. `pursue` → green on the prioritization table). The table flexes its row and column count to fit your data.
 
-**Merged cells:** some template tables merge cells (e.g. a category label spanning rows). Merged cells collide with row-by-row writing — two logical rows share one physical cell. A layout whose table needs to flex sets `"unmerge": true` in its `table_opts`, which flattens the table to a clean grid before filling. On the **edit** path, leave it off so a client table's intentional merges are respected; turn it on only when you want to flatten-and-rewrite a merged table.
+**Merged cells:** some template tables merge cells (e.g. a category label spanning rows). Merged cells collide with row-by-row writing. A layout whose table needs to flex sets `"unmerge": true` in its `table_opts`, which flattens the table to a clean grid before filling. On the **edit** path, leave it off so a client table's intentional merges are respected; turn it on only when you want to flatten-and-rewrite a merged table.
 
 ---
 
 ## The layout library
 
-28 starting-point layouts in **two families** — pick from the family you settled on in Mode B step 0. The tool pulls each from the right source file automatically; you never name the source deck.
+28 starting-point layouts in **two families** (you settled the family in Mode B step 0). **Pick by the slide's job:** find the intent group below — it narrows you to a few candidates — then disambiguate within it. Don't scan the whole list and gestalt-match. The tool pulls each from the right source file automatically; you never name the source deck.
+
+**Cross-family overlap:** `cover`, `chapter_divider`, the team page, and the back page exist in both libraries — use the `nbd_` variant in a proposal, the plain one in a project deck.
 
 ### Project / report layouts (19)
 
-For findings, analysis, and client deliverables. Source: our blank template + the strategic-marketing reference deck.
+For findings, analysis, and client deliverables. Grouped by intent — exact fields for each are in `template-specs.json`.
 
-| Layout | Use it for |
-|---|---|
-| `cover` | Title / cover page |
-| `chapter_divider` | Section divider |
-| `toc` | Table of contents |
-| `content` | General content: subhead + bullets, optional pull-quotes + takeaway |
-| `findings_summary` | Summary of findings — subhead + dense bullets, optional bottom bar |
-| `two_column` | Two columns, each a header + bullets (e.g. background & objectives) |
-| `comparison_table` | Gradient comparison table (high / medium / low shading) |
-| `qualitative_comparison` | Side-by-side cards across N items, image row on top |
-| `prioritization_table` | Opportunity/segment table color-coded pursue / investigate / deprioritize |
-| `value_chain` | 4-stage process flow (chevrons) with supporting points |
-| `process_flow_quotes` | Multi-stage manufacturing flow + bullets + expert quotes |
-| `timeline` | Fixed 10-year timeline with 3 events |
-| `interview_list` | List of interviewees (name / title / organization) |
-| `team_page` | Engagement team bios with circular headshots |
-| `market_sizing` | Text around a think-cell market-size chart |
-| `figure_two_thirds` | Figure on left ~2/3, notes column on right |
-| `full_chart` | Full-width chart, source line at bottom |
-| `full_visual_quote` | Full-page visual (e.g. a map) with a quote bar at the bottom |
-| `back_page` | Closing page: confidentiality + contributors |
+**Front / back matter** — `cover` (title page) · `chapter_divider` (section divider) · `toc` (contents) · `back_page` (confidentiality + contributors)
+
+**Make a text argument** — pick by what supports the point:
+- `content` — subhead + bullets with room for pull-quotes and a takeaway bar; use when quotes back the point
+- `findings_summary` — dense bullets, no quote boxes (more body space); use when the bullets are the whole story
+- `two_column` — two parallel header+bullet groups (e.g. background & objectives)
+
+**Show a chart / figure** — chart itself is think-cell/manual; the layout fills the text around it:
+- `full_chart` — chart fills the body, source line only, no notes column
+- `figure_two_thirds` — chart on the left ~2/3, interpretation notes column on the right
+- `market_sizing` — specifically a market-size chart (CAGR oval, year axis, notes)
+- `full_visual_quote` — a full-bleed image/map with a quote bar at the bottom
+
+**Compare options:**
+- `comparison_table` — gradient shading by rating (high / medium / low)
+- `qualitative_comparison` — a card per item across N columns, image row on top
+- `prioritization_table` — rows color-coded pursue / investigate / deprioritize
+
+**Process / flow** — `value_chain` (4 chevron stages + supporting points) · `process_flow_quotes` (multi-stage flow + bullets + expert quotes)
+
+**Timeline** — `timeline` (fixed 10-year axis, 3 events)
+
+**People** — `team_page` (3 featured bios, circular headshots) · `interview_list` (list of interviewees: name / title / org)
 
 ### NBD proposal layouts (9)
 
@@ -162,12 +245,6 @@ For new-business proposals/pitches. Source: the NBD proposal template. **Use the
 | `nbd_phase_breakout` | Breakout page for one phase of a 3-phase approach |
 | `nbd_team_six` | Engagement team — 6 people, 2×3 headshot grid |
 | `nbd_back_cover` | Back cover — Newry contacts + confidentiality notice |
-
-### Adding a new layout
-
-Two steps, ~15 minutes:
-1. Put a clean copy of the slide in `slide-library.pptx` (or use a slide already in our template).
-2. Add an entry to `template-specs.json`: which source deck + slide, and a named slot for each shape you want to fill (shape index + kind + any format). Run `ppt_list_shapes` on the slide to get the indices.
 
 ---
 
@@ -187,17 +264,29 @@ All jobs look like: `{"presentation": "<name or substring>", "ops": [ ... ]}`. `
 
 ---
 
+## The core rule: always write through deck_writer.py
+
+**Never use `ppt_set_text`, `ppt_set_placeholder_text`, or `ppt_find_replace_text` to change slide content. Always use `deck_writer.py` (`edit_text_preserve`, `write_textbox`, `write_table`, or `build`).** No exceptions, no judgment call about whether a shape "looks simple."
+
+Why: the `ppt_*` write tools flatten a shape's formatting into a single style. A slide with a bold navy header over normal black bullets comes out with header and bullets looking identical, and there's no clean undo. `deck_writer.py` writes the careful way — it captures each line's formatting first, inserts the new text, then re-applies the formatting line by line — so headers stay headers and bullets stay bullets. That is the entire reason the tool exists.
+
+The `ppt_*` tools are for *reading* (preview, profile, get_text, list_shapes) only.
+
 ## Gotchas worth remembering
 
-- **Don't use `ppt_set_text` / `ppt_find_replace_text` on a shape with mixed formatting** (a bold header over normal bullets). It collapses everything into one style. That's the whole reason `deck_writer.py` exists — use it instead.
 - **`ppt_find_replace_text` strips whitespace** from the search text, so ` - ` matches hyphens inside words. Inspect per-shape instead of blind find/replace.
-- **Charts stay manual / think-cell.** The tool fills the title, units, notes, and labels around a chart — never the chart data.
-- **Airtable headshots:** download with PowerShell (`Invoke-WebRequest`), not Python/curl (they fail with a TLS error), and use the `thumbnails.full.url` link. `place_image` already does this.
+- **Airtable headshots:** download with PowerShell (`Invoke-WebRequest`), not Python/curl (TLS error), and use the `thumbnails.full.url` link. `place_image` already does this.
 - **Process-flow arrows** are the "Chevron" shape (type 52), not "Pentagon".
-- **Overflow = warn, never shrink.** Fixed sizes are a brand standard. Shorten or split. Both `build` and `edit_text_preserve` return a warning when text won't fit; the text is still written.
-- **Editing drops inline emphasis.** `edit_text_preserve` keeps each line's *paragraph* format (size, color, bold, bullets) but a rewritten line can't keep a bold/colored phrase from the *middle* of the old text — the line takes its leading format. Expected: on a rewrite, re-apply any mid-line emphasis you want in the new version.
-- **Always re-check after writing** — re-preview the slide and read the tool's output. The preview is for your eyes and the user's approval.
+- **Overflow = warn, never shrink.** Fixed sizes are a brand standard. Shorten or split. `build`, `write_textbox`, and `edit_text_preserve` measure the actual rendered text height against the box after writing and return a precise warning when it overflows; the text is still written. (Falls back to a character-budget estimate only if the box can't be measured.)
+- **Editing drops inline emphasis.** `edit_text_preserve` keeps each line's *paragraph* format but can't keep a bold/colored phrase from the *middle* of the old text. On a rewrite, re-apply any mid-line emphasis you want.
+- **Always re-check after writing** — re-preview the slide and read the tool's output.
 
-## Non-Newry / client decks
+---
 
-Same approach. Skip our layouts and brand standards — profile the deck first to learn its own fonts, colors, and structure, then edit in place with `edit_text_preserve` so you match whatever is already there.
+## If deck_writer.py fails
+
+If the tool returns a non-zero exit code, malformed JSON, or a read-back that doesn't match what you intended:
+1. Read the full stdout — it usually names the problem (shape not found, wrong slide, file locked, bad JSON).
+2. Common fixes: wrong shape index (re-profile); presentation name mismatch (check `ppt_list_presentations`); file open read-only (save and reopen writable); JSON syntax error in the job (validate before retrying).
+3. If the slide is in a broken state, undo with Ctrl+Z in PowerPoint before retrying.
+4. Fix the issue before retrying — don't re-run the same job unchanged.
