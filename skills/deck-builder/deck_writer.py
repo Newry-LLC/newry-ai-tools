@@ -601,6 +601,46 @@ def copy_shape_to(slide, target_placeholder, src_index):
     return {"copied_from": int(src_index), "left": round(L, 1), "top": round(T, 1)}
 
 
+def _apply_active_phase(slide, phase_chevrons, active_phase):
+    """Recolor phase chevrons so the specified phase is highlighted.
+
+    Template ships with phase 1 active (navy fill, white text). To highlight a
+    different phase: reads the inactive fill/text from S_stage2 (always inactive
+    in the source template), then sets all chevrons to inactive and the target to active.
+    """
+    shapes = phase_chevrons.get("shapes", [])
+    if not shapes or int(active_phase) == 1:
+        return  # phase 1 is already active in the template; nothing to change
+    active_fill = phase_chevrons.get("active_fill", "#1E4C7F")
+    active_text = phase_chevrons.get("active_text_color", "#FFFFFF")
+    # Read inactive fill+text from S_stage2 (index 1), which is inactive in the template.
+    inactive_fill = "#C6DBF2"
+    inactive_text = "#000000"
+    if len(shapes) > 1:
+        try:
+            sh2 = get_shape(slide, shapes[1])
+            inactive_fill = from_bgr(int(sh2.Fill.ForeColor.RGB))
+        except Exception:
+            pass
+        try:
+            sh2 = get_shape(slide, shapes[1])
+            inactive_text = from_bgr(int(sh2.TextFrame.TextRange.Font.Color.RGB))
+        except Exception:
+            pass
+    for i, ref in enumerate(shapes):
+        is_active = ((i + 1) == int(active_phase))
+        try:
+            sh = get_shape(slide, ref)
+            sh.Fill.Solid()
+            sh.Fill.ForeColor.RGB = to_bgr(active_fill if is_active else inactive_fill)
+            if sh.HasTextFrame:
+                sh.TextFrame.TextRange.Font.Color.RGB = to_bgr(
+                    active_text if is_active else inactive_text
+                )
+        except Exception:
+            pass
+
+
 def build_slide(pres, layout_def, fields, position, source_decks=None):
     """Insert the layout's source slide into `pres` and fill its slots.
 
@@ -639,10 +679,13 @@ def build_slide(pres, layout_def, fields, position, source_decks=None):
         pres.Slides.InsertFromFile(src_path, insert_after, src_idx, src_idx)
         new_slide = pres.Slides(insert_after + 1)
     slots = layout_def["slots"]
+    # Meta-fields handled outside the slot loop (not slot fills, not unknown fields).
+    _META_FIELDS = {"active_phase"}
     filled, skipped, warnings = [], [], []
     for name, content in fields.items():
         if name not in slots:
-            skipped.append(name)
+            if name not in _META_FIELDS:
+                skipped.append(name)
             continue
         slot = slots[name]
         # Overflow guard: warn (don't auto-shrink — fixed sizes are a brand standard).
@@ -662,7 +705,19 @@ def build_slide(pres, layout_def, fields, position, source_decks=None):
                 except Exception:
                     pass
             fill_slot(shape, slot, content, new_slide)
+            # Real post-write overflow check (BoundHeight vs container). Complements the
+            # max_chars heuristic above and catches what it misses. Only one warning per
+            # slot — skip if max_chars already flagged it.
+            if not (mc and isinstance(content, str) and len(content) > mc):
+                w = _overflow_warning(shape, name)
+                if w:
+                    warnings.append(w)
         filled.append(name)
+    # Apply active phase highlighting (e.g. nbd_phase_breakout with active_phase=2 or 3).
+    active_phase = fields.get("active_phase")
+    if active_phase is not None and "phase_chevrons" in layout_def:
+        _apply_active_phase(new_slide, layout_def["phase_chevrons"], int(active_phase))
+        filled.append("active_phase")
     # Optional cleanup: delete shapes the layout marks as removable (e.g. the team-page
     # full-firm montage). Done last, in reverse index order, so fill indices stay valid.
     removed = []
@@ -783,6 +838,50 @@ def _estimate_capacity(sh, font_size):
     }
 
 
+def _measure_overflow(shape):
+    """Real post-write overflow check: compare the actual laid-out text height
+    (TextRange.BoundHeight, what PowerPoint really rendered) against the usable
+    container height. Far more accurate than the char/line heuristic, and it
+    catches cases the heuristic misses (wrapping, mixed sizes, hidden growth
+    from a substituted font). Returns None if it can't measure (no text frame,
+    empty, or the COM call fails) so callers can fall back to the heuristic.
+
+    Tolerance is 1pt. Does not consider autofit: Newry boxes are fixed-size
+    (autofit off), so BoundHeight > usable height is a true overflow."""
+    try:
+        if not shape.HasTextFrame:
+            return None
+        tf = shape.TextFrame
+        tr = tf.TextRange
+        if not tr.Text.strip():
+            return None
+        bound_h = float(tr.BoundHeight)
+        mt = _safe_get(tf, "MarginTop", 3.6) or 3.6
+        mb = _safe_get(tf, "MarginBottom", 3.6) or 3.6
+        usable_h = max(1.0, float(shape.Height) - mt - mb)
+        return {
+            "bound_height": round(bound_h, 1),
+            "usable_height": round(usable_h, 1),
+            "fill_ratio": round(bound_h / usable_h, 2) if usable_h else None,
+            "overflows": bound_h > usable_h + 1.0,
+        }
+    except Exception:
+        return None
+
+
+def _overflow_warning(shape, name=None):
+    """Return an actionable overflow warning string (or None). Prefers the real
+    measurement; silent on anything it can't measure."""
+    mo = _measure_overflow(shape)
+    if not mo or not mo["overflows"]:
+        return None
+    label = ("'%s' " % name) if name else ""
+    return ("%stext overflows its box by ~%dpt (needs ~%dpt, box holds ~%dpt at "
+            "fixed size) — shorten or split the slide; don't shrink the font."
+            % (label, round(mo["bound_height"] - mo["usable_height"]),
+               round(mo["bound_height"]), round(mo["usable_height"])))
+
+
 def profile_slide(slide, slide_w, slide_h):
     """Return a per-shape profile of a slide: index, name, role guess, geometry,
     per-paragraph formatting, and a capacity estimate for text shapes."""
@@ -869,24 +968,27 @@ def run_job(job):
                 tf = shape.TextFrame.TextRange
                 clean_write_textbox(tf, op["paragraphs"])
                 after = [read_format(tf.Paragraphs(i)) for i in range(1, tf.Paragraphs().Count + 1)]
+                edit_warn = _overflow_warning(shape)
             elif kind == "edit_text_preserve":
                 tf = shape.TextFrame.TextRange
                 edit_preserve(tf, op["paragraphs"])
                 after = [read_format(tf.Paragraphs(i)) for i in range(1, tf.Paragraphs().Count + 1)]
-                # Overflow check (the edit equivalent of build's max_chars guard): estimate
-                # how many wrapped lines the new text needs vs how many the box holds. Warn,
-                # never shrink — fixed sizes are a brand standard.
-                try:
-                    fsz = float(tf.Paragraphs(1).Characters(1, 1).Font.Size)
-                except Exception:
-                    fsz = 18.0
-                cap = _estimate_capacity(shape, fsz)
-                cpl = max(1, cap["chars_per_line"])
-                lines_needed = sum(((len(str(p)) + cpl - 1) // cpl) for p in op["paragraphs"] if str(p).strip())
-                if lines_needed > cap["est_max_lines"]:
-                    edit_warn = ("edited text needs ~%d lines but the box fits ~%d at this size; "
-                                 "it will overflow — shorten or split the slide."
-                                 % (lines_needed, cap["est_max_lines"]))
+                # Overflow check: prefer the real post-write measurement (BoundHeight vs
+                # container). Fall back to the char/line heuristic only if the measurement
+                # can't be taken. Warn, never shrink — fixed sizes are a brand standard.
+                edit_warn = _overflow_warning(shape)
+                if edit_warn is None and _measure_overflow(shape) is None:
+                    try:
+                        fsz = float(tf.Paragraphs(1).Characters(1, 1).Font.Size)
+                    except Exception:
+                        fsz = 18.0
+                    cap = _estimate_capacity(shape, fsz)
+                    cpl = max(1, cap["chars_per_line"])
+                    lines_needed = sum(((len(str(p)) + cpl - 1) // cpl) for p in op["paragraphs"] if str(p).strip())
+                    if lines_needed > cap["est_max_lines"]:
+                        edit_warn = ("edited text needs ~%d lines but the box fits ~%d at this size; "
+                                     "it will overflow — shorten or split the slide."
+                                     % (lines_needed, cap["est_max_lines"]))
             elif kind == "write_table":
                 write_table(shape, op["rows"], op.get("table_opts"), slide)
                 after = "table written (%d rows)" % len(op["rows"])
