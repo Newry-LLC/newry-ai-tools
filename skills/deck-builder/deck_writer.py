@@ -59,6 +59,7 @@ import os
 import json
 import tempfile
 import subprocess
+import shutil
 
 try:
     import win32com.client
@@ -67,6 +68,11 @@ except ImportError:
     sys.exit(1)
 
 SPECS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "template-specs.json")
+
+# think-cell CLI for filling named chart elements from JSON (.ppttc). Override with the
+# THINKCELL_PPTTC env var if installed elsewhere. Used by the build_chart op.
+THINKCELL_PPTTC = os.environ.get(
+    "THINKCELL_PPTTC", r"C:\Program Files (x86)\think-cell\ppttc.exe")
 
 # --- PowerPoint constants ---
 PP_ALIGN = {"left": 1, "center": 2, "right": 3, "justify": 4}
@@ -678,6 +684,14 @@ def build_slide(pres, layout_def, fields, position, source_decks=None):
             insert_after = pres.Slides.Count
         pres.Slides.InsertFromFile(src_path, insert_after, src_idx, src_idx)
         new_slide = pres.Slides(insert_after + 1)
+    res = _fill_slots(new_slide, layout_def, fields)
+    return {"slide_index": new_slide.SlideIndex, **res}
+
+
+def _fill_slots(new_slide, layout_def, fields):
+    """Fill a slide's text/table/image/chevron slots from `fields`. Shared by
+    build_slide and build_chart. Returns {filled, unknown_fields, [removed_shapes],
+    [warnings]}. (The chart itself, if any, is filled separately via ppttc.)"""
     slots = layout_def["slots"]
     # Meta-fields handled outside the slot loop (not slot fills, not unknown fields).
     _META_FIELDS = {"active_phase"}
@@ -727,12 +741,167 @@ def build_slide(pres, layout_def, fields, position, source_decks=None):
             removed.append(idx)
         except Exception:
             pass
-    out = {"slide_index": new_slide.SlideIndex, "filled": filled, "unknown_fields": skipped}
+    out = {"filled": filled, "unknown_fields": skipped}
     if removed:
         out["removed_shapes"] = sorted(removed)
     if warnings:
         out["warnings"] = warnings
     return out
+
+
+# --- think-cell chart build (build_chart op) ---
+
+def _num(v):
+    """Wrap a value as a think-cell .ppttc number cell (None -> null cell)."""
+    if v is None:
+        return None
+    return {"number": float(v)}
+
+
+def _chart_ppttc_table(chart_type, data):
+    """Build the think-cell .ppttc datasheet `table` for a chart type from structured
+    data. Mappings verified 2026-06-24 (see decision-log). Data shapes:
+      bar/column/stacked: {categories:[...], series:[{name, values:[...]}, ...]}
+      waterfall:          {categories:[...], values:[...], total_label?:"Total"}
+      mekko:              {categories:[...], widths:[...], series:[{name, values:[...]}]}
+      bubble:             {points:[{label, x, y, size}, ...]}
+    """
+    t = (chart_type or "").lower()
+    if t in ("bar", "column", "stacked_bar", "stacked_column", "stacked"):
+        cats = data["categories"]
+        row0 = [None] + [{"string": str(c)} for c in cats]
+        # think-cell's stacked-column datasheet consumes the first data row, so the first
+        # real series would be dropped. Prepend a throwaway zero row (null label) so every
+        # supplied series renders. Verified 2026-06-24.
+        rows = [row0, [None] + [_num(0) for _ in cats]]
+        for s in data["series"]:
+            rows.append([{"string": str(s["name"])}] + [_num(v) for v in s["values"]])
+        return rows
+    if t == "waterfall":
+        cats = list(data["categories"])
+        vals = list(data["values"])
+        total_label = data.get("total_label", "Total")
+        # Transparent base series: 0 for the first bar, running cumulative before each
+        # subsequent bar, 0 for the total column.
+        base, running = [], 0.0
+        for i, v in enumerate(vals):
+            base.append(0.0 if i == 0 else running)
+            running += float(v)
+        base.append(0.0)
+        row0 = [None] + [{"string": str(c)} for c in cats] + [{"string": str(total_label)}]
+        base_row = [{"string": "Series1"}] + [_num(b) for b in base]
+        # Visible series: the increments, then "e" so think-cell computes the total.
+        vis_row = [{"string": "Series2"}] + [_num(v) for v in vals] + [{"string": "e"}]
+        return [row0, base_row, vis_row]
+    if t == "mekko":
+        row0 = [None] + [{"string": str(c)} for c in data["categories"]]
+        width_row = [None] + [_num(w) for w in data["widths"]]   # X-extent row (null first cell)
+        rows = [row0, width_row]
+        for s in data["series"]:
+            rows.append([{"string": str(s["name"])}] + [_num(v) for v in s["values"]])
+        return rows
+    if t == "bubble":
+        rows = [[None, {"string": "X"}, {"string": "Y"}, {"string": "Size"}]]
+        for p in data["points"]:
+            rows.append([{"string": str(p.get("label", ""))},
+                         _num(p["x"]), _num(p["y"]), _num(p["size"])])
+        return rows
+    raise ValueError("unknown chart type %r (have: bar, column, stacked, waterfall, mekko, bubble)" % chart_type)
+
+
+def _run_ppttc(template_path, name, table):
+    """Fill the named think-cell element in template_path with `table` via ppttc.exe.
+    Returns the path to the filled output deck. Raises on failure."""
+    if not os.path.isfile(THINKCELL_PPTTC):
+        raise RuntimeError("ppttc.exe not found at %s — set the THINKCELL_PPTTC env var "
+                           "to your think-cell ppttc.exe path." % THINKCELL_PPTTC)
+    doc = [{"template": template_path, "data": [{"name": name, "table": table}]}]
+    tmpdir = tempfile.mkdtemp(prefix="tcbuild_")
+    ppttc_path = os.path.join(tmpdir, "job.ppttc")
+    out_path = os.path.join(tmpdir, "filled.pptx")
+    with open(ppttc_path, "w", encoding="utf-8") as f:
+        json.dump(doc, f)
+    r = subprocess.run([THINKCELL_PPTTC, ppttc_path, "-o", out_path],
+                       capture_output=True, text=True)
+    if r.returncode != 0 or not os.path.isfile(out_path):
+        raise RuntimeError("ppttc failed (exit %s): %s"
+                           % (r.returncode, ((r.stdout or "") + (r.stderr or "")).strip()))
+    return out_path
+
+
+def build_chart(pres, layout_def, fields, position, source_decks=None):
+    """Build a think-cell chart slide: fill the named chart in the library deck via
+    ppttc, InsertFromFile the filled slide into `pres` (preserves the live think-cell
+    chart), then fill the surrounding text slots. The chart TYPE + element name live in
+    layout_def["chart"] = {name, type}; the chart DATA comes from fields["chart"]."""
+    chart_def = layout_def["chart"]
+    src_idx = layout_def["source_slide"]
+    specs_dir = os.path.dirname(os.path.abspath(SPECS_PATH))
+    src_filename = (source_decks or {}).get(layout_def.get("source_deck", "thinkcell_library"),
+                                             "think-cell-library.pptx")
+    lib_path = os.path.join(specs_dir, src_filename)
+    if "chart" not in fields:
+        raise ValueError("build_chart requires a 'chart' field with the chart data")
+
+    # Fill the chart in a throwaway copy of the library so the source is untouched.
+    tmpdir = tempfile.mkdtemp(prefix="tclib_")
+    work = os.path.join(tmpdir, "lib.pptx")
+    shutil.copy(lib_path, work)
+    table = _chart_ppttc_table(chart_def["type"], fields["chart"])
+    filled = _run_ppttc(work, chart_def["name"], table)
+
+    # InsertFromFile the filled chart slide into pres (keeps the chart live + named).
+    if isinstance(position, int):
+        insert_after = max(0, int(position) - 1)
+    else:
+        insert_after = pres.Slides.Count
+    pres.Slides.InsertFromFile(filled, insert_after, src_idx, src_idx)
+    new_slide = pres.Slides(insert_after + 1)
+
+    # Fill the text chrome (everything except the chart data).
+    text_fields = {k: v for k, v in fields.items() if k != "chart"}
+    res = _fill_slots(new_slide, layout_def, text_fields)
+    return {"slide_index": new_slide.SlideIndex, "chart": chart_def["name"], **res}
+
+
+def refresh_chart(app, pres, op):
+    """Replace a named think-cell chart's data in place, keeping the rest of the deck.
+
+    Hosting-agnostic round-trip through PowerPoint ("approach A") — works for local,
+    personal-OneDrive, and team-site SharePoint decks without any URL/path guessing:
+      1. Save (flush edits) and remember the deck's real home (FullName — a local path
+         OR a cloud URL).
+      2. SaveCopyAs to a guaranteed-local temp file — PowerPoint hands us a real on-disk
+         copy regardless of where the deck actually lives.
+      3. Close the original (frees the handle).
+      4. Run ppttc on the temp copy (updates only the named chart; preserves everything).
+      5. Open the refreshed temp file and SaveAs back to the original home — PowerPoint
+         uploads to SharePoint/OneDrive natively (validated silent: no check-out / keep-
+         format / co-authoring prompt). Local homes just overwrite in place.
+    Returns (reopened_pres, info).
+
+    Op fields: chart_name (the think-cell element name), type (chart type for the data
+    encoder), data (new data in that type's shape — same as build_chart's `chart`).
+    Run as its own job — it closes and reopens the presentation."""
+    name = op["chart_name"]
+    table = _chart_ppttc_table(op["type"], op["data"])
+    original = pres.FullName            # the deck's real home (local path or cloud URL)
+    pres.Save()                         # flush current edits before copying
+    tmpdir = tempfile.mkdtemp(prefix="tcrefresh_")
+    local_copy = os.path.join(tmpdir, "deck.pptx")
+    pres.SaveCopyAs(local_copy)         # guaranteed-local copy — no path guessing
+    pres.Close()                        # release the original handle
+    try:
+        out = _run_ppttc(local_copy, name, table)
+    except Exception as e:
+        # ppttc failed — nothing was written back; reopen the ORIGINAL untouched.
+        newpres = app.Presentations.Open(original, WithWindow=True)
+        return newpres, {"chart": name, "refreshed": False,
+                         "presentation": newpres.Name,
+                         "error": "refresh failed (deck reopened unchanged): %s" % e}
+    refreshed = app.Presentations.Open(out, WithWindow=True)
+    refreshed.SaveAs(original)          # round-trips back to the real home (uploads if cloud)
+    return refreshed, {"chart": name, "refreshed": True, "presentation": refreshed.Name}
 
 
 def find_presentation(app, ref):
@@ -948,7 +1117,7 @@ def run_job(job):
                                 "slide_size": {"width": round(sw, 1), "height": round(shh, 1)},
                                 "shapes": prof})
                 continue
-            if kind == "build":
+            if kind in ("build", "build_chart"):
                 mutated = True
                 if specs is None:
                     with open(SPECS_PATH, "r", encoding="utf-8") as f:
@@ -956,9 +1125,18 @@ def run_job(job):
                 layout_name = op["layout"]
                 if layout_name not in specs["layouts"]:
                     raise ValueError("unknown layout %r (have: %s)" % (layout_name, ", ".join(specs["layouts"])))
-                built = build_slide(pres, specs["layouts"][layout_name], op.get("fields", {}), op.get("position", "end"),
-                                    source_decks=specs.get("source_decks", {}))
+                layout_def = specs["layouts"][layout_name]
+                src_decks = specs.get("source_decks", {})
+                fn = build_chart if kind == "build_chart" else build_slide
+                built = fn(pres, layout_def, op.get("fields", {}), op.get("position", "end"),
+                           source_decks=src_decks)
                 results.append({"op": kind, "layout": layout_name, "ok": True, "after": built})
+                continue
+            if kind == "refresh_chart":
+                # Closes + reopens the presentation (ppttc rewrites the file). Run as its
+                # own job — reassigns `pres`; the file is already saved so no trailing save.
+                pres, info = refresh_chart(app, pres, op)
+                results.append({"op": kind, "ok": info.get("refreshed", False), "after": info})
                 continue
             slide = pres.Slides(op["slide"])
             shape = get_shape(slide, op["shape"])
