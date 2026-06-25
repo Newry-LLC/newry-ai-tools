@@ -142,6 +142,40 @@ def get_shape(slide, ref):
     raise ValueError("no shape named %r on this slide" % ref)
 
 
+def _split_bold_markup(s):
+    """Parse `**bold**` markup -> (clean_text, [(start0, length), ...] | None).
+
+    Lets a single string carry inline emphasis (e.g. "**Fragmented tooling base:** Vendors
+    run …") so the write paths can bold just the label without a second format pass. Spans
+    are 0-based offsets into the returned clean text. Returns (s, None) when there's no
+    (balanced) markup, so callers skip the extra work. Unbalanced `**` is left literal."""
+    if "**" not in s or s.count("**") % 2 != 0:
+        return s, None
+    parts = s.split("**")           # alternates outside / inside / outside / …
+    clean, spans = "", []
+    for i, part in enumerate(parts):
+        if i % 2 == 1 and part:     # odd segments are the bold ones
+            spans.append((len(clean), len(part)))
+        clean += part
+    return clean, (spans or None)
+
+
+def _apply_bold_spans(tf, para_start_1based, clean_len, spans):
+    """Set bold only on the marked spans of a just-written paragraph (regular elsewhere).
+
+    Overrides whatever weight the restamp applied, so a bold leading run can't bleed into
+    the whole line — the markup is the source of truth for emphasis."""
+    try:
+        tf.Characters(para_start_1based, clean_len).Font.Bold = False
+    except Exception:
+        pass
+    for off, ln in spans:
+        try:
+            tf.Characters(para_start_1based + off, ln).Font.Bold = True
+        except Exception:
+            pass
+
+
 def clean_write_textbox(tf, paragraphs):
     """Clear the frame and write each paragraph, re-stamping its format.
 
@@ -159,14 +193,17 @@ def clean_write_textbox(tf, paragraphs):
         text = p["text"] if isinstance(p, dict) else str(p)
         if not text:
             continue  # empty paragraph: the surrounding breaks preserve the blank line (InsertAfter('') errors)
+        clean, spans = _split_bold_markup(text)
         start = len(tf.Text)
-        tf.InsertAfter(text)
-        rng = tf.Characters(start + 1, len(text))
+        tf.InsertAfter(clean)
+        rng = tf.Characters(start + 1, len(clean))
         rng.Font.Bold = False
         rng.Font.Italic = False
         rng.Font.Color.RGB = to_bgr("#000000")
         if isinstance(p, dict):
             apply_format(rng, p)
+        if spans:
+            _apply_bold_spans(tf, start + 1, len(clean), spans)
 
 
 def _safe_get(obj, attr, default=None):
@@ -236,9 +273,10 @@ def edit_preserve(tf, new_lines):
     for i, line in enumerate(new_lines):
         if i > 0:
             tf.InsertAfter("\r")
-        s = str(line)
-        if not s:
+        raw = str(line)
+        if not raw:
             continue  # empty paragraph: surrounding breaks preserve blank line (InsertAfter('') errors)
+        s, spans = _split_bold_markup(raw)
         start = len(tf.Text)
         tf.InsertAfter(s)
         rng = tf.Characters(start + 1, len(s))
@@ -292,6 +330,9 @@ def edit_preserve(tf, new_lines):
                         pf.Bullet.Font.Color.RGB = to_bgr(f["bullet_color"])
                     except Exception:
                         pass
+        if spans:
+            # Inline **bold** overrides the restamped weight for this paragraph.
+            _apply_bold_spans(tf, start + 1, len(s), spans)
 
 
 def write_table(shape, rows, opts=None, slide=None):
@@ -332,7 +373,13 @@ def write_table(shape, rows, opts=None, slide=None):
     # light row stripes come from the style, not cell fills). Otherwise turn the style off
     # so our explicit per-cell fills/colors win (the gradient-table case).
     keep_style = opts.get("keep_style", False)
-    if not keep_style:
+    # preserve_format: editing an EXISTING styled table — keep every cell's fill, font
+    # color, weight, size and the table style exactly as-is; only the text changes (plus
+    # any explicit per-cell overrides in the spec). This is the default for the edit op so
+    # a plain text swap can never flatten a navy header or hidden white labels to the
+    # baseline. Build paths leave it off and set styling explicitly.
+    preserve_format = opts.get("preserve_format", False)
+    if not keep_style and not preserve_format:
         for prop in ("FirstRow", "LastRow", "FirstCol", "LastCol", "HorizBanding", "VertBanding"):
             try:
                 setattr(table, prop, False)
@@ -411,7 +458,7 @@ def write_table(shape, rows, opts=None, slide=None):
     # preserve_fill: leave the template's existing cell fills alone (e.g. a banded table
     # whose shading uses transparency we can't reproduce by setting a flat color). We then
     # only write text + font color and never touch the fill.
-    preserve_fill = opts.get("preserve_fill", False) or keep_style
+    preserve_fill = opts.get("preserve_fill", False) or keep_style or preserve_format
     for r, row in enumerate(rows, start=1 + header_rows):
         for c, cell_spec in enumerate(row, start=1):
             cell = table.Cell(r, c)
@@ -438,13 +485,21 @@ def write_table(shape, rows, opts=None, slide=None):
                 # Each paragraph carries its own format; clean-write so per-line formatting holds.
                 clean_write_textbox(tf, spec["paragraphs"])
             else:
-                tf.Text = spec.get("text", "")
-                tf.Font.Color.RGB = to_bgr(spec.get("color", "#000000"))
-                if "bold" not in spec and r == 1 and opts.get("header_bold", True):
-                    tf.Font.Bold = True
-                if cell_size and "size" not in spec:
-                    tf.Font.Size = float(cell_size)
+                clean, spans = _split_bold_markup(spec.get("text", ""))
+                tf.Text = clean
+                if preserve_format:
+                    # Keep the cell's existing font/weight/size; only honor explicit overrides.
+                    if "color" in spec:
+                        tf.Font.Color.RGB = to_bgr(spec["color"])
+                else:
+                    tf.Font.Color.RGB = to_bgr(spec.get("color", "#000000"))
+                    if "bold" not in spec and r == 1 and opts.get("header_bold", True):
+                        tf.Font.Bold = True
+                    if cell_size and "size" not in spec:
+                        tf.Font.Size = float(cell_size)
                 apply_format(tf, {k: v for k, v in spec.items() if k in ("bold", "size", "italic", "font", "align")})
+                if spans:
+                    _apply_bold_spans(tf, 1, len(clean), spans)
     # Force a styled first column independent of the template's per-row fills (e.g.
     # growth-levers: navy lever cells + white bold text), for ANY number of data rows.
     # Header rows are left untouched.
@@ -1168,7 +1223,12 @@ def run_job(job):
                                      "it will overflow — shorten or split the slide."
                                      % (lines_needed, cap["est_max_lines"]))
             elif kind == "write_table":
-                write_table(shape, op["rows"], op.get("table_opts"), slide)
+                # Editing an existing table: preserve each cell's formatting by default so a
+                # text swap never flattens the styling. A spec can opt out with
+                # table_opts.preserve_format=false (e.g. to restyle a table wholesale).
+                topts = dict(op.get("table_opts") or {})
+                topts.setdefault("preserve_format", True)
+                write_table(shape, op["rows"], topts, slide)
                 after = "table written (%d rows)" % len(op["rows"])
             else:
                 raise ValueError("unknown op %r" % kind)
