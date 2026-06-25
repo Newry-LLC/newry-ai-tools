@@ -17,7 +17,7 @@ The ready-made layouts are **starting points, not finished slides.** Treat them 
 
 ## Model
 
-Switch before starting: `/model claude-sonnet-4-6`. Sonnet is the default for everything — content, edits, layout decisions. Use Haiku only when all text is fully pre-specified and no formatting judgment is needed.
+Switch before starting: `/model claude-sonnet-4-6`. Use Sonnet for everything.
 
 ## Before you touch anything
 
