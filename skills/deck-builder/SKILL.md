@@ -15,13 +15,9 @@ Every slide needs custom work. This tool handles two jobs:
 
 The ready-made layouts are **starting points, not finished slides.** Treat them as "the closest thing we already have — clone it and adapt."
 
-## Model selection
+## Model
 
-Pick the model before starting. The choice matters — previews and shape-dump results accumulate in context fast, and the wrong model wastes either money or quality.
-
-- **Sonnet** — default for most sessions: handles formatting judgment, layout decisions, and mechanical edits at a good cost/speed balance.
-- **Haiku** — when edits are fully specified upfront (exact text supplied, no content decisions needed). Faster and cheaper; may miss edge cases in formatting or overflow.
-- **Opus** — when writing consulting-grade content from scratch (pyramid structure, argument design, so-what synthesis). Overkill for pure edit/build work.
+Switch before starting: `/model claude-sonnet-4-6`. Sonnet is the default for everything — content, edits, layout decisions. Use Haiku only when all text is fully pre-specified and no formatting judgment is needed.
 
 ## Before you touch anything
 
