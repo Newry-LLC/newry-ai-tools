@@ -15,6 +15,14 @@ Every slide needs custom work. This tool handles two jobs:
 
 The ready-made layouts are **starting points, not finished slides.** Treat them as "the closest thing we already have — clone it and adapt."
 
+## Model selection
+
+Pick the model before starting. The choice matters — previews and shape-dump results accumulate in context fast, and the wrong model wastes either money or quality.
+
+- **Sonnet** — default for most sessions: handles formatting judgment, layout decisions, and mechanical edits at a good cost/speed balance.
+- **Haiku** — when edits are fully specified upfront (exact text supplied, no content decisions needed). Faster and cheaper; may miss edge cases in formatting or overflow.
+- **Opus** — when writing consulting-grade content from scratch (pyramid structure, argument design, so-what synthesis). Overkill for pure edit/build work.
+
 ## Before you touch anything
 
 1. PowerPoint must be open with the target file. The tool drives the open window.
@@ -145,7 +153,7 @@ Goal: change the words, keep the formatting. For non-Newry / client decks: skip 
 - **Inline bold:** wrap a phrase in `**…**` to bold just that span (e.g. `"**Lack of alignment:** no common standards"` → bold label, regular rest). Works in `edit_text_preserve`, `write_textbox`, and table cells — one call, no second pass.
 - If your new text is longer than the box holds (the profile told you the budget), it will overflow. Fixed font sizes are a Newry brand standard — **don't shrink to fit.** Shorten the text or split the slide. The tool measures the actual rendered text height after writing and returns a precise overflow warning — read it.
 - **Underflow matters too.** If your replacement is much *shorter* than what it replaced, the box looks half-empty and unbalanced against the rest of the slide. Aim to roughly match the **length and structure** of the text you're replacing (same number of bullets, similar line count) — don't just drop in one short line where three full ones were.
-- After writing: re-preview the slide and read the tool's output. The visual preview is the approval step.
+- Read the tool's output after every write. **Preview sparingly** — the overflow check and read-back are sufficient for clean mechanical edits. Use `ppt_get_slide_preview` only when: (a) the overflow check fired, (b) the layout is visually complex (bold labels, merged cells, multi-column), or (c) it's the final approval checkpoint for that slide. Don't preview after every individual shape write.
 
 Use `write_textbox` (Mode B style) only when you're deliberately changing the formatting, not just the words.
 
@@ -164,7 +172,7 @@ Goal: a strong first draft, fast, from the closest layout we already have.
 
 1. **Pick the nearest layout** from the right family's table below. State your pick: "I'll use the figure-two-thirds layout — say if you'd rather something else."
 2. **Fill it** with a `build` job. Give it the fields the layout lists.
-3. **Preview and approve.** Run `ppt_get_slide_preview` after every build and check:
+3. **Preview at completion checkpoints, not after every op.** Run `ppt_get_slide_preview` once after finishing a slide (or a batch of slides), not after each individual write. Check:
    - No text overflow — all text visible, nothing cut off
    - Font is Aptos (not a substituted font)
    - H2 subheads are ALL CAPS and Newry Blue
@@ -330,6 +338,7 @@ The `ppt_*` tools are for *reading* (preview, profile, get_text, list_shapes) on
 
 ## Gotchas worth remembering
 
+- **Preview discipline.** Each preview image lands in context as base64 and adds up fast. Trust the overflow check and tool read-back for mechanical edits; reserve previews for overflow warnings, visually complex layouts, and final per-slide sign-off.
 - **`ppt_find_replace_text` strips whitespace** from the search text, so ` - ` matches hyphens inside words. Inspect per-shape instead of blind find/replace.
 - **Airtable headshots:** download with PowerShell (`Invoke-WebRequest`), not Python/curl (TLS error), and use the `thumbnails.full.url` link. `place_image` already does this.
 - **Process-flow arrows** are the "Chevron" shape (type 52), not "Pentagon".
