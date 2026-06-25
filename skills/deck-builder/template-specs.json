@@ -3,7 +3,8 @@
   "source_decks": {
     "newry_template": "Newry Powerpoint Template 2024.pptx",
     "slide_library": "slide-library.pptx",
-    "nbd_library": "nbd-library.pptx"
+    "nbd_library": "nbd-library.pptx",
+    "thinkcell_library": "think-cell-library.pptx"
   },
   "layouts": {
     "cover": {
@@ -1308,7 +1309,11 @@
       "source_deck": "nbd_library",
       "source_slide": 7,
       "phase_chevrons": {
-        "shapes": ["S_stage1", "S_stage2", "S_stage3"],
+        "shapes": [
+          "S_stage1",
+          "S_stage2",
+          "S_stage3"
+        ],
         "active_fill": "#1E4C7F",
         "active_text_color": "#FFFFFF"
       },
@@ -1405,6 +1410,174 @@
           "shape": "S_confidential",
           "kind": "text",
           "max_chars": 360
+        }
+      }
+    },
+    "chart_waterfall": {
+      "description": "Waterfall (bridge) chart, ~2/3 width, with a notes column on the right. The chart is a LIVE think-cell waterfall filled via ppttc (build_chart op). Fields: chart ({categories:[str], values:[num] (one increment per category), total_label?:str}) — the tool computes the floating base + auto-total (\"e\"); title (str); subhead (str, the H2); notes (list of lines — first line is the bold header, rest are bullets); source (str). Column count flexes to the data. Use build_chart (NOT build).",
+      "source_deck": "thinkcell_library",
+      "source_slide": 3,
+      "chart": {
+        "name": "waterfall v1 two thirds page",
+        "type": "waterfall"
+      },
+      "slots": {
+        "title": {
+          "shape": "Title 1",
+          "kind": "text",
+          "max_chars": 140
+        },
+        "subhead": {
+          "shape": "Text Placeholder 4",
+          "kind": "text",
+          "max_chars": 40
+        },
+        "notes": {
+          "shape": "Text Placeholder 2",
+          "kind": "text_lines"
+        },
+        "source": {
+          "shape": "Text Placeholder 3",
+          "kind": "text",
+          "max_chars": 200
+        }
+      }
+    },
+    "chart_bubble": {
+      "description": "Bubble chart (2x2 quadrant matrix), ~2/3 width, with a notes column. LIVE think-cell bubble filled via ppttc (build_chart op). Fields: chart ({points:[{label:str, x:num, y:num, size:num}]}); title (str); notes (list of lines — first line bold header, rest bullets). Use build_chart (NOT build).",
+      "source_deck": "thinkcell_library",
+      "source_slide": 6,
+      "chart": {
+        "name": "Bubble Chart v1 half page",
+        "type": "bubble"
+      },
+      "slots": {
+        "title": {
+          "shape": "Title 1",
+          "kind": "text",
+          "max_chars": 140
+        },
+        "notes": {
+          "shape": "Text Placeholder 2",
+          "kind": "text_lines"
+        }
+      }
+    },
+    "chart_stacked_bar": {
+      "description": "Stacked column chart, ~2/3 width, with a notes column. LIVE think-cell chart via build_chart. Fields: chart ({categories:[str], series:[{name:str, values:[num]}]} — match the template's series count); title (str); chart_title (list [name, units]); notes (list of lines, first is bold header); plus per-layout fields. Use build_chart (NOT build). source (str).",
+      "source_deck": "thinkcell_library",
+      "source_slide": 2,
+      "chart": {
+        "name": "Stacked Bar v2 two thirds page",
+        "type": "stacked_column"
+      },
+      "slots": {
+        "title": {
+          "shape": "Title 1",
+          "kind": "text",
+          "max_chars": 140
+        },
+        "chart_title": {
+          "shape": "ChartTitle",
+          "kind": "text_lines"
+        },
+        "notes": {
+          "shape": "Notes",
+          "kind": "text_lines"
+        },
+        "source": {
+          "shape": "Text Placeholder 4",
+          "kind": "text",
+          "max_chars": 200
+        }
+      }
+    },
+    "chart_stacked_bar_half": {
+      "description": "Stacked column chart, ~half width (more room beside it). LIVE think-cell chart via build_chart. Fields: chart ({categories:[str], series:[{name:str, values:[num]}]} — match the template's series count); title (str); chart_title (list [name, units]); notes (list of lines, first is bold header); plus per-layout fields. Use build_chart (NOT build). source (str).",
+      "source_deck": "thinkcell_library",
+      "source_slide": 1,
+      "chart": {
+        "name": "Stacked Bar v1 half page",
+        "type": "stacked_column"
+      },
+      "slots": {
+        "title": {
+          "shape": "Title 1",
+          "kind": "text",
+          "max_chars": 140
+        },
+        "chart_title": {
+          "shape": "ChartTitle",
+          "kind": "text_lines"
+        },
+        "notes": {
+          "shape": "Notes",
+          "kind": "text_lines"
+        },
+        "source": {
+          "shape": "Text Placeholder 4",
+          "kind": "text",
+          "max_chars": 200
+        }
+      }
+    },
+    "chart_mekko": {
+      "description": "Mekko (marimekko) chart, ~2/3 width, with a notes column — column WIDTH encodes segment share, height encodes within-segment share. LIVE think-cell chart via build_chart. Fields: chart ({categories:[str], widths:[num] (column widths / X-extent), series:[{name:str, values:[num]}]}); title (str); chart_title (list [name, units]); notes (list of lines, first is bold header); plus per-layout fields. Use build_chart (NOT build). footnote (str, the *width-definition line).",
+      "source_deck": "thinkcell_library",
+      "source_slide": 4,
+      "chart": {
+        "name": "Mekko Chart v2 two thirds page",
+        "type": "mekko"
+      },
+      "slots": {
+        "title": {
+          "shape": "Title 1",
+          "kind": "text",
+          "max_chars": 140
+        },
+        "chart_title": {
+          "shape": "Text Placeholder 3",
+          "kind": "text",
+          "max_chars": 60
+        },
+        "notes": {
+          "shape": "Text Placeholder 2",
+          "kind": "text_lines"
+        },
+        "footnote": {
+          "shape": "Text Placeholder 4",
+          "kind": "text",
+          "max_chars": 200
+        }
+      }
+    },
+    "chart_mekko_half": {
+      "description": "Mekko (marimekko) chart, ~half width. LIVE think-cell chart via build_chart. Fields: chart ({categories:[str], widths:[num] (column widths / X-extent), series:[{name:str, values:[num]}]}); title (str); chart_title (list [name, units]); notes (list of lines, first is bold header); plus per-layout fields. Use build_chart (NOT build). footnote (str).",
+      "source_deck": "thinkcell_library",
+      "source_slide": 5,
+      "chart": {
+        "name": "Mekko v1 half page",
+        "type": "mekko"
+      },
+      "slots": {
+        "title": {
+          "shape": "Title 1",
+          "kind": "text",
+          "max_chars": 140
+        },
+        "chart_title": {
+          "shape": "Text Placeholder 3",
+          "kind": "text",
+          "max_chars": 60
+        },
+        "notes": {
+          "shape": "Text Placeholder 2",
+          "kind": "text_lines"
+        },
+        "footnote": {
+          "shape": "Text Placeholder 4",
+          "kind": "text",
+          "max_chars": 200
         }
       }
     }
