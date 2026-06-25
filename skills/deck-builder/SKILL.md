@@ -198,11 +198,11 @@ Pass a table as rows. Row 1 is usually the header. Cells can be a plain string, 
 
 ## The layout library
 
-28 starting-point layouts in **two families** (you settled the family in Mode B step 0). **Pick by the slide's job:** find the intent group below — it narrows you to a few candidates — then disambiguate within it. Don't scan the whole list and gestalt-match. The tool pulls each from the right source file automatically; you never name the source deck.
+34 starting-point layouts in **two families** (you settled the family in Mode B step 0). Six of them are live think-cell chart layouts built with `build_chart` (see "Building think-cell charts"). **Pick by the slide's job:** find the intent group below — it narrows you to a few candidates — then disambiguate within it. Don't scan the whole list and gestalt-match. The tool pulls each from the right source file automatically; you never name the source deck.
 
 **Cross-family overlap:** `cover`, `chapter_divider`, the team page, and the back page exist in both libraries — use the `nbd_` variant in a proposal, the plain one in a project deck.
 
-### Project / report layouts (19)
+### Project / report layouts (25)
 
 For findings, analysis, and client deliverables. Grouped by intent — exact fields for each are in `template-specs.json`.
 
@@ -213,11 +213,9 @@ For findings, analysis, and client deliverables. Grouped by intent — exact fie
 - `findings_summary` — dense bullets, no quote boxes (more body space); use when the bullets are the whole story
 - `two_column` — two parallel header+bullet groups (e.g. background & objectives)
 
-**Show a chart / figure** — chart itself is think-cell/manual; the layout fills the text around it:
-- `full_chart` — chart fills the body, source line only, no notes column
-- `figure_two_thirds` — chart on the left ~2/3, interpretation notes column on the right
-- `market_sizing` — specifically a market-size chart (CAGR oval, year axis, notes)
-- `full_visual_quote` — a full-bleed image/map with a quote bar at the bottom
+**Show a chart / figure** — two kinds:
+- **Build a real think-cell chart** (`chart_*` layouts, via the `build_chart` op — see "Building think-cell charts" below): `chart_waterfall` (cost/bridge breakdown) · `chart_bubble` (2×2 quadrant matrix) · `chart_stacked_bar` (+ `_half`) · `chart_mekko` (+ `_half`). The chart is live and editable; you supply the data and the tool draws it.
+- **Text-only chart layouts** (the chart stays think-cell/manual — these fill just the text around a chart you place yourself): `full_chart` (chart fills the body, source line only) · `figure_two_thirds` (chart left ~2/3, notes column right) · `market_sizing` (market-size chart — CAGR oval, year axis, notes) · `full_visual_quote` (full-bleed image/map + quote bar)
 
 **Compare options:**
 - `comparison_table` — gradient shading by rating (high / medium / low)
@@ -248,6 +246,59 @@ For new-business proposals/pitches. Source: the NBD proposal template. **Use the
 
 ---
 
+## Building think-cell charts (`build_chart`)
+
+Newry charts are think-cell charts. `build_chart` makes a real, live think-cell chart slide: you give it the numbers, it fills one of our named chart templates (via think-cell's `ppttc` tool) and drops the finished slide into the deck. The chart stays a true think-cell chart — editable, refreshable, with think-cell's own connectors and labels.
+
+Requires think-cell installed (it is, firm-wide). Use `build_chart` — **not** `build` — for these.
+
+**Available chart layouts:** `chart_waterfall` (cost/bridge breakdown) · `chart_bubble` (2×2 quadrant matrix) · `chart_stacked_bar` / `chart_stacked_bar_half` (stacked column, two-thirds / half width) · `chart_mekko` / `chart_mekko_half` (marimekko — width encodes share).
+
+A `build_chart` job is like a `build` job plus a `chart` field carrying the data. The chart type comes from the layout; you provide the data in the shape that type expects:
+
+- **Waterfall** — `{"categories": [...], "values": [n, n, ...], "total_label": "Total"}`. One value per category (the increments); the tool floats the bars and computes the total automatically. Column count flexes to your data.
+- **Bubble** — `{"points": [{"label": "A", "x": 1.5, "y": 3.0, "size": 6}, ...]}`. One point per bubble; `size` sets the circle size.
+- **Stacked bar/column** — `{"categories": [...], "series": [{"name": "Premium", "values": [...]}, ...]}`. Up to 3 series (the template holds 3; more are dropped). The tool handles the datasheet quirks for you.
+- **Mekko** — `{"categories": [...], "widths": [n, ...], "series": [{"name": "...", "values": [...]}, ...]}`. `widths` set the column widths (segment share); the series stack within each column.
+
+```json
+{"presentation": "Glass Core", "ops": [
+  {"op": "build_chart", "layout": "chart_waterfall", "position": "end",
+   "fields": {
+     "chart": {"categories": ["Materials", "Labor", "Overhead"], "values": [40, 25, 20], "total_label": "Total Cost"},
+     "title": "Materials drive over half of unit cost",
+     "subhead": "COST STRUCTURE",
+     "notes": ["KEY TAKEAWAYS", "First point", "Second point"],
+     "source": "Source: Newry analysis"
+   }}
+]}
+```
+
+The text fields (`title`, `subhead`, `notes`, `source`) fill the slide's chrome, same as a normal `build`. Preview and approve after, like any build.
+
+**Two things to watch:**
+- **Theme colors.** The chart slide adopts the target deck's theme. Build into a Newry-themed deck so colors come out right (in a blank/non-Newry deck, accent colors shift).
+- **Category labels** that carry footnote superscripts in the template may keep the template's text — check and fix the labels in the preview.
+
+### Refreshing an existing chart with new numbers (`refresh_chart`)
+
+Update a chart's data in place, keeping the rest of the slide and deck. The chart must have a think-cell **name**:
+- **Charts built with `build_chart` are already named** — refresh them directly.
+- **A chart someone made by hand is usually unnamed.** Name it once in think-cell: click the chart, type a unique name in the **AddRangeData Name** field on its mini-toolbar, save. After that it's refreshable forever. (If the consultant asks to refresh an unnamed chart, walk them through this once.)
+
+```json
+{"presentation": "Glass Core", "ops": [
+  {"op": "refresh_chart", "chart_name": "waterfall v1 two thirds page", "type": "waterfall",
+   "data": {"categories": ["A", "B", "C"], "values": [50, 30, 15], "total_label": "Total"}}
+]}
+```
+
+`type` + `data` use the same per-type shapes as `build_chart` (above). Two things to know:
+- **Run it as its own job.** ppttc can only rewrite the whole file, so refresh saves, closes, rewrites, and reopens the deck — the window briefly closes and reopens. Don't combine it with other ops.
+- **Works on any deck — local, OneDrive, or team-site SharePoint.** It round-trips through PowerPoint: it saves a local copy, refreshes that, then saves back to wherever the deck actually lives (uploading to SharePoint/OneDrive natively). No local-sync requirement and no path guessing — a deck open straight from a SharePoint web address works fine.
+
+---
+
 ## Job reference (the ops)
 
 All jobs look like: `{"presentation": "<name or substring>", "ops": [ ... ]}`. `presentation` can be `"active"`.
@@ -259,6 +310,8 @@ All jobs look like: `{"presentation": "<name or substring>", "ops": [ ... ]}`. `
 | `write_textbox` | Write text with formatting you specify | `slide`, `shape`, `paragraphs` (objects: text/bold/size/color/italic/font/align) |
 | `write_table` | Write a table cell-by-cell, keeping Newry colors | `slide`, `shape`, `rows`, optional `table_opts` |
 | `build` | Make a new slide from a layout | `layout`, `fields`, optional `position` |
+| `build_chart` | Make a new slide with a live think-cell chart | `layout` (a `chart_*` one), `fields` (incl. `chart` data), optional `position` |
+| `refresh_chart` | Update a named chart's data in place (own job; works on local/OneDrive/SharePoint) | `chart_name`, `type`, `data` |
 
 `shape` is the 1-based index from `profile` / `ppt_list_shapes` (or the shape's name).
 
@@ -266,7 +319,7 @@ All jobs look like: `{"presentation": "<name or substring>", "ops": [ ... ]}`. `
 
 ## The core rule: always write through deck_writer.py
 
-**Never use `ppt_set_text`, `ppt_set_placeholder_text`, or `ppt_find_replace_text` to change slide content. Always use `deck_writer.py` (`edit_text_preserve`, `write_textbox`, `write_table`, or `build`).** No exceptions, no judgment call about whether a shape "looks simple."
+**Never use `ppt_set_text`, `ppt_set_placeholder_text`, or `ppt_find_replace_text` to change slide content. Always use `deck_writer.py` (`edit_text_preserve`, `write_textbox`, `write_table`, `build`, or `build_chart`).** No exceptions, no judgment call about whether a shape "looks simple."
 
 Why: the `ppt_*` write tools flatten a shape's formatting into a single style. A slide with a bold navy header over normal black bullets comes out with header and bullets looking identical, and there's no clean undo. `deck_writer.py` writes the careful way — it captures each line's formatting first, inserts the new text, then re-applies the formatting line by line — so headers stay headers and bullets stay bullets. That is the entire reason the tool exists.
 
