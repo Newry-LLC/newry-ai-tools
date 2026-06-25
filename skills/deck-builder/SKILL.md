@@ -142,6 +142,7 @@ Goal: change the words, keep the formatting. For non-Newry / client decks: skip 
 ```
 
 - Line 1 keeps line 1's old format, line 2 keeps line 2's, and so on. Extra lines copy the last line's format.
+- **Inline bold:** wrap a phrase in `**…**` to bold just that span (e.g. `"**Lack of alignment:** no common standards"` → bold label, regular rest). Works in `edit_text_preserve`, `write_textbox`, and table cells — one call, no second pass.
 - If your new text is longer than the box holds (the profile told you the budget), it will overflow. Fixed font sizes are a Newry brand standard — **don't shrink to fit.** Shorten the text or split the slide. The tool measures the actual rendered text height after writing and returns a precise overflow warning — read it.
 - **Underflow matters too.** If your replacement is much *shorter* than what it replaced, the box looks half-empty and unbalanced against the rest of the slide. Aim to roughly match the **length and structure** of the text you're replacing (same number of bullets, similar line count) — don't just drop in one short line where three full ones were.
 - After writing: re-preview the slide and read the tool's output. The visual preview is the approval step.
@@ -191,6 +192,8 @@ Goal: a strong first draft, fast, from the closest layout we already have.
 ### Tables (used by several layouts)
 
 Pass a table as rows. Row 1 is usually the header. Cells can be a plain string, or `{text, fill, color, bold, size, align, swatch}` for a colored/styled cell, or `{paragraphs: [...]}` for a cell with multiple formatted lines. `swatch` maps a name to a color set on the layout (e.g. `pursue` → green on the prioritization table). The table flexes its row and column count to fit your data.
+
+**Editing an existing table preserves its formatting by default** — each cell's fill, font color, weight, and size stay put; only the text changes (plus any explicit cell overrides). So a navy header row or a white-on-logo hidden column survives a text swap. Cell text also supports `**bold**` markup. To restyle a table wholesale instead, pass `table_opts: {"preserve_format": false}`.
 
 **Merged cells:** some template tables merge cells (e.g. a category label spanning rows). Merged cells collide with row-by-row writing. A layout whose table needs to flex sets `"unmerge": true` in its `table_opts`, which flattens the table to a clean grid before filling. On the **edit** path, leave it off so a client table's intentional merges are respected; turn it on only when you want to flatten-and-rewrite a merged table.
 
@@ -306,9 +309,9 @@ All jobs look like: `{"presentation": "<name or substring>", "ops": [ ... ]}`. `
 | Op | What it does | Key fields |
 |---|---|---|
 | `profile` | Read a slide: every object's role, format, capacity | `slide` |
-| `edit_text_preserve` | Change text, keep existing format | `slide`, `shape`, `paragraphs` (plain strings) |
-| `write_textbox` | Write text with formatting you specify | `slide`, `shape`, `paragraphs` (objects: text/bold/size/color/italic/font/align) |
-| `write_table` | Write a table cell-by-cell, keeping Newry colors | `slide`, `shape`, `rows`, optional `table_opts` |
+| `edit_text_preserve` | Change text, keep existing format (supports `**bold**`) | `slide`, `shape`, `paragraphs` (plain strings) |
+| `write_textbox` | Write text with formatting you specify (supports `**bold**`) | `slide`, `shape`, `paragraphs` (objects: text/bold/size/color/italic/font/align) |
+| `write_table` | Edit a table; preserves each cell's formatting by default | `slide`, `shape`, `rows`, optional `table_opts` |
 | `build` | Make a new slide from a layout | `layout`, `fields`, optional `position` |
 | `build_chart` | Make a new slide with a live think-cell chart | `layout` (a `chart_*` one), `fields` (incl. `chart` data), optional `position` |
 | `refresh_chart` | Update a named chart's data in place (own job; works on local/OneDrive/SharePoint) | `chart_name`, `type`, `data` |
@@ -331,7 +334,7 @@ The `ppt_*` tools are for *reading* (preview, profile, get_text, list_shapes) on
 - **Airtable headshots:** download with PowerShell (`Invoke-WebRequest`), not Python/curl (TLS error), and use the `thumbnails.full.url` link. `place_image` already does this.
 - **Process-flow arrows** are the "Chevron" shape (type 52), not "Pentagon".
 - **Overflow = warn, never shrink.** Fixed sizes are a brand standard. Shorten or split. `build`, `write_textbox`, and `edit_text_preserve` measure the actual rendered text height against the box after writing and return a precise warning when it overflows; the text is still written. (Falls back to a character-budget estimate only if the box can't be measured.)
-- **Editing drops inline emphasis.** `edit_text_preserve` keeps each line's *paragraph* format but can't keep a bold/colored phrase from the *middle* of the old text. On a rewrite, re-apply any mid-line emphasis you want.
+- **Inline emphasis on a rewrite:** `edit_text_preserve` keeps each line's *paragraph* format but doesn't carry a bold phrase over from the old text automatically. Mark it in the new text with `**…**` (e.g. `"**Label:** rest"`) and the tool bolds just that span. (Colored mid-line phrases still need a `ppt_format_text_range` pass.)
 - **Always re-check after writing** — re-preview the slide and read the tool's output.
 
 ---
