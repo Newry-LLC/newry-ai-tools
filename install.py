@@ -127,26 +127,38 @@ def ensure_ppt_mcp():
     else:
         print("ppt-mcp: already installed")
 
-    # Wire into ~/.claude/mcp.json
-    mcp_json_path = os.path.expanduser(os.path.join("~", ".claude", "mcp.json"))
-    os.makedirs(os.path.dirname(mcp_json_path), exist_ok=True)
+    # Wire into ~/.claude.json via `claude mcp add` (the CLI reads ~/.claude.json,
+    # not ~/.claude/mcp.json — using the CLI command writes to the correct file).
+    import glob as _glob
 
-    try:
-        with open(mcp_json_path, "r", encoding="utf-8") as f:
-            mcp_config = json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        mcp_config = {}
+    # Find the claude CLI binary: glob for it under %APPDATA%\Claude\claude-code\
+    # since it lives in a versioned subdirectory not on PATH.
+    claude_bin = shutil.which("claude")
+    if not claude_bin:
+        appdata = os.environ.get("APPDATA", "")
+        pattern = os.path.join(appdata, "Claude", "claude-code", "*", "claude.exe")
+        matches = _glob.glob(pattern)
+        claude_bin = matches[0] if matches else None
 
-    mcp_config.setdefault("mcpServers", {})
-    exe_forward = exe.replace("\\", "/")
+    if not claude_bin:
+        print("ppt-mcp: could not find claude CLI binary — skipping MCP registration")
+        print("  Run manually: claude mcp add ppt-mcp <path-to-ppt-mcp.exe> --scope user")
+        return
 
-    if "ppt-mcp" in mcp_config["mcpServers"]:
-        print("ppt-mcp: already in mcp.json")
+    # Check if already registered
+    list_r = subprocess.run([claude_bin, "mcp", "list"], capture_output=True, text=True)
+    if "ppt-mcp" in list_r.stdout:
+        print("ppt-mcp: already registered in ~/.claude.json")
     else:
-        mcp_config["mcpServers"]["ppt-mcp"] = {"command": exe_forward}
-        with open(mcp_json_path, "w", encoding="utf-8") as f:
-            json.dump(mcp_config, f, indent=2)
-        print(f"ppt-mcp: added to {mcp_json_path}")
+        add_r = subprocess.run(
+            [claude_bin, "mcp", "add", "ppt-mcp", exe, "--scope", "user"],
+            capture_output=True, text=True
+        )
+        if add_r.returncode == 0:
+            print("ppt-mcp: registered in ~/.claude.json via claude mcp add")
+        else:
+            print(f"ppt-mcp: claude mcp add failed — {add_r.stderr.strip()}")
+            print("  Run manually: claude mcp add ppt-mcp <path-to-ppt-mcp.exe> --scope user")
 
 
 def ensure_ppt_write_guard_hook():
