@@ -1,0 +1,7 @@
+{
+  "name": "project-launch-toolkit",
+  "version": "1.0.1",
+  "description": "Orchestrate a complete Newry project launch. Takes a SoW or proposal and runs the full suite of launch sub-skills — launch intake (Airtable record), problem statement, fact-finding, value creation, issue tree, workplan, ownership and goals, and account management. Can run the full flow or any individual sub-skill on demand.",
+  "author": { "name": "Sylvan Shank" },
+  "repository": "https://github.com/Newry-LLC/newry-ai-tools"
+}
