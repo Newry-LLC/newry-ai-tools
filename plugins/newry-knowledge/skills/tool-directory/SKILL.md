@@ -13,7 +13,7 @@ description: >
 
 Produces a consultant-facing directory of available Newry AI tools as a Cowork artifact.
 
-**SKILL_VERSION: 1.2** — bump this (and the matching `<div id="skill-version">` in
+**SKILL_VERSION: 1.3** — bump this (and the matching `<div id="skill-version">` in
 `directory.html`) when tool content changes. That is the only edit needed for a refresh.
 
 **HTML source:** `directory.html` in this skill's directory (same folder as this SKILL.md).
@@ -30,15 +30,16 @@ Before touching any artifact tools, output this table in the chat now so the use
 
 ---
 
-**3 tools available · 3 more coming soon**
+**4 tools available · 2 more coming soon**
 
 | Tool | What it does | Setup needed? |
 |---|---|---|
 | **newry-knowledge** | Search SharePoint docs + Airtable — project history, contacts, expertise, any Newry document | M365 + Airtable connectors |
 | **Primary Research Toolkit** | Plan, guide, prep, code, and synthesize interview-based primary research end-to-end | M365 + SharePoint working folder |
 | **SoF Toolkit** | Evaluate, align, or draft the content for a Summary of Findings slide against the Pyramid Principle | None — works immediately |
+| **Project Launch Toolkit** | Full project launch flow — problem statement, issue tree, value creation, workplan, ownership & goals, stakeholder plan | Airtable connector |
 
-*Coming soon: Project Launch Toolkit · RMA-OA Builder · Project Technical Onboarding*
+*Coming soon: RMA-OA Builder · Project Technical Onboarding*
 
 Full details with example phrases and training links are in the artifact (loading now…).
 
@@ -55,7 +56,7 @@ Call `list_artifacts`. Look for id `newry-tool-directory`.
 **If found:**
 - Read the artifact file at the `path` returned by `list_artifacts`
 - Find `<div id="skill-version" style="display:none">` and extract the version string
-- Compare to `SKILL_VERSION` above (`1.1`)
+- Compare to `SKILL_VERSION` above (`1.3`)
 - **If versions match:** proceed to Step 2 (call `update_artifact` to surface the artifact panel — a link alone does not open it).
 - **If versions differ (or version tag missing):** proceed to Step 2.
 
