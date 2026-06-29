@@ -23,6 +23,10 @@
       "source": "./plugins/project-technical-onboarding"
     },
     {
+      "name": "project-launch-toolkit",
+      "source": "./plugins/project-launch-toolkit"
+    },
+    {
       "name": "newry-operator",
       "source": "./plugins/newry-operator"
     },
