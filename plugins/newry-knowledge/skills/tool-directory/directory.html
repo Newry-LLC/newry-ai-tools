@@ -69,12 +69,12 @@
 </head>
 <body>
 
-<div id="skill-version" style="display:none">1.2</div>
+<div id="skill-version" style="display:none">1.3</div>
 
 <div class="page-header">
   <div>
     <h1>Newry AI Tools</h1>
-    <div class="subtitle">3 tools available &nbsp;·&nbsp; 3 more coming soon</div>
+    <div class="subtitle">4 tools available &nbsp;·&nbsp; 2 more coming soon</div>
   </div>
   <button class="expand-all-btn" id="expandAllBtn" onclick="toggleAll()">Expand all</button>
 </div>
@@ -188,6 +188,49 @@
   </div>
 </div>
 
+<div class="section-label">Launching projects</div>
+
+<div class="tool-card" id="card-plt">
+  <div class="card-header" onclick="toggle('card-plt')">
+    <div class="card-header-left">
+      <div class="card-title">Project Launch Toolkit</div>
+      <div class="card-desc">Guided launch flow for new engagements — problem statement, issue tree, value creation, workplan, ownership &amp; goals, and stakeholder plan. Run the full flow or jump to any step.</div>
+    </div>
+    <div class="card-header-right">
+      <div class="card-badges">
+        <span class="badge badge-orange">Airtable</span>
+      </div>
+      <span class="chevron">&#9654;</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div>
+      <div class="col-label">Best for</div>
+      <div class="use-when-item">Kicking off a new engagement from a SoW or proposal</div>
+      <div class="use-when-item">Drafting the problem statement and SMART objective</div>
+      <div class="use-when-item">Building a MECE issue tree with hypotheses</div>
+      <div class="use-when-item">Creating the workplan and ownership matrix from the issue tree</div>
+      <div class="use-when-item">Drafting value creation goals and the stakeholder plan</div>
+    </div>
+    <div>
+      <div class="col-label">Try saying</div>
+      <div class="trigger-wrap">
+        <div class="trigger-row"><span class="trigger-text">"Run a project launch"</span><button class="copy-btn" onclick="copyTrigger(this, 'Run a project launch')">copy</button></div>
+        <div class="trigger-row"><span class="trigger-text">"Let's launch [project name]"</span><button class="copy-btn" onclick="copyTrigger(this, 'Let\'s launch [project name]')">copy</button></div>
+        <div class="trigger-row"><span class="trigger-text">"Help me draft the problem statement for this project"</span><button class="copy-btn" onclick="copyTrigger(this, 'Help me draft the problem statement for this project')">copy</button></div>
+        <div class="trigger-row"><span class="trigger-text">"Build the issue tree for this project"</span><button class="copy-btn" onclick="copyTrigger(this, 'Build the issue tree for this project')">copy</button></div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="footer-reqs">
+      <span class="req-label">Requires:</span>
+      <span class="req-badge">Airtable connector</span>
+    </div>
+    <div class="training-links"></div>
+  </div>
+</div>
+
 <div class="section-label">Building deliverables</div>
 
 <div class="tool-card" id="card-sof">
@@ -235,11 +278,6 @@
 
 <div class="section-label">Coming soon</div>
 <div class="coming-grid">
-  <div class="coming-card">
-    <div class="coming-name">Project Launch Toolkit</div>
-    <div class="coming-desc">Problem statement, issue tree, value creation hypothesis, workplan, fact-finding, and account management — all in one flow at project kickoff.</div>
-    <div class="coming-eta">In progress &middot; highest priority</div>
-  </div>
   <div class="coming-card">
     <div class="coming-name">RMA-OA Builder</div>
     <div class="coming-desc">Guides you through designing and building a Rapid Market Assessment or Opportunity Assessment — scoping through final deliverable.</div>
