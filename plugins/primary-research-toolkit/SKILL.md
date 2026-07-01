@@ -115,7 +115,8 @@ The user describes their situation in plain language. Match against the patterns
 
 | User says something like… | Route to |
 |---|---|
-| "I have a folder of transcripts and an issue tree" / "I need to code these interviews" / "code and roll up these interviews" | **Interview Coding & Synthesis** — Mode 1 across all transcripts, then Mode 2 Roll-up. The default workflow. |
+| "I have a folder of transcripts and an issue tree" / "I need to code these interviews" / "code and roll up these interviews" | **Interview Coding & Synthesis** — Mode 1 across all transcripts, then Mode 2 Roll-up. The default workflow. If `Primary Research/materials/` is empty when this route triggers, offer Transcript Ingestion first (see below). |
+| "pull from Otter" / "import transcripts from Otter" / "get my Otter recordings" / "pull my recordings" / "import my interviews from Otter" | **Transcript Ingestion** — search Otter, show a numbered list for the consultant to pick from, fetch selected recordings, save to `materials/`. See Transcript Ingestion section below. |
 | "I just have a few transcripts" (≤3) / "small batch of interviews" | **Interview Coding & Synthesis** — Mode 1 only; skip Roll-up. |
 | "I have new interviews to add to an existing project" / "next round of interviews" | **Interview Coding & Synthesis** — incremental Mode 1 on new transcripts; Mode 2 against the broader card corpus. If a prior Roll-up is available, pass it as delta input (when that enhancement ships). |
 | "I want to know what the interviews have covered" / "what's missing from the corpus" / "where are the gaps" | The Roll-up's coverage table and per-branch Gaps subsections answer this. If a Roll-up doesn't exist yet, run **ICS Mode 2**. |
@@ -201,6 +202,60 @@ All sub-skills in this toolkit are anchored to the same analytical frame. Provid
 - Interview guide / research questions — workable but scope boundary must be inferred
 
 **Scope clarification** — before any sub-skill runs synthesis or coding, it will surface the branches it has identified and ask you to confirm scope. This is mandatory and happens once per session.
+
+---
+
+---
+
+## Transcript Ingestion
+
+Pulls transcripts from connected recording services directly into `Primary Research/materials/` — replacing the manual file-drop step.
+
+### When to run
+
+- Consultant explicitly asks to pull from Otter (or another connected service)
+- ICS is triggered and `Primary Research/materials/` is empty — offer Otter pull before asking for manual files
+
+### Otter connector
+
+**Step 1 — Confirm identity.**
+Call `get_user_info` (Otter MCP) to surface the authenticated account name + email. Show to the consultant for a quick sanity check before pulling.
+
+**Step 2 — Search.**
+Ask: "What should I search for — a project name or keyword, a date range, or both?" Then call `search` with the relevant params:
+- `query` — project keyword (e.g., "Calyxo")
+- `created_after` / `created_before` — YYYY/MM/DD if a date range was given
+- `title_contains` — if a meeting name fragment is known
+- `include_shared_meetings` — default `true` (includes recordings shared with the user, not just their own)
+
+**Step 3 — Show list.**
+Display results as a numbered list: title, date, first sentence of summary. Example:
+
+```
+1. Calyxo Kickoff — 2026-07-01 | "Team aligned on three growth levers and six-week timeline..."
+2. Calyxo Customer Interview: Chen — 2026-07-03 | "Discussion of renal stone recurrence rates and..."
+3. Calyxo Team Sync — 2026-07-05 | "Status check on lever 2 sourcing and interview scheduling..."
+```
+
+Ask the consultant to pick by number, a range (e.g., "2–5"), or "all." Do not proceed to fetch until they respond.
+
+**Step 4 — Fetch and save.**
+For each selected recording, call `fetch` with the meeting's speech OTID from search results. Save transcript text to `Primary Research/materials/<normalized-title>-<YYYY-MM-DD>.txt`. Normalize the filename: lowercase, spaces to hyphens, strip special characters.
+
+Report on completion:
+```
+Fetched N transcripts → saved to Primary Research/materials/:
+  - calyxo-customer-interview-chen-2026-07-03.txt
+  - calyxo-team-sync-2026-07-05.txt
+```
+
+Then ask: "Ready to run ICS on these, or do you want to pull more first?"
+
+**If search returns no results:** say so clearly, suggest refining the keyword or date range, and offer to try again or switch to manual file drop.
+
+### Granola connector
+
+*(Integration pending — connector not yet available in Cowork sessions.)* When the Granola connector is available, it will follow the same pattern: search by project keyword, show a numbered list for selection, fetch meeting notes, save to `Primary Research/materials/`. File format will be `.md`. Attribution level in ICS will default to Medium (synthesized notes), not High — Granola outputs structured summaries, not verbatim transcripts.
 
 ---
 
