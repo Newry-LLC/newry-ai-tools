@@ -134,9 +134,13 @@ Classification options:
 
 Present hypotheses as a two-column table — Claude's draft on the left, "Your edits / comments" blank on the right. The consultant fills in any changes per row; they can confirm, rewrite, or write "no view yet" for any branch.
 
+**Framing note — issue tree questions vs. hypothesis-testing:** Newry's default is to drive guides, ICS coding, and Roll-up against the **issue tree questions** (sub-branches and leaf nodes of the analytical frame), not against the hypotheses. Hypotheses are saved as reference and used for a post-fieldwork "expected vs. found" comparison — they are not the primary analytical frame. This is almost always the right approach. Flag it explicitly if the engagement lead intends something different.
+
+When presenting Chunk 1, include this note: *"Hypotheses are saved as reference for post-fieldwork comparison. Guides, ICS coding, and Roll-up will run against the issue tree questions. Let me know if you'd prefer a different framing."*
+
 **After presenting Chunk 1:** Ask two specific questions:
 - "Do these branch classifications match how your team is thinking about the workstream scope — particularly the out-of-scope calls?"
-- "Do the working hypotheses reflect what your team actually believes going in, or are there branches where you have a stronger or different view?"
+- "Do the working hypotheses reflect what your team actually believes going in? Note: these are saved as reference for post-fieldwork comparison — guides and ICS will run against the issue tree questions, not these hypotheses. Correct any that are significantly off."
 
 Incorporate any changes before moving to Chunk 2.
 
