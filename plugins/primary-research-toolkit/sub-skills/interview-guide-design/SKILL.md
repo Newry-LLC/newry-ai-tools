@@ -24,11 +24,19 @@ Takes the Research Plan (or equivalent inputs) and produces structured interview
 - **Analytical frame** in `context/` — for leaf-node questions and sub-branch coverage
 - **`project.md`** — for project name, client context, blinding status, and any constraints
 
-**If the Research Plan is missing:** do not stop. Ask the consultant directly for:
+**If the Research Plan is missing:** redirect the consultant to complete Research Plan Design first. Say:
+
+> "I don't see a Research Plan v1 in Primary Research/outputs/. The plan takes 45–60 minutes and prevents significant guide rework — it sets branch priorities, interviewee types, standardization flags, and the money slide. I'd recommend running Research Plan Design first. If you want to start there, just say 'Research Plan Design' and I'll route you. If you need to proceed without it, I can ask you for the key inputs directly — but know the guide will be less targeted."
+
+Wait for the consultant's explicit confirmation before proceeding without the Research Plan.
+
+If the consultant explicitly confirms they want to proceed without it, ask for:
 - Which branches are in scope (and which are Essential vs. Secondary)
 - Which interviewee types will be interviewed
 - The money slide — what is the key output visual the client needs to see?
 - Any standardization requirements
+
+Note in the output that the guide was built without a Research Plan and flag any decisions that should be revisited once one is produced.
 
 **Also check:**
 - Prior interview guides from similar projects in `context/` or accessible via SharePoint — useful as reference for question framing, not to copy wholesale
@@ -118,7 +126,8 @@ Build one comprehensive guide covering all branches and all interviewee types. T
 
 **[Branch name]**
 *Interviewee types this branch applies to: [list types]*
-*What we believe going in:* [working hypothesis — one sentence]
+*Issue tree question(s):* [the sub-branch question(s) from the analytical frame — these drive the interview section]
+*Team's prior view (reference):* [working hypothesis — one sentence; italic; not read aloud; used for post-fieldwork "expected vs. found" comparison only]
 
 - [Primary question 1]
   - *Probe:* [follow-up]
@@ -200,7 +209,8 @@ If the consultant wants to review a guide now, produce it in full (see guide str
 ---
 
 **[Branch name]**
-*What we believe going in:* [working hypothesis]
+*Issue tree question(s):* [sub-branch question(s) from the analytical frame]
+*Team's prior view (reference):* [working hypothesis — small, italic, not read aloud]
 
 [questions pulled from master for this type]
 
@@ -257,11 +267,11 @@ Apply standard Newry document formatting. The guide should be clean and usable d
 
 ## Design principles (inherited from PRT)
 
-- **Research Plan preferred, not required** — use it if it exists; if not, ask for the key inputs before proceeding
+- **Research Plan required, not just preferred** — if it doesn't exist, redirect to Research Plan Design first; proceed without it only with explicit consultant confirmation, and flag what's missing in the output
 - **Master guide first** — build comprehensively, then derive type-specific versions; do not build type guides in isolation
 - **Type-specific review on demand** — show the consultant the type summary; let them choose to review now or defer until prepping for that interview type
 - **Standardized questions locked after master** — confirmed after master guide review; flow into all type-specific guides before files are written
-- **Hypotheses orient the interviewer, not the interviewee** — include them in the guide as context; they are not read aloud
+- **Issue tree questions drive the guide, not hypotheses** — organize each branch section around the issue tree question(s) that branch addresses; hypotheses appear as small italic reference notes below ("Team's prior view"). Hypotheses are not read aloud and are not the primary coding frame. ICS coding and Roll-up map to issue tree questions. Hypotheses are retained for post-fieldwork "expected vs. found" comparison only.
 - **Priority focus is consultant-filled** — the 1–3 bullets at the top are left blank; the consultant fills them in before each specific interview
 - **Notes section is for real-time capture** — key quotes, numbers, reactions; not a transcript (AI note-taker handles that)
 - **Flag gaps inline** — thin branch coverage, TBD money slide, missing standardization flags — note in the output; research lead decides how to resolve
