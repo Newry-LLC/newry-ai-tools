@@ -227,7 +227,7 @@ def ensure_ppt_mcp():
                 needs_register = False
             else:
                 # Valid path but pointing to a different exe (e.g. old Python env) — update it
-                print(f"ppt-mcp: updating registration ({registered_cmd!r} → {exe})")
+                print(f"ppt-mcp: updating registration ({registered_cmd!r} -> {exe})")
                 subprocess.run(
                     [claude_bin, "mcp", "remove", "ppt-mcp", "--scope", "user"],
                     capture_output=True, text=True
@@ -316,6 +316,7 @@ def ensure_ppt_write_guard_hook():
 
 
 def main():
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     ensure_pywin32()
     ensure_ppt_mcp()
     ensure_ppt_write_guard_hook()
