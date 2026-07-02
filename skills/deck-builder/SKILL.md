@@ -319,8 +319,41 @@ All jobs look like: `{"presentation": "<name or substring>", "ops": [ ... ]}`. `
 | `build` | Make a new slide from a layout | `layout`, `fields`, optional `position` |
 | `build_chart` | Make a new slide with a live think-cell chart | `layout` (a `chart_*` one), `fields` (incl. `chart` data), optional `position` |
 | `refresh_chart` | Update a named chart's data in place (own job; works on local/OneDrive/SharePoint) | `chart_name`, `type`, `data` |
+| `fill_launch_deck` | Populate a project initiation PPT from a PLT `launch-data.json` file | `project_code` or `data_path` |
 
 `shape` is the 1-based index from `profile` / `ppt_list_shapes` (or the shape's name).
+
+---
+
+## Filling the project launch deck (`fill_launch_deck`)
+
+Auto-populate a project initiation PPT from a PLT `launch-data.json` file produced by the Project Launch Toolkit in Cowork. The user must have the project-specific copy of the initiation template already open in PowerPoint.
+
+**Trigger:** "fill the launch deck", "populate the project deck", "fill in the initiation template"
+
+**Step 1 — Find the data file.** Check in order:
+1. `~/newry-projects/<project-code>/launch-data.json`
+2. `~/Desktop/<project-code>-launch-data.json`
+3. If neither found: ask the user for the path
+
+**Step 2 — Activate the presentation.** Use `ppt_list_presentations` to confirm the initiation template is open; `ppt_activate_presentation` to target it.
+
+**Step 3 — Find each target slide by title text.** Don't rely on slide index — the user's copy may have slides added or removed. Use `ppt_get_all_text` to find the slide with a matching title, then profile that slide to locate shapes.
+
+**Step 4 — Fill each section using `edit_text_preserve` or `write_table`:**
+
+| JSON key | Target slide title (match by content) | What to fill |
+|---|---|---|
+| `problem_statement` | Contains "problem statement" or "SMART" | Situation, complication, question, objective, scope |
+| `value_creation` | Contains "value creation" or "fair share" | Category, value range, narrative, key assumptions |
+| `issue_tree` | Contains "issue tree" | Root question + issues (as text; Gantt is EM-built) |
+| `workplan` | Contains "work plan" or "workplan" | Workstream names + activity lists per workstream |
+| `ownership` | Contains "ownership and responsibilities" | Table rows: role, name, responsibilities, value creation goal, development goal |
+| `account_management` | Contains "account management" or "stakeholder" | Per-stakeholder answers to the three questions + CRM goals |
+
+**Step 5 — Skip the Gantt.** The Gantt/timeline page is EM-built against real calendar constraints — do not attempt to fill it.
+
+**Step 6 — Note what was filled and what was skipped.** If a JSON section is missing (sub-skill not yet run), skip that slide and flag it.
 
 ---
 
