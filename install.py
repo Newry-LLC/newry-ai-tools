@@ -99,66 +99,173 @@ def ensure_pywin32():
         pip_install("pywin32")
 
 
+def _find_claude_bin():
+    """Find the claude CLI binary (not reliably on PATH)."""
+    import shutil
+    import glob as _glob
+    claude_bin = shutil.which("claude")
+    if claude_bin:
+        return claude_bin
+    appdata = os.environ.get("APPDATA", "")
+    pattern = os.path.join(appdata, "Claude", "claude-code", "*", "claude.exe")
+    matches = _glob.glob(pattern)
+    return matches[0] if matches else None
+
+
+def _resolve_ppt_mcp_exe():
+    """
+    Locate ppt-mcp.exe using multiple strategies, in order:
+      1. shutil.which (works when Scripts is on PATH)
+      2. sysconfig default-scheme Scripts dir
+      3. sysconfig user-scheme Scripts dir  (common on winget/Store Python)
+      4. Derive from pip's reported 'Location' (most reliable on Store Python)
+
+    Returns an absolute path to the exe, or None if not found.
+    """
+    import shutil, sysconfig, subprocess
+
+    candidate = shutil.which("ppt-mcp")
+    if candidate and os.path.isfile(candidate):
+        return candidate
+
+    for scheme in (None, "nt_user"):
+        kwargs = {"scheme": scheme} if scheme else {}
+        scripts = sysconfig.get_path("scripts", **kwargs)
+        if scripts:
+            candidate = os.path.join(scripts, "ppt-mcp.exe")
+            if os.path.isfile(candidate):
+                return candidate
+
+    # Derive from pip show: Location is .../site-packages → Scripts is a sibling
+    r = subprocess.run(
+        [sys.executable, "-m", "pip", "show", "ppt-mcp"],
+        capture_output=True, text=True
+    )
+    for line in r.stdout.splitlines():
+        if line.startswith("Location:"):
+            location = line.split(":", 1)[1].strip()
+            scripts_dir = os.path.join(os.path.dirname(location), "Scripts")
+            candidate = os.path.join(scripts_dir, "ppt-mcp.exe")
+            if os.path.isfile(candidate):
+                return candidate
+
+    return None
+
+
+def _get_registered_ppt_mcp_cmd():
+    """
+    Read ~/.claude.json and return the registered ppt-mcp command string,
+    or None if ppt-mcp is not registered at all.
+    """
+    claude_json = os.path.expanduser(os.path.join("~", ".claude.json"))
+    if not os.path.isfile(claude_json):
+        return None
+    try:
+        with open(claude_json, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        entry = data.get("mcpServers", {}).get("ppt-mcp")
+        if entry is None:
+            return None
+        return entry.get("command")
+    except Exception:
+        return None
+
+
+def _registration_is_valid(cmd):
+    """Return True if cmd is an absolute path that exists on disk."""
+    if not cmd:
+        return False
+    return os.path.isabs(cmd) and os.path.isfile(cmd)
+
+
 def ensure_ppt_mcp():
-    """Install ppt-mcp and wire it into ~/.claude/mcp.json."""
-    import subprocess, shutil
+    """Install ppt-mcp and wire it into ~/.claude.json via claude mcp add."""
+    import subprocess
+    import importlib.metadata
 
-    # Install the package if the exe isn't already there
-    exe = shutil.which("ppt-mcp")
-    if not exe:
-        # Try to find it in the Python Scripts dir even if not on PATH
-        scripts = os.path.join(os.path.dirname(sys.executable), "Scripts", "ppt-mcp.exe")
-        if os.path.isfile(scripts):
-            exe = scripts
-
-    if not exe:
+    # --- 1. Detect installation via metadata (not exe presence) ---
+    try:
+        importlib.metadata.version("ppt-mcp")
+        print("ppt-mcp: already installed")
+    except importlib.metadata.PackageNotFoundError:
         print("ppt-mcp: not found — installing...")
-        import subprocess as _sp
-        _r = _sp.run(
+        r = subprocess.run(
             [sys.executable, "-m", "pip", "install", "ppt-mcp", "--prefer-binary"],
             capture_output=True, text=True
         )
-        if _r.returncode != 0:
-            print(f"ppt-mcp: install failed — {_r.stderr.strip()}")
+        if r.returncode != 0:
+            print(f"ppt-mcp: install failed — {r.stderr.strip()}")
             print("Run manually: pip install ppt-mcp --prefer-binary")
             return
-        scripts = os.path.join(os.path.dirname(sys.executable), "Scripts", "ppt-mcp.exe")
-        exe = scripts if os.path.isfile(scripts) else "ppt-mcp"
-    else:
-        print("ppt-mcp: already installed")
 
-    # Wire into ~/.claude.json via `claude mcp add` (the CLI reads ~/.claude.json,
-    # not ~/.claude/mcp.json — using the CLI command writes to the correct file).
-    import glob as _glob
-
-    # Find the claude CLI binary: glob for it under %APPDATA%\Claude\claude-code\
-    # since it lives in a versioned subdirectory not on PATH.
-    claude_bin = shutil.which("claude")
-    if not claude_bin:
-        appdata = os.environ.get("APPDATA", "")
-        pattern = os.path.join(appdata, "Claude", "claude-code", "*", "claude.exe")
-        matches = _glob.glob(pattern)
-        claude_bin = matches[0] if matches else None
-
-    if not claude_bin:
-        print("ppt-mcp: could not find claude CLI binary — skipping MCP registration")
-        print("  Run manually: claude mcp add ppt-mcp <path-to-ppt-mcp.exe> --scope user")
+    # --- 2. Resolve exe path robustly ---
+    exe = _resolve_ppt_mcp_exe()
+    if not exe:
+        print("ppt-mcp: could not locate ppt-mcp.exe after installation")
+        print("  On winget/Store Python, the exe is typically at:")
+        print(r"  %LOCALAPPDATA%\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0"
+              r"\LocalCache\local-packages\Python313\Scripts\ppt-mcp.exe")
+        print("  Run manually: claude mcp add ppt-mcp <full-path> --scope user")
         return
 
-    # Check if already registered
-    list_r = subprocess.run([claude_bin, "mcp", "list"], capture_output=True, text=True)
-    if "ppt-mcp" in list_r.stdout:
-        print("ppt-mcp: already registered in ~/.claude.json")
+    # --- 3. Find the claude CLI ---
+    claude_bin = _find_claude_bin()
+    if not claude_bin:
+        print("ppt-mcp: could not find claude CLI — skipping MCP registration")
+        print(f'  Run manually: claude mcp add ppt-mcp "{exe}" --scope user')
+        print(r"  (claude.exe is usually at %APPDATA%\Claude\claude-code\<version>\claude.exe)")
+        return
+
+    # --- 4. Validate existing registration; re-register if stale ---
+    registered_cmd = _get_registered_ppt_mcp_cmd()
+    needs_register = True
+
+    if registered_cmd is not None:
+        if _registration_is_valid(registered_cmd):
+            if registered_cmd == exe:
+                print(f"ppt-mcp: registration is valid ({exe})")
+                needs_register = False
+            else:
+                # Valid path but pointing to a different exe (e.g. old Python env) — update it
+                print(f"ppt-mcp: updating registration ({registered_cmd!r} → {exe})")
+                subprocess.run(
+                    [claude_bin, "mcp", "remove", "ppt-mcp", "--scope", "user"],
+                    capture_output=True, text=True
+                )
+        else:
+            # Bare name or missing path — re-register
+            print(f"ppt-mcp: existing registration is broken ({registered_cmd!r}) — re-registering...")
+            subprocess.run(
+                [claude_bin, "mcp", "remove", "ppt-mcp", "--scope", "user"],
+                capture_output=True, text=True
+            )
     else:
+        needs_register = True  # not registered at all
+
+    if needs_register or (registered_cmd is not None and not _registration_is_valid(registered_cmd)) \
+            or (registered_cmd is not None and registered_cmd != exe):
         add_r = subprocess.run(
             [claude_bin, "mcp", "add", "ppt-mcp", exe, "--scope", "user"],
             capture_output=True, text=True
         )
         if add_r.returncode == 0:
-            print("ppt-mcp: registered in ~/.claude.json via claude mcp add")
+            print(f"ppt-mcp: registered → {exe}")
         else:
             print(f"ppt-mcp: claude mcp add failed — {add_r.stderr.strip()}")
-            print("  Run manually: claude mcp add ppt-mcp <path-to-ppt-mcp.exe> --scope user")
+            print(f'  Run manually: claude mcp add ppt-mcp "{exe}" --scope user')
+            return
+
+    # --- 5. Connectivity check ---
+    list_r = subprocess.run([claude_bin, "mcp", "list"], capture_output=True, text=True)
+    ppt_line = next((l for l in list_r.stdout.splitlines() if "ppt-mcp" in l), None)
+    if ppt_line and "✔" in ppt_line:
+        print("ppt-mcp: ✔ Connected")
+    elif ppt_line:
+        print(f"ppt-mcp: registered but not yet connected — restart Claude Code for MCP to activate")
+        print(f"  ({ppt_line.strip()})")
+    else:
+        print("ppt-mcp: WARNING — not showing in `claude mcp list` after registration")
+        print("  Restart Claude Code and re-run install.py to verify")
 
 
 def ensure_ppt_write_guard_hook():
