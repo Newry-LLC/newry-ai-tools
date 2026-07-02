@@ -53,8 +53,9 @@ python %USERPROFILE%\.newry\install.py
 
 This automatically:
 1. Installs pywin32 (PowerPoint COM library)
-2. Installs ppt-mcp (PowerPoint MCP server) and wires it into `~/.claude/mcp.json`
-3. Wires all skills — including this one — into `~/.claude/CLAUDE.md`
+2. Installs ppt-mcp (PowerPoint MCP server) and wires it into `~/.claude.json`
+3. Installs a write-guard hook into `~/.claude/settings.json` (blocks unsafe ppt write tools; see Reference below)
+4. Wires all skills — including this one — into `~/.claude/CLAUDE.md`
 
 Read the output. If pywin32 or ppt-mcp install failed, stop and resolve before continuing.
 
@@ -74,7 +75,7 @@ Run the restart script to kill all Claude Code and ppt-mcp processes cleanly:
 powershell -ExecutionPolicy Bypass -File %USERPROFILE%\.newry\restart-code.ps1
 ```
 
-Then reopen Claude Code manually. A new session in the same window is not enough — the app must fully relaunch for mcp.json to be read.
+Then reopen Claude Code manually. A new session in the same window is not enough — the app must fully relaunch for `~/.claude.json` to be read.
 
 ### Step 7 — Smoke test
 
@@ -120,11 +121,30 @@ Same as Step 7 above — both checks must pass.
 
 **"No running PowerPoint instance found"** — PowerPoint isn't open, or no file is open in it. Open a deck first.
 
-**"win32com not found" / ImportError** — pywin32 not installed. Run `pip install pywin32` and restart Code.
+**"win32com not found" / ImportError** — pywin32not installed. Run `pip install pywin32` and restart Code.
 
 **Skill doesn't trigger on "ppt"** — Check that `~/.claude/CLAUDE.md` has the Newry AI Skills block. Restart Code after any CLAUDE.md change.
 
 **ppt-mcp installed but not connecting** — Run the restart script. If still failing, check Code's MCP status panel for an error message. The exe must be running; check Task Manager for `ppt-mcp.exe`.
+
+**pip shows ppt-mcp installed and registration exists, but no ppt_* tools appear (even after a full restart)**
+
+This is the winget/Store Python silent failure. The installer registered the bare string `ppt-mcp` as the command — but that string isn't on PATH, so Claude Code can never launch it. The fix:
+
+1. Re-run `install.py` (after pulling latest — the updated installer detects and repairs broken registrations automatically).
+2. Or repair manually:
+   - Find the claude CLI: `%APPDATA%\Claude\claude-code\<version>\claude.exe` (not on PATH; browse to it)
+   - Remove the broken registration: `claude mcp remove ppt-mcp --scope user`
+   - Find the full exe path. On Store Python it's typically:
+     `%LOCALAPPDATA%\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts\ppt-mcp.exe`
+   - Re-add with the full path: `claude mcp add ppt-mcp "<full-path>" --scope user`
+   - Restart Code and verify with the smoke test.
+
+**Don't attempt to re-add manually without removing first** — the installer's idempotency check will see the entry and skip repair if the broken registration is still there.
+
+**`claude` command not found when running manual mcp commands** — `claude` is typically not on PATH in user shells. The binary lives at:
+`%APPDATA%\Claude\claude-code\<version>\claude.exe`
+Browse to it in Explorer or use the full path in your terminal command.
 
 **Changes not appearing in PowerPoint** — Confirm you're looking at the right deck. The skill connects to whichever presentation is active in the running PowerPoint instance.
 
@@ -136,7 +156,8 @@ Same as Step 7 above — both checks must pass.
 |---|---|---|
 | Repo | `%USERPROFILE%\.newry\` | Skill files + future updates |
 | pywin32 | Python packages | PowerPoint COM connection |
-| ppt-mcp | Python packages + `~/.claude/mcp.json` | PowerPoint MCP tools for Claude |
+| ppt-mcp | Python packages + `~/.claude.json` | PowerPoint MCP tools for Claude |
+| Write-guard hook | `~/.claude/settings.json` (PreToolUse) | Blocks unsafe ppt write tools (`ppt_set_text`, `ppt_set_placeholder_text`, `ppt_find_replace_text`) and reroutes to `deck_writer.py` |
 | CLAUDE.md block | `%USERPROFILE%\.claude\CLAUDE.md` | Loads skills every Code session |
 
 To update in the future: `git -C %USERPROFILE%\.newry pull && python %USERPROFILE%\.newry\install.py`
