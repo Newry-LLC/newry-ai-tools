@@ -1,0 +1,142 @@
+{
+  "basicInformation": {
+    "individualId": 4131485,
+    "firstName": "ROBERT",
+    "middleName": "VERLIN",
+    "lastName": "SOLLIS",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "11/2/2007"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 282017,
+      "firmName": "TAURUM RETIREMENT PARTNERS, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "1/5/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "622665",
+          "street1": "1921 S ALMA SCHOOL ROAD SUITE 308",
+          "city": "MESA",
+          "cityAlias": [
+            "MESA"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85210",
+          "latitude": "33.386055",
+          "longitude": "-111.841322",
+          "geoLocation": "33.386055,-111.841322",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "01/04/2016"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "68279",
+      "iaSECNumberType": "801",
+      "firmId": 113189,
+      "firmName": "GALLACHER CAPITAL MANAGEMENT, LLC",
+      "city": "LONE TREE",
+      "state": "CO",
+      "country": "United States",
+      "registrationBeginDate": "10/11/2012",
+      "registrationEndDate": "12/31/2015",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "13243",
+      "iaSECNumberType": "801",
+      "firmId": 104555,
+      "firmName": "STRATEGIC ADVISERS, INC.",
+      "city": "CHANDLER",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "10/29/2007",
+      "registrationEndDate": "10/12/2012",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "1/29/2008",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "3/14/2000",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "12/31/2015",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "3/7/2000",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "1/5/2016"
+    },
+    {
+      "state": "Utah",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "8/9/2022"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
