@@ -1,0 +1,115 @@
+{
+  "basicInformation": {
+    "firmId": 167657,
+    "firmName": "IMMACULATE WEALTH MANAGEMENT, LLC",
+    "otherNames": [
+      "IMMACULATE WEALTH MANAGEMENT, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/02/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "132448",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "e3db8312-7b47-4641-b595-acdd5184cefb"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "2500 S. POWER ROAD",
+      "street2": "SUITE 111",
+      "city": "MESA",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85209"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 51972,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "3/3/2026"
+    },
+    {
+      "editionID": 51973,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "3/3/2026"
+    },
+    {
+      "editionID": 51971,
+      "type": "IA_INDVL",
+      "generatedOn": "3/3/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "4/17/2025"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "4/21/2025"
+    },
+    {
+      "secJurisdiction": "California",
+      "status": "Terminated",
+      "effectiveDate": "5/21/2025"
+    },
+    {
+      "secJurisdiction": "Michigan",
+      "status": "Terminated",
+      "effectiveDate": "12/23/2022"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Terminated",
+      "effectiveDate": "4/21/2025"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "4/17/2025"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "4/17/2025"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "4/17/2025"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1013170,
+        "brochureName": "ADV2A &2B SEC WRAP BROCHURE",
+        "dateSubmitted": "3/2/2026"
+      },
+      {
+        "brochureVersionID": 1013169,
+        "brochureName": "ADV2A & 2B SEC",
+        "dateSubmitted": "3/2/2026"
+      }
+    ]
+  }
+}
