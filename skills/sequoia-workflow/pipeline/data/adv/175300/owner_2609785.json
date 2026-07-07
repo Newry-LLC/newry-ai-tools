@@ -1,0 +1,140 @@
+{
+  "basicInformation": {
+    "individualId": 2609785,
+    "firstName": "CURT",
+    "middleName": "RANDALL",
+    "lastName": "THOMPSON",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "5/8/1997"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 175300,
+      "firmName": "GLOBAL STRATEGIC NEXTGEN OCIO",
+      "iaOnly": "Y",
+      "registrationBeginDate": "2/16/2018",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "582531",
+          "street1": "7337 EAST DOUBLETREE RANCH ROAD, SUITE C-165",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85258",
+          "latitude": "33.560513",
+          "longitude": "-111.885972",
+          "geoLocation": "33.560513,-111.885972",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "01/04/2018"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "32688",
+      "iaSECNumberType": "801",
+      "firmId": 105403,
+      "firmName": "HIRTLE, CALLAGHAN & CO., LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "3/28/1997",
+      "registrationEndDate": "1/4/2018",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "3/26/2025",
+      "disclosureType": "Civil",
+      "disclosureResolution": "Pending",
+      "isIapdExcludedCCFlag": "N",
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Initiated By": "AVERETT UNIVERSITY OF DANVILLE, VIRGINIA",
+        "Allegations": "Inclusion in complaint alongside all firm employees: Breach of Fiduciary Duty, Breach of Contract, Negligence, Va. Code \u00a7\u00a7 18.2-499, 500 and \u00a7 13.1-522(B) & (C), Exchange Act Section 10(b) and Rule 10b-5.",
+        "SanctionDetails": []
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Civil Event",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "5/17/1995",
+      "examScope": "IA"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 3",
+      "examName": "National Commodity Futures Examination",
+      "examTakenDate": "10/1/2012",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 2",
+      "examName": "Non-Member General Securities Examination",
+      "examTakenDate": "4/7/1995",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "2/16/2018"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "8/7/2018"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
