@@ -1,0 +1,157 @@
+{
+  "basicInformation": {
+    "individualId": 4816412,
+    "firstName": "ERIN",
+    "middleName": "BETH",
+    "lastName": "ITKOE",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "12/9/2004"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 337660,
+      "firmName": "LUMINESCENT WEALTH MANAGEMENT, INC.",
+      "iaOnly": "Y",
+      "registrationBeginDate": "8/28/2025",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "873159",
+          "street1": "16427 NORTH SCOTTSDALE ROAD",
+          "street2": "SUITE 410",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85254",
+          "latitude": "33.619195",
+          "longitude": "-111.951657",
+          "geoLocation": "33.619195,-111.951657",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "06/27/2025"
+        },
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "Y",
+          "city": "PHOENIX",
+          "state": "AZ",
+          "country": "United States",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "06/27/2025"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "27225",
+      "iaSECNumberType": "801",
+      "firmId": 106079,
+      "firmName": "TARBOX FAMILY OFFICE, INC.",
+      "city": "Phoenix",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "5/31/2019",
+      "registrationEndDate": "9/3/2025",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "63192",
+      "iaSECNumberType": "801",
+      "firmId": 131692,
+      "firmName": "VERSANT CAPITAL MANAGEMENT, INC.",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "1/26/2012",
+      "registrationEndDate": "5/13/2019",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "56752",
+      "iaSECNumberType": "801",
+      "firmId": 109278,
+      "firmName": "GENSPRING FAMILY OFFICES, LLC",
+      "city": "GREENWICH",
+      "state": "CT",
+      "country": "United States",
+      "registrationBeginDate": "2/21/2008",
+      "registrationEndDate": "11/30/2011",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "61228",
+      "iaSECNumberType": "801",
+      "firmId": 120747,
+      "firmName": "INLIGN WEALTH MANAGEMENT, LLC",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "9/28/2004",
+      "registrationEndDate": "5/1/2008",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 0
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "9/8/2004",
+      "examScope": "IA"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "8/28/2025"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
