@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "WATTS, JEFFREY, STEPHEN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MEMBER, CHIEF COMPLIANCE OFFICER",
+      "since": "06/2004",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "3084412",
+      "raw_id": "3084412"
+    },
+    {
+      "full_legal_name": "GWILLIAM, DANIEL, BRADFORD",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MEMBER",
+      "since": "06/2004",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2916314",
+      "raw_id": "2916314"
+    },
+    {
+      "full_legal_name": "WATTS, DAVID, BRUCE",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MEMBER",
+      "since": "06/2004",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "3095023",
+      "raw_id": "3095023"
+    }
+  ]
+}
