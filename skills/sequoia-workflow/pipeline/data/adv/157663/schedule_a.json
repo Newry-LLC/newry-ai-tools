@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "POLIT, JASON, SCOTT",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "OWNER, MANAGING MEMBER, CHIEF COMPLIANCE OFFICER",
+      "since": "06/2011",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "3050647",
+      "raw_id": "3050647"
+    },
+    {
+      "full_legal_name": "ZDRALE, ZELJKO, JAG",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "OWNER, MANAGING MEMBER",
+      "since": "06/2011",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5103342",
+      "raw_id": "5103342"
+    }
+  ]
+}
