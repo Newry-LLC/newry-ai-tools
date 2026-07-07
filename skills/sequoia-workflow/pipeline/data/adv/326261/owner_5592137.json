@@ -1,0 +1,179 @@
+{
+  "basicInformation": {
+    "individualId": 5592137,
+    "firstName": "TRENT",
+    "middleName": "ROBERT",
+    "lastName": "WHITE",
+    "otherNames": [],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "3/13/2015"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 326261,
+      "firmName": "LUMINVEST WEALTH MANAGEMENT LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "6/29/2023",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "128242",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "813396",
+          "street1": "9375 E SHEA BLVD",
+          "street2": "SUITE 100",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85260",
+          "latitude": "33.610962",
+          "longitude": "-111.890114",
+          "geoLocation": "33.610962,-111.890114",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "06/29/2023"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "21570",
+      "firmId": 7452,
+      "firmName": "VANGUARD MARKETING CORPORATION",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "7/27/2016",
+      "registrationEndDate": "7/5/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "49601",
+      "iaSECNumberType": "801",
+      "firmId": 106715,
+      "firmName": "VANGUARD ADVISERS, INC.",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "6/27/2016",
+      "registrationEndDate": "7/5/2023",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "57320",
+      "iaSECNumberType": "801",
+      "firmId": 109353,
+      "firmName": "BERNHARDT WEALTH MANAGEMENT, INC.",
+      "city": "MCLEAN",
+      "state": "VA",
+      "country": "United States",
+      "registrationBeginDate": "12/2/2014",
+      "registrationEndDate": "3/16/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "5/19/2024",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Closed-No Action",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Client alleges that the advisor invested in bond funds during a period of rising interest rates and lost a significant amount of money. The dates of the activity leading to the allegation are January 26, 2022 to October 24, 2023.",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": ""
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "7/16/2016",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "12/2/2014",
+      "examScope": "IA"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "7/27/2016",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "7/5/2023"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/29/2023"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
