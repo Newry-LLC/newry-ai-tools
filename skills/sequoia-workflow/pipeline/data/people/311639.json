@@ -1,0 +1,36 @@
+{
+  "crd": "311639",
+  "name": "Wise Wealth Partners, LLC",
+  "people": [
+    {
+      "raw_name": "RELLIHAN, BRIAN, JOSEPH",
+      "name": "Brian Joseph Rellihan",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER AND MANAGING MEMBER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "11/2020",
+      "crd": "4265943",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Brian Rellihan is both a practicing wealth manager and a finance educator, giving the firm a genuine teaching/thought-leadership angle beyond typical RIA marketing. He is an adjunct professor of finance at the Colangelo College of Business at Grand Canyon University (since ~2023), where he teaches upper-level finance courses; GCU's own faculty profile describes him as bringing over two decades of real-world experience in tax, finance, and real estate to the classroom, having prepared thousands of tax returns and managed portfolios exceeding $100M in AUM, and being an active residential real estate investor since the early 2000s. He holds a CFP, is an IRS-credentialed Enrolled Agent, and has an MBA (St. Ambrose University) plus a BA from the University of Northern Iowa and graduate accounting coursework at ASU's W.P. Carey School of Business. Career history: registered representative at TIAA-CREF Individual & Institutional Services before becoming Managing Member & Chief Compliance Officer of Wise Wealth Partners (Jul 2013-Nov 2020), then Founder/Senior Financial Advisor there from Dec 2020 \u2014 explaining the firm's TIAA custodial relationship. He also separately founded and serves as Chief Learning Officer of 721ce, LLC, a continuing-education venture focused on IRC Section 721 (UPREIT) exchanges and real estate investment strategies. On the firm's own site he is quoted: \"I'm continually surprised \u2014 not in a good way \u2014 by how many financial professionals don't prepare their own tax returns.\"",
+      "bio_source": "ZoomInfo: no individual contact record indexed for him at this firm, consistent with prior finding. Firm website (thewwp.com): founding story, quote on tax expertise, credentials (CFP, EA, MBA, 'Prof.'). Web search + GCU faculty/expert profile (via 721ce.com and GCU-sourced search summaries): confirmed adjunct professor role at Grand Canyon University's Colangelo College of Business, teaching bio detailing 20+ years in tax/finance/real estate, $100M+ AUM managed, real estate investing since early 2000s. Web search also surfaced his role as Founder/Chief Learning Officer of 721ce, LLC, and his prior employment history. No podcast, speaking, business-journal, or professional-association-leadership mentions found despite targeted searches.",
+      "bio_confidence": "high",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Wise Wealth Partners is an independent, SEC-registered fee-only RIA offering \"customized financial planning with institutional resources,\" with offices in Phoenix, AZ and Folsom, CA and nationwide client service. Founded by Brian Rellihan out of frustration with the one-size-fits-all approach at larger institutions; all advisors hold CFP credentials, and the firm emphasizes fiduciary commitment, tax-code expertise, and institutional custodial partnerships with Fidelity, TIAA, and Lincoln Financial. The firm's own site states it has been recognized by BestRate.com for financial planning excellence in both 2025 and 2026 (based on its 5-star Google review record) and cites contributions/mentions in Yahoo Finance, GoBankingRates, and U.S. News & World Report; these are firm-reported and not independently confirmed on the third-party sites. No independent local business-journal ranking or national award-list placement was found in web search.",
+    "source": "Firm website (thewwp.com, formerly wisewealthpartners.com): About/home page copy on founding story, credentials, custodians, and self-reported awards/press; web search for independent corroboration of awards and press returned no independent confirmation \u2014 noted as firm-reported only.",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "1 of 1 people checked"
+}
