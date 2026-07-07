@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "FOSTER, JOHN, EDWARD",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHAIRMAN",
+      "since": "05/1998",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "1889908",
+      "raw_id": "1889908"
+    },
+    {
+      "full_legal_name": "FOSTER, TODD, MICHAEL",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF EXECUTIVE OFFICER",
+      "since": "05/1998",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "3024634",
+      "raw_id": "3024634"
+    },
+    {
+      "full_legal_name": "POHL, BRETT, WILLIAM",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER",
+      "since": "04/2024",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "5896497",
+      "raw_id": "5896497"
+    }
+  ]
+}
