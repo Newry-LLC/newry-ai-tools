@@ -1,0 +1,50 @@
+{
+  "_comment": "Findings from the website+ZoomInfo enrichment pass (2026-07-02, second session) — corrects Phase 2's brochure-only partner check per Jack's rule that partners can come from '2B + website'. Two kinds of entries: partner_upgrades (an existing person in people.json, confirmed as an explicit 'Partner' by the website, not previously flagged) and new_partners (a person not yet in people.json, explicitly titled Partner on the website, to be added and re-ranked).",
+
+  "partner_upgrades": [
+    {"crd": "158641", "name_match": "Schoenecker", "title": "Partner & Chief Operating Officer", "quote": "David Schoenecker — Partner & Executive... Chief Operating Officer", "source": "firm website (sensiblemoney.com)"},
+    {"crd": "158641", "name_match": "Miller", "title": "Partner and Financial Planner", "quote": "CJ Miller — Partner & Executive Financial Planner", "source": "firm website (sensiblemoney.com)"},
+    {"crd": "158641", "name_match": "Shepard", "title": "Partner", "quote": "Amy Shepard — Partner & Executive Financial Planner", "source": "firm website (sensiblemoney.com)"},
+
+    {"crd": "147351", "name_match": "Siegel", "title": "Managing Partner", "quote": "Managing Partner / Wealth Advisor Director of Finance & Investments", "source": "firm website (arqwealth.com)"},
+    {"crd": "147351", "name_match": "Robinson", "title": "Co-Founder & Partner", "quote": "Co-Founder & Partner & Director, Business Development", "source": "ZoomInfo + firm website (arqwealth.com)"},
+    {"crd": "147351", "name_match": "Yocum", "title": "Partner", "quote": "Partner", "source": "ZoomInfo"},
+    {"crd": "147351", "name_match": "Mariner", "title": "Partner, Director of Strategic Planning", "quote": "Partner, Director of Strategic Planning", "source": "ZoomInfo"},
+
+    {"crd": "317615", "name_match": "Phillips", "title": "Chief Operating Officer & Partner", "quote": "Drew Phillips — Chief Operating Officer, Partner", "source": "firm website (fortitudefo.com)"},
+
+    {"crd": "299951", "name_match": "Battista", "title": "Chief Operating Officer & Partner", "quote": "Jacqueline Battista, CFP, CDFA, APMA, MBA, Partner", "source": "ZoomInfo + firm website (corepathwealth.com)"},
+    {"crd": "299951", "name_match": "Bonnett", "title": "Founding Partner", "quote": "Mark Bonnett — Founding Partner (Scottsdale, AZ)", "source": "firm website (corepathwealth.com)"},
+
+    {"crd": "282003", "name_match": "Jack", "title": "Partner and Managing Director", "quote": "Partner and Managing Director", "source": "ZoomInfo"},
+    {"crd": "282003", "name_match": "Flores", "title": "Partner and Operations Manager", "quote": "Partner and Operations Manager", "source": "ZoomInfo"},
+
+    {"crd": "173383", "name_match": "Thomas", "title": "Managing Partner", "quote": "Justin Thomas — Managing Partner (firm website leadership page)", "source": "firm website (stablefordcapital.com)"},
+
+    {"crd": "175300", "name_match": "Thompson", "title": "Managing Partner", "quote": "Curt Thompson — Managing Partner, Co-Founder", "source": "ZoomInfo + firm website (gsisus.com)"},
+    {"crd": "175300", "name_match": "Callaghan", "title": "Managing Partner", "quote": "Donald Callaghan — Managing Partner, Co-Founder", "source": "ZoomInfo + firm website (gsisus.com)"}
+  ],
+
+  "new_partners_to_add": [
+    {"crd": "147351", "firm_name": "ARQ Wealth Advisors, LLC", "name": "Jeffrey Shiffra", "title": "Partner / Senior Wealth Advisor", "source": "firm website (arqwealth.com/our-team/)", "confidence": "high"},
+    {"crd": "143420", "firm_name": "Exeter Financial, LLC", "name": "Peter Helms", "title": "Managing Partner", "source": "firm website (exeterfinancial.com/our-firm/)", "confidence": "high"},
+    {"crd": "299951", "firm_name": "Corepath Wealth Partners LLC", "name": "Rick Schultenover", "title": "CFP, Partner & CCO", "source": "firm website (corepathwealth.com/our-team)", "confidence": "high"},
+    {"crd": "317615", "firm_name": "Fortitude Family Office", "name": "James Coons", "title": "Senior Director | Tax, Partner", "source": "firm website (fortitudefo.com)", "confidence": "high"},
+    {"crd": "129415", "firm_name": "Financial Life Planners", "name": "Matt Fick", "title": "Investment Advisor Representative / Junior Partner", "source": "firm website (financiallifeplanners.com)", "confidence": "high"}
+  ],
+
+  "unresolved_entity_leads": [
+    {"crd": "317615", "firm_name": "Fortitude Family Office", "entity": "Fortitude Family Office Holdco, LLC", "lead": "Matthew Gene Walker (Founder & CEO) is plausibly the human behind the Holdco given his matching Schedule B control-person role, but no source explicitly names him as the Holdco's owner — inference, not confirmation.", "confidence": "medium"},
+    {"crd": "325721", "firm_name": "Amplify Financial, LLC", "entity": "Amplify Ventures Group, LLC", "lead": "Ron Shurts, listed as \"Co-Founder\" on Amplify's own website, has a ZoomInfo record as Co-Founder of Annexus (an insurance/annuity marketing org) — a plausible but low-confidence lead for who controls the Ventures Group entity. No corroborating source found.", "confidence": "low"},
+    {"crd": "299951", "firm_name": "Corepath Wealth Partners LLC", "entity": "Corepath Holdings LLC", "lead": "No source (ZoomInfo or website) identifies the owner. Mark Bonnett's 'Founding Partner' title is suggestive but not confirmation.", "confidence": "none"},
+    {"crd": "131692", "firm_name": "Versant Capital Management, Inc.", "entity": "Remington Revocable Trust", "lead": "No mention of a trustee or the name Remington found on the firm's team pages.", "confidence": "none"}
+  ],
+
+  "data_quality_flags": [
+    {"crd": "143420", "firm_name": "Exeter Financial, LLC", "flag": "Cached ADV brochure text appears to describe a differently-named entity (Alkeme Wealth, LLC) while the firm's live website still brands as Exeter Financial — likely a parent-entity/data artifact, not a rebrand. Worth confirming before outreach."},
+    {"crd": "337660", "firm_name": "Luminescent Wealth Management, Inc.", "flag": "Erin Itkoe has zero ZoomInfo footprint under this firm; a same-name/same-middle-initial contact exists at an unrelated firm (Tarbox Family Office) as Director of Financial Planning. Plausible same person (recent move?) but not confirmed — worth a manual check before outreach."},
+    {"crd": "152662", "firm_name": "Rovin Capital", "flag": "Website returned HTTP 502 on every attempt (site down or blocking automated fetches) — no website-based partner check was possible for this firm."},
+    {"crd": "157663", "firm_name": "Vigilare Wealth Management LLC", "flag": "Website returned connection refused on every attempt — no website-based partner check was possible for this firm."},
+    {"crd": "282003", "firm_name": "Pinnacle Peak Private Client Group, LLC", "flag": "Website has an expired SSL certificate — no website-based partner check was possible for this firm (ZoomInfo data still obtained)."}
+  ]
+}
