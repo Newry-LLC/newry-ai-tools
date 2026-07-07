@@ -1,0 +1,53 @@
+{
+  "crd": "170536",
+  "name": "Wisdom Wealth Investment Advisors LLC",
+  "people": [
+    {
+      "raw_name": "MCINERNEY, JOSEPH, DAMIAN",
+      "name": "Joseph Damian Mcinerney",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING MEMBER",
+      "is_equity_owner": true,
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "since": "01/2014",
+      "crd": "2344141",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Co-founder/Managing Member of Wisdom Wealth; has practiced since 1992 specializing in tax planning, wealth management, retirement planning, and risk management for individuals, families, and small business owners. Holds CFP (1999) and Enrolled Agent (EA, 1999) credentials \u2014 the EA license authorizes him to represent taxpayers before the IRS in all 50 states \u2014 plus a Master of Personal Financial Planning (MPAS, College for Financial Planning, 2014) and a Master of Science in Taxation (Golden Gate University, 2007).",
+      "bio_source": "U.S. News & World Report Financial Advisors directory profile (money.usnews.com/financial-advisors/advisor/joseph-mcinerney-2344141), an independent professional directory; his FINRA BrokerCheck report independently corroborates licensing history",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "BOTTLE, BLAKE, LEPAGE",
+      "name": "Blake Lepage Bottle",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING MEMBER AND CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "since": "01/2014",
+      "crd": "2065531",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Co-founder/Managing Member and Chief Compliance Officer of Wisdom Wealth. Entered the financial services business in 1990 and has operated as an independent advisor since 1998; spent over two decades affiliated with Concourse Financial Group Securities/ProEquities (1998-2022) before/alongside founding Wisdom Wealth in 2014. Earned the Chartered Financial Consultant (ChFC) designation in 1997. Holds Series 63 and 65 licenses and is a past president of the Phoenix chapter of the Society of Financial Service Professionals.",
+      "bio_source": "SmartAdvisorMatch independent advisor-network directory profile, cross-checked against his SEC IAPD report (adviserinfo.sec.gov/individual/summary/2065531)",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Wisdom Wealth Investment Advisors, LLC is an independently owned Phoenix-area advisory and financial consulting firm; its principals collectively bring more than 75 years of combined industry experience. The firm also operates tax services through an affiliated entity, JMFS, Inc.",
+    "source": "Firm website (wisdomwealth.solutions/about) corroborated by Indyfin's independent RIA directory profile",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "0 of 2 people checked"
+}
