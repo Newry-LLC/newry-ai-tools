@@ -1,0 +1,35 @@
+{
+  "crd": "169248",
+  "name": "Scottsdale Wealth Planning, Inc.",
+  "people": [
+    {
+      "raw_name": "OHANIAN, PAUL, CHRISTOPHER",
+      "name": "Paul Christopher Ohanian",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "FOUNDER, CHIEF COMPLIANCE OFFICER, CHIEF EXECUTIVE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "10/2013",
+      "crd": "1403229",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Paul Ohanian has led financial strategies for over 30 years, beginning his career as a CPA before founding Scottsdale Wealth Planning; holds a B.S. in Accounting from Southern Illinois University, Carbondale; is a CFP, CPA (inactive), and holds Series 3, 4, 63, 65, and 66 licenses plus an insurance license; his commentary has appeared in the Arizona Republic, Smart Money, and CNBC, and he contributes to the Arizona Journal of Business and Real Estate on REITs and global markets.",
+      "bio_source": "Firm site (scottsdalewealthplanning.com/our-team/); independent corroboration found via the firm's own Facebook post referencing a published article ('SWP CEO Paul Ohanian on Building Wealth Through Real Estate Investment') and third-party advisor directories (U.S. News money.usnews.com/financial-advisors/advisor/paul-ohanian-1403229, SmartAdvisorMatch, LinkedIn) confirming his CFP credential and role. Could not independently pull the underlying Arizona Republic/Smart Money/CNBC articles themselves (behind paywalls/not indexed) to confirm exact quotes \u2014 the specific media-mentions claim remains sourced to the firm's own site and secondary aggregator listings, not a directly verified independent article.",
+      "bio_confidence": "medium",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Scottsdale Wealth Planning was founded and is led by Paul Ohanian, who has served as Founder, CEO, and Chief Compliance Officer since establishing the firm; he personally directs the firm's investment strategies as chair of the SWP Investment Committee.",
+    "source": "Firm website (scottsdalewealthplanning.com/our-team/)",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "0 of 1 people checked"
+}
