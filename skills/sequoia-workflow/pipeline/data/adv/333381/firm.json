@@ -1,0 +1,86 @@
+{
+  "basicInformation": {
+    "firmId": 333381,
+    "firmName": "GPS INVESTMENTS",
+    "otherNames": [
+      "GLOBAL PORTFOLIO SOLUTIONS, INC.",
+      "GPS INVESTMENTS"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/26/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "131396",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "fab07921-6df7-47f0-bc30-f6affb61be62"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "7702 EAST DOUBLETREE RANCH ROAD",
+      "street2": "SUITE 300",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85258"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52101,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "3/27/2026"
+    },
+    {
+      "editionID": 52102,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "3/27/2026"
+    },
+    {
+      "editionID": 52103,
+      "type": "IA_INDVL",
+      "generatedOn": "3/27/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "11/5/2024"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "11/5/2024"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "3/5/2025"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1027962,
+        "brochureName": "GPS INVESTMENTS DISCLOSURE BROCHURE",
+        "dateSubmitted": "3/26/2026"
+      }
+    ]
+  }
+}
