@@ -1,0 +1,36 @@
+{
+  "crd": "306180",
+  "name": "Farnam Financial",
+  "people": [
+    {
+      "raw_name": "BIRD, JONATHAN, DAVID",
+      "name": "Jonathan David Bird",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MEMBER, CCO",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "09/2019",
+      "crd": "6290050",
+      "is_partner_mention": false,
+      "seniority_score": 55,
+      "bio_note": "Jonathan Bird's path into finance started unconventionally: at 23, while working as a personal caddy for billionaire investor Julian Robertson at the Kauri Cliffs golf resort in New Zealand (2011), Robertson recommended he read Warren Buffett's shareholder letters \u2014 an experience Bird cites as the spark for pursuing long-term, compounding-focused wealth management as a career. He spent six years at Charles Schwab, including three years managing 205 high-net-worth households and roughly $250M in assets within Schwab Private Client Investment Advisory, before leaving in 2019 to found Farnam Financial. He deliberately built Farnam smaller and more concentrated than his old Schwab book, prioritizing depth of relationship over volume. Bird holds the CFP and CWS designations and Series 63/66 licenses. He authored 'Income on Demand: Master Your Retirement Portfolio, Ignore the Market, and Leave the IRS Weeping,' which reached #1 bestseller status on Amazon, and has been featured in local profile press (Shoutout Arizona) and industry podcasts (Retirement Tax Services) discussing his career path and practice-building philosophy. He names Charlie Munger's 'Poor Charlie's Almanack' (read 5+ times) as a formative influence, and runs a Benjamin Franklin-style 'Junto' discussion group outside of work.",
+      "bio_source": "ZoomInfo: confirms title (Founder & Wealth Advisor, accuracy score 99), current and prior employer (Schwab Private Client Investment Advisory, ~3 yrs) \u2014 no enriched career narrative from the tool itself. Firm website (farnamfinancial.com/about): confirms CFP/CWS credentials, prior AUM/household figures, Amazon #1 bestseller book. Web search (primary lever): Shoutout Arizona local profile piece provided the Julian Robertson caddy story, Buffett/Munger influences, and founding philosophy; Retirement Tax Services podcast provided Schwab career detail and growth-strategy approach; additional corroboration via NAPFA member profile, LinkedIn, and SEC IAPD adviser summary.",
+      "bio_confidence": "high",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Founded by Jonathan Bird in 2019, Farnam Financial is a fee-only fiduciary RIA in Phoenix managing ~$161M for ~87 clients (avg. account ~$1.86M), focused on clients with $2M+ investable assets who are retired or within five years of retirement. Bird deliberately built the firm as a smaller, high-touch alternative to the high-volume corporate model he came from at Schwab \u2014 capping growth via paid lead generation (Smart Asset) rather than aggressive practice acquisition, and structuring service around quarterly check-ins with fast advisor access and a 24-hour response guarantee. The firm's investment philosophy centers on low-cost index investing, tax-efficient withdrawal planning, and 'peace of mind,' which Bird describes as turning a client's 'financial house into their financial castle.'",
+    "source": "Firm website (farnamfinancial.com/about) \u2014 AUM, client count, positioning, team, service model; web search of SEC/aggregator data confirming $161.4M regulatory AUM across 87 clients; web search of retirementtaxservices.com podcast interview with Bird \u2014 founding philosophy, growth strategy. No third-party firm awards or recognition found in web search.",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "1 of 1 people checked"
+}
