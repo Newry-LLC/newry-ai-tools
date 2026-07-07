@@ -15,11 +15,26 @@ The post is written from the perspective of one person — the currently-authent
 - Slack: `slack_search_users` on `to:me` context / the logged-in user, or ask if ambiguous.
 - Their name maps to a Newry Staff record for the Airtable lookup (see `references/airtable-lookup.md`).
 
-If run interactively and you don't know who "the user" is, ask once: "Whose call-in post am I drafting — you? (I'll use your Slack + Airtable identity.)"
+If run interactively and you don't know who "the user" is, ask once: "Whose call-in post am I drafting — you? (I'll use your Slack + Airtable identity.)" If `slack_search_users` returns more than one plausible match for the name, treat it as ambiguous and ask the same way rather than guessing.
 
 ## Connector preflight
 
 Before anything else, confirm the required connectors respond: **Airtable, Slack, Otter, and M365 (Outlook + SharePoint)**. **Granola** is optional — check it too if the person uses it for meeting notes. If a required connector is missing, tell the user exactly which to connect in Cowork Settings → Connectors, and stop. Do not try to work around a missing connector — a post drafted without the data sources will be wrong.
+
+## Usage logging
+
+At the start of every run — before any other work — create one record in the Airtable Plugin Usage Log. Silent and automatic; no user-facing output.
+
+- **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
+- **Tool:** `create_records_for_table`
+- **Fields:**
+  - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-07-07T14:30:00Z`)
+  - `fldNHK285dPCOdNhB` (plugin) — `"weekly_callin_post"`
+  - `fld4EyuVEhxAhPZEd` (sub_skill) — `"weekly_callin_post"`
+  - `fldmTXyfFZRpbZEvQ` (user_id) — the user's email from session context (system prompt `<user>` block); `"unknown"` if unavailable
+  - `fldu8rvXDfvi2O3jF` (project) — `""` (a run spans multiple projects, not one)
+
+If the write fails for any reason, continue silently.
 
 ## The five steps
 
@@ -28,7 +43,7 @@ Run these in order. Steps 1–2 are cheap; do them first and get the human check
 ### Step 1 — Determine the person's active projects (baseline)
 
 Full procedure and exact field IDs in **`references/airtable-lookup.md`**. In short:
-1. Find the person's Staff record.
+1. Find the person's Staff record. If no record matches (name typo, brand-new hire not yet in Airtable), don't guess — tell the user you couldn't find them in Airtable and ask them to confirm the name as it appears there, or proceed on Slack posting history alone (step 2) and flag that the baseline is Slack-only this run.
 2. Find Project Roles where Staff = them AND Type = EM, linked to a Project with Status = In Progress.
 3. That linked-project set is the **baseline candidate list**.
 
@@ -68,7 +83,7 @@ For each confirmed project, gather material since the user's last post on it (or
 
 Assemble each project into the **one standard format used by everyone**. Full template and field-by-field sourcing in **`references/post-format.md`**. Key rules:
 - **Use the standard format and field labels for every person, every project — no exceptions.** Do NOT mirror how someone posted before. Prior posts vary ("Findings/Progress", "Background/Purpose", "Update", underscore dividers); the skill's job is to normalize all of that to the single canonical template. Consistency across the channel is the goal.
-- **Project code:** use the project's established code as it's recognized in the channel (Airtable's code may differ — e.g. "IN02" vs "INGEV02"; match internally on client + fuzzy code, but the value shown should be the code the team actually uses for that project). This is a data value, not a style choice — don't invent a new code.
+- **Project code:** use the **Airtable Project Code** — that's THE code (e.g. INGEV02, DUP38). A person's channel variant (IN02, DUP038, free-form) was improvised; match internally on client + fuzzy code to find the record, but the value shown is always the Airtable code. This is a data value, not a style choice — don't invent a new code.
 - **Findings/Status is the substance** — synthesize the week's actual progress into tight bullets, grounded only in what the sources show. Do not invent progress.
 - **Issues/Risks stays conservative** — only include a risk a source actually surfaced (a concern raised in a meeting, a slipped date). Otherwise "None" — never invent a risk to fill the field.
 - Static fields (Purpose, Team) come from Airtable and rarely change week to week — carry them forward, but conform the labels to the standard.
@@ -83,3 +98,7 @@ Assemble each project into the **one standard format used by everyone**. Full te
 ## Scheduling (set up once)
 
 This skill is built to run weekly via Cowork's native `/schedule` (e.g. Tuesday ~7am). If the machine is asleep/closed at fire time, Cowork runs it on next launch — so a late catch-up run is normal and expected, which is exactly why step 5's duplicate check exists. Tell a first-time user to set up the schedule with `/schedule` after their first successful manual run.
+
+## Feedback capture
+
+Read and follow the shared feedback-capture sub-skill: `../feedback-capture/SKILL.md`. When logging: `Plugin:` → `weekly-callin-post`, `Sub-skill:` → `weekly-callin-post`.
