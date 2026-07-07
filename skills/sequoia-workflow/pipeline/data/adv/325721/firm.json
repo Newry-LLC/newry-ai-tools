@@ -1,0 +1,80 @@
+{
+  "basicInformation": {
+    "firmId": 325721,
+    "firmName": "AMPLIFY FINANCIAL, LLC",
+    "otherNames": [
+      "AMPLIFY FINANCIAL, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/30/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "128942",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "676b74ea-d4ac-4f2b-9a65-7369be131e5c"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "8605 EAST RAINTREE DRIVE",
+      "street2": "SUITE 275",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85260"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52122,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "3/31/2026"
+    },
+    {
+      "editionID": 52123,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "3/31/2026"
+    },
+    {
+      "editionID": 52124,
+      "type": "IA_INDVL",
+      "generatedOn": "3/31/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "10/20/2023"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "10/20/2023"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1034273,
+        "brochureName": "ADV PART 2A FIRM BROCHURE",
+        "dateSubmitted": "3/30/2026"
+      }
+    ]
+  }
+}
