@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "ANDREW BRINKMAN HOLDINGS LLC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER",
+      "since": "12/2016",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "REHN, MARK",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER/CHIEF FINANCIAL OFFICER",
+      "since": "02/2022",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "2069136",
+      "raw_id": "2069136"
+    },
+    {
+      "full_legal_name": "OPR HOLDINGS LLC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "MEMBER",
+      "since": "06/2023",
+      "ownership_code": "B",
+      "ownership_pct": "10-25%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    }
+  ]
+}
