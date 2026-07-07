@@ -1,0 +1,425 @@
+{
+  "firms": [
+    {
+      "crd": "105022",
+      "name": "Intrinsic Wealth Counsel, Inc.",
+      "final_people_count": 4,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "105130",
+      "name": "L. Roy Papp & Associates, LLP",
+      "final_people_count": 5,
+      "was_capped": true,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "108818",
+      "name": "Total Investment Management, Inc.",
+      "final_people_count": 3,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "113954",
+      "name": "Profocus Incorporated",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "115994",
+      "name": "R.H. Investment Group, LLC",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "116069",
+      "name": "Harmony Asset Management LLC",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "116798",
+      "name": "Eaton-Cambridge Inc.",
+      "final_people_count": 4,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "116933",
+      "name": "Sage Financial Advisors Inc.",
+      "final_people_count": 2,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "127517",
+      "name": "Wealth Management Solutions",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "128549",
+      "name": "Wealth Engineering, LLC",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "129415",
+      "name": "Financial Life Planners",
+      "final_people_count": 3,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "129597",
+      "name": "Brightscape Investment Centers",
+      "final_people_count": 2,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "131458",
+      "name": "Watts Gwilliam & Company, LLC",
+      "final_people_count": 3,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "131692",
+      "name": "Versant Capital Management, Inc.",
+      "final_people_count": 5,
+      "was_capped": true,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 1
+    },
+    {
+      "crd": "143420",
+      "name": "Exeter Financial, LLC",
+      "final_people_count": 4,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "146054",
+      "name": "Key Group Management, Inc.",
+      "final_people_count": 2,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "147351",
+      "name": "ARQ Wealth Advisors, LLC",
+      "final_people_count": 5,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "151365",
+      "name": "Biltmore Wealth Management, LLC",
+      "final_people_count": 2,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "152662",
+      "name": "Rovin Capital",
+      "final_people_count": 4,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "153410",
+      "name": "Galvin, Gaustad & Stein, LLC",
+      "final_people_count": 3,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "157663",
+      "name": "Vigilare Wealth Management LLC",
+      "final_people_count": 2,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "158641",
+      "name": "Sensible Money, LLC",
+      "final_people_count": 4,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "165214",
+      "name": "Intrinsic Value Partners, LLC",
+      "final_people_count": 2,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "167657",
+      "name": "Immaculate Wealth Management, LLC",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "168774",
+      "name": "Arbor Wealth Management, LLC",
+      "final_people_count": 5,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "169248",
+      "name": "Scottsdale Wealth Planning, Inc.",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "170536",
+      "name": "Wisdom Wealth Investment Advisors LLC",
+      "final_people_count": 2,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "172113",
+      "name": "Sierra Legacy Group",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "173383",
+      "name": "Stableford Capital LLC",
+      "final_people_count": 3,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "175300",
+      "name": "Global Strategic Nextgen Ocio",
+      "final_people_count": 5,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "282003",
+      "name": "Pinnacle Peak Private Client Group, LLC",
+      "final_people_count": 3,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "282017",
+      "name": "Taurum Retirement Partners, LLC",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "285243",
+      "name": "Releve Financial Group",
+      "final_people_count": 2,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "285932",
+      "name": "Spahn Wealth & Retirement LLC",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "291070",
+      "name": "Triton Wealth Management, Pllc",
+      "final_people_count": 4,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "298110",
+      "name": "Juncture Wealth Strategies, LLC",
+      "final_people_count": 3,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "298408",
+      "name": "Foothills Advisors, LLC",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "299951",
+      "name": "Corepath Wealth Partners LLC",
+      "final_people_count": 2,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 1
+    },
+    {
+      "crd": "306180",
+      "name": "Farnam Financial",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "311639",
+      "name": "Wise Wealth Partners, LLC",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "317615",
+      "name": "Fortitude Family Office",
+      "final_people_count": 2,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 1
+    },
+    {
+      "crd": "318258",
+      "name": "Ridgeline Private Wealth",
+      "final_people_count": 2,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "318330",
+      "name": "Zenith Wealth Advisors",
+      "final_people_count": 2,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "325721",
+      "name": "Amplify Financial, LLC",
+      "final_people_count": 5,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 1
+    },
+    {
+      "crd": "326261",
+      "name": "Luminvest Wealth Management LLC",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "328450",
+      "name": "SL Capital",
+      "final_people_count": 4,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "331395",
+      "name": "One Wealth Capital Management, LLC",
+      "final_people_count": 2,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "332192",
+      "name": "Degreen Private Wealth, LLC",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "333381",
+      "name": "GPS Investments",
+      "final_people_count": 2,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "333708",
+      "name": "Prosper Private Wealth",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "335594",
+      "name": "Wlth Capital Management, LLC",
+      "final_people_count": 1,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    },
+    {
+      "crd": "337660",
+      "name": "Luminescent Wealth Management, Inc.",
+      "final_people_count": 3,
+      "was_capped": false,
+      "non_equity_partners_added": 0,
+      "unresolved_entity_owners": 0
+    }
+  ],
+  "total_firms": 52,
+  "firms_capped": 2,
+  "firms_with_zero_people": 0,
+  "total_final_people": 127,
+  "total_non_equity_partners_added": 0
+}
