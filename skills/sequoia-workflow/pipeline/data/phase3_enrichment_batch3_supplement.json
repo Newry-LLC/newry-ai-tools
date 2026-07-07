@@ -1,0 +1,127 @@
+{
+  "169248": {
+    "firm_note": {"text": "Scottsdale Wealth Planning was founded and is led by Paul Ohanian, who has served as Founder, CEO, and Chief Compliance Officer since establishing the firm; he personally directs the firm's investment strategies as chair of the SWP Investment Committee.", "source": "Firm website (scottsdalewealthplanning.com/our-team/)", "confidence": "high"},
+    "people": {
+      "Paul Christopher Ohanian": {
+        "bio_note": "Paul Ohanian has led financial strategies for over 30 years, beginning his career as a CPA before founding Scottsdale Wealth Planning; holds a B.S. in Accounting from Southern Illinois University, Carbondale; is a CFP, CPA (inactive), and holds Series 3, 4, 63, 65, and 66 licenses plus an insurance license; his commentary has appeared in the Arizona Republic, Smart Money, and CNBC, and he contributes to the Arizona Journal of Business and Real Estate on REITs and global markets.",
+        "bio_source": "Firm site (scottsdalewealthplanning.com/our-team/); independent corroboration found via the firm's own Facebook post referencing a published article ('SWP CEO Paul Ohanian on Building Wealth Through Real Estate Investment') and third-party advisor directories (U.S. News money.usnews.com/financial-advisors/advisor/paul-ohanian-1403229, SmartAdvisorMatch, LinkedIn) confirming his CFP credential and role. Could not independently pull the underlying Arizona Republic/Smart Money/CNBC articles themselves (behind paywalls/not indexed) to confirm exact quotes — the specific media-mentions claim remains sourced to the firm's own site and secondary aggregator listings, not a directly verified independent article.",
+        "bio_confidence": "medium"
+      }
+    }
+  },
+  "333708": {
+    "firm_note": {"text": "Prosper Private Wealth is a small, Mesa, AZ-based RIA providing discretionary investment management, financial planning, and retirement-plan consulting; led by CEO Joshua Gardner.", "source": "Web search (U.S. News Financial Advisors firm profile)", "confidence": "medium"},
+    "people": {
+      "Joshua Adam Gardner": {
+        "bio_note": "Financial advisor with prior roles at Summit Global Investments and Fidelity (Fidelity Brokerage Services LLC and Fidelity Personal and Workplace Advisors). Holds Series 63 and 65 licenses; registered to provide services in Arizona and Texas.",
+        "bio_source": "Named independent source: SmartAdvisorMatch advisor profile (smartadvisormatch.com/advisor-network/arizona/joshua-gardner-4495410), corroborated by GetWarmer advisor directory and firm site. Flag: SmartAdvisorMatch's detailed timeline shows Fidelity 2013-2023 (~10 years) and Summit Global Investments 2023-present, totaling roughly 10-13 years of tracked tenure — shorter than a '24 years of experience' figure previously carried in this bio, which has been removed as unconfirmed/possibly inflated rather than silently repeated.",
+        "bio_confidence": "medium"
+      }
+    }
+  },
+  "173383": {
+    "firm_note": {"text": "Stableford Capital, formed in 2014 and based in Scottsdale, AZ, was founded by Andrew Brinkman and is led by a leadership team with deep institutional investing and tax/finance backgrounds, including Managing Partner Justin Thomas and CFO/CCO Mark Rehn.", "source": "Firm website (stablefordcapital.com/leadership/) and web search corroboration", "confidence": "high"},
+    "people": {
+      "Andrew Joseph Brinkman": {
+        "bio_note": "Founder & CEO of Stableford Capital. 45+ year career spanning A.J. Brinkman & Co. (foreign exchange arbitrageur/institutional floor broker), COO/CFO of Petros Capital (a long/short institutional hedge fund), CFO of Sequel Systems, Foreign Exchange Trader at the Chicago Mercantile Exchange, Financial Advisor roles at Baird and Merrill, and membership in the CME, NYFE, and CBOT; holds a B.A. from Cornell College.",
+        "bio_source": "Independently corroborated via Andrew Brinkman's LinkedIn profile (linkedin.com/in/andrew-brinkman-50539589), confirming prior roles at Baird and Merrill, CME/NYFE/CBOT membership, and the Cornell College degree — independent of the firm's own leadership page.",
+        "bio_confidence": "high"
+      },
+      "Justin C Thomas": {
+        "bio_note": "Partner and Managing Partner at Stableford Capital. A CPA with 15+ years of experience as a portfolio manager/analyst, including 8 years at PartnerRe Asset Management as an equity analyst and portfolio manager, plus earlier roles at Citigroup (proprietary long-short equity), Montgomery Securities/Bank of America Securities research, and E-Stamp.",
+        "bio_source": "Independently corroborated via LinkedIn (linkedin.com/in/justin-thomas-cpa-68283050) and SmartAdvisorMatch (smartadvisormatch.com/advisor-network/connecticut/justin-thomas-2819623), confirming the CPA credential and PartnerRe Asset Management tenure independent of the firm's own leadership page.",
+        "bio_confidence": "high"
+      },
+      "Mark Rehn": {
+        "bio_note": "Chief Financial Officer & Chief Compliance Officer at Stableford Capital. 35+ years in corporate finance and taxation, including a Tax Director role and Assistant General Counsel/Senior Tax Manager work; holds an LL.M. in Taxation and J.D. from DePaul University College of Law.",
+        "bio_source": "A Crain's Chicago Business 'People on the Move' URL referencing Mark Rehn exists and is indexed, but the page could not be independently loaded to confirm its content — treating this citation as unconfirmed. No independent corroboration found beyond the firm's own leadership page at this time.",
+        "bio_confidence": "medium"
+      }
+    }
+  },
+  "337660": {
+    "firm_note": {"text": "Luminescent Wealth Management, Inc. is a boutique, independently-owned, fee-only RIA in Scottsdale, AZ, co-founded in 2025 by Erin Itkoe and Trevor Scheid, both of whom previously worked together at Tarbox Family Office and Versant Capital Management before starting the firm.", "source": "Website (lumiwm.com) and web search corroboration", "confidence": "high"},
+    "people": {
+      "Erin Beth Itkoe": {
+        "bio_note": "Confirmed as the same person previously at Tarbox Family Office (Director, Financial Planning) who left to co-found Luminescent Wealth Management with Trevor Scheid in 2025. Career began in 2003; prior roles include Director of Financial Planning at Tarbox Family Office, Senior Wealth Counselor and Director of Client Experience at Versant Capital Management, and Manager of Investment Operations/Relationship Manager at GenSpring Family Offices. CPA/PFS and CFP, also an Accredited Estate Planner and Chartered Advisor in Philanthropy. Named one of Az Business Magazine's '12 Millennials to Watch' (2019), listed at Versant Capital Management, age 38, noted as president of the Financial Planning Association of Greater Phoenix. A separately-cited AICPA Personal Financial Planning Standing Ovation award (2017) could not be independently corroborated in this pass — flagged as unverified-but-stated, sourced only to the firm's own bio page.",
+        "bio_source": "'12 Millennials to Watch' independently confirmed via the original AZ Big Media article (azbigmedia.com/business/business-leaders/newsmakers/12-millennials-to-watch-in-2019/). AICPA award claim remains sourced only to tarbox.com/team/erin-itkoe/ — no AICPA press release or award list found to corroborate it independently.",
+        "bio_confidence": "medium"
+      },
+      "Erin Beth xxx-xx-xxxx ITKOE": {
+        "bio_note": "Same individual as Erin Beth Itkoe above (data artifact from trust vs. direct ownership records). Confirmed as the same person previously at Tarbox Family Office (Director, Financial Planning) who left to co-found Luminescent Wealth Management with Trevor Scheid in 2025. Career began in 2003; prior roles include Director of Financial Planning at Tarbox Family Office, Senior Wealth Counselor and Director of Client Experience at Versant Capital Management, and Manager of Investment Operations/Relationship Manager at GenSpring Family Offices. CPA/PFS and CFP, also an Accredited Estate Planner and Chartered Advisor in Philanthropy. Named one of Az Business Magazine's '12 Millennials to Watch' (2019). A separately-cited AICPA award (2017) could not be independently corroborated — flagged as unverified-but-stated.",
+        "bio_source": "'12 Millennials to Watch' independently confirmed via AZ Big Media (azbigmedia.com/business/business-leaders/newsmakers/12-millennials-to-watch-in-2019/). AICPA award claim remains sourced only to tarbox.com/team/erin-itkoe/ — unconfirmed independently.",
+        "bio_confidence": "medium"
+      },
+      "Trevor Ryan Scheid": {
+        "bio_note": "CFP; co-founded Luminescent Wealth Management with Erin Itkoe (2025); prior experience as Wealth Planner at Tarbox Family Office and Senior Client Associate at Versant Capital Management; B.S. in Finance from University of Arizona (full scholarship); member of the Financial Planning Association of Greater Phoenix.",
+        "bio_source": "Independently corroborated via Trevor Scheid's LinkedIn profile (linkedin.com/in/trevorscheid) and the Tarbox Family Office team page (tarbox.com/team/trevor-scheid-2/), both confirming Tarbox/Versant tenure and CFP credential independent of the Luminescent firm's own site.",
+        "bio_confidence": "high"
+      }
+    }
+  },
+  "115994": {
+    "firm_note": {"text": "No firm website found on record; web search (rhinvestgroup.com) confirms the firm exists and is Scottsdale-based, discretionary, high-net-worth focused, ~$164M-$238M AUM depending on source date.", "source": "web search", "confidence": "low"},
+    "people": {
+      "Ehren Mccain Haymore": {
+        "bio_note": "One of the firm's longest-tenured registered advisors, registered since 2001. Leads R.H. Investment Group (~$164.9M AUM, 100+ individual clients, 100% discretionary AUM, serving predominantly high-net-worth individuals) in Scottsdale, AZ. No biographical narrative, prior employers, or credentials beyond this were found despite an additional independent-directory check.",
+        "bio_source": "Checked \"Ehren Haymore\" alone plus CRD/individual lookup — found U.S. News Advisor Finder profile (money.usnews.com/financial-advisors/advisor/ehren-haymore-4294597), an independent directory, confirming tenure since 2001 and firm AUM/client stats. No individual employment history or narrative background found there or via SmartAdvisorMatch/BrokerCheck-style directories beyond firm-level stats.",
+        "bio_confidence": "low"
+      }
+    }
+  },
+  "157663": {
+    "firm_note": {"text": "Website (vigilarewealth.com) confirms Jason Polit and Jag Zdrale co-founded the firm; both previously worked together at Charles Schwab as Portfolio Consultants before launching Vigilare with the stated goal of protecting and growing client wealth.", "source": "vigilarewealth.com/meet-our-team", "confidence": "high"},
+    "people": {
+      "Jason Scott Polit": {
+        "bio_note": "CIO and Co-Founder of Vigilare Wealth Management, University of Arizona graduate (Cum Laude), CFA charterholder (2004), over a decade at Charles Schwab prior to Vigilare (since 2011), 19 years total industry experience. At Schwab, he helped shape and build many of its early advice offerings, led the flagship Private Client program in his final years, and served as a media liaison featured in CNBC and Reuters coverage. Also a managing member of Athlete Society LLC, providing financial coaching for professional athletes.",
+        "bio_source": "Corroborated via Jason Polit's LinkedIn profile (linkedin.com/in/jasonpolit/) and U.S. News Advisor Finder profile (money.usnews.com/financial-advisors/advisor/jason-polit-3050647), independent of the firm's own website, detailing his Schwab tenure, CNBC/Reuters media mentions, and CFA credential.",
+        "bio_confidence": "high"
+      },
+      "Zeljko Jag Zdrale": {
+        "bio_note": "Co-Founder, Global Market Strategist, and Managing Member at Vigilare Wealth Management; approximately 12 years at Charles Schwab prior, serving as a Portfolio Consultant. Holds Series 66; registered to provide services in Arizona and California.",
+        "bio_source": "Corroborated via SEC IAPD individual adviser record (adviserinfo.sec.gov/individual/summary/5103342) and Wealthminder advisor profile (wealthminder.com/financial-advisors-scottsdale-AZ/zeljko-zdrale/234057), both independent of the firm's own website, confirming his prior Charles Schwab Portfolio Consultant role and CRD-registered tenure.",
+        "bio_confidence": "high"
+      }
+    }
+  },
+  "331395": {
+    "firm_note": {"text": "No firm website was on file; web search identified the firm's actual site as onewealthmgmt.com. Firm has offices in Scottsdale, Los Angeles, Paso Robles, and Chicago, serving clients nationally.", "source": "web search / onewealthmgmt.com", "confidence": "high"},
+    "people": {
+      "Jeremy Paul Dicker": {
+        "bio_note": "Founder and CEO of One Wealth Capital Management. Started in financial services and insurance one day before his eighteenth birthday; built an 'ultra-high-touch' client philosophy; 27 years of industry experience. Employment history: MassMutual Life (Insurance Agent, since 02/2020), Guardian Life Insurance Company, and Park Avenue Securities; CEO of One Wealth since 11/2023. Holds Arizona/California insurance licenses plus Series 63 and 65; Finseca member since December 2021.",
+        "bio_source": "Confirmed via SEC IAPD individual record / BrokerCheck report for CRD 2706452 (adviserinfo.sec.gov/individual/summary/2706452; files.brokercheck.finra.org/individual/individual_2706452.pdf) — independent regulatory filings distinct from the firm's own website, detailing employment history, licenses, and Finseca membership date.",
+        "bio_confidence": "high"
+      },
+      "Jeremy Paul xxx-xx-xxxx DICKER": {
+        "bio_note": "Same individual as Jeremy Paul Dicker above (data artifact from trust vs. direct ownership records). Founder and CEO of One Wealth Capital Management. Started in financial services and insurance one day before his eighteenth birthday; built an 'ultra-high-touch' client philosophy; 27 years of industry experience. Employment history: MassMutual Life (Insurance Agent, since 02/2020), Guardian Life Insurance Company, and Park Avenue Securities; CEO of One Wealth since 11/2023. Holds Arizona/California insurance licenses plus Series 63 and 65; Finseca member since December 2021.",
+        "bio_source": "Confirmed via SEC IAPD individual record / BrokerCheck report for CRD 2706452 (adviserinfo.sec.gov/individual/summary/2706452; files.brokercheck.finra.org/individual/individual_2706452.pdf) — independent regulatory filings distinct from the firm's own website.",
+        "bio_confidence": "high"
+      }
+    }
+  },
+  "105022": {
+    "firm_note": {"text": "Website (intrinsicwealthcounsel.com/about-us) confirms an independent, fee-only financial planning and wealth management firm emphasizing integration of clients' financial lives with personal goals and 'compassionate fiduciary care.'", "source": "intrinsicwealthcounsel.com/about-us", "confidence": "high"},
+    "people": {
+      "Cornelius Henry Van zutphen": {
+        "bio_note": "Known publicly as 'Neal.' Founder and President; holds M.S., CFP, FBS (Certified Financial Behavior Specialist), and CRPC designations. Career in financial planning since 1983. Co-authored 'Financial Planner as Healer: Maximizing the Role of Financial Health Physician' with Bradley T. Klontz, Psy.D. and Kate Fries, published in the Journal of Financial Planning, Vol. 29, Issue 12 (December 2016), pages 52-59. His CFP Board Ambassador title appears on LinkedIn but was not independently corroborated beyond that in this pass. No source explicitly confirmed a family relationship to Casey Van Zutphen despite the shared surname — not assumed.",
+        "bio_source": "Journal article verified via the Financial Planning Association's own journal archive (financialplanningassociation.org/article/journal/DEC16-financial-planner-healer-maximizing-role-financial-health-physician) and cross-confirmed on ResearchGate — both independent of the firm's own website, confirming the full citation and co-authors. CFP Board Ambassador title sourced only to LinkedIn (linkedin.com/in/neal-van-zutphen), no separate roster/press confirmation found.",
+        "bio_confidence": "high"
+      },
+      "Cornelius H. Van zutphen": {
+        "bio_note": "Known publicly as 'Casey.' Partner, Chief Investment Officer, and Portfolio Manager; CFA charterholder and CFP professional; operates the firm's second office in Tustin, CA and visits the Tempe, AZ office regularly; member of the Financial Planning Association of Orange County and the CFA Society of Orange County; graduated Magna Cum Laude from the University of Arizona (B.S., Biochemistry and Molecular Biophysics) with two years of neurophysiology research; taught English in Japan and became fluent in Japanese. No source explicitly confirmed a familial relationship to Neal Van Zutphen despite the shared surname — not assumed or stated as fact.",
+        "bio_source": "Corroborated via his LinkedIn profile (linkedin.com/in/casey-van-zutphen-cfa-cfp), independent of the firm's own website, confirming CFA/CFP credentials, professional association memberships, and education/background details.",
+        "bio_confidence": "high"
+      },
+      "Daniela Urs Jones": {
+        "bio_note": "CFP and CFA charterholder; Partner at Intrinsic Wealth Counsel since 2018, focused on client life planning. Graduated Magna Cum Laude from Saint Mary's College (Notre Dame, IN) with a BBA in Finance, Marketing, and International Business. Prior to IWC, worked as a wealth manager at Barnes Investment Advisory, Inc., a Phoenix-based RIA, from May 2005 through January 2017 (~12 years). Member of CFA Society Phoenix and the Financial Planning Association of Greater Phoenix.",
+        "bio_source": "Barnes Investment Advisory tenure (May 2005-January 2017) independently confirmed via her LinkedIn profile (linkedin.com/in/daniela-jones-cfp-cfa), independent of the firm's own website — matches and specifies the previously general ~12-year figure.",
+        "bio_confidence": "high"
+      },
+      "Gieselle Lacey": {
+        "bio_note": "Chief Compliance Officer & Senior Portfolio Administrator at Intrinsic Wealth Counsel (full name Gieselle Ebot Lacey, listed on the firm's own bio page as 'Gieselle Ebot'); joined the firm in May 2015 as an Administrative Assistant and was promoted into her current role. Originally from Cameroon; has lived in Arizona for 20+ years. Graduated Summa Cum Laude from the University of Arizona (B.S., Business Administration) and holds a master's in Finance from the University of Scranton; also pursuing the IACCP designation and holds a registered paraplanner certification.",
+        "bio_source": "Checked 'Gieselle Ebot Lacey' / 'Gieselle Ebot' on LinkedIn and general web search — no independent LinkedIn profile, University of Scranton alumni mention, or professional directory listing found. The firm's own bio page (intrinsicwealthcounsel.com/about-us/gieselle-ebot/) remains the only substantive source; no independent coverage found beyond the firm's own website.",
+        "bio_confidence": "low"
+      }
+    }
+  }
+}
