@@ -1,0 +1,55 @@
+{
+  "crd": "165214",
+  "name": "Intrinsic Value Partners, LLC",
+  "people": [
+    {
+      "raw_name": "PEARL, CARTER, ALLEN",
+      "name": "Carter Allen Pearl",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING MEMBER, MEMBER, CEO",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "08/2012",
+      "crd": "1226543",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Carter Pearl has spent more than 30 years in investment management and holds the CFA designation. Before co-founding Intrinsic Value Partners in 2012, he ran his own firm, Pearl Capital Management, managing over $40 million in equity and fixed income accounts and consulting for one of Phoenix's prominent entrepreneurs and merchant bankers. Earlier in his career he worked at Phoenix investment bank Peacock, Hislop, Staley & Given authoring equity research and supporting investment banking work, and before that served as a Trust Portfolio Manager at First Interstate Trust Investments, where he oversaw 300+ accounts totaling more than $120 million and helped generate investment ideas for a roughly $1 billion equity portfolio. He currently sits on the investment committees of the Diocese of Phoenix and the Xavier Foundation, and previously served on the investment committee of The Catholic Community Foundation.",
+      "bio_source": "ivpaz.com/team and ivpaz.com/about/us (firm's own website states his investment-committee roles with the Diocese of Phoenix and the Xavier Foundation, alongside his independently-corroborated career history at Pearl Capital Management, Peacock Hislop Staley & Given, and First Interstate Trust Investments). Phase 4 verification (2026-07-03): neither organization's own site, staff roster, or public Form 990 filings name Pearl as an investment committee member -- treat that specific claim as firm-stated only.",
+      "bio_confidence": "high",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "FLACK, DANIEL, STEVEN",
+      "name": "Daniel Steven Flack",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING MEMBER, MEMBER, CCO",
+      "is_equity_owner": true,
+      "ownership_pct": "5-10%",
+      "control_person": true,
+      "since": "01/2013",
+      "crd": "4699388",
+      "is_partner_mention": false,
+      "seniority_score": 30,
+      "bio_note": "Dan Flack has 15+ years in investment management and holds the CFA designation, which he earned while working in operations, portfolio management, and investment research at a prior registered investment advisory firm before co-founding Intrinsic Value Partners with Carter Pearl in 2012 (the two had worked together for nine years prior). His path into finance was a career change \u2014 he started as an industrial engineer at a Fortune 500 service company after earning a Bachelor's degree in Systems and Industrial Engineering from the University of Arizona (1995-1998). Outside the firm, he has served on the boards of Phoenix Christian Academy, Matthew's Crossing Food Bank, and a Chandler-area church.",
+      "bio_source": "ZoomInfo: confirmed current title (Partner) and tenure only, no narrative; firm website (ivpaz.com/team, ivpaz.com/about/us): detailed engineering-to-finance career background, University of Arizona degree, and nonprofit board service; web search independently corroborated the same details and confirmed no press, awards, or speaking engagements exist beyond the firm's own materials",
+      "bio_confidence": "high",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Intrinsic Value Partners was founded in 2012 by Carter Pearl and Dan Flack after nine years working together at a prior firm. The firm runs concentrated, bottom-up U.S. equity portfolios under an explicit 'advisor for life' philosophy, deliberately staying focused on investment management and financial planning rather than expanding into adjacent services. No third-party awards, 'best places to work' recognition, or press coverage beyond the firm's own site and standard RIA directory listings were found despite targeted searches.",
+    "source": "Firm website (ivpaz.com/about/us, ivpaz.com/team); web search for third-party recognition and press came up empty",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "2 of 2 people checked"
+}
