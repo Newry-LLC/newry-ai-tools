@@ -1,0 +1,106 @@
+{
+  "basicInformation": {
+    "firmId": 333708,
+    "firmName": "PROSPER PRIVATE WEALTH",
+    "otherNames": [
+      "PROSPER PRIVATE WEALTH",
+      "PROSPER PRIVATE WEALTH, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "05/12/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "132061",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "192e649c-4618-4237-bafa-2e0bc356557c"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "4140 E BASELINE ROAD",
+      "street2": "SUITE 101",
+      "city": "MESA",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85206"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52353,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "5/13/2026"
+    },
+    {
+      "editionID": 52354,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "5/13/2026"
+    },
+    {
+      "editionID": 52352,
+      "type": "IA_INDVL",
+      "generatedOn": "5/13/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "3/5/2025"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "9/30/2025"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "3/5/2025"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "1/20/2026"
+    },
+    {
+      "jurisdiction": "New Hampshire",
+      "status": "Notice Filed",
+      "effectiveDate": "1/20/2026"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "3/5/2025"
+    },
+    {
+      "jurisdiction": "Utah",
+      "status": "Notice Filed",
+      "effectiveDate": "3/5/2025"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1044763,
+        "brochureName": "PART 2A BROCHURE",
+        "dateSubmitted": "5/12/2026"
+      }
+    ]
+  }
+}
