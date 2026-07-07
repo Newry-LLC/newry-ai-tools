@@ -1,0 +1,36 @@
+{
+  "crd": "128549",
+  "name": "Wealth Engineering, LLC",
+  "people": [
+    {
+      "raw_name": "FERNANDEZ, DAVID, JOHN",
+      "name": "David John Fernandez",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING MEMBER/CCO",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "09/2003",
+      "crd": "2718232",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "David J. Fernandez, CFP, founded Wealth Engineering, LLC in 2003 after a prior career at The Vanguard Group, where he worked as an Investment Manager and Financial Planner managing portfolios and providing planning for high-net-worth individuals and families. He holds a Bachelor's degree in Finance from Arizona State University and a Financial Planning Certificate from the College of Financial Planning in Denver, earning his CFP designation. Over more than twenty years in fee-only planning and investment advisory, he has built a public media profile: quoted on financial markets, trends, and forecasts by national outlets including The Wall Street Journal, Money Magazine, MSN Money, Business Week, and Dow Jones MarketWatch, as well as regional outlets The Arizona Republic and Research Magazine, and has contributed guidance to Kiplinger's Hotline and Investopedia.com. He is a member of NAPFA, a former director of the Phoenix Chapter of the Financial Planning Association, a former member of the Central Arizona Estate Planning Council, and organizer/director of the Phoenix Chapter's Financial Planning Week.",
+      "bio_source": "wealth-engineering.com/founder and /about (firm's own website states his media-mentions list -- WSJ, Money Magazine, MSN Money, Business Week, MarketWatch, Arizona Republic, Research Magazine, Kiplinger's, Investopedia.com -- and his NAPFA/FPA/CAEPC association roles). Phase 4 verification (2026-07-03): no independent article or archive naming Fernandez in any of these specific outlets was found; this list traces only to the firm's own self-description, not a verified article-by-article record. Treat as firm-stated, not independently confirmed.",
+      "bio_confidence": "medium",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Independent, fee-only RIA founded in 2003 by David J. Fernandez in Scottsdale, AZ (additional office in Glendale), combining ongoing investment management with comprehensive financial planning. Positions itself around full independence, fee-only/fiduciary objectivity, a deep-dive planning process, and direct client access to the principal rather than junior staff. Targets high-net-worth individuals within 5-10 years of retirement, recently retired, or navigating a life transition. Tagline: \"Simplify the complex and bring order to your financial life.\" No third-party firm awards or 'best places to work'-style recognition surfaced despite a targeted search; the firm's public profile is built primarily around the founder's media visibility rather than firm-level accolades.",
+    "source": "Firm website (wealth-engineering.com home, /about, /founder pages); web search specifically for firm-level awards/recognition returned no results naming Wealth Engineering.",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "1 of 1 people checked"
+}
