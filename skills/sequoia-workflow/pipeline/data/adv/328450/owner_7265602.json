@@ -1,0 +1,104 @@
+{
+  "basicInformation": {
+    "individualId": 7265602,
+    "firstName": "Marcus",
+    "middleName": "John",
+    "lastName": "Pimentel",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "10/27/2022"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 328450,
+      "firmName": "SL CAPITAL",
+      "iaOnly": "Y",
+      "registrationBeginDate": "12/6/2023",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "822862",
+          "street1": "20707 N PIMA RD",
+          "street2": "STE 205",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85255",
+          "latitude": "33.663643",
+          "longitude": "-111.8085",
+          "geoLocation": "33.663643,-111.8085",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "09/05/2023"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "100512",
+      "iaSECNumberType": "801",
+      "firmId": 175083,
+      "firmName": "FOUNDATIONS INVESTMENT ADVISORS LLC",
+      "city": "Phoenix",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "10/28/2022",
+      "registrationEndDate": "3/1/2024",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 0
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "10/17/2022",
+      "examScope": "IA"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "12/6/2023"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
