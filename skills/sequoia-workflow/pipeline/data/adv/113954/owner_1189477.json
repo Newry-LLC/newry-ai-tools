@@ -1,0 +1,131 @@
+{
+  "basicInformation": {
+    "individualId": 1189477,
+    "firstName": "MICHAEL",
+    "middleName": "MAURICE",
+    "lastName": "SMITH",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "8/20/2000"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 113954,
+      "firmName": "PROFOCUS INCORPORATED",
+      "iaOnly": "Y",
+      "registrationBeginDate": "8/21/2000",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "53580",
+          "street1": "5010 EAST WARNER ROAD",
+          "street2": "SUITE 202",
+          "city": "PHOENIX",
+          "cityAlias": [
+            "PHOENIX"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85044-3374",
+          "latitude": "33.341662",
+          "longitude": "-111.992412",
+          "geoLocation": "33.341662,-111.992412",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "10/03/1995"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "124789",
+      "iaSECNumberType": "801",
+      "firmId": 113954,
+      "firmName": "PROFOCUS INCORPORATED",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "8/21/2000",
+      "registrationEndDate": "12/31/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "124789",
+      "iaSECNumberType": "801",
+      "firmId": 113954,
+      "firmName": "PROFOCUS INCORPORATED",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "8/21/2000",
+      "registrationEndDate": "12/31/2014",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 1
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "10/7/1983",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "10/7/1983",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "8/21/2000"
+    },
+    {
+      "state": "Virginia",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/31/2018"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
