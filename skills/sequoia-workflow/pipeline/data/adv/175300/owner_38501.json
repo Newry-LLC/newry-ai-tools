@@ -1,0 +1,155 @@
+{
+  "basicInformation": {
+    "individualId": 38501,
+    "firstName": "DONALD",
+    "middleName": "EDWARD",
+    "lastName": "CALLAGHAN",
+    "nameSuffix": "MR.",
+    "otherNames": [
+      "DONALD EDWARD CALLAGHAN"
+    ],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "2/19/1997"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 175300,
+      "firmName": "GLOBAL STRATEGIC NEXTGEN OCIO",
+      "iaOnly": "Y",
+      "registrationBeginDate": "5/15/2015",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "582531",
+          "street1": "7337 EAST DOUBLETREE RANCH ROAD, SUITE C-165",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85258",
+          "latitude": "33.560513",
+          "longitude": "-111.885972",
+          "geoLocation": "33.560513,-111.885972",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "03/15/2015"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "32688",
+      "iaSECNumberType": "801",
+      "firmId": 105403,
+      "firmName": "HIRTLE CALLAGHAN & CO., LLC",
+      "city": "WEST CONSHOHOCKEN",
+      "state": "PA",
+      "country": "United States",
+      "registrationBeginDate": "3/12/1991",
+      "registrationEndDate": "6/2/2009",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "3/26/2025",
+      "disclosureType": "Civil",
+      "disclosureResolution": "Pending",
+      "isIapdExcludedCCFlag": "N",
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Initiated By": "AVERETT UNIVERSITY OF DANVILLE, VIRGINIA",
+        "Allegations": "Inclusion in complaint alongside all firm employees: Breach of Fiduciary Duty, Breach of Contract, Negligence, Va. Code \u00a7\u00a7 18.2-499, 500 and \u00a7 13.1-522(B) & (C), Exchange Act Section 10(b) and Rule 10b-5.",
+        "SanctionDetails": []
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Civil Event",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 3
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "3/20/2015",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "11/26/1984",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 5",
+      "examName": "Interest Rate Options Examination",
+      "examTakenDate": "10/8/1982",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "PC",
+      "examName": "AMEX Put and Call Exam",
+      "examTakenDate": "7/27/1977",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 1",
+      "examName": "Registered Representative Examination",
+      "examTakenDate": "12/6/1973",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/15/2015"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "8/1/2018"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
