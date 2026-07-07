@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "PIERCE, KIMBALL, ERIC",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "BLUE KING MOMENTUM INC OWNER",
+      "since": "07/2020",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5039592",
+      "raw_id": "5039592"
+    },
+    {
+      "full_legal_name": "STAFFIERI, MARKELL, ANTHONY",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "SNOW RIVER CORP OWNER",
+      "since": "07/2020",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5618766",
+      "raw_id": "5618766"
+    },
+    {
+      "full_legal_name": "Pierce, Whitnite",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "BLUE KING MOMENTUM INC OWNER",
+      "since": "07/2020",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "7279706",
+      "raw_id": "7279706"
+    }
+  ]
+}
