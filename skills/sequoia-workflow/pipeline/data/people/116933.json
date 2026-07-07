@@ -1,0 +1,55 @@
+{
+  "crd": "116933",
+  "name": "Sage Financial Advisors Inc.",
+  "people": [
+    {
+      "raw_name": "CHRISTENSEN, KELLY, ALAN",
+      "name": "Kelly Alan Christensen",
+      "source": "Form ADV Schedule B (indirect owner of KA & JL CHRISTENSEN FAMILY TRUST)",
+      "confidence": "high",
+      "title_or_status": "KA & JL CHRISTENSEN FAMILY TRUST TRUSTEE & BENEFICIARY",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "06/1999",
+      "crd": "2254214",
+      "is_partner_mention": false,
+      "seniority_score": 55,
+      "bio_note": "Kelly Christensen is President and Chief Compliance Officer of Sage Financial Advisors, a CFP who has spent his entire ~26-year career at the firm since joining in 1999. He studied at the University of Oregon (1980-1984) before building a long career in comprehensive financial planning, retirement, estate, investment, insurance, and tax planning, with a specialization in employee and employer benefit plans. He holds a Series 65 license and is registered to practice in Arizona and Texas. No firm-founding claim was substantiated, no press coverage or awards specific to him were found, and no professional association leadership (NAPFA, FPA) was found.",
+      "bio_source": "ZoomInfo: no matching record found \u2014 no ZoomInfo profile exists. Firm website: none exists (confirmed via Form ADV). Web search: confirmed via U.S. News Financial Advisors profile and LinkedIn \u2014 CFP designation, 26 years experience, with firm since 1999, Series 65 license, AZ/TX registration, and benefit-plan specialization confirmed across multiple advisor-directory sources. Searches for awards, press, and professional-association leadership came up empty.",
+      "bio_confidence": "medium",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "CHRISTENSEN, JULIA, L.",
+      "name": "Julia L. Christensen",
+      "source": "Form ADV Schedule B (indirect owner of KA & JL CHRISTENSEN FAMILY TRUST)",
+      "confidence": "high",
+      "title_or_status": "KA & JL CHRISTENSEN FAMILY TRUST TRUSTEE & BENEFICIARY",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "03/2015",
+      "crd": "6440567",
+      "is_partner_mention": false,
+      "seniority_score": 55,
+      "bio_note": "Julia Christensen serves as Vice President, Finance & Administration at Sage Financial Advisors (in addition to her ownership stake), having joined the firm in 2015. Before Sage, she spent her career at Bank of America, where she worked as a Manager of Commercial Banking Marketing planning client and prospect events for the commercial banking division, and earlier as a Retail & Commercial Banking Trainer, training employees across the retail and commercial divisions in finance, banking, customer service, and HR policy. She holds a Bachelor of Science from the University of Arizona. No press coverage, awards, or additional public background beyond this career history were found.",
+      "bio_source": "ZoomInfo: enrichment confirms Owner + VP Finance & Administration title (accuracy score 94) but detailed career-history fields were populated only via the public ZoomInfo profile page surfaced in web search, not the direct API call. Firm website: none exists (confirmed via Form ADV). Web search: ZoomInfo public profile page confirms prior Bank of America roles and University of Arizona BS degree. Additional targeted searches found no further corroborating detail or press.",
+      "bio_confidence": "medium",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Sage Financial Advisors Inc. is a small, long-tenured RIA team of about 7 advisors based in Scottsdale, AZ, managing roughly $270M for ~330-350 client accounts. The team includes CFPs Kelly Christensen and Sharon Bargetto alongside advisors Matthew Everroad, Jon Hermanson, and David Rauch, each with 16-20+ years of industry experience. The firm has no independent website (confirmed via its Form ADV filing) and no distinct firm-level press or awards were found; note that an unrelated, larger Pennsylvania-based firm called 'Sage Financial Group' (Cohn brothers, ~$4.2B AUM, Barron's Top 1200 recognition) shares a similar name but is a different entity and was excluded from this research.",
+    "source": "Web search: Form ADV / FinTrx firm profile confirming CRD 116933, $270M AUM, 7 employees, no website on file; advisor-directory profiles for team roster and AUM figures; web search explicitly disambiguating from the unrelated Pennsylvania 'Sage Financial Group.'",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "2 of 2 people checked"
+}
