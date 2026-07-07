@@ -1,0 +1,55 @@
+{
+  "crd": "318330",
+  "name": "Zenith Wealth Advisors",
+  "people": [
+    {
+      "raw_name": "THOMPSON, DANIEL, CHRISTOPHER",
+      "name": "Daniel Christopher Thompson",
+      "source": "Form ADV Schedule B (indirect owner of VB&T HOLDING COMPANY LLC)",
+      "confidence": "high",
+      "title_or_status": "VB&T HOLDING COMPANY LLC MANAGER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "01/2022",
+      "crd": "2656870",
+      "is_partner_mention": false,
+      "seniority_score": 55,
+      "bio_note": "President and CEO of Zenith Wealth Advisors (and its affiliated Zenith Private Bank & Trust) in Scottsdale, with the firm since 2022. A CERTIFIED FINANCIAL PLANNER. Independent sourcing confirms 17 years at First Western Trust Bank (2004-2021) but does not confirm the specific 'Regional President' title or a board seat with the Boys & Girls Clubs of Greater Scottsdale -- both are stated only on the firm's own materials and should be treated as unconfirmed rather than repeated as fact. Studied Finance at the University of Arizona and earned his CFP through the College for Financial Planning.",
+      "bio_source": "SmartAdvisorMatch advisor profile (smartadvisormatch.com/advisor-network/arizona/daniel-thompson-2656870), corroborated by LinkedIn. Phase 4 verification (2026-07-03): SmartAdvisorMatch confirms 17 years at First Western Trust Bank (2004-2021, not the previously-stated '14-17 years') but does NOT mention 'Regional President' or the Boys & Girls Clubs board seat -- both flagged as unconfirmed, firm-sourced claims.",
+      "bio_confidence": "medium",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "Warnhoff, Jenifer",
+      "name": "Jenifer Warnhoff",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "since": "01/2022",
+      "crd": "7490706",
+      "is_partner_mention": false,
+      "seniority_score": 10,
+      "bio_note": "Served as Chief Compliance Officer and Relationship Manager at Zenith Wealth Advisors (with the firm since 2022) and has since moved into a VP, Deposit Operations / BSA & AML Officer role at the affiliated Zenith Private Bank & Trust. Before Zenith, held positions at First Western Trust, Wells Fargo, BBVA USA, and Chase, giving her a substantial banking-compliance background. Holds a Bachelor of Arts from Arizona State University.",
+      "bio_source": "RocketReach professional profile and ZoomInfo listing, corroborating her career history across multiple institutions",
+      "bio_confidence": "medium",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "No parent-company complexity identified for Zenith Wealth Advisors. Note: both Thompson and Warnhoff have since moved primary roles to an affiliated entity, Zenith Private Bank & Trust, per independent sources \u2014 worth being aware of for outreach timing/accuracy, though Zenith Wealth Advisors remains their registered RIA per CRD.",
+    "source": "RocketReach and The Org listings for Daniel Thompson (theorg.com/org/zenith-private-bank-trust/org-chart/daniel-thompson) and ZoomInfo listing for Jenifer Warnhoff",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "2 of 2 people checked"
+}
