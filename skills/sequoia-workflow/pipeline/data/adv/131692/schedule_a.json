@@ -1,0 +1,96 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "CONNELLY, THOMAS, JOSEPH",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHAIRMAN EMERITUS, INVESTMENT COMMITTEE",
+      "since": "03/2004",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "1487206",
+      "raw_id": "1487206"
+    },
+    {
+      "full_legal_name": "SHABAKER, ELIZABETH, MOLLIE",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CO-CHIEF EXECUTIVE OFFICER, CHIEF COMPLIANCE OFFICER",
+      "since": "04/2012",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2925556",
+      "raw_id": "2925556"
+    },
+    {
+      "full_legal_name": "ELIZABETH M. SHABAKER REVOCABLE TRUST U/A DTD 07/19/2013",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "SHAREHOLDER",
+      "since": "07/2013",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "xxx-xx-xxxx REMINGTON REVOCABLE TRUST U/A DTD 3/28/2014",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "SHAREHOLDER",
+      "since": "07/2023",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "xxx-xx-xxxx RAMEY, ROYCE, CREIGHTON",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CO-CHIEF EXECUTIVE OFFICER, CHIEF INVESTMENT OFFICER",
+      "since": "07/2023",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "4751664",
+      "raw_id": "4751664"
+    },
+    {
+      "full_legal_name": "Kirksey, Jennifer, Wagoner",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF OPERATING OFFICER",
+      "since": "02/2025",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "7961119",
+      "raw_id": "7961119"
+    },
+    {
+      "full_legal_name": "Williams-Ramey, Aimee, Lynn",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF LEGAL OFFICER",
+      "since": "01/2026",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "7789500",
+      "raw_id": "7789500"
+    }
+  ]
+}
