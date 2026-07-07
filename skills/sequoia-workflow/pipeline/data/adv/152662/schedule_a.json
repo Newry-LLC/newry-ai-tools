@@ -1,0 +1,70 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "STAFFIERI, MATTHEW, DS",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER",
+      "since": "03/2026",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "6097488",
+      "raw_id": "6097488"
+    },
+    {
+      "full_legal_name": "PIERCE, KIMBALL, ERIC",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "COO",
+      "since": "11/2019",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5039592",
+      "raw_id": "5039592"
+    },
+    {
+      "full_legal_name": "BLUE KING MOMENTUM INC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "OWNER",
+      "since": "07/2020",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "SNOW RIVER CORP",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "OWNER",
+      "since": "07/2020",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "STAFFIERI, MARKELL, ANTHONY",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CEO",
+      "since": "04/2015",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5618766",
+      "raw_id": "5618766"
+    }
+  ]
+}
