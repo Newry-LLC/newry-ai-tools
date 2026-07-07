@@ -1,0 +1,148 @@
+{
+  "basicInformation": {
+    "individualId": 4748764,
+    "firstName": "WILLIAM",
+    "middleName": "DARRELL",
+    "lastName": "LEE",
+    "otherNames": [
+      "BILL  LEE"
+    ],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "1/22/2012"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 147351,
+      "firmName": "ARQ WEALTH ADVISORS, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "6/27/2025",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "368700",
+          "street1": "8605 E. RAINTREE DR",
+          "street2": "STE. 240",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85260",
+          "latitude": "33.610962",
+          "longitude": "-111.890114",
+          "geoLocation": "33.610962,-111.890114",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "06/16/2025"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "67681",
+      "iaSECNumberType": "801",
+      "firmId": 143456,
+      "firmName": "CLARKSTON CAPITAL PARTNERS, LLC",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "1/25/2021",
+      "registrationEndDate": "7/1/2025",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "60073",
+      "iaSECNumberType": "801",
+      "firmId": 110623,
+      "firmName": "IRONWOOD INVESTMENT COUNSEL, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "4/24/2013",
+      "registrationEndDate": "12/31/2020",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "42530",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "14685",
+      "firmId": 3978,
+      "firmName": "LINCOLN FINANCIAL ADVISORS CORPORATION",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "7/2/2010",
+      "registrationEndDate": "10/25/2011",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "2/6/2004",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "2/5/2008",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "1/30/2004",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/27/2025"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
