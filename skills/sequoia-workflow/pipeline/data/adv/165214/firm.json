@@ -1,0 +1,95 @@
+{
+  "basicInformation": {
+    "firmId": 165214,
+    "firmName": "INTRINSIC VALUE PARTNERS, LLC",
+    "otherNames": [
+      "INTRINSIC VALUE PARTNERS, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/23/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "78111",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "1903655a-1dd8-43a1-a040-aa1673347017"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "4742 N 24TH STREET",
+      "street2": "SUITE 300",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85016"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52083,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "3/24/2026"
+    },
+    {
+      "editionID": 52084,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "3/24/2026"
+    },
+    {
+      "editionID": 52082,
+      "type": "IA_INDVL",
+      "generatedOn": "3/24/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "6/11/2013"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "6/19/2013"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Terminated",
+      "effectiveDate": "1/13/2014"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "6/11/2013"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "6/11/2013"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1023733,
+        "brochureName": "ADV PART 2A - MARCH 2026",
+        "dateSubmitted": "3/23/2026"
+      }
+    ]
+  }
+}
