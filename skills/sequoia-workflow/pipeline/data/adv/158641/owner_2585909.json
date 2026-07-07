@@ -1,0 +1,188 @@
+{
+  "basicInformation": {
+    "individualId": 2585909,
+    "firstName": "DANA",
+    "middleName": "MARIE",
+    "lastName": "ANSPACH",
+    "otherNames": [
+      "DANA M ANSPACH",
+      "DANA  ANSPACH",
+      "DANA ANSPACH HENSLEY"
+    ],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "5/7/2002"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 158641,
+      "firmName": "SENSIBLE MONEY, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "7/22/2011",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "478267",
+          "street1": "4200 N MARSHALL WAY",
+          "street2": "SUITE 2",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85251",
+          "latitude": "33.494096",
+          "longitude": "-111.922881",
+          "geoLocation": "33.494096,-111.922881",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "07/14/2011"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "122994",
+      "iaSECNumberType": "801",
+      "firmId": 127517,
+      "firmName": "WEALTH MANAGEMENT SOLUTIONS",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "9/1/2006",
+      "registrationEndDate": "7/12/2011",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "firmId": 127810,
+      "firmName": "HOPKINS PARKER FINANCIAL SERVICES LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "10/29/2003",
+      "registrationEndDate": "12/31/2005",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "41517",
+      "iaSECNumberType": "801",
+      "firmId": 111133,
+      "firmName": "1ST GLOBAL ADVISORS INC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "8/29/2001",
+      "registrationEndDate": "12/31/2005",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "10/30/2002",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Closed-No Action",
+      "isIapdExcludedCCFlag": "N",
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "CUSTOMER ALLEGES UNSUITABILITY",
+        "Damage Amount Requested": "$356,134.39",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "CUSTOMER BECAME A CLIENT IN MARCH OF 2000.  SHE REQUESTED AN AGGRESSIVE INVESTMENT STRATEGY.  AFTER REVIEWING HER FINANCIAL SITUATION I REQUESTED THAT SHE SIGN A DISCLAIMER FORM SPECIFICALLY ACKNOWLEDGING THAT SHE HAD REQUESTED AN AGGRESSIVE PORTFOLIO AND THAT SHE UNDERSTOOD SHE WAS TAKING MORE RISK THAN I HAD INITIALLY RECOMMENDED AND MORE RISK THAN MIGHT BE APPROPRIATE FOR SOMEONE HER AGE.  I LEFT MERRILL LYNCH IN JULY OF 2001.  THE MARKET CONTINUED TO GO DOWN AND CUSTOMER FILED HER COMPLAINT IN OCTOBER OF 2002, 1 YEAR AND 3 MONTHS AFTER I HAD LEFT AND HAD NO CONTACT WITH HER.  UPON INVESTIGATION THE COMPLAINT WAS FOUND TO BE WITHOUT MERIT AND WAS DENIED."
+        ]
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "5/28/1999",
+      "examScope": "BOTH"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "1/10/2000",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "3/6/1995",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 4
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "7/22/2011"
+    },
+    {
+      "state": "Louisiana",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/16/2016"
+    },
+    {
+      "state": "Massachusetts",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/19/2014"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "9/8/2011"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
