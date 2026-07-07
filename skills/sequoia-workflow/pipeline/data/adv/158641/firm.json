@@ -1,0 +1,192 @@
+{
+  "basicInformation": {
+    "firmId": 158641,
+    "firmName": "SENSIBLE MONEY, LLC",
+    "otherNames": [
+      "SENSIBLE MONEY, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/27/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "110039",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "a741e22c-8691-4aef-90dc-133883545411"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "4200 N MARSHALL WAY",
+      "street2": "SUITE 2",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85251"
+    }
+  },
+  "accountantSurpriseExams": [
+    {
+      "accountantFirmName": "ARMANINO LLLP",
+      "filingDate": "12/21/2023",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "03C855CA000801D6036264E104CE8649056C8CC0"
+    }
+  ],
+  "compilationData": [
+    {
+      "editionID": 52107,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "3/28/2026"
+    },
+    {
+      "editionID": 52108,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "3/28/2026"
+    },
+    {
+      "editionID": 52109,
+      "type": "IA_INDVL",
+      "generatedOn": "3/28/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "3/22/2017"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "4/4/2017"
+    },
+    {
+      "secJurisdiction": "Louisiana",
+      "status": "Terminated",
+      "effectiveDate": "4/18/2017"
+    },
+    {
+      "secJurisdiction": "Massachusetts",
+      "status": "Terminated",
+      "effectiveDate": "4/4/2017"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Terminated",
+      "effectiveDate": "4/4/2017"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "3/22/2017"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "3/22/2017"
+    },
+    {
+      "jurisdiction": "Connecticut",
+      "status": "Notice Filed",
+      "effectiveDate": "9/10/2018"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "2/14/2019"
+    },
+    {
+      "jurisdiction": "Georgia",
+      "status": "Notice Filed",
+      "effectiveDate": "5/19/2023"
+    },
+    {
+      "jurisdiction": "Illinois",
+      "status": "Notice Filed",
+      "effectiveDate": "2/19/2019"
+    },
+    {
+      "jurisdiction": "Louisiana",
+      "status": "Notice Filed",
+      "effectiveDate": "3/22/2017"
+    },
+    {
+      "jurisdiction": "Massachusetts",
+      "status": "Notice Filed",
+      "effectiveDate": "3/22/2017"
+    },
+    {
+      "jurisdiction": "Nebraska",
+      "status": "Notice Filed",
+      "effectiveDate": "12/8/2025"
+    },
+    {
+      "jurisdiction": "New Hampshire",
+      "status": "Notice Filed",
+      "effectiveDate": "4/24/2017"
+    },
+    {
+      "jurisdiction": "New Jersey",
+      "status": "Notice Filed",
+      "effectiveDate": "5/19/2023"
+    },
+    {
+      "jurisdiction": "North Carolina",
+      "status": "Notice Filed",
+      "effectiveDate": "11/30/2018"
+    },
+    {
+      "jurisdiction": "Ohio",
+      "status": "Notice Filed",
+      "effectiveDate": "5/19/2023"
+    },
+    {
+      "jurisdiction": "Pennsylvania",
+      "status": "Notice Filed",
+      "effectiveDate": "5/19/2023"
+    },
+    {
+      "jurisdiction": "South Carolina",
+      "status": "Notice Filed",
+      "effectiveDate": "11/30/2018"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "3/22/2017"
+    },
+    {
+      "jurisdiction": "Virginia",
+      "status": "Notice Filed",
+      "effectiveDate": "3/30/2021"
+    },
+    {
+      "jurisdiction": "Washington",
+      "status": "Notice Filed",
+      "effectiveDate": "1/27/2022"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1029689,
+        "brochureName": "SM FORM ADV PART 2A - 2024-6-11",
+        "dateSubmitted": "3/27/2026"
+      }
+    ]
+  }
+}
