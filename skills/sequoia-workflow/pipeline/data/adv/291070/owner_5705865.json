@@ -1,0 +1,202 @@
+{
+  "basicInformation": {
+    "individualId": 5705865,
+    "firstName": "MICHAEL",
+    "middleName": "CLAWSON",
+    "lastName": "BIRD",
+    "otherNames": [
+      "MICHAEL  BIRD",
+      "MIKE C. BIRD"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "10/4/2009"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 291070,
+      "firmName": "TRITON WEALTH MANAGEMENT, PLLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "1/16/2019",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "114305",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "13211 N 103RD AVE, STE. 4",
+          "city": "Sun City",
+          "cityAlias": [
+            "SUN CITY"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85351",
+          "latitude": "33.601982",
+          "longitude": "-112.286274",
+          "geoLocation": "33.601982,-112.286274",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "11/19/2018"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "69290",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "48385",
+      "firmId": 38751,
+      "firmName": "LEIGH BALDWIN & CO., LLC",
+      "city": "Sun City",
+      "state": "AZ",
+      "registrationBeginDate": "9/5/2019",
+      "registrationEndDate": "1/11/2022",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "46844",
+      "firmId": 35747,
+      "firmName": "PURSHE KAPLAN STERLING INVESTMENTS",
+      "city": "Sun City",
+      "state": "AZ",
+      "registrationBeginDate": "10/14/2016",
+      "registrationEndDate": "1/18/2018",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "17983",
+      "firmId": 6694,
+      "firmName": "RAYMOND JAMES FINANCIAL SERVICES, INC.",
+      "city": "SUN CITY",
+      "state": "AZ",
+      "registrationBeginDate": "10/25/2011",
+      "registrationEndDate": "10/10/2016",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "3297",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "759",
+      "firmId": 250,
+      "firmName": "EDWARD JONES",
+      "city": "SUN CITY",
+      "state": "AZ",
+      "registrationBeginDate": "9/25/2009",
+      "registrationEndDate": "10/17/2011",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "79198",
+      "iaSECNumberType": "801",
+      "firmId": 148107,
+      "firmName": "KINGSVIEW ASSET MANAGEMENT, LLC",
+      "city": "Sun City",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "10/31/2016",
+      "registrationEndDate": "2/28/2019",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "69815",
+      "iaSECNumberType": "801",
+      "firmId": 149018,
+      "firmName": "RAYMOND JAMES FINANCIAL SERVICES ADVISORS, INC",
+      "city": "SUN CITY",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "11/8/2011",
+      "registrationEndDate": "10/10/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "3297",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "759",
+      "firmId": 250,
+      "firmName": "EDWARD JONES",
+      "city": "SUN CITY",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "10/22/2009",
+      "registrationEndDate": "10/17/2011",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "10/9/2009",
+      "examScope": "BOTH"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "1/18/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "9/24/2009",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "1/16/2019"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
