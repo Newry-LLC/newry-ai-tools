@@ -1,0 +1,70 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "YOCUM, GREGORY, COURTLAND",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER / CHIEF COMPLIANCE OFFICER",
+      "since": "05/2008",
+      "ownership_code": "B",
+      "ownership_pct": "10-25%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2981407",
+      "raw_id": "2981407"
+    },
+    {
+      "full_legal_name": "SIEGEL, RICHARD, ALAN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER",
+      "since": "05/2008",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2857109",
+      "raw_id": "2857109"
+    },
+    {
+      "full_legal_name": "ROBINSON, JAMES, NELSON",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MEMBER",
+      "since": "01/2015",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "6323466",
+      "raw_id": "6323466"
+    },
+    {
+      "full_legal_name": "MARINER, CARL, STEVEN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "PARTNER/DIRECTOR OF STRATEGIC PLANNING",
+      "since": "09/2024",
+      "ownership_code": "A",
+      "ownership_pct": "5-10%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5606261",
+      "raw_id": "5606261"
+    },
+    {
+      "full_legal_name": "LEE, WILLIAM, DARRELL",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MEMBER",
+      "since": "06/2025",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "4748764",
+      "raw_id": "4748764"
+    }
+  ]
+}
