@@ -1,0 +1,160 @@
+{
+  "basicInformation": {
+    "individualId": 4366566,
+    "firstName": "DAWN",
+    "middleName": "DEBORAH",
+    "lastName": "JURKOVICH",
+    "otherNames": [
+      "DAWN  DEBORAH DAHLBY",
+      "Dawn Dahlby Jurkovich"
+    ],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "11/20/2006"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 285243,
+      "firmName": "RELEVE FINANCIAL GROUP",
+      "iaOnly": "Y",
+      "registrationBeginDate": "12/2/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "Y",
+          "city": "FOUNTAIN HILLS",
+          "state": "AZ",
+          "country": "United States",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "06/01/2018"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "78194",
+      "iaSECNumberType": "801",
+      "firmId": 167908,
+      "firmName": "NORTHROCK PARTNERS, LLC",
+      "city": "MINNEAPOLIS",
+      "state": "MN",
+      "country": "United States",
+      "registrationBeginDate": "12/9/2013",
+      "registrationEndDate": "1/3/2017",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "28543",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16791",
+      "firmId": 6363,
+      "firmName": "AMERIPRISE FINANCIAL SERVICES, INC.",
+      "city": "MINNEAPOLIS",
+      "state": "MN",
+      "country": "United States",
+      "registrationBeginDate": "10/3/2006",
+      "registrationEndDate": "10/21/2013",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "6/28/2007",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Withdrawn",
+      "isIapdExcludedCCFlag": "N",
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "THE CLIENT ALLEGES THE USE OF A VARIABLE ANNUITY WITHIN HER INVESTMENT PORTFOLIO IS UNSUITABLE FOR HER AGE.",
+        "Damage Amount Requested": "$5,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "WE RECEIVED WRITTEN CONFIRMATION FROM THE CLIENT THAT THEY WOULD LIKE TO WITHFRAW THE COMPLAINT AGAINST THE ADVISOR."
+        ]
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "4/13/2001",
+      "examScope": "BOTH"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "7/17/2015",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "4/6/2001",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 3
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/10/2018"
+    },
+    {
+      "state": "Minnesota",
+      "regScope": "IA",
+      "status": "APP_PEND_IARCE",
+      "regDate": "12/2/2016"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "1/4/2021"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
