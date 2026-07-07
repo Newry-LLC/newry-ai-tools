@@ -1,0 +1,140 @@
+{
+  "basicInformation": {
+    "individualId": 2916314,
+    "firstName": "DANIEL",
+    "middleName": "BRADFORD",
+    "lastName": "GWILLIAM",
+    "nameSuffix": "JR",
+    "otherNames": [
+      "BRAD  GWILLIAM JR"
+    ],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "6/16/2004"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 131458,
+      "firmName": "WATTS GWILLIAM & COMPANY, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "6/17/2004",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "2730 S. VAL VISTA DR.",
+          "street2": "STE 124",
+          "city": "GILBERT",
+          "cityAlias": [
+            "GILBERT"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85296",
+          "latitude": "33.335629",
+          "longitude": "-111.755872",
+          "geoLocation": "33.335629,-111.755872",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "10/20/2006"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "12/27/2002",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "CUSTOMER ALLEGES UNSUITABLE INVESTMENTS, FAILURE TO DIVERSIFY AND FAILURE TO DISCLOSE RISKS.",
+        "Damage Amount Requested": "$5,000,000.00",
+        "Settlement Amount": "$141,250.00",
+        "DisplayAAOLinkIfExists": "Y",
+        "arbitrationClaimFiledDetail": "2002-011157",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "THE CLAIMS WERE SETTLED WITH NO ADMISSION OF WRONGDOING TO AVOID THE TIME AND EXPENSE OF A HEARING."
+        ]
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 3,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "5/22/2004",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "9/7/1999",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "7/28/1997",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "3/30/1999",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "7/28/1997",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/17/2004"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
