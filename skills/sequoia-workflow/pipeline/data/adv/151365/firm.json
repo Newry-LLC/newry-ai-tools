@@ -1,0 +1,171 @@
+{
+  "basicInformation": {
+    "firmId": 151365,
+    "firmName": "BILTMORE WEALTH MANAGEMENT, LLC",
+    "otherNames": [
+      "APOLLO DESIGNS, LLC",
+      "BILTMORE WEALTH MANAGEMENT, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "02/17/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "81007",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "b36250a6-5593-4b9e-b670-e8c59470646c"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "1400 E. SOUTHERN AVENUE",
+      "street2": "SUITE 650",
+      "city": "TEMPE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85282"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 51915,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "2/18/2026"
+    },
+    {
+      "editionID": 51916,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "2/18/2026"
+    },
+    {
+      "editionID": 51914,
+      "type": "IA_INDVL",
+      "generatedOn": "2/18/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "2/25/2015"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "2/26/2015"
+    },
+    {
+      "secJurisdiction": "California",
+      "status": "Terminated",
+      "effectiveDate": "3/27/2015"
+    },
+    {
+      "secJurisdiction": "Florida",
+      "status": "Terminated",
+      "effectiveDate": "2/26/2015"
+    },
+    {
+      "secJurisdiction": "New York",
+      "status": "Terminated",
+      "effectiveDate": "2/26/2015"
+    },
+    {
+      "secJurisdiction": "Oklahoma",
+      "status": "Terminated",
+      "effectiveDate": "2/25/2015"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Terminated",
+      "effectiveDate": "2/26/2015"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "2/25/2015"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "2/25/2015"
+    },
+    {
+      "jurisdiction": "Colorado",
+      "status": "Notice Filed",
+      "effectiveDate": "2/29/2016"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "2/25/2015"
+    },
+    {
+      "jurisdiction": "Louisiana",
+      "status": "Notice Filed",
+      "effectiveDate": "4/15/2015"
+    },
+    {
+      "jurisdiction": "Michigan",
+      "status": "Notice Filed",
+      "effectiveDate": "2/25/2015"
+    },
+    {
+      "jurisdiction": "New York",
+      "status": "Notice Filed",
+      "effectiveDate": "2/25/2015"
+    },
+    {
+      "jurisdiction": "North Carolina",
+      "status": "Notice Filed",
+      "effectiveDate": "4/15/2015"
+    },
+    {
+      "jurisdiction": "Ohio",
+      "status": "Notice Filed",
+      "effectiveDate": "2/17/2026"
+    },
+    {
+      "jurisdiction": "Oklahoma",
+      "status": "Notice Filed",
+      "effectiveDate": "2/25/2015"
+    },
+    {
+      "jurisdiction": "Tennessee",
+      "status": "Notice Filed",
+      "effectiveDate": "2/29/2016"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "2/25/2015"
+    },
+    {
+      "jurisdiction": "Washington",
+      "status": "Notice Filed",
+      "effectiveDate": "2/25/2015"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1009549,
+        "brochureName": "ADV PART 2A - FIRM BROCHURE",
+        "dateSubmitted": "2/17/2026"
+      }
+    ]
+  }
+}
