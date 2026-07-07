@@ -1,0 +1,307 @@
+{
+  "basicInformation": {
+    "individualId": 3121253,
+    "firstName": "MATTHEW",
+    "middleName": "JOSEPH",
+    "lastName": "FIGUEROA",
+    "otherNames": [
+      "MATT  FIGUEROA"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "1/28/1999"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 153902,
+      "firmName": "ASHTON THOMAS PRIVATE WEALTH",
+      "iaOnly": "Y",
+      "registrationBeginDate": "3/4/2026",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "71512",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "18867 North Thompson Peak Parkway",
+          "street2": "Suite 225",
+          "city": "Scottsdale",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85255",
+          "latitude": "33.663643",
+          "longitude": "-111.8085",
+          "geoLocation": "33.663643,-111.8085",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "03/04/2026"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "46844",
+      "firmId": 35747,
+      "firmName": "PURSHE KAPLAN STERLING INVESTMENTS",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "registrationBeginDate": "9/8/2021",
+      "registrationEndDate": "12/31/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "56943",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "12680",
+      "firmId": 70,
+      "firmName": "BCG SECURITIES, INC.",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "registrationBeginDate": "1/10/2017",
+      "registrationEndDate": "9/9/2021",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "46844",
+      "firmId": 35747,
+      "firmName": "PURSHE KAPLAN STERLING INVESTMENTS",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "registrationBeginDate": "4/1/2016",
+      "registrationEndDate": "1/11/2017",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "28543",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16791",
+      "firmId": 6363,
+      "firmName": "AMERIPRISE FINANCIAL SERVICES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "10/5/2009",
+      "registrationEndDate": "4/1/2016",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "16752",
+      "firmId": 5979,
+      "firmName": "AMERIPRISE ADVISOR SERVICES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "1/13/2000",
+      "registrationEndDate": "10/5/2009",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "27154",
+      "firmId": 7471,
+      "firmName": "PRUDENTIAL SECURITIES INCORPORATED",
+      "city": "NEW YORK",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "1/29/1999",
+      "registrationEndDate": "1/12/2000",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "110993",
+      "iaSECNumberType": "801",
+      "firmId": 282003,
+      "firmName": "PINNACLE PEAK PRIVATE CLIENT GROUP, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "4/18/2016",
+      "registrationEndDate": "3/11/2026",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "56943",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "12680",
+      "firmId": 70,
+      "firmName": "BCG SECURITIES, INC.",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "1/19/2017",
+      "registrationEndDate": "9/9/2021",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "28543",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16791",
+      "firmId": 6363,
+      "firmName": "AMERIPRISE FINANCIAL SERVICES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "10/5/2009",
+      "registrationEndDate": "4/1/2016",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "bdSECNumber": "16752",
+      "firmId": 5979,
+      "firmName": "AMERIPRISE ADVISOR SERVICES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "8/21/2007",
+      "registrationEndDate": "10/5/2009",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 5
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "8/14/2007",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "2/15/1999",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 52TO",
+      "examName": "Municipal Securities Representative Examination",
+      "examTakenDate": "1/2/2023",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6TO",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "1/2/2023",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 31",
+      "examName": "Futures Managed Funds Examination",
+      "examTakenDate": "2/12/2009",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "1/27/1999",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 8
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/11/2026"
+    },
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/4/2026"
+    },
+    {
+      "state": "Maryland",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/4/2026"
+    },
+    {
+      "state": "Michigan",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/12/2026"
+    },
+    {
+      "state": "Oklahoma",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/12/2026"
+    },
+    {
+      "state": "Oregon",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/17/2026"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/4/2026"
+    },
+    {
+      "state": "Virginia",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/12/2026"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
