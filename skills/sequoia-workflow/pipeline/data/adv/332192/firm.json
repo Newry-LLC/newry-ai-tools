@@ -1,0 +1,81 @@
+{
+  "basicInformation": {
+    "firmId": 332192,
+    "firmName": "DEGREEN PRIVATE WEALTH, LLC",
+    "otherNames": [
+      "DEGREEN PRIVATE WEALTH, LLC",
+      "GIBSON PRIVATE WEALTH, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/11/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "130724",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "addaafcb-9e0d-4568-8cdc-b0c23ace971c"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "14301 N 87TH ST",
+      "street2": "SUITE 117",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85260"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52023,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "3/12/2026"
+    },
+    {
+      "editionID": 52024,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "3/12/2026"
+    },
+    {
+      "editionID": 52022,
+      "type": "IA_INDVL",
+      "generatedOn": "3/12/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "7/22/2024"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "7/22/2024"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1017594,
+        "brochureName": "FORM ADV PART 2A FIRM BROCHURE",
+        "dateSubmitted": "3/11/2026"
+      }
+    ]
+  }
+}
