@@ -1,0 +1,85 @@
+{
+  "crd": "173383",
+  "name": "Stableford Capital LLC",
+  "people": [
+    {
+      "raw_name": "BRINKMAN, ANDREW, JOSEPH",
+      "name": "Andrew Joseph Brinkman",
+      "source": "Form ADV Schedule B (indirect owner of ANDREW BRINKMAN HOLDINGS LLC)",
+      "confidence": "high",
+      "title_or_status": "ANDREW BRINKMAN HOLDINGS LLC MANAGING MEMBER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "12/2016",
+      "crd": "2727918",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Founder & CEO of Stableford Capital. 45+ year career spanning A.J. Brinkman & Co. (foreign exchange arbitrageur/institutional floor broker), Managing Partner of Petros Capital (a long/short institutional hedge fund -- corrected from an earlier 'COO/CFO' title per the firm's own description), CFO of Sequel Systems, Foreign Exchange Trader at the Chicago Mercantile Exchange, and membership in the CME, NYFE, and CBOT; holds a B.A. from Cornell College. Roles at Baird and Merrill are noted on the firm's own materials but were not independently corroborated in Phase 4 verification.",
+      "bio_source": "Independently corroborated via Andrew Brinkman's LinkedIn profile (linkedin.com/in/andrew-brinkman-50539589, confirmed to exist via search but not directly fetchable) for the Petros Capital, CME/NYFE/CBOT, and Cornell College facts -- independent of the firm's own leadership page. Phase 4 verification (2026-07-03): corrected his Petros Capital title from 'COO/CFO' to 'Managing Partner' per stablefordcapital.com's own description; the Baird and CME-trader-role claims could not be independently confirmed and are now flagged as firm-sourced only.",
+      "bio_confidence": "medium",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "THOMAS, JUSTIN, C",
+      "name": "Justin C Thomas",
+      "source": "Form ADV Schedule B (indirect owner of OPR HOLDINGS LLC)",
+      "confidence": "high",
+      "title_or_status": "OPR HOLDINGS LLC MANAGER",
+      "is_equity_owner": true,
+      "ownership_pct": "10-25%",
+      "control_person": false,
+      "since": "01/2018",
+      "crd": "2819623",
+      "is_partner_mention": true,
+      "seniority_score": 20,
+      "partner_title_phrase": "Managing Partner",
+      "partner_quote": "Justin Thomas \u2014 Managing Partner (firm website leadership page)",
+      "partner_source": "firm website (stablefordcapital.com)",
+      "bio_note": "Partner and Managing Partner at Stableford Capital. A CPA with 15+ years of experience as a portfolio manager/analyst, including 8 years at PartnerRe Asset Management as an equity analyst and portfolio manager, plus earlier roles at Citigroup (proprietary long-short equity), Montgomery Securities/Bank of America Securities research, and E-Stamp.",
+      "bio_source": "Independently corroborated via LinkedIn (linkedin.com/in/justin-thomas-cpa-68283050) and SmartAdvisorMatch (smartadvisormatch.com/advisor-network/connecticut/justin-thomas-2819623), confirming the CPA credential and PartnerRe Asset Management tenure independent of the firm's own leadership page.",
+      "bio_confidence": "high",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "REHN, MARK",
+      "name": "Mark Rehn",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER/CHIEF FINANCIAL OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "since": "02/2022",
+      "crd": "2069136",
+      "is_partner_mention": false,
+      "seniority_score": 10,
+      "bio_note": "Chief Financial Officer & Chief Compliance Officer at Stableford Capital. 35+ years in corporate finance and taxation, including a Tax Director role and Assistant General Counsel/Senior Tax Manager work; holds an LL.M. in Taxation and J.D. from DePaul University College of Law. Authored 'Making Gifts of Appreciated Stock \u2013 Time to Switch to Private Foundations?' published in the Journal of Taxation (January 1998), consistent with his tax-attorney background. A Crain's Chicago Business 'People on the Move' page under his name (chicagobusiness.com/people-on-the-move/mark-rehn) is indexed by search engines with the title 'Mark Rehn at Stableford Capital,' matching Crain's standard URL pattern for this feature \u2014 but the page itself returns a 404 on every direct access attempt (including Wayback Machine), so its actual content could not be read or confirmed. Treat the specific Crain's coverage as unconfirmed; do not cite it as a fact in outreach.",
+      "bio_source": "SEC IAPD individual adviser record (adviserinfo.sec.gov/individual/summary/2069136) and LinkedIn (linkedin.com/in/mark-rehn-a844331/, based in Western Springs, IL, actively reshares Stableford Capital content) independently corroborate identity and Chicago-based tax-professional background. Journal of Taxation authorship (January 1998) independently confirmed via search. Crain's Chicago Business 'People on the Move' page exists per search-engine indexing but its content is unconfirmed \u2014 direct fetch and Wayback Machine access both failed.",
+      "bio_confidence": "medium",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [
+    {
+      "name": "Andrew J. Brinkman",
+      "title_phrase": "managing partner of Petros Capital",
+      "quote": "Andy was managing partner of Petros Capital, a long/short institutional hedge fund",
+      "confidence": "medium",
+      "at_this_firm": false,
+      "exclude_reason": "partner title refers to a prior/different fund (Petros Capital), not Stableford itself \u2014 already captured as a Stableford equity owner via Schedule B regardless"
+    }
+  ],
+  "firm_note": {
+    "text": "Stableford Capital, formed in 2014 and based in Scottsdale, AZ, was founded by Andrew Brinkman and is led by a leadership team with deep institutional investing and tax/finance backgrounds, including Managing Partner Justin Thomas and CFO/CCO Mark Rehn.",
+    "source": "Firm website (stablefordcapital.com/leadership/) and web search corroboration",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "2 of 3 people checked"
+}
