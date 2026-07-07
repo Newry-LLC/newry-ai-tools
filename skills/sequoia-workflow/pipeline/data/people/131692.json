@@ -1,0 +1,121 @@
+{
+  "crd": "131692",
+  "name": "Versant Capital Management, Inc.",
+  "people": [
+    {
+      "raw_name": "SHABAKER, ELIZABETH, MOLLIE",
+      "name": "Elizabeth Mollie Shabaker",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CO-CHIEF EXECUTIVE OFFICER, CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "since": "04/2012",
+      "crd": "2925556",
+      "is_partner_mention": false,
+      "seniority_score": 50,
+      "bio_note": "Co-CEO and CCO; with Versant since 2010 (15+ years) and now over a decade in executive leadership there. Before Versant, held leadership roles at GenSpring Family Offices and KPMG's Personal Financial Planning Practice. Holds CFP and CDC (Dementia Care Certified) designations \u2014 the latter reflecting specialized training to recognize early signs of Alzheimer's/dementia in client families. Known for a practice focus on women navigating major life transitions (career change, divorce, widowhood, inheritance) and serves as an ambassador for the Women's Leadership Alliance. Earned a Women's Choice Award for financial services to women. Sits on the ASU W.P. Carey Dean's Council and the Arizona Community Foundation advisory board. In July 2023 she and Royce Ramey took over majority ownership of the firm from founder Thomas Connelly.",
+      "bio_source": "Women's Choice Award profile (womenschoiceaward.com/financial-advisors/shabaker); citybiz.co ownership transition article (citybiz.co/article/446546); corroborated via versantcm.com/team/elizabeth-shabaker",
+      "bio_confidence": "high",
+      "phase4_note": "Phase 4 verification (2026-07-03): Women's Choice Award and CFP/CDC credentials independently confirmed via the award's own site. Her pre-Versant career history (GenSpring Family Offices, KPMG Personal Financial Planning Practice) is stated only on Versant's own site and was not independently corroborated this pass. Verdict: PARTIAL.",
+      "phase4_status": "verified_with_caveat",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "xxx-xx-xxxx RAMEY, ROYCE, CREIGHTON",
+      "name": "Royce Creighton xxx-xx-xxxx RAMEY",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CO-CHIEF EXECUTIVE OFFICER, CHIEF INVESTMENT OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "since": "07/2023",
+      "crd": "4751664",
+      "is_partner_mention": false,
+      "seniority_score": 50,
+      "bio_note": "Same individual as the clean-named 'Royce Creighton Ramey' owner record (data artifact from an SSN-redaction parsing bug, not a second person). Co-CEO and CIO; joined Versant in July 2023 specifically to establish its new Dallas office, and simultaneously took majority ownership alongside Elizabeth Shabaker as founder Thomas Connelly stepped back. Previously Managing Director and Chief Experience Officer at Tolleson Wealth Management in Dallas, and before that provided family-office services to ultra-high-net-worth families at GenSpring Family Offices in Phoenix. Texas Tech University graduate (BBA Finance and MS Finance, both summa cum laude); holds the CFA charter and is active in the CFA Institute's Dallas-Fort Worth Society. Serves on the board of the Perot Museum of Nature and Science, chairing its Investment Committee. Featured as a contributor on the Forbes Finance Council.",
+      "bio_source": "Forbes Finance Council contributor profile (councils.forbes.com/profile/Royce-Ramey-Co-Owner-Co-CEO-Versant-Capital-Management); citybiz.co ownership transition article (citybiz.co/article/446546); corroborated via versantcm.com/team/royce-ramey",
+      "bio_confidence": "high",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "CONNELLY, THOMAS, JOSEPH",
+      "name": "Thomas Joseph Connelly",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHAIRMAN EMERITUS, INVESTMENT COMMITTEE",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "since": "03/2004",
+      "crd": "1487206",
+      "is_partner_mention": false,
+      "seniority_score": 30,
+      "bio_note": "Founder of Versant Capital Management (2004) and, before that, co-founder of Keats, Connelly & Associates in 1990, where he was President and CIO \u2014 over 40 years in wealth management overall. Holds CFA and CFP designations; degrees include a Geology BA from University of St. Thomas, an MBA in Finance from Arizona State University, and an MS in Financial Planning from the College for Financial Planning. Repeatedly named one of the 'Top Financial Advisors in the U.S.' by Worth Magazine. In July 2023 transitioned majority ownership to Shabaker and Ramey, moving into the Chairman Emeritus/Investment Committee role. Also a shareholder/officer at Cross Border Tax & Accounting and an executive board member/shareholder of National Advisors Trust Company; serves on the Arizona State Retirement System board (fourth term).",
+      "bio_source": "citybiz.co ownership transition article (citybiz.co/article/446546); success.ai profile citing his founder history; corroborated via versantcm.com/team/tom-connelly",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "Kirksey, Jennifer, Wagoner",
+      "name": "Jennifer Wagoner Kirksey",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF OPERATING OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "since": "02/2025",
+      "crd": "7961119",
+      "is_partner_mention": false,
+      "seniority_score": 25,
+      "bio_note": "Named COO of Versant in February 2025 (Dallas-based), overseeing operational strategy, technology integration, HR, and client service. Prior to Versant, spent 20+ years in wealth management, most recently as Deputy COO at Tolleson Wealth Management overseeing client operations, reporting, and bookkeeping -- it was while at Tolleson, not Versant, that she was recognized with Family Wealth Report's 'Women in Wealth Technology' award (2022). Holds a BBA in Finance and an MBA from Southern Methodist University. A separately-cited F2 Strategy 'Top Women in Wealth Tech' (2024) recognition could not be independently confirmed on F2 Strategy's own site in Phase 4 verification -- treat as unconfirmed pending direct access.",
+      "bio_source": "Versant press release 'Jennifer Kirksey Named Chief Operating Officer at Versant Capital Management'; LinkedIn; The Org (theorg.com/org/versant-capital-management-inc/org-chart/jennifer-kirksey). Phase 4 verification (2026-07-03): confirmed via Tolleson Wealth Management's own press release and an industry event page that the Family Wealth Report award was earned while she was at Tolleson, not Versant -- corrected the framing so it isn't misread as a Versant-era honor. F2 Strategy claim could not be independently verified this pass.",
+      "bio_confidence": "medium",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "Williams-Ramey, Aimee, Lynn",
+      "name": "Aimee Lynn Williams-Ramey",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF LEGAL OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "since": "01/2026",
+      "crd": "7789500",
+      "is_partner_mention": false,
+      "seniority_score": 25,
+      "bio_note": "Joined Versant as Chief Legal Officer in January 2026, per Versant's own listing. Independent sourcing shows a long, high-profile legal/HR executive career: SMU Dedman School of Law graduate (Summa Cum Laude, 2nd in class, Order of the Coif, Sumners Foundation Scholarship recipient), named to 'Best Lawyers in Dallas' (D Magazine, 2007-2009) and 'Texas Rising Star' (Texas Monthly Law & Politics, multiple years). Held Chief Legal Officer & Corporate Secretary role at Six Flags (from mid-2022), then moved to Texas Capital Bank as Deputy General Counsel (2024) and was promoted to Managing Director/Chief Human Resources Officer there (January 2025) \u2014 meaning her Versant listing (CLO, joined 01/2026) reflects a subsequent move from Texas Capital. On the shared surname with Royce Ramey: genuine search (LinkedIn, news announcements, general web search) found no source confirming or denying a spousal relationship \u2014 left unconfirmed, not assumed.",
+      "bio_source": "Texas Capital Bank leadership bio (texascapitalbank.com/who-we-are/people/leadership/aimee-williams-ramey) independently confirms her SMU Dedman School of Law JD (summa cum laude), OU undergrad (summa cum laude, Sumners Scholar), and Best Lawyers in Dallas / Best Women Lawyers in Dallas recognition. Phase 4 verification (2026-07-03): that page does NOT confirm '2nd in class,' 'Order of the Coif,' the specific 2007-2009 date range, or 'Texas Rising Star' -- those additional specifics are stated only on Versant's own site (versantcm.com/team/aimee-williams-ramey) and should be treated as firm-stated rather than independently confirmed.",
+      "bio_confidence": "medium",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": 6,
+  "dropped_for_cap": [
+    "Royce Creighton Ramey"
+  ],
+  "unresolved_entity_owners": [
+    {
+      "entity_name": "xxx-xx-xxxx REMINGTON REVOCABLE TRUST U/A DTD 3/28/2014",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "reason": "no_schedule_b_match"
+    }
+  ],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Founded 2004 by Thomas Connelly; underwent a formal ownership transition in July 2023 in which Connelly transitioned majority ownership to Elizabeth Shabaker and newly-arrived Royce Ramey (who joined to open the Dallas office), with Connelly staying on as Chairman Emeritus/Investment Committee. A separate owner of record, 'Remington Revocable Trust' (dated 3/28/2014, 25-50% owner), has no identifiable human trustee/beneficiary in any independent source found \u2014 genuine search (press coverage of the 2023 transition, Versant's own announcements, general web search) turned up no connection between 'Remington' and any of the five people profiled here, and no public filing naming a trustee. This remains unresolved; do not guess.",
+    "source": "citybiz.co/article/446546 (Versant Capital Management Announces Ownership Transition, July 2023); AZ Big Media (azbigmedia.com/business/versant-capital-management-announces-ownership-change-and-expansion); Remington Trust link independently searched via web search with no corroborating result",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "4 of 5 people checked"
+}
