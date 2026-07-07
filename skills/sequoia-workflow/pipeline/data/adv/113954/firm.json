@@ -1,0 +1,112 @@
+{
+  "basicInformation": {
+    "firmId": 113954,
+    "firmName": "PROFOCUS INCORPORATED",
+    "otherNames": [
+      "PROFOCUS INC",
+      "PROFOCUS, INCORPORATED",
+      "PROFOCUS INCORPORATED"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "07/01/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "124789",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "e15e440c-0d9e-453f-8fb8-6927fad07bae"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "5010 EAST WARNER ROAD",
+      "street2": "SUITE 202",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85044-3374"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52658,
+      "type": "IA_INDVL",
+      "generatedOn": "7/2/2026"
+    },
+    {
+      "editionID": 52659,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "7/2/2026"
+    },
+    {
+      "editionID": 52660,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "7/2/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "5/2/2022"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "5/4/2022"
+    },
+    {
+      "secJurisdiction": "Virginia",
+      "status": "Terminated",
+      "effectiveDate": "5/9/2022"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "5/2/2022"
+    },
+    {
+      "jurisdiction": "District of Columbia",
+      "status": "Notice Filed",
+      "effectiveDate": "3/23/2026"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "3/9/2023"
+    },
+    {
+      "jurisdiction": "Maryland",
+      "status": "Notice Filed",
+      "effectiveDate": "3/9/2023"
+    },
+    {
+      "jurisdiction": "Virginia",
+      "status": "Notice Filed",
+      "effectiveDate": "5/2/2022"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1050486,
+        "brochureName": "PROFOCUS INCORPORATED BROCHURE",
+        "dateSubmitted": "7/1/2026"
+      }
+    ]
+  }
+}
