@@ -1,0 +1,53 @@
+{
+  "crd": "333381",
+  "name": "GPS Investments",
+  "people": [
+    {
+      "raw_name": "JONES, WILLIAM, JOSEPH",
+      "name": "William Joseph Jones",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "FOUNDER AND CHIEF EXECUTIVE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "09/2024",
+      "crd": "1943251",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Founder and CEO of GPS Investments, with the firm since September 2024, though his affiliated brand Global Portfolio Solutions dates to November 1997 at the same Scottsdale address. Holds the CFP credential and is broadly licensed for both insurance and securities across more than a dozen states, reflecting a long, multi-state advisory practice. Operates today through Mutual Advisors, LLC (dba Global Portfolio Solutions) alongside GPS Investments.",
+      "bio_source": "SEC IAPD individual disclosure report for CRD 1943251 (reports.adviserinfo.sec.gov/reports/individual/individual_1943251.pdf) and U.S. News Financial Advisors listing (money.usnews.com/financial-advisors/advisor/william-jones-1943251), corroborated by gpsinvest.com",
+      "bio_confidence": "medium",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "Cross, Trevor, Robert",
+      "name": "Trevor Robert Cross",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "since": "09/2024",
+      "crd": "6977085",
+      "is_partner_mention": false,
+      "seniority_score": 25,
+      "bio_note": "Chief Compliance Officer at GPS Investments, with the firm since September 2024 (registered as adviser representative November 2024). Holds a Series 66 license and has about seven years in the industry, with prior roles at Fortune Financial Services, Mutual Securities, Inc., Mutual Advisors, LLC, and Massachusetts Mutual Life Insurance Co. before joining GPS Investments; dually registered with Fortune Financial Services as of September 2025.",
+      "bio_source": "SEC IAPD individual disclosure for CRD 6977085 (adviserinfo.sec.gov/individual/summary/6977085), an independent regulatory source",
+      "bio_confidence": "medium",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "GPS Investments (legally Global Portfolio Solutions, Inc., dba GPS Investments) is a Scottsdale RIA managing about $128M for roughly 85 clients, founded by William Jones and registered with the SEC in 2024, though Jones has run the Global Portfolio Solutions brand since 1997. No independent firm website with a team/about page was found beyond directory listings and Jones' longstanding Global Portfolio Solutions site.",
+    "source": "SEC IAPD firm summary (adviserinfo.sec.gov/firm/summary/333381) and FINRA/SEC individual disclosure for William Joseph Jones (reports.adviserinfo.sec.gov/reports/individual/individual_1943251.pdf), independent regulatory sources",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "0 of 2 people checked"
+}
