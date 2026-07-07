@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "THOMPSON, DANIEL, CHRISTOPHER",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "VB&T HOLDING COMPANY LLC MANAGER",
+      "since": "01/2022",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "2656870",
+      "raw_id": "2656870"
+    }
+  ]
+}
