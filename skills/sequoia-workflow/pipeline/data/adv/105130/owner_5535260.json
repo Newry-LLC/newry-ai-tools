@@ -1,0 +1,128 @@
+{
+  "basicInformation": {
+    "individualId": 5535260,
+    "firstName": "MATTHEW",
+    "middleName": "PHILIP",
+    "lastName": "BAUM",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "5/8/2015"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 105130,
+      "firmName": "L. ROY PAPP & ASSOCIATES, LLP",
+      "iaOnly": "Y",
+      "registrationBeginDate": "7/25/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "2201 E. Camelback Road",
+          "street2": "Suite 227B",
+          "city": "Phoenix",
+          "cityAlias": [
+            "PHOENIX"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85016",
+          "latitude": "33.516952",
+          "longitude": "-112.021401",
+          "geoLocation": "33.516952,-112.021401",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "05/17/2016"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "35594",
+      "iaSECNumberType": "801",
+      "firmId": 105130,
+      "firmName": "L. ROY PAPP & ASSOCIATES, LLP",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "1/2/2014",
+      "registrationEndDate": "3/20/2015",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 4
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "9/14/2015",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "5/2/2016",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 86",
+      "examName": "Research Analyst Exam - Part I Analysis Module",
+      "examTakenDate": "11/10/2015",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 87",
+      "examName": "Research Analyst Exam - Part II Regulations Module",
+      "examTakenDate": "10/12/2015",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "6/23/2015",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "7/25/2016"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
