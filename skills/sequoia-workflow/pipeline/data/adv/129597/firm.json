@@ -1,0 +1,113 @@
+{
+  "basicInformation": {
+    "firmId": 129597,
+    "firmName": "BRIGHTSCAPE INVESTMENT CENTERS",
+    "otherNames": [
+      "BRIGHTSCAPE INVESTMENT CENTERS",
+      "BRIGHTSCAPE INVESTMENT CENTERS,INC."
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/31/2026",
+    "hasPdf": "Y"
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "9375 E SHEA BLVD",
+      "street2": "SUITE 100",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85260"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52155,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "4/7/2026"
+    },
+    {
+      "editionID": 52156,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "4/7/2026"
+    },
+    {
+      "editionID": 52154,
+      "type": "IA_INDVL",
+      "generatedOn": "4/7/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Approved",
+      "effectiveDate": "8/19/2020"
+    },
+    {
+      "secJurisdiction": "California",
+      "status": "Approved",
+      "effectiveDate": "10/15/2020"
+    },
+    {
+      "secJurisdiction": "Colorado",
+      "status": "Approved",
+      "effectiveDate": "1/2/2019"
+    },
+    {
+      "secJurisdiction": "Florida",
+      "status": "Approved",
+      "effectiveDate": "11/17/1999"
+    },
+    {
+      "secJurisdiction": "Georgia",
+      "status": "Terminated",
+      "effectiveDate": "12/31/2007"
+    },
+    {
+      "secJurisdiction": "Illinois",
+      "status": "Terminated",
+      "effectiveDate": "12/31/2007"
+    },
+    {
+      "secJurisdiction": "Maryland",
+      "status": "Approved",
+      "effectiveDate": "11/29/2007"
+    },
+    {
+      "secJurisdiction": "New York",
+      "status": "Terminated",
+      "effectiveDate": "11/29/2006"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Approved",
+      "effectiveDate": "9/16/2004"
+    },
+    {
+      "secJurisdiction": "Virginia",
+      "status": "Approved",
+      "effectiveDate": "4/25/2007"
+    }
+  ],
+  "noticeFilings": [],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "N",
+    "isStateRegistered": "Y",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1035178,
+        "brochureName": "BRIGHTSCAPE DISCLOSURE BROCHURE",
+        "dateSubmitted": "3/31/2026"
+      }
+    ]
+  }
+}
