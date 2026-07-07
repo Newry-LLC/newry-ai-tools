@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "HUFTALIN, CALEB, WILL",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "DIRECTOR OF WEALTH MANAGEMENT/CHIEF COMPLIANCE OFFICER",
+      "since": "12/2021",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5114075",
+      "raw_id": "5114075"
+    },
+    {
+      "full_legal_name": "Hofmann, Stephen, Daniel",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CO-OWNER/MANAGING MEMBER",
+      "since": "04/2024",
+      "ownership_code": "B",
+      "ownership_pct": "10-25%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "6994818",
+      "raw_id": "6994818"
+    }
+  ]
+}
