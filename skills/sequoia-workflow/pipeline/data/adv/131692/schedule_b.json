@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "SHABAKER, ELIZABETH, MOLLIE",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "ELIZABETH M. SHABAKER REVOCABLE TRUST U/A DTD 07/19/2013 TRUSTEE",
+      "since": "07/2013",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2925556",
+      "raw_id": "2925556"
+    },
+    {
+      "full_legal_name": "RAMEY, ROYCE, CREIGHTON",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "REMINGTON REVOCABLE TRUST U/A DTD 3/28/2014 TRUSTEE",
+      "since": "03/2014",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "4751664",
+      "raw_id": "4751664"
+    },
+    {
+      "full_legal_name": "Williams-Ramey, Aimee, Lynn",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "REMINGTON REVOCABLE TRUST U/A DTD 3/28/2014 TRUSTEE",
+      "since": "03/2014",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "7789500",
+      "raw_id": "7789500"
+    }
+  ]
+}
