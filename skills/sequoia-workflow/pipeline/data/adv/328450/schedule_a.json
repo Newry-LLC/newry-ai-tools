@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "Pimentel, Marcus, John",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER",
+      "since": "09/2023",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "7265602",
+      "raw_id": "7265602"
+    },
+    {
+      "full_legal_name": "SLT CAPITAL LLC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "MEMBER/MANAGER",
+      "since": "07/2022",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "BRODT, ZACHARY, STUART",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "PRESIDENT",
+      "since": "10/2023",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5228473",
+      "raw_id": "5228473"
+    }
+  ]
+}
