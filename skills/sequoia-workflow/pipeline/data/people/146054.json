@@ -1,0 +1,54 @@
+{
+  "crd": "146054",
+  "name": "Key Group Management, Inc.",
+  "people": [
+    {
+      "raw_name": "MURRAY, PATRICK, BRIAN",
+      "name": "Patrick Brian Murray",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "PRESIDENT AND CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "since": "12/2007",
+      "crd": "1385990",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "President and CCO, co-founded Key Group in 1996. Graduate of Villanova University; holds CFP and ChFC (American College) designations. Career began in 1984 on the floor of the American Stock Exchange with E.F. Hutton, later working the fixed income trading desk for PaineWebber in New York and Los Angeles, before moving into financial advising in 1996.",
+      "bio_source": "U.S. News financial advisor profile (money.usnews.com/financial-advisors/advisor/patrick-murray-1385990), corroborated by PR Newswire release on Royal Alliance/Key Group",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "HEAFY, COLIN, PATRICK",
+      "name": "Colin Patrick Heafy",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "VICE PRESIDENT",
+      "is_equity_owner": true,
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "since": "12/2007",
+      "crd": "1906579",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Vice President and Principal, co-founded Key Group in 1996 alongside Patrick Murray. Economics degree from Villanova University; serves on Villanova's College of Professional Studies Dean's Advisory Council. Career included a stint at PaineWebber in Weehawken, NJ, per FINRA BrokerCheck records covering 1991-1995 (an earlier version of this bio stated 1990 as the start year); earlier stints at the NYSE, Dean Witter Reynolds, and Drexel Burnham Lambert are stated on the firm's own site and were not independently corroborated. Holds FINRA Series 7, 24, 53, and 65.",
+      "bio_source": "keygroupwealth.com team bio page; PR Newswire release on Royal Alliance/Key Group (prnewswire.com/news-releases/royal-alliance-associates-adds-350-million-key-group-management-to-expanding-advisor-network-300527435.html) -- this release only confirms the 1996 Villanova co-founding detail, not the PaineWebber/NYSE/Dean Witter/Drexel Burnham specifics. Phase 4 verification (2026-07-03): FINRA BrokerCheck shows PaineWebber Weehawken NJ registration 1991-1995, not 1990 as previously stated -- corrected; the NYSE/Dean Witter/Drexel Burnham stints remain firm-sourced only.",
+      "bio_confidence": "medium",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Key Group Management is a Fountain Hills, AZ-based RIA founded in 1996 by Villanova University graduates Patrick Murray and Colin Heafy, managing ~$304M with offices in Arizona, New Jersey, and Massachusetts, specializing in holistic wealth management, insurance, and estate planning for high-net-worth clients.",
+    "source": "PR Newswire, Royal Alliance Associates release (prnewswire.com/news-releases/royal-alliance-associates-adds-350-million-key-group-management-to-expanding-advisor-network-300527435.html); keygroupwealth.com",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "1 of 2 people checked"
+}
