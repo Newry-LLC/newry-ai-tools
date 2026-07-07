@@ -1,0 +1,57 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "ASHTON, CODY, LEE",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER & CHIEF COMPLIANCE OFFICER",
+      "since": "11/2018",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5493790",
+      "raw_id": "5493790"
+    },
+    {
+      "full_legal_name": "DORSEY, DAVID, LEE",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER",
+      "since": "11/2018",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "4469521",
+      "raw_id": "4469521"
+    },
+    {
+      "full_legal_name": "BIRD, MICHAEL, CLAWSON",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER",
+      "since": "11/2018",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5705865",
+      "raw_id": "5705865"
+    },
+    {
+      "full_legal_name": "MITTON, WILLIAM, CHAD",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER",
+      "since": "11/2018",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "4187917",
+      "raw_id": "4187917"
+    }
+  ]
+}
