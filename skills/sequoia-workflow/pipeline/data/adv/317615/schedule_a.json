@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "WALKER, MATTHEW, GENE",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CEO, MANAGING MEMBER",
+      "since": "11/2021",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "6040760",
+      "raw_id": "6040760"
+    },
+    {
+      "full_legal_name": "PHILLIPS, DALE, ANDREW",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER/CHIEF COMPLIANCE OFFICER",
+      "since": "01/2022",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5610375",
+      "raw_id": "5610375"
+    },
+    {
+      "full_legal_name": "FORTITUDE FAMILY OFFICE HOLDCO, LLC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "OWNER",
+      "since": "07/2025",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    }
+  ]
+}
