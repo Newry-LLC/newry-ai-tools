@@ -1,0 +1,83 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "AMPLIFY VENTURES GROUP, LLC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "MEMBER",
+      "since": "08/2023",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "BRODT, AARON, PAUL",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF EXECUTIVE OFFICER",
+      "since": "05/2023",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5017914",
+      "raw_id": "5017914"
+    },
+    {
+      "full_legal_name": "Garcia, Peggy, Jolen",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER",
+      "since": "05/2023",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5041087",
+      "raw_id": "5041087"
+    },
+    {
+      "full_legal_name": "Brodt, Heidi, Maria",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "BUSINESS MANAGER",
+      "since": "05/2023",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "6671739",
+      "raw_id": "6671739"
+    },
+    {
+      "full_legal_name": "HATFIELD, DAVID, T.",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF TECHNOLOGY OFFICER",
+      "since": "05/2023",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "6196051",
+      "raw_id": "6196051"
+    },
+    {
+      "full_legal_name": "Rowley, Jason, Charles",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF OF STAFF",
+      "since": "01/2025",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "8069047",
+      "raw_id": "8069047"
+    }
+  ]
+}
