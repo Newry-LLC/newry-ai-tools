@@ -1,0 +1,167 @@
+{
+  "basicInformation": {
+    "firmId": 105130,
+    "firmName": "L. ROY PAPP & ASSOCIATES, LLP",
+    "otherNames": [
+      "L ROY PAPP & ASSOCIATES",
+      "L. ROY PAPP & ASSOCIATES, LLP",
+      "L. ROY PAPP & ASSOCIATES"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "05/27/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "35594",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "40c9827f-1c97-499e-b50d-387faaaff797"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "2201 E. CAMELBACK ROAD",
+      "street2": "SUITE 227B",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85016"
+    }
+  },
+  "accountantSurpriseExams": [
+    {
+      "accountantFirmName": "COHEN & CO",
+      "filingDate": "03/11/2026",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "04BF1A7C000801ED01C074B200336B1D056C8CC0"
+    },
+    {
+      "accountantFirmName": "THOMAS ZOLLARS & LYNCH LTD",
+      "filingDate": "09/29/2025",
+      "fileStatus": "NOFILE",
+      "encryptedFilingID": "0260622C000801EB0440B6F2001B4DAD056C8CC0"
+    },
+    {
+      "accountantFirmName": "THOMAS ZOLLARE & LYNCH, LTD.",
+      "filingDate": "04/09/2025",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "03486C16000801E703C0D89105D2DE55056C8CC0"
+    },
+    {
+      "accountantFirmName": "THOMAS ZOLLARS & LYNCH",
+      "filingDate": "03/13/2024",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "04DBAA2A000801D905D1420105028791056C8CC0"
+    }
+  ],
+  "compilationData": [
+    {
+      "editionID": 52443,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "5/28/2026"
+    },
+    {
+      "editionID": 52444,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "5/28/2026"
+    },
+    {
+      "editionID": 52445,
+      "type": "IA_INDVL",
+      "generatedOn": "5/28/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "10/1/1989"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "7/13/2000"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "1/11/1990"
+    },
+    {
+      "jurisdiction": "Colorado",
+      "status": "Notice Filed",
+      "effectiveDate": "3/27/2014"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "2/11/2005"
+    },
+    {
+      "jurisdiction": "Georgia",
+      "status": "Notice Filed",
+      "effectiveDate": "12/3/2020"
+    },
+    {
+      "jurisdiction": "Illinois",
+      "status": "Notice Filed",
+      "effectiveDate": "12/19/1989"
+    },
+    {
+      "jurisdiction": "Michigan",
+      "status": "Notice Filed",
+      "effectiveDate": "3/26/2002"
+    },
+    {
+      "jurisdiction": "Nebraska",
+      "status": "Notice Filed",
+      "effectiveDate": "2/10/2005"
+    },
+    {
+      "jurisdiction": "Nevada",
+      "status": "Notice Filed",
+      "effectiveDate": "12/3/2020"
+    },
+    {
+      "jurisdiction": "New York",
+      "status": "Notice Filed",
+      "effectiveDate": "3/27/2014"
+    },
+    {
+      "jurisdiction": "Oregon",
+      "status": "Notice Filed",
+      "effectiveDate": "12/3/2020"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "7/27/1990"
+    },
+    {
+      "jurisdiction": "Washington",
+      "status": "Notice Filed",
+      "effectiveDate": "3/25/2017"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1046308,
+        "brochureName": "L. ROY PAPP PART 2A MAY 2026",
+        "dateSubmitted": "5/27/2026"
+      }
+    ]
+  }
+}
