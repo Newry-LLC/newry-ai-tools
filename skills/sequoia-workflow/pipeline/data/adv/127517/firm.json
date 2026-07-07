@@ -1,0 +1,118 @@
+{
+  "basicInformation": {
+    "firmId": 127517,
+    "firmName": "WEALTH MANAGEMENT SOLUTIONS",
+    "otherNames": [
+      "WEALTH MANAGEMENT SOLUTIONS",
+      "WEALTH MANAGEMENT SOLUTIONS, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "05/14/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "122994",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "d97c762e-f6ab-4560-a744-0808435d9f8c"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "8550 E. SHEA BOULEVARD, SUITE 130",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85260"
+    }
+  },
+  "accountantSurpriseExams": [
+    {
+      "accountantFirmName": "ARMANINO LLP",
+      "filingDate": "01/31/2025",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "0117C0D6000801E301903CF105903A2D056C8CC0"
+    },
+    {
+      "accountantFirmName": "ARMANINO LLP",
+      "filingDate": "10/30/2023",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "03B3B426000801D30595718104A660F1056C8CC0"
+    }
+  ],
+  "compilationData": [
+    {
+      "editionID": 52364,
+      "type": "IA_INDVL",
+      "generatedOn": "5/15/2026"
+    },
+    {
+      "editionID": 52365,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "5/15/2026"
+    },
+    {
+      "editionID": 52366,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "5/15/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "1/18/2022"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "4/7/2022"
+    },
+    {
+      "secJurisdiction": "California",
+      "status": "Terminated",
+      "effectiveDate": "5/7/2022"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Terminated",
+      "effectiveDate": "3/22/2023"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "1/18/2022"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "1/18/2022"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "3/29/2024"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "Y",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1045155,
+        "brochureName": "20230323 WMS PART 2A",
+        "dateSubmitted": "5/14/2026"
+      }
+    ]
+  }
+}
