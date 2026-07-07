@@ -1,0 +1,89 @@
+{
+  "crd": "317615",
+  "name": "Fortitude Family Office",
+  "people": [
+    {
+      "raw_name": "WALKER, MATTHEW, GENE",
+      "name": "Matthew Gene Walker",
+      "source": "Form ADV Schedule B (indirect owner, entity unmatched)",
+      "confidence": "medium",
+      "title_or_status": "FORTITUDE PARTNER HOLDINGS LLC MEMBER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "11/2021",
+      "crd": "6040760",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Founder & CEO of Fortitude Family Office (CPA, CGMA). Founded the firm in 2021 to provide direct, meaningful wealth solutions for high- and ultra-high-net-worth families. Holds an M.S. in Taxation and a B.S. in Accountancy, both from Arizona State University. Received industry recognition, though at a more modest tier than an earlier version of this bio implied: (1) named to Five Star Professional's 2023 'Five Star Wealth Manager' list -- a legitimate, broad-based third-party award; (2) an 'InvestmentNews Awards 2024 Excellence Awardee' recognition, which is a broader finalist/honorable-mention tier, NOT the same as InvestmentNews' named 2024 Southwest 'Advisor of the Year' (that specific title went to a different advisor); (3) a Business Intelligence Group 'Executive of the Year' award that, per BIG's own site, was awarded within the narrower '2024 Excellence in Customer Service Awards' program, not BIG's flagship standalone Executive of the Year award. UNRESOLVED OWNERSHIP QUESTION (per Phase 2 flag, still open): SEC/ADV filings show Walker as a 75%+ owner via Fortitude Partner Holdings LLC. A separate entity, Fortitude Family Office Holdco, LLC, also holds 75%+ ownership; the firm's Form CRS describes Holdco as owned collectively 'by its managers and employees' rather than naming an individual, and no AZ Corporation Commission filing or press coverage names Walker specifically as the controlling person behind Holdco.",
+      "bio_source": "Firm website (fortitudefo.com/team/) and three PR Newswire releases confirming Founder/CEO title and the three award announcements. Phase 4 verification (2026-07-03): re-checked all three awards against the awarding organizations' own sites, not just the PR Newswire announcements. Five Star Professional recognition is consistent with a real award (broad-based, no pay-to-play). The InvestmentNews claim is real but overstated -- the actual 2024 Southwest 'Advisor of the Year' title went to a different advisor (Stephanie Tsang); Walker's is a broader 'Excellence Awardee' tier. The Business Intelligence Group award, confirmed on bintelligence.com itself, was awarded within BIG's 2024 Excellence in Customer Service Awards program (a 102-winner program) rather than BIG's flagship 7-person standalone Executive of the Year list -- corrected the characterization accordingly.",
+      "bio_confidence": "medium",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "PHILLIPS, DALE, ANDREW",
+      "name": "Dale Andrew Phillips",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING MEMBER/CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "since": "01/2022",
+      "crd": "5610375",
+      "is_partner_mention": true,
+      "seniority_score": 40,
+      "partner_title_phrase": "Chief Operating Officer & Partner",
+      "partner_quote": "Drew Phillips \u2014 Chief Operating Officer, Partner",
+      "partner_source": "firm website (fortitudefo.com)",
+      "bio_note": "Chief Operating Officer, Partner ('Drew Phillips') at Fortitude Family Office (CFA). Oversees investment strategy, compliance, technology operations, regulatory compliance, risk management, and trading, with 15+ years in the industry. Before Fortitude, was Director of Operations at Tarbox Family Office, and earlier held roles at MRA Associates, Keats Connelly, InPulse Response Group, and Discover. Holds a B.S. in Finance from Arizona State University and an MBA in Finance from Grand Canyon University.",
+      "bio_source": "Firm website (fortitudefo.com/team/) corroborated by LinkedIn (linkedin.com/in/drew-phillips-cfa/) and TipRanks expert profile (tipranks.com/experts/hedge-funds/drew-phillips) listing his prior roles at Tarbox Family Office, MRA Associates, Keats Connelly, and Discover",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "James Coons",
+      "name": "James Coons",
+      "source": "firm website (fortitudefo.com)",
+      "confidence": "high",
+      "title_or_status": "Senior Director | Tax, Partner",
+      "is_equity_owner": false,
+      "ownership_pct": "",
+      "control_person": false,
+      "since": "",
+      "crd": null,
+      "is_partner_mention": true,
+      "partner_title_phrase": "Senior Director | Tax, Partner",
+      "partner_quote": "",
+      "partner_source": "firm website (fortitudefo.com)",
+      "seniority_score": 15,
+      "bio_note": "Senior Director, Tax, Partner at Fortitude Family Office (CPA, JD). Coordinates daily tax practice operations, providing tax and financial planning guidance to ultra-high-net-worth clients, with 10+ years in the industry. Holds a J.D. in Tax Law/Taxation from the University of Arizona James E. Rogers College of Law and an M.S. in Taxation from Arizona State University.",
+      "bio_source": "Firm website (fortitudefo.com/team/) corroborated by U.S. News legal directory profile (law.usnews.com/law-firms/lawyers/james-coons-111181) confirming his J.D. in Tax Law from University of Arizona",
+      "bio_confidence": "medium",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [
+    {
+      "entity_name": "FORTITUDE FAMILY OFFICE HOLDCO, LLC",
+      "ownership_pct": "75%+",
+      "control_person": false,
+      "reason": "no_schedule_b_match",
+      "website_zoominfo_lead": {
+        "note": "Matthew Gene Walker (Founder & CEO) is plausibly the human behind the Holdco given his matching Schedule B control-person role, but no source explicitly names him as the Holdco's owner \u2014 inference, not confirmation.",
+        "confidence": "medium"
+      }
+    }
+  ],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Fortitude Family Office was founded in 2021 by Matt Walker and has grown to over $2B in assets under administration ($741.7M AUM per SEC filing), serving high- and ultra-high-net-worth families with integrated investment, tax, accounting, and family office services. Per its Form CRS, the firm is owned through its parent, Fortitude Family Office Holdco, LLC, 'by its managers and employees' \u2014 this filing language does not by itself confirm Walker individually as the controlling person behind Holdco; that remains unresolved (see note on Matthew Walker below).",
+    "source": "PR Newswire (prnewswire.com/news-releases/matt-walker-fortitude-family-office-founder-and-ceo-honored-as-investmentnews-excellence-awardee-302175687.html); SEC Form CRS (fortitudefo.com/wp-content/uploads/2025/04/Fortitude-Family-Office-Form-CRS-September-2024.pdf)",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "1 of 3 people checked"
+}
