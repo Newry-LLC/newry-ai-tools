@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "MURRAY, PATRICK, BRIAN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "PRESIDENT AND CHIEF COMPLIANCE OFFICER",
+      "since": "12/2007",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "1385990",
+      "raw_id": "1385990"
+    },
+    {
+      "full_legal_name": "HEAFY, COLIN, PATRICK",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "VICE PRESIDENT",
+      "since": "12/2007",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "1906579",
+      "raw_id": "1906579"
+    }
+  ]
+}
