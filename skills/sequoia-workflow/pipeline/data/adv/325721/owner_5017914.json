@@ -1,0 +1,261 @@
+{
+  "basicInformation": {
+    "individualId": 5017914,
+    "firstName": "Aaron",
+    "lastName": "Brodt",
+    "otherNames": [
+      "AARON PAUL BRODT"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "9/25/2005"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 153902,
+      "firmName": "ASHTON THOMAS PRIVATE WEALTH",
+      "iaOnly": "Y",
+      "registrationBeginDate": "6/15/2010",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "71512",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "8605 E Raintree Drive",
+          "street2": "Suite 280",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85260",
+          "latitude": "33.610962",
+          "longitude": "-111.890114",
+          "geoLocation": "33.610962,-111.890114",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "03/10/2010"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "41855",
+      "firmId": 25590,
+      "firmName": "PEACHCAP SECURITIES, INC.",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "registrationBeginDate": "7/1/2016",
+      "registrationEndDate": "8/20/2018",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "49347",
+      "firmId": 41270,
+      "firmName": "ACCELERATED CAPITAL GROUP",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "2/22/2012",
+      "registrationEndDate": "5/13/2016",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE",
+      "expelledDate": "11/26/2019"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "65544",
+      "firmId": 122924,
+      "firmName": "MERIDIAN UNITED CAPITAL, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "5/13/2008",
+      "registrationEndDate": "2/21/2012",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "66972",
+      "iaSECNumberType": "801",
+      "firmId": 113887,
+      "firmName": "THE PLANNING GROUP",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "6/4/2008",
+      "registrationEndDate": "3/28/2011",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "63282",
+      "iaSECNumberType": "801",
+      "firmId": 132070,
+      "firmName": "GLOBAL FINANCIAL PRIVATE CAPITAL, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "9/26/2005",
+      "registrationEndDate": "6/17/2008",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "5/18/2017",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Claimants allege against the employing firm, by name, and against their adviser, by reference, negligence, gross negligence, misrepresentation/omission, failure to supervise, breach of fiduciary duty, breach of contract and control person liability in connection with the 2014-2015 purchase of four investments for a total of $340,000. One of the investments was sold at a profit, while the other three are unrealized losses in an unspecified amount.",
+        "Damage Amount Requested": "$340,000.00",
+        "Settlement Amount": "$95,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "Without any admission of liability or wrongdoing, and to avoid the expense and uncertainties of arbitration, the\r\nrespondent firms and individuals agreed to pay the customer $95,000 in full settlement of all claims. Mr. Brodt contributed $5,000 towards the settlement."
+        ]
+      }
+    },
+    {
+      "eventDate": "4/26/2016",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Through letter from their attorney, clients allege Mr. Brodt recommended an unsuitable investment which they purchased in May and October of 2015.",
+        "Damage Amount Requested": "$200,000.00",
+        "Settlement Amount": "$116,667.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "Without any admission of liability or wrongdoing, and to avoid the expense and uncertainties of arbitration, the respondent firms and individuals agreed to pay the customer $116,667 in full settlement of all claims. Mr. Brodt contributed $3,333 towards the settlement."
+        ]
+      }
+    },
+    {
+      "eventDate": "4/26/2016",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Through a letter from her attorney, client alleges Mr. Brodt recommended an unsuitable investment which she purchased in May 2015.",
+        "Damage Amount Requested": "$100,000.00",
+        "Settlement Amount": "$58,333.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "Without any admission of liability or wrongdoing, and to avoid the expense and uncertainties of arbitration, the respondent firms and individuals agreed to pay the customer $58,333 in full settlement of all claims. Mr. Brodt contributed $1,667  towards the settlement."
+        ]
+      }
+    },
+    {
+      "eventDate": "3/5/2016",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Closed-No Action",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "The client expressed displeasure regarding his portfolio and the investments within.",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "Client had expressed his displeasure regarding his portfolio, and the investments within. The RR spoke withe client to explain the investments, the firm called the client, verified the clients conversation with the rep and verified his satisfaction at this time.  The client has since opened a new account with the rep and has not moved any accounts away."
+        ]
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 4
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "6/1/2008",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "7/22/2005",
+      "examScope": "IA"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "8/20/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "5/12/2008",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/16/2010"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
