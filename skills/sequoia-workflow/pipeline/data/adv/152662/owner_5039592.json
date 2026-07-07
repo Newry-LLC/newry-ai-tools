@@ -1,0 +1,259 @@
+{
+  "basicInformation": {
+    "individualId": 5039592,
+    "firstName": "KIMBALL",
+    "middleName": "ERIC",
+    "lastName": "PIERCE",
+    "otherNames": [
+      "KIMBALL  PIERCE"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "5/7/2008"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 310873,
+      "firmName": "CW ADVISORS, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "2/2/2026",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "119667",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "2801 N THANKSGIVING WAY",
+          "street2": "190",
+          "city": "LEHI",
+          "cityAlias": [
+            "CEDAR PASS",
+            "EAGLE MOUNTAIN",
+            "EAGLE MTN",
+            "LEHI",
+            "SARATOGA",
+            "SARATOGA SPGS",
+            "SARATOGA SPRINGS"
+          ],
+          "state": "UT",
+          "country": "United States",
+          "zipCode": "84043",
+          "latitude": "40.402096",
+          "longitude": "-111.878044",
+          "geoLocation": "40.402096,-111.878044",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "02/02/2026"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "16048",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "129",
+      "firmId": 361,
+      "firmName": "GOLDMAN, SACHS & CO.",
+      "city": "SALT LAKE CITY",
+      "state": "UT",
+      "registrationBeginDate": "1/7/2011",
+      "registrationEndDate": "4/4/2017",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "70103",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "68191",
+      "firmId": 149777,
+      "firmName": "MORGAN STANLEY SMITH BARNEY",
+      "city": "SOUTH JORDAN",
+      "state": "UT",
+      "registrationBeginDate": "12/24/2009",
+      "registrationEndDate": "11/26/2010",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "44112",
+      "firmId": 29106,
+      "firmName": "E*TRADE SECURITIES LLC",
+      "city": "SANDY",
+      "state": "UT",
+      "registrationBeginDate": "9/18/2009",
+      "registrationEndDate": "11/16/2009",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "15869",
+      "firmId": 8209,
+      "firmName": "MORGAN STANLEY & CO., INCORPORATED",
+      "city": "SALT LAKE CITY",
+      "state": "UT",
+      "registrationBeginDate": "4/2/2007",
+      "registrationEndDate": "9/18/2007",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "14172",
+      "firmId": 7556,
+      "firmName": "MORGAN STANLEY DW INC.",
+      "city": "SALT LAKE CITY",
+      "state": "UT",
+      "registrationBeginDate": "3/2/2006",
+      "registrationEndDate": "4/2/2007",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "3297",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "759",
+      "firmId": 250,
+      "firmName": "EDWARD JONES",
+      "city": "ST. LOUIS",
+      "state": "MO",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "11/30/2005",
+      "registrationEndDate": "2/2/2006",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "71109",
+      "iaSECNumberType": "801",
+      "firmId": 152662,
+      "firmName": "ROVIN CAPITAL",
+      "city": "Lehi",
+      "state": "UT",
+      "country": "United States",
+      "registrationBeginDate": "5/30/2017",
+      "registrationEndDate": "2/9/2026",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "70103",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "68191",
+      "firmId": 149777,
+      "firmName": "MORGAN STANLEY SMITH BARNEY LLC",
+      "city": "SOUTH JORDAN",
+      "state": "UT",
+      "country": "United States",
+      "registrationBeginDate": "1/4/2010",
+      "registrationEndDate": "11/26/2010",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "bdSECNumber": "15869",
+      "firmId": 8209,
+      "firmName": "MORGAN STANLEY & CO., INCORPORATED",
+      "city": "SALT LAKE CITY",
+      "state": "UT",
+      "country": "United States",
+      "registrationBeginDate": "4/2/2007",
+      "registrationEndDate": "9/18/2007",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "Y",
+      "bdSECNumber": "14172",
+      "firmId": 7556,
+      "firmName": "MORGAN STANLEY",
+      "city": "SALT LAKE CITY",
+      "state": "UT",
+      "country": "United States",
+      "registrationBeginDate": "4/12/2006",
+      "registrationEndDate": "4/2/2007",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 3
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "4/11/2006",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "12/2/2005",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "4/4/2017",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 31",
+      "examName": "Futures Managed Funds Examination",
+      "examTakenDate": "3/9/2006",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "11/29/2005",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Utah",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "2/2/2026"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
