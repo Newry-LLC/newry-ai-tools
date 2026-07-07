@@ -160,7 +160,7 @@ Know the general strengths and weaknesses of each. Apply judgment about which fi
 
 - **ZoomInfo** (`mcp__3cfd859f-b148-41d1-94ab-71d3d7f45d5e__enrich_companies`, `search_companies`, `search_contacts`) — reliable for HQ location and headcount ranges; revenue is modeled/estimated for private companies; good match rate for established companies, weaker for small or non-US
 - **Web fetch** — primary source for product/capability evidence and anything requiring judgment; fetch homepage + /products + /solutions + /markets; try multiple paths if homepage is thin
-- **Web search** — fallback when direct fetch fails; also useful for news, competitive intel, trade press
+- **Web search** — required whenever the structured sources (ZoomInfo, website) come back thin, not only when fetch outright fails. "Thin" means a title/fact with no narrative substance — e.g. a bio that would otherwise read "confirmed as CEO, no background available." Use web search for news, press releases, recognition, speaking/conference mentions, and LinkedIn snippets to fill that gap before accepting an empty or bare-fact result.
 - **Clay** — keyword-based company sourcing; good for finding companies by product type or market focus; used in Alta FRP sourcing
 - **Otter.ai / call transcripts** — primary source for anything discussed in a client call
 - **Airtable MCP** — reading/writing structured data to Airtable bases
