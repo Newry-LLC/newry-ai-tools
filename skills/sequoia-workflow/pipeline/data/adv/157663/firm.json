@@ -1,0 +1,130 @@
+{
+  "basicInformation": {
+    "firmId": 157663,
+    "firmName": "VIGILARE WEALTH MANAGEMENT LLC",
+    "otherNames": [
+      "VIGILARE WEALTH MANAGEMENT",
+      "VIGILARE WEALTH MANAGEMENT LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/27/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "72385",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "d80e4b90-d23a-45dc-8e4a-5317c2194674"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "8585 EAST HARTFORD DRIVE",
+      "street2": "SUITE 113",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85255"
+    }
+  },
+  "accountantSurpriseExams": [
+    {
+      "accountantFirmName": "ASHLAND PARTNERS & COMPANY LLP",
+      "filingDate": "11/17/2025",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "00C4B38C000801EB0566E772001E3ECD056C8CC0"
+    },
+    {
+      "accountantFirmName": "ASHLAND PARTNERS & COMPANY LLP",
+      "filingDate": "05/22/2024",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "03502442000801D904A5BA5104FF88C5056C8CC0"
+    },
+    {
+      "accountantFirmName": "ASHLAND PARTNERS & COMPANY LLP",
+      "filingDate": "09/21/2023",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "05892FA6000801D20436F2F104939D6D056C8CC0"
+    }
+  ],
+  "compilationData": [
+    {
+      "editionID": 52107,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "3/28/2026"
+    },
+    {
+      "editionID": 52108,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "3/28/2026"
+    },
+    {
+      "editionID": 52109,
+      "type": "IA_INDVL",
+      "generatedOn": "3/28/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "6/7/2011"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "6/7/2011"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "6/7/2011"
+    },
+    {
+      "jurisdiction": "Colorado",
+      "status": "Notice Filed",
+      "effectiveDate": "1/8/2018"
+    },
+    {
+      "jurisdiction": "Idaho",
+      "status": "Notice Filed",
+      "effectiveDate": "7/28/2020"
+    },
+    {
+      "jurisdiction": "Oregon",
+      "status": "Notice Filed",
+      "effectiveDate": "9/23/2025"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "3/23/2022"
+    },
+    {
+      "jurisdiction": "Washington",
+      "status": "Notice Filed",
+      "effectiveDate": "11/8/2019"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1028142,
+        "brochureName": "PART 2A BROCHURE",
+        "dateSubmitted": "3/27/2026"
+      }
+    ]
+  }
+}
