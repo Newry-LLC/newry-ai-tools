@@ -1,0 +1,56 @@
+{
+  "crd": "285243",
+  "name": "Releve Financial Group",
+  "people": [
+    {
+      "raw_name": "JURKOVICH, DAWN, DEBORAH",
+      "name": "Dawn Deborah Jurkovich",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING MEMBER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "09/2016",
+      "crd": "4366566",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "President and Founding Partner of Releve Financial Group. Over 20 years of experience; holds CFP, CRPC, and BFA (Behavioral Financial Advisor) designations \u2014 described as the nation's first certified Behavioral Financial Advisor. Created the 'WELLthy360' approach and authored 'Live WELLthy.' Recognized as a nationally recognized keynote speaker on values-aligned wealth and leadership. Also serves as CFO and Designer for a real estate venture, D2 Legacy, LLC. Listed as a member of the Forbes Finance Council.",
+      "bio_source": "Forbes Finance Council member profile (councils.forbes.com/profile/Dawn-Dahlby-Jurkovich) \u2014 independent, non-firm-website source confirming credentials, authorship, and speaking recognition; corroborated by Wealthminder.com and firm website",
+      "bio_confidence": "high",
+      "phase4_note": "Phase 4 verification (2026-07-03): the 'nation's first certified Behavioral Financial Advisor' claim and 'WELLthy360' branding trace only to her own self-authored bio copy (repeated across her Forbes profile and personal site) -- no independent third party (e.g. the BFA certifying body) confirms the 'first' superlative. Also note: her book 'Live WELLthy' is published under the name 'Dawn Dahlby,' not 'Jurkovich' -- confirmed to be the same person via her hyphenated Forbes profile (Dahlby-Jurkovich), not a different individual. Verdict: PARTIAL.",
+      "phase4_status": "verified_with_caveat",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "BANNWARTH, KIMBERLY, KAREN",
+      "name": "Kimberly Karen Bannwarth",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "since": "01/2021",
+      "crd": "5535378",
+      "is_partner_mention": false,
+      "seniority_score": 25,
+      "bio_note": "Chief Compliance Officer; also holds title Managing Director/Vice President per LinkedIn/ZoomInfo. Holds CRPC (Chartered Retirement Planning Counselor) designation. Prior roles in Client Services management at NorthRock Partners and Ameriprise Financial. Holds a Master's degree from St. Cloud State University and a Bachelor of Music Education from the University of Wisconsin-Eau Claire \u2014 a notable career pivot from music education into wealth management operations/compliance.",
+      "bio_source": "LinkedIn and ZoomInfo profile, corroborating career history and education beyond the firm website",
+      "bio_confidence": "high",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Founded by Dawn Dahlby-Jurkovich, positioned as a concierge fiduciary practice blending financial strategy with behavioral finance, with a stated focus on serving women and their families. Dawn splits time between Minnesota and Arizona offices.",
+    "source": "Firm website (relevefinancialgroup.com); corroborated by Forbes Finance Council profile",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "2 of 2 people checked"
+}
