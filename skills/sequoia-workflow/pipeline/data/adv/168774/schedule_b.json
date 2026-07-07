@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "Taylor, Jordan, Isaac",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "JT ARIZONA HOLDINGS, LLC SHAREHOLDER",
+      "since": "01/2020",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "6765874",
+      "raw_id": "6765874"
+    },
+    {
+      "full_legal_name": "MELILLO, DAN, JOSEPH",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "DJM REVOCABLE TRUST OWNER",
+      "since": "11/2019",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "8110983",
+      "raw_id": "8110983"
+    },
+    {
+      "full_legal_name": "MERCK, JAMES, JASON",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "JASON MERCK REVOCABLE TRUST OWNER",
+      "since": "09/2016",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "8110984",
+      "raw_id": "8110984"
+    }
+  ]
+}
