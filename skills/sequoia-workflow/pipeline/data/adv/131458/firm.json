@@ -1,0 +1,182 @@
+{
+  "basicInformation": {
+    "firmId": 131458,
+    "firmName": "WATTS GWILLIAM & COMPANY, LLC",
+    "otherNames": [
+      "OPTIC ASSET MANAGEMENT",
+      "WATTS GWILLIAM & COMPANY, LLC",
+      "WATTS GWILLIAM"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "06/30/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "63078",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "0e42ddf2-5b27-422e-87fa-fb2079b00e54"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "2730 S. VAL VISTA DR.",
+      "street2": "SUITE 124",
+      "city": "GILBERT",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85295"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52653,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "7/1/2026"
+    },
+    {
+      "editionID": 52654,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "7/1/2026"
+    },
+    {
+      "editionID": 52652,
+      "type": "IA_INDVL",
+      "generatedOn": "7/1/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "4/23/2004"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "4/23/2004"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "4/23/2004"
+    },
+    {
+      "jurisdiction": "Colorado",
+      "status": "Notice Filed",
+      "effectiveDate": "3/29/2022"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "12/16/2022"
+    },
+    {
+      "jurisdiction": "Georgia",
+      "status": "Notice Filed",
+      "effectiveDate": "9/20/2023"
+    },
+    {
+      "jurisdiction": "Illinois",
+      "status": "Notice Filed",
+      "effectiveDate": "7/26/2022"
+    },
+    {
+      "jurisdiction": "Massachusetts",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2024"
+    },
+    {
+      "jurisdiction": "Michigan",
+      "status": "Notice Filed",
+      "effectiveDate": "2/15/2023"
+    },
+    {
+      "jurisdiction": "Minnesota",
+      "status": "Notice Filed",
+      "effectiveDate": "10/28/2025"
+    },
+    {
+      "jurisdiction": "Nevada",
+      "status": "Notice Filed",
+      "effectiveDate": "2/4/2025"
+    },
+    {
+      "jurisdiction": "New Mexico",
+      "status": "Notice Filed",
+      "effectiveDate": "3/29/2022"
+    },
+    {
+      "jurisdiction": "New York",
+      "status": "Notice Filed",
+      "effectiveDate": "7/7/2025"
+    },
+    {
+      "jurisdiction": "North Carolina",
+      "status": "Notice Filed",
+      "effectiveDate": "7/30/2024"
+    },
+    {
+      "jurisdiction": "Ohio",
+      "status": "Notice Filed",
+      "effectiveDate": "6/30/2026"
+    },
+    {
+      "jurisdiction": "Oregon",
+      "status": "Notice Filed",
+      "effectiveDate": "6/11/2026"
+    },
+    {
+      "jurisdiction": "Pennsylvania",
+      "status": "Notice Filed",
+      "effectiveDate": "9/3/2024"
+    },
+    {
+      "jurisdiction": "South Carolina",
+      "status": "Notice Filed",
+      "effectiveDate": "3/11/2024"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "3/31/2010"
+    },
+    {
+      "jurisdiction": "Utah",
+      "status": "Notice Filed",
+      "effectiveDate": "3/24/2017"
+    },
+    {
+      "jurisdiction": "Virginia",
+      "status": "Notice Filed",
+      "effectiveDate": "1/22/2025"
+    },
+    {
+      "jurisdiction": "Washington",
+      "status": "Notice Filed",
+      "effectiveDate": "3/21/2011"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1044398,
+        "brochureName": "MAY 2006 BROCHURE",
+        "dateSubmitted": "5/7/2026"
+      }
+    ]
+  }
+}
