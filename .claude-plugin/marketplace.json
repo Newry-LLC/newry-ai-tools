@@ -37,6 +37,10 @@
     {
       "name": "plugin-builder",
       "source": "./plugins/plugin-builder"
+    },
+    {
+      "name": "weekly-callin-post",
+      "source": "./plugins/weekly-callin-post"
     }
   ]
 }
