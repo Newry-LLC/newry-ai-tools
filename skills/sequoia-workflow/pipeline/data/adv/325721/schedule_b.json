@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "WEALTHVISION, LLC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "AMPLIFY VENTURES GROUP, LLC MEMBER",
+      "since": "08/2023",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "HANA HOLDINGS, LLC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "AMPLIFY VENTURES GROUP, LLC MEMBER",
+      "since": "08/2023",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    }
+  ]
+}
