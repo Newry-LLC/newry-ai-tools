@@ -379,6 +379,11 @@ def write_table(shape, rows, opts=None, slide=None):
     # a plain text swap can never flatten a navy header or hidden white labels to the
     # baseline. Build paths leave it off and set styling explicitly.
     preserve_format = opts.get("preserve_format", False)
+    warns = []
+    # Editing an existing table must never silently destroy data. In preserve (edit) mode we
+    # do NOT add or delete rows/columns — only overlapping cells are written. Build paths
+    # (preserve_format False) still flex the grid to fit the data. Override with allow_resize.
+    allow_resize = opts.get("allow_resize", not preserve_format)
     if not keep_style and not preserve_format:
         for prop in ("FirstRow", "LastRow", "FirstCol", "LastCol", "HorizBanding", "VertBanding"):
             try:
@@ -422,18 +427,32 @@ def write_table(shape, rows, opts=None, slide=None):
     # header_rows: leave the template's top N rows in place (e.g. a column-label header that
     # also keeps a section subhead clear above the data); data rows are written below them.
     header_rows = int(opts.get("header_rows", 0))
-    # Resize the table's row count to match header + data (add at end / delete from end).
     need = len(rows) + header_rows
-    while table.Rows.Count < need:
-        table.Rows.Add()
-    while table.Rows.Count > need:
-        table.Rows(table.Rows.Count).Delete()
-    # Resize columns to match the widest data row (comparison tables vary in # of items).
     need_cols = max((len(row) for row in rows), default=table.Columns.Count)
-    while table.Columns.Count < need_cols:
-        table.Columns.Add()
-    while table.Columns.Count > need_cols:
-        table.Columns(table.Columns.Count).Delete()
+    if allow_resize:
+        # Build path: resize the grid to match header + data (add at end / delete from end).
+        while table.Rows.Count < need:
+            table.Rows.Add()
+        while table.Rows.Count > need:
+            table.Rows(table.Rows.Count).Delete()
+        while table.Columns.Count < need_cols:
+            table.Columns.Add()
+        while table.Columns.Count > need_cols:
+            table.Columns(table.Columns.Count).Delete()
+    else:
+        # Edit path: never add/delete. Warn loudly if the supplied shape doesn't match, so
+        # a partial update can't silently drop rows/columns the consultant meant to keep.
+        if need != table.Rows.Count:
+            warns.append(
+                "table has %d rows but %d were supplied (+%d header); in edit mode rows are "
+                "neither added nor deleted — only overlapping cells were written. Pass "
+                "table_opts.allow_resize=true to change the row count."
+                % (table.Rows.Count, len(rows), header_rows))
+        if need_cols > table.Columns.Count:
+            warns.append(
+                "a supplied row has %d cells but the table has %d columns; extra cells were "
+                "ignored. Pass table_opts.allow_resize=true to add columns."
+                % (need_cols, table.Columns.Count))
     # Optional explicit per-column widths (points) — e.g. narrow spacer columns + wide text
     # columns so emails/names don't wrap mid-word. Sum should match the table's total width.
     col_widths = opts.get("col_widths")
@@ -460,7 +479,11 @@ def write_table(shape, rows, opts=None, slide=None):
     # only write text + font color and never touch the fill.
     preserve_fill = opts.get("preserve_fill", False) or keep_style or preserve_format
     for r, row in enumerate(rows, start=1 + header_rows):
+        if r > table.Rows.Count:
+            break  # edit mode, more data rows than the grid — already warned
         for c, cell_spec in enumerate(row, start=1):
+            if c > table.Columns.Count:
+                continue  # edit mode, wider row than the grid — already warned
             cell = table.Cell(r, c)
             tf = cell.Shape.TextFrame.TextRange
             spec = cell_spec if isinstance(cell_spec, dict) else {"text": str(cell_spec)}
@@ -546,6 +569,48 @@ def write_table(shape, rows, opts=None, slide=None):
                 table.Rows(r).Height = 1
             except Exception:
                 pass
+    return warns
+
+
+def write_cells(shape, cells):
+    """Surgically update specific table cells, touching nothing else.
+
+    The safe way to edit an existing styled table (merged cells, custom fills, hidden
+    white labels): each entry addresses ONE logical cell by (row, col) and changes only
+    what it names. No resize, no table-style reset, no fill defaults — so merges, colors,
+    and every unnamed cell survive exactly. Cell addressing resolves a merged region to
+    its origin, so writing a merged cell just works.
+
+    Use this for "update these cells" edits; use write_table only to (re)build a whole
+    table. cells: [ {row, col, text?, color?, fill?, bold?, italic?, size?, font?, align?} ].
+    Returns a list of warnings (out-of-range or per-cell failures); empty if all clean.
+    """
+    table = shape.Table
+    R, C = table.Rows.Count, table.Columns.Count
+    warns = []
+    for spec in cells:
+        r = int(spec["row"]); c = int(spec["col"])
+        if not (1 <= r <= R and 1 <= c <= C):
+            warns.append("cell (%d,%d) is outside the %dx%d table — skipped" % (r, c, R, C))
+            continue
+        try:
+            cell = table.Cell(r, c)
+            tr = cell.Shape.TextFrame.TextRange
+            if "text" in spec:
+                clean, spans = _split_bold_markup(str(spec["text"]))
+                tr.Text = clean
+                if spans:
+                    _apply_bold_spans(tr, 1, len(clean), spans)
+            if "fill" in spec:
+                cell.Shape.Fill.Solid()
+                cell.Shape.Fill.ForeColor.RGB = to_bgr(spec["fill"])
+            if "color" in spec:
+                tr.Font.Color.RGB = to_bgr(spec["color"])
+            apply_format(tr, {k: v for k, v in spec.items()
+                              if k in ("bold", "italic", "size", "font", "align")})
+        except Exception as e:
+            warns.append("cell (%d,%d): %s" % (r, c, e))
+    return warns
 
 
 def fill_slot(shape, slot, content, slide=None):
@@ -955,16 +1020,45 @@ def refresh_chart(app, pres, op):
                          "presentation": newpres.Name,
                          "error": "refresh failed (deck reopened unchanged): %s" % e}
     refreshed = app.Presentations.Open(out, WithWindow=True)
-    refreshed.SaveAs(original)          # round-trips back to the real home (uploads if cloud)
+    try:
+        refreshed.SaveAs(original)      # round-trips back to the real home (uploads if cloud)
+    except Exception as e:
+        # ppttc succeeded but we couldn't write back to the deck's real home (SharePoint
+        # checkout/lock, network drop, permissions). Do NOT leave the consultant editing
+        # the TEMP copy unaware — reopen the untouched original and point them at the
+        # refreshed file so no work is silently stranded in a temp directory.
+        try:
+            refreshed.Close()
+        except Exception:
+            pass
+        newpres = app.Presentations.Open(original, WithWindow=True)
+        return newpres, {"chart": name, "refreshed": False, "presentation": newpres.Name,
+                         "error": ("chart refreshed but saving back to %s failed (%s). The deck "
+                                   "was reopened UNCHANGED. The refreshed copy is at %s — open it "
+                                   "manually to keep the update." % (original, e, out))}
     return refreshed, {"chart": name, "refreshed": True, "presentation": refreshed.Name}
 
 
 def find_presentation(app, ref):
     if ref in (None, "active"):
         return app.ActivePresentation
-    for p in app.Presentations:
-        if ref.lower() in p.Name.lower() or ref.lower() in p.FullName.lower():
-            return p
+    r = ref.lower()
+    matches = [p for p in app.Presentations
+               if r in p.Name.lower() or r in p.FullName.lower()]
+    if len(matches) == 1:
+        return matches[0]
+    if len(matches) > 1:
+        # An exact filename match (with or without extension) is unambiguous — prefer it
+        # over the substring hits so "Q2 OKRs.pptx" wins even if "Q2 OKRs v2.pptx" is open.
+        exact = [p for p in matches
+                 if p.Name.lower() == r or p.Name.lower() == r + ".pptx"]
+        if len(exact) == 1:
+            return exact[0]
+        # Otherwise refuse — writing to the wrong deck and saving it is unrecoverable.
+        names = "; ".join(p.FullName for p in matches)
+        raise ValueError(
+            "presentation reference %r matches %d open decks (%s). Refusing to guess — "
+            "pass a more specific name or the full path." % (ref, len(matches), names))
     # Not open — try to open it.
     return app.Presentations.Open(ref, WithWindow=True)
 
@@ -1226,21 +1320,34 @@ def run_job(job):
                 # Editing an existing table: preserve each cell's formatting by default so a
                 # text swap never flattens the styling. A spec can opt out with
                 # table_opts.preserve_format=false (e.g. to restyle a table wholesale).
+                # In preserve mode the grid is never resized (no silent row/column deletion) —
+                # write_table returns warnings if the supplied shape doesn't match.
                 topts = dict(op.get("table_opts") or {})
                 topts.setdefault("preserve_format", True)
-                write_table(shape, op["rows"], topts, slide)
+                edit_warn = write_table(shape, op["rows"], topts, slide)
                 after = "table written (%d rows)" % len(op["rows"])
+            elif kind == "write_cells":
+                # Surgical per-cell table edit — the safe path for "update these cells" on a
+                # styled/merged table. Touches only the named cells; merges + fills survive.
+                edit_warn = write_cells(shape, op["cells"])
+                after = "%d cell(s) updated" % len(op["cells"])
             else:
                 raise ValueError("unknown op %r" % kind)
             res = {"op": kind, "slide": op["slide"], "shape": op["shape"], "ok": True, "after": after}
             if edit_warn:
-                res["warnings"] = [edit_warn]
+                res["warnings"] = edit_warn if isinstance(edit_warn, list) else [edit_warn]
             results.append(res)
         except Exception as e:
             results.append({"op": kind, "slide": op.get("slide"), "shape": op.get("shape"), "ok": False, "error": str(e)})
     if mutated:
         pres.Save()
-    return {"ok": all(r["ok"] for r in results), "presentation": pres.Name, "results": results}
+    # Echo the resolved full path so the caller can confirm the RIGHT deck was written.
+    try:
+        full = pres.FullName
+    except Exception:
+        full = pres.Name
+    return {"ok": all(r["ok"] for r in results), "presentation": pres.Name,
+            "presentation_path": full, "results": results}
 
 
 def main():
