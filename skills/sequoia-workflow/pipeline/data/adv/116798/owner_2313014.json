@@ -1,0 +1,132 @@
+{
+  "basicInformation": {
+    "individualId": 2313014,
+    "firstName": "ROBERT",
+    "middleName": "RALPH",
+    "lastName": "KORLJAN",
+    "otherNames": [
+      "BOB  KORLJAN"
+    ],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "10/31/1999"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 116798,
+      "firmName": "EATON-CAMBRIDGE INC.",
+      "iaOnly": "Y",
+      "registrationBeginDate": "11/1/1999",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "59037",
+          "street1": "5090 N. 40TH STREET SUITE 205",
+          "city": "PHOENIX",
+          "cityAlias": [
+            "PHOENIX"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85018",
+          "latitude": "33.502424",
+          "longitude": "-111.97815",
+          "geoLocation": "33.502424,-111.97815",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "08/03/2018"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "123098",
+      "iaSECNumberType": "801",
+      "firmId": 318170,
+      "firmName": "724 CAPITAL, LLC",
+      "city": "Phoenix",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "10/7/2024",
+      "registrationEndDate": "12/31/2025",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "118126",
+      "iaSECNumberType": "801",
+      "firmId": 306504,
+      "firmName": "JOHNSON WEALTH MANAGEMENT, LLC",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "6/22/2020",
+      "registrationEndDate": "3/25/2024",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 1
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "9/3/1999",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "2/25/1993",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "2/11/1993",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "11/1/1999"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
