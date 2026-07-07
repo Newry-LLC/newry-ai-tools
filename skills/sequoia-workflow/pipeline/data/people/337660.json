@@ -1,0 +1,76 @@
+{
+  "crd": "337660",
+  "name": "Luminescent Wealth Management, Inc.",
+  "people": [
+    {
+      "raw_name": "ITKOE, ERIN, BETH",
+      "name": "Erin Beth Itkoe",
+      "source": "Form ADV Schedule B (indirect owner of EBI TRUST U/T/A DATED JULY 9, 2024)",
+      "confidence": "high",
+      "title_or_status": "EBI TRUST U/T/A DATED JULY 9, 2024 GRANTOR AND TRUSTEE",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "07/2025",
+      "crd": "4816412",
+      "is_partner_mention": false,
+      "seniority_score": 55,
+      "bio_note": "Confirmed as the same person previously at Tarbox Family Office (Director, Financial Planning) who left to co-found Luminescent Wealth Management with Trevor Scheid in 2025. Career began in 2003; prior roles include Director of Financial Planning at Tarbox Family Office, Senior Wealth Counselor and Director of Client Experience at Versant Capital Management, and Manager of Investment Operations/Relationship Manager at GenSpring Family Offices. CPA/PFS and CFP, also an Accredited Estate Planner and Chartered Advisor in Philanthropy. Named one of Az Business Magazine's '12 Millennials to Watch' (2019), listed at Versant Capital Management, age 38, noted as president of the Financial Planning Association of Greater Phoenix. In June 2017, while a Senior Wealth Counselor at Versant Capital Management, she was one of 16 CPAs age 40 and under honored by the AICPA with the second annual Personal Financial Planning (PFP) Standing Ovation award, recognized at the AICPA's Advanced Personal Financial Planning Conference (AICPA ENGAGE) in Las Vegas.",
+      "bio_source": "'12 Millennials to Watch' independently confirmed via the original AZ Big Media article (azbigmedia.com/business/business-leaders/newsmakers/12-millennials-to-watch-in-2019/). AICPA Standing Ovation award independently confirmed via Versant Capital Management's own press coverage (versantcm.com/insights/news/standing-ovation-top-young-cpa-personal-financial-planning/ and versantcm.com/insights/news/top-cpa-personal-financial-planning/), corroborated by AICPA's own 2017 press release 'AICPA Announces Standing Ovation Honors in Personal Financial Planning' and syndicated coverage on AdvisorNews.com \u2014 no longer solely sourced to the firm's own bio page.",
+      "bio_confidence": "high",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "SCHEID, TREVOR, RYAN",
+      "name": "Trevor Ryan Scheid",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "VICE PRESIDENT",
+      "is_equity_owner": true,
+      "ownership_pct": "10-25%",
+      "control_person": true,
+      "since": "07/2025",
+      "crd": "6558226",
+      "is_partner_mention": false,
+      "seniority_score": 40,
+      "bio_note": "CFP; co-founded Luminescent Wealth Management with Erin Itkoe (2025); prior experience as Wealth Planner at Tarbox Family Office and Senior Client Associate at Versant Capital Management; B.S. in Finance from University of Arizona (full scholarship); member of the Financial Planning Association of Greater Phoenix.",
+      "bio_source": "Independently corroborated via Trevor Scheid's LinkedIn profile (linkedin.com/in/trevorscheid) and the Tarbox Family Office team page (tarbox.com/team/trevor-scheid-2/), both confirming Tarbox/Versant tenure and CFP credential independent of the Luminescent firm's own site.",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "xxx-xx-xxxx ITKOE, ERIN, BETH",
+      "name": "Erin Beth xxx-xx-xxxx ITKOE",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "PRESIDENT AND CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "since": "07/2025",
+      "crd": "4816412",
+      "is_partner_mention": false,
+      "seniority_score": 30,
+      "bio_note": "Same individual as Erin Beth Itkoe above (data artifact from trust vs. direct ownership records). Confirmed as the same person previously at Tarbox Family Office (Director, Financial Planning) who left to co-found Luminescent Wealth Management with Trevor Scheid in 2025. Career began in 2003; prior roles include Director of Financial Planning at Tarbox Family Office, Senior Wealth Counselor and Director of Client Experience at Versant Capital Management, and Manager of Investment Operations/Relationship Manager at GenSpring Family Offices. CPA/PFS and CFP, also an Accredited Estate Planner and Chartered Advisor in Philanthropy. Named one of Az Business Magazine's '12 Millennials to Watch' (2019). In June 2017, while a Senior Wealth Counselor at Versant Capital Management, she was one of 16 CPAs age 40 and under honored by the AICPA with the second annual Personal Financial Planning (PFP) Standing Ovation award, recognized at AICPA ENGAGE in Las Vegas.",
+      "bio_source": "'12 Millennials to Watch' independently confirmed via AZ Big Media (azbigmedia.com/business/business-leaders/newsmakers/12-millennials-to-watch-in-2019/). AICPA Standing Ovation award independently confirmed via Versant Capital Management's own press coverage (versantcm.com/insights/news/standing-ovation-top-young-cpa-personal-financial-planning/), corroborated by AICPA's own 2017 press release.",
+      "bio_confidence": "high",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "data_quality_flags": [
+    "Erin Itkoe has zero ZoomInfo footprint under this firm; a same-name/same-middle-initial contact exists at an unrelated firm (Tarbox Family Office) as Director of Financial Planning. Plausible same person (recent move?) but not confirmed \u2014 worth a manual check before outreach."
+  ],
+  "firm_note": {
+    "text": "Luminescent Wealth Management, Inc. is a boutique, independently-owned, fee-only RIA in Scottsdale, AZ, co-founded in 2025 by Erin Itkoe and Trevor Scheid, both of whom previously worked together at Tarbox Family Office and Versant Capital Management before starting the firm.",
+    "source": "Website (lumiwm.com) and web search corroboration",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "2 of 3 people checked"
+}
