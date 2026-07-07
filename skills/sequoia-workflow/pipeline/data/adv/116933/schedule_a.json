@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "CHRISTENSEN, KELLY, ALAN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "PRESIDENT, DIRECTOR, CHIEF COMPLIANCE OFFICER",
+      "since": "06/1999",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2254214",
+      "raw_id": "2254214"
+    },
+    {
+      "full_legal_name": "KA & JL CHRISTENSEN FAMILY TRUST",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "SHAREHOLDER",
+      "since": "03/2015",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    }
+  ]
+}
