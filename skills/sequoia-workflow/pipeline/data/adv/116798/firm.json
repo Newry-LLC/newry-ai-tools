@@ -1,0 +1,138 @@
+{
+  "basicInformation": {
+    "firmId": 116798,
+    "firmName": "EATON-CAMBRIDGE INC.",
+    "otherNames": [
+      "CAMBRIDGE FINANCIAL, INC.",
+      "EATON-CAMBRIDGE INC.",
+      "EATON-CAMBRIDGE",
+      "CAMBRIDGE WEALTH MANAGEMENT, INC."
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "06/12/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "116885",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "3b926ad9-7791-4c61-8ca8-90743378869c"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "5090 N. 40TH STREET SUITE 205",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85018"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52566,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "6/17/2026"
+    },
+    {
+      "editionID": 52567,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "6/17/2026"
+    },
+    {
+      "editionID": 52568,
+      "type": "IA_INDVL",
+      "generatedOn": "6/17/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "7/5/2019"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "7/12/2019"
+    },
+    {
+      "secJurisdiction": "California",
+      "status": "Terminated",
+      "effectiveDate": "8/11/2019"
+    },
+    {
+      "secJurisdiction": "Missouri",
+      "status": "Terminated",
+      "effectiveDate": "7/12/2019"
+    },
+    {
+      "secJurisdiction": "Pennsylvania",
+      "status": "Terminated",
+      "effectiveDate": "7/15/2019"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Terminated",
+      "effectiveDate": "7/12/2019"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "7/5/2019"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "7/5/2019"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "6/12/2026"
+    },
+    {
+      "jurisdiction": "New York",
+      "status": "Notice Filed",
+      "effectiveDate": "4/9/2026"
+    },
+    {
+      "jurisdiction": "North Carolina",
+      "status": "Notice Filed",
+      "effectiveDate": "5/14/2024"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "7/5/2019"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1042680,
+        "brochureName": "EATON-CAMBRIDGE DISCLOSURE BROCHURE AND BROCHURE SUPPLEMENTS",
+        "dateSubmitted": "4/24/2026"
+      },
+      {
+        "brochureVersionID": 1015713,
+        "brochureName": "EATON-CAMBRIDGE DISCLOSURE BROCHURE AND BROCHURE SUPPLEMENTS",
+        "dateSubmitted": "3/6/2026",
+        "lastConfirmed": "3/22/2012"
+      }
+    ]
+  }
+}
