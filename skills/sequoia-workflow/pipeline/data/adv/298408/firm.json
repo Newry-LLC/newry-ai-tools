@@ -1,0 +1,115 @@
+{
+  "basicInformation": {
+    "firmId": 298408,
+    "firmName": "FOOTHILLS ADVISORS, LLC",
+    "otherNames": [
+      "FOOTHILLS ADVISORS, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "02/16/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "129654",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "940126a6-5644-41c7-922c-791b2c2804b8"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "6702 E CAVE CREEK ROAD",
+      "street2": "#4",
+      "city": "CAVE CREEK",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85331"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 51908,
+      "type": "IA_INDVL",
+      "generatedOn": "2/17/2026"
+    },
+    {
+      "editionID": 51909,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "2/17/2026"
+    },
+    {
+      "editionID": 51910,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "2/17/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "3/13/2024"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "3/19/2024"
+    },
+    {
+      "secJurisdiction": "Colorado",
+      "status": "Terminated",
+      "effectiveDate": "3/19/2024"
+    },
+    {
+      "secJurisdiction": "Nebraska",
+      "status": "Terminated",
+      "effectiveDate": "3/19/2024"
+    },
+    {
+      "secJurisdiction": "Oregon",
+      "status": "Terminated",
+      "effectiveDate": "3/29/2024"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "3/13/2024"
+    },
+    {
+      "jurisdiction": "Colorado",
+      "status": "Notice Filed",
+      "effectiveDate": "3/13/2024"
+    },
+    {
+      "jurisdiction": "Nebraska",
+      "status": "Notice Filed",
+      "effectiveDate": "3/13/2024"
+    },
+    {
+      "jurisdiction": "Oregon",
+      "status": "Notice Filed",
+      "effectiveDate": "3/13/2024"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1009167,
+        "brochureName": "FORM ADV2A/2B - SEC",
+        "dateSubmitted": "2/16/2026"
+      }
+    ]
+  }
+}
