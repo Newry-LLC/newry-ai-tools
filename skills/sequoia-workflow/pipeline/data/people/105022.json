@@ -1,0 +1,108 @@
+{
+  "crd": "105022",
+  "name": "Intrinsic Wealth Counsel, Inc.",
+  "people": [
+    {
+      "raw_name": "VAN ZUTPHEN, CORNELIUS, HENRY",
+      "name": "Cornelius Henry Van zutphen",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "PRESIDENT",
+      "is_equity_owner": true,
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "since": "08/2013",
+      "crd": "1261512",
+      "is_partner_mention": true,
+      "partner_title_phrase": "Partner",
+      "partner_quote": "Neal is the founder of Intrinsic Wealth Counsel, Inc., majority owner, President, and Partner.",
+      "seniority_score": 70,
+      "bio_note": "Known publicly as 'Neal.' Founder and President; holds M.S., CFP, FBS (Certified Financial Behavior Specialist), and CRPC designations. Career in financial planning since 1983. Co-authored 'Financial Planner as Healer: Maximizing the Role of Financial Health Physician' with Bradley T. Klontz, Psy.D. and Kate Fries, published in the Journal of Financial Planning, Vol. 29, Issue 12 (December 2016), pages 52-59. His CFP Board Ambassador title appears on LinkedIn but was not independently corroborated beyond that in this pass. No source explicitly confirmed a family relationship to Casey Van Zutphen despite the shared surname \u2014 not assumed.",
+      "bio_source": "Journal article verified via the Financial Planning Association's own journal archive (financialplanningassociation.org/article/journal/DEC16-financial-planner-healer-maximizing-role-financial-health-physician) and cross-confirmed on ResearchGate \u2014 both independent of the firm's own website, confirming the full citation and co-authors. CFP Board Ambassador title sourced only to LinkedIn (linkedin.com/in/neal-van-zutphen), no separate roster/press confirmation found.",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "VAN ZUTPHEN, CORNELIUS, H.",
+      "name": "Cornelius H. Van zutphen",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CIO",
+      "is_equity_owner": true,
+      "ownership_pct": "25-50%",
+      "control_person": false,
+      "since": "08/2013",
+      "crd": "5264496",
+      "is_partner_mention": true,
+      "partner_title_phrase": "Partner, Chief Investment Officer",
+      "partner_quote": "Casey is Partner, Chief Investment Officer, and the Portfolio Manager at Intrinsic Wealth Counsel, Inc.",
+      "seniority_score": 40,
+      "bio_note": "Known publicly as 'Casey.' Partner, Chief Investment Officer, and Portfolio Manager; CFA charterholder and CFP professional; operates the firm's second office in Tustin, CA and visits the Tempe, AZ office regularly; member of the Financial Planning Association of Orange County and the CFA Society of Orange County; graduated Magna Cum Laude from the University of Arizona (B.S., Biochemistry and Molecular Biophysics) with two years of neurophysiology research; taught English in Japan and became fluent in Japanese. No source explicitly confirmed a familial relationship to Neal Van Zutphen despite the shared surname \u2014 not assumed or stated as fact.",
+      "bio_source": "Corroborated via his LinkedIn profile (linkedin.com/in/casey-van-zutphen-cfa-cfp), independent of the firm's own website, confirming CFA/CFP credentials, professional association memberships, and education/background details.",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "JONES, DANIELA, URS",
+      "name": "Daniela Urs Jones",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "VP",
+      "is_equity_owner": true,
+      "ownership_pct": "10-25%",
+      "control_person": false,
+      "since": "01/2022",
+      "crd": "5976893",
+      "is_partner_mention": true,
+      "partner_title_phrase": "Partner, Vice President",
+      "partner_quote": "Daniela is Partner, Vice President, and Financial Life Planner at Intrinsic Wealth Counsel, Inc.",
+      "seniority_score": 30,
+      "bio_note": "CFP and CFA charterholder; Partner at Intrinsic Wealth Counsel since 2018, focused on client life planning. Graduated Magna Cum Laude from Saint Mary's College (Notre Dame, IN) with a BBA in Finance, Marketing, and International Business. Prior to IWC, worked as a wealth manager at Barnes Investment Advisory, Inc., a Phoenix-based RIA, from May 2005 through January 2017 (~12 years). Member of CFA Society Phoenix and the Financial Planning Association of Greater Phoenix.",
+      "bio_source": "Barnes Investment Advisory tenure (May 2005-January 2017) independently confirmed via her LinkedIn profile (linkedin.com/in/daniela-jones-cfp-cfa), independent of the firm's own website \u2014 matches and specifies the previously general ~12-year figure.",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "Lacey, Gieselle",
+      "name": "Gieselle Lacey",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CCO",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "since": "03/2024",
+      "crd": "7891531",
+      "is_partner_mention": false,
+      "seniority_score": 10,
+      "bio_note": "Chief Compliance Officer & Senior Portfolio Administrator at Intrinsic Wealth Counsel (full name Gieselle Ebot Lacey, listed on the firm's own bio page as 'Gieselle Ebot'); joined the firm in May 2015 as an Administrative Assistant and was promoted into her current role. Originally from Cameroon; has lived in Arizona for 20+ years. Graduated Summa Cum Laude from the University of Arizona (B.S., Business Administration) and holds a master's in Finance from the University of Scranton; also pursuing the IACCP designation and holds a registered paraplanner certification.",
+      "bio_source": "Checked 'Gieselle Ebot Lacey' / 'Gieselle Ebot' on LinkedIn and general web search \u2014 no independent LinkedIn profile, University of Scranton alumni mention, or professional directory listing found. The firm's own bio page (intrinsicwealthcounsel.com/about-us/gieselle-ebot/) remains the only substantive source; no independent coverage found beyond the firm's own website.",
+      "bio_confidence": "low",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [
+    {
+      "ai_name": "Cornelius (Neal) Van Zutphen, Jr.",
+      "matched_to": "Cornelius Henry Van zutphen"
+    },
+    {
+      "ai_name": "Cornelius (Casey) Van Zutphen, III",
+      "matched_to": "Cornelius H. Van zutphen"
+    },
+    {
+      "ai_name": "Daniela U. Jones",
+      "matched_to": "Daniela Urs Jones"
+    }
+  ],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Website (intrinsicwealthcounsel.com/about-us) confirms an independent, fee-only financial planning and wealth management firm emphasizing integration of clients' financial lives with personal goals and 'compassionate fiduciary care.'",
+    "source": "intrinsicwealthcounsel.com/about-us",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "0 of 4 people checked"
+}
