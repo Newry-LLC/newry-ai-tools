@@ -1,0 +1,133 @@
+{
+  "basicInformation": {
+    "firmId": 170536,
+    "firmName": "WISDOM WEALTH INVESTMENT ADVISORS LLC",
+    "otherNames": [
+      "BOTTLE & MCINERNEY, LLC",
+      "WISDOM WEALTH INVESTMENT ADVISORS LLC",
+      "LUCAS FINANCIAL SERVICES, LLC",
+      "JMFS, INC."
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "04/08/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "136216",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "b68ae194-141b-4843-8e12-99564d05056b"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "6930 E. CHAUNCY LANE",
+      "street2": "SUITE 220",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85054"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52658,
+      "type": "IA_INDVL",
+      "generatedOn": "7/2/2026"
+    },
+    {
+      "editionID": 52659,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "7/2/2026"
+    },
+    {
+      "editionID": 52660,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "7/2/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "5/11/2026"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "5/15/2026"
+    },
+    {
+      "secJurisdiction": "California",
+      "status": "Terminated",
+      "effectiveDate": "6/14/2026"
+    },
+    {
+      "secJurisdiction": "Indiana",
+      "status": "Terminated",
+      "effectiveDate": "12/31/2019"
+    },
+    {
+      "secJurisdiction": "Louisiana",
+      "status": "Terminated",
+      "effectiveDate": "5/15/2026"
+    },
+    {
+      "secJurisdiction": "Nevada",
+      "status": "Terminated",
+      "effectiveDate": "12/31/2025"
+    },
+    {
+      "secJurisdiction": "Ohio",
+      "status": "Terminated",
+      "effectiveDate": "1/2/2020"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Terminated",
+      "effectiveDate": "12/31/2019"
+    },
+    {
+      "secJurisdiction": "West Virginia",
+      "status": "Terminated",
+      "effectiveDate": "12/31/2019"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "5/11/2026"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "5/11/2026"
+    },
+    {
+      "jurisdiction": "Louisiana",
+      "status": "Notice Filed",
+      "effectiveDate": "5/11/2026"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1040749,
+        "brochureName": "WISDOM WEALTH INVESTMENT ADVISORS LLC BROCHURE",
+        "dateSubmitted": "4/8/2026"
+      }
+    ]
+  }
+}
