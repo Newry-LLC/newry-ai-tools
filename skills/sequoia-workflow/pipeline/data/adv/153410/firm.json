@@ -1,0 +1,186 @@
+{
+  "basicInformation": {
+    "firmId": 153410,
+    "firmName": "GALVIN, GAUSTAD & STEIN, LLC",
+    "otherNames": [
+      "GALVIN, GAUSTAD & STEIN, L.L.C.",
+      "GALVIN, GAUSTAD & STEIN, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "05/27/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "71464",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "d29246e9-e25d-4c45-ab71-520074cc02ae"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "7377 E. DOUBLETREE RANCH ROAD",
+      "street2": "SUITE 250",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85258"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52443,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "5/28/2026"
+    },
+    {
+      "editionID": 52444,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "5/28/2026"
+    },
+    {
+      "editionID": 52445,
+      "type": "IA_INDVL",
+      "generatedOn": "5/28/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "6/7/2010"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "6/7/2010"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "10/23/2014"
+    },
+    {
+      "jurisdiction": "Colorado",
+      "status": "Notice Filed",
+      "effectiveDate": "9/27/2017"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "3/30/2018"
+    },
+    {
+      "jurisdiction": "Hawaii",
+      "status": "Notice Filed",
+      "effectiveDate": "2/24/2021"
+    },
+    {
+      "jurisdiction": "Idaho",
+      "status": "Notice Filed",
+      "effectiveDate": "10/23/2014"
+    },
+    {
+      "jurisdiction": "Illinois",
+      "status": "Notice Filed",
+      "effectiveDate": "4/7/2025"
+    },
+    {
+      "jurisdiction": "Maryland",
+      "status": "Notice Filed",
+      "effectiveDate": "12/24/2025"
+    },
+    {
+      "jurisdiction": "Massachusetts",
+      "status": "Notice Filed",
+      "effectiveDate": "12/24/2025"
+    },
+    {
+      "jurisdiction": "Michigan",
+      "status": "Notice Filed",
+      "effectiveDate": "5/27/2026"
+    },
+    {
+      "jurisdiction": "Nevada",
+      "status": "Notice Filed",
+      "effectiveDate": "7/2/2019"
+    },
+    {
+      "jurisdiction": "New Mexico",
+      "status": "Notice Filed",
+      "effectiveDate": "11/14/2013"
+    },
+    {
+      "jurisdiction": "New York",
+      "status": "Notice Filed",
+      "effectiveDate": "5/8/2018"
+    },
+    {
+      "jurisdiction": "North Carolina",
+      "status": "Notice Filed",
+      "effectiveDate": "3/28/2025"
+    },
+    {
+      "jurisdiction": "Ohio",
+      "status": "Notice Filed",
+      "effectiveDate": "6/7/2010"
+    },
+    {
+      "jurisdiction": "Oregon",
+      "status": "Notice Filed",
+      "effectiveDate": "11/12/2019"
+    },
+    {
+      "jurisdiction": "Pennsylvania",
+      "status": "Notice Filed",
+      "effectiveDate": "11/12/2019"
+    },
+    {
+      "jurisdiction": "South Carolina",
+      "status": "Notice Filed",
+      "effectiveDate": "12/24/2025"
+    },
+    {
+      "jurisdiction": "Tennessee",
+      "status": "Notice Filed",
+      "effectiveDate": "5/27/2026"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "11/14/2013"
+    },
+    {
+      "jurisdiction": "Washington",
+      "status": "Notice Filed",
+      "effectiveDate": "7/24/2015"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1046395,
+        "brochureName": "WRAP BROCHURE",
+        "dateSubmitted": "5/27/2026"
+      },
+      {
+        "brochureVersionID": 1046394,
+        "brochureName": "DISCLOSURE BROCHURE",
+        "dateSubmitted": "5/27/2026"
+      }
+    ]
+  }
+}
