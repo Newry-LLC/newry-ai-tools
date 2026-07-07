@@ -1,0 +1,180 @@
+{
+  "basicInformation": {
+    "individualId": 2065531,
+    "firstName": "BLAKE",
+    "middleName": "LEPAGE",
+    "lastName": "BOTTLE",
+    "otherNames": [],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "6/20/1990"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 170536,
+      "firmName": "WISDOM WEALTH INVESTMENT ADVISORS LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "5/29/2014",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "136216",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "555334",
+          "street1": "6930 E. CHAUNCY LANE",
+          "street2": "SUITE 220",
+          "city": "PHOENIX",
+          "cityAlias": [
+            "PHOENIX"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85054",
+          "latitude": "33.683424",
+          "longitude": "-111.95136",
+          "geoLocation": "33.683424,-111.95136",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "08/16/2019"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "56010",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "32590",
+      "firmId": 15708,
+      "firmName": "CONCOURSE FINANCIAL GROUP SECURITIES, INC.",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "registrationBeginDate": "8/12/1998",
+      "registrationEndDate": "12/31/2022",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "23717",
+      "firmId": 7943,
+      "firmName": "BMA FINANCIAL SERVICES, INC.",
+      "city": "KANSAS CITY",
+      "state": "MO",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "6/28/1991",
+      "registrationEndDate": "8/24/1998",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "13431",
+      "firmId": 145,
+      "firmName": "CIGNA SECURITIES, INC.",
+      "city": "RADNOR",
+      "state": "PA",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "6/21/1990",
+      "registrationEndDate": "7/8/1991",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "56010",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "32590",
+      "firmId": 15708,
+      "firmName": "INVESTMENT ADVISORS",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "2/17/2006",
+      "registrationEndDate": "7/8/2021",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 1,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "8/7/1998",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "7/3/1990",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "1/27/1999",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "6/16/1990",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/29/2014"
+    },
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "7/22/2021"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
