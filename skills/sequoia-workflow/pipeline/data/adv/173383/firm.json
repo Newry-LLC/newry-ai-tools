@@ -1,0 +1,106 @@
+{
+  "basicInformation": {
+    "firmId": 173383,
+    "firmName": "STABLEFORD CAPITAL LLC",
+    "otherNames": [
+      "STABLEFORD CAPITAL LLC",
+      "STABLEFORD CAPITAL, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "04/28/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "80522",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "389414a8-345d-475f-a313-33fee6be8085"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "14648 N. SCOTTSDALE ROAD",
+      "street2": "SUITE 130",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85254"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52268,
+      "type": "IA_INDVL",
+      "generatedOn": "4/29/2026"
+    },
+    {
+      "editionID": 52269,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "4/29/2026"
+    },
+    {
+      "editionID": 52270,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "4/29/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "11/7/2014"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "11/18/2014"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "8/23/2016"
+    },
+    {
+      "jurisdiction": "Connecticut",
+      "status": "Notice Filed",
+      "effectiveDate": "5/20/2016"
+    },
+    {
+      "jurisdiction": "Georgia",
+      "status": "Notice Filed",
+      "effectiveDate": "11/7/2014"
+    },
+    {
+      "jurisdiction": "Illinois",
+      "status": "Notice Filed",
+      "effectiveDate": "8/24/2016"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "1/14/2016"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1043064,
+        "brochureName": "ADV PART 2",
+        "dateSubmitted": "4/28/2026"
+      }
+    ]
+  }
+}
