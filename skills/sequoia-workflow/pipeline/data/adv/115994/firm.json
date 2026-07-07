@@ -1,0 +1,95 @@
+{
+  "basicInformation": {
+    "firmId": 115994,
+    "firmName": "R.H. INVESTMENT GROUP, LLC",
+    "otherNames": [
+      "R.H. INVESTMENT GROUP, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "02/23/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "126273",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "d8da125f-8f14-42f9-b156-2f2baf265ba2"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "7373 E. DOUBLETREE RANCH ROAD",
+      "street2": "SUITE 200",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85258"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 51936,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "2/24/2026"
+    },
+    {
+      "editionID": 51937,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "2/24/2026"
+    },
+    {
+      "editionID": 51935,
+      "type": "IA_INDVL",
+      "generatedOn": "2/24/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "8/3/2022"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "8/5/2022"
+    },
+    {
+      "secJurisdiction": "Missouri",
+      "status": "Terminated",
+      "effectiveDate": "1/11/2002"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Terminated",
+      "effectiveDate": "2/17/2023"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "8/4/2022"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1010926,
+        "brochureName": "ADV PART 2A",
+        "dateSubmitted": "2/23/2026"
+      }
+    ]
+  }
+}
