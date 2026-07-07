@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "FICK, CYNTHIA, KAY",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "OWNER/PRESIDENT",
+      "since": "11/2003",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "1643732",
+      "raw_id": "1643732"
+    },
+    {
+      "full_legal_name": "WIGHT, GINA, GIACHETTI",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "PARTNER/CO- OWNER",
+      "since": "03/2020",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5353376",
+      "raw_id": "5353376"
+    },
+    {
+      "full_legal_name": "MESSER, JANET, LYNN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER",
+      "since": "07/2025",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5059140",
+      "raw_id": "5059140"
+    }
+  ]
+}
