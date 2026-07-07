@@ -1,0 +1,56 @@
+{
+  "crd": "157663",
+  "name": "Vigilare Wealth Management LLC",
+  "people": [
+    {
+      "raw_name": "POLIT, JASON, SCOTT",
+      "name": "Jason Scott Polit",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "OWNER, MANAGING MEMBER, CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "since": "06/2011",
+      "crd": "3050647",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "CIO and Co-Founder of Vigilare Wealth Management, University of Arizona graduate (Cum Laude), CFA charterholder (2004), over a decade at Charles Schwab prior to Vigilare (since 2011), 19 years total industry experience. At Schwab, he helped shape and build many of its early advice offerings, led the flagship Private Client program in his final years, and served as a media liaison featured in CNBC and Reuters coverage. Also a managing member of Athlete Society LLC, providing financial coaching for professional athletes.",
+      "bio_source": "Corroborated via Jason Polit's LinkedIn profile (linkedin.com/in/jasonpolit/) and U.S. News Advisor Finder profile (money.usnews.com/financial-advisors/advisor/jason-polit-3050647), independent of the firm's own website, detailing his Schwab tenure, CNBC/Reuters media mentions, and CFA credential.",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "ZDRALE, ZELJKO, JAG",
+      "name": "Zeljko Jag Zdrale",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "OWNER, MANAGING MEMBER",
+      "is_equity_owner": true,
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "since": "06/2011",
+      "crd": "5103342",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Co-Founder, Global Market Strategist, and Managing Member at Vigilare Wealth Management; approximately 12 years at Charles Schwab prior, serving as a Portfolio Consultant. Holds Series 66; registered to provide services in Arizona and California.",
+      "bio_source": "Corroborated via SEC IAPD individual adviser record (adviserinfo.sec.gov/individual/summary/5103342) and Wealthminder advisor profile (wealthminder.com/financial-advisors-scottsdale-AZ/zeljko-zdrale/234057), both independent of the firm's own website, confirming his prior Charles Schwab Portfolio Consultant role and CRD-registered tenure.",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "data_quality_flags": [
+    "Website returned connection refused on every attempt \u2014 no website-based partner check was possible for this firm."
+  ],
+  "firm_note": {
+    "text": "Website (vigilarewealth.com) confirms Jason Polit and Jag Zdrale co-founded the firm; both previously worked together at Charles Schwab as Portfolio Consultants before launching Vigilare with the stated goal of protecting and growing client wealth.",
+    "source": "vigilarewealth.com/meet-our-team",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "0 of 2 people checked"
+}
