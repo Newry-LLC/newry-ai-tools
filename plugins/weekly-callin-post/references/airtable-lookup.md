@@ -57,8 +57,8 @@ Airtable's Project Code will often NOT match the string the person types in Slac
 - Others post free-form: "COR770 Thin Triple Q2 2026", "ALTA, ALTA01", "Sequoia Financial – SEQ01"
 
 Rules:
-- **Match on the client/company + fuzzy code**, not exact code string. Normalize (uppercase, strip spaces/leading zeros) and compare prefixes; use the project/client *name* as the strong key when codes disagree.
-- **For the draft output, always use the person's own code string from their last post**, not Airtable's. Airtable's code is for internal matching only. This sidesteps the mismatch entirely and keeps the person's posts consistent week to week.
+- **Match on the client/company + fuzzy code**, not exact code string. Normalize (uppercase, strip spaces/leading zeros) and compare prefixes; use the project/client *name* as the strong key when codes disagree. Fuzzy matching is only for *identifying* which Airtable project a Slack post refers to.
+- **For the draft output, always use Airtable's Project Code — that is THE project code.** Any different string a person has used in Slack (IN02, DUP038, free-form) was improvised; normalize it to the Airtable code for display: "IN02" → **INGEV02**, "DUP038" → **DUP38**. This standardizes the channel on the canonical code.
 - When you genuinely can't tell whether a Slack project maps to an Airtable candidate, ask in the step-2 checkpoint rather than guessing.
 
 ## Known data-quality flags to expect (do not auto-fix)
