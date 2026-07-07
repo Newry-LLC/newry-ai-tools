@@ -1,0 +1,72 @@
+{
+  "crd": "298110",
+  "name": "Juncture Wealth Strategies, LLC",
+  "people": [
+    {
+      "raw_name": "BARKER, JACK, ANDREW",
+      "name": "Jack Andrew Barker",
+      "source": "Form ADV Schedule B (indirect owner of JUNCTURE, INC.)",
+      "confidence": "high",
+      "title_or_status": "JUNCTURE, INC. OWNER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "03/2018",
+      "crd": "2570575",
+      "is_partner_mention": false,
+      "seniority_score": 55,
+      "bio_note": "Chief Fiduciary Officer / Chief Compliance Officer at Juncture Wealth Strategies (JD, CPA, CTFA). Over 20 years of experience in tax consulting, wealth planning, and trust administration for high-net-worth clients. Career includes implementing tax strategies at a national accounting firm, supervising client relationships at an asset management practice, and managing trust operations at a multinational bank. Holds a J.D. from the University of Nebraska College of Law (1994); joined Juncture in 2013.",
+      "bio_source": "Firm website (juncturewealth.com/about/team) corroborated by Juncture's 2024 Form ADV Part 2B Brochure Supplement and Bloomberg Markets profile (bloomberg.com/profile/person/19154180)",
+      "bio_confidence": "medium",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "RHONEMUS, BARRY, SCOTT",
+      "name": "Barry Scott Rhonemus",
+      "source": "Form ADV Schedule B (indirect owner of JUNCTURE, INC.)",
+      "confidence": "high",
+      "title_or_status": "JUNCTURE, INC. OWNER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "03/2018",
+      "crd": "2801533",
+      "is_partner_mention": false,
+      "seniority_score": 55,
+      "bio_note": "Managing Partner and Founder of Juncture Wealth Strategies. Over 20 years of experience serving ultra-high-net-worth clients, family offices, foundations, and corporate entities. The firm's own site states he spent more than a decade as a private bank wealth advisor at Wells Fargo, ranking in the Top 10 of Wells Fargo Private Bank Wealth Advisors nationally, before founding Juncture in 2010 -- this specific ranking claim is self-reported by the firm and could not be independently corroborated (see source note). Holds a bachelor's degree from Ohio University (1984-1988).",
+      "bio_source": "juncturewealth.com/barry-rhonemus-3 (firm's own site, states the Wells Fargo Top 10 claim verbatim). Phase 4 verification (2026-07-03): his LinkedIn profile (linkedin.com/in/barry-rhonemus-12b9883b), previously cited as corroborating this claim, does NOT mention Wells Fargo at all -- the ranking claim is self-reported by the firm only, not independently confirmed. Ohio University education separately corroborated.",
+      "bio_confidence": "medium",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "HAINES, BRADLEY, JAMES",
+      "name": "Bradley James Haines",
+      "source": "Form ADV Schedule B (indirect owner of JUNCTURE, INC.)",
+      "confidence": "high",
+      "title_or_status": "JUNCTURE, INC. OWNER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "03/2018",
+      "crd": "2571132",
+      "is_partner_mention": false,
+      "seniority_score": 55,
+      "bio_note": "Chief Investment Officer at Juncture Wealth Strategies (CFA, FRM). Over 20 years of experience managing investment portfolios for high-net-worth individuals and institutional clients, with expertise in valuing privately held companies and researching asset/risk allocation strategies. Prior experience includes roles at Wells Fargo, LeMaster & Daniels PLLC (now CliftonLarsonAllen LLP), and Merrill Lynch.",
+      "bio_source": "Firm website (juncturewealth.com/about/team) corroborated by LinkedIn (linkedin.com/in/bradhainescfafrm/) listing prior roles at Wells Fargo, LeMaster & Daniels, and Merrill Lynch",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Juncture Wealth Strategies was founded in 2010 by Barry Rhonemus after he and colleagues left Wells Fargo Private Bank to go independent; the firm serves ultra-high-net-worth individuals, family offices, foundations, and corporate entities. A related advisory entity, Juncture Asset Management, LLC (est. 2019), is also owned by Rhonemus, Barker, and Haines.",
+    "source": "juncturewealth.com/about/team; InvestmentNews (investmentnews.com/ria-news/juncture-wealth-strategies-team-joining-integrated-partners/169990)",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "1 of 3 people checked"
+}
