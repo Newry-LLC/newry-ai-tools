@@ -1,0 +1,103 @@
+{
+  "basicInformation": {
+    "individualId": 6126101,
+    "firstName": "JOSEPH",
+    "middleName": "CHRISTOPHER",
+    "lastName": "ARSENAULT",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "12/28/2012"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 168774,
+      "firmName": "ARBOR WEALTH MANAGEMENT, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "8/28/2013",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "542067",
+          "street1": "7581 S WILLOW DRIVE, SUITE 110",
+          "city": "TEMPE",
+          "cityAlias": [
+            "GUADALUPE",
+            "TEMPE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85283",
+          "latitude": "33.363884",
+          "longitude": "-111.935477",
+          "geoLocation": "33.363884,-111.935477",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "08/01/2013"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "71923",
+      "iaSECNumberType": "801",
+      "firmId": 125004,
+      "firmName": "REGAL INVESTMENT ADVISORS LLC",
+      "city": "TEMPE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "12/3/2012",
+      "registrationEndDate": "8/1/2013",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 0,
+    "principalExamCount": 0,
+    "productExamCount": 0
+  },
+  "stateExamCategory": [],
+  "principalExamCategory": [],
+  "productExamCategory": [],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "8/28/2013"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "9/18/2020"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
