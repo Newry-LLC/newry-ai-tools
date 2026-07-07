@@ -1,0 +1,103 @@
+{
+  "crd": "116798",
+  "name": "Eaton-Cambridge Inc.",
+  "people": [
+    {
+      "raw_name": "GIANNONE, MARC, T",
+      "name": "Marc T Giannone",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "PARTNER AND CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "since": "01/2015",
+      "crd": "5781192",
+      "is_partner_mention": true,
+      "partner_title_phrase": "Partner, Chief Compliance Officer",
+      "partner_quote": "Eaton-Cambridge Inc. Advisory and Financial Planning Partner, Chief Compliance Officer 05/2012 to Present",
+      "seniority_score": 70,
+      "bio_note": "President of Eaton-Cambridge, leading firm strategy after joining in 2012 and now serving as Chief Compliance Officer and majority partner. A Messiah College graduate who previously worked as a Financial Planning Consultant at Merrill, drawing on an investment banking background, and holds the Retirement Income Certified Professional (RICP) designation from the American College. Outside the firm, serves as a board member of the National Christian Foundation Southwest and volunteers with Young Life.",
+      "bio_source": "LinkedIn profile, corroborating firm bio at eatoncambridge.com/team/marc-giannone",
+      "bio_confidence": "medium",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "KORLJAN, ROBERT, RALPH",
+      "name": "Robert Ralph Korljan",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "PARTNER",
+      "is_equity_owner": true,
+      "ownership_pct": "10-25%",
+      "control_person": true,
+      "since": "10/1999",
+      "crd": "2313014",
+      "is_partner_mention": true,
+      "partner_title_phrase": "Wealth Manager, Partner",
+      "partner_quote": "Eaton-Cambridge Inc. Advisory and Financial Planning Wealth Manager, Partner 1999 to Present",
+      "seniority_score": 50,
+      "bio_note": "Founded Eaton-Cambridge and has roughly 48 years in financial services. The firm's own site states he was a tax partner at BKD, LLP (now FORVIS) before founding Eaton-Cambridge, is AICPA board-certified as a Personal Financial Specialist (CPA/PFS), and is a graduate of both Arizona State University and Covenant Theological Seminary -- these specific facts are not independently corroborated (see source note). With the firm since 1999 (26+ years tenure), confirmed via an independent advisor directory.",
+      "bio_source": "eatoncambridge.com/robert-bob-korljan (firm's own site, states the BKD/FORVIS/education details). Phase 4 verification (2026-07-03): the previously-cited SmartAdvisorMatch page (smartadvisormatch.com/advisor-network/arizona/robert-korljan-2313014) was directly re-fetched twice and does NOT contain any of these details -- it only lists licenses (Series 63/65, PFS) and a work-history list (724 Capital, Cambridge Tax Advisory, Corporate Benefit Services, Eaton-Cambridge, Johnson Wealth Management, Roosevelt Community Church, Robert Korljan LTD) confirming 1999-tenure-equivalent history, but not the BKD/tax-partner/seminary facts. The firm-site claim is plausible but currently single-sourced.",
+      "bio_confidence": "medium",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "STAPLETON, SHAWNA",
+      "name": "Shawna Stapleton",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "TAX PARTNER",
+      "is_equity_owner": true,
+      "ownership_pct": "10-25%",
+      "control_person": true,
+      "since": "01/2023",
+      "crd": "7710543",
+      "is_partner_mention": false,
+      "seniority_score": 40,
+      "bio_note": "CPA who joined Eaton-Cambridge in August 2019 and became a tax partner in 2020. An Arizona State University graduate and lifelong Arizona resident, specializes in small business, nonprofit, entity-selection, and complex individual tax work.",
+      "bio_source": "TaxBuzz CPA directory listing (taxbuzz.com/find-the-best-cpa/arizona/phoenix/shawna-stapleton), corroborating firm bio at eatoncambridge.com/shawna-stapleton",
+      "bio_confidence": "medium",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "BERGSTROM, NATHAN",
+      "name": "Nathan Bergstrom",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "PARTNER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "since": "05/2026",
+      "crd": "7078649",
+      "is_partner_mention": false,
+      "seniority_score": 15,
+      "bio_note": "Joined Eaton-Cambridge (outside sources place his hire around 2021). Graduated from the University of Phoenix in 2012 with a degree in Business Management and Entrepreneurship, and previously worked at Johnson Wealth Management, Financial Engines Advisors, Charles Schwab, and Quicken Loans before moving into financial planning. Active in his church's diaconate in downtown Phoenix.",
+      "bio_source": "SEC IAPD adviser summary (adviserinfo.sec.gov/individual/summary/7078649), corroborating firm bio at eatoncambridge.com/nathan-bergstrom",
+      "bio_confidence": "medium",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [
+    {
+      "ai_name": "Robert R. Korljan",
+      "matched_to": "Robert Ralph Korljan"
+    },
+    {
+      "ai_name": "Marc T. Giannone",
+      "matched_to": "Marc T Giannone"
+    }
+  ],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Eaton-Cambridge Inc. is a Phoenix, AZ RIA offering combined wealth management, tax, and estate planning; it operates alongside an affiliated CPA practice (Eaton-Cambridge CPA PC), reflecting founder Robert Korljan's tax-partner background.",
+    "source": "eatoncambridge.com/people (firm site) corroborated by FinTrx firm profile",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "1 of 4 people checked"
+}
