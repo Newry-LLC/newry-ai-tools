@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "SWEENEY, KEVIN, JOHN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER/MEMBER",
+      "since": "01/2010",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "3256045",
+      "raw_id": "3256045"
+    },
+    {
+      "full_legal_name": "CARPENTER, TIMOTHY, ALAN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER",
+      "since": "01/2010",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "1263145",
+      "raw_id": "1263145"
+    }
+  ]
+}
