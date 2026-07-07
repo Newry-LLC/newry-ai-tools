@@ -1,0 +1,193 @@
+{
+  "basicInformation": {
+    "individualId": 5907386,
+    "firstName": "MATTHEW",
+    "middleName": "KEITH",
+    "lastName": "UNDERWOOD",
+    "otherNames": [
+      "MATTHEW K UNDERWOOD"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "1/26/2013"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 175300,
+      "firmName": "GLOBAL STRATEGIC NEXTGEN OCIO",
+      "iaOnly": "Y",
+      "registrationBeginDate": "5/21/2019",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "114835",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "1704 HEMLOCK HILL DR",
+          "city": "DURHAM",
+          "cityAlias": [
+            "DURHAM",
+            "EAST DURHAM"
+          ],
+          "state": "NC",
+          "country": "United States",
+          "zipCode": "27703",
+          "latitude": "35.946905",
+          "longitude": "-78.794098",
+          "geoLocation": "35.946905,-78.794098",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "04/15/2019"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "21570",
+      "firmId": 7452,
+      "firmName": "VANGUARD MARKETING CORPORATION",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "4/22/2011",
+      "registrationEndDate": "10/24/2016",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "72780",
+      "iaSECNumberType": "801",
+      "firmId": 153467,
+      "firmName": "FORMULA FOLIO INVESTMENTS",
+      "city": "RALIEGH",
+      "state": "NC",
+      "country": "United States",
+      "registrationBeginDate": "11/10/2016",
+      "registrationEndDate": "8/28/2017",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "67628",
+      "iaSECNumberType": "801",
+      "firmId": 137658,
+      "firmName": "RETIREMENT WEALTH ADVISORS, INC.",
+      "city": "RALEIGH",
+      "state": "NC",
+      "country": "United States",
+      "registrationBeginDate": "11/10/2016",
+      "registrationEndDate": "8/28/2017",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "49601",
+      "iaSECNumberType": "801",
+      "firmId": 106715,
+      "firmName": "VANGUARD ADVISERS INC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "1/27/2016",
+      "registrationEndDate": "10/24/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "3/26/2025",
+      "disclosureType": "Civil",
+      "disclosureResolution": "Pending",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Initiated By": "AVERETT UNIVERSITY OF DANVILLE, VIRGINIA",
+        "Allegations": "Inclusion in complaint alongside all firm employees: Breach of Fiduciary Duty, Breach of Contract, Negligence, Va. Code \u00a7\u00a7 18.2-499, 500 and \u00a7 13.1-522(B) & (C), Exchange Act Section 10(b) and Rule 10b-5",
+        "SanctionDetails": []
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Civil Event",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 3
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "1/25/2016",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "5/3/2011",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/24/2016",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "7/3/2012",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "4/21/2011",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "North Carolina",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/21/2019"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
