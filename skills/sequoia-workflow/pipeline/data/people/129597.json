@@ -1,0 +1,55 @@
+{
+  "crd": "129597",
+  "name": "Brightscape Investment Centers",
+  "people": [
+    {
+      "raw_name": "WEISS, ERIC, JOSHUA",
+      "name": "Eric Joshua Weiss",
+      "source": "Form ADV Schedule B (indirect owner of BRIGHTSCAPE, INC.)",
+      "confidence": "high",
+      "title_or_status": "BRIGHTSCAPE, INC. INDIRECT OWNER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "10/1999",
+      "crd": "2794607",
+      "is_partner_mention": false,
+      "seniority_score": 55,
+      "bio_note": "Founder and CEO of Brightscape Investment Centers, established in 1999. Holds an MBA in Finance from the University of Chicago, where he interned at the Center for Research in Security Prices under Nobel laureate Myron Scholes, and an MA in Economics from Columbia University, completing his thesis under Nobel laureate Robert Mundell. Before founding Brightscape, directed business development for J.P. Morgan Chase's Global Asset Management and Private Bank division in northern Latin America and held a senior executive role in Citicorp's corporate finance operations in New York and Latin America. Named one of 'America's Top Financial Planners' by the Consumer's Research Council of America; member of NAPFA; authored the book 'Becoming Financially Literate: The Basics You Never Learned in High School.'",
+      "bio_source": "PR Newswire press release announcing Brightscape's Scottsdale expansion (independent of firm website), corroborating firm bio at brightscape.com/ericweiss; book also independently listed on Amazon",
+      "bio_confidence": "high",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "Wray, Amanda, Marie",
+      "name": "Amanda Marie Wray",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "PRESIDENT AND CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "since": "03/2026",
+      "crd": "6957678",
+      "is_partner_mention": false,
+      "seniority_score": 30,
+      "bio_note": "Joined Brightscape in 2020 specifically to open and lead its new Scottsdale, AZ office \u2014 announced via a national press release \u2014 and now serves as President and Chief Compliance Officer. A fifth-generation Texan with a BBA in Management/Entrepreneurial Studies from the University of Texas, spent a decade in corporate marketing at Verizon and The Dallas Morning News before launching her own insurance and risk-planning practice, which evolved into comprehensive financial planning with a behavioral-finance specialty. Active in Fountain Hills and Scottsdale community volunteering; competes in pickleball.",
+      "bio_source": "PR Newswire press release, 'Brightscape Investment Centers Opens an Office in Scottsdale, AZ,' independent of the firm's own website",
+      "bio_confidence": "high",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Brightscape Investment Centers (Scottsdale, AZ office) was founded in 1999 by Eric Weiss; the Scottsdale/Arizona office was opened in 2020 specifically to be led by Amanda Wray, per an independent press release.",
+    "source": "PR Newswire press release (prnewswire.com/news-releases/brightscape-investment-centers-opens-an-office-in-scottsdale-az...301136065.html)",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "2 of 2 people checked"
+}
