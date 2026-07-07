@@ -1,0 +1,284 @@
+{
+  "basicInformation": {
+    "individualId": 1346615,
+    "firstName": "STEPHEN",
+    "middleName": "RICHARD",
+    "lastName": "GALVIN",
+    "otherNames": [],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "6/18/1985"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 153410,
+      "firmName": "GALVIN, GAUSTAD & STEIN, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "9/29/2010",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "71464",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "438177",
+          "street1": "7377 E. DOUBLETREE RANCH ROAD",
+          "street2": "SUITE 250",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85258",
+          "latitude": "33.560513",
+          "longitude": "-111.885972",
+          "geoLocation": "33.560513,-111.885972",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "09/28/2010"
+        },
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "11001 W. 120TH AVE",
+          "street2": "SUITE 400",
+          "city": "BROOMFIELD",
+          "cityAlias": [
+            "BROOMFIELD",
+            "WESTMINSTER"
+          ],
+          "state": "CO",
+          "country": "United States",
+          "zipCode": "80021",
+          "latitude": "39.892612",
+          "longitude": "-105.1492",
+          "geoLocation": "39.892612,-105.1492",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "09/01/2017"
+        },
+        {
+          "displayOrder": 3,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "2850 E HARMONY ROAD",
+          "street2": "Suite 201",
+          "city": "Fort Collins",
+          "cityAlias": [
+            "FORT COLLINS",
+            "TIMNATH",
+            "WINDSOR"
+          ],
+          "state": "CO",
+          "country": "United States",
+          "zipCode": "80528",
+          "latitude": "40.49041",
+          "longitude": "-104.996508",
+          "geoLocation": "40.49041,-104.996508",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "03/01/2022"
+        },
+        {
+          "displayOrder": 4,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "455 E EISENHOWER PKWY",
+          "street2": "Suite 300 ",
+          "city": "Ann Arbor",
+          "cityAlias": [
+            "ANN ARBOR"
+          ],
+          "state": "MI",
+          "country": "United States",
+          "zipCode": "48108",
+          "latitude": "42.223407",
+          "longitude": "-83.729175",
+          "geoLocation": "42.223407,-83.729175",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "05/15/2026"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "57293",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "11117",
+      "firmId": 1027,
+      "firmName": "FOOTHILL SECURITIES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "12/5/2011",
+      "registrationEndDate": "12/9/2016",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "42017",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "21770",
+      "firmId": 7461,
+      "firmName": "FSC SECURITIES CORPORATION",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "11/1/1996",
+      "registrationEndDate": "12/7/2011",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "13431",
+      "firmId": 145,
+      "firmName": "CIGNA FINANCIAL ADVISORS,INC.",
+      "city": "RADNOR",
+      "state": "PA",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "6/19/1985",
+      "registrationEndDate": "11/1/1996",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "60807",
+      "iaSECNumberType": "801",
+      "firmId": 115478,
+      "firmName": "AEGIS FINANCIAL GROUP, INC.",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "1/7/2008",
+      "registrationEndDate": "9/28/2010",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "53274",
+      "iaSECNumberType": "801",
+      "firmId": 111466,
+      "firmName": "ASPEN MANAGEMENT GROUP LTD",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "11/29/2002",
+      "registrationEndDate": "12/31/2007",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "42017",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "21770",
+      "firmId": 7461,
+      "firmName": "FSC SECURITIES CORPORATION",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "1/16/1998",
+      "registrationEndDate": "12/31/2002",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 1,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "6/7/2007",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "12/3/1998",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "12/17/1996",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "12/9/2016",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "6/15/1985",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 4
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "9/29/2010"
+    },
+    {
+      "state": "Colorado",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "2/2/2021"
+    },
+    {
+      "state": "Michigan",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/1/2026"
+    },
+    {
+      "state": "Ohio",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "9/30/2010"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
