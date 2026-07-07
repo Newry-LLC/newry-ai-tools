@@ -1,0 +1,315 @@
+{
+  "basicInformation": {
+    "individualId": 2569773,
+    "firstName": "BRIAN",
+    "middleName": "PATRICK",
+    "lastName": "JACK",
+    "otherNames": [],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "12/22/1994"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 153902,
+      "firmName": "ASHTON THOMAS PRIVATE WEALTH",
+      "iaOnly": "Y",
+      "registrationBeginDate": "3/4/2026",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "71512",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "18867 North Thompson Peak Parkway",
+          "street2": "Suite 225",
+          "city": "Scottsdale",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85255",
+          "latitude": "33.663643",
+          "longitude": "-111.8085",
+          "geoLocation": "33.663643,-111.8085",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "03/04/2026"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "46844",
+      "firmId": 35747,
+      "firmName": "PURSHE KAPLAN STERLING INVESTMENTS",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "registrationBeginDate": "9/8/2021",
+      "registrationEndDate": "12/31/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "56943",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "12680",
+      "firmId": 70,
+      "firmName": "BCG SECURITIES, INC.",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "registrationBeginDate": "1/10/2017",
+      "registrationEndDate": "9/9/2021",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "46844",
+      "firmId": 35747,
+      "firmName": "PURSHE KAPLAN STERLING INVESTMENTS",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "registrationBeginDate": "1/22/2016",
+      "registrationEndDate": "1/11/2017",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "28543",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16791",
+      "firmId": 6363,
+      "firmName": "AMERIPRISE FINANCIAL SERVICES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "10/5/2009",
+      "registrationEndDate": "2/10/2016",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "16752",
+      "firmId": 5979,
+      "firmName": "AMERIPRISE ADVISOR SERVICES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "12/23/1994",
+      "registrationEndDate": "10/5/2009",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "110993",
+      "iaSECNumberType": "801",
+      "firmId": 282003,
+      "firmName": "PINNACLE PEAK PRIVATE CLIENT GROUP, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "2/5/2016",
+      "registrationEndDate": "4/8/2026",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "56943",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "12680",
+      "firmId": 70,
+      "firmName": "BCG SECURITIES, INC.",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "1/24/2017",
+      "registrationEndDate": "9/9/2021",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "28543",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16791",
+      "firmId": 6363,
+      "firmName": "AMERIPRISE FINANCIAL SERVICES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "10/5/2009",
+      "registrationEndDate": "2/10/2016",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "bdSECNumber": "16752",
+      "firmId": 5979,
+      "firmName": "AMERIPRISE ADVISOR SERVICES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "11/13/2006",
+      "registrationEndDate": "10/5/2009",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "3/18/2024",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Pending",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Allegation: Stolen funds/securities\r\n\r\nAllegation from [REDACTED]:\r\n\r\nI ended my relationship with Brian Jack in the middle of June 2023. He was no longer managing my portfolio. He said that as a Schwab broker, he would advise me the amount of my 2023 required minimum distribution and would be happy to make transfers from Schwab to a credit union. We agreed I would make all trades and be responsible for all buys and sells of investments. Brian would no longer be receiving commissions from my account. Per a conversation with Liam Stros at Schwab, Brian has illegally received monthly commissions totaling approximately $10,000 since June 2023. Brian never informed Schwab that our business relationship ended. \r\n\r\nBrief summary of events related to the allegation(s) including dates when activities leading to the allegation(s) occurred:\r\n\r\nI had multiple meetings with Ms. [REDACTED] starting in December 2022 to discuss the relationship and services to be provided. In June 2023, with a phone discussion on first quarter fees, [REDACTED] mentioned she would want to continue to work with me but did not want to pay the fee from the first quarter. I offered to reduce the fee schedule to the firm minimum .25% on the assets in the account and she agreed. Pinnacle Peak bills in arears so the fee reductions from .50% to .25% started at the beginning of the second quarter, which was 4/1/2023. During the period of June 2023 to January 2024, I continued to manage the account as normal. In January 2024, I noticed the delinked account on Alerts and called [REDACTED] to find out what was wrong.  She wanted to manage the account on her own.  She did not want the ongoing fee to service and manage the account. I notified [REDACTED] that I could not reduce the fee any lower than the .25% the accounts were being charged after the first reduction as of 4/1/2023.  I also made her aware that delinking the account would mean that I would no longer be able to work with her. Soon after, I received a voice message from \"[REDACTED]\" (No complete name or number left on the message) that he was speaking on behalf of [REDACTED] who stated she was unhappy and felt the fees were not fair and that [REDACTED] would be filing a complaint with the SEC. On January 10th, 2024, I called [REDACTED] to let her know about the message and asked her what I had done wrong. I additionally asked her what I could do to make her feel whole.  She told me that she appreciated all of the work I did with the management of the assets, consolidation of the accounts, RMD and distribution processing, but she would feel better if I reversed the fees on all three accounts from 10/1/2023-1/1/2024.  That included the billing period of 7/1/2023-12/31/2023 (6 Months) which totaled $3,116.40. I told [REDACTED] that I would mail a check. I asked her again if that was what she thought was fair and she said yes.  She also agreed to contact the SEC and withdraw the complaint. As a courtesy to Ms. [REDACTED] and in order to appease any negative experience, Pinnacle Peak is willing to further adjust billing to annul the advisory fee paid by Ms. [REDACTED] for 50% of the month of June ($257.70).",
+        "Damage Amount Requested": "$10,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": ""
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 1,
+    "productExamCount": 5
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "10/26/2006",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "1/10/1995",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 8",
+      "examName": "General  Securities Sales Supervisor Examination (Options Module & General Module)",
+      "examTakenDate": "6/28/1999",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 6TO",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "1/2/2023",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 31",
+      "examName": "Futures Managed Funds Examination",
+      "examTakenDate": "6/13/2006",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "5/10/1995",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 52",
+      "examName": "Municipal Securities Representative Examination",
+      "examTakenDate": "12/22/1994",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 7
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/18/2026"
+    },
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/4/2026"
+    },
+    {
+      "state": "Maryland",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/4/2026"
+    },
+    {
+      "state": "Michigan",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/1/2026"
+    },
+    {
+      "state": "Oregon",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/17/2026"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "3/8/2026"
+    },
+    {
+      "state": "Virginia",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/19/2026"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
