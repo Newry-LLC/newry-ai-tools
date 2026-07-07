@@ -1,0 +1,36 @@
+{
+  "crd": "326261",
+  "name": "Luminvest Wealth Management LLC",
+  "people": [
+    {
+      "raw_name": "WHITE, TRENT, ROBERT",
+      "name": "Trent Robert White",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING MEMBER & CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "06/2023",
+      "crd": "5592137",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Founded Luminvest in June 2023 after more than a decade advising high-net-worth and ultra-high-net-worth families. Immediately prior, he spent about 3.5 years (Dec 2019-June 2023) as a Senior Wealth Advisor for Ultra High Net Worth clients at Vanguard's Personal Advisor Services, where he managed a book exceeding $1 billion in assets across roughly 150 UHNW households \u2014 a notably large individual book even by UHNW-advisor standards. He holds a JD from BYU's J. Reuben Clark Law School and an Executive LLM in Taxation with an Estate Planning Certificate from Georgetown University Law Center, on top of a BS in Financial Economics from BYU and his CFP designation. Earlier career included work as a tax preparer and life insurance agent. He's a NAPFA member and has said he left the wirehouse/broker-dealer model specifically to remove conflicts with his fiduciary duty to clients \u2014 consistent with Luminvest's conflict-free positioning. No press coverage, speaking engagements, or industry awards found for him individually.",
+      "bio_source": "luminvest.com/about (firm's own website states the specific figure of managing over $1 billion in assets across roughly 150 UHNW households during his time at Vanguard). His broader Vanguard tenure and role are independently corroborated via NAPFA and other advisor-directory sources. Phase 4 verification (2026-07-03): the specific $1B/150-household figures could not be independently confirmed anywhere (Vanguard does not publicly disclose individual-advisor book sizes) -- treat that specific figure as firm-stated, not independently verified.",
+      "bio_confidence": "high",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Independent, fee-only RIA in Scottsdale founded June 2023 by Trent White after a career managing ultra-high-net-worth relationships at Vanguard. Positions itself as a comprehensive wealth planning firm for retirees, with a low-cost, tax-focused, conflict-free model (no product sales or referral fee revenue) covering investments, taxes, insurance, estate planning, and life planning. Member of NAPFA (fee-only fiduciary standard) and listed in the Paladin Registry. No third-party press, awards, or rankings found for the firm itself beyond standard industry directory listings.",
+    "source": "Firm website (luminvest.com/about, /); web search for firm press/awards across Forbes, business journals, NAPFA, Paladin Registry \u2014 no independent recognition found beyond directory/membership listings.",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "1 of 1 people checked"
+}
