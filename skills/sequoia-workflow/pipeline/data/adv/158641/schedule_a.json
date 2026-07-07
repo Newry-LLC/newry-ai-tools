@@ -1,0 +1,57 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "ANSPACH, DANA, MARIE",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER/CHIEF COMPLIANCE OFFICER",
+      "since": "07/2011",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2585909",
+      "raw_id": "2585909"
+    },
+    {
+      "full_legal_name": "MILLER, CALEY, Jared",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MEMBER",
+      "since": "01/2022",
+      "ownership_code": "A",
+      "ownership_pct": "5-10%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "6663528",
+      "raw_id": "6663528"
+    },
+    {
+      "full_legal_name": "SHEPARD, AMY, LEIGH",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MEMBER",
+      "since": "01/2022",
+      "ownership_code": "A",
+      "ownership_pct": "5-10%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "6281574",
+      "raw_id": "6281574"
+    },
+    {
+      "full_legal_name": "Schoenecker, David",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF OPERATING OFFICER",
+      "since": "09/2023",
+      "ownership_code": "A",
+      "ownership_pct": "5-10%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "7875200",
+      "raw_id": "7875200"
+    }
+  ]
+}
