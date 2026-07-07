@@ -1,0 +1,126 @@
+{
+  "basicInformation": {
+    "firmId": 299951,
+    "firmName": "COREPATH WEALTH PARTNERS LLC",
+    "otherNames": [
+      "COREPATH WEALTH MANAGEMENT LLC",
+      "COREPATH WEALTH PARTNERS LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "02/12/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "114567",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "c86c6594-44f6-47b9-ba21-ab1eda9fc870"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "7114 E. STETSON DRIVE",
+      "street2": "SUITE #205",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85251"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 51888,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "2/13/2026"
+    },
+    {
+      "editionID": 51889,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "2/13/2026"
+    },
+    {
+      "editionID": 51890,
+      "type": "IA_INDVL",
+      "generatedOn": "2/13/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "1/28/2019"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "1/28/2019"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "4/9/2019"
+    },
+    {
+      "jurisdiction": "Colorado",
+      "status": "Notice Filed",
+      "effectiveDate": "1/29/2019"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "12/17/2020"
+    },
+    {
+      "jurisdiction": "Illinois",
+      "status": "Notice Filed",
+      "effectiveDate": "4/10/2019"
+    },
+    {
+      "jurisdiction": "Nebraska",
+      "status": "Notice Filed",
+      "effectiveDate": "9/18/2020"
+    },
+    {
+      "jurisdiction": "Nevada",
+      "status": "Notice Filed",
+      "effectiveDate": "4/9/2019"
+    },
+    {
+      "jurisdiction": "Oregon",
+      "status": "Notice Filed",
+      "effectiveDate": "5/8/2024"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "4/9/2019"
+    },
+    {
+      "jurisdiction": "Wisconsin",
+      "status": "Notice Filed",
+      "effectiveDate": "12/17/2020"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1008660,
+        "brochureName": "COREPATH DISCLOSURE BROCHURE",
+        "dateSubmitted": "2/12/2026"
+      }
+    ]
+  }
+}
