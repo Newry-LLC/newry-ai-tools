@@ -1,0 +1,57 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "KORLJAN, ROBERT, RALPH",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "PARTNER",
+      "since": "10/1999",
+      "ownership_code": "B",
+      "ownership_pct": "10-25%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2313014",
+      "raw_id": "2313014"
+    },
+    {
+      "full_legal_name": "GIANNONE, MARC, T",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "PARTNER AND CHIEF COMPLIANCE OFFICER",
+      "since": "01/2015",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5781192",
+      "raw_id": "5781192"
+    },
+    {
+      "full_legal_name": "STAPLETON, SHAWNA",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "TAX PARTNER",
+      "since": "01/2023",
+      "ownership_code": "B",
+      "ownership_pct": "10-25%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "7710543",
+      "raw_id": "7710543"
+    },
+    {
+      "full_legal_name": "BERGSTROM, NATHAN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "PARTNER",
+      "since": "05/2026",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "7078649",
+      "raw_id": "7078649"
+    }
+  ]
+}
