@@ -1,0 +1,363 @@
+{
+  "basicInformation": {
+    "individualId": 5228473,
+    "firstName": "ZACHARY",
+    "middleName": "STUART",
+    "lastName": "BRODT",
+    "otherNames": [],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "12/3/2006"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 328450,
+      "firmName": "SL CAPITAL",
+      "iaOnly": "Y",
+      "registrationBeginDate": "11/16/2023",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "129050",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "822862",
+          "street1": "20707 N PIMA RD",
+          "street2": "STE 205",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85255",
+          "latitude": "33.663643",
+          "longitude": "-111.8085",
+          "geoLocation": "33.663643,-111.8085",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "07/14/2022"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "63970",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "34082",
+      "firmId": 16507,
+      "firmName": "FIRST FINANCIAL EQUITY CORPORATION",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "4/21/2016",
+      "registrationEndDate": "9/13/2018",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "10418",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "10999",
+      "firmId": 705,
+      "firmName": "RAYMOND JAMES & ASSOCIATES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "6/20/2014",
+      "registrationEndDate": "4/18/2016",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "49347",
+      "firmId": 41270,
+      "firmName": "ACCELERATED CAPITAL GROUP",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "2/27/2012",
+      "registrationEndDate": "6/23/2014",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE",
+      "expelledDate": "11/26/2019"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "65544",
+      "firmId": 122924,
+      "firmName": "MERIDIAN UNITED CAPITAL, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "5/21/2008",
+      "registrationEndDate": "2/24/2012",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "66659",
+      "firmId": 132939,
+      "firmName": "G.F. INVESTMENT SERVICES, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "1/31/2007",
+      "registrationEndDate": "6/17/2008",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "100512",
+      "iaSECNumberType": "801",
+      "firmId": 175083,
+      "firmName": "FOUNDATIONS INVESTMENT ADVISORS LLC",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "5/11/2022",
+      "registrationEndDate": "3/1/2024",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "63970",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "34082",
+      "firmId": 16507,
+      "firmName": "FIRST FINANCIAL EQUITY CORPORATION",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "4/22/2016",
+      "registrationEndDate": "4/22/2022",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "10418",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "10999",
+      "firmId": 705,
+      "firmName": "RAYMOND JAMES & ASSOCIATES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "6/26/2014",
+      "registrationEndDate": "4/18/2016",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "71512",
+      "iaSECNumberType": "801",
+      "firmId": 153902,
+      "firmName": "GENTRY ASSET ADVISORY LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "6/16/2010",
+      "registrationEndDate": "7/18/2014",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "66972",
+      "iaSECNumberType": "801",
+      "firmId": 113887,
+      "firmName": "THE PLANNING GROUP",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "6/2/2008",
+      "registrationEndDate": "3/28/2011",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "63282",
+      "iaSECNumberType": "801",
+      "firmId": 132070,
+      "firmName": "GLOBAL FINANCIAL PRIVATE CAPITAL, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "11/14/2006",
+      "registrationEndDate": "6/17/2008",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "11/6/2019",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Breach of fiduciary duty and failed to properly conduct due diligence with respect to the investment recommendations and intentionally and fraudulently misrepresented to and omitted from Claimants, registered with a previous firm, Accelerated Capital from 2012-2013 also, Aston Thomas registered 3-2010 to 5-2014.",
+        "Damage Amount Requested": "$400,000.00",
+        "Settlement Amount": "$17,500.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "This matter was settled due to the cost of litigating. I was not the advisor of record for this customer."
+        ]
+      }
+    },
+    {
+      "eventDate": "5/17/2018",
+      "disclosureType": "Regulatory",
+      "disclosureResolution": "Final",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "DocketNumberFDA": "2015044197601",
+        "DocketNumberAAO": "2015044197601",
+        "Initiated By": "FINRA",
+        "Allegations": "Without admitting or denying the findings, Brodt consented to the sanctions and to the entry of findings that on five occasions, while he was registered with his member firm, but looking to transition to a new broker-dealer, Brodt sent emails containing nonpublic personal customer information to non-affiliated third parties without the customers' knowledge and consent. The findings stated that the third parties included two non-affiliated broker-dealers Brodt was considering transitioning to, as well as a financial recruiting firm that was assisting him with his transition. In certain instances, the nonpublic personal information Brodt sent to third parties included customer account numbers, investment names, investment values and the value of customer accounts. On at least one occasion, Brodt sent nonpublic personal customer information belonging to customers whose accounts he did not service. The findings also stated that Brodt willfully failed to timely update his Uniform Application for Securities Industry Registration or Transfer (Form U4) to disclose a misdemeanor charge and guilty plea. Brodt was aware that he might be required to make disclosure, but failed to timely take appropriate steps to confirm his obligation or otherwise disclose the charge or guilty plea on his Form U4. Brodt completed three compliance forms in which he failed to disclose that he had been arrested for and had pled guilty to a misdemeanor.",
+        "Resolution": "Acceptance, Waiver & Consent(AWC)",
+        "SanctionDetails": [
+          {
+            "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+            "SanctionDetails": [
+              {
+                "Amount": "$10,000.00"
+              }
+            ]
+          },
+          {
+            "Sanctions": "Suspension",
+            "SanctionDetails": [
+              {
+                "Registration Capacities Affected": "All capacities",
+                "Duration": "three months",
+                "Start Date": "6/4/2018",
+                "End Date": "9/3/2018"
+              }
+            ]
+          }
+        ],
+        "Sanctions": "The settlement includes a finding that Brodt willfully failed to disclose a material fact on a Form U4, and that under Section 3(a)(39)(F) of the Securities Exchange Act of 1934 and Article III, Section 4 of the FINRA By-Laws, this omission make him subject to a statutory disqualification with respect to association with a member.",
+        "Regulator Statement": "Fines paid in full on June 1, 2018."
+      }
+    },
+    {
+      "eventDate": "11/2/2010",
+      "disclosureType": "Criminal",
+      "disclosureResolution": "Final Disposition",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "criminalCharges": [
+          {
+            "Charges": "SHOPLIFTING-REMOVAL OF GOODS",
+            "Disposition": "Pled guilty"
+          }
+        ],
+        "Broker Comment": [
+          "In 2010, I was charged with shoplifting when a person I was shopping with removed items from a store without payment.  I did not personally remove any items and was entirely unaware that the person I was shopping with did so.  My legal counsel advised me that the quickest method to resolve this issue was to simply agree to a diversion even though I had not engaged in the conduct. Counsel further advised that it was not the same as pleading guilty to the charge. I followed my counsel's advice without knowing that by doing so I was actually admitting guilt. In hindsight, I would have contested the charges because I did not engage in the alleged conduct."
+        ]
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Regulatory Event",
+      "disclosureCount": 1
+    },
+    {
+      "disclosureType": "Criminal",
+      "disclosureCount": 1
+    },
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "4/11/2007",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "8/25/2006",
+      "examScope": "IA"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "9/13/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "1/26/2007",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "12/6/2023"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "11/16/2023"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
