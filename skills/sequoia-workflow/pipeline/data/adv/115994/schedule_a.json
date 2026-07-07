@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "HAYMORE, EHREN, MCCAIN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER/CHIEF COMPLIANCE OFFICER",
+      "since": "09/2001",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "4294597",
+      "raw_id": "4294597"
+    }
+  ]
+}
