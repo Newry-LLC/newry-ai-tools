@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "KENEFICK-ROGERS, CEAN, NICHOLAS",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "PRINCIPAL AND CHIEF COMPLIANCE OFFICER",
+      "since": "03/2025",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "4751006",
+      "raw_id": "4751006"
+    }
+  ]
+}
