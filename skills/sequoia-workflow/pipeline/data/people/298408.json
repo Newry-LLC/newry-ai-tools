@@ -1,0 +1,36 @@
+{
+  "crd": "298408",
+  "name": "Foothills Advisors, LLC",
+  "people": [
+    {
+      "raw_name": "JONES, JEFFREY, MICHAEL",
+      "name": "Jeffrey Michael Jones",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING MEMBER/CCO",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "08/2018",
+      "crd": "5542768",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Managing Member, Principal, and CCO (100% owner) of Foothills Advisors. Arizona State University graduate. Began his financial career over a decade before founding the firm, starting in corporate finance at Wells Fargo/Wells Fargo Advisors, then gaining experience at two independent local advisory firms before founding Foothills Advisors. Focus areas include investment management, retirement planning, tax planning/preparation, strategic financing, and insurance design. Lives in Phoenix with his wife Amber and four children; enjoys guitar, running, cycling, and golf.",
+      "bio_source": "foothillsadvisors.com/jeff (firm's own website states his marriage to Amber, four children, and hobbies -- guitar, running, cycling, golf -- alongside his independently-corroborated ASU education and sole ownership/CCO status via SmartAdvisorMatch). Phase 4 verification (2026-07-03): the previously-cited independent source does not actually contain this detail when checked directly -- corrected to credit the firm's own website, which under current sourcing policy is treated as sufficient on its own. (the LinkedIn profile cited alongside it could not be confirmed to contain this personal detail.)",
+      "bio_confidence": "medium",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Small independent RIA in Cave Creek, AZ; wholly owned and operated by founder Jeffrey Jones, offering investment management, retirement, tax, and insurance planning.",
+    "source": "Firm website (foothillsadvisors.com/about, /team)",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "1 of 1 people checked"
+}
