@@ -1,0 +1,125 @@
+{
+  "basicInformation": {
+    "individualId": 6994818,
+    "firstName": "Stephen",
+    "middleName": "Daniel",
+    "lastName": "Hofmann",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "9/17/2021"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 318258,
+      "firmName": "RIDGELINE PRIVATE WEALTH",
+      "iaOnly": "Y",
+      "registrationBeginDate": "5/5/2022",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "7210 E State Street, Ste 102",
+          "city": "Rockford",
+          "cityAlias": [
+            "ROCKFORD"
+          ],
+          "state": "IL",
+          "country": "United States",
+          "zipCode": "61108",
+          "latitude": "42.256111",
+          "longitude": "-88.999178",
+          "geoLocation": "42.256111,-88.999178",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "03/10/2022"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "70047",
+      "iaSECNumberType": "801",
+      "firmId": 149499,
+      "firmName": "MIDLAND FINANCIAL ADVISORS, INC.",
+      "city": "Rockford",
+      "state": "IL",
+      "country": "United States",
+      "registrationBeginDate": "7/30/2018",
+      "registrationEndDate": "3/15/2019",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 0,
+    "principalExamCount": 0,
+    "productExamCount": 0
+  },
+  "stateExamCategory": [],
+  "principalExamCategory": [],
+  "productExamCategory": [],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 6
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/5/2022"
+    },
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "11/7/2023"
+    },
+    {
+      "state": "Florida",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "4/27/2023"
+    },
+    {
+      "state": "Georgia",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "8/25/2022"
+    },
+    {
+      "state": "Illinois",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/5/2022"
+    },
+    {
+      "state": "Wisconsin",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/4/2026"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
