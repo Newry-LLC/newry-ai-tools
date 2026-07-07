@@ -1,0 +1,82 @@
+{
+  "crd": "282003",
+  "name": "Pinnacle Peak Private Client Group, LLC",
+  "people": [
+    {
+      "raw_name": "JACK, BRIAN, PATRICK",
+      "name": "Brian Patrick Jack",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "PARTNER, MANAGING DIRECTOR AND CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "since": "01/2016",
+      "crd": "2569773",
+      "is_partner_mention": true,
+      "seniority_score": 50,
+      "partner_title_phrase": "Partner and Managing Director",
+      "partner_quote": "Partner and Managing Director",
+      "partner_source": "ZoomInfo",
+      "bio_note": "Partner, Managing Director and Chief Compliance Officer of Pinnacle Peak; over 22 years of financial markets experience. Previously a Financial Advisor at Ameriprise Financial and Vice President, Investments at HRBFA (H.D. Vest/HR Block Financial Advisors). Holds Series 63 and 65 licenses. Following the March 2026 Ashton Thomas transaction, moved into a Director/Partner, Private Wealth Advisor role there; publicly quoted in the deal announcement.",
+      "bio_source": "GlobeNewswire press release, 'Arax Adds Pinnacle Peak Private Client Group to Ashton Thomas' (globenewswire.com/news-release/2026/03/05/3250072), independent wire service with a direct quote attributed to him; career history corroborated by ZoomInfo",
+      "bio_confidence": "high",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "FIGUEROA, MATTHEW, JOSEPH",
+      "name": "Matthew Joseph Figueroa",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING DIRECTOR",
+      "is_equity_owner": true,
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "since": "03/2017",
+      "crd": "3121253",
+      "is_partner_mention": false,
+      "seniority_score": 45,
+      "bio_note": "Managing Director (Partner) at Pinnacle Peak with 26 years of experience; holds Series 63 and 65 licenses, registered to serve clients in Arizona and Texas. Following the March 2026 Ashton Thomas transaction, publicly quoted in the acquisition announcement with a client-service-focused statement.",
+      "bio_source": "GlobeNewswire press release, 'Arax Adds Pinnacle Peak Private Client Group to Ashton Thomas' (globenewswire.com/news-release/2026/03/05/3250072), independent wire service with a direct quote attributed to him. Phase 4 verification (2026-07-03): the release contains ONLY a standard corporate quote about client service; a prior version of this bio included personal details (Steelers fan, golf, CrossFit, wife Melissa, two children) that do NOT appear anywhere in this source and were fabricated -- removed.",
+      "bio_confidence": "medium",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "FLORES, TERESA",
+      "name": "Teresa Flores",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "OPERATIONS MANAGER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "since": "01/2016",
+      "crd": "2686520",
+      "is_partner_mention": true,
+      "seniority_score": 10,
+      "partner_title_phrase": "Partner and Operations Manager",
+      "partner_quote": "Partner and Operations Manager",
+      "partner_source": "ZoomInfo",
+      "bio_note": "Partner and Operations Manager at Pinnacle Peak, in the financial services industry since 1995; before Pinnacle Peak worked as a registered sales assistant, transition specialist, and senior field office team leader across four offices. An avid snowboarder, rock-climber, and terrain-racer, and a self-described big Arizona Cardinals fan. Following the March 2026 Ashton Thomas transaction, moved into a Senior Registered Associate, Private Wealth Client Services role there.",
+      "bio_source": "GlobeNewswire press release, 'Arax Adds Pinnacle Peak Private Client Group to Ashton Thomas' (globenewswire.com/news-release/2026/03/05/3250072), independent wire service confirming her new role, corroborated by SmartAdvisorMatch independent advisor directory profile",
+      "bio_confidence": "medium",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "data_quality_flags": [
+    "Website has an expired SSL certificate \u2014 no website-based partner check was possible for this firm (ZoomInfo data still obtained)."
+  ],
+  "firm_note": {
+    "text": "Pinnacle Peak Private Client Group, LLC, founded in 2016 and based in Scottsdale, provides portfolio management and financial planning to high-net-worth individuals, families, business owners, trusts, and charitable organizations, with a particular focus on active and retired federal employees. IMPORTANT: in a deal announced March 2026, the firm ($460M AUM) joined Ashton Thomas Private Wealth (part of Arax Investment Partners/RedBird Capital) \u2014 this firm is likely no longer operating independently and may not be a viable acquisition target.",
+    "source": "GlobeNewswire press release, 'Arax Adds Pinnacle Peak Private Client Group to Ashton Thomas' (globenewswire.com/news-release/2026/03/05/3250072), an independent wire service report",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "2 of 3 people checked"
+}
