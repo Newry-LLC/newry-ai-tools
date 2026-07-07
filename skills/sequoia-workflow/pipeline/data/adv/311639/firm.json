@@ -1,0 +1,104 @@
+{
+  "basicInformation": {
+    "firmId": 311639,
+    "firmName": "WISE WEALTH PARTNERS, LLC",
+    "otherNames": [
+      "WISE WEALTH PARTNERS, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/03/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "129659",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "68e9caaa-d306-4270-873c-374849f4bcbf"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "2375 E. CAMELBACK, STE. 600",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85016"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 51975,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "3/4/2026"
+    },
+    {
+      "editionID": 51976,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "3/4/2026"
+    },
+    {
+      "editionID": 51977,
+      "type": "IA_INDVL",
+      "generatedOn": "3/4/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "3/8/2024"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "3/14/2024"
+    },
+    {
+      "secJurisdiction": "California",
+      "status": "Terminated",
+      "effectiveDate": "4/13/2024"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Terminated",
+      "effectiveDate": "3/14/2024"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "3/8/2024"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "3/8/2024"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "3/8/2024"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1013946,
+        "brochureName": "FORM ADV PART 2A APPENDIX 1 - WRAP FEE BROCHURE",
+        "dateSubmitted": "3/3/2026"
+      }
+    ]
+  }
+}
