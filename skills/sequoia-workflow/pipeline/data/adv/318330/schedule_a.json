@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "VB&T HOLDING COMPANY LLC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "HOLDING COMPANY",
+      "since": "01/2022",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "Warnhoff, Jenifer",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER",
+      "since": "01/2022",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "7490706",
+      "raw_id": "7490706"
+    }
+  ]
+}
