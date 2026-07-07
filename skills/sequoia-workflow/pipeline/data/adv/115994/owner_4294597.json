@@ -1,0 +1,102 @@
+{
+  "basicInformation": {
+    "individualId": 4294597,
+    "firstName": "EHREN",
+    "middleName": "MCCAIN",
+    "lastName": "HAYMORE",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "12/3/2001"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 115994,
+      "firmName": "R.H. INVESTMENT GROUP, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "12/3/2001",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "63649",
+          "street1": "7373 E. DOUBLETREE RANCH ROAD",
+          "street2": "SUITE 200",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85258",
+          "latitude": "33.560513",
+          "longitude": "-111.885972",
+          "geoLocation": "33.560513,-111.885972",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "07/01/2016"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 1
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "2/11/2003",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "12/8/2000",
+      "examScope": "BOTH"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "11/15/2000",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "12/3/2001"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
