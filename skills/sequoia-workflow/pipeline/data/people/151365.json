@@ -1,0 +1,53 @@
+{
+  "crd": "151365",
+  "name": "Biltmore Wealth Management, LLC",
+  "people": [
+    {
+      "raw_name": "CARPENTER, TIMOTHY, ALAN",
+      "name": "Timothy Alan Carpenter",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING MEMBER",
+      "is_equity_owner": true,
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "since": "01/2010",
+      "crd": "1263145",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Managing Member and Portfolio Manager at Biltmore Wealth Management, with the firm since January 2010. Started his financial career at Dean Witter three decades ago after an earlier career as a maintenance supervisor for Republic Airlines (now Delta), where he held an FAA Airframe and Powerplant certification. Holds a degree in Aviation Maintenance Technology from Vincennes University, took coursework at Eastern Michigan University, Harper College, Arizona State University, and Wharton, and completed CIMA training. Outside of work he is an instrument-rated pilot, certified SCUBA diver, and classical guitarist.",
+      "bio_source": "Firm website (biltmorewealthaz.com/about-us) \u2014 attempted independent corroboration via LinkedIn, ZoomInfo, and web search, but found no independent profile beyond the firm's own materials for Carpenter specifically (unlike co-founder Sweeney, whose bio is echoed on LinkedIn)",
+      "bio_confidence": "low",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "SWEENEY, KEVIN, JOHN",
+      "name": "Kevin John Sweeney",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER/MEMBER",
+      "is_equity_owner": true,
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "since": "01/2010",
+      "crd": "3256045",
+      "is_partner_mention": false,
+      "seniority_score": 45,
+      "bio_note": "Chief Compliance Officer, Member, and financial advisor at Biltmore Wealth Management, with the firm since January 2010 (previously a Financial Advisor at Morgan Stanley from 1999-2010). A Buffalo, NY native, he played baseball at Mercyhurst College on scholarship, earning NCAA Division II All-American and three-time All-Region honors, and a finance degree. The Arizona Diamondbacks drafted him in the 29th round; he played three minor-league seasons in their organization, leading the league with a .424 batting average and winning Pioneer League MVP as a rookie. He discovered his advisory career during baseball off-seasons working as a Personal Banking Consultant for Bank One, which led him to specialize in financial planning for professional athletes. Holds the CFP certification and remains active in baseball as a high school coach.",
+      "bio_source": "LinkedIn profile (linkedin.com/in/kevin-sweeney-cfp-04306522/), an independent source corroborating the career and baseball narrative also told on the firm's website",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Biltmore Wealth Management, LLC is a Tempe-based RIA co-founded in January 2010 by Timothy Carpenter and Kevin Sweeney, managing roughly $440M for individuals, with a niche practice advising professional athletes.",
+    "source": "biltmorewealthaz.com/about-us/ (firm website), independently corroborated by Kevin Sweeney's LinkedIn profile (linkedin.com/in/kevin-sweeney-cfp-04306522/)",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "0 of 2 people checked"
+}
