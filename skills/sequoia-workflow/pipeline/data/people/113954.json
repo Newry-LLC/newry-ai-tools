@@ -1,0 +1,36 @@
+{
+  "crd": "113954",
+  "name": "Profocus Incorporated",
+  "people": [
+    {
+      "raw_name": "SMITH, MICHAEL, MAURICE",
+      "name": "Michael Maurice Smith",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "PRESIDENT AND CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "10/1998",
+      "crd": "1189477",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Founder and CEO of ProFocus Incorporated in Phoenix, with the firm since 1998. Began his financial management career in 1981 at one of the top retirement/401(k) providers in the U.S., building customized retirement strategies for medical professionals and high-net-worth clients before founding ProFocus. Holds a CFP certification and a Bachelor of Science in Business Administration, and is an honorably discharged veteran of the U.S. Air Force. Outside the firm, has been active in real estate development and formerly served as Treasurer of the Phoenix Industrial Development Authority (IDA) Board.",
+      "bio_source": "profocus.com/about-us/about-michael-smith (firm's own website states his U.S. Air Force veteran status and Phoenix Industrial Development Authority Board treasurer role; CFP credential independently confirmed via SmartAdvisorMatch and Unbiased.com). Phase 4 verification (2026-07-03): the previously-cited independent source does not actually contain this detail when checked directly -- corrected to credit the firm's own website, which under current sourcing policy is treated as sufficient on its own.",
+      "bio_confidence": "high",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "No parent-company or naming complexity identified for Profocus Incorporated.",
+    "source": "ProFocus's own website plus independent directory corroboration",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "1 of 1 people checked"
+}
