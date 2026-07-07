@@ -1,0 +1,45 @@
+{
+  "crd": "335594",
+  "name": "Wlth Capital Management, LLC",
+  "people": [
+    {
+      "raw_name": "KENEFICK-ROGERS, CEAN, NICHOLAS",
+      "name": "Cean Nicholas Kenefick-rogers",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "PRINCIPAL AND CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "03/2025",
+      "crd": "4751006",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Cean Kenefick-Rogers has 20+ years in financial services. He co-founded Ironwood Wealth Management (Chandler, AZ) roughly two decades ago, starting his career in the insurance and brokerage worlds before he and his partners transitioned the firm to an independent RIA, ultimately dropping their FINRA licenses on legal advice. He served as Ironwood's CEO for the firm's last six years, during which he led it to just under $550M AUM across nearly 500 households. In an early growth phase, he and his partners hit a compensation/accountability standoff across their differing books of business and brought in an outside industry consultant to restructure partner roles and pay \u2014 a turnaround he later discussed publicly as a notable case study in RIA partnership management, featured as a full episode (Ep. 306, Nov 2022) of Michael Kitces' industry-leading 'Financial Advisor Success' podcast. In May 2025 he left Ironwood to found WLTH Capital Management, LLC in Chandler, AZ, where he is Founder, CEO, and Managing Partner, focused on high-net-worth households and philanthropists with $5M+ in investable assets. The firm's launch and subsequent expansion (adding the CPWA credential in September 2025) were both covered in PRWeb press releases. He holds the CFA, CFP, CPWA, and AIF designations. His stated philosophy emphasizes trust-based client relationships and aligning wealth strategy with clients' personal values and philanthropic goals.",
+      "bio_source": "ZoomInfo: no record found via search_contacts under any name-component variant \u2014 consistent with prior round's finding. Firm website: wlthcapitalmanagement.com confirms credentials, 20+ years experience, Founder & CEO role, firm philosophy/motto. Web search (primary lever): confirmed firm launch PRWeb release (May 2025) with career summary and 'former Co-Founder and CEO of Ironwood Wealth Management' detail; second PRWeb release (Sept 2025) with CPWA credential and philanthropic-planning quote; Kitces.com blog post and Ironwood Wealth Management site confirmed the Kitces 'Financial Advisor Success' Ep. 306 (Nov 2022) podcast feature on partnership/compensation restructuring, career origin, ~$550M AUM/500 households at Ironwood, and 6 years as Ironwood CEO (corroborated via search-result summaries citing kitces.com, ironwoodwm.com, and the podcast listing after a direct fetch was blocked). AdvisorCheck.com profile page was rate-limited and not relied upon.",
+      "bio_confidence": "high",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [
+    {
+      "name": "Rodney R. Weeks",
+      "title_phrase": "Partner of RWCB LLC",
+      "quote": "Mr. Weeks is also a Partner of RWCB LLC, a holding entity for real estate.",
+      "confidence": "high",
+      "at_this_firm": false,
+      "exclude_reason": "partner of a different company (RWCB LLC), not of Wlth Capital Management itself"
+    }
+  ],
+  "firm_note": {
+    "text": "WLTH Capital Management is an independent, SEC-registered, fee-only RIA in Chandler, AZ that officially launched May 7, 2025, founded by Cean Kenefick-Rogers (former Co-Founder/CEO of Ironwood Wealth Management). Firm targets high-net-worth individuals, business owners, and philanthropists with $5M+ investable assets, offering financial planning, portfolio management, tax planning, and charitable giving strategies (motto: \"Integrity. Trust. Prosperity.\"). Announced via two PRWeb press releases: firm launch (May 2025) and, in September 2025, expansion into advanced philanthropic planning after the firm secured the CPWA credential. AUM ~$229.8M across 83 clients per web search.",
+    "source": "Web search + WebFetch of firm website (wlthcapitalmanagement.com) and two PRWeb press releases (firm launch and philanthropic-expansion announcements). No ZoomInfo company record checked separately (see person-level ZoomInfo note).",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "1 of 1 people checked"
+}
