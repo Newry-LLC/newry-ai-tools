@@ -1,0 +1,165 @@
+{
+  "basicInformation": {
+    "individualId": 5542768,
+    "firstName": "JEFFREY",
+    "middleName": "MICHAEL",
+    "lastName": "JONES",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "2/20/2009"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 298408,
+      "firmName": "FOOTHILLS ADVISORS, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "10/19/2018",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "697606",
+          "street1": "6702 E CAVE CREEK ROAD",
+          "street2": "#4",
+          "city": "CAVE CREEK",
+          "cityAlias": [
+            "CAVE CREEK"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85331",
+          "latitude": "33.870791",
+          "longitude": "-111.943547",
+          "geoLocation": "33.870791,-111.943547",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "10/15/2018"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "110550",
+      "iaSECNumberType": "801",
+      "firmId": 287909,
+      "firmName": "HERITAGE WEALTH MANAGEMENT, LLC",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "7/24/2017",
+      "registrationEndDate": "10/17/2018",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "106598",
+      "iaSECNumberType": "801",
+      "firmId": 158107,
+      "firmName": "HERITAGE WEALTH MANAGEMENT, LLC",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "11/20/2013",
+      "registrationEndDate": "8/18/2017",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "firmId": 155180,
+      "firmName": "THE MORGAN GROUP INC.",
+      "city": "BEAVERTON",
+      "state": "OR",
+      "country": "United States",
+      "registrationBeginDate": "8/29/2012",
+      "registrationEndDate": "12/3/2013",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "37967",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "37180",
+      "firmId": 19616,
+      "firmName": "WELLS FARGO ADVISORS, LLC",
+      "city": "CAVE CREEK",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "1/3/2011",
+      "registrationEndDate": "3/23/2012",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "bdSECNumber": "38588",
+      "firmId": 10582,
+      "firmName": "WELLS FARGO INVESTMENTS, LLC",
+      "city": "CAVE CREEK",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "9/15/2008",
+      "registrationEndDate": "1/3/2011",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 1
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "9/8/2008",
+      "examScope": "BOTH"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "8/25/2008",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "10/19/2018"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
