@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "JONES, WILLIAM, JOSEPH",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "FOUNDER AND CHIEF EXECUTIVE OFFICER",
+      "since": "09/2024",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "1943251",
+      "raw_id": "1943251"
+    },
+    {
+      "full_legal_name": "Cross, Trevor, Robert",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER",
+      "since": "09/2024",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "6977085",
+      "raw_id": "6977085"
+    }
+  ]
+}
