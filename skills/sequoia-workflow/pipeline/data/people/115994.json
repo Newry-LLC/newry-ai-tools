@@ -1,0 +1,35 @@
+{
+  "crd": "115994",
+  "name": "R.H. Investment Group, LLC",
+  "people": [
+    {
+      "raw_name": "HAYMORE, EHREN, MCCAIN",
+      "name": "Ehren Mccain Haymore",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING MEMBER/CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "09/2001",
+      "crd": "4294597",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "One of the firm's longest-tenured registered advisors, registered since 2001. Leads R.H. Investment Group (~$164.9M AUM, 100+ individual clients, 100% discretionary AUM, serving predominantly high-net-worth individuals) in Scottsdale, AZ. No biographical narrative, prior employers, or credentials beyond this were found despite an additional independent-directory check.",
+      "bio_source": "Checked \"Ehren Haymore\" alone plus CRD/individual lookup \u2014 found U.S. News Advisor Finder profile (money.usnews.com/financial-advisors/advisor/ehren-haymore-4294597), an independent directory, confirming tenure since 2001 and firm AUM/client stats. No individual employment history or narrative background found there or via SmartAdvisorMatch/BrokerCheck-style directories beyond firm-level stats.",
+      "bio_confidence": "low",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "No firm website found on record; web search (rhinvestgroup.com) confirms the firm exists and is Scottsdale-based, discretionary, high-net-worth focused, ~$164M-$238M AUM depending on source date.",
+    "source": "web search",
+    "confidence": "low"
+  },
+  "phase4_firm_summary": "0 of 1 people checked"
+}
