@@ -1,0 +1,54 @@
+{
+  "crd": "318258",
+  "name": "Ridgeline Private Wealth",
+  "people": [
+    {
+      "raw_name": "HUFTALIN, CALEB, WILL",
+      "name": "Caleb Will Huftalin",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "DIRECTOR OF WEALTH MANAGEMENT/CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "12/2021",
+      "crd": "5114075",
+      "is_partner_mention": false,
+      "seniority_score": 55,
+      "bio_note": "Founder and Director of Wealth Management, CFP. Graduate of Northern Illinois University College of Business. Prior to founding Ridgeline (initially in 2019, refounded/restructured in 2021-2022), worked as a Wealth Advisor (CFP) at Catalyst Wealth Management from 2011 to 2019. Based in the far East Valley near the Superstition Mountains; husband and father of four boys.",
+      "bio_source": "LinkedIn profile (linkedin.com/in/huftalin), corroborating ridgelineprivatewealth.com/about-us",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "Hofmann, Stephen, Daniel",
+      "name": "Stephen Daniel Hofmann",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CO-OWNER/MANAGING MEMBER",
+      "is_equity_owner": true,
+      "ownership_pct": "10-25%",
+      "control_person": true,
+      "since": "04/2024",
+      "crd": "6994818",
+      "is_partner_mention": false,
+      "seniority_score": 40,
+      "bio_note": "Co-Owner/Managing Member and Director of Wealth Planning, holding JD, CPA, CFP, and PPC credentials \u2014 a rare combination of law, accounting, and financial planning expertise. Bachelor's in accountancy from Northern Illinois University; J.D. from Thomas M. Cooley Law School (2010-2012); licensed Illinois attorney and CPA. Previously worked at Baker Tilly Virchow Krause and Midland Wealth Management, with 12+ years in the investment and financial industry. Based in Northern Illinois, not Arizona (worth noting \u2014 Ridgeline operates virtually/nationwide); married father of four.",
+      "bio_source": "LinkedIn profile (linkedin.com/in/steve-hofmann), corroborated by AdvisorCheck regulatory profile (advisorcheck.com/advisor/6994818-stephen-daniel-hofmann-ridgeline-private-wealth-rockford-illinois) and Midland States Bank bio (midlandsb.com/node/3501)",
+      "bio_confidence": "high",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Ridgeline Private Wealth is a Mesa, AZ RIA operating as a nationwide virtual/location-independent advisory focused on business owners, specializing in tax reduction and investment strategy.",
+    "source": "ridgelineprivatewealth.com/about-us; RocketReach firm profile (rocketreach.co/ridgeline-private-wealth-profile_b7f1bad4c25c00a0)",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "1 of 2 people checked"
+}
