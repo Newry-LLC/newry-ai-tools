@@ -1,0 +1,57 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "VAN ZUTPHEN, CORNELIUS, HENRY",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "PRESIDENT",
+      "since": "08/2013",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "1261512",
+      "raw_id": "1261512"
+    },
+    {
+      "full_legal_name": "VAN ZUTPHEN, CORNELIUS, H.",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CIO",
+      "since": "08/2013",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "5264496",
+      "raw_id": "5264496"
+    },
+    {
+      "full_legal_name": "JONES, DANIELA, URS",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "VP",
+      "since": "01/2022",
+      "ownership_code": "B",
+      "ownership_pct": "10-25%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "5976893",
+      "raw_id": "5976893"
+    },
+    {
+      "full_legal_name": "Lacey, Gieselle",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CCO",
+      "since": "03/2024",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "7891531",
+      "raw_id": "7891531"
+    }
+  ]
+}
