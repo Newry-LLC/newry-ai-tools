@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "WALKER, MATTHEW, GENE",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "FORTITUDE PARTNER HOLDINGS LLC MEMBER",
+      "since": "11/2021",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "6040760",
+      "raw_id": "6040760"
+    },
+    {
+      "full_legal_name": "FORTITUDE PARTNER HOLDINGS LLC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "FORTITUDE FAMILY OFFICE HOLDCO, LLC OWNER",
+      "since": "07/2025",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    }
+  ]
+}
