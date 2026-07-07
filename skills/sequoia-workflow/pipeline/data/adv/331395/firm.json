@@ -1,0 +1,120 @@
+{
+  "basicInformation": {
+    "firmId": 331395,
+    "firmName": "ONE WEALTH CAPITAL MANAGEMENT, LLC",
+    "otherNames": [
+      "ONE WEALTH CAPITAL MANAGEMENT, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/30/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "130300",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "eadd968d-9ec7-4fe4-819a-1f86abbead83"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "4900 NORTH SCOTTSDALE ROAD",
+      "street2": "SUITE 4900",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85251"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52122,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "3/31/2026"
+    },
+    {
+      "editionID": 52123,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "3/31/2026"
+    },
+    {
+      "editionID": 52124,
+      "type": "IA_INDVL",
+      "generatedOn": "3/31/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "5/16/2024"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "5/16/2024"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "5/16/2024"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "5/21/2024"
+    },
+    {
+      "jurisdiction": "Illinois",
+      "status": "Notice Filed",
+      "effectiveDate": "5/21/2024"
+    },
+    {
+      "jurisdiction": "Kansas",
+      "status": "Notice Filed",
+      "effectiveDate": "5/21/2024"
+    },
+    {
+      "jurisdiction": "New Hampshire",
+      "status": "Notice Filed",
+      "effectiveDate": "5/21/2024"
+    },
+    {
+      "jurisdiction": "New York",
+      "status": "Notice Filed",
+      "effectiveDate": "5/21/2024"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "5/21/2024"
+    },
+    {
+      "jurisdiction": "Washington",
+      "status": "Notice Filed",
+      "effectiveDate": "5/21/2024"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1033830,
+        "brochureName": "PART 2A BROCHURE",
+        "dateSubmitted": "3/30/2026"
+      }
+    ]
+  }
+}
