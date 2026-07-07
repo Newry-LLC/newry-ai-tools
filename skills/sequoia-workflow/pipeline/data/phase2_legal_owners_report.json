@@ -1,0 +1,452 @@
+{
+  "firms": [
+    {
+      "crd": "172113",
+      "name": "Sierra Legacy Group",
+      "website": "https://cypressnv.com/#team",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 2
+    },
+    {
+      "crd": "326261",
+      "name": "Luminvest Wealth Management LLC",
+      "website": "https://www.luminvest.com/",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "165214",
+      "name": "Intrinsic Value Partners, LLC",
+      "website": "https://ivpaz.com/team",
+      "legal_owner_count": 2,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 10
+    },
+    {
+      "crd": "131458",
+      "name": "Watts Gwilliam & Company, LLC",
+      "website": "https://wattsgwilliam.com/about-us/our-team/",
+      "legal_owner_count": 3,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 5
+    },
+    {
+      "crd": "335594",
+      "name": "Wlth Capital Management, LLC",
+      "website": null,
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 4
+    },
+    {
+      "crd": "306180",
+      "name": "Farnam Financial",
+      "website": "https://www.farnamfinancial.com/about/",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 2
+    },
+    {
+      "crd": "128549",
+      "name": "Wealth Engineering, LLC",
+      "website": "https://wealth-engineering.com/",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 2
+    },
+    {
+      "crd": "158641",
+      "name": "Sensible Money, LLC",
+      "website": "https://www.sensiblemoney.com/financial-planners/",
+      "legal_owner_count": 4,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "116933",
+      "name": "Sage Financial Advisors Inc.",
+      "website": null,
+      "legal_owner_count": 3,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "311639",
+      "name": "Wise Wealth Partners, LLC",
+      "website": "https://www.wisewealthpartners.com/",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 26
+    },
+    {
+      "crd": "169248",
+      "name": "Scottsdale Wealth Planning, Inc.",
+      "website": "https://scottsdalewealthplanning.com/our-team/",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 4
+    },
+    {
+      "crd": "333708",
+      "name": "Prosper Private Wealth",
+      "website": "https://prosperpw.com/",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "173383",
+      "name": "Stableford Capital LLC",
+      "website": "https://stablefordcapital.com/leadership/",
+      "legal_owner_count": 3,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 3
+    },
+    {
+      "crd": "337660",
+      "name": "Luminescent Wealth Management, Inc.",
+      "website": null,
+      "legal_owner_count": 3,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 1
+    },
+    {
+      "crd": "115994",
+      "name": "R.H. Investment Group, LLC",
+      "website": null,
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "157663",
+      "name": "Vigilare Wealth Management LLC",
+      "website": "https://www.vigilarewealth.com/meet-our-team/",
+      "legal_owner_count": 2,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 1
+    },
+    {
+      "crd": "331395",
+      "name": "One Wealth Capital Management, LLC",
+      "website": null,
+      "legal_owner_count": 2,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 3
+    },
+    {
+      "crd": "105022",
+      "name": "Intrinsic Wealth Counsel, Inc.",
+      "website": "https://intrinsicwealthcounsel.com/about-us/",
+      "legal_owner_count": 4,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 6
+    },
+    {
+      "crd": "298110",
+      "name": "Juncture Wealth Strategies, LLC",
+      "website": "https://juncturewealth.com/",
+      "legal_owner_count": 6,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 2
+    },
+    {
+      "crd": "147351",
+      "name": "ARQ Wealth Advisors, LLC",
+      "website": "https://arqwealth.com/",
+      "legal_owner_count": 5,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 1
+    },
+    {
+      "crd": "328450",
+      "name": "SL Capital",
+      "website": "https://slcapitalwealth.com/about/",
+      "legal_owner_count": 5,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 13
+    },
+    {
+      "crd": "151365",
+      "name": "Biltmore Wealth Management, LLC",
+      "website": "https://www.biltmorewealthaz.com/",
+      "legal_owner_count": 2,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "332192",
+      "name": "Degreen Private Wealth, LLC",
+      "website": "https://www.degreenprivatewealth.com/",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "333381",
+      "name": "GPS Investments",
+      "website": null,
+      "legal_owner_count": 2,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 4
+    },
+    {
+      "crd": "153410",
+      "name": "Galvin, Gaustad & Stein, LLC",
+      "website": "https://ggsadvisors.com/",
+      "legal_owner_count": 6,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 2
+    },
+    {
+      "crd": "127517",
+      "name": "Wealth Management Solutions",
+      "website": "http://www.wmsus.com/",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 1
+    },
+    {
+      "crd": "105130",
+      "name": "L. Roy Papp & Associates, LLP",
+      "website": "https://www.roypapp.com/",
+      "legal_owner_count": 12,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 8
+    },
+    {
+      "crd": "317615",
+      "name": "Fortitude Family Office",
+      "website": "https://fortitudefo.com/",
+      "legal_owner_count": 3,
+      "unresolved_entity_owners": [
+        {
+          "entity_name": "FORTITUDE FAMILY OFFICE HOLDCO, LLC",
+          "ownership_pct": "75%+",
+          "control_person": false,
+          "reason": "no_schedule_b_match"
+        }
+      ],
+      "brochure_partner_mentions": 15
+    },
+    {
+      "crd": "129597",
+      "name": "Brightscape Investment Centers",
+      "website": "https://brightscape.com/",
+      "legal_owner_count": 2,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "168774",
+      "name": "Arbor Wealth Management, LLC",
+      "website": "https://arborfirm.com/",
+      "legal_owner_count": 5,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "146054",
+      "name": "Key Group Management, Inc.",
+      "website": "https://www.keygroupwealth.com/",
+      "legal_owner_count": 2,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "116798",
+      "name": "Eaton-Cambridge Inc.",
+      "website": "https://www.eatoncambridge.com/",
+      "legal_owner_count": 4,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 16
+    },
+    {
+      "crd": "143420",
+      "name": "Exeter Financial, LLC",
+      "website": "https://exeterfinancial.com/our-firm/",
+      "legal_owner_count": 4,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 2
+    },
+    {
+      "crd": "318330",
+      "name": "Zenith Wealth Advisors",
+      "website": "https://www.zenithwealthadvisors.com/about",
+      "legal_owner_count": 2,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 2
+    },
+    {
+      "crd": "318258",
+      "name": "Ridgeline Private Wealth",
+      "website": "https://www.ridgelineprivatewealth.com/#11",
+      "legal_owner_count": 2,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 2
+    },
+    {
+      "crd": "299951",
+      "name": "Corepath Wealth Partners LLC",
+      "website": "https://corepathwealth.com/",
+      "legal_owner_count": 3,
+      "unresolved_entity_owners": [
+        {
+          "entity_name": "COREPATH HOLDINGS LLC",
+          "ownership_pct": "75%+",
+          "control_person": true,
+          "reason": "no_schedule_b_match"
+        }
+      ],
+      "brochure_partner_mentions": 46
+    },
+    {
+      "crd": "282017",
+      "name": "Taurum Retirement Partners, LLC",
+      "website": "https://taurumfinancial.com/about/",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 48
+    },
+    {
+      "crd": "113954",
+      "name": "Profocus Incorporated",
+      "website": "http://profocus.com/about-us/about-michael-smith",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 2
+    },
+    {
+      "crd": "131692",
+      "name": "Versant Capital Management, Inc.",
+      "website": "https://versantcm.com/our-people/",
+      "legal_owner_count": 8,
+      "unresolved_entity_owners": [
+        {
+          "entity_name": "xxx-xx-xxxx REMINGTON REVOCABLE TRUST U/A DTD 3/28/2014",
+          "ownership_pct": "25-50%",
+          "control_person": true,
+          "reason": "no_schedule_b_match"
+        }
+      ],
+      "brochure_partner_mentions": 1
+    },
+    {
+      "crd": "285932",
+      "name": "Spahn Wealth & Retirement LLC",
+      "website": "https://spahnwealth.com/",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 2
+    },
+    {
+      "crd": "175300",
+      "name": "Global Strategic Nextgen Ocio",
+      "website": "https://www.gsisus.com/",
+      "legal_owner_count": 5,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 1
+    },
+    {
+      "crd": "285243",
+      "name": "Releve Financial Group",
+      "website": "https://relevefinancialgroup.com/",
+      "legal_owner_count": 2,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 1
+    },
+    {
+      "crd": "116069",
+      "name": "Harmony Asset Management LLC",
+      "website": "https://www.harmonyam.com/#philosophy",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 1
+    },
+    {
+      "crd": "167657",
+      "name": "Immaculate Wealth Management, LLC",
+      "website": "https://www.immaculatewealth.com/our-team",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "298408",
+      "name": "Foothills Advisors, LLC",
+      "website": "https://www.foothillsadvisors.com/about",
+      "legal_owner_count": 1,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "108818",
+      "name": "Total Investment Management, Inc.",
+      "website": "https://timgt.com/",
+      "legal_owner_count": 3,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 7
+    },
+    {
+      "crd": "325721",
+      "name": "Amplify Financial, LLC",
+      "website": "https://amplifyplatform.com/",
+      "legal_owner_count": 5,
+      "unresolved_entity_owners": [
+        {
+          "entity_name": "AMPLIFY VENTURES GROUP, LLC",
+          "ownership_pct": "75%+",
+          "control_person": true,
+          "reason": "no_schedule_b_match"
+        }
+      ],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "291070",
+      "name": "Triton Wealth Management, Pllc",
+      "website": "https://www.tritonwealthmanagement.com/team",
+      "legal_owner_count": 4,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "129415",
+      "name": "Financial Life Planners",
+      "website": "https://financiallifeplanners.com/meet-the-team-financial-life-planners/",
+      "legal_owner_count": 3,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 1
+    },
+    {
+      "crd": "282003",
+      "name": "Pinnacle Peak Private Client Group, LLC",
+      "website": "https://pinpeakpcg.com/about/",
+      "legal_owner_count": 3,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 0
+    },
+    {
+      "crd": "170536",
+      "name": "Wisdom Wealth Investment Advisors LLC",
+      "website": "http://www.wisdomwealthia.com/team",
+      "legal_owner_count": 2,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 14
+    },
+    {
+      "crd": "152662",
+      "name": "Rovin Capital",
+      "website": "https://rovincapital.com/team/",
+      "legal_owner_count": 6,
+      "unresolved_entity_owners": [],
+      "brochure_partner_mentions": 2
+    }
+  ],
+  "total_firms": 52,
+  "total_legal_owners": 149,
+  "firms_with_unresolved_entities": 4,
+  "firms_needing_ai_partner_check": 37
+}
