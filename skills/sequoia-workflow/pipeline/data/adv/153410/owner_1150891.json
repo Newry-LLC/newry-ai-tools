@@ -1,0 +1,306 @@
+{
+  "basicInformation": {
+    "individualId": 1150891,
+    "firstName": "STEPHEN",
+    "middleName": "LEE",
+    "lastName": "GAUSTAD",
+    "otherNames": [
+      "STEPHEN L GAUSTAD",
+      "STEPHEN Lee GAUSTAD",
+      "STEPHEN  GAUSTAD",
+      "STEVE  GAUSTAD",
+      "STEPHEN LEE GUSTAD"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "6/18/1983"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 153410,
+      "firmName": "GALVIN, GAUSTAD & STEIN, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "10/22/2010",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "71464",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "606 LIBERTY AVE",
+          "street2": "3RD FLOOR",
+          "city": "PITTSBURGH",
+          "cityAlias": [
+            "PGH",
+            "PITT",
+            "PITTSBURGH"
+          ],
+          "state": "PA",
+          "country": "United States",
+          "zipCode": "15222",
+          "latitude": "40.447804",
+          "longitude": "-79.993547",
+          "geoLocation": "40.447804,-79.993547",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "12/07/2020"
+        },
+        {
+          "displayOrder": 3,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "477 Madison Avenue, 6th Floor",
+          "city": "New York",
+          "cityAlias": [
+            "FRANKLIN D ROOSEVELT",
+            "MANHATTAN",
+            "NEW YORK",
+            "NEW YORK CITY",
+            "NY",
+            "NY CITY",
+            "NYC"
+          ],
+          "state": "NY",
+          "country": "United States",
+          "zipCode": "10022",
+          "latitude": "40.758346",
+          "longitude": "-73.967997",
+          "geoLocation": "40.758346,-73.967997",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "11/01/2021"
+        },
+        {
+          "displayOrder": 4,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "Y",
+          "city": "Sewickley",
+          "state": "PA",
+          "country": "United States",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "09/19/2022"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "57293",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "11117",
+      "firmId": 1027,
+      "firmName": "FOOTHILL SECURITIES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "12/6/2011",
+      "registrationEndDate": "12/9/2016",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "42017",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "21770",
+      "firmId": 7461,
+      "firmName": "FSC SECURITIES CORPORATION",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "9/10/2008",
+      "registrationEndDate": "12/7/2011",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "47342",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "29577",
+      "firmId": 13572,
+      "firmName": "FINANCIAL NETWORK INVESTMENT CORPORATION",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "registrationBeginDate": "9/30/1999",
+      "registrationEndDate": "9/17/2008",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "57637",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "46451",
+      "firmId": 34815,
+      "firmName": "ING FINANCIAL ADVISERS, LLC",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "registrationBeginDate": "10/15/1993",
+      "registrationEndDate": "9/11/2008",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "15456",
+      "firmId": 13255,
+      "firmName": "AETNA FINANCIAL SERVICES, INC.",
+      "city": "HARTFORD",
+      "state": "CT",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "1/1/1999",
+      "registrationEndDate": "9/25/2000",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "15409",
+      "firmId": 13256,
+      "firmName": "AETNA LIFE INSURANCE AND ANNUITY COMPANY",
+      "city": "HARTFORD",
+      "state": "CT",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "6/19/1983",
+      "registrationEndDate": "10/15/1993",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "60807",
+      "iaSECNumberType": "801",
+      "firmId": 115478,
+      "firmName": "AEGIS FINANCIAL GROUP, INC.",
+      "city": "PHOENIZ",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "9/15/2008",
+      "registrationEndDate": "9/28/2010",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "47342",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "29577",
+      "firmId": 13572,
+      "firmName": "FINANCIAL NETWORK INVESTMENT CORPORATION",
+      "city": "PARADISE VALLEY",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "3/27/2000",
+      "registrationEndDate": "9/17/2008",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "57637",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "46451",
+      "firmId": 34815,
+      "firmName": "ING FINANCIAL ADVISERS, LLC",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "8/14/2000",
+      "registrationEndDate": "9/11/2008",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 1,
+    "productExamCount": 3
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "12/18/1998",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "12/10/1993",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "12/15/2005",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "12/9/2016",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "10/22/1998",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 2",
+      "examName": "Non-Member General Securities Examination",
+      "examTakenDate": "2/3/1982",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 3
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "10/22/2010"
+    },
+    {
+      "state": "New York",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/17/2022"
+    },
+    {
+      "state": "Pennsylvania",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "12/4/2019"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
