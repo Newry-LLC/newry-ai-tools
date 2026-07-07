@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "SCHEID, TREVOR, RYAN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "VICE PRESIDENT",
+      "since": "07/2025",
+      "ownership_code": "B",
+      "ownership_pct": "10-25%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "6558226",
+      "raw_id": "6558226"
+    },
+    {
+      "full_legal_name": "EBI TRUST U/T/A DATED JULY 9, 2024",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "SHAREHOLDER",
+      "since": "07/2025",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "xxx-xx-xxxx ITKOE, ERIN, BETH",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "PRESIDENT AND CHIEF COMPLIANCE OFFICER",
+      "since": "07/2025",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "4816412",
+      "raw_id": "4816412"
+    }
+  ]
+}
