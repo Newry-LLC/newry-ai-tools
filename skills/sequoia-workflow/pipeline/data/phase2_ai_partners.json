@@ -1,0 +1,52 @@
+{
+  "172113": {"name": "Sierra Legacy Group", "partners": []},
+  "165214": {"name": "Intrinsic Value Partners, LLC", "partners": []},
+  "131458": {"name": "Watts Gwilliam & Company, LLC", "partners": []},
+  "335594": {"name": "Wlth Capital Management, LLC", "partners": [
+    {"name": "Rodney R. Weeks", "title_phrase": "Partner of RWCB LLC", "quote": "Mr. Weeks is also a Partner of RWCB LLC, a holding entity for real estate.", "confidence": "high", "at_this_firm": false, "exclude_reason": "partner of a different company (RWCB LLC), not of Wlth Capital Management itself"}
+  ]},
+  "306180": {"name": "Farnam Financial", "partners": []},
+  "128549": {"name": "Wealth Engineering, LLC", "partners": []},
+  "311639": {"name": "Wise Wealth Partners, LLC", "partners": []},
+  "169248": {"name": "Scottsdale Wealth Planning, Inc.", "partners": []},
+  "173383": {"name": "Stableford Capital LLC", "partners": [
+    {"name": "Andrew J. Brinkman", "title_phrase": "managing partner of Petros Capital", "quote": "Andy was managing partner of Petros Capital, a long/short institutional hedge fund", "confidence": "medium", "at_this_firm": false, "exclude_reason": "partner title refers to a prior/different fund (Petros Capital), not Stableford itself — already captured as a Stableford equity owner via Schedule B regardless"}
+  ]},
+  "337660": {"name": "Luminescent Wealth Management, Inc.", "partners": []},
+  "157663": {"name": "Vigilare Wealth Management LLC", "partners": []},
+  "331395": {"name": "One Wealth Capital Management, LLC", "partners": []},
+  "105022": {"name": "Intrinsic Wealth Counsel, Inc.", "partners": [
+    {"name": "Cornelius (Neal) Van Zutphen, Jr.", "title_phrase": "Partner", "quote": "Neal is the founder of Intrinsic Wealth Counsel, Inc., majority owner, President, and Partner.", "confidence": "high", "at_this_firm": true},
+    {"name": "Cornelius (Casey) Van Zutphen, III", "title_phrase": "Partner, Chief Investment Officer", "quote": "Casey is Partner, Chief Investment Officer, and the Portfolio Manager at Intrinsic Wealth Counsel, Inc.", "confidence": "high", "at_this_firm": true},
+    {"name": "Daniela U. Jones", "title_phrase": "Partner, Vice President", "quote": "Daniela is Partner, Vice President, and Financial Life Planner at Intrinsic Wealth Counsel, Inc.", "confidence": "high", "at_this_firm": true}
+  ]},
+  "298110": {"name": "Juncture Wealth Strategies, LLC", "partners": []},
+  "147351": {"name": "ARQ Wealth Advisors, LLC", "partners": []},
+  "328450": {"name": "SL Capital", "partners": []},
+  "333381": {"name": "GPS Investments", "partners": []},
+  "153410": {"name": "Galvin, Gaustad & Stein, LLC", "partners": []},
+  "127517": {"name": "Wealth Management Solutions", "partners": []},
+  "105130": {"name": "L. Roy Papp & Associates, LLP", "partners": []},
+  "317615": {"name": "Fortitude Family Office", "partners": []},
+  "116798": {"name": "Eaton-Cambridge Inc.", "partners": [
+    {"name": "Robert R. Korljan", "title_phrase": "Wealth Manager, Partner", "quote": "Eaton-Cambridge Inc. Advisory and Financial Planning Wealth Manager, Partner 1999 to Present", "confidence": "high", "at_this_firm": true},
+    {"name": "Marc T. Giannone", "title_phrase": "Partner, Chief Compliance Officer", "quote": "Eaton-Cambridge Inc. Advisory and Financial Planning Partner, Chief Compliance Officer 05/2012 to Present", "confidence": "high", "at_this_firm": true}
+  ]},
+  "143420": {"name": "Exeter Financial, LLC", "partners": [], "note": "cached brochure content appears to be for a differently-named entity (Alkeme Wealth, LLC) — flagged for human review, no partner data lost since result was empty regardless"},
+  "318330": {"name": "Zenith Wealth Advisors", "partners": []},
+  "318258": {"name": "Ridgeline Private Wealth", "partners": []},
+  "299951": {"name": "Corepath Wealth Partners LLC", "partners": []},
+  "282017": {"name": "Taurum Retirement Partners, LLC", "partners": [
+    {"name": "Jackson T. Beck", "title_phrase": "Partner", "quote": "Partner 2015 - 2017 Sluffin It Consulting", "confidence": "high", "at_this_firm": false, "exclude_reason": "partner title refers to a prior employer (Sluffin It Consulting, 2015-2017), not Taurum itself"}
+  ]},
+  "113954": {"name": "Profocus Incorporated", "partners": []},
+  "131692": {"name": "Versant Capital Management, Inc.", "partners": []},
+  "285932": {"name": "Spahn Wealth & Retirement LLC", "partners": []},
+  "175300": {"name": "Global Strategic Nextgen Ocio", "partners": []},
+  "285243": {"name": "Releve Financial Group", "partners": []},
+  "116069": {"name": "Harmony Asset Management LLC", "partners": []},
+  "108818": {"name": "Total Investment Management, Inc.", "partners": []},
+  "129415": {"name": "Financial Life Planners", "partners": []},
+  "170536": {"name": "Wisdom Wealth Investment Advisors LLC", "partners": []},
+  "152662": {"name": "Rovin Capital", "partners": []}
+}
