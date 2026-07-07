@@ -1,0 +1,97 @@
+{
+  "basicInformation": {
+    "individualId": 5264496,
+    "firstName": "CORNELIUS",
+    "middleName": "H.",
+    "lastName": "VAN ZUTPHEN",
+    "nameSuffix": "III",
+    "otherNames": [
+      "Casey  Van Zutphen"
+    ],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "1/2/2007"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 105022,
+      "firmName": "INTRINSIC WEALTH COUNSEL, INC.",
+      "iaOnly": "Y",
+      "registrationBeginDate": "1/3/2007",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "2522 Chambers Road",
+          "street2": "Suite #200A",
+          "city": "Tustin",
+          "cityAlias": [
+            "TUSTIN"
+          ],
+          "state": "CA",
+          "country": "United States",
+          "zipCode": "92780",
+          "latitude": "33.737629",
+          "longitude": "-117.821174",
+          "geoLocation": "33.737629,-117.821174",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "01/02/2017"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 0
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "12/7/2006",
+      "examScope": "IA"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "1/3/2007"
+    },
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "11/7/2023"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
