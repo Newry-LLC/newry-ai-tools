@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "BIRD, JONATHAN, DAVID",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MEMBER, CCO",
+      "since": "09/2019",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "6290050",
+      "raw_id": "6290050"
+    }
+  ]
+}
