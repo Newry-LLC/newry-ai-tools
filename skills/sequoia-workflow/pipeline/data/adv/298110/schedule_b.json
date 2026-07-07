@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "RHONEMUS, BARRY, SCOTT",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "JUNCTURE, INC. OWNER",
+      "since": "03/2018",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2801533",
+      "raw_id": "2801533"
+    },
+    {
+      "full_legal_name": "BARKER, JACK, ANDREW",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "JUNCTURE, INC. OWNER",
+      "since": "03/2018",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2570575",
+      "raw_id": "2570575"
+    },
+    {
+      "full_legal_name": "HAINES, BRADLEY, JAMES",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "JUNCTURE, INC. OWNER",
+      "since": "03/2018",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2571132",
+      "raw_id": "2571132"
+    }
+  ]
+}
