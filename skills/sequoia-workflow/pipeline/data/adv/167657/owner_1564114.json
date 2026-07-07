@@ -1,0 +1,441 @@
+{
+  "basicInformation": {
+    "individualId": 1564114,
+    "firstName": "MARK",
+    "middleName": "EDWARD",
+    "lastName": "RAUGUTH",
+    "otherNames": [],
+    "bcScope": "Active",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "12/3/1986"
+  },
+  "currentEmployments": [
+    {
+      "firmId": 127701,
+      "firmName": "GRADIENT SECURITIES, LLC",
+      "iaOnly": "N",
+      "registrationBeginDate": "6/5/2013",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "80807",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "66032",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "538265",
+          "street1": "2500 S. POWER ROAD",
+          "street2": "SUITE 111",
+          "city": "MESA",
+          "cityAlias": [
+            "MESA"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85209",
+          "latitude": "33.376145",
+          "longitude": "-111.63433",
+          "geoLocation": "33.376145,-111.63433",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "06/06/2013"
+        }
+      ]
+    }
+  ],
+  "currentIAEmployments": [
+    {
+      "firmId": 167657,
+      "firmName": "IMMACULATE WEALTH MANAGEMENT, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "5/8/2013",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "132448",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "534324",
+          "street1": "2500 S. POWER ROAD",
+          "street2": "SUITE 111",
+          "city": "MESA",
+          "cityAlias": [
+            "MESA"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85209",
+          "latitude": "33.376145",
+          "longitude": "-111.63433",
+          "geoLocation": "33.376145,-111.63433",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "04/24/2013"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "17983",
+      "firmId": 6694,
+      "firmName": "RAYMOND JAMES FINANCIAL SERVICES, INC.",
+      "city": "MESA",
+      "state": "AZ",
+      "registrationBeginDate": "12/10/1997",
+      "registrationEndDate": "3/27/2013",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "28543",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16791",
+      "firmId": 6363,
+      "firmName": "AMERICAN EXPRESS FINANCIAL ADVISORS INC.",
+      "city": "MINNEAPOLIS",
+      "state": "MN",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "10/24/1986",
+      "registrationEndDate": "12/15/1997",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "69815",
+      "iaSECNumberType": "801",
+      "firmId": 149018,
+      "firmName": "RAYMOND JAMES FINANCIAL SERVICES ADVISORS, INC",
+      "city": "MESA",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "4/9/2009",
+      "registrationEndDate": "3/27/2013",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "3/11/2015",
+      "disclosureType": "Regulatory",
+      "disclosureResolution": "Final",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "DocketNumberFDA": "",
+        "DocketNumberAAO": "",
+        "Initiated By": "NORTH CAROLINA DEPARTMENT OF INSURANCE",
+        "Allegations": "MR. RAGUTH FAILED TO TIMELY REPORT THE FINRA AWC FROM 2/19/2014 (15 DAY SUSPENION AND $5,000 FINE)TO NORTH CAROLINA DEPARTMENT OF INSURANCE IN VIOLATION OF NORTH CAROLINA GENERAL STATUTE 58-33-32(K).",
+        "Resolution": "Settled",
+        "SanctionDetails": [
+          {
+            "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+            "SanctionDetails": [
+              {
+                "Amount": "$250.00"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "eventDate": "9/22/2014",
+      "disclosureType": "Regulatory",
+      "disclosureResolution": "Final",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "DocketNumberFDA": "",
+        "DocketNumberAAO": "",
+        "Initiated By": "CALIFORNIA DEPARTMENT OF INSURANCE",
+        "Allegations": "MR. RAUGUTH FAILED TO TIMELY REPORT THE FINRA AWC FROM 2/19/2014(15 DAY SUSPENSION AND $5,000 FINE) TO THE CALIFORNIA INSURANCE COMMISSIONER IN VIOLATION OF CALIFORNIA INSURANCE CODE SECTION 1729.2.",
+        "Resolution": "Order",
+        "SanctionDetails": [
+          {
+            "Sanctions": "Suspension",
+            "SanctionDetails": [
+              {
+                "Registration Capacities Affected": "INSURANCE LICENSE",
+                "Duration": "15 DAYS",
+                "Start Date": "10/20/2014",
+                "End Date": "11/4/2014"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "eventDate": "3/4/2014",
+      "disclosureType": "Regulatory",
+      "disclosureResolution": "Final",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "DocketNumberFDA": "2013036434901",
+        "DocketNumberAAO": "2013036434901",
+        "Initiated By": "FINRA",
+        "Allegations": "WITHOUT ADMITTING OR DENYING THE FINDINGS, RAUGUTH CONSENTED TO THE DESCRIBED SANCTIONS AND TO THE ENTRY OF FINDINGS THAT HE WAS TERMINATED BY HIS MEMBER FIRM FOR IMPROPER USE OF THE SIGNATURE GUARANTEE STAMP. \r\nTHE FINDINGS STATED THAT RAUGUTH USED THE FIRM'S SIGNATURE GUARANTEE STAMP ON A FAXED COPY OF A LETTER OF AUTHORIZATION (LOA) TO FACILITATE A TRANSACTION FOR A NON-FIRM CUSTOMER. RAUGUTH DID NOT WITNESS THE REQUESTING PARTY'S SIGNATURE OR INDEPENDENTLY VERIFY THE REQUESTING PARTY'S IDENTITY. THE TRANSACTION CONTEMPLATED BY THE LOA WAS NEVER EFFECTED BECAUSE A THIRD PARTY SUBSEQUENTLY DETERMINED THAT IT WAS FRAUDULENT. THE USE OF THE SIGNATURE GUARANTEE STAMP WAS CONTRARY TO RAUGUTH FIRM'S SUPERVISORY PROCEDURES. THE FINDINGS ALSO STATED THAT IT WAS SUBSEQUENTLY DETERMINED THAT RAUGUTH IMPROPERLY UTILIZED THE FIRM'S SIGNATURE GUARANTEE STAMP FOR NON-FIRM CUSTOMERS ON ADDITIONAL OCCASIONS. IN FURTHER ABROGATION OF THE FIRM'S PROCEDURES, RAUGUTH DID NOT MAINTAIN PHOTOCOPIES OF THESE GUARANTEED DOCUMENTS IN THE BRANCH FILE.",
+        "Resolution": "Acceptance, Waiver & Consent(AWC)",
+        "SanctionDetails": [
+          {
+            "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+            "SanctionDetails": [
+              {
+                "Amount": "$5,000.00"
+              }
+            ]
+          },
+          {
+            "Sanctions": "Suspension",
+            "SanctionDetails": [
+              {
+                "Registration Capacities Affected": "ANY CAPACITY",
+                "Duration": "15 BUSINESS DAYS",
+                "Start Date": "4/7/2014",
+                "End Date": "4/28/2014"
+              }
+            ]
+          }
+        ],
+        "Regulator Statement": "FINE PAID IN FULL ON 03/19/14.",
+        "Broker Comment": [
+          "FINE PAID IN FULL ON 03/19/2014."
+        ]
+      }
+    },
+    {
+      "eventDate": "3/22/2013",
+      "disclosureType": "Employment Separation After Allegations",
+      "disclosureResolution": "",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Firm Name": "RAYMOND JAMES FINANCIAL SERVICES, INC",
+        "Termination Type": "Discharged",
+        "Allegations": "IMPROPER USE OF THE SIGNATURE GUARANTEE STAMP"
+      }
+    },
+    {
+      "eventDate": "3/22/2013",
+      "disclosureType": "Employment Separation After Allegations",
+      "disclosureResolution": "",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Firm Name": "RAYMOND JAMES FINANCIAL SERVICES, INC.",
+        "Termination Type": "Discharged",
+        "Allegations": "IMPROPER USE OF THE SIGNATURE GUARANTEE STAMP"
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Regulatory Event",
+      "disclosureCount": 3
+    },
+    {
+      "disclosureType": "Termination",
+      "disclosureCount": 2
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 2,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "10/1/1998",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "10/20/1986",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 51",
+      "examName": "Municipal Fund Securities Principal Examination",
+      "examTakenDate": "6/20/2003",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "11/15/1995",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "10/18/1986",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 1,
+    "approvedFinraRegistrationCount": 1,
+    "approvedStateRegistrationCount": 15,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/16/2013"
+    },
+    {
+      "state": "Arizona",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "6/17/2013"
+    },
+    {
+      "state": "California",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "6/5/2013"
+    },
+    {
+      "state": "Colorado",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/5/2018"
+    },
+    {
+      "state": "Georgia",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "6/7/2013"
+    },
+    {
+      "state": "Idaho",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "4/12/2024"
+    },
+    {
+      "state": "Illinois",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "6/6/2013"
+    },
+    {
+      "state": "Maryland",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "6/20/2013"
+    },
+    {
+      "state": "Mississippi",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/10/2025"
+    },
+    {
+      "state": "Missouri",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/12/2013"
+    },
+    {
+      "state": "Nevada",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "6/26/2013"
+    },
+    {
+      "state": "North Carolina",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "4/15/2024"
+    },
+    {
+      "state": "Ohio",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "6/18/2013"
+    },
+    {
+      "state": "Oregon",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/9/2021"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "5/8/2013"
+    },
+    {
+      "state": "Texas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/26/2013"
+    },
+    {
+      "state": "Washington",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/8/2016"
+    }
+  ],
+  "registeredSROs": [
+    {
+      "sro": "FINRA",
+      "status": "APPROVED",
+      "CategoriesList": [
+        "General Securities Principal",
+        "Full Registration/General Securities Representative",
+        "Municipal Fund"
+      ]
+    }
+  ],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
