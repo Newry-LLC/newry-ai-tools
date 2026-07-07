@@ -1,0 +1,123 @@
+{
+  "crd": "325721",
+  "name": "Amplify Financial, LLC",
+  "people": [
+    {
+      "raw_name": "BRODT, AARON, PAUL",
+      "name": "Aaron Paul Brodt",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF EXECUTIVE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "since": "05/2023",
+      "crd": "5017914",
+      "is_partner_mention": false,
+      "seniority_score": 30,
+      "bio_note": "Co-founder and CEO of Amplify (the wealth-tech platform); separately, Founder and CEO of Ashton Thomas Private Wealth, which he built up before it joined Arax/RedBird Capital in 2023 -- at roughly $3B AUM at the time of that 2023 deal, since grown under Arax to approximately $9B by Dec 2024 and $10B by Oct 2025 (an earlier version of this bio incorrectly stated $11B pre-deal; corrected after Phase 4 verification). Began his career as an oil trader for Tosco (now ConocoPhillips) before becoming a financial advisor and portfolio manager for a multifamily office. Holds the CIMA (Certified Investment Management Analyst) designation, taught in conjunction with the Wharton School. Played NCAA Division I basketball at New Mexico State University. Married to Heidi Brodt; they live in Scottsdale with their two sons.",
+      "bio_source": "BusinessWire press release, 'Amplify Achieves Record Growth, Doubles Headcount and Surpasses $18 Billion in AUM' (businesswire.com/news/home/20250204263917/en/Amplify-Achieves-Record-Growth); corroborated by LinkedIn profile 'Aaron Brodt CIMA - Ashton Thomas Private Wealth' Phase 4 verification (2026-07-03): confirmed via ashtonthomaspw.com/team/aaron-brodt and amplifyplatform.com/about-us/our-story that he is co-founder (not sole founder) of Amplify; corrected the pre-2023-deal AUM figure using the actual Sept 2023 GlobeNewswire announcement plus later AUM disclosures.",
+      "bio_confidence": "high",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "Garcia, Peggy, Jolen",
+      "name": "Peggy Jolen Garcia",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "since": "05/2023",
+      "crd": "5041087",
+      "is_partner_mention": false,
+      "seniority_score": 25,
+      "bio_note": "Goes professionally by 'Jolen Garcia.' Chief Compliance Officer at Amplify with roughly two decades of experience in wealth management. Prior to Amplify she was Director of Investment Operations at Ashton Thomas Private Wealth and earlier held a compliance role at GenSpring Family Offices.",
+      "bio_source": "Amplify leadership page (amplifyplatform.com/about-us/#leadership), cross-checked against an independent professional-network profile aggregator (Wiza) showing her prior role at Ashton Thomas Private Wealth",
+      "bio_confidence": "medium",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "HATFIELD, DAVID, T.",
+      "name": "David T. Hatfield",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF TECHNOLOGY OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "since": "05/2023",
+      "crd": "6196051",
+      "is_partner_mention": false,
+      "seniority_score": 25,
+      "bio_note": "Chief Technology Officer of Amplify; architected the platform's data infrastructure around an 'AI-native data lake' approach roughly eight years ago, ahead of the industry trend. Holds a Master of Science in Information Management from Arizona State University and has over a decade of experience deploying enterprise information management and analytics solutions. Based in the Gilbert, AZ area.",
+      "bio_source": "The Wealth Advisor, 'How Amplify Platform Aims to Give Advisors Their Business\u2014and Their Sundays\u2014Back' (thewealthadvisor.com), an independent trade publication profiling his platform architecture decisions",
+      "bio_confidence": "high",
+      "phase4_note": "Phase 4 verification (2026-07-03): the 'AI-native data lake' claim is confirmed verbatim in the cited Wealth Advisor article. The Arizona State University MS in Information Management credential is not mentioned in that article and was not independently corroborated elsewhere this pass. Verdict: PARTIAL.",
+      "phase4_status": "verified_with_caveat",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "Brodt, Heidi, Maria",
+      "name": "Heidi Maria Brodt",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "BUSINESS MANAGER",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "since": "05/2023",
+      "crd": "6671739",
+      "is_partner_mention": false,
+      "seniority_score": 10,
+      "bio_note": "Confirmed to be Aaron Brodt's spouse (not merely a shared surname) \u2014 they reside in Scottsdale with their two sons per BusinessWire's company profile of Aaron. Business Manager at Ashton Thomas Private Wealth and Amplify; joined Ashton Thomas in 2015. Holds a Bachelor of Applied Science in Global Business (International Finance concentration) from Arizona State University. Earlier career was in medical-spa/practice business management before moving into financial services operations.",
+      "bio_source": "LinkedIn profile 'Heidi Brodt - Business Manager at Ashton Thomas Private Wealth', corroborated by BusinessWire's Amplify company profile confirming her marriage to Aaron Brodt",
+      "bio_confidence": "medium",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "Rowley, Jason, Charles",
+      "name": "Jason Charles Rowley",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF OF STAFF",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "since": "01/2025",
+      "crd": "8069047",
+      "is_partner_mention": false,
+      "seniority_score": 10,
+      "bio_note": "Was Amplify's Chief of Staff and General Counsel before being promoted to President in March 2026. Spent 15+ years with Suns Legacy Partners, the Phoenix Suns' holding company, ultimately serving as President & CEO and driving the franchise from bottom-third in league revenue to #5, culminating in a $4 billion valuation and the franchise's 2023 sale. Holds a bachelor's degree and JD from the University of Arizona and served four years in the U.S. Navy as an Intelligence Specialist before law school.",
+      "bio_source": "citybiz, 'Amplify Appoints Jason Rowley As President And Kimberly Hill As Chief Revenue Officer' (citybiz.co/article/824488), an independent business news outlet, corroborated by BusinessWire/Morningstar syndication of the same announcement",
+      "bio_confidence": "high",
+      "phase4_note": "Phase 4 verification (2026-07-03): Suns Legacy Partners tenure and the franchise's 2023 $4B sale are independently confirmed (NBA.com, ESPN, Wikipedia), but his specific title tenure is closer to 11 years as President/CEO (~16 years total with the org) than the stated '15+ years,' and the specific 'bottom-third to #5 in league revenue' statistic could not be independently verified anywhere. Verdict: PARTIAL.",
+      "phase4_status": "verified_with_caveat",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [
+    {
+      "entity_name": "AMPLIFY VENTURES GROUP, LLC",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "reason": "no_schedule_b_match",
+      "website_zoominfo_lead": {
+        "note": "Ron Shurts, listed as \"Co-Founder\" on Amplify's own website, has a ZoomInfo record as Co-Founder of Annexus (an insurance/annuity marketing org) \u2014 a plausible but low-confidence lead for who controls the Ventures Group entity. No corroborating source found.",
+        "confidence": "low"
+      }
+    }
+  ],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Amplify Financial, LLC (branded 'Amplify') is the RIA-facing entity of Amplify, the AI-native wealth management technology platform co-founded by Aaron Brodt and Ron Shurts that has grown to over $18B in AUM on the platform. Aaron Brodt is also the founder of Ashton Thomas Private Wealth (part of Arax Investment Partners/RedBird Capital) \u2014 the same acquirer that took on Pinnacle Peak Private Client Group (CRD 282003) in March 2026, per this batch's other findings. UNRESOLVED OWNERSHIP FLAG: Schedule B lists 'Amplify Ventures Group, LLC' as a 75%+ owner. Arizona Corporation Commission filings (Document #23602353, formed 11/3/2023) show Amplify Ventures Group, LLC's sole listed Member is 'Hana Holdings, LLC' (Maricopa County, AZ). No public filing or press source directly ties Ron Shurts to Hana Holdings. Circumstantial support only: Ron Shurts is publicly identified as Amplify's Co-Founder and sits on the Ashton Thomas Advisory Board per a September 2023 press release. Suggestive but not confirmatory \u2014 remains unresolved after genuine effort.",
+    "source": "Arizona Corporation Commission filing via bizprofile.net (bizprofile.net/az/scottsdale/amplify-ventures-group-llc); GlobeNewswire press release, 'Ashton Thomas Private Wealth Joins RedBird Capital's Arax Investment Partners' (globenewswire.com/news-release/2023/09/13/2742366); amplifyplatform.com leadership page",
+    "confidence": "low"
+  },
+  "phase4_firm_summary": "3 of 5 people checked"
+}
