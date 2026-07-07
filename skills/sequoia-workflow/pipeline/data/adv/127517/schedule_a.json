@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "ROSENTHAL, DAVID, SCOTT",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER, PRINCIPAL, SENIOR FINANCIAL ADVISOR, MANAGING MEMBER",
+      "since": "06/2003",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2680280",
+      "raw_id": "2680280"
+    }
+  ]
+}
