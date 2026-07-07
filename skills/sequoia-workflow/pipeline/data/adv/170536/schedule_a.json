@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "MCINERNEY, JOSEPH, DAMIAN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER",
+      "since": "01/2014",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2344141",
+      "raw_id": "2344141"
+    },
+    {
+      "full_legal_name": "BOTTLE, BLAKE, LEPAGE",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER AND CHIEF COMPLIANCE OFFICER",
+      "since": "01/2014",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2065531",
+      "raw_id": "2065531"
+    }
+  ]
+}
