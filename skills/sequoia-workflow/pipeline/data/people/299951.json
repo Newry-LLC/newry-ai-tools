@@ -1,0 +1,89 @@
+{
+  "crd": "299951",
+  "name": "Corepath Wealth Partners LLC",
+  "people": [
+    {
+      "raw_name": "BONNETT, MARK, ALAN",
+      "name": "Mark Alan Bonnett",
+      "source": "Form ADV Schedule B (indirect owner, entity unmatched)",
+      "confidence": "medium",
+      "title_or_status": "BONNETT INVESTMENT GROUP LLC MANAGING MEMBER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "06/2004",
+      "crd": "3069882",
+      "is_partner_mention": true,
+      "seniority_score": 70,
+      "partner_title_phrase": "Founding Partner",
+      "partner_quote": "Mark Bonnett \u2014 Founding Partner (Scottsdale, AZ)",
+      "partner_source": "firm website (corepathwealth.com)",
+      "bio_note": "Founder and President of CorePath Wealth Partners (also referred to as CEO & Partner on the firm's team page) and, per Arizona business filings, the sole owner of Bonnett Investment Group LLC, which in turn wholly owns CorePath Holdings LLC \u2014 the entity that owns 75%+ of the firm. University of Arizona finance graduate who spent over two decades building his expertise in personal finance; prior to CorePath was Senior Vice President at North Star Resource Group. With the firm since 2004 (21+ years). Lives in Scottsdale with his wife Shawna and two daughters.",
+      "bio_source": "Arizona business filings via Bizapedia/BizProfile (independent of firm website) confirming Bonnett Investment Group LLC ownership of CorePath Holdings LLC; career background corroborated by LinkedIn profile",
+      "bio_confidence": "high",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "BATTISTA, JACQUELINE, MARIE",
+      "name": "Jacqueline Marie Battista",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER AND FINANCIAL ADVISOR",
+      "is_equity_owner": true,
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "since": "03/2024",
+      "crd": "5822720",
+      "is_partner_mention": true,
+      "seniority_score": 35,
+      "partner_title_phrase": "Chief Operating Officer & Partner",
+      "partner_quote": "Jacqueline Battista, CFP, CDFA, APMA, MBA, Partner",
+      "partner_source": "ZoomInfo + firm website (corepathwealth.com)",
+      "bio_note": "Chief Operating Officer, Chief Compliance Officer & Partner at CorePath Wealth Partners, a role held since January 2019. Before CorePath, was a Financial Advisor at Ameriprise Financial. Holds an MBA in Finance from the University of Denver's Daniels College of Business and a BS in Business Administration from the University of Colorado, Boulder. Specialties include divorce financial planning, retirement, and estate planning.",
+      "bio_source": "LinkedIn profile, corroborating firm bio at corepathwealth.com/jacqueline-battista-cfp-cdfa-apma-mba",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "Rick Schultenover",
+      "name": "Rick Schultenover",
+      "source": "firm website (corepathwealth.com/our-team)",
+      "confidence": "high",
+      "title_or_status": "CFP, Partner & CCO",
+      "is_equity_owner": false,
+      "ownership_pct": "",
+      "control_person": false,
+      "since": "",
+      "crd": null,
+      "is_partner_mention": true,
+      "partner_title_phrase": "CFP, Partner & CCO",
+      "partner_quote": "",
+      "partner_source": "firm website (corepathwealth.com/our-team)",
+      "seniority_score": 15,
+      "bio_note": "IMPORTANT FLAG FOR OUTREACH: appears to have LEFT CorePath Wealth Partners. Per an independent Financial Advisor Magazine article, he and a colleague received SEC approval to launch a new RIA, Salus Financial Partners/Advisors, headquartered in Colorado Springs with a second office in Minneapolis; he is now listed as a financial advisor at Salus Financial Advisors (Colorado Springs, CO) rather than CorePath. Previously worked at Securian Financial Services and CRI Securities in Denver. This appears to be a recent departure \u2014 verify current employment before outreach; he may no longer be a CorePath contact at all.",
+      "bio_source": "Financial Advisor Magazine, 'Two Advisors Start RIA In Colorado' (fa-mag.com/news/arizona-ria-with--274m-aum-splits-in-two-77252.html), an independent industry publication; corroborated by Salus Financial Advisors' own site and SEC IAPD",
+      "bio_confidence": "medium",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [
+    {
+      "entity_name": "COREPATH HOLDINGS LLC",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "reason": "no_schedule_b_match"
+    }
+  ],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "CorePath Wealth Partners (Scottsdale, AZ) is owned by CorePath Holdings LLC, which is itself wholly owned by Bonnett Investment Group LLC \u2014 the Phase 2 ownership flag is resolved: Mark A. Bonnett is confirmed as the sole owner of Bonnett Investment Group LLC and thus the controlling human behind CorePath Holdings LLC.",
+    "source": "Arizona business filing aggregator Bizapedia (bizapedia.com/az/corepath-holdings-llc.html) and BizProfile, independent of the firm's own website",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "2 of 3 people checked"
+}
