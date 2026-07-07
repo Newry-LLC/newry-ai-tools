@@ -1,0 +1,108 @@
+{
+  "basicInformation": {
+    "firmId": 143420,
+    "firmName": "EXETER FINANCIAL, LLC",
+    "otherNames": [
+      "ALKEME FINANCIAL",
+      "EXETER FINANCIAL, LLC",
+      "ALKEME WEALTH, LLC",
+      "ALKEME FINANCIAL SERVICES"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/31/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "67719",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "6575a6ed-2556-4e6c-90d5-d209b9364c27"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "7001 N. SCOTTSDALE ROAD",
+      "street2": "SUITE 1040",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85253-3644"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52128,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "4/1/2026"
+    },
+    {
+      "editionID": 52129,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "4/1/2026"
+    },
+    {
+      "editionID": 52130,
+      "type": "IA_INDVL",
+      "generatedOn": "4/1/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "4/5/2007"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "4/5/2007"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "3/18/2008"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "5/1/2024"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "3/26/2015"
+    },
+    {
+      "jurisdiction": "Virginia",
+      "status": "Notice Filed",
+      "effectiveDate": "5/1/2024"
+    },
+    {
+      "jurisdiction": "Washington",
+      "status": "Notice Filed",
+      "effectiveDate": "8/3/2007"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1038571,
+        "brochureName": "ALKEME WEALTH, LLC ADV PART 2A 03.31.2026",
+        "dateSubmitted": "3/31/2026"
+      }
+    ]
+  }
+}
