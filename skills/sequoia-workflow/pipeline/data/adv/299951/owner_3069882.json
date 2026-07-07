@@ -1,0 +1,207 @@
+{
+  "basicInformation": {
+    "individualId": 3069882,
+    "firstName": "MARK",
+    "middleName": "ALAN",
+    "lastName": "BONNETT",
+    "otherNames": [],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "9/10/1998"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 299951,
+      "firmName": "COREPATH WEALTH PARTNERS LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "2/4/2019",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "114567",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "703740",
+          "street1": "7114 E. STETSON DRIVE",
+          "street2": "SUITE #205",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85251",
+          "latitude": "33.494096",
+          "longitude": "-111.922881",
+          "geoLocation": "33.494096,-111.922881",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "01/28/2019"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "62434",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "39877",
+      "firmId": 22589,
+      "firmName": "CRI SECURITIES, LLC",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "registrationBeginDate": "8/31/1998",
+      "registrationEndDate": "1/23/2019",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "45152",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "31955",
+      "firmId": 15296,
+      "firmName": "SECURIAN FINANCIAL SERVICES, INC.",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "registrationBeginDate": "8/31/1998",
+      "registrationEndDate": "1/23/2019",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "45152",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "31955",
+      "firmId": 15296,
+      "firmName": "SECURIAN FINANCIAL SERVICES, INC.",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "1/20/2011",
+      "registrationEndDate": "1/23/2019",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "62434",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "39877",
+      "firmId": 22589,
+      "firmName": "CRI SECURITIES, LLC",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "1/7/2010",
+      "registrationEndDate": "1/23/2019",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "firmId": 113696,
+      "firmName": "MARATHON ADVISORS, INC",
+      "city": "MINNEAPOLIS",
+      "state": "MN",
+      "country": "United States",
+      "registrationBeginDate": "12/7/1998",
+      "registrationEndDate": "9/10/2008",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "10/13/2010",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Closed-No Action",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "CLIENT ALLEGES PRODUCT IS UNSUITABLE AND NOT WHAT SHE THOUGHT SHE WAS PURCHASING.",
+        "Damage Amount Requested": "$5,250.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "NO EVIDENCE TO SUPPORT ALLEGATIONS.  PROPER NOTIFICATION AND DISCLOSURE PROVIDED REGARDING PRODUCT, ACCUMULATION VALUE, CHARGES AND EXPENSES."
+        ]
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "8/15/1998",
+      "examScope": "BOTH"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "8/29/1998",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "2/4/2019"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "9/12/2024"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
