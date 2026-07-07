@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "WEISS, ERIC, JOSHUA",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "BRIGHTSCAPE, INC. INDIRECT OWNER",
+      "since": "10/1999",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2794607",
+      "raw_id": "2794607"
+    }
+  ]
+}
