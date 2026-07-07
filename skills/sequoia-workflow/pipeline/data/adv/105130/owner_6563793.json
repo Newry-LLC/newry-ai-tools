@@ -1,0 +1,88 @@
+{
+  "basicInformation": {
+    "individualId": 6563793,
+    "firstName": "JUDITH",
+    "middleName": "ANN",
+    "lastName": "MACIAS",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "4/18/2016"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 105130,
+      "firmName": "L. ROY PAPP & ASSOCIATES, LLP",
+      "iaOnly": "Y",
+      "registrationBeginDate": "4/19/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "2201 E. Camelback Road",
+          "street2": "Suite 227B",
+          "city": "Phoenix",
+          "cityAlias": [
+            "PHOENIX"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85016",
+          "latitude": "33.516952",
+          "longitude": "-112.021401",
+          "geoLocation": "33.516952,-112.021401",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "11/23/1992"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 0
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "3/23/2016",
+      "examScope": "IA"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "4/19/2016"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
