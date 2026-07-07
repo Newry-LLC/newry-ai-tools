@@ -1,0 +1,202 @@
+{
+  "basicInformation": {
+    "individualId": 2998865,
+    "firstName": "KYLE",
+    "middleName": "ROBERT",
+    "lastName": "SPAHN",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "5/4/2008"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 285932,
+      "firmName": "SPAHN WEALTH & RETIREMENT LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "12/6/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "4310 North 75th Street",
+          "city": "Scottsdale",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85251",
+          "latitude": "33.494096",
+          "longitude": "-111.922881",
+          "geoLocation": "33.494096,-111.922881",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "08/21/2020"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "130407",
+      "iaSECNumberType": "801",
+      "firmId": 282017,
+      "firmName": "TAURUM RETIREMENT PARTNERS, LLC",
+      "city": "GILBERT",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "1/5/2016",
+      "registrationEndDate": "1/5/2017",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "68279",
+      "iaSECNumberType": "801",
+      "firmId": 113189,
+      "firmName": "GALLACHER CAPITAL MANAGEMENT, LLC",
+      "city": "GILBERT",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "4/17/2015",
+      "registrationEndDate": "12/31/2015",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "13243",
+      "iaSECNumberType": "801",
+      "firmId": 104555,
+      "firmName": "STRATEGIC ADVISERS, INC.",
+      "city": "GILBERT",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "4/10/2008",
+      "registrationEndDate": "3/26/2015",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "3/6/2015",
+      "disclosureType": "Employment Separation After Allegations",
+      "disclosureResolution": "",
+      "isIapdExcludedCCFlag": "N",
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Firm Name": "FIDELITY BROKERAGE SERVICES LLC",
+        "Termination Type": "Discharged",
+        "Allegations": "ALLEGATION THAT EMPLOYEE USED GUIDANCE TOOLS INCONSISTENT WITH THE FIRM'S POLICY AND TOOK CREDIT IN FIRM'S INTERNAL RECORDS FOR INTERACTING WITH CLIENTS WHEN HE WAS NOT IN ORDER TO POSITIVELY IMPACT PERFORMANCE METRICS."
+      }
+    },
+    {
+      "eventDate": "3/6/2015",
+      "disclosureType": "Employment Separation After Allegations",
+      "disclosureResolution": "",
+      "isIapdExcludedCCFlag": "N",
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Firm Name": "FIDELITY BROKERAGE SERVICES LLC",
+        "Termination Type": "Discharged",
+        "Allegations": "ALLEGATION THAT EMPLOYEE USED GUIDANCE TOOLS INCONSISTENT WITH THE FIRM'S POLICY AND TOOK CREDIT IN FIRM'S INTERNAL RECORDS FOR INTERACTING WITH CLIENTS WHEN HE WAS NOT IN ORDER TO POSITIVELY IMPACT PERFORMANCE METRICS."
+      }
+    },
+    {
+      "eventDate": "2/20/1989",
+      "disclosureType": "Criminal",
+      "disclosureResolution": "Final Disposition",
+      "isIapdExcludedCCFlag": "N",
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "criminalCharges": [
+          {
+            "Charges": "1 COUNT - POSSESSION OF MARIJUANA - CLASS 6 FELONY - NO PLEA AS I PARTICIPATED IN A DEFERRED PROSECUTION PROGRAM",
+            "Charge Type": "FELONY",
+            "Disposition": "DISMISSED - 11/05/90"
+          }
+        ],
+        "Broker Comment": [
+          "I WAS SITTING IN MY CAR WITH MY GIRLFRIEND, WHEN WE WERE APPROACHED BY A A POLICE OFFICER. SHE SEARCHED THE CAR AND FOUND MARIJUANA THEREFORE I WAS CHARGED WITH POSSESION ON 2/20/89."
+        ]
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Criminal",
+      "disclosureCount": 1
+    },
+    {
+      "disclosureType": "Termination",
+      "disclosureCount": 2
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "10/5/2007",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "3/2/1998",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "3/26/2015",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "2/10/1998",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "12/6/2016"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
