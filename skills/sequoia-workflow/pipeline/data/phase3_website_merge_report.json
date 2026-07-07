@@ -1,0 +1,119 @@
+{
+  "upgrades_applied": [
+    {
+      "crd": "158641",
+      "name": "David Schoenecker",
+      "title": "Partner & Chief Operating Officer"
+    },
+    {
+      "crd": "158641",
+      "name": "Caley Jared Miller",
+      "title": "Partner and Financial Planner"
+    },
+    {
+      "crd": "158641",
+      "name": "Amy Leigh Shepard",
+      "title": "Partner"
+    },
+    {
+      "crd": "147351",
+      "name": "Richard Alan Siegel",
+      "title": "Managing Partner"
+    },
+    {
+      "crd": "147351",
+      "name": "James Nelson Robinson",
+      "title": "Co-Founder & Partner"
+    },
+    {
+      "crd": "147351",
+      "name": "Gregory Courtland Yocum",
+      "title": "Partner"
+    },
+    {
+      "crd": "147351",
+      "name": "Carl Steven Mariner",
+      "title": "Partner, Director of Strategic Planning"
+    },
+    {
+      "crd": "317615",
+      "name": "Dale Andrew Phillips",
+      "title": "Chief Operating Officer & Partner"
+    },
+    {
+      "crd": "299951",
+      "name": "Jacqueline Marie Battista",
+      "title": "Chief Operating Officer & Partner"
+    },
+    {
+      "crd": "299951",
+      "name": "Mark Alan Bonnett",
+      "title": "Founding Partner"
+    },
+    {
+      "crd": "282003",
+      "name": "Brian Patrick Jack",
+      "title": "Partner and Managing Director"
+    },
+    {
+      "crd": "282003",
+      "name": "Teresa Flores",
+      "title": "Partner and Operations Manager"
+    },
+    {
+      "crd": "173383",
+      "name": "Justin C Thomas",
+      "title": "Managing Partner"
+    },
+    {
+      "crd": "175300",
+      "name": "Curt Randall Thompson",
+      "title": "Managing Partner"
+    },
+    {
+      "crd": "175300",
+      "name": "Donald Edward Callaghan",
+      "title": "Managing Partner"
+    }
+  ],
+  "new_partners_added": [
+    {
+      "crd": "147351",
+      "name": "Jeffrey Shiffra",
+      "title": "Partner / Senior Wealth Advisor"
+    },
+    {
+      "crd": "143420",
+      "name": "Peter Helms",
+      "title": "Managing Partner"
+    },
+    {
+      "crd": "299951",
+      "name": "Rick Schultenover",
+      "title": "CFP, Partner & CCO"
+    },
+    {
+      "crd": "317615",
+      "name": "James Coons",
+      "title": "Senior Director | Tax, Partner"
+    },
+    {
+      "crd": "129415",
+      "name": "Matt Fick",
+      "title": "Investment Advisor Representative / Junior Partner"
+    }
+  ],
+  "firms_changed": [
+    "129415",
+    "143420",
+    "147351",
+    "158641",
+    "173383",
+    "175300",
+    "282003",
+    "299951",
+    "317615"
+  ],
+  "leads_recorded": 2,
+  "flags_recorded": 5
+}
