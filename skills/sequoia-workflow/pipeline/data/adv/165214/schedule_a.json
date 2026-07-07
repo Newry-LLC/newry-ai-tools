@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "PEARL, CARTER, ALLEN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER, MEMBER, CEO",
+      "since": "08/2012",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "1226543",
+      "raw_id": "1226543"
+    },
+    {
+      "full_legal_name": "FLACK, DANIEL, STEVEN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER, MEMBER, CCO",
+      "since": "01/2013",
+      "ownership_code": "A",
+      "ownership_pct": "5-10%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "4699388",
+      "raw_id": "4699388"
+    }
+  ]
+}
