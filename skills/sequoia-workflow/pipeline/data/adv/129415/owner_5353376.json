@@ -1,0 +1,260 @@
+{
+  "basicInformation": {
+    "individualId": 5353376,
+    "firstName": "GINA",
+    "middleName": "GIACHETTI",
+    "lastName": "WIGHT",
+    "otherNames": [
+      "GINA MARIE GIACHETTI",
+      "GINA G WIGHT"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "8/24/2007"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 129415,
+      "firmName": "FINANCIAL LIFE PLANNERS",
+      "iaOnly": "Y",
+      "registrationBeginDate": "4/1/2020",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "127888",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "53377",
+          "street1": "2151 E BROADWAY",
+          "street2": "SUITE 203",
+          "city": "TEMPE",
+          "cityAlias": [
+            "TEMPE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85282",
+          "latitude": "33.393896",
+          "longitude": "-111.929062",
+          "geoLocation": "33.393896,-111.929062",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "01/01/2025"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "70103",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "68191",
+      "firmId": 149777,
+      "firmName": "MORGAN STANLEY",
+      "city": "PEORIA",
+      "state": "AZ",
+      "registrationBeginDate": "10/27/2016",
+      "registrationEndDate": "4/2/2020",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "16720",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "27030",
+      "firmId": 866,
+      "firmName": "WADDELL & REED",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "10/1/2012",
+      "registrationEndDate": "11/3/2016",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "13891",
+      "firmId": 305,
+      "firmName": "FIRST INVESTORS CORPORATION",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "registrationBeginDate": "8/23/2007",
+      "registrationEndDate": "9/28/2012",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "70103",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "68191",
+      "firmId": 149777,
+      "firmName": "MORGAN STANLEY",
+      "city": "PEORIA",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "10/28/2016",
+      "registrationEndDate": "4/2/2020",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "16720",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "27030",
+      "firmId": 866,
+      "firmName": "WADDELL & REED",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "10/9/2012",
+      "registrationEndDate": "11/3/2016",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "1/13/2010",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "AMONG OTHER THINGS, THE CLIENT ALLEGED THAT I RECOMMENDED THAT SHE MOVE HER MONEY FROM AN INVESTMENT SHE HAD WITH ANOTHER FIRM TO FIC FUNDS AND THAT SHE FEELS THAT IN DOING SO, I MISLED HER ABOUT THE CHARGES ASSOCIATED WITH HER PREVIOUS INVESTMENT.  THE ALLEGED ACTIVITY OCCURRED IN OCTOBER 2009.",
+        "Damage Amount Requested": "$5,842.29",
+        "Settlement Amount": "$5,842.29",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "AFTER INVESTIGATING THE ALLEGATIONS CONTAINED IN THE COMPLAINT, FIC DECIDED TO SETTLE THE COMPLAINT IN THE AMOUNT OF $5,842.29, WHICH REPRESENTS THE SALES CHARGES THE CLIENT PAID ON THE TRANSACTION AT ISSUE."
+        ]
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 4,
+    "productExamCount": 4
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "10/19/2012",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "6/15/2007",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "12/22/2022",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 10",
+      "examName": "General Securities Sales Supervisor - General Module Examination",
+      "examTakenDate": "12/22/2022",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 9",
+      "examName": "General Securities Sales Supervisor - Options Module Examination",
+      "examTakenDate": "12/22/2022",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 26",
+      "examName": "Investment Company Products/Variable Contracts Principal Examination",
+      "examTakenDate": "12/22/2022",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 7TO",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "12/22/2022",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "6/11/2012",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "8/22/2007",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 3
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "4/1/2020"
+    },
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/25/2022"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "7/15/2022"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
