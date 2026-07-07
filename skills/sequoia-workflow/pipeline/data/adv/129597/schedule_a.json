@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "BRIGHTSCAPE, INC.",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "PARENT COMPANY",
+      "since": "11/1999",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "Wray, Amanda, Marie",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "PRESIDENT AND CHIEF COMPLIANCE OFFICER",
+      "since": "03/2026",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "6957678",
+      "raw_id": "6957678"
+    }
+  ]
+}
