@@ -1,0 +1,121 @@
+{
+  "basicInformation": {
+    "individualId": 6336807,
+    "firstName": "NICHOLAS",
+    "middleName": "GUIDO",
+    "lastName": "BOTTICELLI",
+    "otherNames": [
+      "NICHOLAS GULDO BOTTICELLI"
+    ],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "9/2/2017"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 175300,
+      "firmName": "GLOBAL STRATEGIC NEXTGEN OCIO",
+      "iaOnly": "Y",
+      "registrationBeginDate": "10/23/2020",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "Y",
+          "city": "Jupiter",
+          "state": "FL",
+          "country": "United States",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "05/01/2021"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "32688",
+      "iaSECNumberType": "801",
+      "firmId": 105403,
+      "firmName": "HIRTLE, CALLAGHAN & CO., LLC",
+      "city": "WEST CONSHOHOCKEN",
+      "state": "PA",
+      "country": "United States",
+      "registrationBeginDate": "5/19/2014",
+      "registrationEndDate": "7/7/2017",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "3/26/2025",
+      "disclosureType": "Civil",
+      "disclosureResolution": "Pending",
+      "isIapdExcludedCCFlag": "N",
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Initiated By": "AVERETT UNIVERSITY OF DANVILLE, VIRGINIA",
+        "Allegations": "Inclusion in complaint alongside all firm employees: Breach of Fiduciary Duty, Breach of Contract, Negligence, Va. Code \u00a7\u00a7 18.2-499, 500 and \u00a7 13.1-522(B) & (C), Exchange Act Section 10(b) and Rule 10b-5.",
+        "SanctionDetails": []
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Civil Event",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 1
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "10/23/2020",
+      "examScope": "IA"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 3",
+      "examName": "National Commodity Futures Examination",
+      "examTakenDate": "12/23/2014",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Florida",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/5/2021"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
