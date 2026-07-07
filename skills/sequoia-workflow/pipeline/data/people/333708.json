@@ -1,0 +1,36 @@
+{
+  "crd": "333708",
+  "name": "Prosper Private Wealth",
+  "people": [
+    {
+      "raw_name": "GARDNER, JOSHUA, ADAM",
+      "name": "Joshua Adam Gardner",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CEO & CCO",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "08/2024",
+      "crd": "4495410",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Financial advisor with prior roles at Summit Global Investments and Fidelity (Fidelity Brokerage Services LLC and Fidelity Personal and Workplace Advisors). Holds Series 63 and 65 licenses; registered to provide services in Arizona and Texas.",
+      "bio_source": "Named independent source: SmartAdvisorMatch advisor profile (smartadvisormatch.com/advisor-network/arizona/joshua-gardner-4495410), corroborated by GetWarmer advisor directory and firm site. Flag: SmartAdvisorMatch's detailed timeline shows Fidelity 2013-2023 (~10 years) and Summit Global Investments 2023-present, totaling roughly 10-13 years of tracked tenure \u2014 shorter than a '24 years of experience' figure previously carried in this bio, which has been removed as unconfirmed/possibly inflated rather than silently repeated.",
+      "bio_confidence": "medium",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Prosper Private Wealth is a small, Mesa, AZ-based RIA providing discretionary investment management, financial planning, and retirement-plan consulting; led by CEO Joshua Gardner.",
+    "source": "Web search (U.S. News Financial Advisors firm profile)",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "1 of 1 people checked"
+}
