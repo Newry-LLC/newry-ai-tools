@@ -1,0 +1,126 @@
+{
+  "basicInformation": {
+    "individualId": 1261512,
+    "firstName": "CORNELIUS",
+    "middleName": "HENRY",
+    "lastName": "VAN ZUTPHEN",
+    "nameSuffix": "JR",
+    "otherNames": [
+      "NEAL  VAN ZUTPHEN",
+      "CORNELIUS HENRY VANZUTPHEN JR"
+    ],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "5/23/1999"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 105022,
+      "firmName": "INTRINSIC WEALTH COUNSEL, INC.",
+      "iaOnly": "Y",
+      "registrationBeginDate": "5/24/1999",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "1255 W. RIO SALADO PKWY",
+          "street2": "SUITE 115",
+          "city": "TEMPE",
+          "cityAlias": [
+            "TEMPE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85281",
+          "latitude": "33.422211",
+          "longitude": "-111.943868",
+          "geoLocation": "33.422211,-111.943868",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "05/01/1999"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "21151",
+      "iaSECNumberType": "801",
+      "firmId": 105022,
+      "firmName": "DELTA VENTURES FINANCIAL COUNSEL, INC.",
+      "city": "MESA",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "5/24/1999",
+      "registrationEndDate": "12/31/2004",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 1
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "9/29/1995",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "5/17/1984",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "4/14/1984",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/24/1999"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "3/28/2012"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
