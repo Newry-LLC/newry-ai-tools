@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "DeGreen, Sam, Howard",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF EXECUTIVE OFFICER & CHIEF COMPLIANCE OFFICER",
+      "since": "06/2024",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "6932311",
+      "raw_id": "6932311"
+    }
+  ]
+}
