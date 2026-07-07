@@ -1,0 +1,274 @@
+{
+  "basicInformation": {
+    "individualId": 4187917,
+    "firstName": "WILLIAM",
+    "middleName": "CHAD",
+    "lastName": "MITTON",
+    "otherNames": [
+      "Chad  Mitton"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "7/14/2000"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 333585,
+      "firmName": "UNIVERSAL WEALTH MANAGEMENT LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "11/26/2024",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "853289",
+          "street1": "15331 W BELL ROAD",
+          "street2": "STE 318",
+          "city": "SURPRISE",
+          "cityAlias": [
+            "SUN CITY",
+            "SURPRISE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85374",
+          "latitude": "33.65133",
+          "longitude": "-112.376444",
+          "geoLocation": "33.65133,-112.376444",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "09/16/2024"
+        }
+      ]
+    },
+    {
+      "firmId": 291070,
+      "firmName": "TRITON WEALTH MANAGEMENT, PLLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "11/28/2018",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "114305",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "13211 N 103RD AVE",
+          "street2": "Ste. 4",
+          "city": "Sun City",
+          "cityAlias": [
+            "SUN CITY"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85351",
+          "latitude": "33.601982",
+          "longitude": "-112.286274",
+          "geoLocation": "33.601982,-112.286274",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "11/19/2018"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "69290",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "48385",
+      "firmId": 38751,
+      "firmName": "LEIGH BALDWIN & CO., LLC",
+      "city": "Sun City",
+      "state": "AZ",
+      "registrationBeginDate": "8/22/2019",
+      "registrationEndDate": "12/11/2024",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "46844",
+      "firmId": 35747,
+      "firmName": "PURSHE KAPLAN STERLING INVESTMENTS",
+      "city": "Sun City",
+      "state": "AZ",
+      "registrationBeginDate": "10/14/2016",
+      "registrationEndDate": "9/5/2019",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "17983",
+      "firmId": 6694,
+      "firmName": "RAYMOND JAMES FINANCIAL SERVICES, INC.",
+      "city": "SUN CITY",
+      "state": "AZ",
+      "registrationBeginDate": "5/22/2009",
+      "registrationEndDate": "10/10/2016",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "3297",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "759",
+      "firmId": 250,
+      "firmName": "EDWARD JONES",
+      "city": "SUN CITY",
+      "state": "AZ",
+      "registrationBeginDate": "7/11/2000",
+      "registrationEndDate": "5/26/2009",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "79198",
+      "iaSECNumberType": "801",
+      "firmId": 148107,
+      "firmName": "KINGSVIEW ASSET MANAGEMENT, LLC",
+      "city": "Sun City",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "1/23/2018",
+      "registrationEndDate": "1/31/2019",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "69815",
+      "iaSECNumberType": "801",
+      "firmId": 149018,
+      "firmName": "RAYMOND JAMES FINANCIAL SERVICES ADVISORS, INC",
+      "city": "SUN CITY",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "9/19/2013",
+      "registrationEndDate": "10/10/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "10/14/2008",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Denied",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "4/08-9/08; THE ATTORNEY FOR THE TRUSTEE INDICATES THE FA GAVE THE TRUSTEE LEGAL ADVICE ON WHAT SHE WAS ALLOWED TO TAKE OUT OF THE TRUST.  HE ALSO STATES THE FA ADVISED THE CLIENT TO PURCHASE LONG TERM BONDS AFTER HE INFORMED THE TRUSTEE TO LIQUIDATE THE ACCOUNT AND NOT GAMBLE ON SHORT TERM MARKET CONDITIONS.  HE INDICATES THE FA TOLD THE TRUSTEE SHE COULD STRING OUT THE ESTATE SO SHE COULD MAKE MORE MONEY.  HE STATES THE FA GENERATED ABOUT $12000 IN COMMISSION ON THE NEW ASSETS. THE ASSETS HAVE SINCE BEEN LIQUIDATED AND ACCORDING TO THE ATTORNEY RESULTED IN LOSSES OF $47400.  HE WANTS THE TRUST TO BE REIMBURSED FOR THIS AMOUNT.",
+        "Damage Amount Requested": "$5,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "THE FA STATES THE TRUSTEE DID NOT LIKE THE RATE OF RETURN OF CASH OR CDS; SHE LIKED THE POTENTIAL TO EARN A HIGHER YIELD WITH FREDDIE MAC, FANNIE MAE AND TAX FREE MUNICIPAL BONDS.  THE FA INDICATES HE REVIEWED WITH THE TRUSTEE THE COST OF THE TRADES, THE MATURITIES AND POTENTIAL YIELDS.  HE ALSO STATES HE WAS NOT INFORMED THE FUNDS WOULD BE NEEDED IN A SHORT TIMEFRAME; HE WAS INFORMED THE SETTLING OF THE ESTATE COULD TAKE LONGER BECAUSE THE DECEDENT'S SISTER'S ESTATE WAS NOT SETTLED AND WOULD BE A PART OF THE TRUST.  THE FA STATES HE DID NOT PROVIDE LEGAL ADVICE TO THE TRUSTEE.  HE STATES WHEN ASKED IF IT WAS TYPICAL FOR THE TRUSTEE TO RECEIVE COMPENSATION HE ANSWERED IT DEPENDS ON THE TRUST, BUT IT WAS NOT UNUSUAL.  WHEN HE HAD A LEGAL QUESTION, HE CONTACTED THE ATTORNEY'S OFFICE.  THE TRUSTEE PROVIDED INSTRUCTIONS ON ANY DISTRIBUTIONS AND APPROVALS FOR THE TRADES.  THE RECOMMENDATIONS WERE MADE BASED OFF THE TRUSTEE'S REQUEST FOR A HIGHER YIELDING INVESTMENT.  THE REQUEST TO REIMBURSE THE TRUST FOR ANY LOSSES ON THE INVESTMENTS IS RESPECTFULLY DENIED."
+        ]
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "12/29/2017",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "7/12/2000",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "7/10/2000",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 5
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "12/3/2018"
+    },
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "4/30/2025"
+    },
+    {
+      "state": "Minnesota",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "11/28/2018"
+    },
+    {
+      "state": "New York",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "4/14/2026"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "11/28/2018"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
