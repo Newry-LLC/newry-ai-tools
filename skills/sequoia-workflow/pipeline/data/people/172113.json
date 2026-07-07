@@ -1,0 +1,37 @@
+{
+  "crd": "172113",
+  "name": "Sierra Legacy Group",
+  "people": [
+    {
+      "raw_name": "GRENERT, GEOFFREY, ALLEN",
+      "name": "Geoffrey Allen Grenert",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER AND MANAGING MEMBER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "06/2014",
+      "crd": "2862874",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Geoff Grenert founded and leads Sierra Legacy Group (Managing Member/CCO) and has run the firm since 2014, with 28+ years in financial services dating to 1997. Before finance, he was a competitive athlete: pitched at Coronado High School in Scottsdale, AZ, drafted by the Houston Astros in 1989 (27th round) and again in 1990 out of Mesa Community College, then played college ball at the University of Nevada, Reno, where he was drafted by the Chicago White Sox (1992) and California Angels (1993) before a stint in independent/minor league baseball. That athlete-to-advisor path led to a notable niche: he was profiled in WealthManagement.com's feature on former MLB players turned financial advisors, and he currently serves as a Trustee of the MLB Players Trust, giving him a genuine, differentiated network among current and former professional athletes. He is a CFP and holds a California insurance license; industry bios describe him as a 'nationally-recognized expert' in designing and acquiring large life insurance policies, styling himself an 'Architect of Generational Wealth Planning.' He operates through M Holdings Securities, Inc. / Cypress Strategies, an M Financial Group member firm, and lives in the Reno/Tahoe area with his wife Jennifer (also affiliated with the firm) and their four children, active as a Little League coach and golfer.",
+      "bio_source": "ZoomInfo: no record found for Geoffrey Grenert at Sierra Legacy Group specifically (only namesake collisions at unrelated companies, not used). Firm website: sierralegacygroup.com/geoff-grenert confirms title, redirects interchangeably with cypressnv.com/geoff-grenert (same firm, confirmed via 301 redirect, not a rebrand). Web search (primary source): cypressnv.com bio page provided career-length and specialization detail; WealthManagement.com's 'Eleven MLB Players Turned Financial Advisors' article and MLB Players Trust's trustee-appointment announcement corroborated baseball background and board appointment; Baseball-Reference.com and MLB draft records corroborated draft history, teams, and college. No disciplinary/regulatory items reviewed or included.",
+      "bio_confidence": "high",
+      "phase4_note": "Phase 4 verification (2026-07-03): baseball draft history (Astros/White Sox/Angels) and MLB Players Trust trustee role independently confirmed via Baseball-Reference.com and MLB Players Trust's own announcement. The specific WealthManagement.com 'Eleven MLB Players Turned Financial Advisors' citation could not be confirmed to actually name him despite repeated attempts -- treat that one sub-claim as unconfirmed; everything else in the bio holds up. Verdict: PARTIAL.",
+      "phase4_status": "verified_with_caveat",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Sierra Legacy Group is a boutique wealth planning firm serving affluent families and family-owned/controlled companies nationwide, focused on legacy, succession, and large life-insurance planning. The firm operates under the M Financial Group network (as Cypress Strategies / M Holdings Securities, Inc., a FINRA/SIPC-member broker-dealer and RIA), giving it access to specialized underwriting and estate-planning resources typically reserved for larger institutional platforms. Its approach centers on thorough discovery, collaborative and flexible solutions, and sustained implementation support, with a stated emphasis on educating clients and dispelling life insurance industry myths. No independent press coverage, industry rankings, or 'best places to work' recognition for the firm itself was found in web search.",
+    "source": "Firm website (sierralegacygroup.com, confirmed as the firm's live site) plus its M Financial member-firm page and cypressnv.com (both represent the same entity); web search for independent firm awards/press came up empty.",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "1 of 1 people checked"
+}
