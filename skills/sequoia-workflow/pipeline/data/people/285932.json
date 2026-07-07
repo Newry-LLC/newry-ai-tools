@@ -1,0 +1,36 @@
+{
+  "crd": "285932",
+  "name": "Spahn Wealth & Retirement LLC",
+  "people": [
+    {
+      "raw_name": "SPAHN, KYLE, ROBERT",
+      "name": "Kyle Robert Spahn",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING MEMBER, CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "10/2016",
+      "crd": "2998865",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Founder and sole Managing Member of Spahn Wealth & Retirement; roughly 18-20 years as a financial planner. Holds the CFP designation and a degree from Arizona State University. Built the firm around long-term client relationships and retirement planning, with an investment approach grounded in Modern Portfolio Theory with tactical adjustments.",
+      "bio_source": "spahnwealth.com (firm's own website / LinkedIn-sourced bio states his 18-20 years as a financial planner and Arizona State University degree). Phase 4 verification (2026-07-03): the previously-cited independent source does not actually contain this detail when checked directly -- corrected to credit the firm's own website, which under current sourcing policy is treated as sufficient on its own. (the cited SmartAdvisorMatch firm-level listing page contains only his name and location, not these details.)",
+      "bio_confidence": "medium",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Small, single-owner Scottsdale RIA. Boutique retirement-planning shop built around Kyle Spahn personally.",
+    "source": "smartadvisormatch.com/advisor-firm-network/arizona/spahn-wealth-retirement-llc-285932",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "1 of 1 people checked"
+}
