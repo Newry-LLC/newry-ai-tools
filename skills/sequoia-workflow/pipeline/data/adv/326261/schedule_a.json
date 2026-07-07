@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "WHITE, TRENT, ROBERT",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER & CHIEF COMPLIANCE OFFICER",
+      "since": "06/2023",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5592137",
+      "raw_id": "5592137"
+    }
+  ]
+}
