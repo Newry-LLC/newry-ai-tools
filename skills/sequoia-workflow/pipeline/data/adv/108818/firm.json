@@ -1,0 +1,342 @@
+{
+  "basicInformation": {
+    "firmId": 108818,
+    "firmName": "TOTAL INVESTMENT MANAGEMENT, INC.",
+    "otherNames": [
+      "HFG ASSET ALLOCATION SERVICE",
+      "TOTAL INVESTMENT MANAGEMENT, INC.",
+      "TOTAL INVESTMENT MANAGEMENT INC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/16/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "69759",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "397f9abd-edc7-4df2-8f59-11ad97c4f422"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "9383 EAST BAHIA DRIVE",
+      "street2": "SUITE 120",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85260"
+    }
+  },
+  "accountantSurpriseExams": [
+    {
+      "accountantFirmName": "ARMANINO LLP",
+      "filingDate": "03/30/2026",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "04D76154000801EE00DEC74200406BA1056C8CC0"
+    },
+    {
+      "accountantFirmName": "ARMANINO LLP",
+      "filingDate": "05/29/2025",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "03420F2E000801E0038248F105676E6D056C8CC0"
+    },
+    {
+      "accountantFirmName": "ARMANINO LLP",
+      "filingDate": "08/12/2024",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "042231B2000801DF022B1D610554BDA9056C8CC0"
+    },
+    {
+      "accountantFirmName": "ARMANINO LLP",
+      "filingDate": "04/27/2023",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "04CA6F9E000801D103E7736104838FA9056C8CC0"
+    }
+  ],
+  "compilationData": [
+    {
+      "editionID": 52122,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "3/31/2026"
+    },
+    {
+      "editionID": 52123,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "3/31/2026"
+    },
+    {
+      "editionID": 52124,
+      "type": "IA_INDVL",
+      "generatedOn": "3/31/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "12/8/2008"
+    },
+    {
+      "secJurisdiction": "California",
+      "status": "Terminated",
+      "effectiveDate": "12/9/2008"
+    },
+    {
+      "secJurisdiction": "Colorado",
+      "status": "Terminated",
+      "effectiveDate": "12/23/2008"
+    },
+    {
+      "secJurisdiction": "Illinois",
+      "status": "Terminated",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "secJurisdiction": "Nevada",
+      "status": "Terminated",
+      "effectiveDate": "12/16/2008"
+    },
+    {
+      "secJurisdiction": "Ohio",
+      "status": "Terminated",
+      "effectiveDate": "12/8/2008"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Terminated",
+      "effectiveDate": "12/8/2008"
+    },
+    {
+      "secJurisdiction": "Virginia",
+      "status": "Terminated",
+      "effectiveDate": "12/8/2008"
+    },
+    {
+      "secJurisdiction": "Washington",
+      "status": "Terminated",
+      "effectiveDate": "12/8/2008"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Alabama",
+      "status": "Notice Filed",
+      "effectiveDate": "3/22/2016"
+    },
+    {
+      "jurisdiction": "Alaska",
+      "status": "Notice Filed",
+      "effectiveDate": "12/20/2012"
+    },
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Arkansas",
+      "status": "Notice Filed",
+      "effectiveDate": "3/26/2019"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "5/12/2000"
+    },
+    {
+      "jurisdiction": "Colorado",
+      "status": "Notice Filed",
+      "effectiveDate": "3/22/2012"
+    },
+    {
+      "jurisdiction": "Connecticut",
+      "status": "Notice Filed",
+      "effectiveDate": "3/26/2019"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Georgia",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Hawaii",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Idaho",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Illinois",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Indiana",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Kansas",
+      "status": "Notice Filed",
+      "effectiveDate": "12/20/2012"
+    },
+    {
+      "jurisdiction": "Louisiana",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Maryland",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Massachusetts",
+      "status": "Notice Filed",
+      "effectiveDate": "3/26/2019"
+    },
+    {
+      "jurisdiction": "Michigan",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Minnesota",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Mississippi",
+      "status": "Notice Filed",
+      "effectiveDate": "10/24/2023"
+    },
+    {
+      "jurisdiction": "Missouri",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Nebraska",
+      "status": "Notice Filed",
+      "effectiveDate": "3/20/2020"
+    },
+    {
+      "jurisdiction": "Nevada",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "New Hampshire",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "New Jersey",
+      "status": "Notice Filed",
+      "effectiveDate": "12/12/2008"
+    },
+    {
+      "jurisdiction": "New Mexico",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "North Carolina",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Ohio",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Oklahoma",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Oregon",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Pennsylvania",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Rhode Island",
+      "status": "Notice Filed",
+      "effectiveDate": "3/26/2019"
+    },
+    {
+      "jurisdiction": "South Carolina",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Tennessee",
+      "status": "Notice Filed",
+      "effectiveDate": "12/20/2012"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Utah",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Virginia",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Washington",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    },
+    {
+      "jurisdiction": "Wisconsin",
+      "status": "Notice Filed",
+      "effectiveDate": "12/5/2008"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1019516,
+        "brochureName": "FIRM BROCHURE",
+        "dateSubmitted": "3/16/2026"
+      }
+    ]
+  }
+}
