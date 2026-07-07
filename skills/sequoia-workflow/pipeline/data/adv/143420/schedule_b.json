@@ -1,0 +1,70 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "ALKEME ACQUISITION, LLC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "ALKEME INTERMEDIARY HOLDINGS, LLC SOLE MEMBER",
+      "since": "10/2020",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "ALKEME HOLDINGS, LLC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "ALKEME ACQUISITION, LLC SOLE MEMBER",
+      "since": "10/2020",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "GUTIN, BORIS, MICHAEL",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "ALKEME HOLDINGS, LLC PRESIDENT",
+      "since": "09/2020",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2782985",
+      "raw_id": "2782985"
+    },
+    {
+      "full_legal_name": "Barton, Curtis",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "ALKEME INTERMEDIARY HOLDINGS, LLC CEO",
+      "since": "09/2020",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "7326520",
+      "raw_id": "7326520"
+    },
+    {
+      "full_legal_name": "Rosandic, Anton",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "ALKEME INTERMEDIARY HOLDINGS, LLC PRESIDENT",
+      "since": "09/2020",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "7326513",
+      "raw_id": "7326513"
+    }
+  ]
+}
