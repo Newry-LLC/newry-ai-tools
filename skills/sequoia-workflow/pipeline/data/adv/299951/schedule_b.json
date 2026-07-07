@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "BONNETT INVESTMENT GROUP LLC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "COREPATH HOLDINGS LLC MANAGING MEMBER",
+      "since": "12/2018",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "BONNETT, MARK, ALAN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "BONNETT INVESTMENT GROUP LLC MANAGING MEMBER",
+      "since": "06/2004",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "3069882",
+      "raw_id": "3069882"
+    }
+  ]
+}
