@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "HARRISON, STEPHEN, LEON",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER, PRESIDENT",
+      "since": "03/2007",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2236475",
+      "raw_id": "2236475"
+    },
+    {
+      "full_legal_name": "ALKEME INTERMEDIARY HOLDINGS, LLC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER",
+      "since": "10/2020",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    }
+  ]
+}
