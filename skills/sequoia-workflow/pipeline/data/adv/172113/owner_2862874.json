@@ -1,0 +1,318 @@
+{
+  "basicInformation": {
+    "individualId": 2862874,
+    "firstName": "GEOFFREY",
+    "middleName": "ALLEN",
+    "lastName": "GRENERT",
+    "otherNames": [],
+    "bcScope": "Active",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "12/22/1997"
+  },
+  "currentEmployments": [
+    {
+      "firmId": 43285,
+      "firmName": "M HOLDINGS SECURITIES, INC.",
+      "iaOnly": "N",
+      "registrationBeginDate": "1/19/2006",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "57304",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "50214",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "212735",
+          "street1": "9190 Double Diamond Parkway",
+          "city": "Reno",
+          "cityAlias": [
+            "RENO",
+            "V C HIGHLANDS",
+            "VC HIGHLANDS"
+          ],
+          "state": "NV",
+          "country": "United States",
+          "zipCode": "89521",
+          "latitude": "39.385645",
+          "longitude": "-119.686873",
+          "geoLocation": "39.385645,-119.686873",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "01/20/2006"
+        },
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "686790",
+          "street1": "6424 E Greenway Parkway",
+          "street2": "SUITE 100",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85254",
+          "latitude": "33.619195",
+          "longitude": "-111.951657",
+          "geoLocation": "33.619195,-111.951657",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "03/22/2018"
+        }
+      ]
+    }
+  ],
+  "currentIAEmployments": [
+    {
+      "firmId": 172113,
+      "firmName": "SIERRA LEGACY GROUP",
+      "iaOnly": "Y",
+      "registrationBeginDate": "9/5/2014",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "122455",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "564234",
+          "street1": "6424 E. GREENWAY PARKWAY",
+          "street2": "SUITE 100",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85254",
+          "latitude": "33.619195",
+          "longitude": "-111.951657",
+          "geoLocation": "33.619195,-111.951657",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "11/01/2019"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "15517",
+      "firmId": 5167,
+      "firmName": "NYLIFE SECURITIES INC.",
+      "city": "NEW YORK",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "12/23/1997",
+      "registrationEndDate": "1/19/2006",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "57304",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "50214",
+      "firmId": 43285,
+      "firmName": "M HOLDINGS SECURITIES, INC.",
+      "city": "RENO",
+      "state": "NV",
+      "country": "United States",
+      "registrationBeginDate": "4/7/2022",
+      "registrationEndDate": "7/14/2025",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "57304",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "50214",
+      "firmId": 43285,
+      "firmName": "M HOLDINGS SECURITIES, INC.",
+      "city": "RENO",
+      "state": "NV",
+      "country": "United States",
+      "registrationBeginDate": "1/19/2006",
+      "registrationEndDate": "9/5/2014",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "32987",
+      "iaSECNumberType": "801",
+      "firmId": 110826,
+      "firmName": "EAGLE STRATEGIES CORP",
+      "city": "RENO",
+      "state": "NV",
+      "country": "United States",
+      "registrationBeginDate": "6/28/2002",
+      "registrationEndDate": "1/17/2006",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "6/11/2002",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "11/17/1997",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "12/19/1997",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 1,
+    "approvedFinraRegistrationCount": 1,
+    "approvedStateRegistrationCount": 12,
+    "approvedIAStateRegistrationCount": 3
+  },
+  "registeredStates": [
+    {
+      "state": "Alaska",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "3/28/2019"
+    },
+    {
+      "state": "Arizona",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/2/2021"
+    },
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "8/2/2021"
+    },
+    {
+      "state": "California",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/19/2006"
+    },
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/5/2020"
+    },
+    {
+      "state": "Florida",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/6/2026"
+    },
+    {
+      "state": "Hawaii",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/10/2010"
+    },
+    {
+      "state": "Illinois",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2026"
+    },
+    {
+      "state": "Minnesota",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "11/19/2007"
+    },
+    {
+      "state": "Nevada",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/19/2006"
+    },
+    {
+      "state": "Nevada",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "9/5/2014"
+    },
+    {
+      "state": "New Mexico",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/21/2011"
+    },
+    {
+      "state": "New York",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "11/20/2007"
+    },
+    {
+      "state": "South Dakota",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "12/11/2020"
+    },
+    {
+      "state": "Texas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "11/14/2007"
+    }
+  ],
+  "registeredSROs": [
+    {
+      "sro": "FINRA",
+      "status": "APPROVED",
+      "CategoriesList": [
+        "Investment Company and Variable Contracts Products Rep."
+      ]
+    }
+  ],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
