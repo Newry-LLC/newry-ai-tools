@@ -1,0 +1,333 @@
+{
+  "basicInformation": {
+    "individualId": 2706452,
+    "firstName": "JEREMY",
+    "middleName": "PAUL",
+    "lastName": "DICKER",
+    "otherNames": [
+      "Jeremy  Dicker"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "8/19/1998"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 331395,
+      "firmName": "ONE WEALTH CAPITAL MANAGEMENT, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "5/22/2024",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "130300",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "834629",
+          "street1": "4900 NORTH SCOTTSDALE ROAD",
+          "street2": "SUITE 4900",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85251",
+          "latitude": "33.494096",
+          "longitude": "-111.922881",
+          "geoLocation": "33.494096,-111.922881",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "04/01/2024"
+        },
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "222 N Pacific Coast Highway",
+          "street2": "10th Floor",
+          "city": "El Segundo",
+          "cityAlias": [
+            "EL SEGUNDO"
+          ],
+          "state": "CA",
+          "country": "United States",
+          "zipCode": "90245",
+          "latitude": "33.916064",
+          "longitude": "-118.404075",
+          "geoLocation": "33.916064,-118.404075",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "04/01/2024"
+        },
+        {
+          "displayOrder": 3,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "1345 Park Street",
+          "city": "Paso Robles",
+          "cityAlias": [
+            "ADELAIDE",
+            "HERITAGE RANCH",
+            "HERITAGE RNCH",
+            "LAKE NACIMIENTO",
+            "NACIMIENTO LAKE",
+            "PASO ROBLES"
+          ],
+          "state": "CA",
+          "country": "United States",
+          "zipCode": "93446",
+          "latitude": "35.650598",
+          "longitude": "-120.744443",
+          "geoLocation": "35.650598,-120.744443",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "04/01/2024"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "58108",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "51324",
+      "firmId": 46173,
+      "firmName": "PARK AVENUE SECURITIES LLC",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "registrationBeginDate": "12/4/2018",
+      "registrationEndDate": "6/30/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "44264",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "27250",
+      "firmId": 10409,
+      "firmName": "MML INVESTORS SERVICES, LLC",
+      "city": "SANTA MONICA",
+      "state": "CA",
+      "registrationBeginDate": "11/30/2012",
+      "registrationEndDate": "11/30/2018",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "8095",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "14088",
+      "firmId": 2881,
+      "firmName": "NORTHWESTERN MUTUAL INVESTMENT SERVICES, LLC",
+      "city": "LOS ANGELES",
+      "state": "CA",
+      "registrationBeginDate": "8/7/1998",
+      "registrationEndDate": "12/14/2012",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "7571",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "497",
+      "firmId": 8158,
+      "firmName": "ROBERT W. BAIRD & CO. INCORPORATED",
+      "city": "MILWAUKEE",
+      "state": "WI",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "8/7/1998",
+      "registrationEndDate": "1/1/2002",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "125814",
+      "iaSECNumberType": "801",
+      "firmId": 288030,
+      "firmName": "ONE WEALTH MANAGEMENT",
+      "city": "Phoenix",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "7/12/2023",
+      "registrationEndDate": "7/30/2024",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "58108",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "51324",
+      "firmId": 46173,
+      "firmName": "PARK AVENUE SECURITIES LLC",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "12/3/2018",
+      "registrationEndDate": "6/30/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "44264",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "27250",
+      "firmId": 10409,
+      "firmName": "MML INVESTORS SERVICES, LLC",
+      "city": "SANTA MONICA",
+      "state": "CA",
+      "country": "United States",
+      "registrationBeginDate": "12/6/2012",
+      "registrationEndDate": "11/30/2018",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "8095",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "14088",
+      "firmId": 2881,
+      "firmName": "NORTHWESTERN MUTUAL INVESTMENT SERVICES,LLC",
+      "city": "LOS ANGELES",
+      "state": "CA",
+      "country": "United States",
+      "registrationBeginDate": "10/18/2007",
+      "registrationEndDate": "12/14/2012",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "1/27/2023",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Client alleges the RR sold all of the equities in her advisory portfolio which created a long term capital gains tax liability.",
+        "Damage Amount Requested": "$200,000.00",
+        "Settlement Amount": "$6,617.46",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "The Firm made the decision to settle this complaint with the client, without admitting fault or liability as to the client's allegations, and refund the fees charged to the client's accounts. RR Dicker did not contribute to this settlement and likewise does not admit fault or liability as it relates to the client's allegations."
+        ]
+      }
+    },
+    {
+      "eventDate": "11/30/2012",
+      "disclosureType": "Employment Separation After Allegations",
+      "disclosureResolution": "",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Firm Name": "NMIS, LLC",
+        "Termination Type": "Voluntary Resignation",
+        "Allegations": "REPRESENTATIVE RESIGNED WHILE UNDER AN INTERNAL REVIEW CONCERNING HIS NON VARIABLE INSURANCE SALES PRACTICES.",
+        "Broker Comment": [
+          "MY RESIGNATION HAD NOTHING TO DO WITH ALLEGATIONS. I HAD PLANNED THIS FAR BEFORE THIS CLIENT ISSUE. WITH REGARD TO THE CLIENT ISSUE, HE WAS A JOINT CLIENT THAT I WAS ASSIGNED SERVICE AFTER A NUMBER OF YEARS OF NO CONTACT OR LIMITED CONTACT. HE WAS BEING SERVICED BY ANOTHER REP AND WAS THEN TRANSFERRED TO ME. HE CALLED IN REPEATEDLY AND WANTED TO BUY INSURANCE ON HIS CHILDREN, AS HIS EX WIFE HAD DONE. HE APPLIED FOR AN AMOUNT. THE AMOUNT APPROVED WAS MUCH LESS THAN APPLIED. HE GOT UPSET AND FILED A COMPLAINT. THE POLICY WAS NEVER DELIVERED OR ACCEPTED, ALL PREMIUMS WERE REFUNDED PER THE TERMS OF THE RIGHT TO CANCEL."
+        ]
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    },
+    {
+      "disclosureType": "Termination",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "9/21/2007",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "11/12/1998",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "8/6/1998",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 3
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/3/2024"
+    },
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/22/2024"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "8/29/2024"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
