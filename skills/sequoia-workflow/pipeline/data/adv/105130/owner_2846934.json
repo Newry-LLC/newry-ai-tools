@@ -1,0 +1,96 @@
+{
+  "basicInformation": {
+    "individualId": 2846934,
+    "firstName": "BRIAN",
+    "middleName": "MICHAEL",
+    "lastName": "RIORDAN",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "5/6/2012"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 105130,
+      "firmName": "L. ROY PAPP & ASSOCIATES, LLP",
+      "iaOnly": "Y",
+      "registrationBeginDate": "5/7/2012",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "66801",
+          "street1": "2201 E. CAMELBACK ROAD",
+          "street2": "SUITE 227B",
+          "city": "PHOENIX",
+          "cityAlias": [
+            "PHOENIX"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85016",
+          "latitude": "33.516952",
+          "longitude": "-112.021401",
+          "geoLocation": "33.516952,-112.021401",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "05/01/2004"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 1
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "1/13/1999",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "7/9/1998",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/7/2012"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
