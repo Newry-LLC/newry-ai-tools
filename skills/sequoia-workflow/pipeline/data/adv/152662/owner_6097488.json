@@ -1,0 +1,142 @@
+{
+  "basicInformation": {
+    "individualId": 6097488,
+    "firstName": "MATTHEW",
+    "middleName": "DS",
+    "lastName": "STAFFIERI",
+    "otherNames": [
+      "MATTHEW DANA STAFFIERI",
+      "MATTHEW SPENCER STAFFIERI"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "6/26/2013"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 152662,
+      "firmName": "ROVIN CAPITAL",
+      "iaOnly": "Y",
+      "registrationBeginDate": "4/16/2014",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "71109",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "2801 N. Thanksgiving Way",
+          "street2": "Suite 190",
+          "city": "Lehi",
+          "cityAlias": [
+            "CEDAR PASS",
+            "EAGLE MOUNTAIN",
+            "EAGLE MTN",
+            "LEHI",
+            "SARATOGA",
+            "SARATOGA SPGS",
+            "SARATOGA SPRINGS"
+          ],
+          "state": "UT",
+          "country": "United States",
+          "zipCode": "84043",
+          "latitude": "40.402096",
+          "longitude": "-111.878044",
+          "geoLocation": "40.402096,-111.878044",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "01/01/2023"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "47805",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "46167",
+      "firmId": 32444,
+      "firmName": "FIRST ALLIED SECURITIES, INC.",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "registrationBeginDate": "6/27/2013",
+      "registrationEndDate": "5/16/2017",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "66653",
+      "iaSECNumberType": "801",
+      "firmId": 137888,
+      "firmName": "FIRST ALLIED ADVISORY SERVICES, INC.",
+      "city": "MESA",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "11/1/2013",
+      "registrationEndDate": "5/16/2017",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "8/19/2013",
+      "examScope": "BOTH"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "5/16/2017",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "6/27/2013",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/16/2014"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
