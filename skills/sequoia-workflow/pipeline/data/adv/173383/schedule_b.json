@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "BRINKMAN, ANDREW, JOSEPH",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "ANDREW BRINKMAN HOLDINGS LLC MANAGING MEMBER",
+      "since": "12/2016",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2727918",
+      "raw_id": "2727918"
+    },
+    {
+      "full_legal_name": "THOMAS, JUSTIN, C",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "OPR HOLDINGS LLC MANAGER",
+      "since": "01/2018",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "2819623",
+      "raw_id": "2819623"
+    }
+  ]
+}
