@@ -1,0 +1,35 @@
+{
+  "crd": "127517",
+  "name": "Wealth Management Solutions",
+  "people": [
+    {
+      "raw_name": "ROSENTHAL, DAVID, SCOTT",
+      "name": "David Scott Rosenthal",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER, PRINCIPAL, SENIOR FINANCIAL ADVISOR, MANAGING MEMBER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "06/2003",
+      "crd": "2680280",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Founder, CCO, Principal and Senior Financial Advisor, CFP. Began his career advising Fortune 500 corporate executives on investment management and employee benefits (stock options, RSUs, deferred compensation). Relocated to Arizona in 2000 to manage the wealth management division of a national CPA firm, developing a specialty serving business owners, before founding Wealth Management Solutions. Holds a BS in Finance and an MBA from Seton Hall University. Active in NAPFA, the Financial Planning Association, and the PVEPG study group.",
+      "bio_source": "wmsus.com/david-rosenthal/; independently corroborated by money.usnews.com/financial-advisors/advisor/david-rosenthal-2680280, smartadvisormatch.com/advisor-network/arizona/david-rosenthal-2680280, and adviserinfo.sec.gov/individual/summary/2680280",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Wealth Management Solutions is a fee-only fiduciary RIA in Scottsdale, AZ (~$173M AUM), founded by David Rosenthal after he managed the wealth management division of a national CPA firm's Arizona practice.",
+    "source": "wmsus.com/david-rosenthal/",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "0 of 1 people checked"
+}
