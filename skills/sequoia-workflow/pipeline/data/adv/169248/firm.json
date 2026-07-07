@@ -1,0 +1,90 @@
+{
+  "basicInformation": {
+    "firmId": 169248,
+    "firmName": "SCOTTSDALE WEALTH PLANNING, INC.",
+    "otherNames": [
+      "SCOTTSDALE WEALTH PLANNING, INC."
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/20/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "113207",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "9a2f7417-fa37-4360-8d85-a2a0632d6620"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "7033 E. MAIN STREET",
+      "street2": "SUITE 104",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85251"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52071,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "3/21/2026"
+    },
+    {
+      "editionID": 52072,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "3/21/2026"
+    },
+    {
+      "editionID": 52073,
+      "type": "IA_INDVL",
+      "generatedOn": "3/21/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "5/22/2018"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "7/19/2018"
+    },
+    {
+      "secJurisdiction": "Illinois",
+      "status": "Terminated",
+      "effectiveDate": "5/22/2018"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "5/22/2018"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1023012,
+        "brochureName": "SWP DISCLOSURE BROCHURE AND SUPPLEMENT_2024",
+        "dateSubmitted": "3/20/2026"
+      }
+    ]
+  }
+}
