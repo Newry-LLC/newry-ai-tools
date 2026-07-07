@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "COREPATH HOLDINGS LLC",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING MEMBER",
+      "since": "12/2018",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "BONNETT, MARK, ALAN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "PRESIDENT",
+      "since": "12/2018",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "3069882",
+      "raw_id": "3069882"
+    },
+    {
+      "full_legal_name": "BATTISTA, JACQUELINE, MARIE",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER AND FINANCIAL ADVISOR",
+      "since": "03/2024",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5822720",
+      "raw_id": "5822720"
+    }
+  ]
+}
