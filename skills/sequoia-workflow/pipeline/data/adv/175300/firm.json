@@ -1,0 +1,126 @@
+{
+  "basicInformation": {
+    "firmId": 175300,
+    "firmName": "GLOBAL STRATEGIC NEXTGEN OCIO",
+    "otherNames": [
+      "GLOBAL STRATEGIC INVESTMENT SOLUTIONS",
+      "GLOBAL STRATEGIC NEXTGEN OCIO",
+      "GLOBAL STRATEGIC INVESTMENT SOLUTIONS, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "04/01/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "114835",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "c04b011d-843b-40fc-86da-02327a2ad6e4"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "7337 EAST DOUBLETREE RANCH ROAD, SUITE C-165",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85258"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52134,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "4/2/2026"
+    },
+    {
+      "editionID": 52135,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "4/2/2026"
+    },
+    {
+      "editionID": 52136,
+      "type": "IA_INDVL",
+      "generatedOn": "4/2/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "3/15/2019"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "3/21/2019"
+    },
+    {
+      "secJurisdiction": "California",
+      "status": "Terminated",
+      "effectiveDate": "4/20/2019"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Terminated",
+      "effectiveDate": "3/21/2019"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "3/15/2019"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "3/15/2019"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "4/20/2021"
+    },
+    {
+      "jurisdiction": "New York",
+      "status": "Notice Filed",
+      "effectiveDate": "3/17/2023"
+    },
+    {
+      "jurisdiction": "North Carolina",
+      "status": "Notice Filed",
+      "effectiveDate": "4/8/2019"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "3/15/2019"
+    },
+    {
+      "jurisdiction": "Utah",
+      "status": "Notice Filed",
+      "effectiveDate": "4/20/2021"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1002844,
+        "brochureName": "ADV PART 2A-GLOBAL STRATEGIC INVESTMENT SOLUTIONS",
+        "dateSubmitted": "1/20/2026"
+      }
+    ]
+  }
+}
