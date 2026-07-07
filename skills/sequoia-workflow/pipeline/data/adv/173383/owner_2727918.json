@@ -1,0 +1,278 @@
+{
+  "basicInformation": {
+    "individualId": 2727918,
+    "firstName": "ANDREW",
+    "middleName": "JOSEPH",
+    "lastName": "BRINKMAN",
+    "otherNames": [
+      "ANDREW J BRINKMAN"
+    ],
+    "bcScope": "Expanded",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "9/12/2003"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 173383,
+      "firmName": "STABLEFORD CAPITAL LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "1/13/2015",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "80522",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "Y",
+          "city": "Mill Valley",
+          "state": "CA",
+          "country": "United States",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "03/07/2022"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "46844",
+      "firmId": 35747,
+      "firmName": "PURSHE KAPLAN STERLING INVESTMENTS",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "registrationBeginDate": "1/8/2015",
+      "registrationEndDate": "11/19/2015",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "7571",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "497",
+      "firmId": 8158,
+      "firmName": "ROBERT W. BAIRD & CO. INCORPORATED",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "9/19/2008",
+      "registrationEndDate": "12/8/2014",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "14235",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "7221",
+      "firmId": 7691,
+      "firmName": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "4/22/2005",
+      "registrationEndDate": "9/22/2008",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "14235",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "7221",
+      "firmId": 7691,
+      "firmName": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+      "city": "NEW YORK",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "5/8/1996",
+      "registrationEndDate": "1/14/1998",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "7571",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "497",
+      "firmId": 8158,
+      "firmName": "ROBERT W. BAIRD & CO. INCORPORATED",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "9/22/2008",
+      "registrationEndDate": "12/8/2014",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "14235",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "7221",
+      "firmId": 7691,
+      "firmName": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "6/9/2005",
+      "registrationEndDate": "9/22/2008",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "3/26/2019",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Client's beneficiary is alleging that Mr. Brinkman attempted to sell an interest in a security that was not approved by the firm and was not suitable for the client.",
+        "Damage Amount Requested": "$2,500,000.00",
+        "Settlement Amount": "$375,000.00",
+        "DisplayAAOLinkIfExists": "Y",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "20-04042"
+      }
+    },
+    {
+      "eventDate": "5/12/1988",
+      "disclosureType": "Regulatory",
+      "disclosureResolution": "Final",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 20,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "DocketNumberFDA": "91-220-FP",
+        "DocketNumberAAO": "91-220",
+        "Initiated By": "CHICAGO MERCHANT EXCHANGE FLORR PRACTICE\r\nCOMMITTEE",
+        "Allegations": "MINOR OFFENSE - SOLD 10 SWISS FRANCS FROM\r\nPERSONAL A/C AFTER MARKET CLOSED TO THEIR MEMBER VIOLATED CME\r\nRULE 433.B",
+        "Resolution": "Decision & Order of Offer of Settlement",
+        "SanctionDetails": [
+          {
+            "Sanctions": "Monetary/Fine",
+            "SanctionDetails": [
+              {
+                "Amount": "$2,500.00"
+              }
+            ]
+          },
+          {
+            "Sanctions": "Suspension"
+          }
+        ],
+        "Sanction Details": "PURSUANT TO AN OFFER AND WITHOUT ADMITTING OR\r\nDENYING A VIOLATION - THE COMMITTEE FOUND THIS ACTION\r\nCONTITUTED A MINOR OFFENSE AND IMPOSED A $2,500.00 FINE AND A\r\nTWO DAY SUSPENSION OF FLOOR PRIVIEGES.",
+        "Broker Comment": [
+          "IN REGARDS TO THE CME SUSPENSION. I CHECKED WITH\r\nCME COMPLAINCE BEFORE I FILLED OUT THE APPLICATION AND WAS TOLD\r\nTHAT IT WASN'T NECESSARY TO REFER TO THE INCIDENT ON THAT\r\nAPPLICATION. I HAVE ENCLOSED REFERENCE TO THE CASE AND IT'S\r\nCONSEQUENCES."
+        ]
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Regulatory Event",
+      "disclosureCount": 1
+    },
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 3,
+    "principalExamCount": 0,
+    "productExamCount": 3
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "6/8/2005",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "6/5/1996",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "5/22/1996",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "11/19/2015",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 31",
+      "examName": "Futures Managed Funds Examination",
+      "examTakenDate": "12/6/2005",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "4/21/2005",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 4
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "1/13/2015"
+    },
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/17/2017"
+    },
+    {
+      "state": "Illinois",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "4/8/2026"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "1/15/2016"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
