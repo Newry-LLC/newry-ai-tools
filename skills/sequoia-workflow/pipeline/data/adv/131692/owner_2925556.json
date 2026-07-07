@@ -1,0 +1,134 @@
+{
+  "basicInformation": {
+    "individualId": 2925556,
+    "firstName": "ELIZABETH",
+    "middleName": "MOLLIE",
+    "lastName": "SHABAKER",
+    "otherNames": [
+      "ELIZABETH MOLLIE KNIPPEN",
+      "LIZ  SHABAKER"
+    ],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "3/2/2004"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 131692,
+      "firmName": "VERSANT CAPITAL MANAGEMENT, INC.",
+      "iaOnly": "Y",
+      "registrationBeginDate": "8/19/2010",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "62272",
+          "street1": "2394 EAST CAMELBACK ROAD",
+          "street2": "SUITE 100",
+          "city": "PHOENIX",
+          "cityAlias": [
+            "PHOENIX"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85016-9260",
+          "latitude": "33.516952",
+          "longitude": "-112.021401",
+          "geoLocation": "33.516952,-112.021401",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "07/19/2010"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "56752",
+      "iaSECNumberType": "801",
+      "firmId": 109278,
+      "firmName": "GENSPRING FAMILY OFFICES, LLC",
+      "city": "GREENWICH",
+      "state": "CT",
+      "country": "United States",
+      "registrationBeginDate": "2/21/2008",
+      "registrationEndDate": "7/9/2010",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "61228",
+      "iaSECNumberType": "801",
+      "firmId": 120747,
+      "firmName": "INLIGN WEALTH MANAGEMENT, LLC",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "1/23/2004",
+      "registrationEndDate": "5/1/2008",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 1
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "12/30/2003",
+      "examScope": "IA"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "4/5/2000",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "8/19/2010"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/30/2022"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
