@@ -1,0 +1,100 @@
+{
+  "basicInformation": {
+    "firmId": 128549,
+    "firmName": "WEALTH ENGINEERING, LLC",
+    "otherNames": [
+      "WEALTH ENGINEERING, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "02/24/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "118948",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "3d9c8c50-d892-407c-a9b9-f63678858c2b"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "7373 E. DOUBLETREE RANCH RD.",
+      "street2": "SUITE 200",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85258"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 51939,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "2/25/2026"
+    },
+    {
+      "editionID": 51940,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "2/25/2026"
+    },
+    {
+      "editionID": 51941,
+      "type": "IA_INDVL",
+      "generatedOn": "2/25/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "6/18/2020"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "7/6/2020"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Terminated",
+      "effectiveDate": "7/6/2020"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "6/18/2020"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "6/18/2020"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "6/18/2020"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1011620,
+        "brochureName": "WEALTH ENGINEERING ADV PART 2A & 2B ANNUAL AMENDMENT V.02.24.26",
+        "dateSubmitted": "2/24/2026"
+      }
+    ]
+  }
+}
