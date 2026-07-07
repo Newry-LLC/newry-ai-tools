@@ -1,0 +1,337 @@
+{
+  "basicInformation": {
+    "individualId": 2236475,
+    "firstName": "STEPHEN",
+    "middleName": "LEON",
+    "lastName": "HARRISON",
+    "nameSuffix": "JR",
+    "otherNames": [
+      "STEPHEN LEON HARRISON",
+      "STEVE  HARRISON"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "5/17/1993"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 143420,
+      "firmName": "EXETER FINANCIAL, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "4/5/2007",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "67719",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "322423",
+          "street1": "7001 N. SCOTTSDALE ROAD",
+          "street2": "SUITE 1040",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "PARADISE VALLEY",
+            "PARADISE VLY",
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85253-3644",
+          "latitude": "33.545998",
+          "longitude": "-111.969375",
+          "geoLocation": "33.545998,-111.969375",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "05/01/2007"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "53073",
+      "firmId": 108219,
+      "firmName": "BMA SECURITIES, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "2/4/2008",
+      "registrationEndDate": "12/31/2016",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "46713",
+      "firmId": 35528,
+      "firmName": "THE SHEMANO GROUP, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "5/16/2007",
+      "registrationEndDate": "2/4/2008",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "26505",
+      "firmId": 10105,
+      "firmName": "OGILVIE SECURITY ADVISORS CORPORATION",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "10/24/2006",
+      "registrationEndDate": "5/4/2007",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "41426",
+      "firmId": 25027,
+      "firmName": "FRIEDMAN, BILLINGS, RAMSEY & CO., INC.",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "registrationBeginDate": "4/12/2005",
+      "registrationEndDate": "10/10/2006",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "33805",
+      "firmId": 16361,
+      "firmName": "BANC OF AMERICA INVESTMENT SERVICES, INC.",
+      "city": "BOSTON",
+      "state": "MA",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "10/10/2003",
+      "registrationEndDate": "3/31/2005",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "80781",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "23689",
+      "firmId": 7927,
+      "firmName": "NORTHERN TRUST SECURITIES, INC.",
+      "city": "CHICAGO",
+      "state": "IL",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "6/2/2000",
+      "registrationEndDate": "9/3/2003",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "49116",
+      "firmId": 40655,
+      "firmName": "LOCKWOOD FINANCIAL SERVICES, INC.",
+      "city": "MALVERN",
+      "state": "PA",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "7/17/1997",
+      "registrationEndDate": "12/15/1999",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "32564",
+      "firmId": 15873,
+      "firmName": "KEY INVESTMENTS INC.",
+      "city": "CLEVELAND",
+      "state": "OH",
+      "country": "United States",
+      "registrationBeginDate": "7/14/1995",
+      "registrationEndDate": "7/29/1997",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "14235",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "7221",
+      "firmId": 7691,
+      "firmName": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+      "city": "NEW YORK",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "4/26/1993",
+      "registrationEndDate": "3/7/1995",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "37967",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "37180",
+      "firmId": 19616,
+      "firmName": "EVEREN SECURITIES, INC.",
+      "city": "ST. LOUIS",
+      "state": "MO",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "7/1/1992",
+      "registrationEndDate": "5/5/1993",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "bdSECNumber": "26505",
+      "firmId": 10105,
+      "firmName": "OGILVIE SECURITY ADVISORS CORP",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "10/24/2006",
+      "registrationEndDate": "5/4/2007",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "54830",
+      "iaSECNumberType": "801",
+      "firmId": 108883,
+      "firmName": "FBR INVESTMENT MANAGEMENT, INC.",
+      "city": "ARLINGTON",
+      "state": "VA",
+      "country": "United States",
+      "registrationBeginDate": "5/3/2005",
+      "registrationEndDate": "10/10/2006",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "Y",
+      "bdSECNumber": "33805",
+      "firmId": 16361,
+      "firmName": "BANC OF AMERICA INVESTMENT SERVICES, INC.",
+      "city": "SEATTLE",
+      "state": "WA",
+      "country": "United States",
+      "registrationBeginDate": "10/10/2003",
+      "registrationEndDate": "3/31/2005",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "56270",
+      "iaSECNumberType": "801",
+      "firmId": 109443,
+      "firmName": "NORTHERN TRUST BANK FSB",
+      "city": "SEATTLE",
+      "state": "WA",
+      "country": "United States",
+      "registrationBeginDate": "1/29/2001",
+      "registrationEndDate": "10/14/2003",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "9/25/2009",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "IN JULY 2008 [CUSTOMER] PURCHASED .40 MEMBERSHIP UNITS OF EXETER PARTNERS REAL ESTATE FUND I, LLC FOR $100,000 THROUGH EXETER FINANCIAL, LLC. DUE TO THE COLLAPSE OF THE REAL ESTATE MARKET THE FUND WAS CLOSED AND INVESTORS WERE OFFERED A RETURN OF THEIR INVESTMENT OVER TIME. [CUSTOMER] DID NOT ACCEPT THE TERMS OF THE REPAYMENT AND FILED FOR ARBITRTATION WITH FINRA. MR. HARRISON IS A MANAGING PARTNER OF EXETER FINANCIAL AND WAS A REGISTERERD REPRESENTATIVE WITH BMA SECURITIES. UNITS IN THE FUND WERE NOT OFFERED FOR SALE NOR SOLD BY BMA SECURITIES.",
+        "Damage Amount Requested": "$100,000.00",
+        "Settlement Amount": "$110,000.00",
+        "DisplayAAOLinkIfExists": "Y",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "09-05136",
+        "Broker Comment": [
+          "MR. HARRISON DENIES ANY ALLEGATIONS OF WRONG DOING AGAINST HIM. MR. HARRISON AGREEDED TO SETTLE UPON THE ADVICE OF COUNSEL SOLEY TO AVOID PROTRACTED, EXPENSIVE AND BURDENSOME LITIGATION. THE SETTLEMENT IS FULLY PAID."
+        ]
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 1,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "7/17/1992",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "7/10/1992",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "5/31/2005",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "12/31/2016",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "6/29/1992",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "4/5/2007"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
