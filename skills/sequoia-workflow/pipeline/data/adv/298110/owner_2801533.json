@@ -1,0 +1,303 @@
+{
+  "basicInformation": {
+    "individualId": 2801533,
+    "firstName": "BARRY",
+    "middleName": "SCOTT",
+    "lastName": "RHONEMUS",
+    "otherNames": [],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "10/28/1996"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 298110,
+      "firmName": "JUNCTURE WEALTH STRATEGIES, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "9/14/2018",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "113927",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "694870",
+          "street1": "8777 E. VIA DE VENTURA",
+          "street2": "SUITE 120",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85258",
+          "latitude": "33.560513",
+          "longitude": "-111.885972",
+          "geoLocation": "33.560513,-111.885972",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "05/03/2017"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "46844",
+      "firmId": 35747,
+      "firmName": "PURSHE KAPLAN STERLING INVESTMENTS",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "11/5/2010",
+      "registrationEndDate": "11/17/2017",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "38588",
+      "firmId": 10582,
+      "firmName": "WELLS FARGO INVESTMENTS, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "12/13/2000",
+      "registrationEndDate": "11/15/2010",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "33283",
+      "firmId": 16100,
+      "firmName": "WELLS FARGO BROKERAGE SERVICES, L.L.C.",
+      "city": "MINNEAPOLIS",
+      "state": "MN",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "5/17/2001",
+      "registrationEndDate": "8/20/2002",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "35225",
+      "firmId": 17438,
+      "firmName": "WELLS FARGO SECURITIES INC.",
+      "city": "SAN FRANCISCO",
+      "state": "CA",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "3/4/1998",
+      "registrationEndDate": "5/2/2001",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "33283",
+      "firmId": 16100,
+      "firmName": "WELLS FARGO BROKERAGE SERVICES, L.L.C.",
+      "city": "MINNEAPOLIS",
+      "state": "MN",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "3/26/1999",
+      "registrationEndDate": "12/13/2000",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "108049",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "15204",
+      "firmId": 665,
+      "firmName": "PIPER JAFFRAY INC.",
+      "city": "MINNEAPOLIS",
+      "state": "MN",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "10/29/1996",
+      "registrationEndDate": "3/4/1998",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "110550",
+      "iaSECNumberType": "801",
+      "firmId": 287909,
+      "firmName": "HERITAGE WEALTH MANAGEMENT, LLC",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "7/6/2017",
+      "registrationEndDate": "12/14/2018",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "110542",
+      "iaSECNumberType": "801",
+      "firmId": 287908,
+      "firmName": "JUNCTURE WEALTH STRATEGIES, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "6/1/2017",
+      "registrationEndDate": "11/16/2018",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "71866",
+      "iaSECNumberType": "801",
+      "firmId": 155175,
+      "firmName": "JUNCTURE WEALTH STRATEGIES, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "12/1/2010",
+      "registrationEndDate": "8/17/2017",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "6/28/2011",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "CLAIMANT, RESIDENT OF ARIZONA, ALLEGES UNSUITABILITY AGAINST FA.  DATES OF ACTIVITY ARE UNSPECIFIED.  CLAIMANT SEEKS DAMAGES OF $1,000,000.00",
+        "Damage Amount Requested": "$1,000,000.00",
+        "Settlement Amount": "$27,500.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "WITHOUT ADMITTING ANY LIABILITY AND IN ORDER TO AVOID THE COSTS AND UNCERTAINTY OF FUTHER LITIGATION, THIS MATTER WAS SETTLED FOR THE SUM OF $27,500.00. OF WHICH, WELLS FARGO ADVISORS, LLC IS RESPONSIBLE FOR PAYING $27,500.00."
+        ]
+      }
+    },
+    {
+      "eventDate": "2/18/2009",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "THE COMPLAINT AROSE OUT OF THE SALE OF AN AUCTION RATE SECURITY (ARS) THAT WAS MADE PRIOR TO THE WIDESPREAD ILLIQUIDITY IN THE ARS MARKET THAT OCCURRED IN FEBRUARY 2008.  ACTIVITY DATE(S):  6/28/2007",
+        "Damage Amount Requested": "$225,000.00",
+        "Settlement Amount": "$150,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "THE FIRM REPURCHASED THE ARS SECURITIES AT ISSUE FROM THE CLIENT PURSUANT TO A GLOBAL REPURCHASE AGREEMENT IT ENTERED WITH SEVERAL REGULATORY BODIES. THIS WAS NOT A TRADITIONAL SETTLEMENT OF A DISPUTE BETWEEN THE CLIENT AND THE REPRESENTATIVE.   THE NAMED REPRESENTATIVE: WAS NOT A PARTY TO, AND DID NOT AGREE TO OR PARTICIPATE IN, THE REPURCHASE AGREEMENT BETWEEN THE FIRM AND REGULATORS; THE NAMED REPRESENTATIVE DID NOT MAKE ANY PAYMENTS TO THE CLIENT; AND THE NAMED REPRESENTATIVE WAS NOT ASKED TO AND DID NOT CONTRIBUTE TO THE REPURCHASE AMOUNT. THIS MATTER IS BEING REPORTED AS A SETTLEMENT PURSUANT TO THE REQUIREMENTS OF FINRA REGULATORY NOTICE 09-12."
+        ]
+      }
+    },
+    {
+      "eventDate": "4/30/2008",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "THE COMPLAINT AROSE OUT OF THE SALE OF AN AUCTION RATE SECURITY (ARS) THAT WAS MADE PRIOR TO THE WIDESPREAD ILLIQUIDITY IN THE ARS MARKET THAT OCCURRED IN FEBRUARY 2008.  ACTIVITY DATE(S):  7/20/2006-10/2/2006",
+        "Settlement Amount": "$4,225,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "THE FIRM REPURCHASED THE ARS SECURITIES AT ISSUE FROM THE CLIENT PURSUANT TO A GLOBAL REPURCHASE AGREEMENT IT ENTERED WITH SEVERAL REGULATORY BODIES. THIS WAS NOT A TRADITIONAL SETTLEMENT OF A DISPUTE BETWEEN THE CLIENT AND THE REPRESENTATIVE.   THE NAMED REPRESENTATIVE: WAS NOT A PARTY TO, AND DID NOT AGREE TO OR PARTICIPATE IN, THE REPURCHASE AGREEMENT BETWEEN THE FIRM AND REGULATORS; THE NAMED REPRESENTATIVE DID NOT MAKE ANY PAYMENTS TO THE CLIENT; AND THE NAMED REPRESENTATIVE WAS NOT ASKED TO AND DID NOT CONTRIBUTE TO THE REPURCHASE AMOUNT. THIS MATTER IS BEING REPORTED AS A SETTLEMENT PURSUANT TO THE REQUIREMENTS OF FINRA REGULATORY NOTICE 09-12."
+        ]
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 3
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "1/20/2011",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "11/4/1996",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "11/17/2017",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "10/28/1996",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "10/24/2018"
+    },
+    {
+      "state": "Ohio",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "9/14/2018"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
