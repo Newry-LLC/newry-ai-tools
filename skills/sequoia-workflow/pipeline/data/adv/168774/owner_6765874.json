@@ -1,0 +1,63 @@
+{
+  "basicInformation": {
+    "individualId": 6765874,
+    "firstName": "Jordan",
+    "middleName": "Isaac",
+    "lastName": "Taylor",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "InActive",
+    "daysInIndustryIAPD": 439
+  },
+  "currentIAEmployments": [],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "78166",
+      "iaSECNumberType": "801",
+      "firmId": 167798,
+      "firmName": "SILVERHAWK ASSET MANAGEMENT, LLC",
+      "city": "Seattle",
+      "state": "WA",
+      "country": "United States",
+      "registrationBeginDate": "3/9/2017",
+      "registrationEndDate": "5/21/2018",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 0
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "2/6/2017",
+      "examScope": "IA"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 0
+  },
+  "registeredStates": [],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
