@@ -1,0 +1,128 @@
+{
+  "basicInformation": {
+    "firmId": 306180,
+    "firmName": "FARNAM FINANCIAL",
+    "otherNames": [
+      "FARNAM FINANCIAL",
+      "FARNAM FINANCIAL, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "04/16/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "132622",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "df494fb5-60dd-4003-bd89-3b5bdf0f5c90"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "2415 E CAMELBACK RD",
+      "street2": "STE 700",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85016"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52209,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "4/17/2026"
+    },
+    {
+      "editionID": 52210,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "4/17/2026"
+    },
+    {
+      "editionID": 52208,
+      "type": "IA_INDVL",
+      "generatedOn": "4/17/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "4/30/2025"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "5/1/2025"
+    },
+    {
+      "secJurisdiction": "California",
+      "status": "Terminated",
+      "effectiveDate": "2/13/2025"
+    },
+    {
+      "secJurisdiction": "Florida",
+      "status": "Terminated",
+      "effectiveDate": "5/1/2025"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Terminated",
+      "effectiveDate": "5/1/2025"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "4/30/2025"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "5/2/2025"
+    },
+    {
+      "jurisdiction": "Minnesota",
+      "status": "Notice Filed",
+      "effectiveDate": "2/26/2026"
+    },
+    {
+      "jurisdiction": "Oregon",
+      "status": "Notice Filed",
+      "effectiveDate": "4/30/2025"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "4/30/2025"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1012297,
+        "brochureName": "2026-02-26 FARNAM FINANCIAL WRAP FEE BROCHURE",
+        "dateSubmitted": "2/26/2026",
+        "lastConfirmed": "2/1/2025"
+      },
+      {
+        "brochureVersionID": 1012296,
+        "brochureName": "2026-02-26 FARNAM FINANCIAL FORM ADV PART 2A",
+        "dateSubmitted": "2/26/2026",
+        "lastConfirmed": "2/1/2025"
+      }
+    ]
+  }
+}
