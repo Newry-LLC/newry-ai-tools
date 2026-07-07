@@ -1,0 +1,342 @@
+{
+  "basicInformation": {
+    "individualId": 1906579,
+    "firstName": "COLIN",
+    "lastName": "HEAFY",
+    "otherNames": [
+      "HAEFY  COLIN",
+      "COLIN PATRICK HEAFY"
+    ],
+    "bcScope": "Active",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "1/7/1991"
+  },
+  "currentEmployments": [
+    {
+      "firmId": 13572,
+      "firmName": "CETERA WEALTH SERVICES, LLC",
+      "iaOnly": "N",
+      "registrationBeginDate": "2/20/2025",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE",
+      "iaSECNumber": "47342",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "29577",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "862369",
+          "street1": "70 Hilltop Road, Suite 2450",
+          "city": "Ramsey",
+          "cityAlias": [
+            "DARLINGTON",
+            "RAMSEY"
+          ],
+          "state": "NJ",
+          "country": "United States",
+          "zipCode": "07446",
+          "latitude": "41.060624",
+          "longitude": "-74.144466",
+          "geoLocation": "41.060624,-74.144466",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "02/20/2025"
+        }
+      ]
+    }
+  ],
+  "currentIAEmployments": [
+    {
+      "firmId": 146054,
+      "firmName": "KEY GROUP MANAGEMENT, INC.",
+      "iaOnly": "Y",
+      "registrationBeginDate": "5/14/2008",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "114845",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "70 Hilltop Road",
+          "street2": "Suite 2450",
+          "city": "RAMSEY",
+          "cityAlias": [
+            "DARLINGTON",
+            "RAMSEY"
+          ],
+          "state": "NJ",
+          "country": "United States",
+          "zipCode": "07446",
+          "latitude": "41.060624",
+          "longitude": "-74.144466",
+          "geoLocation": "41.060624,-74.144466",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "02/14/2008"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "56010",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "32590",
+      "firmId": 15708,
+      "firmName": "CONCOURSE FINANCIAL GROUP SECURITIES, INC.",
+      "city": "Ramsey",
+      "state": "NJ",
+      "registrationBeginDate": "8/5/2022",
+      "registrationEndDate": "2/20/2025",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "54859",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "40218",
+      "firmId": 23131,
+      "firmName": "ROYAL ALLIANCE ASSOCIATES, INC.",
+      "city": "RAMSEY",
+      "state": "NJ",
+      "registrationBeginDate": "3/10/2017",
+      "registrationEndDate": "8/17/2022",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "41015",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "44435",
+      "firmId": 29604,
+      "firmName": "NATIONAL PLANNING CORPORATION",
+      "city": "RAMSEY",
+      "state": "NJ",
+      "registrationBeginDate": "1/9/2009",
+      "registrationEndDate": "3/13/2017",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "54859",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "40218",
+      "firmId": 23131,
+      "firmName": "ROYAL ALLIANCE ASSOCIATES, INC.",
+      "city": "RAMSEY",
+      "state": "NJ",
+      "registrationBeginDate": "6/24/2003",
+      "registrationEndDate": "1/29/2009",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "49818",
+      "firmId": 42373,
+      "firmName": "THE KEY GROUP INC.",
+      "city": "RAMSEY",
+      "state": "NJ",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "5/15/1997",
+      "registrationEndDate": "6/24/2003",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "10970",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "17668",
+      "firmId": 6413,
+      "firmName": "LINSCO/PRIVATE LEDGER CORP.",
+      "city": "FORT MILL",
+      "state": "SC",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "6/2/1995",
+      "registrationEndDate": "6/25/1997",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "7163",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16267",
+      "firmId": 8174,
+      "firmName": "PAINEWEBBER INCORPORATED",
+      "city": "WEEHAWKEN",
+      "state": "NJ",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "1/8/1991",
+      "registrationEndDate": "6/26/1995",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "54859",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "40218",
+      "firmId": 23131,
+      "firmName": "ROYAL ALLIANCE ASSOCIATES, INC.",
+      "city": "RAMSEY",
+      "state": "NJ",
+      "country": "United States",
+      "registrationBeginDate": "12/12/2003",
+      "registrationEndDate": "1/29/2009",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 3,
+    "productExamCount": 3
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "12/11/2003",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "4/16/1991",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 4",
+      "examName": "Registered Options Principal Examination",
+      "examTakenDate": "5/24/2006",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 53",
+      "examName": "Municipal Securities Principal Examination",
+      "examTakenDate": "7/10/2001",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "8/17/1995",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 52TO",
+      "examName": "Municipal Securities Representative Examination",
+      "examTakenDate": "1/2/2023",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "1/7/1991",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 1,
+    "approvedFinraRegistrationCount": 1,
+    "approvedStateRegistrationCount": 7,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "California",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    },
+    {
+      "state": "Connecticut",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    },
+    {
+      "state": "Florida",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    },
+    {
+      "state": "Michigan",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    },
+    {
+      "state": "New Jersey",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/14/2008"
+    },
+    {
+      "state": "New Jersey",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    },
+    {
+      "state": "New York",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    },
+    {
+      "state": "Tennessee",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    }
+  ],
+  "registeredSROs": [
+    {
+      "sro": "FINRA",
+      "status": "APPROVED",
+      "CategoriesList": [
+        "General Securities Principal",
+        "Full Registration/General Securities Representative",
+        "Municipal Securities Principal",
+        "Municipal Securities Representative",
+        "Registered Options Principal"
+      ]
+    }
+  ],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
