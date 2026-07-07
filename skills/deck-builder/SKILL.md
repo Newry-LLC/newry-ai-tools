@@ -195,11 +195,17 @@ Goal: a strong first draft, fast, from the closest layout we already have.
 
 ### Tables (used by several layouts)
 
-Pass a table as rows. Row 1 is usually the header. Cells can be a plain string, or `{text, fill, color, bold, size, align, swatch}` for a colored/styled cell, or `{paragraphs: [...]}` for a cell with multiple formatted lines. `swatch` maps a name to a color set on the layout (e.g. `pursue` → green on the prioritization table). The table flexes its row and column count to fit your data.
+There are **two ways to edit a table — pick by intent:**
 
-**Editing an existing table preserves its formatting by default** — each cell's fill, font color, weight, and size stay put; only the text changes (plus any explicit cell overrides). So a navy header row or a white-on-logo hidden column survives a text swap. Cell text also supports `**bold**` markup. To restyle a table wholesale instead, pass `table_opts: {"preserve_format": false}`.
+- **Updating specific cells** of an existing table (the common case — "update the Q2 numbers", "fix the OKR owners"): use **`write_cells`**. Each entry names one cell by position and changes only what it names: `{"op": "write_cells", "slide": N, "shape": ref, "cells": [{"row": 2, "col": 3, "text": "New value"}, ...]}`. Optional per-cell `color`, `fill`, `bold`, `italic`, `size`, `font`, `align`; `text` supports `**bold**`. It never resizes the table, never resets the table style, and never touches a cell you didn't name — so merges, fills, and every other cell survive exactly. **This is the safe default for touching a client's existing table.** Cell addressing resolves a merged region to its origin, so a merged cell just works.
+- **(Re)building a whole table** from a full row set (a template layout's table, or replacing all contents): use **`write_table`** with `rows`. Row 1 is usually the header. Cells can be a plain string, `{text, fill, color, bold, size, align, swatch}`, or `{paragraphs: [...]}` for multiple formatted lines. `swatch` maps a name to a color set on the layout (e.g. `pursue` → green).
 
-**Merged cells:** some template tables merge cells (e.g. a category label spanning rows). Merged cells collide with row-by-row writing. A layout whose table needs to flex sets `"unmerge": true` in its `table_opts`, which flattens the table to a clean grid before filling. On the **edit** path, leave it off so a client table's intentional merges are respected; turn it on only when you want to flatten-and-rewrite a merged table.
+**`write_table` behavior:**
+- On a **build** layout, the table flexes its row/column count to fit your data.
+- On an **edit** (the default `preserve_format: true`), it **never adds or deletes rows/columns** — it writes only the cells that overlap the existing grid and returns a loud warning if the shape you passed doesn't match, so a partial update can never silently drop rows. To genuinely change the row/column count on an edit, pass `table_opts: {"allow_resize": true}`. (For a targeted change, prefer `write_cells` — you won't hit this at all.)
+- Preserve mode keeps each cell's fill, font color, weight, and size; only the text changes (plus explicit overrides). To restyle wholesale, pass `table_opts: {"preserve_format": false}`.
+
+**Merged cells:** `write_cells` respects merges automatically — use it. For `write_table`, a build layout whose table needs to flex sets `"unmerge": true` in its `table_opts` (flattens to a clean grid before filling); leave it off on any edit so a client table's intentional merges are respected.
 
 ---
 
@@ -315,19 +321,21 @@ All jobs look like: `{"presentation": "<name or substring>", "ops": [ ... ]}`. `
 | `profile` | Read a slide: every object's role, format, capacity | `slide` |
 | `edit_text_preserve` | Change text, keep existing format (supports `**bold**`) | `slide`, `shape`, `paragraphs` (plain strings) |
 | `write_textbox` | Write text with formatting you specify (supports `**bold**`) | `slide`, `shape`, `paragraphs` (objects: text/bold/size/color/italic/font/align) |
-| `write_table` | Edit a table; preserves each cell's formatting by default | `slide`, `shape`, `rows`, optional `table_opts` |
+| `write_cells` | Update specific table cells; touches nothing else (safe for merged/styled tables) | `slide`, `shape`, `cells` (each `{row, col, text?, ...}`) |
+| `write_table` | (Re)build a whole table; preserves each cell's formatting by default; never resizes on edit | `slide`, `shape`, `rows`, optional `table_opts` |
 | `build` | Make a new slide from a layout | `layout`, `fields`, optional `position` |
 | `build_chart` | Make a new slide with a live think-cell chart | `layout` (a `chart_*` one), `fields` (incl. `chart` data), optional `position` |
 | `refresh_chart` | Update a named chart's data in place (own job; works on local/OneDrive/SharePoint) | `chart_name`, `type`, `data` |
-| `fill_launch_deck` | Populate a project initiation PPT from a PLT `launch-data.json` file | `project_code` or `data_path` |
 
-`shape` is the 1-based index from `profile` / `ppt_list_shapes` (or the shape's name).
+`shape` is the 1-based index from `profile` / `ppt_list_shapes` (or the shape's name). Filling a project launch deck is a **workflow** (below), not a single op — it uses `edit_text_preserve` / `write_cells` / `write_table` slide by slide.
+
+Every job result echoes `presentation_path` (the full path of the deck that was written) — glance at it to confirm the right file was targeted, especially when two similarly-named decks are open. If a presentation reference matches more than one open deck, the tool refuses rather than guessing; pass a more specific name or full path.
 
 ---
 
-## Filling the project launch deck (`fill_launch_deck`)
+## Filling the project launch deck (a workflow, not a single op)
 
-Auto-populate a project initiation PPT from a PLT `launch-data.json` file produced by the Project Launch Toolkit in Cowork. The user must have the project-specific copy of the initiation template already open in PowerPoint.
+Auto-populate a project initiation PPT from a PLT `launch-data.json` file produced by the Project Launch Toolkit in Cowork. This is a **workflow** you drive slide by slide with the ordinary ops (`edit_text_preserve`, `write_cells`, `write_table`) — there is no one-shot `fill_launch_deck` op. The user must have the project-specific copy of the initiation template already open in PowerPoint.
 
 **Trigger:** "fill the launch deck", "populate the project deck", "fill in the initiation template"
 
@@ -359,11 +367,11 @@ Auto-populate a project initiation PPT from a PLT `launch-data.json` file produc
 
 ## The core rule: always write through deck_writer.py
 
-**Never use `ppt_set_text`, `ppt_set_placeholder_text`, or `ppt_find_replace_text` to change slide content. Always use `deck_writer.py` (`edit_text_preserve`, `write_textbox`, `write_table`, `build`, or `build_chart`).** No exceptions, no judgment call about whether a shape "looks simple."
+**Never use a `ppt_*` tool that changes slide *content* — the shape's text or a table's cells. That includes `ppt_set_text`, `ppt_set_placeholder_text`, `ppt_find_replace_text`, `ppt_set_table_data`, and `ppt_set_table_cell`. Always route content through `deck_writer.py` (`edit_text_preserve`, `write_textbox`, `write_cells`, `write_table`, `build`, or `build_chart`).** No exceptions, no judgment call about whether a shape "looks simple." (A PreToolUse guard blocks the most common of these; treat the rule as covering the whole class, not just the blocked ones.)
 
-Why: the `ppt_*` write tools flatten a shape's formatting into a single style. A slide with a bold navy header over normal black bullets comes out with header and bullets looking identical, and there's no clean undo. `deck_writer.py` writes the careful way — it captures each line's formatting first, inserts the new text, then re-applies the formatting line by line — so headers stay headers and bullets stay bullets. That is the entire reason the tool exists.
+Why: those tools flatten a shape's formatting into a single style — a bold navy header over normal black bullets comes out looking identical, with no clean undo — and the table ones collapse cell fills and merges. `deck_writer.py` writes the careful way: it captures each line's/cell's formatting first, inserts the new text, then re-applies formatting piece by piece. That is the entire reason the tool exists.
 
-The `ppt_*` tools are for *reading* (preview, profile, get_text, list_shapes) only.
+The `ppt_*` tools are otherwise for *reading* (preview, profile, get_text, list_shapes). The one sanctioned write exception is **`ppt_format_text_range`** for applying a color to a mid-line phrase after a rewrite — it changes formatting, not content, on a range `deck_writer.py` can't target inline.
 
 ## Gotchas worth remembering
 
