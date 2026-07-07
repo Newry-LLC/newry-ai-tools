@@ -1,0 +1,36 @@
+{
+  "crd": "167657",
+  "name": "Immaculate Wealth Management, LLC",
+  "people": [
+    {
+      "raw_name": "RAUGUTH, MARK, EDWARD",
+      "name": "Mark Edward Rauguth",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING MEMBER/CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "04/2013",
+      "crd": "1564114",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Managing Member and CCO of Immaculate Wealth Management, which he founded in Mesa in 2013; over 36 years total in financial services. Began his career in 1986 at American Express Financial Advisors as a registered representative; in 1997 moved to Raymond James Financial Services as an investment adviser and branch manager, building a higher-net-worth and small-business practice. In 2000, while still at RJFS, founded a second entity, Precision Investments, Inc., to handle clients' insurance and annuity needs. Later earned the CFP designation. Holds Series 63 and 65 registrations, licensed in Arizona, California, and Texas.",
+      "bio_source": "immaculatewealth.com (firm's own website states he founded Precision Investments, Inc. in 2000). Indyfin (indyfin.com/financial-advisor/arizona/mesa/mark-rauguth-1564114) independently confirms his employment dates at American Express Financial Advisors (1986-1997) and Raymond James (1997-2013), and lists him at Precision Investments during that period, but does not itself state that he founded it -- that specific detail is firm-stated only.",
+      "bio_confidence": "medium",
+      "phase4_status": "corrected",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Mesa-based RIA founded by Mark Rauguth in 2013; built out of a long individual advisory career rather than a team-based firm.",
+    "source": "indyfin.com/financial-advisor/arizona/mesa/mark-rauguth-1564114",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "1 of 1 people checked"
+}
