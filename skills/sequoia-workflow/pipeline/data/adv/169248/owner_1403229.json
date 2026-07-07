@@ -1,0 +1,341 @@
+{
+  "basicInformation": {
+    "individualId": 1403229,
+    "firstName": "PAUL",
+    "middleName": "CHRISTOPHER",
+    "lastName": "OHANIAN",
+    "otherNames": [],
+    "bcScope": "Expanded",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "5/19/1989"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 169248,
+      "firmName": "SCOTTSDALE WEALTH PLANNING, INC.",
+      "iaOnly": "Y",
+      "registrationBeginDate": "1/21/2014",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "113207",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "546065",
+          "street1": "7033 E. MAIN STREET",
+          "street2": "SUITE 104",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85251",
+          "latitude": "33.494096",
+          "longitude": "-111.922881",
+          "geoLocation": "33.494096,-111.922881",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "01/17/2014"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "53073",
+      "firmId": 108219,
+      "firmName": "BMA SECURITIES",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "3/17/2008",
+      "registrationEndDate": "1/21/2014",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "64721",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "66771",
+      "firmId": 133763,
+      "firmName": "AIG FINANCIAL ADVISORS, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "10/31/2005",
+      "registrationEndDate": "3/14/2008",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "38083",
+      "firmId": 20068,
+      "firmName": "SUNAMERICA SECURITIES, INC.",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "10/29/2002",
+      "registrationEndDate": "10/31/2005",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "27154",
+      "firmId": 7471,
+      "firmName": "PRUDENTIAL SECURITIES INCORPORATED",
+      "city": "NEW YORK",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "6/20/2000",
+      "registrationEndDate": "10/4/2002",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "13034",
+      "firmId": 2580,
+      "firmName": "THE LINCOLN NATIONAL LIFE INSURANCE COMPANY",
+      "city": "FORT WAYNE",
+      "state": "IN",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "9/17/1992",
+      "registrationEndDate": "8/17/2000",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "34425",
+      "firmId": 6626,
+      "firmName": "WESTAMERICA INVESTMENT GROUP",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "12/14/1992",
+      "registrationEndDate": "6/22/2000",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "42530",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "14685",
+      "firmId": 3978,
+      "firmName": "LINCOLN FINANCIAL ADVISORS CORPORATION",
+      "city": "FORT WAYNE",
+      "state": "IN",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "9/17/1992",
+      "registrationEndDate": "3/31/1993",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "14657",
+      "firmId": 4082,
+      "firmName": "PML SECURITIES COMPANY",
+      "city": "NEWARK",
+      "state": "DE",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "10/16/1989",
+      "registrationEndDate": "9/16/1992",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "16198",
+      "firmId": 5496,
+      "firmName": "SUN INVESTMENT SERVICES COMPANY",
+      "city": "WELLESLEY HILLS",
+      "state": "MA",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "5/23/1989",
+      "registrationEndDate": "10/5/1989",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "28543",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16791",
+      "firmId": 6363,
+      "firmName": "IDS MARKETING CORPORATION",
+      "registrationBeginDate": "10/23/1985",
+      "registrationEndDate": "11/30/1985",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "67719",
+      "iaSECNumberType": "801",
+      "firmId": 143420,
+      "firmName": "EXETER FINANCIAL, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "6/2/2008",
+      "registrationEndDate": "2/10/2014",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "67203",
+      "iaSECNumberType": "801",
+      "firmId": 141926,
+      "firmName": "WEALTHTRUST ARIZONA",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "USA",
+      "registrationBeginDate": "12/19/2006",
+      "registrationEndDate": "3/3/2008",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "52723",
+      "iaSECNumberType": "801",
+      "firmId": 107582,
+      "firmName": "WEALTH TRUST - ARIZONA LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "4/4/2003",
+      "registrationEndDate": "12/7/2006",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "10/8/2021",
+      "disclosureType": "Regulatory",
+      "disclosureResolution": "Final",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 20,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "DocketNumberFDA": "",
+        "DocketNumberAAO": "",
+        "Initiated By": "Commodity Futures Trading Commission",
+        "Allegations": "The Commodity Futures Trading Commission (\"Commission\") has reason to believe that from at least July 25, 2014 to at least March 22, 2019 (\"Relevant Period\"), Paul C. Ohanian (\"Ohanian\") and Scottsdale Wealth Planning, Inc. (\"Scottsdale Wealth,\" and together with Ohanian, \"Respondents\") violated Sections 4b(a)(1)(A) and (C), 4o(1), and 4m(1) of the Commodity Exchange Act (\"Act\"), 7 U.S.C. \u00a7\u00a7 6b(a)(1)(A), (C), 6o(1), 6m(1) (2018). Therefore, the Commission deems it appropriate and in the public interest that public administrative proceedings be, and hereby are, instituted to determine whether Respondents engaged in the violations set forth herein and to determine whether any order should be issued imposing remedial sanctions. The Commission finds that Ohanian, the owner of Scottsdale Wealth and an SEC-registered investment advisor, advised sixteen of his clients (\"pool participants\") to contribute funds to a commodity pool (the \"Pool\"). During the Relevant Period, the principal of the Pool's CFTC-registered commodity pool operator and its affiliated CFTC-registered introducing broker (1) charged the pool participants disproportionate and excessive fees in connection with their investment in the Pool that they never disclosed; (2) changed the Pool's trading strategy without disclosing this change to the pool participants; (3) beginning in July 2018, traded the Pool's assets in a manner that resulted in a loss of over 90 percent of the Pool's assets, which resulted in significant losses to the 13 pool participants who remained in the Pool; and (4) concealed those losses from pool participants. At the same time that the principal of the pool engaged in this conduct, during the Relevant Period, Ohanian and Scottsdale Wealth (by and through Ohanian) advised the prospective pool participants to contribute to the Pool and periodically advised the pool participants that the Pool remained an appropriate investment. In the course of doing so, Ohanian and Scottsdale Wealth intentionally or recklessly omitted material facts from their communications with pool participants, including (1) the full extent of Ohanian's relationship with and compensation from the principal of the Pool and certain entities the principal of the Pool owned; (2) Ohanian's concerns regarding the fees associated with the Pool; (3) Ohanian's concerns regarding the principal of the Pool's change in trading strategy; and (4) details relating to the Pool's near-total loss in value beginning in July 2018. In addition, Respondents failed to register with the Commission as commodity trading advisors. These acts, omissions, and failures violated antifraud and other provisions of the Act. Based on the foregoing, the Commission finds that, Ohanian and Scottsdale Wealth Planning, Inc. violated Sections 4b(a)(1)(A) and (C), 4o(1), and 4m(1) of the Act, 7 U.S.C. \u00a7\u00a7 6b(a)(1)(A), (C), 6o(1), 6m(1) (2018).",
+        "Resolution": "Order",
+        "SanctionDetails": [
+          {
+            "Sanctions": "Cease and Desist"
+          },
+          {
+            "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+            "SanctionDetails": [
+              {
+                "Amount": "$169,000.00"
+              }
+            ]
+          },
+          {
+            "Sanctions": "Prohibition"
+          },
+          {
+            "Sanctions": "Restitution",
+            "SanctionDetails": [
+              {
+                "Amount": "$338,000.00"
+              }
+            ]
+          },
+          {
+            "Sanctions": "Undertaking"
+          }
+        ]
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Regulatory Event",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 3,
+    "principalExamCount": 1,
+    "productExamCount": 1
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "4/3/2003",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "6/10/1993",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "6/15/1989",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 4",
+      "examName": "Registered Options Principal Examination",
+      "examTakenDate": "9/27/2007",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "5/20/1989",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "1/21/2014"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
