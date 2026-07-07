@@ -1,0 +1,220 @@
+{
+  "basicInformation": {
+    "individualId": 4495410,
+    "firstName": "JOSHUA",
+    "middleName": "ADAM",
+    "lastName": "GARDNER",
+    "otherNames": [],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "3/9/2002"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 333708,
+      "firmName": "PROSPER PRIVATE WEALTH",
+      "iaOnly": "Y",
+      "registrationBeginDate": "12/2/2024",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "132061",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "853642",
+          "street1": "4140 E BASELINE ROAD",
+          "street2": "SUITE 101",
+          "city": "MESA",
+          "cityAlias": [
+            "MESA"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85206",
+          "latitude": "33.39739",
+          "longitude": "-111.719192",
+          "geoLocation": "33.39739,-111.719192",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "08/31/2024"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "23292",
+      "firmId": 7784,
+      "firmName": "FIDELITY BROKERAGE SERVICES LLC",
+      "city": "CHANDLER",
+      "state": "AZ",
+      "registrationBeginDate": "4/15/2013",
+      "registrationEndDate": "4/19/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "52208",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16402",
+      "firmId": 5685,
+      "firmName": "PRUCO SECURITIES, LLC.",
+      "city": "SOUTH JORDON",
+      "state": "UT",
+      "registrationBeginDate": "1/29/2002",
+      "registrationEndDate": "4/9/2013",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "76631",
+      "iaSECNumberType": "801",
+      "firmId": 157091,
+      "firmName": "SUMMIT GLOBAL INVESTMENTS, LLC",
+      "city": "Gilbert",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "5/26/2023",
+      "registrationEndDate": "4/9/2025",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "112027",
+      "iaSECNumberType": "801",
+      "firmId": 288590,
+      "firmName": "FIDELITY PERSONAL AND WORKPLACE ADVISORS",
+      "city": "BOSTON",
+      "state": "MA",
+      "country": "United States",
+      "registrationBeginDate": "7/13/2018",
+      "registrationEndDate": "4/21/2023",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "13243",
+      "iaSECNumberType": "801",
+      "firmId": 104555,
+      "firmName": "STRATEGIC ADVISERS LLC",
+      "city": "CHANDLER",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "4/24/2013",
+      "registrationEndDate": "7/13/2018",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "52208",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16402",
+      "firmId": 5685,
+      "firmName": "PRUDENTIAL FINANCIAL PLANNING SERVICES",
+      "city": "SOUTH JORDON",
+      "state": "UT",
+      "country": "United States",
+      "registrationBeginDate": "5/14/2002",
+      "registrationEndDate": "4/9/2013",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 2,
+    "productExamCount": 3
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "4/30/2002",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "2/2/2002",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 9",
+      "examName": "General Securities Sales Supervisor - Options Module Examination",
+      "examTakenDate": "10/15/2013",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 10",
+      "examName": "General Securities Sales Supervisor - General Module Examination",
+      "examTakenDate": "6/22/2013",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "7/7/2005",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "1/28/2002",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "12/2/2024"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/5/2025"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
