@@ -2,6 +2,8 @@
 
 **One standardized format for everyone.** Every person's post uses the exact field labels, order, and structure below — regardless of how they've posted before. The point of the skill is to normalize the channel to a single consistent format. Do not copy a person's prior idiosyncratic labels.
 
+**Scope note (confirmed 2026-07-07):** this template is SoF-style only. Newry's documented Weekly Project Scorecard (budget status, progress vs. workplan, people/firm capability development, 1–5 value-delivery and relationship scores) is deliberately excluded — current #weekly_call_in practice doesn't use it. Not an oversight.
+
 ## The canonical template (one block per project)
 
 Slack uses single asterisks for bold. Field labels are bolded exactly as written; values are plain. Fields, in this order, always:
@@ -27,7 +29,7 @@ Use the canonical labels above in every case. The "Source" column says where the
 
 | Field | Source |
 |---|---|
-| Client and Project Code | The code the team uses for the project (as seen in prior channel posts); Airtable Project Name for the descriptor. Match internally on client + fuzzy code — don't emit Airtable's differing code if the channel uses another. |
+| Client and Project Code | **Airtable Project Code** (the canonical code) + Airtable Project Name for the short descriptor. Match internally on client + fuzzy code to find the record, but always emit the Airtable code — normalize any improvised channel variant (IN02→INGEV02, DUP038→DUP38) to it. |
 | Team | Airtable Project Roles (all staff on the project), first names. |
 | Purpose | Carry forward from last post if it exists (static), but conform the label to *Purpose*. Else synthesize from Airtable Project Description / Client Goals / Firm Goals. |
 | Findings / Status | **The week's work** — synthesized from transcripts, SharePoint changes, email, calendar (see `data-sources.md`). The delta since last post, not a repeat. |
@@ -43,7 +45,7 @@ Prior posts in the channel use inconsistent labels. **Convert all of these to th
 - "Background / Purpose" → **Purpose**
 - Missing *Issues / Risks / Needs* (some people omit it) → **always include it**, default "None"
 - Underscore dividers between projects → drop; use a blank line between blocks
-- Free-form codes ("ALTA, ALTA01") → the clean project code + short name
+- Free-form or improvised codes ("ALTA, ALTA01", "IN02", "DUP038") → the canonical Airtable project code + short name
 
 ## Worked examples (content shape — labels shown are already normalized)
 
@@ -65,7 +67,7 @@ These illustrate the substance/tone of a good block. The labels here are the can
 
 ### Wrapping-up project (note: original was posted with non-standard "Background / Purpose" + "Findings/Progress" labels — shown here normalized)
 ```
-*Client and Project Code:* DUP038 - Tyvek Pipeline Development
+*Client and Project Code:* DUP38 - Tyvek Pipeline Development
 *Team:* Kasey, Erin, Nicole, Christian
 *Purpose:* Identify/validate high-potential growth opportunities for HC and C&IC businesses where a Tyvek-adjacent material can address unmet needs and DuPont has a right-to-win.
 *Findings / Status:* See attached SoFs
