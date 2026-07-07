@@ -1,0 +1,191 @@
+{
+  "basicInformation": {
+    "firmId": 282003,
+    "firmName": "PINNACLE PEAK PRIVATE CLIENT GROUP, LLC",
+    "otherNames": [
+      "JACK & ASSOCIATES, LLC",
+      "PINNACLE PEAK PRIVATE CLIENT GROUP, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "02/27/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "110993",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "a49fc46c-3723-4b85-ab3c-c7acfe6dfee1"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "18867 N. THOMPSON PEAK PARKWAY",
+      "street2": "STE #225",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85255"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 51957,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "2/28/2026"
+    },
+    {
+      "editionID": 51958,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "2/28/2026"
+    },
+    {
+      "editionID": 51959,
+      "type": "IA_INDVL",
+      "generatedOn": "2/28/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "8/22/2017"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "9/7/2017"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "8/22/2017"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "8/22/2017"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "8/1/2019"
+    },
+    {
+      "jurisdiction": "Georgia",
+      "status": "Notice Filed",
+      "effectiveDate": "8/22/2017"
+    },
+    {
+      "jurisdiction": "Idaho",
+      "status": "Notice Filed",
+      "effectiveDate": "2/28/2024"
+    },
+    {
+      "jurisdiction": "Louisiana",
+      "status": "Notice Filed",
+      "effectiveDate": "1/22/2019"
+    },
+    {
+      "jurisdiction": "Maryland",
+      "status": "Notice Filed",
+      "effectiveDate": "3/25/2022"
+    },
+    {
+      "jurisdiction": "Michigan",
+      "status": "Notice Filed",
+      "effectiveDate": "2/28/2024"
+    },
+    {
+      "jurisdiction": "Montana",
+      "status": "Notice Filed",
+      "effectiveDate": "2/14/2023"
+    },
+    {
+      "jurisdiction": "Nebraska",
+      "status": "Notice Filed",
+      "effectiveDate": "3/9/2021"
+    },
+    {
+      "jurisdiction": "Nevada",
+      "status": "Notice Filed",
+      "effectiveDate": "8/1/2019"
+    },
+    {
+      "jurisdiction": "New Hampshire",
+      "status": "Notice Filed",
+      "effectiveDate": "1/22/2019"
+    },
+    {
+      "jurisdiction": "New York",
+      "status": "Notice Filed",
+      "effectiveDate": "2/28/2024"
+    },
+    {
+      "jurisdiction": "North Carolina",
+      "status": "Notice Filed",
+      "effectiveDate": "2/28/2024"
+    },
+    {
+      "jurisdiction": "Oklahoma",
+      "status": "Notice Filed",
+      "effectiveDate": "2/14/2023"
+    },
+    {
+      "jurisdiction": "Oregon",
+      "status": "Notice Filed",
+      "effectiveDate": "3/9/2021"
+    },
+    {
+      "jurisdiction": "Pennsylvania",
+      "status": "Notice Filed",
+      "effectiveDate": "2/14/2023"
+    },
+    {
+      "jurisdiction": "Tennessee",
+      "status": "Notice Filed",
+      "effectiveDate": "2/14/2023"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "8/22/2017"
+    },
+    {
+      "jurisdiction": "Virginia",
+      "status": "Notice Filed",
+      "effectiveDate": "2/14/2023"
+    },
+    {
+      "jurisdiction": "Washington",
+      "status": "Notice Filed",
+      "effectiveDate": "8/1/2019"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1012743,
+        "brochureName": "FORM ADV PART 2A APPENDIX 1",
+        "dateSubmitted": "2/27/2026"
+      },
+      {
+        "brochureVersionID": 1012742,
+        "brochureName": "FORM ADV PART 2A - FIRM BROCHURE",
+        "dateSubmitted": "2/27/2026"
+      }
+    ]
+  }
+}
