@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "JACK, BRIAN, PATRICK",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "PARTNER, MANAGING DIRECTOR AND CHIEF COMPLIANCE OFFICER",
+      "since": "01/2016",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2569773",
+      "raw_id": "2569773"
+    },
+    {
+      "full_legal_name": "FLORES, TERESA",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "OPERATIONS MANAGER",
+      "since": "01/2016",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "2686520",
+      "raw_id": "2686520"
+    },
+    {
+      "full_legal_name": "FIGUEROA, MATTHEW, JOSEPH",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING DIRECTOR",
+      "since": "03/2017",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "3121253",
+      "raw_id": "3121253"
+    }
+  ]
+}
