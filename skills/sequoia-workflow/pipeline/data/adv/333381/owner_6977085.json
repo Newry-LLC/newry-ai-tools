@@ -1,0 +1,271 @@
+{
+  "basicInformation": {
+    "individualId": 6977085,
+    "firstName": "Trevor",
+    "middleName": "Robert",
+    "lastName": "Cross",
+    "otherNames": [],
+    "bcScope": "Active",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "3/14/2019"
+  },
+  "currentEmployments": [
+    {
+      "firmId": 42150,
+      "firmName": "FORTUNE FINANCIAL SERVICES, INC.",
+      "iaOnly": "N",
+      "registrationBeginDate": "9/2/2025",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE",
+      "bdSECNumber": "49727",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "875715",
+          "street1": "7702 East Doubletree Ranch Road",
+          "street2": "Suite 300",
+          "city": "Scottsdale",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85258",
+          "latitude": "33.560513",
+          "longitude": "-111.885972",
+          "geoLocation": "33.560513,-111.885972",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "09/02/2025"
+        }
+      ]
+    }
+  ],
+  "currentIAEmployments": [
+    {
+      "firmId": 42150,
+      "firmName": "FORTUNE FINANCIAL SERVICES, INC.",
+      "iaOnly": "N",
+      "registrationBeginDate": "9/2/2025",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE",
+      "bdSECNumber": "49727",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "7702 E Doubletree Ranch Road",
+          "street2": "Suite 300",
+          "city": "Scottsdale",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85258",
+          "latitude": "33.560513",
+          "longitude": "-111.885972",
+          "geoLocation": "33.560513,-111.885972",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "09/02/2025"
+        }
+      ]
+    },
+    {
+      "firmId": 333381,
+      "firmName": "GPS INVESTMENTS",
+      "iaOnly": "Y",
+      "registrationBeginDate": "12/2/2024",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "131396",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "Y",
+          "city": "MESA",
+          "state": "AZ",
+          "country": "United States",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "11/27/2024"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "28580",
+      "firmId": 13092,
+      "firmName": "MUTUAL SECURITIES, INC.",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "registrationBeginDate": "3/12/2021",
+      "registrationEndDate": "9/2/2025",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "44264",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "27250",
+      "firmId": 10409,
+      "firmName": "MML INVESTORS SERVICES, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "3/15/2019",
+      "registrationEndDate": "3/15/2021",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "78089",
+      "iaSECNumberType": "801",
+      "firmId": 167658,
+      "firmName": "MUTUAL ADVISORS, LLC",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "3/26/2021",
+      "registrationEndDate": "12/19/2024",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "44264",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "27250",
+      "firmId": 10409,
+      "firmName": "MML INVESTORS SERVICES, LLC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "7/24/2019",
+      "registrationEndDate": "3/15/2021",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "6/26/2019",
+      "examScope": "BOTH"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 7TO",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "3/15/2019",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "11/28/2018",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 1,
+    "approvedFinraRegistrationCount": 1,
+    "approvedStateRegistrationCount": 7,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "12/2/2024"
+    },
+    {
+      "state": "Arizona",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/2/2025"
+    },
+    {
+      "state": "Florida",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/2/2025"
+    },
+    {
+      "state": "Illinois",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/2/2025"
+    },
+    {
+      "state": "South Dakota",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/2/2025"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "3/6/2025"
+    },
+    {
+      "state": "Texas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/2/2025"
+    },
+    {
+      "state": "Virginia",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/2/2025"
+    },
+    {
+      "state": "Wisconsin",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/2/2025"
+    }
+  ],
+  "registeredSROs": [
+    {
+      "sro": "FINRA",
+      "status": "APPROVED",
+      "CategoriesList": [
+        "Full Registration/General Securities Representative"
+      ]
+    }
+  ],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
