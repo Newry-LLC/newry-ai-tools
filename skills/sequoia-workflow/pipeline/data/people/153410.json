@@ -1,0 +1,72 @@
+{
+  "crd": "153410",
+  "name": "Galvin, Gaustad & Stein, LLC",
+  "people": [
+    {
+      "raw_name": "STEIN, MARK, PAUL",
+      "name": "Mark Paul Stein",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MP STEIN, LLC MEMBER AND MANAGER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "11/2018",
+      "crd": "1153586",
+      "is_partner_mention": false,
+      "seniority_score": 55,
+      "bio_note": "Principal at Galvin, Gaustad & Stein (CLU, CFP). Longtime Chartered Life Underwriter and CERTIFIED FINANCIAL PLANNER professional with over 30 years in the financial industry (career start 1985 per industry records). Prior to co-founding the firm, was President of AeGIS Financial Group, Inc. for 18 years. A nationally recognized public speaker for accounting and consumer groups, serves on the Arizona Family College Savings Program Oversight Committee (Arizona's 529 Plan), and is a past President of the Greater Phoenix Financial Planning Association.",
+      "bio_source": "Firm website (ggsadvisors.com) corroborated by Beverly Hills Chamber of Commerce member profile (members.beverlyhillschamber.com/list/member/galvin-gaustad-stein-llc-wealth-management-mark-p-stein-cfp-clu-principal-54943), which details his AeGIS Financial Group presidency and industry leadership roles",
+      "bio_confidence": "high",
+      "phase4_status": "verified",
+      "phase4_checked_date": "2026-07-03"
+    },
+    {
+      "raw_name": "GAUSTAD, STEPHEN, LEE",
+      "name": "Stephen Lee Gaustad",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "SLG82, LLC MEMBER AND MANAGER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "08/2020",
+      "crd": "1150891",
+      "is_partner_mention": false,
+      "seniority_score": 55,
+      "bio_note": "Principal at Galvin, Gaustad & Stein. Investment Advisor Representative with over 28 years of experience in the finance industry. Co-manages the firm alongside Mark Stein and Stephen Galvin.",
+      "bio_source": "Firm website (ggsadvisors.com) corroborated by SEC Investment Adviser Public Disclosure record (adviserinfo.sec.gov/individual/summary/1346615) and Wealthminder advisor profile (wealthminder.com/financial-advisors-scottsdale-AZ/stephen-gaustad/75162) \u2014 no narrative career detail beyond tenure found independently",
+      "bio_confidence": "low",
+      "phase4_status": "not_checked"
+    },
+    {
+      "raw_name": "GALVIN, STEPHEN, RICHARD",
+      "name": "Stephen Richard Galvin",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "STEPHEN R GALVIN ASSET MANAGEMENT, LLC MEMBER AND MANAGER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "11/2019",
+      "crd": "1346615",
+      "is_partner_mention": false,
+      "seniority_score": 55,
+      "bio_note": "Principal at Galvin, Gaustad & Stein. Investment Advisor Representative who began his finance career in 1985, roughly 40 years of industry experience. Co-manages the firm alongside Mark Stein and Stephen Gaustad.",
+      "bio_source": "Firm website (ggsadvisors.com) corroborated by SEC Investment Adviser Public Disclosure record (adviserinfo.sec.gov/individual/summary/1346615) noting 1985 career start \u2014 no narrative career detail beyond tenure found independently",
+      "bio_confidence": "low",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "Galvin, Gaustad & Stein, LLC was established in 2010 and is managed by its three named principals; the firm reported $1.22B AUM as of year-end 2024 and has expanded to offices in Beverly Hills, New York, Seattle, Denver, and Cleveland.",
+    "source": "U.S. News Financial Advisors (money.usnews.com/financial-advisors/firm/galvin-gaustad-&-stein-llc-153410)",
+    "confidence": "medium"
+  },
+  "phase4_firm_summary": "1 of 3 people checked"
+}
