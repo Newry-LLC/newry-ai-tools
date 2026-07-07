@@ -1,0 +1,127 @@
+{
+  "basicInformation": {
+    "firmId": 317615,
+    "firmName": "FORTITUDE FAMILY OFFICE",
+    "otherNames": [
+      "FORTITUDE FAMILY OFFICE",
+      "FORTITUDE FAMILY OFFICE, LLC"
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/24/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "122907",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "948d2b22-65df-4f10-a9a6-ac34f19ef966"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "7500 N DOBSON RD",
+      "street2": "SUITE 151",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85256"
+    }
+  },
+  "accountantSurpriseExams": [
+    {
+      "accountantFirmName": "ASHLAND PARTNERS & COMPANY LLP",
+      "filingDate": "06/25/2026",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "0423A984000801F0023A5FA2006269F9056C8CC0"
+    },
+    {
+      "accountantFirmName": "ASHLAND PARTNERS & COMPANY LLP",
+      "filingDate": "07/24/2025",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "03D060C6000801E704DFDD2105D5BD19056C8CC0"
+    },
+    {
+      "accountantFirmName": "ASHLAND PARTNERS & COMPANY LLP",
+      "filingDate": "08/27/2024",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "0296F602000801DD0230E9C105364801056C8CC0"
+    },
+    {
+      "accountantFirmName": "ASHLAND PARTNERS & COMPANY LLP",
+      "filingDate": "06/26/2023",
+      "fileStatus": "FILE",
+      "encryptedFilingID": "000BF55E000801CF04BBDA6104672AE9056C8CC0"
+    }
+  ],
+  "compilationData": [
+    {
+      "editionID": 52622,
+      "type": "IA_INDVL",
+      "generatedOn": "6/26/2026"
+    },
+    {
+      "editionID": 52623,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "6/26/2026"
+    },
+    {
+      "editionID": 52624,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "6/26/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "12/21/2021"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "12/21/2021"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "1/6/2023"
+    },
+    {
+      "jurisdiction": "Nevada",
+      "status": "Notice Filed",
+      "effectiveDate": "11/4/2025"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "8/11/2023"
+    },
+    {
+      "jurisdiction": "Wyoming",
+      "status": "Notice Filed",
+      "effectiveDate": "11/4/2025"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1023791,
+        "brochureName": "FORTITUDE FAMILY OFFICE ADV PART 2A",
+        "dateSubmitted": "3/23/2026",
+        "lastConfirmed": "3/22/2022"
+      }
+    ]
+  }
+}
