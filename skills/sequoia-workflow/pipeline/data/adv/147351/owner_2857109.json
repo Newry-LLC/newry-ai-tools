@@ -1,0 +1,144 @@
+{
+  "basicInformation": {
+    "individualId": 2857109,
+    "firstName": "RICHARD",
+    "middleName": "ALAN",
+    "lastName": "SIEGEL",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "10/11/2000"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 147351,
+      "firmName": "ARQ WEALTH ADVISORS, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "2/20/2025",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "368700",
+          "street1": "8605 E. RAINTREE DR",
+          "street2": "STE. 240",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85260",
+          "latitude": "33.610962",
+          "longitude": "-111.890114",
+          "geoLocation": "33.610962,-111.890114",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "01/01/2019"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "107346",
+      "iaSECNumberType": "801",
+      "firmId": 147351,
+      "firmName": "ARQ WEALTH ADVISORS, LLC",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "7/21/2008",
+      "registrationEndDate": "2/12/2025",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "49601",
+      "iaSECNumberType": "801",
+      "firmId": 106715,
+      "firmName": "VANGUARD ADVISERS INC",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "10/2/2000",
+      "registrationEndDate": "7/17/2008",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 1,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "9/14/2000",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "5/8/1997",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "7/26/2004",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "8/31/2000",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "4/17/1997",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
