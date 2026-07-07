@@ -1,0 +1,325 @@
+{
+  "basicInformation": {
+    "individualId": 2686520,
+    "firstName": "TERESA",
+    "lastName": "FLORES",
+    "otherNames": [
+      "TERESA  FLORES-YODER"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "10/17/2001"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 153902,
+      "firmName": "ASHTON THOMAS PRIVATE WEALTH",
+      "iaOnly": "Y",
+      "registrationBeginDate": "3/11/2026",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "71512",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "18867 North Thompson Peak Parkway",
+          "street2": "Suite 225",
+          "city": "Scottsdale",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85255",
+          "latitude": "33.663643",
+          "longitude": "-111.8085",
+          "geoLocation": "33.663643,-111.8085",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "03/04/2026"
+        }
+      ]
+    },
+    {
+      "firmId": 282003,
+      "firmName": "PINNACLE PEAK PRIVATE CLIENT GROUP, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "2/3/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "110993",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "622520",
+          "street1": "18867 N. THOMPSON PEAK PARKWAY",
+          "street2": "STE #225",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85255",
+          "latitude": "33.663643",
+          "longitude": "-111.8085",
+          "geoLocation": "33.663643,-111.8085",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "01/22/2016"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "46844",
+      "firmId": 35747,
+      "firmName": "PURSHE KAPLAN STERLING INVESTMENTS",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "registrationBeginDate": "9/9/2021",
+      "registrationEndDate": "12/31/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "56943",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "12680",
+      "firmId": 70,
+      "firmName": "BCG SECURITIES, INC.",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "registrationBeginDate": "1/10/2017",
+      "registrationEndDate": "9/9/2021",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "46844",
+      "firmId": 35747,
+      "firmName": "PURSHE KAPLAN STERLING INVESTMENTS",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "registrationBeginDate": "1/22/2016",
+      "registrationEndDate": "1/11/2017",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "28543",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16791",
+      "firmId": 6363,
+      "firmName": "AMERIPRISE FINANCIAL SERVICES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "5/3/2010",
+      "registrationEndDate": "2/8/2016",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "7571",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "497",
+      "firmId": 8158,
+      "firmName": "ROBERT W. BAIRD & CO. INCORPORATED",
+      "city": "MILWAUKEE",
+      "state": "WI",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "11/3/2008",
+      "registrationEndDate": "5/4/2010",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "16752",
+      "firmId": 5979,
+      "firmName": "H&R BLOCK FINANCIAL ADVISORS, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "4/30/2007",
+      "registrationEndDate": "10/22/2008",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "7163",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16267",
+      "firmId": 8174,
+      "firmName": "UBS FINANCIAL SERVICES INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "8/12/2006",
+      "registrationEndDate": "5/15/2007",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "108049",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "15204",
+      "firmId": 665,
+      "firmName": "PIPER JAFFRAY & CO.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "2/14/2006",
+      "registrationEndDate": "8/12/2006",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "14172",
+      "firmId": 7556,
+      "firmName": "MORGAN STANLEY DW INC.",
+      "city": "PURCHASE",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "11/23/2001",
+      "registrationEndDate": "2/13/2006",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "68122",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "35359",
+      "firmId": 17868,
+      "firmName": "U.S. BANCORP INVESTMENTS, INC.",
+      "city": "SAINT PAUL",
+      "state": "MN",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "4/9/2001",
+      "registrationEndDate": "5/25/2001",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "56943",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "12680",
+      "firmId": 70,
+      "firmName": "BCG SECURITIES, INC.",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "1/24/2017",
+      "registrationEndDate": "9/9/2021",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "28543",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16791",
+      "firmId": 6363,
+      "firmName": "AMERIPRISE FINANCIAL SERVICES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "10/8/2012",
+      "registrationEndDate": "2/8/2016",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "7571",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "497",
+      "firmId": 8158,
+      "firmName": "ROBERT W. BAIRD & CO. INCORPORATED",
+      "city": "MILWAUKEE",
+      "state": "WI",
+      "country": "United States",
+      "registrationBeginDate": "11/3/2008",
+      "registrationEndDate": "5/4/2010",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "10/5/2012",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "6/13/2000",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "4/6/2001",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "2/3/2016"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
