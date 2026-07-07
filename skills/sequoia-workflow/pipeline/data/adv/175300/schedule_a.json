@@ -1,0 +1,70 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "CALLAGHAN, DONALD, EDWARD",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING PARTNER",
+      "since": "03/2015",
+      "ownership_code": "C",
+      "ownership_pct": "25-50%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "38501",
+      "raw_id": "38501"
+    },
+    {
+      "full_legal_name": "THOMPSON, CURT, RANDALL",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MANAGING PARTNER",
+      "since": "01/2018",
+      "ownership_code": "D",
+      "ownership_pct": "50-75%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2609785",
+      "raw_id": "2609785"
+    },
+    {
+      "full_legal_name": "CALLAGHAN, HANA",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "HR CONSULTANT",
+      "since": "12/2019",
+      "ownership_code": "A",
+      "ownership_pct": "5-10%",
+      "control_person": false,
+      "public_reporting": false,
+      "crd": "4512142",
+      "raw_id": "4512142"
+    },
+    {
+      "full_legal_name": "BOTTICELLI, NICHOLAS, GUIDO",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF INVESTMENT STRATEGIST",
+      "since": "09/2020",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "6336807",
+      "raw_id": "6336807"
+    },
+    {
+      "full_legal_name": "UNDERWOOD, MATTHEW, KEITH",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER",
+      "since": "01/2025",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5907386",
+      "raw_id": "5907386"
+    }
+  ]
+}
