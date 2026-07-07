@@ -1,0 +1,108 @@
+{
+  "basicInformation": {
+    "individualId": 1263145,
+    "firstName": "TIMOTHY",
+    "middleName": "ALAN",
+    "lastName": "CARPENTER",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "3/2/2010"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 151365,
+      "firmName": "BILTMORE WEALTH MANAGEMENT, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "3/3/2010",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "415098",
+          "street1": "1400 E. SOUTHERN AVENUE",
+          "street2": "SUITE 650",
+          "city": "TEMPE",
+          "cityAlias": [
+            "TEMPE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85282",
+          "latitude": "33.393896",
+          "longitude": "-111.929062",
+          "geoLocation": "33.393896,-111.929062",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "01/22/2010"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "3/2/2010",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "6/19/1984",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 3",
+      "examName": "National Commodity Futures Examination",
+      "examTakenDate": "11/9/1987",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "5/19/1984",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/3/2010"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
