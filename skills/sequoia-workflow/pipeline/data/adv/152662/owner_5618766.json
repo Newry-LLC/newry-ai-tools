@@ -1,0 +1,194 @@
+{
+  "basicInformation": {
+    "individualId": 5618766,
+    "firstName": "MARKELL",
+    "middleName": "ANTHONY",
+    "lastName": "STAFFIERI",
+    "otherNames": [],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "1/20/2009"
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [
+    {
+      "firmId": 310873,
+      "firmName": "CW ADVISORS, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "2/2/2026",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "119667",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "2801 N THANKSGIVING WAY",
+          "street2": "190",
+          "city": "LEHI",
+          "cityAlias": [
+            "CEDAR PASS",
+            "EAGLE MOUNTAIN",
+            "EAGLE MTN",
+            "LEHI",
+            "SARATOGA",
+            "SARATOGA SPGS",
+            "SARATOGA SPRINGS"
+          ],
+          "state": "UT",
+          "country": "United States",
+          "zipCode": "84043",
+          "latitude": "40.402096",
+          "longitude": "-111.878044",
+          "geoLocation": "40.402096,-111.878044",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "02/02/2026"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "47805",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "46167",
+      "firmId": 32444,
+      "firmName": "FIRST ALLIED SECURITIES, INC.",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "registrationBeginDate": "11/13/2009",
+      "registrationEndDate": "5/16/2017",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "23151",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "14609",
+      "firmId": 3870,
+      "firmName": "LINCOLN FINANCIAL SECURITIES CORPORATION",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "registrationBeginDate": "1/21/2009",
+      "registrationEndDate": "11/30/2009",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "71109",
+      "iaSECNumberType": "801",
+      "firmId": 152662,
+      "firmName": "ROVIN CAPITAL",
+      "city": "Lehi",
+      "state": "UT",
+      "country": "United States",
+      "registrationBeginDate": "8/17/2011",
+      "registrationEndDate": "2/9/2026",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "66653",
+      "iaSECNumberType": "801",
+      "firmId": 137888,
+      "firmName": "FIRST ALLIED ADVISORY SERVICES, INC.",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "country": "United States",
+      "registrationBeginDate": "7/2/2012",
+      "registrationEndDate": "5/16/2017",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "47805",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "46167",
+      "firmId": 32444,
+      "firmName": "FIRST ALLIED SECURITIES, INC.",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "country": "United States",
+      "registrationBeginDate": "3/9/2010",
+      "registrationEndDate": "7/2/2012",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "N",
+  "iaDisclosureFlag": "N",
+  "disclosures": [],
+  "iaDisclosures": [],
+  "examsCount": {
+    "stateExamCount": 3,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "12/2/2011",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "3/3/2010",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "3/2/2009",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "5/16/2017",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "1/20/2009",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Utah",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "2/2/2026"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
