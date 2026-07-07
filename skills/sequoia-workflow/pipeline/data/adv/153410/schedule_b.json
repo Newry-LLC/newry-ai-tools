@@ -1,0 +1,44 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "STEIN, MARK, PAUL",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "MP STEIN, LLC MEMBER AND MANAGER",
+      "since": "11/2018",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "1153586",
+      "raw_id": "1153586"
+    },
+    {
+      "full_legal_name": "GAUSTAD, STEPHEN, LEE",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "SLG82, LLC MEMBER AND MANAGER",
+      "since": "08/2020",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "1150891",
+      "raw_id": "1150891"
+    },
+    {
+      "full_legal_name": "GALVIN, STEPHEN, RICHARD",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "STEPHEN R GALVIN ASSET MANAGEMENT, LLC MEMBER AND MANAGER",
+      "since": "11/2019",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "1346615",
+      "raw_id": "1346615"
+    }
+  ]
+}
