@@ -1,0 +1,130 @@
+{
+  "basicInformation": {
+    "firmId": 146054,
+    "firmName": "KEY GROUP MANAGEMENT, INC.",
+    "otherNames": [
+      "KEY GROUP MANAGEMENT, INC."
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "05/18/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "114845",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "34114512-7638-4722-a8f2-2b140e498ac0"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "17100 E SHEA BLVD",
+      "street2": "SUITE 400A",
+      "city": "FOUNTAIN HILLS",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85268"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52388,
+      "type": "IA_INDVL",
+      "generatedOn": "5/19/2026"
+    },
+    {
+      "editionID": 52389,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "5/19/2026"
+    },
+    {
+      "editionID": 52390,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "5/19/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "4/1/2019"
+    },
+    {
+      "secJurisdiction": "Arizona",
+      "status": "Terminated",
+      "effectiveDate": "5/17/2019"
+    },
+    {
+      "secJurisdiction": "New Jersey",
+      "status": "Terminated",
+      "effectiveDate": "1/28/2020"
+    },
+    {
+      "secJurisdiction": "Texas",
+      "status": "Terminated",
+      "effectiveDate": "5/17/2019"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "4/1/2019"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "4/1/2019"
+    },
+    {
+      "jurisdiction": "Delaware",
+      "status": "Notice Filed",
+      "effectiveDate": "3/3/2026"
+    },
+    {
+      "jurisdiction": "Florida",
+      "status": "Notice Filed",
+      "effectiveDate": "4/1/2019"
+    },
+    {
+      "jurisdiction": "New Jersey",
+      "status": "Notice Filed",
+      "effectiveDate": "1/28/2020"
+    },
+    {
+      "jurisdiction": "New York",
+      "status": "Notice Filed",
+      "effectiveDate": "4/1/2019"
+    },
+    {
+      "jurisdiction": "Pennsylvania",
+      "status": "Notice Filed",
+      "effectiveDate": "3/4/2026"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "4/1/2019"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1045446,
+        "brochureName": "FORM ADV PART 2A - FIRM BROCHURE",
+        "dateSubmitted": "5/18/2026"
+      }
+    ]
+  }
+}
