@@ -1,0 +1,35 @@
+{
+  "crd": "332192",
+  "name": "Degreen Private Wealth, LLC",
+  "people": [
+    {
+      "raw_name": "DeGreen, Sam, Howard",
+      "name": "Sam Howard DeGreen",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "CHIEF EXECUTIVE OFFICER & CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "06/2024",
+      "crd": "6932311",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Founder, CEO, and CCO of DeGreen Private Wealth, launched August 2024. Series 65-licensed with about seven years in the industry; previously an investment advisor alongside his father at DeGreen Wealth Management, which was acquired by Allworth Financial in 2021. Builds the new firm around low-cost, transparent, tax-efficient ETF portfolios continuing a 30-year family tradition in wealth management. Hosts a weekly radio show/podcast, 'Freedom Through Finance,' Saturdays 6-7pm MST on News Talk 550 KFYI.",
+      "bio_source": "accessnewswire.com press release on the firm's 2024 launch, corroborated by linkedin.com/in/sam-degreen-07309412b and SEC IAPD individual report (reports.adviserinfo.sec.gov/reports/individual/individual_6932311.pdf)",
+      "bio_confidence": "high",
+      "phase4_status": "not_checked"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [],
+  "firm_note": {
+    "text": "DeGreen Private Wealth launched in August 2024 in Scottsdale as an independent, fee-only fiduciary RIA, built on a 30-year family tradition of wealth management (following the sale of the founder's prior firm, DeGreen Wealth Management, to Allworth Financial in 2021). The firm specializes in low-cost, tax-efficient, diversified ETF portfolios and partners with Charles Schwab for custody. Manages roughly $133M.",
+    "source": "accessnewswire.com press release 'DeGreen Private Wealth LLC Opens Its Doors in Scottsdale, Arizona' (also syndicated on newswire.com and europeanbusinessmagazine.com) \u2014 independent of the firm's own website",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "0 of 1 people checked"
+}
