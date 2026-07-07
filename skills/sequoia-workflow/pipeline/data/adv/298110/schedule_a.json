@@ -1,0 +1,57 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "BARKER, JACK, ANDREW",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF COMPLIANCE OFFICER",
+      "since": "03/2013",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2570575",
+      "raw_id": "2570575"
+    },
+    {
+      "full_legal_name": "JUNCTURE, INC.",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "OWNER",
+      "since": "03/2018",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "RHONEMUS, BARRY, SCOTT",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF EXECUTIVE OFFICER",
+      "since": "09/2010",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2801533",
+      "raw_id": "2801533"
+    },
+    {
+      "full_legal_name": "HAINES, BRADLEY, JAMES",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CHIEF INVESTMENT OFFICER",
+      "since": "04/2018",
+      "ownership_code": "NA",
+      "ownership_pct": "<5%",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2571132",
+      "raw_id": "2571132"
+    }
+  ]
+}
