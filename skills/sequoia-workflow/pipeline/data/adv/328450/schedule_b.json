@@ -1,0 +1,70 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "BRODT, ZACHARY, STUART",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "SLT CAPITAL LLC MANAGER",
+      "since": "12/2019",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5228473",
+      "raw_id": "5228473"
+    },
+    {
+      "full_legal_name": "SLT TRUST DATED DECEMBER 27, 2019",
+      "entity_type": "DE",
+      "entity_interest_owned": "",
+      "title_or_status": "SLT CAPITAL LLC MEMBER",
+      "since": "12/2019",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": null,
+      "raw_id": null
+    },
+    {
+      "full_legal_name": "BRODT, ZACHARY, STUART",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "SLT TRUST DATED DECEMBER 27, 2019 MANAGEMENT TRUSTEE",
+      "since": "12/2019",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "5228473",
+      "raw_id": "5228473"
+    },
+    {
+      "full_legal_name": "Brodt, Marisa, Marie",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "SLT TRUST DATED DECEMBER 27, 2019 MANAGEMENT TRUSTEE",
+      "since": "12/2019",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "7820311",
+      "raw_id": "7820311"
+    },
+    {
+      "full_legal_name": "SESATE, VICTOR, PASQUAL",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "SLT TRUST DATED DECEMBER 27, 2019 INDEPENDENT TRUSTEE",
+      "since": "12/2019",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "4715457",
+      "raw_id": "4715457"
+    }
+  ]
+}
