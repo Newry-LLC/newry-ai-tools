@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "ITKOE, ERIN, BETH",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "EBI TRUST U/T/A DATED JULY 9, 2024 GRANTOR AND TRUSTEE",
+      "since": "07/2025",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "4816412",
+      "raw_id": "4816412"
+    }
+  ]
+}
