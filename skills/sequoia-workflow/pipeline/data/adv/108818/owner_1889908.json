@@ -1,0 +1,129 @@
+{
+  "basicInformation": {
+    "individualId": 1889908,
+    "firstName": "JOHN",
+    "middleName": "EDWARD",
+    "lastName": "FOSTER",
+    "nameSuffix": "II",
+    "otherNames": [
+      "JEF  FOSTER II",
+      "JOHN EDWARD FOSTER"
+    ],
+    "bcScope": "NotInScope",
+    "iaScope": "InActive",
+    "daysInIndustryIAPD": 5338
+  },
+  "currentIAEmployments": [],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "69759",
+      "iaSECNumberType": "801",
+      "firmId": 108818,
+      "firmName": "TOTAL INVESTMENT MANAGEMENT, INC.",
+      "city": "Scottsdale",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "10/31/2005",
+      "registrationEndDate": "6/11/2020",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "56411",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "27691",
+      "firmId": 12984,
+      "firmName": "INVEST FINANCIAL CORPORATION",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "11/3/2005",
+      "registrationEndDate": "11/12/2008",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "9/22/2003",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "iaCtgryType": 11,
+      "disclosureDetail": {
+        "Allegations": "ON OR ABOUT DECEMBER 1999, REPRESENTATIVE RECOMMENDED AN UNSUTIABLE PORTFOLIO FOR CUSTOMER.",
+        "Damage Amount Requested": "$500,000.00",
+        "Settlement Amount": "$400,000.00",
+        "DisplayAAOLinkIfExists": "Y",
+        "arbitrationClaimFiledDetail": "03-05308",
+        "arbitrationDocketNumber": ""
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 3,
+    "principalExamCount": 1,
+    "productExamCount": 1
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "10/12/2005",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "7/5/1995",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "10/19/1988",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "12/23/1998",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "10/15/1988",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 0
+  },
+  "registeredStates": [],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  },
+  "currentEmployments": []
+}
