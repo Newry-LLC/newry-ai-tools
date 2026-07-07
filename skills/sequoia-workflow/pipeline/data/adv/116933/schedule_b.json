@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "CHRISTENSEN, JULIA, L.",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "KA & JL CHRISTENSEN FAMILY TRUST TRUSTEE & BENEFICIARY",
+      "since": "03/2015",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "6440567",
+      "raw_id": "6440567"
+    },
+    {
+      "full_legal_name": "CHRISTENSEN, KELLY, ALAN",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "KA & JL CHRISTENSEN FAMILY TRUST TRUSTEE & BENEFICIARY",
+      "since": "06/1999",
+      "ownership_code": "F",
+      "ownership_pct": "Other (GP/trustee/elected manager)",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "2254214",
+      "raw_id": "2254214"
+    }
+  ]
+}
