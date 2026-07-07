@@ -1,0 +1,488 @@
+{
+  "basicInformation": {
+    "individualId": 1385990,
+    "firstName": "PATRICK",
+    "middleName": "BRIAN",
+    "lastName": "MURRAY",
+    "otherNames": [],
+    "bcScope": "Active",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "7/17/1989"
+  },
+  "currentEmployments": [
+    {
+      "firmId": 13572,
+      "firmName": "CETERA WEALTH SERVICES, LLC",
+      "iaOnly": "N",
+      "registrationBeginDate": "2/20/2025",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE",
+      "iaSECNumber": "47342",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "29577",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "862371",
+          "street1": "17100 E Shea Blvd.",
+          "street2": "Suite 400A",
+          "city": "Fountain Hills",
+          "cityAlias": [
+            "FOUNTAIN HILLS",
+            "FOUNTAIN HLS",
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85268",
+          "latitude": "33.60374",
+          "longitude": "-111.742483",
+          "geoLocation": "33.60374,-111.742483",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "02/20/2025"
+        },
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "862374",
+          "street1": "15333 N Pima Road",
+          "street2": "Suite 305",
+          "city": "Scottsdale",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85260",
+          "latitude": "33.610962",
+          "longitude": "-111.890114",
+          "geoLocation": "33.610962,-111.890114",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "02/20/2025"
+        }
+      ]
+    }
+  ],
+  "currentIAEmployments": [
+    {
+      "firmId": 13572,
+      "firmName": "CETERA WEALTH SERVICES, LLC",
+      "iaOnly": "N",
+      "registrationBeginDate": "2/20/2025",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE",
+      "iaSECNumber": "47342",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "29577",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 3,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "15333 N PIMA ROAD",
+          "street2": "SUITE 305",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85260",
+          "latitude": "33.610962",
+          "longitude": "-111.890114",
+          "geoLocation": "33.610962,-111.890114",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "02/20/2025"
+        }
+      ]
+    },
+    {
+      "firmId": 146054,
+      "firmName": "KEY GROUP MANAGEMENT, INC.",
+      "iaOnly": "Y",
+      "registrationBeginDate": "5/7/2008",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "114845",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "353310",
+          "street1": "17100 E SHEA BLVD",
+          "street2": "SUITE 400A",
+          "city": "FOUNTAIN HILLS",
+          "cityAlias": [
+            "FOUNTAIN HILLS",
+            "FOUNTAIN HLS",
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85268",
+          "latitude": "33.60374",
+          "longitude": "-111.742483",
+          "geoLocation": "33.60374,-111.742483",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "12/16/2019"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "56010",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "32590",
+      "firmId": 15708,
+      "firmName": "CONCOURSE FINANCIAL GROUP SECURITIES, INC.",
+      "city": "Fountain Hills",
+      "state": "AZ",
+      "registrationBeginDate": "8/5/2022",
+      "registrationEndDate": "2/20/2025",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "54859",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "40218",
+      "firmId": 23131,
+      "firmName": "ROYAL ALLIANCE ASSOCIATES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "3/10/2017",
+      "registrationEndDate": "8/9/2022",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "41015",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "44435",
+      "firmId": 29604,
+      "firmName": "NATIONAL PLANNING CORPORATION",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "1/9/2009",
+      "registrationEndDate": "3/14/2017",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "54859",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "40218",
+      "firmId": 23131,
+      "firmName": "ROYAL ALLIANCE ASSOCIATES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "registrationBeginDate": "6/24/2003",
+      "registrationEndDate": "1/29/2009",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "49818",
+      "firmId": 42373,
+      "firmName": "THE KEY GROUP INC.",
+      "city": "RAMSEY",
+      "state": "NJ",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "5/15/1997",
+      "registrationEndDate": "8/29/2003",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "10970",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "17668",
+      "firmId": 6413,
+      "firmName": "LINSCO/PRIVATE LEDGER CORP.",
+      "city": "FORT MILL",
+      "state": "SC",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "6/2/1995",
+      "registrationEndDate": "8/22/1997",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "7163",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16267",
+      "firmId": 8174,
+      "firmName": "PAINEWEBBER INCORPORATED",
+      "city": "WEEHAWKEN",
+      "state": "NJ",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "7/18/1989",
+      "registrationEndDate": "6/14/1995",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "54859",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "40218",
+      "firmId": 23131,
+      "firmName": "ROYAL ALLIANCE ASSOCIATES, INC.",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "registrationBeginDate": "3/18/2008",
+      "registrationEndDate": "1/29/2009",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "7/31/2002",
+      "disclosureType": "Regulatory",
+      "disclosureResolution": "Final",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "DocketNumberFDA": "C9B020051",
+        "DocketNumberAAO": "9020051",
+        "Initiated By": "NATIONAL ASSOCIATION OF SECURITIES DEALERS, INC.",
+        "Allegations": "NASD RULES 1017 AND 2110 - WITHOUT ADMITTING OR DENYING THE ALLEGATIONS, THE RESPONDENT CONSENTED TO THE ENTRY OF FINDINGS THAT HE, ACTING THROUGH MEMBER FIRM, ENGAGED IN ACTIVITY THAT WAS NOT PROVIDED FOR IN THE FIRM'S MEMBERSHIP AGREEMENT AND THAT CONSTITUTED A MATERIAL CHANGE IN THE FIRM'S BUSINESS OPERATIONS. SPECIFICALLY, RESPONDENT, ACTING THROUGH MEMBER FIRM, WAS A SELLING GROUP PARTICIPANT ON A BEST EFFORTS BASIS IN THIRTY-ONE (31) FIRM COMMITMENT UNDERWRITINGS. ",
+        "Resolution": "Acceptance, Waiver & Consent(AWC)",
+        "SanctionDetails": [
+          {
+            "Sanctions": "Monetary/Fine",
+            "SanctionDetails": [
+              {
+                "Amount": "$4,180.00"
+              }
+            ]
+          }
+        ],
+        "Sanction Details": "A JOINT AND SEVERAL FINE OF $4,180. "
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Regulatory Event",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 7,
+    "productExamCount": 5
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "3/12/2008",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "8/28/1989",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 9",
+      "examName": "General Securities Sales Supervisor - Options Module Examination",
+      "examTakenDate": "1/2/2023",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 10",
+      "examName": "General Securities Sales Supervisor - General Module Examination",
+      "examTakenDate": "1/2/2023",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 4",
+      "examName": "Registered Options Principal Examination",
+      "examTakenDate": "1/31/1997",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 53",
+      "examName": "Municipal Securities Principal Examination",
+      "examTakenDate": "11/14/1996",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 27",
+      "examName": "Financial and Operations Principal Examination",
+      "examTakenDate": "10/30/1996",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "8/25/1995",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 8",
+      "examName": "General  Securities Sales Supervisor Examination (Options Module & General Module)",
+      "examTakenDate": "3/2/1995",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 52TO",
+      "examName": "Municipal Securities Representative Examination",
+      "examTakenDate": "1/2/2023",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 99TO",
+      "examName": "Operations Professional Examination",
+      "examTakenDate": "1/2/2023",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "7/15/1989",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 3",
+      "examName": "National Commodity Futures Examination",
+      "examTakenDate": "9/7/1988",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 1,
+    "approvedFinraRegistrationCount": 1,
+    "approvedStateRegistrationCount": 8,
+    "approvedIAStateRegistrationCount": 3
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/7/2008"
+    },
+    {
+      "state": "Arizona",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    },
+    {
+      "state": "California",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    },
+    {
+      "state": "Connecticut",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    },
+    {
+      "state": "Florida",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    },
+    {
+      "state": "Illinois",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    },
+    {
+      "state": "New Jersey",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/13/2008"
+    },
+    {
+      "state": "New Jersey",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    },
+    {
+      "state": "New York",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2025"
+    },
+    {
+      "state": "North Carolina",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "5/22/2025"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "4/3/2013"
+    }
+  ],
+  "registeredSROs": [
+    {
+      "sro": "FINRA",
+      "status": "APPROVED",
+      "CategoriesList": [
+        "Financial and Operations Principal",
+        "General Securities Principal",
+        "Full Registration/General Securities Representative",
+        "General Securities Sales Supervisor",
+        "Municipal Securities Principal",
+        "Municipal Securities Representative",
+        "Operations Professional",
+        "Registered Options Principal"
+      ]
+    }
+  ],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}
