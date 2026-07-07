@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "owners": [
+    {
+      "full_legal_name": "GARDNER, JOSHUA, ADAM",
+      "entity_type": "I",
+      "entity_interest_owned": "",
+      "title_or_status": "CEO & CCO",
+      "since": "08/2024",
+      "ownership_code": "E",
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "public_reporting": false,
+      "crd": "4495410",
+      "raw_id": "4495410"
+    }
+  ]
+}
