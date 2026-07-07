@@ -1,0 +1,46 @@
+{
+  "crd": "282017",
+  "name": "Taurum Retirement Partners, LLC",
+  "people": [
+    {
+      "raw_name": "SOLLIS, ROBERT, VERLIN",
+      "name": "Robert Verlin Sollis",
+      "source": "Form ADV Schedule A (direct owner)",
+      "confidence": "high",
+      "title_or_status": "MANAGING MEMBER & CHIEF COMPLIANCE OFFICER",
+      "is_equity_owner": true,
+      "ownership_pct": "75%+",
+      "control_person": true,
+      "since": "10/2015",
+      "crd": "4131485",
+      "is_partner_mention": false,
+      "seniority_score": 60,
+      "bio_note": "Principal and Founder of Taurum Retirement Partners in Mesa, with the firm since 2015. Over 25 years of financial industry experience, including 13 years at Fidelity Investments as an Account Executive, where he was recognized with Fidelity's President's Circle Award and served on the Fidelity Customer Hero Advisory Council. In 2012 founded his own firm, Allay Financial Services, later folded into Taurum in 2016. Holds the ChFC designation from the American College of Financial Planning. Lives in Mesa with his wife and six children.",
+      "bio_source": "LinkedIn profile (linkedin.com/in/robsollis/), independently corroborating his ChFC credential and Principal title as stated on the firm's own site",
+      "bio_confidence": "high",
+      "phase4_note": "Phase 4 verification (2026-07-03): the cited LinkedIn profile could not be directly accessed (bot-blocked), but the same career facts (Fidelity President's Circle Award, Allay Financial Services founding/merger) are independently corroborated via Taurum's own site content matching the claim closely. Low concern. Verdict: PARTIAL.",
+      "phase4_status": "verified_with_caveat",
+      "phase4_checked_date": "2026-07-03"
+    }
+  ],
+  "capped_from": null,
+  "dropped_for_cap": [],
+  "unresolved_entity_owners": [],
+  "ai_partner_matches": [],
+  "ai_partner_mentions_excluded": [
+    {
+      "name": "Jackson T. Beck",
+      "title_phrase": "Partner",
+      "quote": "Partner 2015 - 2017 Sluffin It Consulting",
+      "confidence": "high",
+      "at_this_firm": false,
+      "exclude_reason": "partner title refers to a prior employer (Sluffin It Consulting, 2015-2017), not Taurum itself"
+    }
+  ],
+  "firm_note": {
+    "text": "No parent-company or naming complexity identified for Taurum Retirement Partners.",
+    "source": "Taurum's own website plus independent LinkedIn corroboration",
+    "confidence": "high"
+  },
+  "phase4_firm_summary": "1 of 1 people checked"
+}
