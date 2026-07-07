@@ -1,0 +1,95 @@
+{
+  "basicInformation": {
+    "firmId": 116933,
+    "firmName": "SAGE FINANCIAL ADVISORS INC.",
+    "otherNames": [
+      "SAGE FINANCIAL ADVISORS INC."
+    ],
+    "iaScope": "ACTIVE",
+    "isIAFirm": "Y",
+    "legacyReportStatus": "Not Requested",
+    "advFilingDate": "03/24/2026",
+    "hasPdf": "Y",
+    "iaSECNumber": "60717",
+    "iaSECNumberType": "801",
+    "crs": {
+      "crsType": "IA",
+      "fileId": "e9d16688-1e53-41ea-b312-67eb318ebaba"
+    }
+  },
+  "iaFirmAddressDetails": {
+    "officeAddress": {
+      "street1": "8980 E. RAINTREE DRIVE",
+      "street2": "SUITE 120",
+      "city": "SCOTTSDALE",
+      "state": "AZ",
+      "country": "United States",
+      "postalCode": "85260"
+    }
+  },
+  "accountantSurpriseExams": [],
+  "compilationData": [
+    {
+      "editionID": 52089,
+      "type": "IA_FIRM_SEC",
+      "generatedOn": "3/25/2026"
+    },
+    {
+      "editionID": 52090,
+      "type": "IA_FIRM_STATE",
+      "generatedOn": "3/25/2026"
+    },
+    {
+      "editionID": 52091,
+      "type": "IA_INDVL",
+      "generatedOn": "3/25/2026"
+    }
+  ],
+  "registrationStatus": [
+    {
+      "secJurisdiction": "SEC",
+      "status": "Approved",
+      "effectiveDate": "11/16/2001"
+    }
+  ],
+  "noticeFilings": [
+    {
+      "jurisdiction": "Arizona",
+      "status": "Notice Filed",
+      "effectiveDate": "11/16/2001"
+    },
+    {
+      "jurisdiction": "California",
+      "status": "Notice Filed",
+      "effectiveDate": "12/29/1999"
+    },
+    {
+      "jurisdiction": "Oregon",
+      "status": "Notice Filed",
+      "effectiveDate": "11/19/2001"
+    },
+    {
+      "jurisdiction": "Texas",
+      "status": "Notice Filed",
+      "effectiveDate": "3/28/2018"
+    }
+  ],
+  "exemptReportingAdvisers": [],
+  "orgScopeStatusFlags": {
+    "isSECRegistered": "Y",
+    "isStateRegistered": "N",
+    "isERARegistered": "N",
+    "isSECERARegistered": "N",
+    "isStateERARegistered": "N"
+  },
+  "brochures": {
+    "part2ExemptFlag": "N",
+    "brochuredetails": [
+      {
+        "brochureVersionID": 1024198,
+        "brochureName": "ADV PART 2A",
+        "dateSubmitted": "3/23/2026"
+      }
+    ]
+  }
+}
