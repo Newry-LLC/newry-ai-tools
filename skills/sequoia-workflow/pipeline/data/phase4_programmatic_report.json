@@ -1,0 +1,250 @@
+{
+  "total_people_scanned": 131,
+  "total_findings": 34,
+  "stats": {
+    "thin": 5,
+    "vague_source": 19,
+    "disciplinary_hit": 1,
+    "firm_only_high_conf": 9
+  },
+  "findings": [
+    {
+      "crd": "108818",
+      "firm": "Total Investment Management, Inc.",
+      "person": "John Edward Foster",
+      "issue": "high_confidence_firm_only_source",
+      "detail": "bio_source appears to cite only the firm's own domain: \"Firm website (timgt.com/company) for detailed military/career narrative; corroborated by LinkedIn profile ('Principal \u2014 Total Investment Management') \""
+    },
+    {
+      "crd": "108818",
+      "firm": "Total Investment Management, Inc.",
+      "person": "Todd Michael Foster",
+      "issue": "high_confidence_firm_only_source",
+      "detail": "bio_source appears to cite only the firm's own domain: 'Firm website (timgt.com/company) for career narrative; corroborated by ZoomInfo (Chief Executive Officer at Total Investment Management) and independe'"
+    },
+    {
+      "crd": "116933",
+      "firm": "Sage Financial Advisors Inc.",
+      "person": "Kelly Alan Christensen",
+      "issue": "no_named_source",
+      "detail": "confidence=medium but bio_source has no identifiable outlet/URL: 'ZoomInfo: no matching record found \u2014 no ZoomInfo profile exists. Firm website: none exists (confirmed via Form ADV). Web search: confirmed via U.S. Ne'"
+    },
+    {
+      "crd": "116933",
+      "firm": "Sage Financial Advisors Inc.",
+      "person": "Julia L. Christensen",
+      "issue": "no_named_source",
+      "detail": "confidence=medium but bio_source has no identifiable outlet/URL: 'ZoomInfo: enrichment confirms Owner + VP Finance & Administration title (accuracy score 94) but detailed career-history fields were populated only via'"
+    },
+    {
+      "crd": "128549",
+      "firm": "Wealth Engineering, LLC",
+      "person": "David John Fernandez",
+      "issue": "no_named_source",
+      "detail": "confidence=medium but bio_source has no identifiable outlet/URL: 'ZoomInfo: confirms title Founder & Principal, accuracy score 98 (no additional narrative). Firm website: /founder and /about pages provided full caree'"
+    },
+    {
+      "crd": "129415",
+      "firm": "Financial Life Planners",
+      "person": "Gina Giachetti Wight",
+      "issue": "no_named_source",
+      "detail": "confidence=medium but bio_source has no identifiable outlet/URL: 'ZoomInfo profile corroborating firm team page'"
+    },
+    {
+      "crd": "129597",
+      "firm": "Brightscape Investment Centers",
+      "person": "Amanda Marie Wray",
+      "issue": "no_named_source",
+      "detail": "confidence=high but bio_source has no identifiable outlet/URL: \"PR Newswire press release, 'Brightscape Investment Centers Opens an Office in Scottsdale, AZ,' independent of the firm's own website\""
+    },
+    {
+      "crd": "131458",
+      "firm": "Watts Gwilliam & Company, LLC",
+      "person": "Jeffrey Stephen Watts",
+      "issue": "no_named_source",
+      "detail": "confidence=medium but bio_source has no identifiable outlet/URL: 'ZoomInfo: confirms as Founding Member (accuracy 98), 21 years industry experience, Series 66; no narrative career detail in profile itself. Firm websi'"
+    },
+    {
+      "crd": "131458",
+      "firm": "Watts Gwilliam & Company, LLC",
+      "person": "Daniel Bradford Gwilliam",
+      "issue": "no_named_source",
+      "detail": "confidence=medium but bio_source has no identifiable outlet/URL: \"ZoomInfo: confirms as Co-Founder (accuracy 99, matched under nickname 'Brad Gwilliam'); no narrative in profile itself. Firm website (team bio page): \""
+    },
+    {
+      "crd": "131458",
+      "firm": "Watts Gwilliam & Company, LLC",
+      "person": "David Bruce Watts",
+      "issue": "no_named_source",
+      "detail": "confidence=medium but bio_source has no identifiable outlet/URL: 'ZoomInfo: confirms as Founding Member (accuracy 98), 27 years industry experience, Series 66, with firm since 2004; no narrative in profile itself. Fi'"
+    },
+    {
+      "crd": "147351",
+      "firm": "ARQ Wealth Advisors, LLC",
+      "person": "Carl Steven Mariner",
+      "issue": "no_named_source",
+      "detail": "confidence=medium but bio_source has no identifiable outlet/URL: \"Carl Mariner's LinkedIn profile, title/credentials independently corroborated\""
+    },
+    {
+      "crd": "152662",
+      "firm": "Rovin Capital",
+      "person": "Markell Anthony Staffieri",
+      "issue": "high_confidence_firm_only_source",
+      "detail": "bio_source appears to cite only the firm's own domain: \"Pulse2 acquisition coverage (pulse2.com/cw-advisors-acquisition-of-849-million-firm-rovin-capital) quoting Staffieri directly, corroborated by Rovin's\""
+    },
+    {
+      "crd": "152662",
+      "firm": "Rovin Capital",
+      "person": "Kimball Eric Pierce",
+      "issue": "no_named_source",
+      "detail": "confidence=high but bio_source has no identifiable outlet/URL: \"LinkedIn profile, K. Eric Pierce, ChFC, corroborating Rovin's team bio page\""
+    },
+    {
+      "crd": "152662",
+      "firm": "Rovin Capital",
+      "person": "Matthew Ds Staffieri",
+      "issue": "no_named_source",
+      "detail": "confidence=medium but bio_source has no identifiable outlet/URL: 'Wealthminder advisor profile and Indyfin profile, both independent of the firm website'"
+    },
+    {
+      "crd": "157663",
+      "firm": "Vigilare Wealth Management LLC",
+      "person": "Zeljko Jag Zdrale",
+      "issue": "thin_bio_for_confidence",
+      "detail": "confidence=high but bio_note is 246 chars (threshold 300)"
+    },
+    {
+      "crd": "158641",
+      "firm": "Sensible Money, LLC",
+      "person": "Dana Marie Anspach",
+      "issue": "thin_bio_for_confidence",
+      "detail": "confidence=high but bio_note is 158 chars (threshold 300)"
+    },
+    {
+      "crd": "158641",
+      "firm": "Sensible Money, LLC",
+      "person": "Dana Marie Anspach",
+      "issue": "no_named_source",
+      "detail": "confidence=high but bio_source has no identifiable outlet/URL: 'ZoomInfo, firm website'"
+    },
+    {
+      "crd": "158641",
+      "firm": "Sensible Money, LLC",
+      "person": "David Schoenecker",
+      "issue": "thin_bio_for_confidence",
+      "detail": "confidence=high but bio_note is 82 chars (threshold 300)"
+    },
+    {
+      "crd": "158641",
+      "firm": "Sensible Money, LLC",
+      "person": "David Schoenecker",
+      "issue": "no_named_source",
+      "detail": "confidence=high but bio_source has no identifiable outlet/URL: 'firm website'"
+    },
+    {
+      "crd": "158641",
+      "firm": "Sensible Money, LLC",
+      "person": "Caley Jared Miller",
+      "issue": "thin_bio_for_confidence",
+      "detail": "confidence=high but bio_note is 194 chars (threshold 300)"
+    },
+    {
+      "crd": "158641",
+      "firm": "Sensible Money, LLC",
+      "person": "Caley Jared Miller",
+      "issue": "no_named_source",
+      "detail": "confidence=high but bio_source has no identifiable outlet/URL: 'ZoomInfo, firm website'"
+    },
+    {
+      "crd": "158641",
+      "firm": "Sensible Money, LLC",
+      "person": "Amy Leigh Shepard",
+      "issue": "thin_bio_for_confidence",
+      "detail": "confidence=high but bio_note is 157 chars (threshold 300)"
+    },
+    {
+      "crd": "158641",
+      "firm": "Sensible Money, LLC",
+      "person": "Amy Leigh Shepard",
+      "issue": "no_named_source",
+      "detail": "confidence=high but bio_source has no identifiable outlet/URL: 'ZoomInfo, firm website'"
+    },
+    {
+      "crd": "165214",
+      "firm": "Intrinsic Value Partners, LLC",
+      "person": "Carter Allen Pearl",
+      "issue": "high_confidence_firm_only_source",
+      "detail": "bio_source appears to cite only the firm's own domain: 'ZoomInfo: confirmed current title (Co-Founder) and tenure only, no narrative; firm website (ivpaz.com/team, ivpaz.com/about/us): detailed career histo'"
+    },
+    {
+      "crd": "165214",
+      "firm": "Intrinsic Value Partners, LLC",
+      "person": "Daniel Steven Flack",
+      "issue": "high_confidence_firm_only_source",
+      "detail": "bio_source appears to cite only the firm's own domain: 'ZoomInfo: confirmed current title (Partner) and tenure only, no narrative; firm website (ivpaz.com/team, ivpaz.com/about/us): detailed engineering-to-'"
+    },
+    {
+      "crd": "172113",
+      "firm": "Sierra Legacy Group",
+      "person": "Geoffrey Allen Grenert",
+      "issue": "disciplinary_language",
+      "detail": "term 'disciplinary' found in bio_note/bio_source"
+    },
+    {
+      "crd": "282003",
+      "firm": "Pinnacle Peak Private Client Group, LLC",
+      "person": "Brian Patrick Jack",
+      "issue": "high_confidence_firm_only_source",
+      "detail": "bio_source appears to cite only the firm's own domain: \"GlobeNewswire press release, 'Arax Adds Pinnacle Peak Private Client Group to Ashton Thomas' (globenewswire.com/news-release/2026/03/05/3250072), inde\""
+    },
+    {
+      "crd": "282003",
+      "firm": "Pinnacle Peak Private Client Group, LLC",
+      "person": "Matthew Joseph Figueroa",
+      "issue": "high_confidence_firm_only_source",
+      "detail": "bio_source appears to cite only the firm's own domain: \"GlobeNewswire press release, 'Arax Adds Pinnacle Peak Private Client Group to Ashton Thomas' (globenewswire.com/news-release/2026/03/05/3250072), inde\""
+    },
+    {
+      "crd": "285243",
+      "firm": "Releve Financial Group",
+      "person": "Kimberly Karen Bannwarth",
+      "issue": "no_named_source",
+      "detail": "confidence=high but bio_source has no identifiable outlet/URL: 'LinkedIn and ZoomInfo profile, corroborating career history and education beyond the firm website'"
+    },
+    {
+      "crd": "299951",
+      "firm": "Corepath Wealth Partners LLC",
+      "person": "Mark Alan Bonnett",
+      "issue": "no_named_source",
+      "detail": "confidence=high but bio_source has no identifiable outlet/URL: 'Arizona business filings via Bizapedia/BizProfile (independent of firm website) confirming Bonnett Investment Group LLC ownership of CorePath Holdings'"
+    },
+    {
+      "crd": "306180",
+      "firm": "Farnam Financial",
+      "person": "Jonathan David Bird",
+      "issue": "high_confidence_firm_only_source",
+      "detail": "bio_source appears to cite only the firm's own domain: 'ZoomInfo: confirms title (Founder & Wealth Advisor, accuracy score 99), current and prior employer (Schwab Private Client Investment Advisory, ~3 yrs)'"
+    },
+    {
+      "crd": "318330",
+      "firm": "Zenith Wealth Advisors",
+      "person": "Jenifer Warnhoff",
+      "issue": "no_named_source",
+      "detail": "confidence=medium but bio_source has no identifiable outlet/URL: 'RocketReach professional profile and ZoomInfo listing, corroborating her career history across multiple institutions'"
+    },
+    {
+      "crd": "325721",
+      "firm": "Amplify Financial, LLC",
+      "person": "Heidi Maria Brodt",
+      "issue": "no_named_source",
+      "detail": "confidence=medium but bio_source has no identifiable outlet/URL: \"LinkedIn profile 'Heidi Brodt - Business Manager at Ashton Thomas Private Wealth', corroborated by BusinessWire's Amplify company profile confirming h\""
+    },
+    {
+      "crd": "326261",
+      "firm": "Luminvest Wealth Management LLC",
+      "person": "Trent Robert White",
+      "issue": "high_confidence_firm_only_source",
+      "detail": "bio_source appears to cite only the firm's own domain: 'Firm website (luminvest.com/about): full narrative bio including Vanguard UHNW book size, education, and career history. Web search: corroborated Vang'"
+    }
+  ]
+}
