@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PYTHON_EXE -c \"import json,sys; sys.stdout.write(json.dumps({'hookSpecificOutput':{'hookEventName':'UserPromptSubmit','additionalContext':'BREVITY applies ONLY to conversational replies to Sylvan in chat. Not to documents, specs, runbooks, code, memory files, or anything written for another agent. For chat replies: lead with the answer first line; ~150 words max unless asked for depth; short labeled chunks, no prose walls; cut preamble and hedging but keep every critical fact; expand only on request. Design, analysis, and options are still chat, so obey the ceiling. When depth is needed, write it to a file and link it; keep the chat reply to about 8 lines, the summary plus the one decision needed. We are designing is NOT an exception. PLAIN LANGUAGE (hard rule): write to Sylvan in plain words. Close with 1-2 sentences: what changed, what is next. EXECUTE vs ASK: within an authorized task, execute and report in one line. Do NOT ask for confirmation before saving a file, running a command, or deploying a config. Only stop if the action is genuinely destructive/irreversible, required info is missing and cannot be inferred, or the decision is Sylvans alone.'}}))\""
+          }
+        ]
+      }
+    ]
+  }
+}
