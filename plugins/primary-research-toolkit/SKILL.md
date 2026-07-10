@@ -21,9 +21,19 @@ Required sub-subfolders to create if missing: `materials/`, `preprocessed/`, `ou
 
 If `project-setup/SKILL.md` is not found: ask the consultant to confirm the project name and code, warn that project verification and mismatch detection are unavailable, and proceed without folder structure enforcement.
 
-After Step 0 completes and project identity is confirmed, proceed to routing below.
+After Step 0 completes and project identity is confirmed, proceed to Step 0.5 below.
 
 **SharePoint path guardrail:** If the current working directory path contains `Newry Corp`, do not navigate above that root under any circumstances — do not read, write, or scaffold outside the current project folder tree.
+
+---
+
+## Step 0.5 — Continuity read
+
+Run the shared continuity block: → `references/continuity.md`
+
+This is a **different layer than Step 0** — Step 0 confirms which project/client this is; this step reads what the research corpus within that project actually looks like right now (transcripts vs. cards, Roll-up freshness, pipeline state) and shapes how the toolkit opens the session (§1–2 of the reference) and behaves during long runs (§3–5). Skip this step only in Step 0's informal mode where no project folder is verified — proceed to routing directly in that case, since there's no project-scoped inventory to read.
+
+After the continuity read, proceed to routing below.
 
 ---
 
@@ -32,10 +42,10 @@ After Step 0 completes and project identity is confirmed, proceed to routing bel
 At the start of every run — before any other work:
 
 **Step 1 — Check Airtable connectivity.**
-Call `list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, Airtable isn't connected — skip Step 2 and log locally via Step 3, then continue. Usage logging is best-effort: never block the run and never show a connection warning.
+Call `Airtable:list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, Airtable isn't connected — skip Step 2 and log locally via Step 3, then continue. Usage logging is best-effort: never block the run and never show a connection warning.
 
 **Step 2 — Write to Airtable.**
-Call `create_records_for_table` with:
+Call `Airtable:create_records_for_table` with:
 - **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
 - **Fields:**
   - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-27T14:30:00Z`)
@@ -215,10 +225,10 @@ Pulls transcripts from connected recording services directly into `Primary Resea
 ### Otter connector
 
 **Step 1 — Confirm identity.**
-Call `get_user_info` (Otter MCP) to surface the authenticated account name + email. Show to the consultant for a quick sanity check before pulling.
+Call `Otter:get_user_info` to surface the authenticated account name + email. Show to the consultant for a quick sanity check before pulling.
 
 **Step 2 — Search.**
-Ask: "What should I search for — a project name or keyword, a date range, or both?" Then call `search` with the relevant params:
+Ask: "What should I search for — a project name or keyword, a date range, or both?" Then call `Otter:search` with the relevant params:
 - `query` — project keyword (e.g., "Calyxo")
 - `created_after` / `created_before` — YYYY/MM/DD if a date range was given
 - `title_contains` — if a meeting name fragment is known
@@ -236,7 +246,7 @@ Display results as a numbered list: title, date, first sentence of summary. Exam
 Ask the consultant to pick by number, a range (e.g., "2–5"), or "all." Do not proceed to fetch until they respond.
 
 **Step 4 — Fetch and save.**
-For each selected recording, call `fetch` with the meeting's speech OTID from search results. Save transcript text to `Primary Research/materials/<normalized-title>-<YYYY-MM-DD>.txt`. Normalize the filename: lowercase, spaces to hyphens, strip special characters.
+For each selected recording, call `Otter:fetch` with the meeting's speech OTID from search results. Save transcript text to `Primary Research/materials/<normalized-title>-<YYYY-MM-DD>.txt`. Normalize the filename: lowercase, spaces to hyphens, strip special characters.
 
 Report on completion:
 ```
@@ -251,7 +261,9 @@ Then ask: "Ready to run ICS on these, or do you want to pull more first?"
 
 ### Granola connector
 
-*(Integration pending — connector not yet available in Cowork sessions.)* When the Granola connector is available, it will follow the same pattern: search by project keyword, show a numbered list for selection, fetch meeting notes, save to `Primary Research/materials/`. File format will be `.md`. Attribution level in ICS will default to Medium (synthesized notes), not High — Granola outputs structured summaries, not verbatim transcripts.
+**If a Granola MCP tool is available in the session**, follow the same pattern as Otter above: search by project keyword, show a numbered list for selection, fetch meeting notes, save to `Primary Research/materials/`. File format is `.md`. Attribution level in ICS defaults to Medium (synthesized notes), not High — Granola outputs structured summaries, not verbatim transcripts.
+
+**If no Granola tool is available**, don't offer this path — proceed with Otter and/or manual file drop.
 
 ---
 
@@ -263,6 +275,9 @@ primary-research-toolkit/
   overview.md                       ← plugin purpose, principles, status (human doc)
   decisions.md                      ← design decisions and rationale
   design-notes.md                   ← working notes from design phase
+  scripts/
+    preprocess.py                    ← shared transcript pre-processing (ICS Step 2b)
+    term_reconcile.py                ← shared glossary-based term reconciliation (ICS Step 3)
   sub-skills/
     research-plan-design/
       SKILL.md
@@ -274,15 +289,21 @@ primary-research-toolkit/
       SKILL.md
     interview-coding-synthesis/
       SKILL.md
-      eval/
+      eval/                          ← eval scenarios
+      references/
+        decisions-template.md
+        mode2-output-spec.md         ← full Mode 2 output templates (extracted to keep SKILL.md lean)
       scripts/
-        style_docx.py
+        render_docx.py               ← deterministic Markdown → docx renderer (canonical build path)
+        style_docx.py                ← coverage-cell shading pass, run after render_docx.py
     corpus-query/
       SKILL.md
     coverage-gap-analysis/
       SKILL.md                        ← absorbed into ICS Mode 2 (2026-05-04); folder kept for the absorption record
   references/
+    continuity.md                    ← shared proactive-continuity block (startup read, greeting, narration)
     interviewee-segmentation.md
+    primary-research-onboarding.md    ← Newry's sourcing/outreach/interview-conduct playbook
   logs/
     synthesis-log.md
     feedback-log.md
