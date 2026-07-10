@@ -35,6 +35,8 @@ Users can enter at any point — e.g., "research these three names," "draft an A
 
 **Do not draft outreach emails without knowing the blinding status.** If it is not in `project.md`, ask before proceeding. An unblinded email sent on a blinded engagement is a serious error.
 
+See `../../references/primary-research-onboarding.md` for Newry's outreach playbook — blinded/unblinded/sales-oriented email examples, the phone follow-up script, and contact-list/tracking best practices — to ground drafted outreach in the firm's established voice and sequence.
+
 ---
 
 ## How this sub-skill works
