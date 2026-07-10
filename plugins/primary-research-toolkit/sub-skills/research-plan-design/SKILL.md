@@ -165,7 +165,7 @@ Aggregate across branches to produce a table: interviewee type / value chain pos
 - Higher (7–10X): cold outreach, regulatory sensitivity, hard-to-reach populations, international interviews (allow 2–4 weeks lead time)
 - Lower (2–3X): warm contacts, captive pool, conference setting
 
-**Sequencing note:** Flag which types to approach first. Grounding interviews (academics, consultants, trade associations) should start Day 1 — they refine the guide before harder targets are engaged and often point to better sources. For hard-to-reach populations, flag whether an expert network (AlphaSights, Guidepoint, AlphaSense/Tegus) is warranted and note budget implications.
+**Sequencing note:** Flag which types to approach first. Grounding interviews (academics, consultants, trade associations) should start Day 1 — they refine the guide before harder targets are engaged and often point to better sources. For hard-to-reach populations, flag whether an expert network (AlphaSights, Guidepoint, AlphaSense/Tegus) is warranted and note budget implications — see `../../references/primary-research-onboarding.md` for the full sourcing-channel comparison (cost/quality tradeoffs, where to find experts by category) and interview-guide-structure guidance from Newry's onboarding materials.
 
 **After presenting Chunk 2:** Ask two specific questions:
 - "Does this capture the right value chain? If not, I can help you refine it."
@@ -319,10 +319,10 @@ This Research Plan feeds two parallel tracks:
 
 **Mid-fieldwork review:** After the first 5–8 interviews, revisit this plan. Have branch priorities shifted? Have new themes emerged? Update before continuing fieldwork.
 
-When fieldwork is complete, return to **Interview Coding & Synthesis** and reference target N as the coverage baseline for Mode 2's coverage table.
+When fieldwork is complete, target N surfaces in Mode 2's coverage table as **context only** — Mode 2 rates each branch's Overall coverage on evidence strength (directness, source diversity, specificity), never on interview count. Target N is shown alongside as a planning reference ("3 of planned 5"), not the basis for the rating.
 ```
 
-**Producing the docx:** Use the same approach as ICS (`style_docx.py` or equivalent). Apply standard Newry document formatting. Save as `Research Plan v1.docx` in `Primary Research/outputs/`.
+**Producing the docx:** Use the same pinned pipeline as ICS — `render_docx.py` then `style_docx.py` (see `../interview-coding-synthesis/scripts/README.md`). Apply standard Newry document formatting. Save as `Research Plan v1.docx` in `Primary Research/outputs/`.
 
 ---
 
@@ -342,6 +342,6 @@ When fieldwork is complete, return to **Interview Coding & Synthesis** and refer
 |-----------|------------------------------------------|
 | Interview Acquisition | Interviewee types, target N, outreach count, planning factor, sequencing notes, lead time flags |
 | Interview Guide Design | Branch priorities, working hypotheses, standardization flags, money slide, interviewee types |
-| Interview Coding & Synthesis | Approach recommendation (direct reading vs. targeted extraction); target N per type (coverage baseline for Mode 2) |
+| Interview Coding & Synthesis | Approach recommendation (direct reading vs. targeted extraction); target N per type (shown as context alongside Mode 2's evidence-strength coverage rating, not the basis for it) |
 
 See `SKILL.md` at the plugin root for the full workflow sequence.
