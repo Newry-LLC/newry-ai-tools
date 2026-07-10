@@ -1,41 +1,43 @@
 # Newry AI Plugin Index
 
-**Last updated:** 2026-05-27
+**Last updated:** 2026-06-26
 **Purpose:** Reference for program maintainers and successors. Covers all active plugins and standalone skills — what they do, what they log, what training materials exist, and distribution status.
 
 ---
 
 ## Summary table
 
-| Plugin | Version | Type | Status | Audience |
-|--------|---------|------|--------|----------|
-| Primary Research Toolkit | 1.3.12 | Packaged plugin | Active | Consultants |
-| SoF Toolkit | 1.0.9 | Packaged plugin | Active | Consultants |
-| newry-knowledge | 1.1.33 | Packaged plugin | Active | Consultants |
-| newry-operator | 1.0.8 | Packaged plugin | Active | Program builders |
-| Project Technical Onboarding | 0.1.8 | Packaged plugin | In progress | Consultants |
-| Project Launch Toolkit | — | Packaged plugin | In progress | Consultants |
-| RMA-OA Builder | 1.0.1 | Packaged plugin | In progress | Consultants |
-| Plugin Auditor | 1.0.0 | Packaged plugin | Active | Maintainers |
-| Plugin Builder | 1.0.0 | Packaged plugin | Active | Maintainers |
-| Synthesis QA | — | Standalone skill | Active | Maintainers |
-| log-reader | — | Standalone skill | Active | Maintainers |
-| feedback-capture | — | Shared sub-skill | Active | Internal (called by coordinators) |
-| project-setup | — | Shared sub-skill | Active | Internal (called by file-writing skills) |
+| Plugin | Version | Status | Audience |
+|--------|---------|--------|----------|
+| Primary Research Toolkit | 1.3.13 | Active | Consultants |
+| SoF Toolkit | 1.0.11 | Active | Consultants |
+| newry-knowledge | 1.1.46 | Active | Consultants |
+| newry-operator | 1.0.10 | Active | Program builders |
+| Project Technical Onboarding | 0.1.9 | In progress | Consultants |
+| Project Launch Toolkit | 1.0.1 | Active (beta) | Consultants |
+| RMA-OA Builder | 1.0.1 | In progress — needs Auditor + vet | Consultants |
+| Plugin Auditor | 1.0.1 | Active | Maintainers |
+| Plugin Builder | 1.0.2 | Active | Maintainers |
+| Synthesis QA | — | Active | Maintainers |
+| log-reader | — | Active | Maintainers |
+| feedback-capture | — | Shared sub-skill — bundled inside each plugin | Internal |
+| project-setup | — | Shared sub-skill | Internal |
 
 ---
 
 ## Distribution model
 
-Plugins are distributed via Cowork Org Settings → Plugins. Matt (org owner) installs from `.plugin` files stored in `outputs/` and on GitHub (`Newry-LLC/newry-ai-tools`).
+Plugins are distributed via GitHub → Cowork auto-sync. Source is truth: `plugins/<name>/` is what goes to GitHub and gets installed. No separate packaging step required.
 
-**Auto-update:** GitHub repo (`Newry-LLC/newry-ai-tools`) is connected as the plugin source with "Sync automatically" enabled. Updates auto-propagate to all users on their next session after a push to GitHub. All plugins are on auto-sync.
+**Auto-update:** GitHub repo (`Newry-LLC/newry-ai-tools`) is connected with "Sync automatically" enabled. Updates auto-propagate to all users on their next Cowork session after a push.
 
 **To push updates:** Switch to Claude Code and run from the `Building Tools for Newry` folder:
 - **Windows:** `PYTHONIOENCODING=utf-8 "C:/Users/sshank/AppData/Local/Programs/Python/Python314/python.exe" "strategy/push-plugins.py"`
 - **Mac/Linux:** `python3 "strategy/push-plugins.py"`
 
-The script pushes all `.plugin` files in `outputs/` automatically — no changes needed as new plugins are added. PAT stored at `strategy/.github-token`.
+The script auto-discovers all plugin dirs in `plugins/`, applies the EXCLUDE_PLUGINS list, filters out dev files (design-notes, logs, etc.), and pushes raw source to GitHub. PAT stored at `strategy/.github-token`. To push a single plugin: `push-plugins.py --only=<name>`.
+
+Note: `.plugin` zip files in `outputs/` are still built for manual local installation but are no longer the push source.
 
 **Installation preferences per plugin:**
 - `newry-knowledge` — default install (all users get it automatically)
@@ -48,7 +50,7 @@ The script pushes all `.plugin` files in `outputs/` automatically — no changes
 ## Central logs
 
 **Usage logging — all plugins:** Airtable — Base `appRawPuacfAvVH2Z`, Table `tblmACtwIClniGn5n` (Plugin Usage Log)
-Schema: `{ts, plugin, sub_skill, user_id, project}`. Written via `create_records_for_table` at the start of every run. `user_id` read from `~/.user_id` if present; otherwise `"unknown"`. Readable by log-reader skill and operator dashboard via `list_records_for_table`.
+Schema: `{ts, plugin, sub_skill, user_id, project}`. Written via `create_records_for_table` at the start of every run. `user_id` read from session context email (system prompt `<user>` block); otherwise `"unknown"`. Note: prior to 2026-06-05 this used `~/.user_id` which resolved to an ephemeral sandbox path — most historical runs show `"unknown"`. Readable by log-reader skill and operator dashboard via `list_records_for_table`.
 
 **Feedback logging — all plugins:** Airtable — Base `appRawPuacfAvVH2Z`, Table `tbl8xVn3ZbUcWCmUY` (Plugin Feedback Log)
 Schema: `{ts, plugin, sub_skill, user_id, signal_type, severity, users_words, what_was_happening, output, notes, status}`. Written via shared feedback-capture sub-skill on positive/negative signals. Draft-confirm pattern before writing.
@@ -100,7 +102,7 @@ Schema: `{ts, plugin, sub_skill, user_id, signal_type, severity, users_words, wh
 ---
 
 ### SoF Toolkit
-**Version:** 1.0.9
+**Version:** 1.0.10
 **File:** `outputs/sof-toolkit.plugin`
 **GitHub:** `Newry-LLC/newry-ai-tools`
 
@@ -121,7 +123,7 @@ Schema: `{ts, plugin, sub_skill, user_id, signal_type, severity, users_words, wh
 ---
 
 ### newry-knowledge
-**Version:** 1.1.33
+**Version:** 1.1.44
 **File:** `outputs/newry-knowledge.plugin`
 **GitHub:** `Newry-LLC/newry-ai-tools`
 
@@ -179,7 +181,7 @@ Schema: `{ts, plugin, sub_skill, user_id, signal_type, severity, users_words, wh
 ---
 
 ### newry-operator
-**Version:** 1.0.8
+**Version:** 1.0.9
 **File:** `outputs/newry-operator.plugin`
 **GitHub:** `Newry-LLC/newry-ai-tools`
 
@@ -220,7 +222,7 @@ Schema: `{ts, plugin, sub_skill, user_id, signal_type, severity, users_words, wh
 ---
 
 ### Plugin Builder
-**Version:** 1.0.0
+**Version:** 1.0.2
 **File:** `outputs/plugin-builder.plugin`
 **GitHub:** `Newry-LLC/newry-ai-tools`
 
@@ -231,14 +233,28 @@ Schema: `{ts, plugin, sub_skill, user_id, signal_type, severity, users_words, wh
 ---
 
 ### Project Launch Toolkit (PLT)
-**Version:** — (not yet packaged) | **Source:** `plugins/project-launch-toolkit/`
+**Version:** 1.0.1 | **File:** `outputs/project-launch-toolkit.plugin` | **Source:** `plugins/project-launch-toolkit/`
 
-**What it does:** Guides a consultant through the project launch phase — from problem statement and issue tree through value creation hypothesis, workplan, and client account management setup.
+**What it does:** Guides a consultant through the full project launch phase — from Airtable intake through problem statement, fact-finding, value creation, issue tree, workplan, ownership and goals, and account management. Coordinator opens with a checklist so EMs can start from any step. Writes a `launch-data.json` after each sub-skill for deck-builder auto-fill.
 
-**Sub-skills (7 built, no coordinator yet):**
-- problem-statement, issue-tree, value-creation, individual-value-creation-goals, workplan, fact-finding, account-management
+**Sub-skills (9 + feedback-capture):**
+- project-launch-toolkit (coordinator) — entry point; checklist-based routing; writes launch-data.json; compiles final launch doc
+- launch-intake — creates/updates Airtable project record from SoW; writes factual fields + Project Roles staffing
+- problem-statement — drafts problem statement from SoW/proposal; flags gaps; SMART objective
+- fact-finding — pre-populates fact-finding worksheet from SharePoint + Airtable; degrades gracefully if newry-knowledge not installed
+- value-creation — value creation hypothesis + Newry fair share by project type; writes 6 Airtable value fields
+- issue-tree — MECE issue tree with drag-and-drop artifact; hypothesis boxes + Suggest Hypotheses button (askClaude)
+- workplan — sequenced activity list per issue + workstream summary for ownership handoff
+- ownership-and-goals — editable responsibility matrix + per-person value creation and dev goals
+- account-management — reads Airtable relationship history; writes Standing Context note per stakeholder to Context Log; outputs stakeholder plan
 
-**Status / pending:** All 7 sub-skills built. Missing: coordinator SKILL.md. Scored highest in skills prioritization matrix.
+**Airtable dependencies:**
+- Projects `tbl3FaAcnmFWjRwqr`, Project Roles `tblYG4PfBYTnsv0WC`, Staff `tblAeAug2APoy0Jgf` (launch-intake)
+- Contacts `tblomVbLXeELjFIBZ`, Context Log `tbl3JoPYzslECv8h8` (account-management)
+
+**Key field IDs (Project Roles):** Type `fldRgACuXbe7SOonv` · Staff `fldjnWTwVjYv926Yf` · Project `fldMHFHFX3R7RtUK1`
+
+**Status:** Beta. Audit pass complete (2026-06-26, v1.0.1). pptx fill script (deck-builder `fill_launch_deck`) exists in `skills/deck-builder/SKILL.md` — reads launch-data.json. Not yet pushed to GitHub.
 
 ---
 
@@ -278,7 +294,7 @@ Shared Step 0 block for all file-writing skills. Verifies project folder, establ
 
 ## Open items / backlog
 
-- **PLT coordinator** — 7 sub-skills built; missing coordinator SKILL.md. Next build priority.
+- **PLT** — audit pass complete; v1.0.1 packaged; not yet pushed to GitHub
 - **RMA-OA Builder** — pending Plugin Auditor pass → vetting
 - **Project Technical Onboarding** — 4-section structure not evaluated; Plugin 2 not built; eval viewer needs review
 - **newry-knowledge trigger tests** — 20 cases in `evals/trigger-tests.json`; not yet run
