@@ -4,6 +4,20 @@ A running log of observations, misses, and improvements made to Newry Cowork ski
 
 ---
 
+## 2026-07-10 — Prune deleted deck-builder's PowerPoint templates (the prune fix caused a regression)
+
+### Observation: all 4 deck-builder template libraries vanished from origin/main; every build/build_chart op broke
+
+**What happened:** Adam hit a hard failure building slides — deck-builder's four `.pptx` template libraries (Newry Powerpoint Template 2024, slide-library, nbd-library, think-cell-library) were missing. Automated commits "prune stale file from deck-builder" (2026-07-02) had deleted all four from `Newry-LLC/newry-ai-tools` and pushed to `main`, breaking every synced Code user, not just Adam.
+
+**Root cause:** a latent conflict between two rules in `strategy/push-plugins.py`, both added by me. `EXCLUDE_EXTENSIONS` skipped `.pptx` on upload ("Cowork can't read binaries"); the 2026-06-17 prune step then deleted any repo file NOT in the just-pushed set. Because the templates were excluded from the push, the prune saw them as stale and deleted them. Push and prune used **different definitions of "should this file be in the repo."** And the binary-exclusion rationale only ever applied to Cowork plugins — deck-builder is a Code skill whose `deck_writer.py` opens those templates as runtime assets, so excluding them was wrong to begin with.
+
+**Fix:** (1) scope the Office-binary exclusion to Cowork plugins only — Code skills (`skills/`) may ship `.pptx/.xlsx/.docx`; (2) make the prune call the SAME `should_exclude` predicate as the push, so it never deletes a file the push intentionally skipped. Verified by dry run (4 templates collected, Pitch Deck client source still excluded by name) and re-push (9/9 files, 0 prune deletions; all 4 `.pptx` confirmed back in `main`).
+
+**Portable principle:** a prune/delete step must use the exact same inclusion predicate as the writer it mirrors — if the writer skips a file on purpose, the pruner must know that, or it deletes files the system needs. And a change that adds a delete path (like the 2026-06-17 prune) must be tested against every file type the repo actually holds, binaries included, before shipping.
+
+---
+
 ## 2026-05-22 — GitHub marketplace sync setup
 
 ### Observation: Cowork GitHub sync requires directory-based plugins, not zip files
