@@ -1,0 +1,9 @@
+{
+  "name": "daily-prep",
+  "version": "0.1.3",
+  "description": "A scheduled morning brief that gets you ready for your day. For each meeting on today's calendar it produces a prep card (what it's about, who's in it, what to walk in ready to say/bring/decide), surfaces what needs you today (replies owed, open action items, what you're waiting on), looks ahead at the week and month, and once a week checks whether your activity points at your goals. Role-adaptive. Requires M365; enriched by Slack, Airtable, and Otter/Granola.",
+  "author": {
+    "name": "Sylvan Shank"
+  },
+  "repository": "https://github.com/Newry-LLC/newry-ai-tools"
+}
