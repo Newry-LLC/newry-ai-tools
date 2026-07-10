@@ -56,7 +56,9 @@ caller can verify the write landed.
 
 import sys
 import os
+import re
 import json
+import zipfile
 import tempfile
 import subprocess
 import shutil
@@ -1039,6 +1041,80 @@ def refresh_chart(app, pres, op):
     return refreshed, {"chart": name, "refreshed": True, "presentation": refreshed.Name}
 
 
+_TC_STRNAME_RE = re.compile(rb"<m_strName>(.*?)</m_strName>", re.DOTALL)
+_OLE_TARGET_RE = re.compile(r'Target="([^"]*embeddings/oleObject\d+\.bin)"')
+_SLIDE_RELS_RE = re.compile(r"ppt/slides/_rels/slide(\d+)\.xml\.rels$")
+
+
+def _tc_names_in_blob(blob):
+    """Extract distinct think-cell element names from one OLE data blob.
+
+    think-cell stores each chart's user/auto name in its embedded OLE compound
+    file as `<m_strName>NAME</m_strName>` (plain text inside the binary stream).
+    We anchor on that tag so hex fragments inside GUIDs (e.g. '...8a9d') can't be
+    mistaken for a name. Returns names in first-seen order, de-duplicated."""
+    out = []
+    for m in _TC_STRNAME_RE.finditer(blob):
+        raw = m.group(1)
+        try:
+            s = raw.decode("utf-8").strip()
+        except UnicodeDecodeError:
+            s = raw.decode("latin-1").strip()
+        if s and s not in out:
+            out.append(s)
+    return out
+
+
+def list_charts(pres):
+    """Discover named think-cell charts in the deck without being told their names.
+
+    Read-only: saves a guaranteed-local copy of the (possibly SharePoint/OneDrive)
+    deck via SaveCopyAs, cracks open the .pptx zip, walks each slide's relationships
+    to its think-cell OLE data blob(s), and reads the chart name(s) out of the blob.
+    Does NOT modify, save, or close the open presentation.
+
+    Returns {charts: [{slide, name}], unnamed_slides: [n, ...]}. `unnamed_slides`
+    are slides that carry a think-cell data object with no name set — those charts
+    can't be refreshed until named once in think-cell (AddRangeData Name field)."""
+    tmpdir = tempfile.mkdtemp(prefix="tclist_")
+    local = os.path.join(tmpdir, "probe.pptx")
+    try:
+        pres.SaveCopyAs(local)          # guaranteed-local copy; original untouched
+        charts = []
+        unnamed = []
+        with zipfile.ZipFile(local) as z:
+            names = z.namelist()
+            rels = sorted((n for n in names if _SLIDE_RELS_RE.match(n)),
+                          key=lambda p: int(_SLIDE_RELS_RE.match(p).group(1)))
+            for rel in rels:
+                snum = int(_SLIDE_RELS_RE.match(rel).group(1))
+                relx = z.read(rel).decode("utf-8", "replace")
+                slide_named = []
+                slide_has_unnamed_tc = False
+                for tgt in _OLE_TARGET_RE.findall(relx):
+                    part = "ppt/" + tgt.replace("../", "")
+                    try:
+                        blob = z.read(part)
+                    except KeyError:
+                        continue
+                    if b"m_strName" not in blob:
+                        continue        # not a think-cell data blob
+                    found = _tc_names_in_blob(blob)
+                    if found:
+                        for nm in found:
+                            if nm not in slide_named:
+                                slide_named.append(nm)
+                    else:
+                        slide_has_unnamed_tc = True
+                for nm in slide_named:
+                    charts.append({"slide": snum, "name": nm})
+                if slide_has_unnamed_tc and not slide_named:
+                    unnamed.append(snum)
+        return {"charts": charts, "unnamed_slides": unnamed}
+    finally:
+        shutil.rmtree(tmpdir, ignore_errors=True)
+
+
 def find_presentation(app, ref):
     if ref in (None, "active"):
         return app.ActivePresentation
@@ -1286,6 +1362,12 @@ def run_job(job):
                 # own job — reassigns `pres`; the file is already saved so no trailing save.
                 pres, info = refresh_chart(app, pres, op)
                 results.append({"op": kind, "ok": info.get("refreshed", False), "after": info})
+                continue
+            if kind == "list_charts":
+                # Read-only discovery of named think-cell charts (slide + name), so a
+                # refresh_chart never needs the user to supply the name. Does not mutate.
+                info = list_charts(pres)
+                results.append({"op": kind, "ok": True, "after": info})
                 continue
             slide = pres.Slides(op["slide"])
             shape = get_shape(slide, op["shape"])
