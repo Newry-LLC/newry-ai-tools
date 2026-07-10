@@ -20,6 +20,7 @@ skill design, plugin structure, and program strategy questions.
 Read all of these before responding — do not skip:
 
 - `references/principles.md` — the 15 design principles
+- `references/skill-authoring-standard.md` — the craft standard for building/auditing a skill; load when the question is how to design, structure, or review a skill
 - `references/north-star.md` — the durable program horizon
 - `references/vision.md` — May 2027 end state
 - Decision log — prior decisions and rationale. Read from
