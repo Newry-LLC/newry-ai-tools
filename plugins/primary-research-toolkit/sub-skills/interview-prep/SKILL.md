@@ -55,7 +55,7 @@ This sub-skill does not run the interview. The interview is a human conversation
 2. For each interviewee, load their tracker row: background research, type, branch focus, contact method
 3. Load the type-specific interview guide
 4. Check for summary cards and/or Roll-up; if present, scan for:
-   - Branch coverage gaps (thin or missing branches relevant to this interviewee's type)
+   - Branch coverage gaps (Thin or Insufficient-basis branches relevant to this interviewee's type — per the Roll-up's evidence-strength rating, not raw interview count). **Check the Roll-up's `coverage-method:` marker first** — if it predates the current method, treat its ratings as a rough starting point only, not a confident basis for probe notes.
    - Unresolved claims or findings that need corroboration
    - Themes that have surfaced repeatedly but lack quantification or specificity
 5. Produce a customized guide for each interviewee (see structure below)
