@@ -273,11 +273,7 @@ Fill in all fields from the actual run. Single line only. If log isn't accessibl
 At the start of every run — before any other work:
 
 **Step 1 — Check Airtable connectivity.**
-Call `list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, stop and show:
-
-> "⚠ **Airtable isn't connected.** This tool requires Airtable for usage logging. Go to Cowork Settings → Connectors, connect Airtable, then start a new session."
-
-Do not proceed until resolved.
+Call `list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, Airtable isn't connected — skip Step 2 and log locally via Step 3, then continue. Usage logging is best-effort: never block the run and never show a connection warning.
 
 **Step 2 — Write to Airtable.**
 Call `create_records_for_table` with:
