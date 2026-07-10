@@ -299,6 +299,8 @@ Update a chart's data in place, keeping the rest of the slide and deck. The char
 - **Charts built with `build_chart` are already named** — refresh them directly.
 - **A chart someone made by hand is usually unnamed.** Name it once in think-cell: click the chart, type a unique name in the **AddRangeData Name** field on its mini-toolbar, save. After that it's refreshable forever. (If the consultant asks to refresh an unnamed chart, walk them through this once.)
 
+**Don't ask the consultant for a chart's name — discover it with `list_charts` first.** PowerPoint's object model exposes only think-cell's internal GUID, not the name you'd type in *AddRangeData Name*; `list_charts` reads the real name out of the chart's embedded think-cell data (via a local copy of the deck) and returns `{charts: [{slide, name}], unnamed_slides: [...]}`. Run it, match the chart to its slide, and feed the name straight into `refresh_chart`. Slides in `unnamed_slides` have a think-cell chart with no name set — those still need the one-time AddRangeData naming above before they can be refreshed. `list_charts` is read-only (it never modifies, saves, or closes the deck) and works on local, OneDrive, and SharePoint decks.
+
 ```json
 {"presentation": "Glass Core", "ops": [
   {"op": "refresh_chart", "chart_name": "waterfall v1 two thirds page", "type": "waterfall",
@@ -326,6 +328,7 @@ All jobs look like: `{"presentation": "<name or substring>", "ops": [ ... ]}`. `
 | `build` | Make a new slide from a layout | `layout`, `fields`, optional `position` |
 | `build_chart` | Make a new slide with a live think-cell chart | `layout` (a `chart_*` one), `fields` (incl. `chart` data), optional `position` |
 | `refresh_chart` | Update a named chart's data in place (own job; works on local/OneDrive/SharePoint) | `chart_name`, `type`, `data` |
+| `list_charts` | Discover named think-cell charts (slide + name) so a refresh never needs the user to supply a name; flags unnamed charts | *(none)* |
 
 `shape` is the 1-based index from `profile` / `ppt_list_shapes` (or the shape's name). Filling a project launch deck is a **workflow** (below), not a single op — it uses `edit_text_preserve` / `write_cells` / `write_table` slide by slide.
 
