@@ -11,17 +11,19 @@ A skill for coding interview transcripts against a project's analytical frame an
 
 The workflow runs five steps. Step 1 (Scope conversation) is the only user-facing gate. Steps 2a, 2b, 3 are non-interactive and complete in the same response as Step 1's initial scope read; they report judgment calls in a Decisions made section at the end of the output, so corrections happen after the fact rather than via mid-run prompts.
 
+**Continuity during long runs:** follow `../../references/continuity.md` §3 (mid-run save — append each card/Roll-up as it completes) and §5 (progress narration — milestone updates on a long batch, counts read from an actual tally of completed units, never generated). §4 (end-of-step next move) informs the *content* of this skill's closing trailer below (ground it in current inventory) — it does not override the single-line, no-menu **format** ICS already uses (see Output discipline).
+
 ---
 
 ## Output discipline
 
-- **Pre-flight echo at the top of every output.** Before any synthesis content, emit a 4–6 line block reporting what the skill found and is acting on. This catches wrong-folder or wrong-input mistakes before the consultant scrolls through the synthesis. Format:
+- **Pre-flight echo — in the chat reply only, never in the saved document.** Before any synthesis content, emit a 4–6 line block **in the conversation** reporting what the skill found and is acting on. This catches wrong-folder or wrong-input mistakes. **Do not write it into the canonical Markdown or the cards/Roll-up docx** — the deliverable contains findings only, and the pre-flight block leaking into the document is a known regression. The saved cards Markdown starts at the first card; the saved Roll-up starts at its title + scoring-method marker. Format (chat only):
 
   ```
   **Pre-flight**
 
   - Corpus: [N] transcripts ([file types — e.g., "10 .docx"])
-  - Scope: see Section 1a (locked from Step 1)
+  - Scope: locked from Step 1 (Mode 2: see Section 1a in the Roll-up; Mode 1: confirmed here, not repeated in the card)
   - Glossary: [N entries at <path> | created on this run]
   - Prior Roll-up: [used for delta from <date> | none]
   - Pre-flight warnings: [bullet list, or "none"]
@@ -29,9 +31,9 @@ The workflow runs five steps. Step 1 (Scope conversation) is the only user-facin
 
   Pre-flight warnings include: missing or unmatched interviewee metadata, transcripts that couldn't be parsed, glossary not found in the expected location, prior Roll-up provided but doesn't match the locked scope. Pre-flight is informational — it does NOT gate the run. It does not ask "is this right? proceed?" Just report what was seen and continue.
 
-- **Output ends at Decisions made — except for a single static trailer.** Do not append next-step menus, "what would you like to do" prompts, or other post-result decision invitations. Present results, surface decisions, then emit one static trailer line naming what was produced and the natural next step. Form: `Output saved at <path>. Next typical step: <one short statement>.` The trailer is a pointer, not a question. No follow-up prompt. Examples:
-  - Mode 1: `Summary card appended to <path>. Next typical step: continue with remaining transcripts, then run Mode 2 (Roll-up) when the corpus is complete.`
-  - Mode 2: `Roll-up saved at <path>. Next typical step: review Decisions made, then re-run with new interviews if more rounds are planned, or hand to SoF Toolkit Draft mode.`
+- **Output ends at Decisions made, then a next-move trailer** (per `../../references/continuity.md` §4). Do not append a "what would you like to do?" prompt or a numbered menu, and never wait on a question. Instead close with one short trailer that names what was produced, then **leads with the single best next move + its reason, and offers one or two alternatives** — read from current inventory + where this step sits in the workflow. It's a recommendation, not a question. Examples:
+  - Mode 1: `Card appended to <path> — 7 of 9 coded. Next: code the last 2, then run the Roll-up on the full set. (Or roll up the 7 now if you need an interim read.)`
+  - Mode 2: `Roll-up saved to <path>. Next: the distributor branch is Emerging — prepping a confirmed source who can fill it is the highest-value move. (Or hand to SoF Toolkit Draft if you're ready to write.)`
 
 - **Suppress technical noise.** Internal mechanics (Q&A segmentation logic, per-passage substantive flags, regex detection details, file-loading minutiae) are working state, not user-facing output. Decisions made surfaces only what the consultant needs to act on: input quality per transcript, attribution warnings, speaker resolution calls that affect quote reliability, file mapping calls, scope/branch interpretation, term fixes.
 
@@ -214,6 +216,14 @@ Speech disfluencies, filler, and grammar are not touched. Anything ambiguous wit
 
 Working copies of transcripts carry auto-applied fixes; originals are untouched. The glossary file is updated with new confirmed entries.
 
+**Applying fixes — run the script, don't hand-edit.** Term detection (finding candidate mistranscriptions, categorizing impact/confidence) is judgment work; once a term is Confirmed or Best-inference in the glossary, *applying* it across every pre-processed transcript is repeatable, fragile logic — do not retype or hand-edit transcript text for this. After updating `glossary.md` with any newly confirmed/inferred entries, run:
+
+```
+python ../../scripts/term_reconcile.py --input <preprocessed-folder> --glossary <project-root>/Primary Research/glossary.md
+```
+
+This applies every Confirmed and Best-inference correction in-place across all `.preprocessed.md` files (contextual-anchor and file-specific scoping handled per the glossary format), logs a fix count per file, and updates the glossary's totals — safely re-runnable (prior fix logs are masked, never duplicated). Dependencies: none beyond the standard library. Report the fix counts in Decisions made.
+
 ---
 
 ## Step 4: Synthesis
@@ -243,18 +253,19 @@ Do not produce branch-by-branch sections. Do not include absence claims in the f
 Mode 1 coverage is a simplified 2-column view; Mode 2 uses the full coverage table with What-it-covers and substantive/partial/none counts.
 
 ```
-> [Name] | [Role] | [Company] | [Type] | [Geography] | [Seniority] | [Date]
-> Input quality: [verbatim / synthesized notes / rough bullets] | Attribution: [High / Medium / Low]
+## IS-[N] — [Name] | [Source label] | [Date]
 
-**Locked scope (verbatim from Step 1):**
-
-- **<Top question>**
-  - **A. <Branch>**
-  - **B. <Branch>**
-    - B1. <Sub-branch>
-  - *Foundational diagnostic* (trunk, not a branch) — <one-line note>
-  - *Out of scope* — <list>
-  - *Outside the Issue Tree* — captured separately
+| Field | Value |
+|---|---|
+| Name | [Name] |
+| Title | [Title] |
+| Company | [Company] |
+| Type | [Type] |
+| Geography | [Geography] |
+| Seniority | [Seniority] |
+| Date | [Date] |
+| Source | [source file / transcript ref] |
+| Attribution | [High / Medium / Low] — [verbatim / synthesized notes / rough bullets] |
 
 ## Coverage
 
@@ -284,6 +295,8 @@ Lightweight per-card version — full template applies in Mode 2 only.
 ```
 
 Apply Format conventions. One record per interview. Append to the project Word doc as interviews are processed.
+
+**Scope never appears in the card.** The analytical frame is confirmed once in the pre-flight chat echo (not written to the document) and, for Mode 2, displayed once at the top of the Roll-up (Section 1a). A card uses the locked scope to assess coverage — it never restates it. A card that includes a "Locked scope" block or any blockquote-style (`>`-prefixed) header is a template violation; use the table format above.
 
 Note on claim types: findings in Single output are implicitly Type 1 (direct, named, specific). Pattern claims (Type 2/3) and synthesis observations (Type 4) belong in Roll-up, not Single.
 
@@ -331,7 +344,7 @@ For each branch (in route-index order):
 - Extract only the finding bullets tagged with that branch ID, with full attribution preserved
 - Record source distribution per branch: count, interviewee types, and type-level breakdown by company type/segment, geography, and seniority where available
 - For each finding that appears in 3+ cards, note whether type distribution varies meaningfully — flag for cross-tab treatment in Pass 3
-- Flag thin branches (fewer than 3 cards with substantive coverage) — carry forward as a gap note for Pass 3. For each thin branch, also record which interviewee types DID cover it and which are absent. Example: "B3 M&A: 6 ✓ cards, all R&D/scientist roles. Missing: ops leadership, corp dev, commercial. Recommended next-round sources: operations leader, CFO/corp dev, external M&A advisor." This source-type note travels into the Gaps subsection of that branch in Pass 3.
+- Flag **sparse-coverage branches for the Gaps note** — a branch with few cards *or* low source-type diversity, regardless of count (6 cards from one interviewee type is sparse; this is a Gaps-note trigger, distinct from and not a substitute for the Overall rating's Strong/Emerging/Thin/Insufficient-basis label in Pass 3). For each, record which interviewee types DID cover it and which are absent. Example: "B3 M&A: 6 ✓ cards, all R&D/scientist roles. Missing: ops leadership, corp dev, commercial. Recommended next-round sources: operations leader, CFO/corp dev, external M&A advisor." This source-type note travels into the Gaps subsection of that branch in Pass 3.
 - Collect all Outside the Issue Tree items across all cards (for Pass 4)
 
 Output: `Primary Research/outputs/mode2-extract-<YYYY-MM-DD>.md` — one section per branch containing only the relevant finding bullets with attribution; one section for Outside the Issue Tree items; source-distribution summary per branch.
@@ -354,8 +367,9 @@ Load all branch findings sections from the branches file (not the original cards
 - **Cross-branch commentary** — after writing main messages, scan across all branch findings sections for connections, tensions, or shared mechanisms that the branch-by-branch structure can't surface on its own. Write 2–4 observations as a named subsection. These are Type 4 synthesis observations — label each as interpretation, not finding. Examples: a pricing dynamic in B1 and a capacity constraint in B3 that point to the same root cause; a contradiction between what internal staff believe and what customers report across two separate branches. Omit if no meaningful cross-branch pattern exists — do not pad.
 - **Outside the Issue Tree** — from the collected items in the extract file.
 - **Cross-round delta** (only if a prior Roll-up exists in `Primary Research/outputs/`) — detect automatically; no user prompt needed. To find the prior Roll-up: sort Roll-up files in `Primary Research/outputs/` by the YYYY-MM-DD date in their filename; use the most recent one that predates today's run. If its locked scope differs from the current run's locked scope, note the mismatch in Decisions made and compare at branch level only — do not produce delta claims that assume matching scope. Compare the current Roll-up against the identified prior Roll-up:
-  - For each branch: did the overall rating improve (—→~ or ~→✓), hold, or weaken?
-  - Which branches gained substantive new evidence (new ✓ cards)?
+  - **First check the prior Roll-up's `coverage-method:` marker.** If it is missing or older than the current method, the Overall ratings are **not comparable** (old ones blended volume; new ones score evidence strength) — do **not** report per-branch improve/weaken, which would plant a false directional claim. Instead say once: "Prior Roll-up used an earlier coverage method; branch-rating movement not comparable — re-run comparison after the next round." Then compare only the version-stable signals below.
+  - For each branch (only if the prior marker matches the current method): did the overall rating improve (—→~ or ~→✓), hold, or weaken?
+  - Which branches gained substantive new evidence (new ✓ cards)? *(version-stable — always safe to compare)*
   - Which outside-the-tree items are new this round vs. carried forward?
   - Are any prior findings no longer supported (cards removed or attribution dropped)?
   Lightweight — read branch ratings and outside-tree section from prior Roll-up only; do not re-read prior cards. Append as a named subsection **"Cross-round delta"** at the end of Summary of findings, before Outside the Issue Tree. Format: one bullet per changed branch + one for outside-tree additions. If no meaningful change, say so in one line. If no prior Roll-up exists, omit the section entirely — do not note its absence.
@@ -372,141 +386,24 @@ Assemble the final Roll-up from: corpus header + locked scope + coverage table (
 
 #### Output
 
-**Section order:**
+**Section order** (full templates for every section: `references/mode2-output-spec.md`):
 
 ```
 1. Corpus header
-1a. Locked scope display (nested bullet, verbatim from Step 1)
-2. Coverage table
+1a. Locked scope display (nested bullet, verbatim from Step 1) — the ONLY place scope is displayed
+2. Coverage table — Overall rating scores evidence strength (directness/diversity/specificity), never volume;
+                     carries the coverage-method version marker
 3. Summary of findings
    3a. Main messages
    3b. Cross-branch commentary (only when meaningful cross-branch patterns exist)
-   3c. Cross-round delta (only when prior Roll-up exists)
+   3c. Cross-round delta (only when prior Roll-up exists — check the version marker first; see Mode 2 Process Pass 4)
    3d. Outside the Issue Tree
 4. Branch findings
 5. Interviewee index
-6. Decisions made
+6. Decisions made — full template at `references/decisions-template.md`
 ```
 
----
-
-##### 1. Corpus header
-
-Render as a 2-column label/value table — clean and scannable. Avoid bulleted lists with bolded labels.
-
-```
-| | |
-|---|---|
-| **Project** | [Name] |
-| **Transcripts** | [N — e.g., "40 internal interviews"] |
-| **Interview dates** | [Range] |
-| **Interviewee types** | [e.g., "Internal staff only — NA Commercial, NA Technical, EU Commercial"] |
-| **Input quality** | [Verbatim / Synthesized notes / Mixed] — [attribution per source if mixed] |
-| **Scope** | See Section 1a (Locked scope display) below |
-| **Key limitation** | [Anything the reader needs to know about what the corpus does NOT cover — e.g., "Internal-only; no external voice-of-customer or competitive intelligence."] |
-| **Decisions made** | [N] judgment calls — see Section 6 |
-```
-
----
-
-##### 1a. Locked scope display
-
-Render the full nested-bullet scope display from Step 1, verbatim. This anchors every downstream section to the exact frame the synthesis was run against.
-
-```
-**Locked scope (verbatim from Step 1):**
-
-- **<Top question>**
-  - **A. <Branch>**
-  - **B. <Branch>**
-    - B1. <Sub-branch>
-    - B2. <Sub-branch>
-  - *Foundational diagnostic* (trunk, not a branch) — <one-line note>
-  - *Out of scope* — <list>
-  - *Outside the Issue Tree* — captured separately
-```
-
----
-
-##### 2. Coverage table
-
-One row per branch. **Include a "What it covers" column** — concrete sub-topics drawn from the corpus, not abstract branch labels. This single column tells the reader what's actually inside the branch at a glance.
-
-```
-| Branch | What it covers | ✓ Sub. | ~ Partial | — Not addressed | Overall |
-|--------|----------------|--------|-----------|-----------------|---------|
-| **A — [Branch name]** | [Concrete sub-topics surfaced in the corpus, e.g., specific applications, product categories, customer segments] | N | N | N | ✓ / ~ / — |
-| **B1 — [Sub-branch name]** | [Sub-topics surfaced in the corpus] | N | N | N | ✓ / ~ / — |
-...
-```
-
-If Research Plan Design provided priorities, replace "What it covers" with "Priority" + "What it covers" as separate columns. Overall rating reflects both volume and source mix — a branch covered by 8 interviews all from one interviewee type may rate ~ even if volume is high.
-
-**Color shading (docx output):** Coverage cells are color-shaded in the final docx — ✓ light green, ~ light yellow, — light gray. Apply via `sub-skills/interview-coding-synthesis/scripts/style_docx.py` after pandoc conversion (pandoc does not carry shading).
-
----
-
-##### 3. Summary of findings
-
-Apply Format conventions. Citations use `[IS-NN: Name]` format.
-
-```
-## Summary of findings
-
-- **[Strategic verdict — what the corpus tells us, not what it covered]** — [Supporting evidence packed densely: numbers, named entities, representative quote.] [IS-1: Smith], [IS-4: Patel], [IS-9: Kim], [IS-15: Johnson]
-- **[Second strategic verdict]** — [Evidence with multiple supporting facts combined.] [IS-2: Lee], [IS-7: Brown]
-- ...
-
-### Outside the Issue Tree
-
-- **[Strategic verdict on a theme not mapped to any branch]** — [Supporting evidence; how many interviewees raised it.] [IS-3: Davis], [IS-12: Garcia]
-```
-
----
-
-##### 4. Branch findings
-
-One section per branch. Apply Format conventions. Combine direct findings and patterns — do not split into labeled Type 1 / Type 2 subsections. After the findings bullets, render **Contradictions** and **Gaps** as named subsections (only when present).
-
-```
-## [Branch ID] — [Branch name] · [N interviews] / [Total] [Overall ✓ / ~ / —]
-
-- **[Strategic verdict — what the corpus says about this branch]** — [Multiple supporting facts combined: named customers, volumes, quotes, internal/external split.] [IS-2: Kim], [IS-3: Nguyen], [IS-9: Patel]
-- **[Second strategic verdict for this branch]** — [Evidence, named entities, near-verbatim quote.] [IS-1: Smith], [IS-4: Torres]
-
-**Contradictions** [only when sources disagree]
-- **[Frame the disagreement — what's the underlying tension]** — [IS-1: Smith] says "[quote]"; [IS-2: Johnson] says "[quote]". Note: [How to think about it; do not resolve.]
-
-**Gaps**
-- [What this branch still needs that the corpus didn't address — phrase as gaps to fill, not branch absences]
-```
-
----
-
-##### 5. Interviewee index
-
-Full lookup table. Codes are assigned in order of first appearance in the corpus.
-
-```
-| Code | Name | Company | Company type | Type | Title | Geography | Seniority | Date | ID | Blind? |
-|------|------|---------|-------------|------|-------|-----------|-----------|------|----|--------|
-| IS-1 | [Name] | [Company] | [e.g., Tier 1 distributor] | Internal staff | [e.g., VP of Sales] | [e.g., NA] | [e.g., VP] | [Date] | [ID] | Y/N |
-| C-1  | [Name] | [Company] | [e.g., Regional OEM] | Customer | [Title] | [Geography] | [Seniority] | [Date] | [ID] | Y/N |
-| E-1  | [Name] | [Company] | [e.g., Trade association] | Expert / SME | [Title] | [Geography] | [Seniority] | [Date] | [ID] | Y/N |
-| CI-1 | [Name] | [Company] | [e.g., Direct competitor] | Competitive intel | [Title] | [Geography] | [Seniority] | [Date] | [ID] | Y/N |
-```
-
-**Type codes:** IS = internal staff · C = customer · E = expert/SME · CI = competitive intelligence · O = other
-
-**Seniority codes:** C-suite · VP · Director · Manager · IC (individual contributor) · Unknown
-
-These fields power cross-tabulation claims in Mode 2. Leave blank (not "N/A") if genuinely not determinable.
-
----
-
-##### 6. Decisions made
-
-Audit trail of every non-trivial inference the skill made during the run. Subsections: Scope, Files, Filename ↔ person matching, Term fixes, Input quality, Frame interpretation. Full template at `references/decisions-template.md`.
+Docx generation for both cards and Roll-up is a single pinned pipeline — see "Docx generation" in `references/mode2-output-spec.md` §2 for the exact commands (never pandoc; never edited in place).
 
 ---
 
