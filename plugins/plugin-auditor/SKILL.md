@@ -11,12 +11,17 @@ A skill for reviewing Newry AI plugins and sub-skills. Runs three structured pas
 
 **Designed for:** any plugin or standalone skill. Calibrated against PRT.
 
+**Authority:** the checks below derive from `strategy/skill-authoring-standard.md` (Part 4, 19-row checklist). This skill *runs* that checklist and applies three-lens judgment on top — it does not restate the rules. Cite the standard's row/section numbers; do not re-explain them. When the standard changes, this skill inherits the change.
+
 ---
 
 ## What you need
 
 - **The plugin's SKILL.md files** — coordinator + all sub-skills. Read every file before starting any pass.
-- **`strategy/principles.md`** — Newry AI Program principles. Required for Pass 1.
+- **`strategy/skill-authoring-standard.md`** — the checklist and rule tags (`[M]`/`[J]`). Required for all three passes.
+- **`strategy/principles.md`** — the 15 principles the standard cites. Required for Pass 1 judgment.
+- **The plugin's `evals/` and `plugin.json`** — needed for eval and versioning checks.
+- **`plugins/newry-knowledge/evals/skill-building-log.md`** — the cross-skill failure log (row 18).
 - **Any supporting files referenced in the skill** (decisions.md, overview.md, references/) — read if relevant to a finding.
 
 Ask before starting: "Which plugin or skill should I audit? Provide the path or name."
@@ -28,11 +33,7 @@ Ask before starting: "Which plugin or skill should I audit? Provide the path or 
 At the start of every run — before any other work:
 
 **Step 1 — Check Airtable connectivity.**
-Call `list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, stop and show:
-
-> "⚠ **Airtable isn't connected.** This tool requires Airtable for usage logging. Go to Cowork Settings → Connectors, connect Airtable, then start a new session."
-
-Do not proceed until resolved.
+Call `list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, Airtable isn't connected — skip Step 2 and log locally via Step 3, then continue. Usage logging is best-effort: never block the run and never show a connection warning.
 
 **Step 2 — Write to Airtable.**
 Call `create_records_for_table` with:
@@ -57,6 +58,13 @@ No user-facing output. Then continue.
 
 Three sequential passes. Complete each pass fully before starting the next. Do not merge passes or run them in parallel — each pass has a different lens and mixing them muddies both.
 
+Each pass runs a named subset of the standard's Part 4 checklist, then adds the pass's own judgment lens. For every checklist row:
+
+- **Blocker (mechanical, `[M]`)** — deterministic pass/fail. A fail is a **blocker**: report it under "Blockers" and state it must be fixed before shipping.
+- **Review (judgment, `[J]`)** — heuristic. Assess with reasoning and report under "Review flags," not as pass/fail.
+
+Row numbers below refer to `strategy/skill-authoring-standard.md` Part 4. Read the row's "How to verify" column there — don't reproduce it here.
+
 After all three passes, produce the report. End with a single question.
 
 ---
@@ -65,36 +73,20 @@ After all three passes, produce the report. End with a single question.
 
 **Question:** Is this the right skill, designed the right way?
 
-Check each criterion. Note findings as you go — do not write the report yet.
+**Checklist rows to run (standard Part 4):**
+- **Row 1** — `description` ≤1024, third person, no XML. *(Blocker)*
+- **Row 2** — `name` ≤64, lowercase/digits/hyphens, no reserved words. *(Blocker)*
+- **Row 3** — `description` says what + when, front-loads use, lists real trigger phrases, reads pushy. *(Review — compare to §1 ✓/✗.)*
+- **Row 14** — built from a named observed consultant task + the consultant it serves (Principle 4). *(Review)*
+- **Row 7** — degrees of freedom match fragility: judgment loose, fragile steps pinned (§3). *(Review)*
+- **Row 11** — coordinator/sub-skill composition: trigger phrases distinct and non-overlapping. *(Review)*
+- **Row 17** — lane discipline (Principle 2): the tool states no recommendation and no client action; it proposes and structures only. Scan the output spec for verdict language ("the best option is," "you should," resolving contradictions rather than surfacing them). *(Review)*
 
-**Job-to-be-done (Principle 4)**
-- Is the consultant's task named clearly in the skill?
-- Is the design built from that task, or from what the technology makes easy?
-- Would a consultant recognize their job in the skill's description?
-
-**Lane discipline (Principle 2)**
-- Does the skill stay out of judgment calls that belong to the consultant?
-- Scan output instructions for language that draws conclusions, makes recommendations, or resolves strategic questions
-- Specific signals: "the best option is," "you should," resolving contradictions rather than surfacing them, assessing commercial attractiveness or strategic fit
-
-**Scope (Principle 8)**
-- Is the skill's job cleanly bounded — not too broad, not too narrow?
-- Could it be evaluated independently, or does it only make sense as part of something larger?
-- Is there anything in scope that belongs in a different skill?
-
-**Fit in workflow**
-- Does the skill sit in the right position in the workflow?
-- Are inputs clearly received from the right upstream skill?
-- Does it hand off cleanly to the right downstream skill?
-- Are there gaps or overlaps with adjacent skills?
-
-**Over-specification (Principle 5)**
-- Are there instructions that encode what the model already knows without Newry-specific calibration?
-- Would removing a rule change the output in a meaningful way, or would the model get there anyway?
-
-**Portability (Principle 12)**
-- Any instructions that couple the skill to a specific AI platform?
-- Would the skill run on a different platform without modification?
+**Design judgment lens (beyond the rows):**
+- **Job recognition** — would a consultant recognize their own job in the description?
+- **Scope (Principle 8)** — cleanly bounded, independently evaluable; nothing in scope that belongs in another skill.
+- **Fit in workflow** — right position; inputs received from the right upstream skill; clean handoff downstream; no gaps or overlaps with adjacent skills.
+- **Over-specification (Principle 5)** — flag rules that encode what the model already knows without Newry-specific calibration. Would removing the rule change the output, or would the model get there anyway?
 
 ---
 
@@ -102,42 +94,31 @@ Check each criterion. Note findings as you go — do not write the report yet.
 
 **Question:** Will this skill work reliably in practice?
 
-**Completeness**
-- Does the skill cover every step of the workflow it claims to own?
-- Walk the full workflow: could a consultant get from entry to output without hitting an undescribed step?
-- Any inputs assumed but not specified?
+**Checklist rows to run (standard Part 4):**
+- **Row 9** — imperative voice; one term per concept; forward slashes in paths; no time-sensitive phrasing. *(Blocker)*
+- **Row 8** — repeatable/fragile logic lives in a bundled script, invoked "Run X", with dependencies + install listed — not re-implemented in prose. *(Review)*
+- **Row 10** — ≥3 eval scenarios + a scoring path, and **this change ships a new or updated eval case** (§6). *(Blocker)*
+- **Row 12** — every MCP tool referenced as `ServerName:tool_name`; a bare name is a portability bug. *(Blocker)*
+- **Row 13** — no Claude Code-only frontmatter in a Cowork plugin; on a Code skill, every Claude-specific use is flagged so a future non-Claude port is bounded (Principle 12, standard Part 2). *(Blocker)*
+- **Row 15** — numbered version (in `plugin.json`, not SKILL.md frontmatter) and usage logging present. *(Blocker — see P-LOG below for the detailed logging audit.)*
+- **Row 16** — the judgment step is transparent, proposal-framed, overridable, and contestable; the confirm-gate scales to stakes (§3B). *(Review — compare to §3B ✓/✗.)*
+- **Row 19** — self-verification before output: a deterministic check runs first (outputs exist, counts non-zero, every Type-4 claim has Type-1/2 evidence); a judge pass only where quality can't be checked deterministically (§3C). *(Review)*
+- **Row 18** — recurring failures are captured in `plugins/newry-knowledge/evals/skill-building-log.md` and the fix is promoted into the skill at the point of failure — logged in the log, fixed in the skill, not duplicated (§3C). *(Review)*
 
-**Consistency**
-- Does terminology hold across the full skill and across all sub-skills?
-- Do format conventions, output structures, and naming conventions align?
-- Are there conflicting instructions between sections or files?
+**Implementation judgment lens (beyond the rows):**
+- **Completeness** — walk the full workflow entry-to-output; flag any undescribed step or unspecified assumed input.
+- **Consistency** — terminology, format conventions, and output structures hold across all files; no conflicting instructions between sections.
+- **Executability** — instructions specific enough to follow without guessing; conditionals (if/when) clearly defined.
+- **Edge cases (Principle 13/14)** — missing inputs, partial data, mid-workflow entry, missing files handled; shared dependencies degrade gracefully rather than blocking.
+- **Calibration examples** — concrete input→output examples where output quality depends on style/format, representative of the real input range, not just easy cases.
 
-**Executability**
-- Are instructions specific enough for the model to follow without guessing?
-- Flag any step described at a level of abstraction that requires interpretation
-- Are conditionals (if/when) clearly defined?
-
-**Edge cases**
-- Are common failure modes handled? Missing inputs, partial data, ambiguous situations?
-- What happens if the consultant enters mid-workflow — is that covered?
-- What happens if required files don't exist?
-
-**Calibration examples**
-- Where the skill needs the model to hit a specific standard, are there concrete examples?
-- Are examples representative of the actual range of inputs — or only the easy cases?
-
-**Output spec**
-- Is the output format fully defined?
-- Would two runs on the same input produce structurally consistent output?
-- Are file names, locations, and versioning conventions specified?
-
-**P-series check: Usage logging (P-LOG)**
-- Does the plugin implement the standard 3-step logging block at the start of every run?
-- **Step 1:** Does it ping Airtable (`list_records_for_table`, pageSize: 1) and block with a user-facing message if the connector is not connected?
-- **Step 2:** Does it write to Airtable (`create_records_for_table`) with the correct schema: `{ts, plugin, sub_skill, user_id, project}`? Does it retry once on failure?
-- **Step 3:** Does it fall back silently to `~/.newry/logs/usage-log-<user_id>.jsonl` if the Airtable write fails after retry? Does it create the directory if missing?
-- Is `user_id` sourced from the session context email (system prompt `<user>` block); otherwise `"unknown"`?
-- Are Steps 2 and 3 silent — no user-facing output?
+**P-LOG — usage-logging block audit:**
+Verify the plugin implements the standard 3-step block at the start of every run:
+- **Step 1:** pings Airtable (`list_records_for_table`, pageSize: 1) and, on failure, **skips to local logging and continues** — best-effort, never blocks, never shows a connection warning. *(This is the graceful-degradation behavior per Principle 13; flag any version that blocks or warns the user instead.)*
+- **Step 2:** writes to Airtable (`create_records_for_table`) with schema `{ts, plugin, sub_skill, user_id, project}`, and retries once on failure.
+- **Step 3:** falls back silently to `~/.newry/logs/usage-log-<user_id>.jsonl` if the Airtable write fails after retry, creating the directory if missing.
+- `user_id` sourced from the session-context email (system prompt `<user>` block); otherwise `"unknown"`.
+- Steps 2 and 3 are silent — no user-facing output.
 
 ---
 
@@ -149,21 +130,16 @@ Flag candidates for tightening. For each finding, propose a specific rewrite —
 
 **Rule:** tightening cannot come at the cost of executability. A vague short instruction is worse than a precise long one. When in doubt, keep the precision.
 
-**Redundancy**
-- Is anything said more than once within the skill?
-- Is anything repeated across sub-skills that could live once in the coordinator and be referenced?
+**Checklist rows to run (standard Part 4):**
+- **Row 4** — body ≤500 lines / ~2,000 words. *(Blocker)*
+- **Row 5** — references one level deep from SKILL.md; any reference >100 lines opens with a TOC. *(Blocker)*
+- **Row 6** — the body reads as a table of contents pointing to detail, not the detail itself; references are domain-partitioned so unrelated contexts never co-load (Principle 5). *(Review)*
 
-**Over-explanation**
-- Any instructions that explain the *why* at length when a short rule captures the same thing?
-- Any defensive hedging that adds words without adding meaning?
-
-**Dead weight**
-- Headers, sections, or principles present but not doing real work?
-- Any scaffolding left over from earlier design iterations?
-
-**Verbosity**
-- Instructions that could be tightened without losing precision?
-- Passive constructions, filler phrases, or unnecessarily long examples?
+**Token judgment lens (beyond the rows):**
+- **Redundancy** — anything said more than once within the skill, or repeated across sub-skills that could live once in the coordinator and be referenced.
+- **Over-explanation** — *why* explained at length where a short rule captures it; defensive hedging that adds words without meaning.
+- **Dead weight** — headers, sections, or principles present but not doing real work; scaffolding left over from earlier iterations.
+- **Verbosity** — passive constructions, filler phrases, over-long examples.
 
 ---
 
@@ -179,9 +155,13 @@ After all three passes, write the report. Structure:
 ### What's working well
 [Bullets. Specific. Credit where it's due — don't skip this section.]
 
-### Gaps and issues
-[Grouped by pass (Design / Implementation / Token efficiency).
-Each issue: what it is, where it appears, why it matters.]
+### Blockers
+[Failed mechanical checks (standard rows tagged Blocker). Each: the row #, what failed,
+where it appears, and the fix. These must be resolved before shipping.]
+
+### Review flags
+[Judgment checks that need attention, grouped by pass (Design / Implementation / Token
+efficiency). Each: the row # or lens, what it is, where it appears, why it matters.]
 
 ### Recommendations
 [Prioritized. Highest-impact changes first.
@@ -199,6 +179,8 @@ If yes, present changes one at a time, explain each in plain language, and wait 
 ## Design principles
 
 - **Three passes, not one** — each pass has a different lens; mixing them produces muddier findings in all three.
+- **Derive from the standard** — checks come from `strategy/skill-authoring-standard.md`, not from freestanding rules here. Cite row/section numbers; the auditor runs the checklist and adds judgment.
+- **Blockers vs. review flags** — mechanical (`[M]`) failures are blockers reported as pass/fail; judgment (`[J]`) checks are reasoned assessments. Never demote a blocker to a suggestion or inflate a judgment call into a hard fail.
 - **Read everything first** — do not start Pass 1 until all SKILL.md files are loaded. Findings often depend on cross-file context.
 - **Specific findings only** — vague observations ("this section could be clearer") are not useful. Name the file, section, and specific issue.
 - **Tighten without breaking** — token efficiency is not an excuse for vagueness. Every proposed rewrite must preserve the original instruction's precision.
