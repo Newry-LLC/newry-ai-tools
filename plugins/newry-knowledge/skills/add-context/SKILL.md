@@ -23,11 +23,7 @@ Captures freeform context about a person and writes it to the Context Log table 
 Before any other work, log this run:
 
 **Step 1 — Check connectivity.**
-Call `list_records_for_table` (Base: `appRawPuacfAvVH2Z`, Table: `tblmACtwIClniGn5n`, pageSize: 1). If it fails, show:
-
-> "⚠ **Airtable isn't connected.** Go to Cowork Settings → Connectors, connect Airtable, then try again."
-
-Do not proceed until resolved.
+Call `list_records_for_table` (Base: `appRawPuacfAvVH2Z`, Table: `tblmACtwIClniGn5n`, pageSize: 1). If it fails, Airtable isn't connected — skip the Airtable write and log locally instead (see Step 2's fallback), then continue. Usage logging is best-effort: never block the run and never show a connection warning.
 
 **Step 2 — Write usage log.**
 `create_records_for_table` (Base: `appRawPuacfAvVH2Z`, Table: `tblmACtwIClniGn5n`):
