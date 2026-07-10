@@ -1,0 +1,174 @@
+{
+  "version": "1.0",
+  "notes": "Requires JSON5 parser (comments not valid JSON). Covers the plugin-wide minimum (skill-authoring standard check #10, >=3 scenarios) plus every behavior added/changed in the 2026-07-10 proactive-continuity + evidence-coverage redesign. Run output schema: {ts, plugin_version, eval_id, pass, judge_verdict, notes}.",
+
+  "evals": [
+
+    // ─────────────────────────────────────────
+    // CORE WORKFLOW (plugin-wide minimum, standard check #10)
+    // ─────────────────────────────────────────
+
+    {
+      "id": "E1",
+      "skills": ["interview-coding-synthesis"],
+      "regression_suite": true,
+      "label": "ICS Mode 1 -> Mode 2 full run on a small corpus",
+      "query": "I have a folder of 4 transcripts and an issue tree. Code and roll them up.",
+      "files": {
+        "materials": ["smith-2026-06-01.txt", "torres-2026-06-02.txt", "kim-2026-06-03.txt", "patel-2026-06-04.txt"],
+        "analytical_frame": "3-branch issue tree (A - Pricing, B - Competition, C - Distribution)",
+        "prior_rollup": null
+      },
+      "expected_behavior": {
+        "should": [
+          "Run Mode 1 on all 4 transcripts, producing one card per interview appended to a single canonical Markdown, then a single docx render via render_docx.py + style_docx.py",
+          "Run Mode 2 Roll-up against the resulting cards (not raw transcripts)",
+          "Coverage table's Overall rating is based on evidence strength (directness/diversity/specificity) for each branch, not on how many of the 4 transcripts touched it",
+          "Stamp a coverage-method version marker on the Roll-up",
+          "Cards document contains only card records — no pre-flight block, no Locked Scope section",
+          "End with a proportional next-step recommendation, not an identical fixed menu"
+        ],
+        "should_not": [
+          "Rate a branch's Overall coverage by counting how many of the 4 transcripts mentioned it",
+          "Write the pre-flight echo or the Locked Scope display into the saved cards document",
+          "Produce any literal '>' character in the rendered docx body text",
+          "Invent a Roll-up cross-round delta when no prior Roll-up exists"
+        ]
+      },
+      "expected_output": "Cards docx (4 records, table-format headers, no pre-flight/scope leakage) + Roll-up docx with an evidence-strength coverage table and version marker.",
+      "llm_judge_prompt": "Given the produced cards and Roll-up docx: (a) is the Overall rating language about evidence quality (direct/diverse/specific) rather than interview count, and (b) does the cards document start at the first card with no pre-flight or scope block? Answer yes/no to each."
+    },
+
+    {
+      "id": "E2",
+      "skills": ["corpus-query"],
+      "regression_suite": true,
+      "label": "Corpus Query — topic scan on a coded corpus",
+      "query": "Who talked about distributor pricing pressure?",
+      "files": {
+        "claims_table": "populated, 15 rows across 4 interviewees",
+        "cards": "4 summary cards present"
+      },
+      "expected_behavior": {
+        "should": [
+          "Query the claims table first, falling back to cards only if the claims table result is thin",
+          "Return findings with source attribution ([IS-N: Name] format) and, where available, verbatim quotes",
+          "Report zero or thin results honestly rather than padding with unrelated findings"
+        ],
+        "should_not": [
+          "Draw a conclusion or recommendation about what the pricing pressure means for the client",
+          "Fabricate a finding not present in the claims table or cards"
+        ]
+      },
+      "expected_output": "A findings list with per-finding attribution, or an honest 'thin/zero results' statement with a suggestion to refine the query.",
+      "llm_judge_prompt": "Does every finding in the response carry a source attribution, and does the response avoid drawing a strategic conclusion about what the finding means?"
+    },
+
+    {
+      "id": "E3",
+      "skills": ["research-plan-design"],
+      "regression_suite": true,
+      "label": "Research Plan Design — cold start, no prior plan or corpus",
+      "query": "I'm starting a new research project. Help me plan the fieldwork.",
+      "files": {
+        "context": ["kickoff-deck.pptx"],
+        "prior_corpus": null
+      },
+      "expected_behavior": {
+        "should": [
+          "Confirm branch priorities and working hypotheses before proposing an interviewee type map",
+          "Present the plan in chunks, pausing for feedback after each",
+          "Note that target N per interviewee type will later appear in ICS's coverage table as context only, not as the basis for the Overall rating"
+        ],
+        "should_not": [
+          "Claim target N drives or caps the eventual coverage rating",
+          "Skip the branch-prioritization conversation and jump straight to a target list"
+        ]
+      },
+      "expected_output": "A chunked research plan: branch priorities, interviewee type map with target N per type, sourcing approach.",
+      "llm_judge_prompt": "Does the plan present target N as a planning figure only, without asserting it will determine ICS's coverage rating?"
+    },
+
+    // ─────────────────────────────────────────
+    // REDESIGN-SPECIFIC (2026-07-10)
+    // ─────────────────────────────────────────
+
+    {
+      "id": "E4",
+      "skills": ["interview-coding-synthesis"],
+      "regression_suite": true,
+      "label": "Add interviews to an existing project — no deliverable regression",
+      "notes": "Regression case for the diagnosed bug: an earlier update run produced style drift, literal '>' leakage, a written pre-flight block, and a written Locked Scope section in the cards doc. This case must confirm all four are absent after adding new interviews to an existing corpus.",
+      "query": "Add these 3 new interviews to the existing corpus and update the cards doc.",
+      "files": {
+        "materials": ["existing 6 transcripts, already coded", "3 new transcripts"],
+        "existing_cards_md": "canonical Markdown with 6 cards, clean (no prior regression)",
+        "existing_cards_docx": "6-card docx, clean"
+      },
+      "expected_behavior": {
+        "should": [
+          "Append 3 new cards to the canonical Markdown, then fully rebuild the docx via render_docx.py + style_docx.py from that Markdown — never edit the existing docx in place, never read the docx back to append",
+          "Produce a docx with identical styling (Heading 1/2, table style, bullet style) across all 9 cards, old and new"
+        ],
+        "should_not": [
+          "Contain any literal '>' character in the body text of any card, old or new",
+          "Contain a pre-flight block or a Locked Scope section anywhere in the cards document",
+          "Show a different style set on the 3 new cards than on the 6 existing ones"
+        ]
+      },
+      "expected_output": "A 9-card docx, uniform styling throughout, zero literal '>' characters, no pre-flight/scope content.",
+      "llm_judge_prompt": "Scan the produced docx text: are there any '>' characters, any pre-flight-style block ('Pre-flight', 'Corpus:', 'Scope:'), or any 'Locked scope' heading anywhere in it? Answer yes/no. Any 'yes' fails this case."
+    },
+
+    {
+      "id": "E5",
+      "skills": ["interview-coding-synthesis", "primary-research-toolkit (coordinator greeting)"],
+      "regression_suite": true,
+      "label": "Version skew — old-method Roll-up is never narrated as current",
+      "notes": "Regression case for the surviving Major review finding: a Roll-up written before the coverage-method marker existed (or by an older method) must not be treated as a current, comparable rating — either in the coordinator's startup greeting or in ICS's cross-round delta.",
+      "query": "What's the status of this project? (cold open, no task named)",
+      "files": {
+        "prior_rollup": "exists, dated 3 weeks ago, NO coverage-method marker (pre-redesign artifact)",
+        "cards": "9 cards, 3 new since that Roll-up"
+      },
+      "expected_behavior": {
+        "should": [
+          "On the startup greeting, flag the existing Roll-up's coverage ratings as computed by an earlier method and recommend re-running the Roll-up rather than presenting its Thin/Strong flags as current",
+          "If a new Roll-up is then run and a cross-round delta is attempted against this unmarked prior Roll-up, state 'not comparable to prior method' instead of reporting per-branch improve/weaken"
+        ],
+        "should_not": [
+          "Present the unmarked prior Roll-up's branch ratings as current, confident recommendations",
+          "Report a branch as 'improved' or 'weakened' by comparing an evidence-strength rating against an unmarked (presumed old-method) prior rating"
+        ]
+      },
+      "expected_output": "Greeting flags the Roll-up as stale-method; any subsequent delta explicitly declines to compare per-branch movement.",
+      "llm_judge_prompt": "Does the response avoid asserting a specific branch 'improved' or 'weakened' when the prior Roll-up carries no coverage-method marker? Answer yes/no."
+    },
+
+    {
+      "id": "E6",
+      "skills": ["interview-coding-synthesis"],
+      "regression_suite": true,
+      "label": "Genuine disagreement rates Strong, not Thin",
+      "notes": "Regression case for the re-review's consensus-vs-quality finding. A branch with direct, diverse, specific sources that genuinely disagree must not be down-rated for disagreeing.",
+      "query": "Run Mode 2 Roll-up on this corpus.",
+      "files": {
+        "cards": "6 cards addressing the 'distributor pricing' branch: all High attribution/verbatim, spread across 3 geographies and 2 seniority levels, claims are specific with named numbers — but split roughly 50/50 on whether prices are rising or falling"
+      },
+      "expected_behavior": {
+        "should": [
+          "Rate the branch's Overall coverage as Strong (Strong sub-signals: directness, diversity, specificity all high) despite the disagreement",
+          "State the divergence explicitly as a finding — e.g. 'sources split — a real market divide' — in the branch's Contradictions subsection",
+          "Explain in the coverage table basis that consensus was not required because the sources are direct, diverse, and specific"
+        ],
+        "should_not": [
+          "Rate the branch Thin or Emerging solely because the sources disagree",
+          "Treat the disagreement as evidence the branch needs more interviews"
+        ]
+      },
+      "expected_output": "Overall: Strong, with a Contradictions subsection framing the split as a real finding, not a coverage gap.",
+      "llm_judge_prompt": "Is the branch rated Strong (not Thin/Emerging), and is the disagreement presented as a substantive finding rather than a coverage weakness? Answer yes/no to each."
+    }
+
+  ]
+}
