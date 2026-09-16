@@ -39,7 +39,8 @@ After the continuity read, proceed to routing below.
 
 ## Usage logging
 
-At the start of every run — before any other work:
+At the start of every run — before any other work. **The coordinator logs once per run on behalf of whichever sub-skill it routes to; sub-skills do not log for themselves.** One entry per run, one place to maintain.
+
 
 **Step 1 — Check Airtable connectivity.**
 Call `Airtable:list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, Airtable isn't connected — skip Step 2 and log locally via Step 3, then continue. Usage logging is best-effort: never block the run and never show a connection warning.
@@ -50,7 +51,7 @@ Call `Airtable:create_records_for_table` with:
 - **Fields:**
   - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-27T14:30:00Z`)
   - `fldNHK285dPCOdNhB` (plugin) — `"primary_research_toolkit"`
-  - `fld4EyuVEhxAhPZEd` (sub_skill) — whichever sub-skill is being invoked: `"ics"`, `"corpus_query"`, `"rpd"`, `"igd"`, `"ia"`, `"interview_prep"`; use `"general"` if routing hasn't resolved yet
+  - `fld4EyuVEhxAhPZEd` (sub_skill) — whichever sub-skill is being invoked: `"ics"`, `"corpus_query"`, `"rpd"`, `"igd"`, `"ia"`, `"interview_prep"`, `"transcript_combine"`; use `"general"` if routing hasn't resolved yet
   - `fldmTXyfFZRpbZEvQ` (user_id) — use the user's email address from the session context (available in the system prompt `<user>` block); if not available, use `"unknown"`
   - `fldu8rvXDfvi2O3jF` (project) — project code if discernible (e.g. `"ALTA01"`); otherwise `""`
 
@@ -81,6 +82,7 @@ When logging:
 | [Interview Guide Design](sub-skills/interview-guide-design/SKILL.md) | Built | Convert prioritized branches into a structured interview guide by interviewee type |
 | [Interview Acquisition](sub-skills/interview-acquisition/SKILL.md) | Built | Draft outreach and expert network briefs; research targets; manage the pipeline tracker through to confirmed interview |
 | [Interview Prep](sub-skills/interview-prep/SKILL.md) | Built | Customized interview guide per confirmed interviewee: key questions at top, probe notes from corpus learnings to date, flags |
+| [Transcript Combine](sub-skills/transcript-combine/SKILL.md) | Built | Merge multiple recordings of the same call into one cross-checked transcript with named speakers; runs automatically after ingestion. Also cleans a single recording |
 | [Interview Coding & Synthesis](sub-skills/interview-coding-synthesis/SKILL.md) | Built | Code transcripts against the analytical frame; synthesize findings across the corpus, including coverage and gaps |
 | [Corpus Query](sub-skills/corpus-query/SKILL.md) | Built | Query the coded corpus by topic, person, segment, or branch; retrieve findings, counts, quotes, cross-tabs, and source exchanges from preprocessed transcripts |
 | ~~Coverage & Gap Analysis~~ | Absorbed into ICS Mode 2 (2026-05-04) | Coverage table, per-branch gaps, and contradictions are produced by the Roll-up. Cross-round delta and source-type recommendations are tracked as ICS Mode 2 enhancements. |
@@ -101,6 +103,9 @@ Primary research work at Newry typically follows this sequence. Not every projec
    ↓  (customized guide: key questions first, probe notes from corpus     │
        learnings to date, flags)                                          │
    [consultant runs the interview; transcript goes to Primary Research/materials/] │
+3.5 Transcript Combine  ← runs automatically when a call has >1 recording      │
+   ↓  (one cross-checked "Combined Transcript - Name - date" per call, with     │
+       named speakers; figures, names and negations that split are flagged)     │
 4. Interview Coding & Synthesis  ─────────────────────────────────────────┘
    ↓  (summary cards + Roll-up; Roll-up feeds back into Interview Prep for subsequent rounds)
 5. Corpus Query  ← available once ICS Mode 1 is complete (claims table + cards exist)
@@ -123,6 +128,7 @@ The user describes their situation in plain language. Match against the patterns
 |---|---|
 | "I have a folder of transcripts and an issue tree" / "I need to code these interviews" / "code and roll up these interviews" | **Interview Coding & Synthesis** — Mode 1 across all transcripts, then Mode 2 Roll-up. The default workflow. If `Primary Research/materials/` is empty when this route triggers, offer Transcript Ingestion first (see below). |
 | "pull from Otter" / "import transcripts from Otter" / "get my Otter recordings" / "pull my recordings" / "import my interviews from Otter" | **Transcript Ingestion** — search Otter, show a numbered list for the consultant to pick from, fetch selected recordings, save to `materials/`. See Transcript Ingestion section below. |
+| "merge these transcripts" / "I have two recordings of the same call" / "which version is right" / "clean up this transcript" / "degarble this" / "Otter garbled the names" | **Transcript Combine** — one cross-checked transcript per call. Runs automatically after ingestion when a call has more than one recording; also available on demand. |
 | "I just have a few transcripts" (≤3) / "small batch of interviews" | **Interview Coding & Synthesis** — Mode 1 only; skip Roll-up. |
 | "I have new interviews to add to an existing project" / "next round of interviews" | **Interview Coding & Synthesis** — incremental Mode 1 on new transcripts; Mode 2 against the broader card corpus. If a prior Roll-up is available, pass it as delta input (when that enhancement ships). |
 | "I want to know what the interviews have covered" / "what's missing from the corpus" / "where are the gaps" | The Roll-up's coverage table and per-branch Gaps subsections answer this. If a Roll-up doesn't exist yet, run **ICS Mode 2**. |
@@ -213,6 +219,24 @@ All sub-skills in this toolkit are anchored to the same analytical frame. Provid
 
 ---
 
+## Which transcript to code
+
+A file named `Combined Transcript - <Name> - <date>` has been cross-checked by Transcript
+Combine. Prefer it. But **the name is a convention, not a requirement** — combining may have been
+skipped, or files may have arrived by hand, and coding must work either way.
+
+Per interviewee, in `materials/`:
+
+- **A combined file exists** — code it, ignore the other exports for that person.
+- **No combined file, one recording** — code it as-is. Note in the summary card that it was not
+  cross-checked, so a reader knows the wording has one witness behind it.
+- **No combined file, several recordings** — do not pick one silently. Offer to run Transcript
+  Combine. If the consultant declines, code the most complete one and say which, and that the
+  others were not reconciled.
+
+Never block coding because combining didn't run. A transcript that skipped the step is worth less
+but is still usable; refusing to proceed is worse.
+
 ## Transcript Ingestion
 
 Pulls transcripts from connected recording services directly into `Primary Research/materials/` — replacing the manual file-drop step.
@@ -265,6 +289,16 @@ Then ask: "Ready to run ICS on these, or do you want to pull more first?"
 
 **If no Granola tool is available**, don't offer this path — proceed with Otter and/or manual file drop.
 
+### After ingestion — combine before coding
+
+Group the files in `materials/` by interviewee. Where a call has more than one recording, run
+**Transcript Combine** on it before coding. Ingestion routinely produces an Otter transcript and a
+Granola export of the same call, and coding would otherwise treat them as two interviews.
+
+Worth saying to the consultant while they are still fielding: recording with three tools at once
+costs nothing and roughly halves the reconciliation work, because majority voting needs three
+independent witnesses. With two, nothing can be settled automatically.
+
 ---
 
 ## Files in this plugin
@@ -287,6 +321,14 @@ primary-research-toolkit/
       SKILL.md
     interview-prep/
       SKILL.md
+    transcript-combine/
+      SKILL.md
+      scripts/                       ← six-stage pipeline (normalize → check → segment →
+                                       align → payload → docx); built by Andrew Gartley
+      references/
+        reconciliation-rules.md      ← how to resolve a disagreement, and when to flag
+        summary-formats.md
+      examples/                      ← synthetic smoke-test fixture (not distributed)
     interview-coding-synthesis/
       SKILL.md
       eval/                          ← eval scenarios
