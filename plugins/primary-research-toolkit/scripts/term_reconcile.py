@@ -423,8 +423,15 @@ def inject_fix_log(text: str, fixes: list[FixCount]) -> str:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    parser.add_argument("--input", required=True,
-                        help="Folder of pre-processed transcripts (.preprocessed.md)")
+    parser.add_argument("--input",
+                        help="Folder of pre-processed transcripts (.preprocessed.md). "
+                             "Not needed with --check-glossary")
+    parser.add_argument("--check-glossary", action="store_true",
+                        help="Parse the glossary and report what was read, then stop. "
+                             "Needs no transcripts. Use this after hand-editing or "
+                             "converting a glossary: an entry this script cannot parse "
+                             "is skipped silently, so a file that looks right can apply "
+                             "nothing at all. Exit 2 if nothing parsed")
     parser.add_argument("--glossary", required=True,
                         help="Path to project glossary.md")
     parser.add_argument("--no-inplace", action="store_true",
@@ -433,14 +440,39 @@ def main(argv: list[str] | None = None) -> int:
                         help="Compute fix counts without writing files")
     args = parser.parse_args(argv)
 
-    in_dir = Path(args.input)
     glossary_path = Path(args.glossary)
-
-    if not in_dir.is_dir():
-        print(f"ERROR: input folder not found: {in_dir}", file=sys.stderr)
-        return 2
     if not glossary_path.is_file():
         print(f"ERROR: glossary file not found: {glossary_path}", file=sys.stderr)
+        return 2
+
+    if args.check_glossary:
+        entries = parse_glossary(glossary_path.read_text(encoding="utf-8"))
+        by_scope = {}
+        for e in entries:
+            by_scope.setdefault(e.section, []).append(e)
+        print(f"{glossary_path}")
+        print(f"  {len(entries)} entry/entries parsed")
+        for tag, group in sorted(by_scope.items()):
+            variants = sum(len(e.variants) for e in group)
+            print(f"    {tag}: {len(group)} term(s), {variants} variant(s)")
+            for e in group[:3]:
+                print(f"      e.g. {e.canonical} <- {', '.join(e.variants[:4])}")
+        if not entries:
+            print("  NOTHING PARSED. The section headings or entry lines do not match "
+                  "the expected format —", file=sys.stderr)
+            print("  see references/glossary.md. A glossary in this state applies no "
+                  "corrections at all.", file=sys.stderr)
+            return 2
+        print("  Format is readable. Corrections will apply.")
+        return 0
+
+    if not args.input:
+        print("ERROR: --input is required unless --check-glossary is given",
+              file=sys.stderr)
+        return 2
+    in_dir = Path(args.input)
+    if not in_dir.is_dir():
+        print(f"ERROR: input folder not found: {in_dir}", file=sys.stderr)
         return 2
 
     glossary_text = glossary_path.read_text(encoding="utf-8")
