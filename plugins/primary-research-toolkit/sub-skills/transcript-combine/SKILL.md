@@ -273,7 +273,9 @@ Now read **`alignment.review.json` only**, and write `decisions.json` (`build_pa
   different sites; one glossary entry settles all of them. In testing, one clinical term appeared
   garbled four different ways across four separate sites. Clustering is a hint, not a verdict —
   roughly a tenth of judgment sites, and some are wrong, so glance and move on.
-- **`sites`** — spans where sources split with no majority. `references/reconciliation-rules.md`
+- **`sites`** — spans where sources split with no majority. **Ordered figures, then negations,
+  then names, then plain wording — work it in that order**, so the calls that can reach a slide
+  get the freshest attention rather than whichever happened to fall early in the transcript. `references/reconciliation-rules.md`
   covers how to resolve them and when to flag. A resolution replaces *exactly* the span shown in
   `said`. Watch `adjacent_to`.
 - **`filler`** — decided per group, since sixty "um"s are one decision. Remove unambiguous groups
@@ -308,9 +310,14 @@ Four checks will stop or change the build. They exist because each one caught a 
 
 - **A resolution no source supports is demoted to a flag.** Glossary values count as support, so
   real corrections pass.
-- **Many judgment sites and zero flags refuses the build.** Deciding hundreds of sites and
-  flagging none is not a credible outcome. `--no-flags-ok` overrides and records the
-  acknowledgement in the document.
+- **150+ judgment calls with zero flags refuses the build.** The observed flag rate is about one
+  in sixty, so zero flags in forty calls is unremarkable — refusing there would only train
+  people to reach for the override. `--no-flags-ok` overrides and records the acknowledgement in
+  the document.
+- **Flags bunched at the start of the call earn a warning.** Attention fades across a long review,
+  and that is what it looks like: flags in the first third while the disagreements run to the end.
+  The check compares the two, so an interview whose hard passages genuinely sit early is not
+  accused of anything.
 - **High merged-speaker share writes a disclosure note,** so unverified attribution does not read
   identically to verified attribution.
 - **Every appendix row gets a marker.** A site spanning a turn boundary has no placeholder in the
