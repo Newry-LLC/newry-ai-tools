@@ -150,9 +150,11 @@ def main():
                          "letting them take the timing anchor's reading. The "
                          "default is lean — figures, names and negations flag "
                          "either way")
-    ap.add_argument("--flag-floor-sites", type=int, default=40,
-                    help="judgment-site count above which zero flags is refused "
-                         "(default 40)")
+    ap.add_argument("--flag-floor-sites", type=int, default=150,
+                    help="judgment-site count above which zero flags is refused. "
+                         "Default 150: the observed flag rate is about 1 in 60, so "
+                         "zero flags in 40 sites is unremarkable and refusing there "
+                         "would just train people to use the override")
     ap.add_argument("--no-flags-ok", action="store_true",
                     help="acknowledge that a large run legitimately has no flags; "
                          "the acknowledgement is recorded in the document")
@@ -283,6 +285,32 @@ def main():
         run_bits.append(f"session {os.environ['CLAUDE_CODE_SESSION_ID'][:8]}")
     run_bits.append(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
     run_record = "; ".join(run_bits)
+
+    # ---- do the flags cover the whole call, or just the start of it
+    # Attention fades across a long review, and the symptom is flags bunched at
+    # the front while the disagreements themselves are spread evenly. This is the
+    # check that would have caught the drift as it happened rather than five weeks
+    # later. It compares where the flags fall against where the judgment sites
+    # fall, so an interview whose hard passages genuinely sit early is not
+    # accused of anything.
+    positional_note = None
+    all_turns = [s["turn"] for s in sites_by_id.values()
+                 if isinstance(s.get("turn"), int)]
+    flag_turns = [t for t in
+                  (sites_by_id.get(str(c.get("site_id")), {}).get("turn")
+                   for c in conflicts)
+                  if isinstance(t, int)]
+    if len(flag_turns) >= 3 and len(all_turns) >= 20:
+        last_turn = max(all_turns) or 1
+        flag_reach = max(flag_turns) / last_turn
+        site_reach = max(all_turns) / last_turn
+        # Only worth saying when the sites run late and the flags do not.
+        if site_reach > 0.75 and flag_reach < 0.5:
+            positional_note = (
+                f"Every flag falls in the first {flag_reach * 100:.0f}% of the "
+                f"call, though disagreements needing judgment run to "
+                f"{site_reach * 100:.0f}%. Later passages may not have had the "
+                f"same scrutiny — worth a second look before relying on them.")
 
     # ---- flagging floor
     # Flagging discipline is the thing that decayed across the Calyxo project:
@@ -428,6 +456,8 @@ def main():
     ordered.update(meta)
 
     notes = list(decisions.get("notes") or [])
+    if positional_note:
+        notes.append(positional_note)
     if floor_note:
         notes.append(floor_note)
     if lean_wording:
@@ -518,6 +548,8 @@ def main():
     print(f"  words:            {words}  (anchor had {anchor_words}, "
           f"longest source {longest})")
     print(f"  open conflicts:   {len(conflicts)}")
+    if positional_note:
+        print(f"  WARNING: {positional_note}")
     if orphans:
         print(f"  WARNING: {len(orphans)} flag(s) could not be placed: {orphans}")
     if lean_wording:
