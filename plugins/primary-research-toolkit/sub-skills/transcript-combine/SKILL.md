@@ -74,25 +74,53 @@ On Mac, Linux, or inside Cowork's container, `python3` works as written below. *
 `C:/Users/<you>/AppData/Local/Programs/Python/Python314/python.exe`. Needs `python-docx` and
 `pypdf`.
 
+## Which model runs this, and why it is recorded
+
+**Use Opus 5 for the judgment step, and put it in the header** as a `Model` row in
+`decisions.json`'s `meta`.
+
+The scripts use no model at all. The only model work is deciding the disagreements the scripts
+could not settle, and choosing what to flag — and that is where quality varies run to run. Across
+one real project, flagging fell from three per interview to zero over five weeks while the scripts
+produced identical mechanical results, and nothing in the output recorded what had changed.
+
+Two things have to be fixed for one run to be comparable to another: the inputs (which recording
+is the anchor, which share a vote, which are summaries that must not vote — all named in the
+header already) and the model. Pin both, record both. A transcript that looks worse than an
+earlier one can then be traced to a cause rather than a hunch.
+
 ## Workflow
 
 ### 1. Identify the call and get the glossary
 
 Ask which interview and which project.
 
-**Check for a cached glossary first** — `glossary.md` in the project's SharePoint folder. A
-project runs fifteen or thirty interviews sharing almost all their vocabulary, so if one exists,
-read it and go to step 2. This is the biggest saving across a project, and a glossary that stops
-growing is the most likely reason later interviews come out worse than earlier ones.
+**One glossary per project, shared with the rest of the toolkit.** It lives at
+`<project-root>/Primary Research/glossary.md` and is the same file Interview Coding & Synthesis
+seeds and grows and that `scripts/term_reconcile.py` parses. Do not create a second one, and do
+not write a different format into it — `term_reconcile.py` silently applies nothing when it
+cannot parse an entry.
 
-If there's none, build one from the statement of work, the interview guide, the kickoff deck
-(usually densest in acronyms), prior transcripts, and the Airtable project record. Search for
-those yourself rather than making the user hunt for paths.
+**Read it first.** A project runs fifteen or thirty interviews sharing almost all their
+vocabulary, so if one exists, read it and go to step 2. This is the biggest saving across a
+project, and a glossary that stops growing is the most likely reason later interviews come out
+worse than earlier ones.
 
-Write `glossary.md`: term, correct spelling, and the mis-hearings you expect ("Nafion →
-'naphion', 'nay-fee-on'"). Cover client and competitor names, products, technical terms,
-acronyms, and every likely speaker's full name. **Save it back to the project folder** so the
-next interview inherits it.
+**If there is none, seed it** — this sub-skill runs before Interview Coding & Synthesis, so
+it is often first. Use ICS's seeding sources: project and client name, interviewee names from
+metadata, branch labels and key concepts from the analytical frame, and acronyms and proper nouns
+from the SoW or issue tree. Add the interview guide and kickoff deck, which are usually densest in
+acronyms. Search for those yourself rather than making the user hunt for paths.
+
+**Write it in ICS's three-state format**, which is what the shared script expects:
+*Confirmed correction* (auto-apply forever in this project), *Confirmed non-correction* (never
+flag again), *Pending* (surfaces for review). Note the expected mis-hearings alongside each term
+where you know them ("Nafion — expect 'naphion', 'nay-fee-on'"); that is what makes a garble
+recognizable on the next interview. Cover client and competitor names, products, technical terms,
+acronyms, and every likely speaker's full name.
+
+`decisions.json`'s own `glossary` map is a per-run scratch, not the project glossary. Terms
+settled during review get promoted into the project file at step 7.
 
 **Speaker roster.** Named speakers are required in the output; tools label people "Speaker 1" or
 "Me"/"Them". Build the roster from the interview guide header, the Airtable contact record, the
@@ -232,7 +260,7 @@ Now read **`alignment.review.json` only**, and write `decisions.json` (`build_pa
 - **`coverage_gaps`** — passages another source has that the anchor missed. Real speech the anchor
   dropped (include) or a hallucination (don't); see the rules file.
 
-Also set `speakers`, `glossary`, `meta`, and `title`.
+Also set `speakers`, `glossary`, `meta`, and `title`. Include a `Model` row in `meta` naming the model that made these decisions.
 
 ### 6. Build the document — the lean pass is the default
 
