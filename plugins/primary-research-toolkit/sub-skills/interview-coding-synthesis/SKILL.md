@@ -179,20 +179,16 @@ After running, check `Primary Research/preprocessed/INDEX.md` for any transcript
 
 ### Glossary
 
-Stored at `<project-root>/Primary Research/glossary.md` (inside the Primary Research folder — travels with the project). Three states per term:
-- **Confirmed correction** — auto-apply forever in this project (e.g., altar → Alta)
-- **Confirmed non-correction** — never flag again (e.g., "altar" is literal in a church-renovation client)
-- **Pending** — surfaces for review or is auto-applied per the matrix below
+Location, format, the four sections and which one a term belongs in: see
+`../../references/glossary.md`. One file per project, shared with Transcript Combine.
 
-Transcript Combine runs earlier in the workflow and uses the same file, so on many projects it will already exist — read and grow it rather than reseeding. If it does not exist, seed it from:
-- Project / client name
-- Interviewee names from metadata
-- Branch labels and key concepts from the analytical frame
-- Acronyms and proper nouns appearing in the SOW or issue tree
+Transcript Combine runs earlier in the workflow and uses the same file, so on most projects it
+already exists — **read and grow it rather than reseeding.** Its entries were seeded from
+documents, which means predicted mis-hearings sit under Best-inference; a term this step confirms
+from the corpus moves to Confirmed.
 
-Subsequent runs reuse and grow the glossary; review surface area drops sharply after run #1.
-
-Note: both this sub-skill and Transcript Combine apply glossary fixes, and a Combined Transcript arrives with filler already removed. Applying a correction twice is harmless — the second pass finds nothing to change — so do not add logic to suppress it.
+What belongs to this step is the corpus half — finding terms rather than predicting them. Review
+surface area drops sharply after run #1.
 
 ### Detection categories
 
