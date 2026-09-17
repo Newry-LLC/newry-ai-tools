@@ -74,7 +74,7 @@ Do not attempt to answer corpus queries without the claims table. Card-fallback 
 
 **Step 1: Parse and classify.** On receiving a query, identify the type from the table below. If ambiguous, default to claims table first.
 
-**Step 2: Normalize terms.** Check query terms against `Primary Research/glossary.md`. Apply confirmed corrections silently (e.g., "altar" → "Alta"). Expand abbreviations where the glossary has an entry. If no glossary exists, proceed and note it in pre-flight.
+**Step 2: Normalize terms.** (Glossary location, format and sections: `../../references/glossary.md`.) Check query terms against `Primary Research/glossary.md`. Apply confirmed corrections silently (e.g., "altar" → "Alta"). Expand abbreviations where the glossary has an entry. If no glossary exists, proceed and note it in pre-flight.
 
 **Step 3: Execute retrieval per type.**
 
