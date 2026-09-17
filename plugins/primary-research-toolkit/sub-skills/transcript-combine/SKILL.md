@@ -198,11 +198,18 @@ Findings and what they mean:
   This is the easiest way to get a wrong answer out of the pipeline, and interview folders do
   hold the same export twice.
 
+**The anchor is chosen by measurement, not preference.** `check_sources.py` names one and shows
+its reasoning — timestamps, how cleanly speakers are separated, whether they are already named,
+and coverage of the call. Use it. Do not substitute a habit about which tool is usually best;
+that prior is in `references/reconciliation-rules.md` §2 and the measurement overrides it.
+
+The one thing it cannot know: **whether audio or video pairs with one of the transcripts.** If it
+does, anchor on that one regardless of score, so a flagged timestamp points at something the
+consultant can scrub to. Ask.
+
 Then confirm the plan with the user: interview and project, speaker roster, each source's size
-and anything odd, glossary terms in play, and **which source is the timing anchor**. Ask whether
-they have **audio or video paired with one of the transcripts** — if so that transcript should be
-the anchor, so a flagged timestamp points at something they can scrub to. Name the anchor and the
-recording in the header. With no timestamps anywhere, flags cite turn numbers instead.
+and anything odd, glossary terms in play, and the anchor. Name the anchor and any recording in
+the header. With no timestamps anywhere, flags cite turn numbers instead.
 
 ### 4. Repair attribution, if preflight flagged blobs
 
