@@ -184,13 +184,15 @@ Stored at `<project-root>/Primary Research/glossary.md` (inside the Primary Rese
 - **Confirmed non-correction** — never flag again (e.g., "altar" is literal in a church-renovation client)
 - **Pending** — surfaces for review or is auto-applied per the matrix below
 
-On first run for a project, the skill seeds the glossary from:
+Transcript Combine runs earlier in the workflow and uses the same file, so on many projects it will already exist — read and grow it rather than reseeding. If it does not exist, seed it from:
 - Project / client name
 - Interviewee names from metadata
 - Branch labels and key concepts from the analytical frame
 - Acronyms and proper nouns appearing in the SOW or issue tree
 
 Subsequent runs reuse and grow the glossary; review surface area drops sharply after run #1.
+
+Note: both this sub-skill and Transcript Combine apply glossary fixes, and a Combined Transcript arrives with filler already removed. Applying a correction twice is harmless — the second pass finds nothing to change — so do not add logic to suppress it.
 
 ### Detection categories
 
