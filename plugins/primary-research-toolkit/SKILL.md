@@ -344,6 +344,7 @@ primary-research-toolkit/
       SKILL.md                        ← absorbed into ICS Mode 2 (2026-05-04); folder kept for the absorption record
   references/
     continuity.md                    ← shared proactive-continuity block (startup read, greeting, narration)
+    glossary.md                      ← shared: the project glossary — location, format, sections, how it's applied
     interviewee-segmentation.md
     primary-research-onboarding.md    ← Newry's sourcing/outreach/interview-conduct playbook
   logs/
