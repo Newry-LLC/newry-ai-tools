@@ -35,7 +35,7 @@ the arrow; every variant it should replace goes after, each in backticks.
 
 **The script fails quietly.** An entry it cannot parse is skipped — no error, no correction
 applied. A glossary that looks right and reads zero entries is the failure to watch for, so prove
-it with `--dry-run` rather than trusting the file (see *Applying it* below).
+it with `--check-glossary` rather than trusting the file (see *Applying it* below).
 
 ## Where a term belongs
 
@@ -82,8 +82,15 @@ python3 scripts/term_reconcile.py --input <pre-processed dir> \
     --glossary "<project-root>/Primary Research/glossary.md" [--dry-run]
 ```
 
-- `--dry-run` changes nothing and reports entries read plus fixes it would apply. Use it after any
-  hand-edit of the glossary
+- **After any hand-edit or conversion, check the format first** — this needs no transcripts:
+
+  ```bash
+  python3 scripts/term_reconcile.py --glossary "<path>/glossary.md" --check-glossary
+  ```
+
+  It reports how many entries parsed, in which sections, with examples. Exit 2 and "NOTHING
+  PARSED" means the file applies no corrections at all, however right it looks
+- `--dry-run` changes nothing and reports fixes it would apply across real transcripts
 - Applies every Confirmed and Best-inference correction in place across `.preprocessed.md` files,
   handling contextual anchors and file scoping
 - Safely re-runnable: prior fix logs are masked, never duplicated. Originals are never touched
