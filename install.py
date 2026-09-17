@@ -109,16 +109,16 @@ def ensure_transcript_packages():
             if not pip_install(package):
                 missing.append((package, why))
     if missing:
-        print("
-  Transcript combining needs these and pip could not install them.")
+        print()
+        print("  Transcript combining needs these and pip could not install them.")
         print("  This is usually a managed-machine restriction, not a broken setup.")
         for package, why in missing:
             print(f"    - {package}  ({why})")
         print("  Ask IT to allow: pip install --user " +
               " ".join(p for p, _ in missing))
         print("  Everything else in this setup is unaffected, and transcript")
-        print("  combining still works in Cowork, which needs none of this.
-")
+        print("  combining still works in Cowork, which needs none of this.")
+        print()
     return not missing
 
 
