@@ -625,7 +625,10 @@ def main():
                    "(build_payload.py --schema). Do not read alignment.json; "
                    "everything needing a decision is here. Start with "
                    "term_clusters: each one is a single word garbled several "
-                   "ways, so one glossary entry settles every site it lists.",
+                   "ways, so one glossary entry settles every site it lists. "
+                   "'sites' is ordered figures, then negations, then names, "
+                   "then plain wording — decide it in that order so the "
+                   "consequential calls get your freshest attention.",
         "term_clusters": term_clusters,
         "anchor": anchor["name"],
         "independent_sources": n_groups,
@@ -652,7 +655,14 @@ def main():
                                 and abs(o["c1"] - s["c1"]) <= 4]}
                if any(o["id"] != s["id"] and abs(o["c1"] - s["c1"]) <= 4
                       for o in judgment) else {})
-        ) for s in judgment],
+        # Consequential first. Whoever works this list gets tired, and today the
+        # order is wherever the disagreement happened to fall in the transcript —
+        # so a figure late in a long call is decided with the least attention.
+        # Adjacency is preserved within a category, since neighbouring sites are
+        # often one garbled phrase split in two.
+        ) for s in sorted(judgment, key=lambda s: (
+            {"number": 0, "negation": 1, "entity": 2}.get(s["category"], 3),
+            s["c1"]))],
         "coverage_gaps": [{
             "id": i, "time": g["time"], "source": g["source"],
             "words": g["words"], "speaker_in_source": g["speaker_in_source"],
