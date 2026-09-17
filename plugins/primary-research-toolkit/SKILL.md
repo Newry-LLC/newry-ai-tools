@@ -291,9 +291,17 @@ Then ask: "Ready to run ICS on these, or do you want to pull more first?"
 
 ### After ingestion — combine before coding
 
-Group the files in `materials/` by interviewee. Where a call has more than one recording, run
-**Transcript Combine** on it before coding. Ingestion routinely produces an Otter transcript and a
-Granola export of the same call, and coding would otherwise treat them as two interviews.
+Work out which files belong to which call before coding, because ingestion routinely produces an
+Otter transcript and a Granola export of the same interview and coding would otherwise treat them
+as two. Do not do this by reading filenames — run Transcript Combine's grouping step, passing
+the interviewee names from the pipeline tracker:
+
+```bash
+python3 sub-skills/transcript-combine/scripts/group_sources.py materials/     --roster "<interviewee names>" --json groups.json
+```
+
+It proposes the grouping and flags what it cannot place. Confirm with the consultant, then run
+**Transcript Combine** on each call that has more than one recording.
 
 Worth saying to the consultant while they are still fielding: recording with three tools at once
 costs nothing and roughly halves the reconciliation work, because majority voting needs three
@@ -323,7 +331,7 @@ primary-research-toolkit/
       SKILL.md
     transcript-combine/
       SKILL.md
-      scripts/                       ← six-stage pipeline (normalize → check → segment →
+      scripts/                       ← seven-stage pipeline (grouping, then (normalize → check → segment →
                                        align → payload → docx); built by Andrew Gartley
       references/
         reconciliation-rules.md      ← how to resolve a disagreement, and when to flag
