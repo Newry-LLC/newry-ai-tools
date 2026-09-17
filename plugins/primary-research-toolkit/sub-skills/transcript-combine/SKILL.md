@@ -95,32 +95,20 @@ earlier one can then be traced to a cause rather than a hunch.
 
 Ask which interview and which project.
 
-**One glossary per project, shared with the rest of the toolkit.** It lives at
-`<project-root>/Primary Research/glossary.md` and is the same file Interview Coding & Synthesis
-seeds and grows and that `scripts/term_reconcile.py` parses. Do not create a second one, and do
-not write a different format into it — `term_reconcile.py` silently applies nothing when it
-cannot parse an entry.
+**The glossary is the single biggest quality lever in this skill**, and it is shared with the
+rest of the toolkit. Read `../../references/glossary.md` for where it lives, the format the shared
+script parses, and which section a term belongs in. Do not create a second glossary and do not
+invent a format — `term_reconcile.py` skips entries it cannot parse without saying so.
 
-**Read it first.** A project runs fifteen or thirty interviews sharing almost all their
-vocabulary, so if one exists, read it and go to step 2. This is the biggest saving across a
-project, and a glossary that stops growing is the most likely reason later interviews come out
-worse than earlier ones.
+Two things specific to this step:
 
-**If there is none, seed it** — this sub-skill runs before Interview Coding & Synthesis, so
-it is often first. Use ICS's seeding sources: project and client name, interviewee names from
-metadata, branch labels and key concepts from the analytical frame, and acronyms and proper nouns
-from the SoW or issue tree. Add the interview guide and kickoff deck, which are usually densest in
-acronyms. Search for those yourself rather than making the user hunt for paths.
-
-**Write it in ICS's three-state format**, which is what the shared script expects:
-*Confirmed correction* (auto-apply forever in this project), *Confirmed non-correction* (never
-flag again), *Pending* (surfaces for review). Note the expected mis-hearings alongside each term
-where you know them ("Nafion — expect 'naphion', 'nay-fee-on'"); that is what makes a garble
-recognizable on the next interview. Cover client and competitor names, products, technical terms,
-acronyms, and every likely speaker's full name.
-
-`decisions.json`'s own `glossary` map is a per-run scratch, not the project glossary. Terms
-settled during review get promoted into the project file at step 7.
+- **Read it before anything else.** A project runs fifteen or thirty interviews sharing almost all
+  their vocabulary, so an existing glossary is the biggest saving available. If one exists, read
+  it and go to step 2.
+- **You are usually the one creating it.** This sub-skill runs before Interview Coding &
+  Synthesis, so on the first interview there are no transcripts to learn from — seed it from
+  documents per the reference, and file predicted mis-hearings under Best-inference rather than
+  Confirmed.
 
 **Speaker roster.** Named speakers are required in the output; tools label people "Speaker 1" or
 "Me"/"Them". Build the roster from the interview guide header, the Airtable contact record, the
