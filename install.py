@@ -89,6 +89,39 @@ def pip_install(package):
     return result.returncode == 0
 
 
+def ensure_transcript_packages():
+    """Packages the Primary Research Toolkit's transcript combining needs.
+
+    Only relevant to the Claude Code path; Cowork's container has its own Python.
+    A locked-down machine may block pip entirely (proxy, no write access), so a
+    failure here prints what to ask IT for and setup continues — the scripts
+    themselves also fail with the install command rather than a traceback.
+    """
+    wanted = [("docx", "python-docx", "reads .docx recordings and writes the transcript"),
+              ("pypdf", "pypdf", "reads PDF recordings, e.g. expert-network exports")]
+    missing = []
+    for module, package, why in wanted:
+        try:
+            __import__(module)
+            print(f"{package}: already installed")
+        except ImportError:
+            print(f"{package}: not found — installing ({why})")
+            if not pip_install(package):
+                missing.append((package, why))
+    if missing:
+        print("
+  Transcript combining needs these and pip could not install them.")
+        print("  This is usually a managed-machine restriction, not a broken setup.")
+        for package, why in missing:
+            print(f"    - {package}  ({why})")
+        print("  Ask IT to allow: pip install --user " +
+              " ".join(p for p, _ in missing))
+        print("  Everything else in this setup is unaffected, and transcript")
+        print("  combining still works in Cowork, which needs none of this.
+")
+    return not missing
+
+
 def ensure_pywin32():
     """Install pywin32 if not present (required for PowerPoint COM)."""
     try:
@@ -318,6 +351,7 @@ def ensure_ppt_write_guard_hook():
 def main():
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     ensure_pywin32()
+    ensure_transcript_packages()
     ensure_ppt_mcp()
     ensure_ppt_write_guard_hook()
 
