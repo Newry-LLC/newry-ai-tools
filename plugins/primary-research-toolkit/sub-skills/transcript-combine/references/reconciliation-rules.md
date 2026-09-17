@@ -24,7 +24,7 @@ Two mechanical notes. A resolution replaces **exactly** the span shown in `said`
 
 Priors, not rules. Verify against what you see.
 
-**Otter** — Strong turn boundaries and timestamps; usually the best anchor. Weak on jargon and proper nouns, which it renders as similar-sounding common words. Can misattribute short interjections.
+**Otter** — Strong turn boundaries and timestamps, which often makes it the anchor. Weak on jargon and proper nouns, which it renders as similar-sounding common words. Can misattribute short interjections. Treat this as a prior only: `check_sources.py` recommends the anchor from what it measured in these particular files, and a measurement beats a prior — a run where Otter had generic labels and another source had named ones correctly anchored on the other source.
 
 **Granola** — Better on proper nouns and company names, having the meeting title and agenda as context. Notes-oriented, so completeness varies and speaker labelling is less consistent. Watch for coverage gaps.
 
