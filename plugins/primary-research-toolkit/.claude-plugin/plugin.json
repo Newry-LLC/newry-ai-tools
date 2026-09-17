@@ -1,6 +1,6 @@
 {
   "name": "primary-research-toolkit",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "End-to-end primary research workflow: plan, guide, acquisition, prep, transcript combining, synthesis, and corpus query. Requires M365 connector.",
   "author": {
     "name": "Newry Corp"
