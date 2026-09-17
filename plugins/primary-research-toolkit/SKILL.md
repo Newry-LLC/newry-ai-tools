@@ -331,7 +331,7 @@ primary-research-toolkit/
       SKILL.md
     transcript-combine/
       SKILL.md
-      scripts/                       ← seven-stage pipeline (grouping, then (normalize → check → segment →
+      scripts/                       ← seven-stage pipeline (group → normalize → check → segment →
                                        align → payload → docx); built by Andrew Gartley
       references/
         reconciliation-rules.md      ← how to resolve a disagreement, and when to flag
