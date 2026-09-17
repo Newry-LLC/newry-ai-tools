@@ -251,6 +251,78 @@ def inspect(path):
     }
 
 
+def recommend_anchor(rows):
+    """Pick the anchor from what was just measured, and say why.
+
+    The anchor is the spine: its turns and clock become the output's, and its
+    attribution is what the reader sees. Leaving that to whoever is running the
+    pipeline made the numbers move between runs, which is the one thing that has
+    to be stable for two transcripts to be comparable.
+
+    Nothing here is a matter of taste. A paraphrase cannot anchor. A file with no
+    usable speaker labels cannot supply attribution. Timestamps matter because a
+    flag has to point at something the consultant can scrub to. The rest is
+    coverage and how much speech sits in turns that mix speakers.
+
+    The one thing a script cannot know is which recording the audio pairs with.
+    That beats everything below, so it is asked rather than guessed.
+    """
+    scored, rejected = [], []
+    most_words = max((r["words"] for r in rows), default=0)
+
+    for r in rows:
+        if r["looks_paraphrased"]:
+            rejected.append((r["name"], "paraphrase — cannot anchor or vote"))
+            continue
+        if not r["speaker_labels"] or len(r["speaker_labels"]) == 1:
+            rejected.append((r["name"], "no usable speaker labels, so it cannot "
+                                        "supply attribution"))
+            continue
+
+        score, why = 0, []
+        if r["timestamps"]:
+            score += 3
+            why.append("has timestamps, so flags point at a time the consultant "
+                       "can scrub to")
+        else:
+            why.append("no timestamps, so flags would cite turn numbers")
+
+        if r["blob_share"] < 0.05:
+            score += 2
+            why.append("speakers are cleanly separated")
+        elif r["blob_share"] < BLOB_SHARE_SERIOUS:
+            score += 1
+            why.append(f"{r['blob_share'] * 100:.0f}% of words in mixed-speaker turns")
+        else:
+            why.append(f"{r['blob_share'] * 100:.0f}% of words in mixed-speaker turns, "
+                       f"which needs repair first")
+
+        if not r["generic_labels"]:
+            score += 2
+            why.append("speakers are already named")
+        else:
+            score += 1
+            why.append("labels are generic and need mapping to real people")
+
+        if most_words and r["words"] >= most_words * 0.95:
+            score += 2
+            why.append("most complete coverage of the call")
+        elif most_words and r["words"] >= most_words * 0.8:
+            score += 1
+            why.append(f"covers {r['words'] / most_words * 100:.0f}% of the longest source")
+        else:
+            why.append(f"covers only {r['words'] / most_words * 100:.0f}% of the "
+                       f"longest source" if most_words else "coverage unknown")
+
+        scored.append((score, r["name"], why))
+
+    if not scored:
+        return None, [], rejected
+    scored.sort(key=lambda s: (-s[0], s[1]))
+    best = scored[0]
+    return best[1], best[2], rejected
+
+
 def main():
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -309,6 +381,9 @@ def main():
                   f"opening text — same transcript twice. Give them the same "
                   f"':GROUP' so they share one vote.")
 
+    # ---- which source should be the anchor
+    anchor_pick, anchor_why, anchor_rejected = recommend_anchor(ok)
+
     # ---- verdict
     blocking = [(r["name"], p) for r in ok for p in r["problems"]]
     difficulty = "straightforward"
@@ -353,6 +428,14 @@ def main():
     print("-" * 68)
     print(f"VERDICT: {difficulty.upper()}")
     print(f"  independent verbatim sources that can vote: {max(votes, 0)}")
+    if anchor_pick:
+        print(f"  anchor: {anchor_pick}")
+        for w in anchor_why:
+            print(f"      {w}")
+        for name, reason in anchor_rejected:
+            print(f"      not {name}: {reason}")
+        print("      Ask the consultant whether audio or video pairs with a "
+              "different recording — if so, anchor on that one instead.")
     for r in reasons:
         print(f"  - {r}")
     if path:
@@ -370,6 +453,8 @@ def main():
             r.pop("_turns", None)
         with open(args.json, "w", encoding="utf-8") as fh:
             json.dump({"difficulty": difficulty, "votes": max(votes, 0),
+                       "anchor": anchor_pick, "anchor_why": anchor_why,
+                       "anchor_rejected": anchor_rejected,
                        "reasons": reasons, "recommended_path": path,
                        "sources": reports, "duplicates": duplicates}, fh,
                       ensure_ascii=False, indent=1)
