@@ -91,6 +91,33 @@ earlier one can then be traced to a cause rather than a hunch.
 
 ## Workflow
 
+### 0. Work out which files belong to which call
+
+Only needed when handed a folder rather than a named interview — which is the normal case after
+ingestion.
+
+```bash
+python3 scripts/group_sources.py materials/ --roster "Randall Jenkins" "Bonnie Solitaire"     --json groups.json
+```
+
+**Pass the roster.** Interviewee names come from the pipeline tracker or the Airtable contact
+records. Without them the script guesses from filenames, and filenames are not reliable: three
+recordings of one call were named `GPO Dynamics with Bonnie_otter_ai_transcript.docx`,
+`Bonnie Granola Transcript.docx` and
+`2026-07-28_Urology Medical Device Contracting Dynamics_Bonnie Solitaire.docx`.
+
+It proposes groups and never decides. Exit 2 means something needs a person — a file it could
+not place, a group whose files disagree on date (likely two different calls), or a call with only
+one recording. Show the grouping and confirm before combining.
+
+One case it cannot solve on its own: **expert-network exports are often titled by role, not by
+name** — `National System Director, Supply Chain Implementation at CommonSpirit ... Tegus.pdf`
+matches no roster entry. Those need placing by hand, and the script lists them rather than
+dropping them.
+
+Combined outputs from earlier runs are ignored, so rerunning on a folder that already holds
+finished transcripts is safe.
+
 ### 1. Identify the call and get the glossary
 
 Ask which interview and which project.
