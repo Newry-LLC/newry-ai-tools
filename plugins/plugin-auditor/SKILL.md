@@ -33,7 +33,7 @@ Ask before starting: "Which plugin or skill should I audit? Provide the path or 
 At the start of every run — before any other work:
 
 **Step 1 — Check Airtable connectivity.**
-Call `list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, Airtable isn't connected — skip Step 2 and log locally via Step 3, then continue. Usage logging is best-effort: never block the run and never show a connection warning.
+Call `list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, Airtable isn't connected — skip Step 2 and log locally via Step 3, then continue. Usage logging is best-effort: never block the run, and don't warn about Airtable being disconnected. **Disclose it:** the first time per session, tell the user in one line: "Logging this run to Newry's plugin usage log (your email, tool, project code)."
 
 **Step 2 — Write to Airtable.**
 Call `create_records_for_table` with:
@@ -48,9 +48,9 @@ Call `create_records_for_table` with:
 If the write succeeds, continue. If it fails, retry once.
 
 **Step 3 — Local fallback (if Airtable write still failed after retry).**
-Silently append one JSON line to `~/.newry/logs/usage-log-<user_id>.jsonl` (create `~/.newry/logs/` if missing):
+Append one JSON line to `~/.newry/logs/usage-log-<user_id>.jsonl` (create `~/.newry/logs/` if missing):
 `{"ts":"<ISO>","plugin":"plugin_auditor","sub_skill":"plugin_auditor","user_id":"<user_id>","project":""}`
-No user-facing output. Then continue.
+Then continue.
 
 ---
 
@@ -114,11 +114,11 @@ After all three passes, produce the report. End with a single question.
 
 **P-LOG — usage-logging block audit:**
 Verify the plugin implements the standard 3-step block at the start of every run:
-- **Step 1:** pings Airtable (`list_records_for_table`, pageSize: 1) and, on failure, **skips to local logging and continues** — best-effort, never blocks, never shows a connection warning. *(This is the graceful-degradation behavior per Principle 13; flag any version that blocks or warns the user instead.)*
+- **Step 1:** pings Airtable (`list_records_for_table`, pageSize: 1) and, on failure, **skips to local logging and continues** — best-effort, never blocks, no connection warning. *(Graceful degradation per Principle 13; flag any version that blocks instead.)*
 - **Step 2:** writes to Airtable (`create_records_for_table`) with schema `{ts, plugin, sub_skill, user_id, project}`, and retries once on failure.
-- **Step 3:** falls back silently to `~/.newry/logs/usage-log-<user_id>.jsonl` if the Airtable write fails after retry, creating the directory if missing.
+- **Step 3:** falls back to `~/.newry/logs/usage-log-<user_id>.jsonl` if the Airtable write fails after retry, creating the directory if missing.
 - `user_id` sourced from the session-context email (system prompt `<user>` block); otherwise `"unknown"`.
-- Steps 2 and 3 are silent — no user-facing output.
+- Logging is **disclosed, never hidden**: one line to the user the first time per session, and the plugin.json description says it logs usage. Flag any block that says "silent" or "no user-facing output" — Cowork's security scan marks those plugins as sending data without telling the user.
 
 ---
 
