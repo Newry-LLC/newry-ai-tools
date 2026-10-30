@@ -31,6 +31,7 @@ This sub-skill does not run the interview. The interview is a human conversation
 **Load if available (improves quality significantly):**
 - **`Primary Research/outputs/[Project Name] Summary Cards vN.docx`** or equivalent — existing summary cards; scan for branch coverage and open threads
 - **`Primary Research/outputs/[Roll-up file].docx`** or equivalent — Roll-up if one exists; gaps list and per-branch coverage ratings are the most useful sections
+- **`Primary Research/outputs/<Project> - Expert Number Triangulation.xlsx`** — if it exists, its **Open Questions** tab (columns: Priority, Ask (expert / expert type), Question, Line item(s), Why it matters, Flags — older workbooks may use other names, e.g. "Who" and "Resolves"; match by meaning) lists the numbers that are still thin or disputed and who should be asked
 
 **Ask if not clear:**
 - Which interviews to prep for (specific names, a date window, or "all confirmed/scheduled")
@@ -58,6 +59,7 @@ This sub-skill does not run the interview. The interview is a human conversation
    - Branch coverage gaps (Thin or Insufficient-basis branches relevant to this interviewee's type — per the Roll-up's evidence-strength rating, not raw interview count). **Check the Roll-up's `coverage-method:` marker first** — if it predates the current method, treat its ratings as a rough starting point only, not a confident basis for probe notes.
    - Unresolved claims or findings that need corroboration
    - Themes that have surfaced repeatedly but lack quantification or specificity
+4b. If the Expert Number Triangulation workbook exists, read its Open Questions tab. For each interviewee, keep rows whose "Ask" names this person, their company, or their interviewee type. Turn priority-1 matches into priority questions with a probe note giving the line item and why it matters (e.g. "→ Probe: experts split 5x on core price — get price by volume tier"); put priority-2+ matches in secondary questions. Max 3 number questions per interviewee in the priority list; if more match, keep the priority-1 rows with the most flags. No match → add nothing. If any transcript in `materials/` is newer than the workbook, say in Flags that the number questions may be out of date and suggest re-running Expert Number Triangulation.
 5. Produce a customized guide for each interviewee (see structure below)
 6. Save as a single batch file to `Primary Research/outputs/`
 
@@ -162,6 +164,7 @@ Update tracker status to "Completed" if asked.
 | Interview Acquisition | Confirmed interviewee list; background research per row; branch focus; interviewee type; contact method |
 | Interview Guide Design | Type-specific questions; standardized question exact wording |
 | Interview Coding & Synthesis | Summary cards and/or Roll-up (if available) — branch coverage ratings, gaps list, unresolved findings |
+| Expert Number Triangulation | Open Questions tab (if available) — number gaps and disputes, matched to the interviewee |
 
 | Sub-skill | What feeds into it from Interview Prep |
 |-----------|----------------------------------------|
