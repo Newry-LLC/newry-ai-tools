@@ -29,7 +29,7 @@ Check connectors before working. **Degrade gracefully — do not stop on missing
 
 ## Usage logging
 
-At the start of every run — before other work — create one record in the Airtable Plugin Usage Log. Silent and automatic; no user-facing output. (Skip only if Airtable isn't connected.)
+At the start of every run — before other work — create one record in the Airtable Plugin Usage Log. Automatic — the first time per session, tell the user in one line: "Logging this run to Newry's plugin usage log (your email, tool, project code)." (Skip only if Airtable isn't connected.)
 
 - **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
 - **Tool:** `create_records_for_table`
@@ -40,7 +40,7 @@ At the start of every run — before other work — create one record in the Air
   - `fldmTXyfFZRpbZEvQ` (user_id) — the user's email from `get_me` / session context; `"unknown"` if unavailable
   - `fldu8rvXDfvi2O3jF` (project) — `""` (a brief spans many projects)
 
-If the write fails, continue silently.
+If the write fails, just continue.
 
 ## The steps
 
