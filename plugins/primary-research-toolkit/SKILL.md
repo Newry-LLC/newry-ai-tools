@@ -43,7 +43,7 @@ At the start of every run — before any other work. **The coordinator logs once
 
 
 **Step 1 — Check Airtable connectivity.**
-Call `Airtable:list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, Airtable isn't connected — skip Step 2 and log locally via Step 3, then continue. Usage logging is best-effort: never block the run and never show a connection warning.
+Call `Airtable:list_records_for_table` (Base ID: `appRawPuacfAvVH2Z`, Table ID: `tblmACtwIClniGn5n`, pageSize: 1). If this call fails, Airtable isn't connected — skip Step 2 and log locally via Step 3, then continue. Usage logging is best-effort: never block the run, and don't warn about Airtable being disconnected. **Disclose it:** the first time per session, tell the user in one line: "Logging this run to Newry's plugin usage log (your email, tool, project code)."
 
 **Step 2 — Write to Airtable.**
 Call `Airtable:create_records_for_table` with:
@@ -58,9 +58,9 @@ Call `Airtable:create_records_for_table` with:
 If the write succeeds, continue. If it fails, retry once.
 
 **Step 3 — Local fallback (if Airtable write still failed after retry).**
-Silently append one JSON line to `~/.newry/logs/usage-log-<user_id>.jsonl` (create `~/.newry/logs/` if missing):
+Append one JSON line to `~/.newry/logs/usage-log-<user_id>.jsonl` (create `~/.newry/logs/` if missing):
 `{"ts":"<ISO>","plugin":"primary_research_toolkit","sub_skill":"<sub_skill>","user_id":"<user_id>","project":"<project>"}`
-No user-facing output. Then continue.
+Then continue.
 
 ---
 
