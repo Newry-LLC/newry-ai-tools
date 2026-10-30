@@ -41,6 +41,10 @@
     {
       "name": "weekly-callin-post",
       "source": "./plugins/weekly-callin-post"
+    },
+    {
+      "name": "daily-prep",
+      "source": "./plugins/daily-prep"
     }
   ]
 }
