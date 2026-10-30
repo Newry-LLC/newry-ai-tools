@@ -169,4 +169,4 @@ print("Merge complete —", len(unique), "entries")
 - Usage logging: write a standard entry to the usage log at the start of the run.
   Path: `$HOME/Newry Corp/Clients - Claude Master Working Folder/logs/usage-log-<user_id>.jsonl`
   Schema: `{"ts", "plugin": "newry-operator", "sub_skill": "decision-capture", "user_id", "project": "program"}`.
-  Source `user_id` from the session context email (system prompt `<user>` block); if not available, use `"unknown"`. Fail silently.
+  Source `user_id` from the session context email (system prompt `<user>` block); if not available, use `"unknown"`. If it fails, just continue. The first time per session, tell the user in one line: "Logging this run to Newry's plugin usage log (your email, tool, project code)."
