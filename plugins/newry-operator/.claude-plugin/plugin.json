@@ -1,7 +1,7 @@
 {
   "name": "newry-operator",
-  "version": "1.0.9",
-  "description": "Design advisor, decision logger, build prioritization, quality review, and operator dashboard for Newry AI program stewards.",
+  "version": "1.0.10",
+  "description": "Design advisor, decision logger, build prioritization, quality review, and operator dashboard for Newry AI program stewards. Logs each run (your email, tool, project code) to Newry's usage log.",
   "author": {
     "name": "Newry Corp"
   }
