@@ -1,6 +1,6 @@
 ---
 name: primary-research-toolkit
-description: Use this skill for any step in Newry's primary research workflow — designing a research plan, building interview guides, sourcing interviewees, preparing for a specific interview, synthesizing transcripts into summary cards and roll-ups, or querying a coded corpus. Triggers on "I have transcripts to synthesize," "build interview guides for this project," "I need a research plan," "prep me for my interview with X," "create summary cards," "build a roll-up," "I'm starting primary research," "who talked about X," "what did people say about X," "go deeper on [name]," or any request involving interview-based research on a Newry project — even if the user doesn't name a specific sub-skill.
+description: Use this skill for any step in Newry's primary research workflow — designing a research plan, building interview guides, sourcing interviewees, preparing for a specific interview, synthesizing transcripts into summary cards and roll-ups, querying a coded corpus, or pulling and comparing the numbers experts gave. Triggers on "pull the numbers from these interviews," "triangulate the expert numbers," "fill our model from the interviews," "I have transcripts to synthesize," "build interview guides for this project," "I need a research plan," "prep me for my interview with X," "create summary cards," "build a roll-up," "I'm starting primary research," "who talked about X," "what did people say about X," "go deeper on [name]," or any request involving interview-based research on a Newry project — even if the user doesn't name a specific sub-skill.
 ---
 
 # Primary Research Toolkit
@@ -51,7 +51,7 @@ Call `Airtable:create_records_for_table` with:
 - **Fields:**
   - `fldRrr3BkrJW8rE3L` (ts) — current UTC time, ISO 8601 (e.g. `2026-05-27T14:30:00Z`)
   - `fldNHK285dPCOdNhB` (plugin) — `"primary_research_toolkit"`
-  - `fld4EyuVEhxAhPZEd` (sub_skill) — whichever sub-skill is being invoked: `"ics"`, `"corpus_query"`, `"rpd"`, `"igd"`, `"ia"`, `"interview_prep"`, `"transcript_combine"`; use `"general"` if routing hasn't resolved yet
+  - `fld4EyuVEhxAhPZEd` (sub_skill) — whichever sub-skill is being invoked: `"ics"`, `"corpus_query"`, `"rpd"`, `"igd"`, `"ia"`, `"interview_prep"`, `"transcript_combine"`, `"number_triangulation"`; use `"general"` if routing hasn't resolved yet
   - `fldmTXyfFZRpbZEvQ` (user_id) — use the user's email address from the session context (available in the system prompt `<user>` block); if not available, use `"unknown"`
   - `fldu8rvXDfvi2O3jF` (project) — project code if discernible (e.g. `"ALTA01"`); otherwise `""`
 
@@ -85,6 +85,7 @@ When logging:
 | [Transcript Combine](sub-skills/transcript-combine/SKILL.md) | Built | Merge multiple recordings of the same call into one cross-checked transcript with named speakers; runs automatically after ingestion. Also cleans a single recording |
 | [Interview Coding & Synthesis](sub-skills/interview-coding-synthesis/SKILL.md) | Built | Code transcripts against the analytical frame; synthesize findings across the corpus, including coverage and gaps |
 | [Corpus Query](sub-skills/corpus-query/SKILL.md) | Built | Query the coded corpus by topic, person, segment, or branch; retrieve findings, counts, quotes, cross-tabs, and source exchanges from preprocessed transcripts |
+| [Expert Number Triangulation](sub-skills/expert-number-triangulation/SKILL.md) | Built | Pull every number experts gave, compare across experts, propose Low / Base / High ranges in an Excel workbook; optionally compare against, fill, or build a starter model. Built by Anna D'Amico |
 | ~~Coverage & Gap Analysis~~ | Absorbed into ICS Mode 2 (2026-05-04) | Coverage table, per-branch gaps, and contradictions are produced by the Roll-up. Cross-round delta and source-type recommendations are tracked as ICS Mode 2 enhancements. |
 
 ---
@@ -108,6 +109,10 @@ Primary research work at Newry typically follows this sequence. Not every projec
        named speakers; figures, names and negations that split are flagged)     │
 4. Interview Coding & Synthesis  ─────────────────────────────────────────┘
    ↓  (summary cards + Roll-up; Roll-up feeds back into Interview Prep for subsequent rounds)
+4b. Expert Number Triangulation  ← run alongside 4 whenever interviews contain figures
+   ↓  (Excel workbook: every number with its quote, Low / Base / High ranges, flags,
+       ask-next questions; optional model fill / compare / starter build;
+       Open Questions tab feeds back into Interview Prep)
 5. Corpus Query  ← available once ICS Mode 1 is complete (claims table + cards exist)
    ↓  (query findings by topic, person, segment; retrieve source exchanges from preprocessed transcripts)
    → SoF Draft mode (deliverable production)
@@ -139,6 +144,7 @@ The user describes their situation in plain language. Match against the patterns
 | "Prep me for my call with [name]" / "I have interviews this week — help me prep" / "customize the guide for [name]" / "prep for all confirmed interviews" | **Interview Prep** |
 | "Who talked about X" / "how many people mentioned X" / "what did people say about X" / "find interviewees who raised X" / "query the corpus" / "search the interviews" / "what did [name] say about X" / "which [type/geography] interviewees raised X" | **Corpus Query** — route to corpus-query sub-skill. |
 | "Go deeper on [name]" / "show me the transcript for [name]" / "what else did [name] say about X" | **Corpus Query** — Go Deeper flow. |
+| "Pull the numbers from these interviews" / "what numbers did the experts give" / "triangulate the capex / pricing / market size" / "where do experts agree on cost" / "build assumption ranges" / "fill / check our model from the interviews" / "build a starter model from the interviews" | **Expert Number Triangulation** — mode set by whether a model is attached and what the user asks for. A single count or quote ("how many people said X") stays with **Corpus Query**. |
 | "What does this do?" / "How do I use this?" / "What can this tool help me with?" / "Where do I start?" / "explain the toolkit" | **Orientation** — produce the overview below. |
 | "How do I get started?" / "how do I set up my folder?" / "how do I create a working folder?" / "where should I put my files?" / "how do I set up Cowork for this?" / "what do I need before I begin?" | **Setup** — draw on the setup context below to answer what the user actually needs. Don't produce the full setup guide unless asked; respond to the specific question. |
 
@@ -156,7 +162,7 @@ When the consultant asks what this tool does or where to start, produce the foll
 
 **This is the Primary Research Toolkit — a set of tools for running primary research at Newry.** It covers the full workflow from planning a research program through coding and synthesizing interview findings.
 
-Here's what it can do, in order:
+Here's what it can do:
 
 **1. Research Plan Design** — before you field a single interview. Helps you decide which branches of your analytical frame to prioritize, who to talk to and how many, and how to approach the fieldwork. Works through the plan interactively in four chunks; you react to each before moving on.
 
@@ -169,6 +175,8 @@ Here's what it can do, in order:
 **5. Interview Coding & Synthesis** — the core of the toolkit. Codes transcripts against your analytical frame and produces a summary card per interview. When you have enough cards, runs a Roll-up: synthesizes findings across the corpus, surfaces patterns and contradictions, produces a coverage table showing what's been addressed and what's still missing.
 
 **6. Corpus Query** — once you have a coded corpus. Ask questions directly in plain language: "who talked about pricing pressure?", "what did people say about distributor strategy?", "how many EU interviewees raised CIPP?" Returns findings from the claims table with source codes and attribution. Say "go deeper on [name]" to pull what their summary card captured — or go all the way to the source exchange from the preprocessed transcript.
+
+**7. Expert Number Triangulation** — when interviews contain figures (costs, prices, volumes, market sizes). Pulls every number with its quote and timestamp, shows where experts agree and split, and proposes Low / Base / High ranges in an Excel workbook, plus questions for the next interviews. Can also check or fill a copy of your model, or build a starter model.
 
 **You don't need to start at step 1.** Enter wherever you are — if you have a folder of transcripts and an issue tree, start with coding. If you just need to prep for tomorrow's call, start with Interview Prep.
 
@@ -348,6 +356,8 @@ primary-research-toolkit/
         style_docx.py                ← coverage-cell shading pass, run after render_docx.py
     corpus-query/
       SKILL.md
+    expert-number-triangulation/
+      SKILL.md                       ← numbers workbook; built by Anna D'Amico
     coverage-gap-analysis/
       SKILL.md                        ← absorbed into ICS Mode 2 (2026-05-04); folder kept for the absorption record
   references/
