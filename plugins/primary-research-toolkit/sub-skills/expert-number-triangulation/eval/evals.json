@@ -1,0 +1,163 @@
+{
+  "version": "1.0",
+  "skill": "expert-number-triangulation",
+  "plugin_version": "1.6.0",
+  "notes": "How to run: copy examples/px01/ to a scratch folder, open it in a fresh Cowork session with PRT installed, send the query, then score the outputs with score.py (automatic checks) and read the 'reviewer' items yourself. Fixtures are fictional but every trap reproduces a failure pattern seen in real COR773 interviews. Fixtures live under examples/ so they are not distributed. Run log schema: {ts, plugin_version, eval_id, pass, score_json, reviewer_notes}. X1 uses real client material and is maintainer-only (answer key in source-material/, never distributed).",
+
+  "evals": [
+    {
+      "id": "N1",
+      "label": "Default triangulation on a messy, realistic corpus",
+      "regression_suite": true,
+      "query": "Pull the numbers from the PX01 interviews — I need assumption ranges for the capex model.",
+      "files": "examples/px01/ (project root); context/PX01 - Scope.md lists the line items",
+      "what_makes_it_hard": [
+        "Garbled ASR number restated in the same breath ('for point two million — four point two')",
+        "Mid-answer correction (90 -> 110) and a summary card that repeats the wrong 90",
+        "Interviewer recap with wrong math (180 vs 110M/500k = 220) that the expert agrees to",
+        "Two metrics in one sentence (6 kilns / 500,000 m2)",
+        "Same expert on two calls revising a number (4.2 -> 5.0)",
+        "Adjacent expert (tile plants) on a different unit basis (per tonne) plus the conversion factor",
+        "Translated call in EUR with a translator note on a figure",
+        "AI summary that misstates a figure by 10x",
+        "Two recordings of the same call (Otter + Granola), no combined transcript",
+        "Interviewer notes that round a figure (4.2 -> 'about 4')"
+      ],
+      "auto_score": "python3 score.py triangulate '<outputs>/PX01 - Expert Number Triangulation.xlsx'",
+      "reviewer": {
+        "should": [
+          "Before extracting, notice Ravi Menon has two recordings of one call and offer Transcript Combine; if declined, use one and say which",
+          "Confirm line items with the consultant (or derive from the scope file and state them) before heavy work",
+          "Keep Hoffmann's figures in EUR in the Evidence Log and convert in formulas via a labeled FX cell",
+          "Treat Menon's per-tonne kiln-line figure as a different scope, not as a disagreement with the membrane experts",
+          "Step 8 report is 3-5 lines and points to the Summary tab; no workbook contents pasted into chat",
+          "Base values are labeled as proposals, with reasoning and what was excluded"
+        ],
+        "should_not": [
+          "Use the summary cards or the AI summary as a source for any number",
+          "Count the Otter and Granola recordings of Ravi's call as two independent experts",
+          "Search Otter itself instead of using materials/ (files are already there)",
+          "Deliver as a Sheets artifact, Doc, HTML or chat table"
+        ]
+      }
+    },
+    {
+      "id": "N2",
+      "label": "Fill a copy of the client model",
+      "regression_suite": true,
+      "query": "Fill our capex model from the interviews. It's in model/PX01 Capex Model.xlsx.",
+      "files": "examples/px01/ incl. model/PX01 Capex Model.xlsx",
+      "what_makes_it_hard": [
+        "Model's kiln price (3.5) sits below every expert figure",
+        "Water treatment is in EUR from a single expert; model is in USD",
+        "Annual maintenance is in the model but no round-1 expert gave it (gap)",
+        "Calc sheet is all formulas and must not be touched"
+      ],
+      "auto_score": "python3 score.py fill '<outputs>/PX01 - Expert Number Triangulation.xlsx' '<outputs>/PX01 Capex Model - filled from interviews.xlsx'",
+      "reviewer": {
+        "should": [
+          "Show the cell -> line item -> value mapping and wait for confirmation before writing anything",
+          "Report how many inputs were filled vs left blank, and the change in total capex"
+        ],
+        "should_not": [
+          "Edit the original model file",
+          "Invent a maintenance figure"
+        ]
+      }
+    },
+    {
+      "id": "N3",
+      "label": "Compare against the model without changing it",
+      "query": "Check our capex model against what the experts said — don't change anything. model/PX01 Capex Model.xlsx",
+      "files": "examples/px01/ incl. model/",
+      "auto_score": "python3 score.py compare '<outputs>/PX01 - Expert Number Triangulation.xlsx'  (run in a fresh copy of the fixture folder)",
+      "reviewer": {
+        "should": ["Raise 'Model vs. interviews' flags for kiln price (3.5 below range) and kiln count (5 below 6-8)"],
+        "should_not": ["Create a filled copy", "Ask whether to fill — the user already said not to"]
+      }
+    },
+    {
+      "id": "N4",
+      "label": "Ambiguous model request",
+      "query": "Use the interviews to sort out our model.",
+      "files": "examples/px01/ with NO model attached",
+      "reviewer": {
+        "should": ["Ask once: share an existing model, or build a starter model?"],
+        "should_not": ["Start building a model without asking", "Ask more than one question"]
+      }
+    },
+    {
+      "id": "N5",
+      "label": "Re-run after a new interview",
+      "regression_suite": true,
+      "query": "We did another interview (Tomás Ortega). Update the numbers.",
+      "files": "Output of N1, plus round2/px01-tomas-ortega-2026-05-02.txt copied into materials/",
+      "auto_score": "python3 score.py rerun '<N1 workbook copy>' '<updated workbook>'",
+      "reviewer": {
+        "should": [
+          "Update the same workbook (same file name), keeping Evidence IDs stable",
+          "Say what moved: maintenance goes from gap to Thin (3%); total capex now 110-120; kiln price gains a third independent source"
+        ],
+        "should_not": ["Rebuild from scratch with new IDs"]
+      }
+    },
+    {
+      "id": "N6",
+      "label": "Starter model build",
+      "query": "We don't have a model yet — build a starter capex model from the interviews.",
+      "files": "examples/px01/ (no model)",
+      "reviewer": {
+        "should": [
+          "Confirm the headline output (total capex at ~500k m2/yr) and show a driver tree before building",
+          "Mark maintenance and anything else uncovered as gaps (blank, yellow), with the output showing 'Incomplete' if a gap feeds it",
+          "Calculations and Outputs are formulas only, Low / Base / High side by side"
+        ],
+        "should_not": ["Fill a gap with an outside number without labeling it", "Add financing, tax or multi-year projections"]
+      }
+    },
+    {
+      "id": "N7",
+      "label": "Routing: numbers vs. corpus query",
+      "query_a": "Pull the kiln numbers from the interviews and compare them.",
+      "query_b": "How many people mentioned kiln lead times?",
+      "reviewer": {
+        "should": ["query_a routes to Expert Number Triangulation", "query_b routes to Corpus Query"],
+        "should_not": ["Build a workbook for query_b"]
+      }
+    },
+    {
+      "id": "N8",
+      "label": "Interview Prep picks up number questions",
+      "regression_suite": true,
+      "query": "Prep me for my call with Lena Hoffmann next week.",
+      "files": "Output of N1 in outputs/, plus a pipeline tracker row for Hoffmann (Confirmed) and a type guide",
+      "reviewer": {
+        "should": [
+          "Priority questions include the workbook's priority-1 questions for Hoffmann / kiln suppliers (e.g. confirm 3.6 vs 3.9 lower bound), at most 3",
+          "Each carries a probe note naming the line item and why it matters"
+        ],
+        "should_not": ["Include number questions meant for other experts", "Fail or block when the workbook is missing (re-run without it)"]
+      }
+    },
+    {
+      "id": "N9",
+      "label": "Out-of-date workbook warning in Interview Prep",
+      "query": "Prep me for my call with Lena Hoffmann next week.",
+      "files": "As N8, plus round2/px01-tomas-ortega-2026-05-02.txt added to materials/ AFTER the workbook was saved",
+      "reviewer": {
+        "should": ["Flags section says the number questions may be out of date and suggests re-running Expert Number Triangulation"]
+      }
+    },
+    {
+      "id": "X1",
+      "label": "Real-data regression (maintainer only): COR773 Grace Fabric transcript",
+      "maintainer_only": true,
+      "query": "Pull the numbers from the Grace Fabric interview.",
+      "files": "COR773 SharePoint: Glass Cloth - Interview Notes/003 Interview Transcript - Grace Fabric - 20261006.docx",
+      "answer_key": "source-material/Quant Transcript Analysis/eval-real-cor773/answer_key_cor773_grace.json (not distributed; transcript text alongside)",
+      "baseline_2026_10_30": "Anna's original run 1 workbook: 26/36 pass. Fails = the 4 packed rows (8 numbers), one-metric-per-row, and old Open Questions column names. All quotes verified.",
+      "auto_score": "python3 score.py triangulate <workbook> --key '<path to the real answer key>'",
+      "reviewer": {"should": ["Match the 25 spot-checked figures; log 96 bushings and 7,000 t/yr as separate rows"]}
+    }
+  ]
+}
