@@ -9,7 +9,7 @@
 
 | Plugin | Version | Status | Audience |
 |--------|---------|--------|----------|
-| Primary Research Toolkit | 1.3.13 | Active | Consultants |
+| Primary Research Toolkit | 1.4.0 | Active | Consultants |
 | SoF Toolkit | 1.0.11 | Active | Consultants |
 | newry-knowledge | 1.1.46 | Active | Consultants |
 | newry-operator | 1.0.10 | Active | Program builders |
@@ -63,19 +63,23 @@ Schema: `{ts, plugin, sub_skill, user_id, signal_type, severity, users_words, wh
 ## Plugin detail
 
 ### Primary Research Toolkit (PRT)
-**Version:** 1.3.12
+**Version:** 1.6.0 (distributed source; `outputs/primary-research-toolkit.plugin` is 1.3.15 — the
+packaged file is versioned independently by the Plugin Builder and is only used for install paths
+that need a `.plugin`)
 **File:** `outputs/primary-research-toolkit.plugin`
 **GitHub:** `Newry-LLC/newry-ai-tools`
 
-**What it does:** Supports the full primary research workflow from planning through synthesis. Six active sub-skills covering every stage of an interview-based research engagement.
+**What it does:** Supports the full primary research workflow from planning through synthesis. Eight active sub-skills covering every stage of an interview-based research engagement.
 
-**Sub-skills (6 active):**
+**Sub-skills (8 active):**
 - Research Plan Design — prioritize branches, set target N, plan sourcing
 - Interview Guide Design — convert branches into structured guides by interviewee type
 - Interview Acquisition — draft outreach and expert network briefs; manage pipeline
 - Interview Prep — customized guide per confirmed interviewee with corpus-informed probes
+- Transcript Combine — merge multiple recordings of one call into a single cross-checked transcript with named speakers; runs automatically after ingestion, and cleans a single recording too. Adapted from Andrew Gartley's `gartleys-grandiose-degarbler` (2026-09-16)
 - Interview Coding & Synthesis (ICS) — code transcripts; synthesize findings; produce roll-up
 - Corpus Query — query the coded corpus by topic, person, segment, or branch
+- Expert Number Triangulation — pull every number experts gave, compare across experts, propose Low / Base / High ranges in an Excel workbook; optionally compare against, fill, or build a starter model. Built by Anna D'Amico; added 2026-10-30
 
 *Note: A `coverage-gap-analysis` sub-skill exists in the source folder but is deprecated — absorbed into ICS Mode 2 (2026-05-04). Not active.*
 
