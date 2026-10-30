@@ -1,0 +1,417 @@
+{
+  "project": "PX01 (fictional)",
+  "fixtures": "examples/px01/",
+  "notes": "Ground truth for the synthetic PX01 fixture. Every trap mirrors a failure pattern seen in real COR773 material (ASR-garbled numbers, mid-answer corrections, interviewer recaps with wrong math, two metrics in one breath, notes vs. transcript differences, adjacent-scope experts, translated passages with translator notes, AI summaries that misstate figures, duplicate recordings of one call). Tolerance is relative (3%). Percentages may be logged as 15 or 0.15; both accepted.",
+  "tolerance": 0.03,
+  "numbers": [
+    {
+      "id": "D1",
+      "expert": "Whitfield",
+      "date": "2026-03-03",
+      "what": "kiln price (garbled ASR, restated)",
+      "keywords": [
+        "kiln"
+      ],
+      "unit_any": [
+        "kiln"
+      ],
+      "low": 4.2,
+      "high": 4.2,
+      "must_have_unit_any": [
+        "M",
+        "million"
+      ]
+    },
+    {
+      "id": "D2",
+      "expert": "Whitfield",
+      "date": "2026-03-03",
+      "what": "kiln count (two metrics in one breath, part 1)",
+      "keywords": [
+        "kiln"
+      ],
+      "low": 6,
+      "high": 6
+    },
+    {
+      "id": "D3",
+      "expert": "Whitfield",
+      "date": "2026-03-03",
+      "what": "plant capacity (two metrics in one breath, part 2)",
+      "keywords": [
+        "capacity",
+        "output",
+        "nameplate"
+      ],
+      "low": 500000,
+      "high": 500000
+    },
+    {
+      "id": "D4",
+      "expert": "Whitfield",
+      "date": "2026-03-03",
+      "what": "total plant capex AFTER mid-answer correction",
+      "keywords": [
+        "capex",
+        "plant",
+        "total"
+      ],
+      "low": 110,
+      "high": 110
+    },
+    {
+      "id": "D5",
+      "expert": "Whitfield",
+      "date": "2026-03-03",
+      "what": "kiln lead time",
+      "keywords": [
+        "lead"
+      ],
+      "low": 14,
+      "high": 18
+    },
+    {
+      "id": "D6",
+      "expert": "Whitfield",
+      "date": "2026-03-03",
+      "what": "membrane selling price",
+      "keywords": [
+        "price",
+        "selling",
+        "membrane"
+      ],
+      "low": 300,
+      "high": 450
+    },
+    {
+      "id": "D7",
+      "expert": "Whitfield",
+      "date": "2026-04-14",
+      "what": "kiln price, second call (revised up)",
+      "keywords": [
+        "kiln"
+      ],
+      "low": 5,
+      "high": 5
+    },
+    {
+      "id": "R1",
+      "expert": "Menon",
+      "what": "kiln line cost per tonne (adjacent tile-plant basis)",
+      "keywords": [
+        "kiln"
+      ],
+      "low": 900,
+      "high": 900
+    },
+    {
+      "id": "R2",
+      "expert": "Menon",
+      "what": "membrane weight (conversion factor)",
+      "keywords": [
+        "weight",
+        "kg",
+        "mass",
+        "heavy"
+      ],
+      "low": 12,
+      "high": 12
+    },
+    {
+      "id": "R3",
+      "expert": "Menon",
+      "what": "building cost US",
+      "keywords": [
+        "building"
+      ],
+      "low": 25,
+      "high": 25
+    },
+    {
+      "id": "R4",
+      "expert": "Menon",
+      "what": "clean-room uplift on building",
+      "keywords": [
+        "clean"
+      ],
+      "low": 15,
+      "high": 20,
+      "percent": true
+    },
+    {
+      "id": "R5",
+      "expert": "Menon",
+      "what": "Germany building premium over US",
+      "keywords": [
+        "german",
+        "europe",
+        "premium"
+      ],
+      "low": 10,
+      "high": 10,
+      "percent": true
+    },
+    {
+      "id": "L1",
+      "expert": "Hoffmann",
+      "what": "kiln price in EUR (translator note on lower bound)",
+      "keywords": [
+        "kiln"
+      ],
+      "low": 3.6,
+      "high": 4.0,
+      "confidence_not": [
+        "High"
+      ]
+    },
+    {
+      "id": "L2",
+      "expert": "Hoffmann",
+      "what": "kilns for 500k m2",
+      "keywords": [
+        "kiln"
+      ],
+      "low": 6,
+      "high": 8
+    },
+    {
+      "id": "L3",
+      "expert": "Hoffmann",
+      "what": "kiln delivery time",
+      "keywords": [
+        "lead",
+        "deliver"
+      ],
+      "low": 20,
+      "high": 20
+    },
+    {
+      "id": "L4",
+      "expert": "Hoffmann",
+      "what": "water treatment (EUR, single source)",
+      "keywords": [
+        "water"
+      ],
+      "low": 2,
+      "high": 2
+    }
+  ],
+  "traps": [
+    {
+      "id": "T1",
+      "what": "AI summary's x10 error ($9,000/t) must not enter the Evidence Log",
+      "value": 9000
+    },
+    {
+      "id": "T2",
+      "what": "Pre-correction total capex (90) must not be logged as the final value; summary card repeats it",
+      "value": 90,
+      "allowed_if_note_any": [
+        "correct",
+        "supersed",
+        "before",
+        "initially",
+        "revised"
+      ]
+    },
+    {
+      "id": "T3",
+      "what": "Interviewer's wrong recap (180 $/m2) must not be logged as a value; correct figure (220) belongs in Comparison",
+      "value": 180
+    },
+    {
+      "id": "T4",
+      "what": "Ravi's call has two recordings (Otter + Granola); the 900 $/t figure must be logged once, not as two independent sources",
+      "value": 900,
+      "max_rows": 1
+    },
+    {
+      "id": "T5",
+      "what": "Summary cards are never a number source",
+      "source_text_any": [
+        "Summary Cards"
+      ]
+    }
+  ],
+  "required_flags": [
+    {
+      "id": "F1",
+      "what": "notes vs transcript (kiln $4M in notes vs 4.2 on recording)",
+      "any": [
+        "notes"
+      ]
+    },
+    {
+      "id": "F2",
+      "what": "interviewer recap math wrong (180 vs 110M/500k = 220)",
+      "any": [
+        "recap",
+        "180"
+      ]
+    },
+    {
+      "id": "F3",
+      "what": "same expert, different calls (4.2 -> 5.0)",
+      "any": [
+        "same expert",
+        "second call",
+        "follow-up",
+        "follow up",
+        "between calls",
+        "2026-04-14",
+        "call 2",
+        "revised"
+      ]
+    },
+    {
+      "id": "F4",
+      "what": "adjacent / different-scope expert (tile plant basis)",
+      "any": [
+        "adjacent",
+        "tile",
+        "commodity",
+        "scope",
+        "different design"
+      ]
+    },
+    {
+      "id": "F5",
+      "what": "AI summary vs transcript (9,000 vs 900)",
+      "any": [
+        "AI summary",
+        "9,000",
+        "9000"
+      ]
+    },
+    {
+      "id": "F6",
+      "what": "agreement on kiln price or count",
+      "any": [
+        "agree",
+        "converg"
+      ]
+    },
+    {
+      "id": "F7",
+      "what": "thin coverage (water treatment single source; building single source)",
+      "any": [
+        "thin",
+        "single"
+      ]
+    }
+  ],
+  "normalized_checks": [
+    {
+      "id": "N1",
+      "what": "capex per m2 of annual capacity computed by formula (110M / 500k = 220)",
+      "value": 220,
+      "tol": 0.02,
+      "sheets": [
+        "Comparison",
+        "Assumption Ranges"
+      ]
+    },
+    {
+      "id": "N2",
+      "what": "labeled FX input for EUR conversion",
+      "label_any": [
+        "FX",
+        "EUR",
+        "exchange"
+      ],
+      "sheets": [
+        "Comparison"
+      ]
+    }
+  ],
+  "status_checks": [
+    {
+      "id": "S1",
+      "what": "kiln price line item is Converging (4.2, 5.0 USD; 3.6-4.0 EUR ~ 3.9-4.3 USD)",
+      "row_keywords": [
+        "kiln price"
+      ],
+      "status": "Converging"
+    },
+    {
+      "id": "S2",
+      "what": "annual maintenance has no expert figure in round 1 -> Gap",
+      "row_keywords": [
+        "mainten"
+      ],
+      "status": "Gap"
+    }
+  ],
+  "fill_mode": {
+    "model": "examples/px01/model/PX01 Capex Model.xlsx",
+    "original_sha256": "3bb28c77a8c3c61d50991346cd4056d4f2b4efe04eb8225c65cca103253ed2c9",
+    "expect_ranges": {
+      "Inputs!B2": [
+        6,
+        8
+      ],
+      "Inputs!B3": [
+        3.9,
+        5.0
+      ],
+      "Inputs!B4": [
+        25,
+        25
+      ],
+      "Inputs!B5": [
+        0.15,
+        0.2
+      ],
+      "Inputs!B8": [
+        500000,
+        500000
+      ],
+      "Inputs!B6": [
+        2.0,
+        2.3
+      ]
+    },
+    "gap_cells": {
+      "Inputs!B7": 0.03
+    },
+    "gap_comment_any": [
+      "Not covered"
+    ],
+    "formula_sheet": "Calc"
+  },
+  "rerun": {
+    "new_file": "examples/px01/round2/px01-tomas-ortega-2026-05-02.txt",
+    "new_numbers": [
+      {
+        "id": "O1",
+        "expert": "Ortega",
+        "keywords": [
+          "kiln"
+        ],
+        "low": 4.5,
+        "high": 4.5
+      },
+      {
+        "id": "O2",
+        "expert": "Ortega",
+        "keywords": [
+          "capex",
+          "plant",
+          "total"
+        ],
+        "low": 120,
+        "high": 120
+      },
+      {
+        "id": "O3",
+        "expert": "Ortega",
+        "keywords": [
+          "mainten"
+        ],
+        "low": 3,
+        "high": 3,
+        "percent": true
+      }
+    ]
+  }
+}
