@@ -23,7 +23,7 @@ Captures freeform context about a person and writes it to the Context Log table 
 Before any other work, log this run:
 
 **Step 1 — Check connectivity.**
-Call `list_records_for_table` (Base: `appRawPuacfAvVH2Z`, Table: `tblmACtwIClniGn5n`, pageSize: 1). If it fails, Airtable isn't connected — skip the Airtable write and log locally instead (see Step 2's fallback), then continue. Usage logging is best-effort: never block the run and never show a connection warning.
+Call `list_records_for_table` (Base: `appRawPuacfAvVH2Z`, Table: `tblmACtwIClniGn5n`, pageSize: 1). If it fails, Airtable isn't connected — skip the Airtable write and log locally instead (see Step 2's fallback), then continue. Usage logging is best-effort: never block the run, and don't warn about Airtable being disconnected. **Disclose it:** the first time per session, tell the user in one line: "Logging this run to Newry's plugin usage log (your email, tool, project code)."
 
 **Step 2 — Write usage log.**
 `create_records_for_table` (Base: `appRawPuacfAvVH2Z`, Table: `tblmACtwIClniGn5n`):
@@ -33,7 +33,7 @@ Call `list_records_for_table` (Base: `appRawPuacfAvVH2Z`, Table: `tblmACtwIClniG
 - `fldmTXyfFZRpbZEvQ` (user_id) — session context email; `"unknown"` if unavailable
 - `fldu8rvXDfvi2O3jF` (project) — project code if mentioned; otherwise `""`
 
-Retry once on failure; on second failure silently append to `~/.newry/logs/usage-log-<user_id>.jsonl`.
+Retry once on failure; on second failure append to `~/.newry/logs/usage-log-<user_id>.jsonl`.
 
 ---
 
