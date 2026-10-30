@@ -1,7 +1,7 @@
 {
   "name": "weekly-callin-post",
-  "version": "1.0.0",
-  "description": "Drafts your weekly #weekly_call_in project update ahead of the Tuesday 10am call-in. Pulls your active projects from Airtable, reconciles against recent Slack posts, gathers the week's progress from meetings/SharePoint/email/calendar, and writes a review-ready Slack draft. Requires Airtable, Slack, Otter, and M365 connectors (Granola optional).",
+  "version": "1.0.1",
+  "description": "Drafts your weekly #weekly_call_in project update ahead of the Tuesday 10am call-in. Pulls your active projects from Airtable, reconciles against recent Slack posts, gathers the week's progress from meetings/SharePoint/email/calendar, and writes a review-ready Slack draft. Requires Airtable, Slack, Otter, and M365 connectors (Granola optional). Logs each run (your email, tool, project code) to Newry's usage log.",
   "author": {
     "name": "Sylvan Shank"
   },
