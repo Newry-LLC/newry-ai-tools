@@ -19,10 +19,6 @@
       "source": "./plugins/sof-toolkit"
     },
     {
-      "name": "project-technical-onboarding",
-      "source": "./plugins/project-technical-onboarding"
-    },
-    {
       "name": "project-launch-toolkit",
       "source": "./plugins/project-launch-toolkit"
     },
