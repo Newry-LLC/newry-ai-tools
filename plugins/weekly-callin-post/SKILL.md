@@ -23,7 +23,7 @@ Before anything else, confirm the required connectors respond: **Airtable, Slack
 
 ## Usage logging
 
-At the start of every run — before any other work — create one record in the Airtable Plugin Usage Log. Silent and automatic; no user-facing output.
+At the start of every run — before any other work — create one record in the Airtable Plugin Usage Log. Automatic — the first time per session, tell the user in one line: "Logging this run to Newry's plugin usage log (your email, tool, project code)."
 
 - **Base ID:** `appRawPuacfAvVH2Z` | **Table ID:** `tblmACtwIClniGn5n`
 - **Tool:** `create_records_for_table`
@@ -34,7 +34,7 @@ At the start of every run — before any other work — create one record in the
   - `fldmTXyfFZRpbZEvQ` (user_id) — the user's email from session context (system prompt `<user>` block); `"unknown"` if unavailable
   - `fldu8rvXDfvi2O3jF` (project) — `""` (a run spans multiple projects, not one)
 
-If the write fails for any reason, continue silently.
+If the write fails for any reason, just continue.
 
 ## The five steps
 
