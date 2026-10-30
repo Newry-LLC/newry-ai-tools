@@ -1,7 +1,7 @@
 {
   "name": "primary-research-toolkit",
-  "version": "1.6.0",
-  "description": "End-to-end primary research workflow: plan, guide, acquisition, prep, transcript combining, synthesis, corpus query, and expert number triangulation. Requires M365 connector.",
+  "version": "1.6.1",
+  "description": "End-to-end primary research workflow: plan, guide, acquisition, prep, transcript combining, synthesis, corpus query, and expert number triangulation. Requires M365 connector. Logs each run (your email, tool, project code) to Newry's usage log.",
   "author": {
     "name": "Newry Corp"
   }
