@@ -6,7 +6,7 @@ Tools for presenting to clients. Built from consultant-made skills; first one is
 
 Turns the slides you're presenting into a talking track you rehearse from, in **your** speaking voice.
 
-**Start it:** `/client-delivery-toolkit:readout-script`, or say "generate a script for this presentation", "write a readout script", "talking track for slides 10–12".
+**Start it:** `/cd-readout` (or `/client-delivery-toolkit:cd-readout`), or say "generate a script for this presentation", "write a readout script", "talking track for slides 10–12".
 
 **You give it:** the deck (.pptx, PDF or SharePoint link) and which slides are yours. It asks about the room, tone and objective, and optionally checks email, Teams/Slack, meeting notes (Otter or Granola) and the project folder for context.
 
