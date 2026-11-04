@@ -1,6 +1,6 @@
 {
   "name": "client-delivery-toolkit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tools for presenting to clients. First skill: Readout Script, which turns the slides you're presenting into a talking track in your own voice (key message, talking points, full script, transitions) plus prep notes with likely client questions. Output is a Word doc. Requires the deck; M365, Otter/Granola, Slack and Airtable connectors are optional. Logs each run (your email, tool, project code) to Newry's usage log.",
   "author": {
     "name": "Anna D'Amico, Sylvan Shank"
