@@ -37,6 +37,10 @@
     {
       "name": "weekly-callin-post",
       "source": "./plugins/weekly-callin-post"
+    },
+    {
+      "name": "client-delivery-toolkit",
+      "source": "./plugins/client-delivery-toolkit"
     }
   ]
 }
