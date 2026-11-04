@@ -1,6 +1,6 @@
 ---
-name: readout-script
-description: "Turn a client presentation deck into a slide-by-slide talking track (key message, talking points, full spoken script, transitions) plus prep notes with likely client questions. Use for 'generate a script for this presentation', 'write a readout script', 'talking track', 'script for my slides', 'what do I say on each slide', 'help me prep to present slides X–Y', or /readout-script."
+name: cd-readout
+description: "Turn a client presentation deck into a slide-by-slide talking track (key message, talking points, full spoken script, transitions) plus prep notes with likely client questions. Use for 'generate a script for this presentation', 'write a readout script', 'talking track', 'script for my slides', 'what do I say on each slide', 'help me prep to present slides X–Y', or /cd-readout."
 ---
 
 # Readout Script
